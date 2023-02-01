@@ -1,0 +1,126 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Connecting to a Server and Disconnecting</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_connectanddisconnect.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Connecting to a Server and Disconnecting</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_clientinitializingandterminating.htm">Previous</a>&nbsp;
+     <a href="html_clientstep1sample.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h3 class="p_Heading3"><a id="hdr"></a><span class="f_Paragraph">The connection to a server is managed by the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> class (see <a href="html_clientclasshierarchy.htm" class="topiclink">Class Overview</a>). A session object provides methods to connect or disconnect a server. It can be configured to ensure confidentiality and integrity of messages that are exchanged with a server. A session object also holds user credentials that are passed to the server when the session is connected.</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Preconditions</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Before it is possible to establish a connection to the server, the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> must be initialized and started. If the connection to the server shall be secured, the SDK needs to be configured with an application instance certificate (see <a href="html_clientsecuritysetup.htm" class="topiclink">Security in Client Applications</a>).</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Connecting to an OPC UA Server</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Some steps are required to connect to an OPC UA server:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List">To connect the client to the server, the following information is required:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_List">The </span><span class="f_List" style="font-weight: bold;">application instance certificate</span><span class="f_List"> of the client for secure connections.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_List">The </span><span class="f_List" style="font-weight: bold;">URL of the server</span><span class="f_List"> to connect to (e.g. </span><span class="f_FixedSize">opc.tcp://localhost:4880</span><span class="f_List">). If the URL cannot be determined at compile-time or read from a configuration file, the <a href="html_samplediscoveryservice.htm" class="topiclink">discovery services</a> can be used to query available servers.</span></td></tr></table></div><p class="p_NoteHeader"><span class="f_NoteHeader">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_List">The </span><span class="f_List" style="font-weight: bold;">URL for automated discovery services</span><span class="f_List">. </span><span class="f_List">On most servers the EndpointURL can also be used for discovery services, thus usually it is not necessary to configure this DiscoveryURL, as by default the EndpointURL will be used as DiscoveryURL.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_List">The </span><span class="f_List" style="font-weight: bold;">user authentication methods</span><span class="f_Paragraph"> which the server accepts</span><span class="f_List">. The client has to pass a so-called </span><span class="f_Reference">user identity token</span><span class="f_List"> with every connect that contains user credentials. Even if the server does not require user credentials, the client has to provide a special identity token for anonymous access.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_List">The available </span><span class="f_List">modes for </span><span class="f_List" style="font-weight: bold;">message security </span><span class="f_List">and the supported </span><span class="f_List" style="font-weight: bold;">cryptographic algorithms (security policies)</span><span class="f_List">. Servers are free to choose whether they allow secure, insecure or both secure and insecure connections from clients. They can also select the cryptographic algorithms to use for encrypting and signing messages from a list of algorithms. OPC UA uses the term </span><span class="f_Reference">security policy</span><span class="f_List"> to refer to a set of cryptographic algorithms that can be used for encrypting and signing messages.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Please configure the SDK with the location of an application instance certificate and associated private key. Please refer to the topic <a href="html_securityimplementatioin.htm" class="topiclink">Security in OPC UA Applications</a> for more details.</span><br />
+<span class="f_Paragraph">Since OPC UA specification 1.02 an application instance certificate is only required if the server exposes secure communication or user authentication with encryption.</span><br />
+<span class="f_Paragraph">However even for non-secure communication it is recommended to specify the certificate - otherwise connecting OPC UA servers implementing specification 1.01 will fail.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ApplicationPtr&nbsp;pApp&nbsp;=&nbsp;Application::instance();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pApp-&gt;setInstanceCertificate(_T(&quot;../MyCertificateStore/MyInstanceCertificate.der&quot;)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_T(&quot;../MyCertificateStore/MyInstancePrivateKey.pem&quot;),_T(&quot;pass&quot;));</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">There are two methods to find and select an endpoint that matches the desired descriptions:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">a)</span></td><td style="border:none"><span class="f_List"> Manually look for a matching endpoint configuratoin:</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">The accepted list of user authentication methods and message security modes can be queried from a server with the </span><span class="f_Reference">GetEndpoints</span><span class="f_Paragraph"> service:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;tstring&gt;&nbsp;transportProfileList;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EndpointDescription&gt;&nbsp;endpointDescriptions;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;Application::instance()-&gt;getEndpointsFromServer(serverUrl,&nbsp;transportProfileList,&nbsp;endpointDescriptions);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The received <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm" class="topiclink">EndpointDescriptions</a> contain all the information required to establish a connection. The following code illustrates how to look up an endpoint configuration for a desired user authentication method (<a href="class_softing_o_p_c_toolbox5_1_1_user_identity_token.htm" class="topiclink">UserIdentityToken</a>) and message security configuration (<a href="_enums_8h_1a7989972f8efdf4a41346d6a9f8462c95.htm" class="topiclink">MessageSecurityMode</a> with </span><span class="f_Reference">SecurityPolicy):</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">for(size_t&nbsp;int&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;endpointDescriptions.size();&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;for(size_t&nbsp;int&nbsp;j&nbsp;=&nbsp;0;&nbsp;j&nbsp;&lt;&nbsp;endpointDescriptions[i].getUserIdentityTokenCount();&nbsp;j++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(endpointDescriptions[i].getUserIdentityToken(j).getTokenType()&nbsp;==&nbsp;desiredTokenType</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;&nbsp;endpointDescriptions[i].getMessageSecurityMode()&nbsp;==&nbsp;desiredSecurityMode</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;&nbsp;endpointDescriptions[i].getSecurityPolicy()&nbsp;==&nbsp;desiredSecurityPolicy)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;found&nbsp;matching&nbsp;endpoint&nbsp;configuration</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&nbsp;&nbsp;//&nbsp;store&nbsp;indeces:&nbsp;endpointIndex&nbsp;and&nbsp;identityTokenIndex</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">b)</span></td><td style="border:none"><span class="f_List"> Use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ad56aa137c002425951464fdfa36abb49" class="topiclink">Session::configure()</a>:</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_Paragraph" style="font-style: italic;">configure</span><span class="f_Paragraph"> method calls the </span><span class="f_Paragraph" style="font-style: italic;">GetEndpoints</span><span class="f_Paragraph"> service, parses the results to find an endpoint that matches the desired description and configures the session accordingly (</span><span class="f_Paragraph" style="font-weight: bold;">so Step 2 can be omitted</span><span class="f_Paragraph">). See <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ad56aa137c002425951464fdfa36abb49" class="topiclink">Session::configure()</a> for further reference.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;session-&gt;configure(serverUrl,&nbsp;userIdentityToken,&nbsp;desiredSecurityMode,&nbsp;desiredSecurityPolicy);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">Create a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> which represents a connection to the server and configure the required parameters. You may use the information queried from the </span><span class="f_Reference">GetEndpoints</span><span class="f_Paragraph"> service in the previous step.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">session&nbsp;=&nbsp;Client::Session::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setSessionTimeout(60&nbsp;*&nbsp;1000);&nbsp;//&nbsp;in&nbsp;milliseconds&nbsp;(1&nbsp;minute&nbsp;is&nbsp;already&nbsp;the&nbsp;default)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setUrl(endpointDescriptions[endpointIndex].getEndpointUrl());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;You&nbsp;can&nbsp;omit&nbsp;the&nbsp;following&nbsp;line&nbsp;if&nbsp;the&nbsp;endpoint&nbsp;supports&nbsp;discovery&nbsp;services</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setDiscoveryUrl(discoveryUrl);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setSecurityConfiguration(desiredSecurityMode,&nbsp;desiredSecurityPolicy);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;You&nbsp;can&nbsp;omit&nbsp;the&nbsp;following&nbsp;line&nbsp;if&nbsp;you&nbsp;do&nbsp;not&nbsp;use&nbsp;a&nbsp;secure&nbsp;connection.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setServerCertificate(endpointDescriptions[endpointIndex].getServerCertificate());</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To authenticate with a server the client has to create a user identity token and pass it to <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a97236b9936ca09f822c09296cf91cbf9" class="topiclink">Session::setUserIdentityToken()</a>. The identity token contains a policy ID that refers to a token policy defined by the server. The cryptographic algorithms that are used to encrypt a token are not contained in the identity token itself. Therefore, a client application must always provide the algorithms explicitly by <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ae609f9d2435fb67cc9d727683724ca71" class="topiclink">Session::setUserSecurityPolicy()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The following code illustrates how to set-up a connection for an anonymous user. Please refer to the article <a href="html_clientuserauthentication.htm" class="topiclink">User Authentication</a> for further information.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">UserIdentityToken&nbsp;userIdentityToken;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">userIdentityToken.setAnonymousIdentityToken(policyId);&nbsp;//&nbsp;usually&nbsp;obtained&nbsp;by&nbsp;GetEndpoints</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setUserIdentityToken(&amp;userIdentityToken);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setUserSecurityPolicy(securityPolicy);&nbsp;//&nbsp;usually&nbsp;obtained&nbsp;by&nbsp;GetEndpoints</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph">Add the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> to the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a>.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;addSession(session);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">4.</span></td><td style="border:none"><span class="f_Paragraph">Connect the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a>.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;session-&gt;connect(false);&nbsp;&nbsp;&nbsp;//&nbsp;true&nbsp;would&nbsp;mean&nbsp;to&nbsp;also&nbsp;connect&nbsp;(or&nbsp;reconnect)&nbsp;all&nbsp;included&nbsp;subscriptions&nbsp;and&nbsp;monitored&nbsp;items</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Disconnecting from an OPC UA Server</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">To disconnect from a server, two steps are required:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List">Disconnect the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a>.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">session-&gt;disconnect();</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">Remove the disconnected <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> from the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> if it shall not be used any longer.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;removeSession(session);</span></p>
+<p>&nbsp;</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Automatically Reconnect a Session</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> class provides an auto-reconnect mechanism. If the connection to the server is lost, the session can be configured to periodically reconnect to the server. The feature is enabled by setting an auto-reconnect interval. This value describes the milliseconds between two connection attempts. If this value is set to 0, this feature is disabled.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setAutoReconnectInterval(5000);&nbsp;//&nbsp;attempts&nbsp;to&nbsp;reconnect&nbsp;a&nbsp;session&nbsp;every&nbsp;five&nbsp;seconds&nbsp;when&nbsp;the&nbsp;connection&nbsp;is&nbsp;lost</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="html_clientstep1sample.htm" class="topiclink">See also: </a>, <a href="html_clienttutorial.htm" class="topiclink">Client Tutorial</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_connectanddisconnect.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,143 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Multi-dimensional Arrays</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "matrix_serialization.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Multi-dimensional Arrays</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="application_configuration_file.htm">Previous</a>&nbsp;
+     <a href="openssl_functionality_howto.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">This section shows how multi-dimensional arrays can be used within the OPC UA C++ Server &amp; Client SDK V6.00.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In general, one-dimensional arrays are handled as </span><span class="f_FixedSize">std::vector&lt;datatype&gt;</span><span class="f_Paragraph"> which describes both data type and length of the array. For arrays, methods for various data types are implemented, e.g. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value_1a48e40e775f4ce3a2ccc8176657e823d6" class="topiclink">Value::setUInt16Array(const std::vector&lt;OTUInt16&gt;&amp; arrayUInt16)</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For multi-dimensional array values, i.e. matrix values, it is necessary to describe the dimensions of the matrix.</span><br />
+<span class="f_Paragraph">To access the matrix values, the SDK uses the interface of a flat data array with a second array to describe the single dimensions, e.g. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value_1a80f0c625c5bf5dd711edddce95dd0ab9" class="topiclink">Value::setUInt16Matrix(const std::vector&lt;OTUInt32&gt;&amp; arrayDimensions, OTUInt32 matrixSize, const OTUInt16* matrixValues)</a>.</span><br />
+<span class="f_Paragraph">This interface concept allows an easy conversion from and to data structures like C arrays and an easy serialization for transporting the values.</span><br />
+<span class="f_Paragraph">The parameter </span><span class="f_Reference">arrayDimensions</span><span class="f_Paragraph"> specifies the number of dimensions (length of the vector) and the size of each dimension (value of each element).</span><br />
+<span class="f_Paragraph">The parameter </span><span class="f_Reference">matrixSize</span><span class="f_Paragraph"> contains redundant information to </span><span class="f_Reference">arrayDimensions</span><span class="f_Paragraph"> but is a security check to prevent to access the matrix out of bounds.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span><br />
+<span class="f_Paragraph">Similar arrayDimensions are used to describe the allowed dimensions for a variable node in the address space. Here the length of the array dimensions must match the value rank of the variable. See <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1a333d3b535da0a9401fa992b7f7faccf3" class="topiclink">Variable::setValueRank</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1af3b88576963e8749541d1054bfed63d3" class="topiclink">Variable::setArrayDimensions</a>.</span><br />
+<span class="f_Paragraph">However for variables it is allowed that one or more array dimension values are 0, i.e. the length of this dimension is not specified; variable length in this dimensions are generally supported.</span><br />
+<span class="f_Paragraph">Additionally for special value ranks (e.g. </span><span class="f_FixedSize">ValueRank_OneOrMoreDimensions</span>) array dimensions cannot be specified there.</p>
+<p class="p_NoteHeader"><span class="f_NoteHeader">Note: </span><span class="f_Paragraph">Empty matrix values are not supported. This includes empty arrayDimension as well as &quot;0&quot; values in any element of the array dimensions.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Thus an arrayDimension of {2, 3} describes a two-dimensional matrix, where the length of the first dimension is 2 and the length of the second dimension is 3.</span><br />
+<span class="f_Paragraph">In C (or C++) you can specify such a matrix e.g. with</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">OTUInt16&nbsp;myMatrixValue[2][3]&nbsp;=&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{1,&nbsp;2,&nbsp;3},</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{4,&nbsp;5,&nbsp;6}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To fill a <a href="class_softing_o_p_c_toolbox5_1_1_value.htm" class="topiclink">Value</a> with a matrix of single values you can use the API as shown above, where the matrixValues parameter must point to an array of values for the specific data type, which contains a value for every element in the matrix.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The values within a matrix needs to be C-like serialized, i.e. the example above would expect a serialized array with the numbers {1, 2, 3, 4, 5, 6}.</span><br />
+<span class="f_Paragraph">This can be easily achieved by passing the address of the first element in the matrix like </span><span class="f_FixedSize">&amp;myMatrixValue[0][0].</span></p>
+<p class="p_NoteHeader"><span class="f_NoteHeader">Note: </span><span class="f_Paragraph">The application has to provide a valid pointer to the values itself.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If you are using vectors of values, you can use the overloaded setter, e.g <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value_1adfae935d624e5db8da90d680452bbe8b" class="topiclink">Value::setUInt16Matrix(const std::vector&lt;OTUInt32&gt; &amp; arrayDimensions, const std::vector&lt;OTUInt16&gt;&amp; matrixValues)</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The length of the serialized array has to be the product of all elements of the arrayDimensions, e.g. an arrayDimension of {2, 3, 4} describing a three-dimensional array implies that the pointer to the values contain 24 elements (2 * 3 * 4).</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Example:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The first example shows the way setting a matrix value using a C-like two-dimensional array:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">#define&nbsp;MATRIX_LEN(x)&nbsp;(sizeof(x)&nbsp;/&nbsp;sizeof(**x))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;OTUInt32&gt;&nbsp;arrayDimensions;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Value&nbsp;matrixVal;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">arrayDimensions.push_back(2);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">arrayDimensions.push_back(3);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">OTUInt32&nbsp;testMatrixValue&nbsp;[2][3]&nbsp;=&nbsp;{&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{1,&nbsp;2,&nbsp;3},</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{4,&nbsp;5,&nbsp;6}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">};</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;matrixVal.setUInt32Matrix(arrayDimensions,&nbsp;MATRIX_LEN(testMatrixValue),&nbsp;&amp;testMatrixValue[0][0]);</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> The show helper macro </span><span class="f_FixedSize">MATRIX_LEN</span><span class="f_Paragraph"> shows how the array size from a fixed 2-dimensional C-Array of any type can be calculated. The hardcoded value 6 could be used in this example as well.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The result is identical to the second sample, where instead of a multi-dimensional array a one-dimensional vector is used, which is manually serialized:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;OTUInt32&gt;&nbsp;arrayDimensions;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Value&nbsp;matrixVal;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">arrayDimensions.push_back(2);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">arrayDimensions.push_back(3);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;OTUInt32&gt;&nbsp;testMatrixValue;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">testMatrixValue.reserve(arrayDimensions[0]&nbsp;*&nbsp;arrayDimensions[1]);&nbsp;//&nbsp;serialized&nbsp;length</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">for(size_t&nbsp;i=0;&nbsp;i&lt;arrayDimensions[0];&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;for(size_t&nbsp;j=0;&nbsp;j&lt;arrayDimensions[1];&nbsp;j++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;testMatrixValue.push_back((OTUInt32)(i*3&nbsp;+&nbsp;j&nbsp;+&nbsp;1));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;matrixVal.setUInt32Matrix(arrayDimensions,&nbsp;testMatrixValue);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_NoteHeader"><span class="f_NoteHeader">Note: </span><span class="f_Paragraph">You cannot use a two-dimensional vector. A vector ensures that all elements are consecutive in memory. However a vector of vectors does NOT use a consecutive memory for all elements of the contained vectors!</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If you use such a vector of vectors, you have to serialize it first to a flat vector:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;std::vector&lt;OTInt32&gt;&nbsp;&gt;&nbsp;matrix;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">matrix.push_back(std::vector&lt;OTInt32&gt;());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">matrix.push_back(std::vector&lt;OTInt32&gt;());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">matrix[0][0]&nbsp;=&nbsp;1;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">matrix[0][1]&nbsp;=&nbsp;2;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">matrix[0][2]&nbsp;=&nbsp;3;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">matrix[1][0]&nbsp;=&nbsp;4;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">matrix[1][1]&nbsp;=&nbsp;5;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">matrix[1][2]&nbsp;=&nbsp;6;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;OTUInt32&gt;&nbsp;arrayDimensions;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">arrayDimensions.push_back(matrix.size());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">arrayDimensions.push_back(matrix[0].size());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;OTInt32&gt;&nbsp;serializedMatrix;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">for(size_t&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;matrix.size();&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;serializedMatrix.insert(serializedMatrix.end(),&nbsp;matrix[i].begin(),&nbsp;matrix[i].end());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;matrixVal.setInt32Matrix(arrayDimensions,&nbsp;serializedMatrix);</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=matrix_serialization.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

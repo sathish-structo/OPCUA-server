@@ -1,0 +1,136 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Defining an Alarm</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_serverancdefininganalarm.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Defining an Alarm</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_programmersguide_ac_predefined.htm">Previous</a>&nbsp;
+     <a href="html_serveranctriggercondition.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h3 class="p_Heading3"><a id="hdr"></a><span class="f_Heading3">Condition class implementation</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm" class="topiclink">Condition</a> is an extended Event. In addition to being just transient object which stores a set of properties (notification data) like an event, conditions also store internal states, and they may also make use of state machines to manage some of the internal states used. Conditions are persistent objects, and might also be exposed in the address space just like any other node.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Create a condition</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">In OPC UA C++ Server &amp; Client SDK V6.00 conditions have to be exposed in the address space. They are created similar to other objects, i.e. setting node attributes, adding to address space, adding hierarchical references, ...</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The following shows an example for an exclusive limit alarm.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;pObjectThrowingAnAlarm&nbsp;is&nbsp;the&nbsp;originating&nbsp;object&nbsp;of&nbsp;the&nbsp;alarm</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Server::ExclusiveLimitAlarmPtr&nbsp;pAlarm&nbsp;=&nbsp;Server::ExclusiveLimitAlarm::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">OTUInt32&nbsp;alarmIdentifier&nbsp;=&nbsp;4711;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setNodeId(NodeId(nameSpaceIndex,&nbsp;objectIdentifier));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setDisplayName(LocalizedText(_T(&quot;MyExclusiveLimitAlarm&quot;),&nbsp;_T(&quot;en&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setBrowseName(QualifiedName(_T(&quot;MyExclusiveLimitAlarm&quot;),&nbsp;nameSpaceIndex));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setDescription(LocalizedText(_T(&quot;This&nbsp;is&nbsp;an&nbsp;example&nbsp;alarm&quot;),&nbsp;_T(&quot;en&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pObjectThrowingAnAlarm-&gt;addReference(Statics::ReferenceTypeId_Organizes,&nbsp;pAlarm);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;init(NULL);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">init</a></span><span class="f_Paragraph"> method creates all children as defined in the type tree for the specific type.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If some optional properties shall be disabled they can be removed.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;remove&nbsp;low&nbsp;low&nbsp;limit&nbsp;and&nbsp;high&nbsp;high&nbsp;limit</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;getLowLowLimitVar()-&gt;removeTree();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;getHighHighLimitVar()-&gt;removeTree();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;remove&nbsp;shelving&nbsp;state&nbsp;machine</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;getShelvingState()-&gt;removeTree();</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The alarm has some properties which needs to be set.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setSeverity(100);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setLowLimit(5.0);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setHighLimit(90.0);</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Create a Monitored Variable</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Usually an alarm monitors a variable (input node) and reports violations of constraints.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">It is possible to use alarms without a variable in the address space. In this case evaluation of constraints and reporting needs to be implemented completely by the application.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Server::VariablePtr&nbsp;pMonitoredVariable&nbsp;=&nbsp;Server::Variable::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">OTUInt32&nbsp;variableIdentifier&nbsp;=&nbsp;4712;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pMonitoredVariable-&gt;setNodeId(NodeId(nameSpaceIndex,&nbsp;variableIdentifier));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pMonitoredVariable-&gt;setDisplayName(LocalizedText(_T(&quot;MyMonitoredVariable&quot;),&nbsp;_T(&quot;en&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pMonitoredVariable-&gt;setBrowseName(QualifiedName(_T(&quot;MyMonitoredVariable&quot;),&nbsp;nameSpaceIndex));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pMonitoredVariable-&gt;setDescription(LocalizedText(_T(&quot;This&nbsp;is&nbsp;an&nbsp;variable&nbsp;monitored&nbsp;by&nbsp;an&nbsp;alarm&quot;),&nbsp;_T(&quot;en&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pObjectThrowingAnAlarm-&gt;addReference(Statics::ReferenceTypeId_Organizes,&nbsp;pMonitoredVariable);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pMonitoredVariable-&gt;init(NULL);</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Connect Object, Variable and Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Some properties of the alarm describe the connection between the alarm and other nodes in the address space.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">These properties needs to be set correctly:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setSourceNode(pObjectThrowingAnAlarm-&gt;getNodeId());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setSourceName(_T(&quot;Boiler&nbsp;1&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setInputNode(pMonitoredVariable-&gt;getNodeId());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;setSourceNode(pObjectThrowingAnAlarm-&gt;getNodeId());</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Additionally condition related references needs to be created.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The reference between any object in the event propagation hierarchy (in the example the predefined server node itself) and the originating object has to be established. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The reference between the originating object the monitored variable has to be established.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The reference between variable and alarm causes invocation of the method evaluating the constraint of the alarm when the variable changes its value.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">addressSpace-&gt;getServerObject()-&gt;addReference(Statics::ReferenceTypeId_HasNotifier,&nbsp;pObjectThrowingAnAlarm);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pObjectThrowingAnAlarm-&gt;addReference(Statics::ReferenceTypeId_HasEventSource,&nbsp;pMonitoredVariable);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pMonitoredVariable-&gt;addReference(Statics::ReferenceTypeId_HasCondition,&nbsp;pAlarm);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Since conditions and alarms are created in a disabled state the alarm needs to be enabled finally.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pAlarm-&gt;enable();</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Whenever the value of the monitored variable changes, the onVariableChanged method is called with the actual value.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The default implementation of all specific alarms is handling the evaluation of the constraints. </span><br />
+<span class="f_Paragraph">In case of a applications specific handling this method can be overwritten and specific actions can be implemented.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Retained Conditions</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The purpose of the </span><span class="f_Reference">Retain</span><span class="f_Paragraph"> flag in the condition is to indicate if a condition stores information that is of interest to a client, or that it needs attention from a client (for example an acknowledge is expected).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The flag is automatically maintained by OPC UA C++ Server &amp; Client SDK V6.00 in the default implementation of the methods</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a0686bd01cf8164d4392630bf6f60b2a6" class="topiclink">onEnable</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae9a80d9e5f644e9cb33ac5da7a0a2be9" class="topiclink">onDisable</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition_1a3fc9288375dcddceafa7855c35e60cf3" class="topiclink">onAcknowledge</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition_1a9d1c0716b7e8b0c14990db3e268d448d" class="topiclink">onConfirm</a></span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">If the application overwrites one of these methods it has to ensure that the functionality of the default implementation is executed. This can be done by either calling the base implementation or incorporating the code in the derived method.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_Reference">Retain</span><span class="f_Paragraph"> flag will be evaluated when the client performs a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aa26cd98f617f0521b7e828ead59ef6fa" class="topiclink">conditionRefresh</a> to get the actual state of all event monitored items in a subscription. A refresh is usually performed after connecting the subscription or specific notifications.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Conditions with the Retain property set to false are not reported. </span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Enable/Disable conditions</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The enabled state of a condition shall determine the generation of event notifications and results in a specific behavior. Conditions that are not enabled shall not be reported to the client. Whether disabled conditions maintain their internal state is server dependant. OPC UA C++ Server &amp; Client SDK V6.00 performs evaluation even for disabled conditions to ensure that the condition is in a correct state when being enabled.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The only exception when a disabled condition still reports changes to the client is on reaction to client action, i.e. if the client calls a method (e.g. acknowledge) the changed acknowledged status needs to be reported.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The condition class provides 2 methods, which might be used by a user, to get notifications about the state changes of the EnabledState:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">onEnable - will be called when the condition is switched to the enabled state. In case the condition evaluation is overwritten and not performed for disabled conditions, the application shall overwrite this in order to reevaluate the condition and update all the substates of the enabled state and the properties of the condition.</span><br />
+<span class="f_Paragraph">The default implementation shall be called after updating the states - it will maintain additional properties.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">onDisable - will be called when the condition is switched to the disabled state. The user shall overwrite this in order to update all the substates of the disabled state and the properties of the condition if required).</span><br />
+<span class="f_Paragraph">The default implementation shall be called after updating the states - it will maintain additional properties</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">The condition also exposes 2 UA methods, that allow clients to control the enabled/disabled state of a condition:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Enable - enables the condition by setting the enabled state to true. This will also result in the onEnable callback being triggered.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Disable - disables the condition by setting the enabled state to false. This will also result in the onDisable callback being triggered.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">The successful execution of this UA methods will result in a callback (onEnable or onDisable) to the user.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Alarm class implementation</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">An <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm" class="topiclink">AlarmCondition</a> is an extended <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm" class="topiclink">AcknowledgeableCondition</a>.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_serverancdefininganalarm.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Concepts</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_securityconcepts.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Concepts</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uasecuritymodel.htm">Previous</a>&nbsp;
+     <a href="html_securitycomparisontoclassicopc.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">OPC UA Part 2 – Definitions</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">When examining OPC UA from a security point of view, OPC UA Part 2 – Security provides an overview of the issues addressed by the set of specifications, but the actual security infrastructure is described in other parts of the specification. These parts will be referenced as they are described in this section. The following terms or concepts are defined in OPC UA – Part 2 and are used in this section:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Application Instance Certificate</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">A digital certificate that is for an individual instance of an application that has been installed in an individual host. Different installations of one software product would have different application instance certificates. There can be several application instances of the same application running at the same time on several computers or possibly the same computer.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Asymmetric Cryptography (&quot;public-key cryptography&quot;)</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">In an asymmetric encryption algorithm when an entity A wants to ensure confidentiality for data it sends to another entity B, entity A encrypts the data with a public key provided by entity B. Only entity B has the matching private key that is needed to decrypt the data. In an asymmetric digital signature algorithm when an entity A wants to ensure integrity or provide authentication for data it sends to an entity B, entity A uses its private key to sign the data. To verify the signature, entity B uses the matching public key that entity A has provided. In an asymmetric key agreement algorithm, entity A and entity B each send their own public key to the other entity. Then each uses its own private key and the other's public key to compute a new key value.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Digital Certificate</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">A structure that associates an identity with an entity such as a user, a product or an application instance where the certificate has an associated asymmetric key pair which can be used to authenticate that the entity does, indeed, possess the private key.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; height:32px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Digital Signature</span></p>
+</td>
+<td style="vertical-align:top; width:541px; height:32px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">A value computed with a cryptographic algorithm and appended to data in such a way that any recipient of the data can use the signature to verify the data's origin and integrity.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Key Exchange Algorithm</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">A protocol used for establishing a secure communication path between two entities in an unsecured environment whereby both entities apply a specific algorithm to securely exchange secret keys that are used for securing the communication between them. A typical example of a key exchange algorithm is the SSL handshake protocol specified in SSL/TLS.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Message Signature</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">A value computed with a cryptographic algorithm and appended to data in such a way that any recipient of the data can use the signature to verify the data's origin and integrity. It is used to ensure the integrity of messages that are sent between two entities. There are several ways to generate and verify Message Signatures however they can be categorized as symmetric and asymmetric approaches</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">OPC UA Application</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">An OPC UA client, which calls OPC UA services, or an OPC UA server, which performs those services.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Symmetric Signature</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">The mechanism for signing data with a cryptographic key shared by two entities, where the same key is used for two different steps (signature creation and signature verification).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">NOTE: The signature is then validated by generating the signature for the data again and comparing these two signatures. If they are the same then the signature is valid, otherwise either the key or the data is different. </span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">X.509 Certificate</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">A digital certificate in one of the formats defined by X.509 v1, 2, or 3. An X.509 certificate contains a sequence of data items and has a digital signature computed on that sequence.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">PKI</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Public Key Infrastructure</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The set of hardware, software, people, policies, and procedures needed to create, manage, store, distribute, and revoke digital certificates based on asymmetric cryptography. The core PKI functions are to register users and issue their public-key certificates, to revoke certificates when required, and to archive data needed to validate certificates at a much later time. Key pairs for data confidentiality may be generated by a certificate authority (CA), but requiring a private key owner to generate its own key pair improves security because the private key would never be transmitted.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">MES</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Manufacturing Execution Systems (MES) </span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">ERP</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Enterprise Resource Planning (ERP)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:107px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">DCS</span></p>
+</td>
+<td style="vertical-align:top; width:541px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Distributed Control System</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">Key Concepts</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Fundamentally, information system security reduces the risk of damage from attacks. It does this by identifying the threats to the system, identifying the system’s vulnerabilities to these threats, and providing countermeasures. The countermeasures reduce vulnerabilities directly, counteract threats, or provide recovery from successful attacks. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Industrial automation system security is achieved by meeting a set of objectives. These objectives have been refined through many years of experience in providing security for information systems in general and they remain quite constant despite the ever-changing set of threats to system. These objectives include:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Authentication (verifying the identity of an entity)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Authorization (granting the right to access a system resource) </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Confidentiality (protection of data from being read by unintended parties)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Availability (running with unimpeded capacity). </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Integrity (assurance that a message is received as sent, i.e. that it was not modified in transit).</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Auditing (the tracking of actions and activities in the system)</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA was designed to be able to handle these objectives, it was also designed to combat standard attacks, which includes all of the following standard attack vectors</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Message Flooding</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Eavesdropping</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Message Spoofing</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Message Alteration </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Message Replay</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Malformed Messages</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Server Profiling</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Session Hijacking</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Rogue Server</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Compromising User Credentials</span></td></tr></table></div><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Some of these attack vectors have alternate names such as “Man in the Middle”. A single attack vector may deal with multiple objectives. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC Foundation enlisted the assistance of security experts in designing the security that is built into OPC UA and also in verifying the security. The verification included detailed reviews by security experts of the specifications and the implementations of the specifications provided by the OPC Foundation. The OPC Foundation also did not invent the security algorithms or processes used in OPC UA; it relied on standard algorithms and processes. The OPC UA specification also allows for easy additions or updates to the algorithms used by the security process (i.e. it was designed for the future.) </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Security is always a site specific issue. In OPC UA security is possible, but not all places need it or want it. OPC Foundation highly recommends that security be used at individual sites, but the decision as to what types of security to use is site specific and should be part of a Cyber Security Management System (CSMS) of a site. Sites often have a CSMS that addresses security policy and procedures, personnel, responsibilities, audits, and physical security. A CSMS typically addresses threats; it also analyzes the security risks and determines what security controls the site needs. Resulting security controls commonly implement a “defense-in-depth” strategy that provides multiple layers of protection and recognizes that no single layer can protect against all attacks. It is also recommended that a sites security be reviewed periodically (have a security assessment performed), especially in today’s world where applications and security infrastructure are continually evolving.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA requires that applications implement security to pass compliance testing and that the default installation of an application has security enabled. It also requires that the various security features be able to be disabled. OPC UA specifies features that are intended so that compliant OPC UA client and OPC UA server products can meet the security requirements that are expected to be made by sites where they will be deployed. Those who are responsible for the security at the site should determine how to meet the site requirements with OPC UA compliant products.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_securityconcepts.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

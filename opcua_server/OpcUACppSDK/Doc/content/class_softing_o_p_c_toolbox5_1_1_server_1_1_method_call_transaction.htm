@@ -1,0 +1,204 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>MethodCallTransaction Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">MethodCallTransaction Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_modify_monitored_item_request.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerMethodCallTransaction.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map121" id="map121"><area shape="rect" coords="5,123,155,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm" alt="" /><area shape="rect" coords="37,6,123,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="23,59,137,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.gif" width="160" height="163" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction" style="width:160px;height:163px;border:none" usemap="#map121" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction" class="topiclink">MethodCallTransaction</a> allows server applications to process 'Call' service calls. Clients use the 'Call' service to trigger the execution of one or more methods on the server. The transaction contains a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request" class="topiclink">MethodCallRequest</a> object for each method that is to be executed.</p>
+<p class="p_Paragraph">The SDK creates a new transaction object for every service call and triggers the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1a746203bf109094c76fac0acdc5b44e08" class="topiclink">handleRequests()</a> callback that is responsible for processing the call. The default implementation of <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1a746203bf109094c76fac0acdc5b44e08" class="topiclink">handleRequests()</a> calls <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_1acbb74f4fbca6d6dbad76b53fbfd85cc8" class="topiclink">Method::handleExecuteRequest()</a> for every method that is to be executed.</p>
+<p class="p_Paragraph">A transaction is completed when all requests in the transaction have been completed by <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request_1a5696acd53a042e30ff7d3be86ab46814" class="topiclink">MethodCallRequest::complete()</a>. Only when the transaction is completed, the response to the service call is sent to the client. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1ad76b0133f9b343c97ff8dece8c50f09f" class="topiclink">MethodCallTransaction</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1adbe892d2ec22adc42b5050618d1c2569" class="topiclink">~MethodCallTransaction</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request" class="topiclink">Server::MethodCallRequest</a> &gt; &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1a86b0ab214bead68f717b1dbbfea1fc5a" class="topiclink">getRequests</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request" class="topiclink">Server::MethodCallRequest</a> &gt; &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1a1e445a272e4372c6894bacb67276eefd" class="topiclink">getRequests</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1a746203bf109094c76fac0acdc5b44e08" class="topiclink">handleRequests</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1aaa9a47bbfe853563432d95dc609f2f71" class="topiclink">initMembers</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1ad76b0133f9b343c97ff8dece8c50f09f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MethodCallTransaction::MethodCallTransaction</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1adbe892d2ec22adc42b5050618d1c2569"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::MethodCallTransaction::~MethodCallTransaction</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1a86b0ab214bead68f717b1dbbfea1fc5a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request" class="topiclink">Server::MethodCallRequest</a> &gt; &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MethodCallTransaction::getRequests</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the array of MethodCallRequests contained in this transaction instance. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1a1e445a272e4372c6894bacb67276eefd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request" class="topiclink">Server::MethodCallRequest</a> &gt; &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MethodCallTransaction::getRequests</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1a746203bf109094c76fac0acdc5b44e08"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MethodCallTransaction::handleRequests</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback method that is called by the SDK whenever a client uses the 'Call' service to execute one or more methods on the server.</p>
+<p class="p_Paragraph">The default implementation calls <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_1acbb74f4fbca6d6dbad76b53fbfd85cc8" class="topiclink">Method::handleExecuteRequest()</a> for every method that is to be executed.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>When overriding this method you mustn't use blocking calls within this method since this blocks the UA communication.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The requests within this transaction are already preprocessed by the SDK. If the SDK has found any errors (e.g. BadNodeIdUnknown, ...) in most cases the request should not be processed any more. Just complete the request and continue with the next. In some cases (e.g. processing &quot;virtual&quot; node, not known to the AddresSpaceRoot) further processing can be executed and the status code can be overwritten. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1aaa9a47bbfe853563432d95dc609f2f71"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MethodCallTransaction::initMembers</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a296fa36986f21445918d16ba8751ff90" class="topiclink">SoftingOPCToolbox5::Server::DataTransaction</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

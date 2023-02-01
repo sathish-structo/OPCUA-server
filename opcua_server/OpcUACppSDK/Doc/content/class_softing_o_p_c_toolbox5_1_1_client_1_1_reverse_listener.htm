@@ -1,0 +1,639 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ReverseListener Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">ReverseListener Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_redundant_subscription.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener"></a></p>
+<p><span class="f_CodeExample">#include &quot;ClientReverseListener.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map24" id="map24"><area shape="rect" coords="5,59,120,93" href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm" alt="" /><area shape="rect" coords="19,6,106,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.gif" width="125" height="99" alt="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener" style="width:125px;height:99px;border:none" usemap="#map24" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener" class="topiclink">ReverseListener</a> class listens for physical connections initiated by an OPC UA server.</p>
+<p class="p_Paragraph">The reverse connect feature allows a server to initiate physical connections (sockets) to a client. The server opens the socket and sends a &quot;reverse hello&quot; to the client. The client can use this reverse established physical connection to create a &quot;secure channel&quot;, i.e. to connect a client session (logical connection).</p>
+<p class="p_Paragraph">By this means it is possible to establish a connection to a server running behind a firewall which would block incoming requests from a client outside the firewall.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The client should start the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener" class="topiclink">ReverseListener</a> as early as possible so that servers can establish physical connections before the client tries to use these for sessions </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a63c110511dcc9509adaf7f29414a8ff8" class="topiclink">ReverseListener</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a924b5540f2fd45eb49dc28d411a26df7" class="topiclink">~ReverseListener</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a2bb57c01f090463206917a5163bfcf9b" class="topiclink">setClientUrl</a></span>(const tstring &amp;clientUrl)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ae8e76a6a54ff5be78e8cca7c87f3917c" class="topiclink">getClientUrl</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ac878ebc50493139bc8cb1643e18c8705" class="topiclink">setServerInformation</a></span>(const std::vector&lt; tstring &gt; &amp;serverUris, const std::vector&lt; tstring &gt; &amp;serverEndpointUrls)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ac0510044222c3237c62b633ad40bab53" class="topiclink">getServerInformation</a></span>(std::vector&lt; tstring &gt; &amp;serverUris, std::vector&lt; tstring &gt; &amp;serverEndpointUrls) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1aaee66aca1b4bdfe2cb76b1a56f138101" class="topiclink">setMaxClientChannels</a></span>(OTUInt32 maxClientChannels)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ad7407a5c34aa94700c1a655ebb3361ec" class="topiclink">getMaxClientChannels</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a9cd64d62a7caaf335607afcaef778687" class="topiclink">setMaxAnonymousConnections</a></span>(OTUInt32 maxAnonymousConnections)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a629f37d62c4f263ce5e2df5a07a50483" class="topiclink">getMaxAnonymousConnections</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a82c1f7f5b8e01dd532c8a6286e866d37" class="topiclink">setMaxWaitingConnections</a></span>(const std::vector&lt; OTUInt32 &gt; &amp;maxWaitingConnections)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1aff84e6b27a481b5eb09862cc60454a41" class="topiclink">getMaxWaitingConnections</a></span>(std::vector&lt; OTUInt32 &gt; &amp;maxWaitingConnections) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a57176a0ef98fa1c46db31bba3121445f" class="topiclink">setRestrictToSingleInterface</a></span>(bool restrictToSingleInterface)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1add1243bd2108449c17a71725b4e70dd2" class="topiclink">getRestrictToSingleInterface</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ac742cfe111ef90dd4c6e88cc27c6f6c9" class="topiclink">start</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1acd3dbb7eb17d7ddc0bf61ab9d076fe62" class="topiclink">stop</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a6534ddfb7d6f94e49e2adf07c28e16f9" class="topiclink">onServerConnectionOpened</a></span>(const tstring &amp;serverUri, const tstring &amp;endpointUrl)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a0f01898f1da6954de084b8452ebd316b" class="topiclink">onServerConnectionRejetced</a></span>(const tstring &amp;serverUri, const tstring &amp;endpointUrl)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener" class="topiclink">ReverseListener</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1aea1fbb0b71c97d8dc3846821c79b6975" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a90c19c8f85d76c0d3f3922258f6018ef" class="topiclink">ReverseListener</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1aea1fbb0b71c97d8dc3846821c79b6975"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener" class="topiclink">ReverseListener</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener" class="topiclink">ReverseListener</a> instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a63c110511dcc9509adaf7f29414a8ff8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::ReverseListener</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a924b5540f2fd45eb49dc28d411a26df7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::~ReverseListener</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a2bb57c01f090463206917a5163bfcf9b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::setClientUrl</span>(const tstring &amp; <span class="f_Parameter">clientUrl</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the URL of the client.</p>
+<p class="p_Paragraph">The client URL includes the IP address and the port where the client is listening for incoming connections from a server.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">clientUrl</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The URL where the client shall listen</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Currently only URLs with transport TCP (opc.tcp://) are supported. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ae8e76a6a54ff5be78e8cca7c87f3917c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::getClientUrl</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the URL of the client. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ac878ebc50493139bc8cb1643e18c8705"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::setServerInformation</span>(const std::vector&lt; tstring &gt; &amp; <span class="f_Parameter">serverUris</span>, const std::vector&lt; tstring &gt; &amp; <span class="f_Parameter">serverEndpointUrls</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the information for the servers which shall be allowed to connect.</p>
+<p class="p_Paragraph">As different servers in different networks may use similar IP addresses, the endpointUrls alone may be ambiguous. It requires a combination of server URI and endpoint URL to clearly identify an endpoint of a server in a remote network.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">serverUris</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The application URIs of the servers. The application URI of a specific server is part of its <a href="class_softing_o_p_c_toolbox5_1_1_application_description.htm#class_softing_o_p_c_toolbox5_1_1_application_description" class="topiclink">ApplicationDescription</a>. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">serverEndpointUrls</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The endpoints of the servers which shall be used. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a25a1e50ed5167fcac27e11b97f8a2c9e" class="topiclink">Client::Session::setUrl</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The number of serverEndpointUrls must be the same as the number of serverUris.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>To accept several endpoints from the same server provide several entries with identical serverUris but different endpointURLs </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ac0510044222c3237c62b633ad40bab53"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::getServerInformation</span>(std::vector&lt; tstring &gt; &amp; <span class="f_Parameter">serverUris</span>, std::vector&lt; tstring &gt; &amp; <span class="f_Parameter">serverEndpointUrls</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the configured information for the servers which shall be allowed to connect. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1aaee66aca1b4bdfe2cb76b1a56f138101"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::setMaxClientChannels</span>(OTUInt32 <span class="f_Parameter">maxClientChannels</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the maximum of client channels that will be used.</p>
+<p class="p_Paragraph">The listener reserves this number of sockets for connections using this reverse listener. This number of channels is shared among all reverse connecting servers. If the number is exceeded, then new connections from servers will fail, thus also the client cannot establish more connections (e.g. as Sessions) via this reverse listener.</p>
+<p class="p_Paragraph">The default value is 10</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">maxClientChannels</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The maximum channels which will be used for client sessions.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The total number of channels is limited by compilation. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ad7407a5c34aa94700c1a655ebb3361ec"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::getMaxClientChannels</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the current maximum of client channels that will be supported. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a9cd64d62a7caaf335607afcaef778687"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::setMaxAnonymousConnections</span>(OTUInt32 <span class="f_Parameter">maxAnonymousConnections</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the maximum of anonymous connections.</p>
+<p class="p_Paragraph">Once a server opens a physical connection (socket) to the client, the connection will be &quot;anonymous&quot; until the server sends the reverse hello. By sending the reverse hello, the server identified itself and the connection is no longer anonymous. Identified connections will be added to the &quot;waiting connections&quot; from this server until a client session will use it.</p>
+<p class="p_Paragraph">The number of anonymous channels is shared for all incoming reverse connections from all reverse connecting servers to this listener. If this number is exceeded, then the oldest anonymous connection to this listener is closed.</p>
+<p class="p_Paragraph">A good guide value is the number of expected reverse connecting servers + 1.</p>
+<p class="p_Paragraph">The default value is 2.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">maxAnonymousConnections</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The maximum anonymous connections</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Once an anonymous connection is established, the server should immediately send the reverse hello message, so the connection should be anonymous only for a very short time and every server should have at most one anonymous connection open at the same time </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a629f37d62c4f263ce5e2df5a07a50483"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::getMaxAnonymousConnections</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the current maximum of anonymous connections. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a82c1f7f5b8e01dd532c8a6286e866d37"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::setMaxWaitingConnections</span>(const std::vector&lt; OTUInt32 &gt; &amp; <span class="f_Parameter">maxWaitingConnections</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the maximum of waiting connections per server.</p>
+<p class="p_Paragraph">The waiting connections are connections which are mapped to a server (the &quot;reverse hello&quot; was sent), but not yet used by a client session.</p>
+<p class="p_Paragraph">This limit applies for every server endpoint that is configured via <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ac878ebc50493139bc8cb1643e18c8705" class="topiclink">setServerInformation()</a>. The used number of waiting connections of one server endpoint does not affect the number of waiting connections of any other server endpoint.</p>
+<p class="p_Paragraph">The default value is 5</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">maxWaitingConnections</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The maximum waiting connections per server </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1aff84e6b27a481b5eb09862cc60454a41"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::getMaxWaitingConnections</span>(std::vector&lt; OTUInt32 &gt; &amp; <span class="f_Parameter">maxWaitingConnections</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the currently used maximum of waiting connections per server. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a57176a0ef98fa1c46db31bba3121445f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::setRestrictToSingleInterface</span>(bool <span class="f_Parameter">restrictToSingleInterface</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the listener to be bound to a specific interface.</p>
+<p class="p_Paragraph">By default the reverse listener will listen on all network interfaces for incoming connections. If listening is restricted to a single IP address (IPv4 or IPv6) a server can connect only to the IP address in the URL.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">restrictToSingleInterface</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">true: A server can connect only to the IP address (IPv4 or IPv6) specified in the URL </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">false: A server can connect to all network interfaces of the machine</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If listening on a specific interface the client URL shall contain an IP address (not a name to be resolved). </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1add1243bd2108449c17a71725b4e70dd2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::getRestrictToSingleInterface</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the current configuration of listening on a specific interface. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1ac742cfe111ef90dd4c6e88cc27c6f6c9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::start</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Starts the reverse listener. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1acd3dbb7eb17d7ddc0bf61ab9d076fe62"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::stop</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Stops the reverse listener. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a6534ddfb7d6f94e49e2adf07c28e16f9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::onServerConnectionOpened</span>(const tstring &amp; <span class="f_Parameter">serverUri</span>, const tstring &amp; <span class="f_Parameter">endpointUrl</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback for configured connections.</p>
+<p class="p_Paragraph">A reverse listener is configured to accept only connections from a configured server (see setServerInformation). In case any of these configured servers connected to the reverse listener, this callback will be invoked.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">serverUri</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The server URI of the server which has opened the connection </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">endpointUrl</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The endpoint URL of the server which opened the connection</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This callback is meant for information purposes. Typically an application does not need to implement a specific behaviour. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a0f01898f1da6954de084b8452ebd316b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::onServerConnectionRejetced</span>(const tstring &amp; <span class="f_Parameter">serverUri</span>, const tstring &amp; <span class="f_Parameter">endpointUrl</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback for rejected connections.</p>
+<p class="p_Paragraph">A reverse listener is configured to accept only connections from a configured server (see setServerInformation). In case any other server tries to connect to the reverse listener, this callback will be invoked.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">serverUri</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The server URI of the server which was rejected </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">endpointUrl</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The endpoint URL of the server which was rejected</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Re-configuration of reverse listener to allow additional servers to connect will disconnect any already connected sessions using this reverse listener. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener_1a90c19c8f85d76c0d3f3922258f6018ef"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Client::ReverseListener::ReverseListener</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_client_1_1_reverse_listener.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

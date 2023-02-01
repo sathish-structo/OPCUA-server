@@ -1,0 +1,374 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>User Authorization</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_serveruserauthorization.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">User Authorization</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_serveruserauthentication.htm">Previous</a>&nbsp;
+     <a href="html_programmersguide_alarms_conditions.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">The SDK enables applications to define role based access rights for the nodes exposed in the address space.</span><br />
+<span class="f_Paragraph">These security features are implemented in alignment with the OPC UA specification that aims to define a standard approach for implementing role based security.</span><br />
+<span class="f_Paragraph">All previously used methods to define user-specific access rights become deprecated and are subject to be removed in future releases of the SDK.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Using Role based authorization</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">On server side every client is granted a set of roles based on the information provided by the client and subject to application specific requirements.</span><br />
+<span class="f_Paragraph">Most commonly roles are decided based on user authentication in the implementation of the callback method <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a0629090cbc9ca8f67f2d651eab87e358" class="topiclink">Endpoint::onAuthenticateUser()</a> (see <a href="html_serveruserauthentication.htm" class="topiclink">User Authentication)</a>.</span><br />
+<span class="f_Paragraph">Nevertheless the application developer is free to grant or modify roles at any time and based on client authentication, security modes, transports, endpoints or in a custom way (e.g. during a method call).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The Roles are stored on the session. The methods <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session_1aa4936d82caaa3273924a44d7cfdf6ffa" class="topiclink">Server::Session::setRoles()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session_1ade19b33d7f90993e8af171695286addc" class="topiclink">Server::Session::getRoles()</a> are provided for this purpose.</span><br />
+<span class="f_Paragraph">Note that the call of these methods is not limited to the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a0629090cbc9ca8f67f2d651eab87e358" class="topiclink">Endpoint::onAuthenticateUser()</a> callback method.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The following sample code illustrates a common pattern for implementing this callback:</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">class&nbsp;MyEndpoint&nbsp;:&nbsp;public&nbsp;SoftingOPCToolbox5::Server::Endpoint</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">public:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;virtual&nbsp;EnumStatusCode&nbsp;onAuthenticateUser(</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;IUserIdentityToken*&nbsp;userIdentityToken,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;ISignatureData*&nbsp;tokenSignature,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Server::Session*&nbsp;session,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;IApplicationDescription*&nbsp;applicationDescription,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTUInt32*&nbsp;userGroupIndex)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_UNUSED(userGroupIndex);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EnumStatusCode&nbsp;result&nbsp;=&nbsp;EnumStatusCode_BadNotImplemented;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;TODO:&nbsp;Verify&nbsp;user&nbsp;credentials&nbsp;passed&nbsp;with&nbsp;user&nbsp;identity&nbsp;token</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Define&nbsp;session&nbsp;roles&nbsp;upon&nbsp;successful&nbsp;authentication</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(StatusCode::isGood(result))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::vector&lt;NodeId&gt;&nbsp;roles;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;roles.push_back(roleId1);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;roles.push_back(roleId2);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;...&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session-&gt;setRoles(roles);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;result;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">};</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Access permissions can be defined on any node with a permission mask mapped to the defined Roles.</span><br />
+<span class="f_Paragraph">Application developers will use the methods <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a49111fc24212be21af319c32d951c6bd" class="topiclink">Server::BaseNode::setRolePermissions()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1ad7a6408af071562d67040cedbfd32cb4" class="topiclink">Server::BaseNode::getRolePermissions()</a> (see also <a href="class_softing_o_p_c_toolbox5_1_1_role_permission_type.htm" class="topiclink">RolePermissionType</a>).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">By default or when an empty vector of RolePermissions is set via <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a49111fc24212be21af319c32d951c6bd" class="topiclink">Server::BaseNode::setRolePermissions()</a>, then the node grants full access for all user, even when the session has no roles.</span><br />
+<span class="f_Paragraph">If a node has any RolePermissions set (except of the default configuration with the empty vector), then only the defined roles get the configured permissions, all not configured roles don't get any permissions.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The effective access permissions on a session for a node are calculated by a logical OR of all user permissions of all available session roles.</span><br />
+<span class="f_Paragraph">The <a href="_enums_8h_1a77e61cdae0acf54f27e7c0545112c021.htm" class="topiclink">EnumPermissionType</a> bit coded enumeration reflects the allowed permissions on a node.</span><br />
+<span class="f_Paragraph">It is important to notice that role based permissions can only further restrict the common access permissions on a node (e.g. from the </span><span class="f_Paragraph" style="font-style: italic;">AccesLevel</span><span class="f_Paragraph"> attribute of Variables or the </span><span class="f_Paragraph" style="font-style: italic;">Executable</span><span class="f_Paragraph"> attribute of Methods).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Note that the RolePermissions on a node can be modified at any time, the OPC UA C++ Server &amp; Client SDK V6.00 takes care to apply the updated permissions to all new and existing sessions and MonitoredItems.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The following code sample creates a variable with different permissions for two different roles:</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;roleIdReader,&nbsp;roleIdWriter;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">/*&nbsp;...&nbsp;*/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;createTestVariable(</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;OTUInt16&nbsp;namespaceIndex,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;tstring&amp;&nbsp;name,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;OTUInt32&nbsp;initialValue,</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;Server::ObjectPtr&nbsp;parent)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;Server::VariablePtr&nbsp;variable&nbsp;=&nbsp;Server::Variable::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(void)variable-&gt;setNodeId(NodeId(namespaceIndex,&nbsp;name));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(void)variable-&gt;setDisplayName(LocalizedText(name,&nbsp;_T(&quot;&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(void)variable-&gt;setBrowseName(QualifiedName(name,&nbsp;namespaceIndex));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(void)variable-&gt;setValueRank(ValueRank_Scalar);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(void)variable-&gt;setDataType(Statics::DataTypeId_UInt32);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(void)variable-&gt;setAccessLevel(EnumAccessLevel_CurrentRead&nbsp;|&nbsp;EnumAccessLevel_CurrentWrite);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;DataValue&nbsp;initialDataValue;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;initialDataValue.setValue(Value(initialValue));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(void)variable-&gt;setDataValue(initialDataValue);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Configure&nbsp;role&nbsp;permissions&nbsp;for&nbsp;two&nbsp;Roles&nbsp;(roleIdReader,&nbsp;roleIdWriter)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;std::vector&lt;RolePermissionType&gt;&nbsp;rolePermissions;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;rolePermissions.push_back(RolePermissionType());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;rolePermissions.back().setRoleId(roleIdReader);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;rolePermissions.back().setPermissions(EnumPermissionType_Read);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;rolePermissions.push_back(RolePermissionType());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;rolePermissions.back().setRoleId(roleIdWriter);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;rolePermissions.back().setPermissions(EnumPermissionType_Read&nbsp;|&nbsp;EnumPermissionType_Write);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;(void)variable-&gt;setRolePermissions(rolePermissions);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;EnumStatusCode&nbsp;result&nbsp;=&nbsp;variable-&gt;init(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;if(StatusCode::isSUCCEEDED(result))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;parent-&gt;addReference(Statics::ReferenceTypeId_Organizes,&nbsp;variable);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;result;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_NoteHeader"><span class="f_Paragraph">As the session and the nodes can handle multiple roles, an application developer is free to decide if all permissions shall be bound to one role or whether to split the permissions into several roles.</span><br />
+<span class="f_Paragraph">The OPC Foundation defines a set of well known role NodeIds (like Anonymous, AuthenticatedUser, Observer, Operator, Supervisor, SecurityAdmin, ConfigureAdmin, Engineer), but developers can also use custom role NodeIds.</span><br />
+<span class="f_Paragraph">This makes it easy to use the desired granularity or to adapt the OPC UA Server to an already existing permissions system.</span><br />
+<span class="f_Paragraph">For example the following two configurations have the same behavior:</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Configuration 1:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><p><span style="font-weight: bold;">User category</span></p>
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p><span style="font-weight: bold;">Roles</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><p>Anonymous</p>
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>WellKnownRole_Observer</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><p>Normal Authenticated User</p>
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>WellKnownRole_Operator</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><p>Authenticated Administrator</p>
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>WellKnownRole_ConfigureAdmin</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_NoteHeader"><span class="f_NoteHeader">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p><span style="font-weight: bold;">Role</span></p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p><span style="font-weight: bold;">Permissions on public nodes</span></p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p><span style="font-weight: bold;">Permissions on private nodes</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p>WellKnownRole_Observer</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Read</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>-</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p>WellKnownRole_Operator</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Read + Write</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Read</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p>WellKnownRole_ConfigureAdmin</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Read + Write</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Read + Write + Call</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Configuration 2:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><p><span style="font-weight: bold;">User category</span></p>
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p><span style="font-weight: bold;">Roles</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><p>Anonymous</p>
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>MyRole_PublicReadAccess</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><p>Normal Authenticated User</p>
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>MyRole_PublicReadAccess</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>MyRole_PublicWriteAccess</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>MyRole_PrivateReadAccess</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><p>Authenticated Administrator</p>
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><br />
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>MyRole_PublicReadAccess</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>MyRole_PublicWriteAccess</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>MyRole_PrivateReadAccess</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>MyRole_PrivateWriteAccess</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:233px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:237px; padding:3px;"><p>MyRole_AdminMethodAccess</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_NoteHeader"><span class="f_NoteHeader">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p><span style="font-weight: bold;">Role</span></p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p><span style="font-weight: bold;">Permissions on public nodes</span></p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p><span style="font-weight: bold;">Permissions on private nodes</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p>MyRole_PublicReadAccess</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Read</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>-</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p>MyRole_PublicWriteAccess</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Write</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>-</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p>MyRole_PrivateReadAccess</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>-</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Read</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p>MyRole_PrivateWriteAccess</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>-</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Write</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:234px; padding:3px;"><p>MyRole_AdminMethodAccess</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>-</p>
+</td>
+<td style="vertical-align:top; width:235px; padding:3px;"><p>Call</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_serveruserauthorization.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

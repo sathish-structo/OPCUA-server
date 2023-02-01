@@ -1,0 +1,1182 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>MonitoredItem Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">MonitoredItem Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_certificate_change_transaction.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_redundant_monitored_item.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item"></a></p>
+<p><span class="f_CodeExample">#include &quot;ClientMonitoredItem.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map20" id="map20"><area shape="rect" coords="14,6,101,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="5,59,110,93" href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.gif" width="115" height="99" alt="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" style="width:115px;height:99px;border:none" usemap="#map20" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> class is used to monitor data changes or events in a server.</p>
+<p class="p_Paragraph">For monitoring data changes, the monitored item needs to be configured with the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the monitored node and the attribute of the node that is to be monitored (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac218649ac550c8b82a8c619e96db99e1" class="topiclink">setNodeId()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac9158903c5591485c4bfc91e765d5b2c" class="topiclink">setAttributeId()</a>). Usually, this will be the value attribute of a variable. The sampling interval determines the rate that the server uses to update the monitored attribute (<a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a524293a9b4978da695cd84fab1c16ccd" class="topiclink">setSamplingInterval()</a>).</p>
+<p class="p_Paragraph">For monitoring events, the monitored item needs to be configured with the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of an object that emits events and the special attribute 'EnumAttributeId_EventNotifier' (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac218649ac550c8b82a8c619e96db99e1" class="topiclink">setNodeId()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac9158903c5591485c4bfc91e765d5b2c" class="topiclink">setAttributeId()</a>). An event filter specifies both the fields of an event that the client is interested in and the criteria for an event to be reported to the client (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab504a377251f6866ff53e024d72b5112" class="topiclink">setEventFilter()</a>).</p>
+<p class="p_Paragraph">A configured monitored item is created on the server only after it has been added to a subscription and connected (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a01867c04254d759594f87923752b01ca" class="topiclink">Subscription::addMonitoredItem()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a15daa12230bccefba4dcfd99267e858a" class="topiclink">connect()</a>).</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aac3a323e8eceb78392dd69c8c11247ee" class="topiclink">MonitoredItem</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a7f31edacdb30b295e890e070d9e5a586" class="topiclink">~MonitoredItem</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a15daa12230bccefba4dcfd99267e858a" class="topiclink">connect</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a1118f912c8a2158c707d1fc2c88b5868" class="topiclink">disconnect</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01" class="topiclink">isConnected</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a8e868e0e281fe71481ab29f8c47e9b00" class="topiclink">addItemsToReport</a></span>(const std::vector&lt; Client::MonitoredItemPtr &gt; &amp;itemsToReport)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a27f8111e42a971acfa8d29b0d7c3d34c" class="topiclink">removeItemsToReport</a></span>(const std::vector&lt; Client::MonitoredItemPtr &gt; &amp;itemsToReport)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Client::Subscription</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a3ae99ff1a2ab5b47b41b2a8879a840b6" class="topiclink">getSubscription</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Client::Subscription</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aacaa6095e54eb129020dbbc2790bcb8f" class="topiclink">getSubscription</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aed9462d07dc5dcd12b82a543e3f20543" class="topiclink">getId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a2b580bf64273ab687173959a377bb5f7" class="topiclink">getNodeId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac218649ac550c8b82a8c619e96db99e1" class="topiclink">setNodeId</a></span>(const INodeId *nodeId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aba62b45df5fd0fe9ef03da95c4232eb5" class="topiclink">setNodeId</a></span>(const INodeId &amp;nodeId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b.htm#_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b" class="topiclink">EnumAttributeId</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ad04a064cdc5d8ca89f5eef15b1d2803f" class="topiclink">getAttributeId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac9158903c5591485c4bfc91e765d5b2c" class="topiclink">setAttributeId</a></span>(EnumAttributeId attributeId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const <a href="class_softing_o_p_c_toolbox5_1_1_i_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_i_numeric_range" class="topiclink">INumericRange</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a152ca1d97423f528ab100a6853188d26" class="topiclink">getIndexRange</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1af6012c6a4f8a1eebb7db0176fb722026" class="topiclink">setIndexRange</a></span>(const INumericRange *pIndexRange)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a69289780532d0636a62b4f17ac4448db" class="topiclink">setIndexRange</a></span>(const NumericRange &amp;indexRange)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6.htm#_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6" class="topiclink">EnumMonitoringMode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1abe25ab21e5dc84db76158a7d6d9a47aa" class="topiclink">getMonitoringMode</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab522bbdd136ff1209a7021132dfa0098" class="topiclink">setMonitoringMode</a></span>(EnumMonitoringMode monitoringMode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">double</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a2800d009652440a9b40e20a3f912232a" class="topiclink">getSamplingInterval</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a524293a9b4978da695cd84fab1c16ccd" class="topiclink">setSamplingInterval</a></span>(double samplingInterval)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">double</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ae87a349b4d64b7eb48a65a904bcac828" class="topiclink">getRevisedSamplingInterval</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aae1dc4fbf5bdf6479f3a7bf12c8c51f0" class="topiclink">getQueueSize</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aee02a711465fd7326f2376f53c5756bc" class="topiclink">setQueueSize</a></span>(OTUInt32 queueSize)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a9537c8c10338c20db4b5014d5a752d68" class="topiclink">getRevisedQueueSize</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a8528f14b407d11bc05d349193eb0fc20" class="topiclink">getDiscardOldest</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aab2c0de1a99efb08a6336866c2e00dc3" class="topiclink">setDiscardOldest</a></span>(bool discardOldest)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_change_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_data_change_filter" class="topiclink">IDataChangeFilter</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ad432dfbdd57566cb73b91fbb670346d5" class="topiclink">getFilter</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1adadb9b9838d5a8cedd82fc2793844738" class="topiclink">setFilter</a></span>(const IDataChangeFilter *filter)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ae0f56abc97ec65f710e0f00d08d2e587" class="topiclink">setFilter</a></span>(const IDataChangeFilter &amp;filter)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_event_filter" class="topiclink">IEventFilter</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a0e01105ab08a44507895429cd25e4252" class="topiclink">getEventFilter</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab504a377251f6866ff53e024d72b5112" class="topiclink">setEventFilter</a></span>(const IEventFilter *eventFilter)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab10ce57dcbbdcab5c9916e293ab712d3" class="topiclink">setEventFilter</a></span>(const IEventFilter &amp;eventFilter)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a6a91860cc726e0d7f5dc96fdbaa3e12d" class="topiclink">onError</a></span>(EnumStatusCode errorCode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1af7b2fbffdd3bee8873c93d9dab572429" class="topiclink">onStatusChange</a></span>(bool isConnected)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a07a2cb20d26f39f7a85e8d1a8d79df9e" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab80c82798587d27d8dd43300f6f9eff9" class="topiclink">MonitoredItem</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a07a2cb20d26f39f7a85e8d1a8d79df9e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aac3a323e8eceb78392dd69c8c11247ee"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::MonitoredItem</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a7f31edacdb30b295e890e070d9e5a586"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::~MonitoredItem</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a15daa12230bccefba4dcfd99267e858a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::connect</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Connects the configured <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> to the server. When this call succeeds, the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> is registered at the server and collects data changes or events. Data changes and events are reported via <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ac71cce02fe3805a3d803c349f20bf80a" class="topiclink">Client::Subscription::onDataChange()</a> resp. <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707" class="topiclink">Client::Subscription::onEventsReceived()</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a1118f912c8a2158c707d1fc2c88b5868" class="topiclink">disconnect()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a1118f912c8a2158c707d1fc2c88b5868"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::disconnect</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Disconnects the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> from the server. When this call succeeds, the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has been deleted on the server.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a15daa12230bccefba4dcfd99267e858a" class="topiclink">connect()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::isConnected</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns true if the monitored item is connected to the server. <span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a15daa12230bccefba4dcfd99267e858a" class="topiclink">connect()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a1118f912c8a2158c707d1fc2c88b5868" class="topiclink">disconnect()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a8e868e0e281fe71481ab29f8c47e9b00"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::addItemsToReport</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> &gt; &amp; <span class="f_Parameter">itemsToReport</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds a list of MonitoredItems that shall be reported when this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> triggers. </p>
+<p class="p_Paragraph">OPC UA allows setting up MonitoredItems that report their data changes or events only if they are triggered by some other <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a>. The triggering mechanism is a useful feature that allows clients to reduce the data volume on the wire by configuring some MonitoredItems to sample frequently but only report when some other event happens.</p>
+<p class="p_Paragraph">The monitoring mode of the items to report (i.e. triggered items) is set to sampling-only so that it will sample and queue notifications without reporting them.</p>
+<p class="p_Paragraph">The following triggering modes are defined: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">If the monitoring mode of the triggering item is SAMPLING, then it is not reported when the triggering item triggers the items to report. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">If the monitoring mode of the triggering item is REPORTING, then it is reported when the triggering item triggers the items to report. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">If the monitoring mode of the triggering item is DISABLED, then the triggering item does not trigger the items to report. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">If the monitoring mode of the item to report is SAMPLING, then it is reported when the triggering item triggers the items to report. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">If the monitoring mode of the item to report is REPORTING, this effectively causes the triggering item to be ignored. All notifications of the items to report are sent after the publishing interval expires. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">If the monitoring mode of the item to report is DISABLED, then there will be no sampling of the item to report and therefore no notifications to report.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">itemsToReport</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">A list of MonitoredItems that shall report their notifications when this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> triggers.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please note that both the reporting MonitoredItems and the triggering <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> need to be added to a subscription before the triggering linkage can be established. The triggered monitored items must not be connected after the triggering monitored item (connecting in the same call works).</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a27f8111e42a971acfa8d29b0d7c3d34c" class="topiclink">removeItemsToReport()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a27f8111e42a971acfa8d29b0d7c3d34c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::removeItemsToReport</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> &gt; &amp; <span class="f_Parameter">itemsToReport</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Removes a list of items to be reported when this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> triggers.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">itemsToReport</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">A list of MonitoredItems that shall no longer report their notifications when this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> triggers.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a8e868e0e281fe71481ab29f8c47e9b00" class="topiclink">addItemsToReport()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a3ae99ff1a2ab5b47b41b2a8879a840b6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Client::Subscription</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getSubscription</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the subscription this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> belongs to. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aacaa6095e54eb129020dbbc2790bcb8f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Client::Subscription</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getSubscription</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aed9462d07dc5dcd12b82a543e3f20543"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the identifier of this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> that has been assigned by the server.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Since the identifier is assigned by the server, this method shall only be called when the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> is connected (i.e. <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01" class="topiclink">isConnected()</a> == true) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a2b580bf64273ab687173959a377bb5f7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getNodeId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the node that is being monitored. <span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac218649ac550c8b82a8c619e96db99e1" class="topiclink">setNodeId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac218649ac550c8b82a8c619e96db99e1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setNodeId</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">nodeId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the node that is to be monitored.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> cannot be modified after the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has been connected.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac9158903c5591485c4bfc91e765d5b2c" class="topiclink">setAttributeId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aba62b45df5fd0fe9ef03da95c4232eb5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setNodeId</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> &amp; <span class="f_Parameter">nodeId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ad04a064cdc5d8ca89f5eef15b1d2803f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b.htm#_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b" class="topiclink">EnumAttributeId</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getAttributeId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the attribute of the node that is to be monitored. <span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac9158903c5591485c4bfc91e765d5b2c" class="topiclink">setAttributeId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ac9158903c5591485c4bfc91e765d5b2c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setAttributeId</span>(<a href="_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b.htm#_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b" class="topiclink">EnumAttributeId</a> <span class="f_Parameter">attributeId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the attribute of the node that is to be monitored.</p>
+<p class="p_Paragraph">In case of monitoring events, the attribute id must be the 'EventNotifier' attribute. Default attribute id is EnumAttributeId_Value.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The monitored attribute cannot be modified after the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has been connected. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a152ca1d97423f528ab100a6853188d26"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const <a href="class_softing_o_p_c_toolbox5_1_1_i_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_i_numeric_range" class="topiclink">INumericRange</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getIndexRange</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the index range that the server applies to DataValues that contain variants of type 'array' or 'matrix'. <span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1af6012c6a4f8a1eebb7db0176fb722026" class="topiclink">setIndexRange()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1af6012c6a4f8a1eebb7db0176fb722026"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setIndexRange</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_i_numeric_range" class="topiclink">INumericRange</a> * <span class="f_Parameter">pIndexRange</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the index range that the server applies to DataValues that contain variants of type 'array' or 'matrix'. The index range allows clients to request only a certain range of an array.</p>
+<p class="p_Paragraph">Examples: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;1&quot; - would select the second array element only </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;1:2&quot; - would select the second and third elements in an array </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;1:2,0:1&quot; - would select an range of a matrix. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;1,2&quot; - would select the element at position [1,2] in the matrix</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">pIndexRange</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The index range to apply to arrays</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The index range cannot be modified after the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has been connected. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The second argument of the range specification for a dimension must be greater than the first one. The following values are, for example, invalid: &quot;1:1&quot;, &quot;2:1&quot; </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a69289780532d0636a62b4f17ac4448db"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setIndexRange</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_numeric_range" class="topiclink">NumericRange</a> &amp; <span class="f_Parameter">indexRange</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1abe25ab21e5dc84db76158a7d6d9a47aa"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6.htm#_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6" class="topiclink">EnumMonitoringMode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getMonitoringMode</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the monitoring mode of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a>. <span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab522bbdd136ff1209a7021132dfa0098" class="topiclink">setMonitoringMode()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab522bbdd136ff1209a7021132dfa0098"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setMonitoringMode</span>(<a href="_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6.htm#_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6" class="topiclink">EnumMonitoringMode</a> <span class="f_Parameter">monitoringMode</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the monitoring mode of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a>. The monitoring mode determines whether the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> collects notification messages (i.e. data change notifications or event notifications) and, if so, whether the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> publishes the collected notifications or not.</p>
+<p class="p_Paragraph">The monitoring mode is usually set before the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> is being connected. Changing the monitoring mode of a connected <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> will immediately change its state in the server.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">monitoringMode</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The monitoring mode of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Default value is EnumMonitoringMode_Reporting</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>To modify the monitoring mode of multiple items, please use the methods <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2c061d20c800b09a4c11dd62e1fe879c" class="topiclink">Client::Subscription::setMonitoredItemsMonitoringMode()</a> or <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a6c2cf4a60625a3de25e741ddbd880503" class="topiclink">Client::Subscription::setAllMonitoredItemsMonitoringMode()</a>. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a2800d009652440a9b40e20a3f912232a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>double<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getSamplingInterval</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the sampling interval (in milliseconds) of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a>. The server may revise this value to a more appropriate value which can be retrieved by <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ae87a349b4d64b7eb48a65a904bcac828" class="topiclink">getRevisedSamplingInterval()</a> after the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has been connected.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a524293a9b4978da695cd84fab1c16ccd" class="topiclink">setSamplingInterval()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a524293a9b4978da695cd84fab1c16ccd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setSamplingInterval</span>(double <span class="f_Parameter">samplingInterval</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the sampling interval of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a>. The server may revise this value to a more appropriate value which can be retrieved by <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ae87a349b4d64b7eb48a65a904bcac828" class="topiclink">getRevisedSamplingInterval()</a> after the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has been connected.</p>
+<p class="p_Paragraph">The value 0 indicates that the server should use the fastest practical rate. The value -1 indicates that the publishing interval of the subscription shall be used for the sampling interval.</p>
+<p class="p_Paragraph">In case of an event monitored item this value must be 0.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">samplingInterval</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The sampling interval in milliseconds</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The default value is 0. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1a7194be05a69a005c330afa54d9a748" class="topiclink">Client::Subscription::updateChangedMonitoredItems()</a> to apply changes to the sampling interval when the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> is already connected (<a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01" class="topiclink">isConnected()</a> == true). </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ae87a349b4d64b7eb48a65a904bcac828"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>double<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getRevisedSamplingInterval</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the revised sampling interval. The server may revise this value to a more appropriate value which can be retrieved by <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ae87a349b4d64b7eb48a65a904bcac828" class="topiclink">getRevisedSamplingInterval()</a> after the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has been connected.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This method is only available when <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01" class="topiclink">isConnected()</a> == true. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aae1dc4fbf5bdf6479f3a7bf12c8c51f0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getQueueSize</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the maximum number of data change or event notifications that a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> may hold in its queue. Notifications are dequeued by the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> every publishing interval.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aee02a711465fd7326f2376f53c5756bc" class="topiclink">setQueueSize()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aee02a711465fd7326f2376f53c5756bc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setQueueSize</span>(OTUInt32 <span class="f_Parameter">queueSize</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the maximum number of data change or event notifications that a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> may hold in its queue. Notifications are dequeued by the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> every publishing interval.</p>
+<p class="p_Paragraph">The queue of notification messages allows clients to collect more than one data value change or event for the same node with one publish call.</p>
+<p class="p_Paragraph">If the server wants to enqueue a notification message and the queue has reached the maximum number of elements, then depending on the DiscardOldest parameter (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aab2c0de1a99efb08a6336866c2e00dc3" class="topiclink">setDiscardOldest()</a>) either the oldest or the latest notification is discarded.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">queueSize</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The maximum number of data change or event notification messages that the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> shall keep in its queue before the queue is emptied by the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> during publishing. If the value 0 is provided, the server will use the default queue size.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The default value is the value 0 which means that the server will use the default queue size. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1a7194be05a69a005c330afa54d9a748" class="topiclink">Client::Subscription::updateChangedMonitoredItems()</a> to apply changes to the queue size when the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> is already connected (<a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01" class="topiclink">isConnected()</a> == true). </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a9537c8c10338c20db4b5014d5a752d68"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getRevisedQueueSize</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the revised maximum number of data change or event notifications that a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> may hold in its queue. The server may revise the queue size to a more appropriate value which can be retrieved by this method after the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has been connected.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aee02a711465fd7326f2376f53c5756bc" class="topiclink">setQueueSize()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This method is only available when <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01" class="topiclink">isConnected()</a> == true. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a8528f14b407d11bc05d349193eb0fc20"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getDiscardOldest</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether the oldest or the latest notification message is discarded when the queue of notification messages is full and a new notification is to be enqueued.</p>
+<p class="p_Paragraph">Returns true, if the oldest notification message is discarded. Returns false, if the latest notification message (i.e. the new notification to enqueue) is discarded.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aab2c0de1a99efb08a6336866c2e00dc3" class="topiclink">setDiscardOldest()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aab2c0de1a99efb08a6336866c2e00dc3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setDiscardOldest</span>(bool <span class="f_Parameter">discardOldest</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets whether the oldest or the latest notification message is discarded when the queue of notification messages is full and a new notification is to be enqueued.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">discardOldest</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">If true, the oldest notification message in the queue is discarded. (Default) If false, the new notification message to enqueue is discarded.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1a7194be05a69a005c330afa54d9a748" class="topiclink">Client::Subscription::updateChangedMonitoredItems()</a> to apply changes to the queue policy when the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> is already connected (<a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01" class="topiclink">isConnected()</a> == true).</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aee02a711465fd7326f2376f53c5756bc" class="topiclink">setQueueSize()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ad432dfbdd57566cb73b91fbb670346d5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_change_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_data_change_filter" class="topiclink">IDataChangeFilter</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getFilter</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the data change filter that decides whether a data change is to be enqueued (and reported) or not. <span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1adadb9b9838d5a8cedd82fc2793844738" class="topiclink">setFilter()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1adadb9b9838d5a8cedd82fc2793844738"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setFilter</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_change_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_data_change_filter" class="topiclink">IDataChangeFilter</a> * <span class="f_Parameter">filter</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the data change filter that decides whether a data change is to be enqueued (and reported) or not. The data change filter defines </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">which <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value" class="topiclink">DataValue</a> attributes (value, quality/status, timestamp) must have changed for the data change to be enqueued. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">an optional deadband for analog values.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">filter</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The data change filter</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1a7194be05a69a005c330afa54d9a748" class="topiclink">Client::Subscription::updateChangedMonitoredItems()</a> to apply changes to the data change filter when the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> is already connected (<a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01" class="topiclink">isConnected()</a> == true). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The data change filter must only be specified for data change- (and not event-) monitored items. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ae0f56abc97ec65f710e0f00d08d2e587"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setFilter</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_change_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_data_change_filter" class="topiclink">IDataChangeFilter</a> &amp; <span class="f_Parameter">filter</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a0e01105ab08a44507895429cd25e4252"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_event_filter" class="topiclink">IEventFilter</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::getEventFilter</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the event filter that is applied to events that are enqueued in the notification message queue. <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab504a377251f6866ff53e024d72b5112" class="topiclink">setEventFilter()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab504a377251f6866ff53e024d72b5112"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setEventFilter</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_event_filter" class="topiclink">IEventFilter</a> * <span class="f_Parameter">eventFilter</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the event filter that is applied to events that are enqueued in the notification message queue. Setting an event filter denotes this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> as event monitored item.</p>
+<p class="p_Paragraph">The event filter defines </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">which data (event fields) of an event is to be returned </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">a SQL-like &quot;where&quot;-clause that determines which events to report</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">eventFilter</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The filter that contains the 'select'- and 'where'-clause for events which are enqueued in this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a>'s notification message queue</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1a7194be05a69a005c330afa54d9a748" class="topiclink">Client::Subscription::updateChangedMonitoredItems()</a> to apply changes to the event filter when the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> is already connected (<a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a83a2c33128636a6bd216e9ebad98ee01" class="topiclink">isConnected()</a> == true). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The data change filter must only be specified for data change- (and not event-) monitored items. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab10ce57dcbbdcab5c9916e293ab712d3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::setEventFilter</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_event_filter" class="topiclink">IEventFilter</a> &amp; <span class="f_Parameter">eventFilter</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a6a91860cc726e0d7f5dc96fdbaa3e12d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::onError</span>(<a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a> <span class="f_Parameter">errorCode</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This method is called whenever an error concerning this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> occurs. Applications should override this method to catch errors that occur due to this monitored item.</p>
+<p class="p_Paragraph">Typical contexts in which this callback is called are errors in following situations: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">connecting the monitored item on the server node </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">deleting a monitored item from the server </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">updating the server with the monitored items modifications </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">setting the monitoring mode for monitored items </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">setting triggered monitored items (for the items to be added or removed)</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">errorCode</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The status code of the error that occurred </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1af7b2fbffdd3bee8873c93d9dab572429"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::onStatusChange</span>(bool <span class="f_Parameter">isConnected</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This method is called whenever the connection state of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> changes.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">isConnected</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">If true, the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> is connected to the server </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab80c82798587d27d8dd43300f6f9eff9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Client::MonitoredItem::MonitoredItem</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

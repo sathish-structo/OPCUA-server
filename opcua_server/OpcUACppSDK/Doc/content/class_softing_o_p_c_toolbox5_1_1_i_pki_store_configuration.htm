@@ -1,0 +1,861 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IPkiStoreConfiguration Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IPkiStoreConfiguration Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_parsing_result.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_published_data_set_data_type.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration"></a></p>
+<p><span class="f_CodeExample">#include &quot;IPkiStoreConfiguration.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map281" id="map281"><area shape="rect" coords="5,6,157,29" href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm" alt="" /><area shape="rect" coords="8,59,155,82" href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.gif" width="163" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration" style="width:163px;height:88px;border:none" usemap="#map281" /></p>
+<p class="p_Paragraph">This class holds all the information that is required to verify application instance certificates.</p>
+<p class="p_Paragraph">A certificate can be signed (issued) by another certificate. In general the issuer is a certificate authority (CA) but for special use cases non-CA certificates can also sign other certificates. Every issued certificate can be revoked by the signer, e.g. in case of a compromised private key. Revoked certificates are stored in a Certificate Revocation List (CRL) and shall be rejected on validation.</p>
+<p class="p_Paragraph">Root certificates are signed by themselves, they are named self-signed. Both self-signed and issued certificates can be used as application instance certificate. In case of many instance certificates it might be easier to deploy only the CA certificates (and their CRLs).</p>
+<p class="p_Paragraph">General certificate handling:</p>
+<p class="p_Paragraph">A OPC UA application provides its application certificate via the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9ba7b51ae0902492e747df3032b23e56" class="topiclink">Application::setInstanceCertificate()</a> method.</p>
+<p class="p_Paragraph">If a client likes to connect to a server the server instance certificate is provided in its <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description" class="topiclink">EndpointDescription</a> <span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a>. The client application can validate this certificate using the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ad8b00c3625319b36acab988ecf1a9cf1" class="topiclink">Application::validateCertificate()</a> method. The OPC UA C++ Server &amp; Client SDK performs no automatic validation.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1acd666a38804279b18da3266355d75a13" class="topiclink">Application::setPkiStoreConfiguration()</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">The certificate must be a valid certificate (i.e. is conform to X509) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">The certificate and all issuers up to the root are necessary to verify that the chain up to the root certificate is a valid chain. A valid chain does not necessarily imply a trusted certificate, it just ensures that all certificates are really signed by the named issuer. In case of a self-signed certificate the issuer is the certificate itself, i.e. it is a root certificate. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">In case of revocation list validation the certificate must not be revoked by its issuer. There are multiple options how revocation list validation can be performed. see EnumCrlCheckOption </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Additionally the certificate (or one of its issuer) must be recognized as a trusted certificate.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">The strategy supported by earlier OPC UA C++ Server &amp; Client SDK versions was to specify a list of trusted certificates only. In this list all trusted client certificates or the certificate of the issuer was stored, revocation list validation was not supported. To enabled this strategy the untrusted list can remain empty, the trusted list shall be added for chain validation and CRL validation shall be set to none. The check whether the certificate is in the trusted list can be skipped for performance reasons since only trusted certificates are added for chain validation. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Using the untrusted list for chain validation should imply the flag that one of the certificates in the chain must reside in the trusted list. Otherwise all certificates which pass the chain validation would be trusted. This strategy can be used if a global root certificate authority (CA) is used for signing certificates (or sub-CA). However it might be useful not trusting all other certificates signed by this global CA. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Certificate Revocation List (CRL) validation can be combined with any strategy. If a CRL validation of a specific certificate is performed the CRL of the issuer must be available, otherwise the validation fails. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1aacc52e24bdf643ce39525f649a250355" class="topiclink">~IPkiStoreConfiguration</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a7737e9f0443f8bafc106b9a1d5b11fae" class="topiclink">setBasePath</a></span>(const tstring &amp;basePath)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a1ecb15e8026b60ac4c4d52f477f8c0bc" class="topiclink">getBasePath</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ad9d1a9106c63a81436e42207170dca55" class="topiclink">setCertificateTrustListLocation</a></span>(const tstring &amp;certificateTrustListLocation)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a43b6fa1d5b7d0afccd0a98ada105cf73" class="topiclink">getCertificateTrustListLocation</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a93edf5cf64cf6a4b7278b8293e0b299e" class="topiclink">setIssuerCertificateListLocation</a></span>(const tstring &amp;issuerListLocation)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a8c713bcc976d944ba344dfbd805274cc" class="topiclink">getIssuerCertificateListLocation</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ae446a7f5110b5ab533382e31699bd023" class="topiclink">setCertificateRevocationListLocation</a></span>(const tstring &amp;certificateRevocationListLocation)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a25b88ef5578ba307ce380184df50bd89" class="topiclink">getCertificateRevocationListLocation</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1af81c4a0a6f32968befd09bcf8fd4a650" class="topiclink">setRejectedCertificateLocation</a></span>(const tstring &amp;rejectedCertificateLocation)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a04679132318bd1edf9569d4ff9694e57" class="topiclink">getRejectedCertificateLocation</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ae912a87134148fdd04f2e93e32d8ecf9" class="topiclink">setSuppressedCertificateChecks</a></span>(EnumCertificateCheck checkOptions)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a92fc6feb1d28ce6abfe8575dc2415e6e.htm#_enums_8h_1a92fc6feb1d28ce6abfe8575dc2415e6e" class="topiclink">EnumCertificateCheck</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1abe1097d36d05e624840a9665b9068dda" class="topiclink">getSuppressedCertificateChecks</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a38a49707edeaaa3bf2f0fd8452f3c089" class="topiclink">setRevocationCheckOptions</a></span>(EnumCrlCheckOption revocationCheckOptions)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a3d005d7968cf83288149e3d6572fd190.htm#_enums_8h_1a3d005d7968cf83288149e3d6572fd190" class="topiclink">EnumCrlCheckOption</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ab7883e4a2d7d48e1452cded4bff1cd7e" class="topiclink">getRevocationCheckOptions</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a3d588c6b9b1cfdd151cbb1d5a9dc20a5" class="topiclink">allowProxyCertificates</a></span>(bool allowProxies)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a479fd1f885ac7da5030f24e4c713f383" class="topiclink">areProxyCertificatesAllowed</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a282458edce6331f3c9099a0abf929ba2" class="topiclink">checkSelfSignedSignature</a></span>(bool checkSignature)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a08047b59cecbc75d0e6baadc8e81b901" class="topiclink">isSelfSignedSignatureChecked</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a13e7257c9b195288d6565d3ff66499bc" class="topiclink">setEnableStrictKeyUsageCheck</a></span>(bool strictKeyUsage)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a4817ff76eaaa8bc4bf9c87d03f307c06" class="topiclink">getEnableStrictKeyUsageCheck</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a9dc54b6ebd0cf0291022b1b5dbbd9007" class="topiclink">checkUrlMatch</a></span>(bool checkMatch)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ab14e031faff60bbed38c292780b692ee" class="topiclink">isUrlMatchChecked</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a06f6711fb40a387ad133d1dd223e9da5" class="topiclink">set</a></span>(const IPkiStoreConfiguration *cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1af47944e81a4d7e305e5e2068cdd1fd0d" class="topiclink">set</a></span>(const IPkiStoreConfiguration &amp;cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a161582a8ddefe63b0c3ce69176901ca3" class="topiclink">compare</a></span>(const IPkiStoreConfiguration *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a1b13fb9d0676d4497e3eab3f0c4fbc87" class="topiclink">compare</a></span>(const IPkiStoreConfiguration &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1afbe0a5e7fc5ff78a40b9c8433f20c6f8" class="topiclink">operator==</a></span>(const IPkiStoreConfiguration &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a21efb650205991ee5f7a582996eba81e" class="topiclink">operator!=</a></span>(const IPkiStoreConfiguration &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ab736e6d3f622ad9e65c9aa3a81efbf79" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1aacc52e24bdf643ce39525f649a250355"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::~IPkiStoreConfiguration</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a7737e9f0443f8bafc106b9a1d5b11fae"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::setBasePath</span>(const tstring &amp; <span class="f_Parameter">basePath</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the path to the root of the PKI store and generates all PKI subdirectories from this base path.</p>
+<p class="p_Paragraph">If this base path is set then the SDK takes care to set and create all other PKI directories below the base path with hard coded path names. If the base path is set, then the SDK will create the following subdirectories: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;trusted&quot; for the trust list location </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;issuer&quot; for the issuer list location </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;trusted_crls&quot; for the certificate revocation list location of the trust list location </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;issuer_crls&quot; for the certificate revocation list location of the issuer list location </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;rejected&quot; for the rejected certificate location</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"> Temporary subdirectories will be created during invocation of <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1abf457a9f73ae2801353c12c83fbaccae" class="topiclink">Application::replacePkiContent</a> or automatic GDS updates: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;sdk_pki_backup&quot; for the trust list location </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&quot;sdk_temp_pki_backup&quot; for the issuer list location Any existing files or subdirectories below these folder names will be removed.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the base path is configured then none of the PKI subdirectories can be set individually. Previously set directories will be replaced; any setting afterwards will fail. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The provided base path directory must exist and is not created by the SDK. The directory shall be writable. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If any former backup in &quot;sdk_pki_backup&quot; exists, the backed up trust related files will be restored. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ac3bbc8f9a2ce205395c4e02427d5d159" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a1ecb15e8026b60ac4c4d52f477f8c0bc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::getBasePath</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the path to the root of the PKI store.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a7737e9f0443f8bafc106b9a1d5b11fae" class="topiclink">setBasePath()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a1c230457c08d211ffda8c558b55bf6f4" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ad9d1a9106c63a81436e42207170dca55"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::setCertificateTrustListLocation</span>(const tstring &amp; <span class="f_Parameter">certificateTrustListLocation</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the path to the folder containing trusted client instance certificates (or the certificate of an issuer in the certificate chain).</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This path needn't be modified when this <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration" class="topiclink">PkiStoreConfiguration</a> is configured by the base path. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a7737e9f0443f8bafc106b9a1d5b11fae" class="topiclink">setBasePath()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ae4f7ed10db27b8d9780c8b2ab2335c07" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a43b6fa1d5b7d0afccd0a98ada105cf73"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::getCertificateTrustListLocation</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the path to the folder containing trusted client instance certificates.</p>
+<p class="p_Paragraph">If this <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration" class="topiclink">PkiStoreConfiguration</a> uses the base path, then this name must be empty <span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ad9d1a9106c63a81436e42207170dca55" class="topiclink">setCertificateTrustListLocation()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ad110091fc6707f6c6511f7b330ad8133" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a93edf5cf64cf6a4b7278b8293e0b299e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::setIssuerCertificateListLocation</span>(const tstring &amp; <span class="f_Parameter">issuerListLocation</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the path to the folder containing certificates needed for validating a certificate chain to the root certificate. The certificates (and other certificates issued by those) are not automatically trusted.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This path needn't be modified when this <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration" class="topiclink">PkiStoreConfiguration</a> is configured by the base path. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a7737e9f0443f8bafc106b9a1d5b11fae" class="topiclink">setBasePath()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a13ba098afbb738192e2cd7c400a0c0a9" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a8c713bcc976d944ba344dfbd805274cc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::getIssuerCertificateListLocation</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the path to the folder containing certificates needed for validating a certificate chain to the root certificate.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a93edf5cf64cf6a4b7278b8293e0b299e" class="topiclink">setIssuerCertificateListLocation()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ade85ccb16ec8f1a2f9a45f27dc3b1e57" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ae446a7f5110b5ab533382e31699bd023"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::setCertificateRevocationListLocation</span>(const tstring &amp; <span class="f_Parameter">certificateRevocationListLocation</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the path to the certificate revocation list. The path can be either a specific file with suffix .crl or a folder containing those files. This parameter can be an empty string if no CRL checks are specified.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The certificate revocation list is not consulted by default. Please see <a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a38a49707edeaaa3bf2f0fd8452f3c089" class="topiclink">setRevocationCheckOptions()</a> to enable CRL checks. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This path needn't be modified when this <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration" class="topiclink">PkiStoreConfiguration</a> is configured by the base path. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a7737e9f0443f8bafc106b9a1d5b11fae" class="topiclink">setBasePath()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a3bb87b2d4d6c15a5d7389d1b35b666a1" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a25b88ef5578ba307ce380184df50bd89"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::getCertificateRevocationListLocation</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the path to the certificate revocation list.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ae446a7f5110b5ab533382e31699bd023" class="topiclink">setCertificateRevocationListLocation()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ad128a17decb3eae541b1f915373578d8" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1af81c4a0a6f32968befd09bcf8fd4a650"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::setRejectedCertificateLocation</span>(const tstring &amp; <span class="f_Parameter">rejectedCertificateLocation</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the path to the folder where rejected certificates will be stored.</p>
+<p class="p_Paragraph">This parameter can be an empty string (e.g. in case of read-only file systems). Rejected certificates are not stored in this case.</p>
+<p class="p_Paragraph">If an untrusted certificate chain is received, then all single certificates of the chain are stored as separate files.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This path needn't be modified when this <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration" class="topiclink">PkiStoreConfiguration</a> is configured by the base path. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a7737e9f0443f8bafc106b9a1d5b11fae" class="topiclink">setBasePath()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ac5a49f3af770664c54379fcc32bafcb6" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a04679132318bd1edf9569d4ff9694e57"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::getRejectedCertificateLocation</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the path to the folder where rejected client certificates will be stored.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1af81c4a0a6f32968befd09bcf8fd4a650" class="topiclink">setRejectedCertificateLocation()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1adfeff41927a663b491591a436f9520ab" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ae912a87134148fdd04f2e93e32d8ecf9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::setSuppressedCertificateChecks</span>(<a href="_enums_8h_1a92fc6feb1d28ce6abfe8575dc2415e6e.htm#_enums_8h_1a92fc6feb1d28ce6abfe8575dc2415e6e" class="topiclink">EnumCertificateCheck</a> <span class="f_Parameter">checkOptions</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the bit field that indicates which kind of validation checks are omitted.</p>
+<p class="p_Paragraph">Default value is EnumCertificateCheck_All, i.e. no checks are suppressed. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a501c783c9b76fa2d6aa15ffbcd8eca3d" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1abe1097d36d05e624840a9665b9068dda"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a92fc6feb1d28ce6abfe8575dc2415e6e.htm#_enums_8h_1a92fc6feb1d28ce6abfe8575dc2415e6e" class="topiclink">EnumCertificateCheck</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::getSuppressedCertificateChecks</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the bit field that indicates which kind of validation checks are omitted. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a1dde8fc13fee3b95db1731883f31c433" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a38a49707edeaaa3bf2f0fd8452f3c089"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::setRevocationCheckOptions</span>(<a href="_enums_8h_1a3d005d7968cf83288149e3d6572fd190.htm#_enums_8h_1a3d005d7968cf83288149e3d6572fd190" class="topiclink">EnumCrlCheckOption</a> <span class="f_Parameter">revocationCheckOptions</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Defines how certificate revocation checks are performed.</p>
+<p class="p_Paragraph">Default value is EnumCrlCheckOption_None, i.e. the certificate revocation list is ignored and not consulted in order to verify a certificate. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a9e9393137eca26c2a0a700b459461946" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ab7883e4a2d7d48e1452cded4bff1cd7e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a3d005d7968cf83288149e3d6572fd190.htm#_enums_8h_1a3d005d7968cf83288149e3d6572fd190" class="topiclink">EnumCrlCheckOption</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::getRevocationCheckOptions</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns how certificate revocation checks are performed. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1abcd8e598c7b289c04593f847b1967e02" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a3d588c6b9b1cfdd151cbb1d5a9dc20a5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::allowProxyCertificates</span>(bool <span class="f_Parameter">allowProxies</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">A proxy certificate is a certificate which is signed by a leaf certificate instead of an Certificate Authority. Usually all certificates need to be signed by an Certificate Authority or by itself (self signed), so proxy certificates are usually not allowed. In some cases, it makes sense to allow to pass a proxy certificate as a representation of its original certificate. One example is to give one another one's access rights for a very limited time by restricting the validity period of the generated proxy certificate. With this flag set to false the certificate chain validation will fail if such a proxy certificate is within the chain. Allowing proxy certificates on the other hand might downgrade security.</p>
+<p class="p_Paragraph">Default value is 'false'. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1adf69cfcc2d45e267691c9848ad1c2de8" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a479fd1f885ac7da5030f24e4c713f383"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::areProxyCertificatesAllowed</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether proxy certificates are allowed.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a3d588c6b9b1cfdd151cbb1d5a9dc20a5" class="topiclink">allowProxyCertificates()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a3de6e7a0a94b6126b91f031a0a25b07f" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a282458edce6331f3c9099a0abf929ba2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::checkSelfSignedSignature</span>(bool <span class="f_Parameter">checkSignature</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Defines whether the signature of self-signed certificates shall be verified.</p>
+<p class="p_Paragraph">Default value is 'false'. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ad8e3a80097fe4d958309ff0517626486" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a08047b59cecbc75d0e6baadc8e81b901"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::isSelfSignedSignatureChecked</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether the signature of self-signed certificates shall be verified. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a8e135140b538d690a33bc38320ea4516" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a13e7257c9b195288d6565d3ff66499bc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::setEnableStrictKeyUsageCheck</span>(bool <span class="f_Parameter">strictKeyUsage</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the flag, whether the key usage of a certificate shall be validated.</p>
+<p class="p_Paragraph">The key usage is a field in the certificate which gives information about the usage of the certificate. Typical values for OPC UA are </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Digital Signature </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Non-Repudiation </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Encipherment </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Data Encipherment </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Certificate Signing </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Off-line CRL Signing </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">CRL Signing (f6)</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"> Some of them can be omitted, e.g. &quot;Certificate Signing&quot; if the certificate is signed by a CA.</p>
+<p class="p_Paragraph">Do not mix &quot;Key Usage&quot; with &quot;Extended Key Usage&quot;, where typical values are </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Serverauthentication (1.3.6.1.5.5.7.3.1) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Clientauthentication (1.3.6.1.5.5.7.3.2)</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"> Default value is false, i.e. key usage is not validated. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1adfb4234fb3b1e5bff523f9038cd222d0" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a4817ff76eaaa8bc4bf9c87d03f307c06"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::getEnableStrictKeyUsageCheck</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a13e7257c9b195288d6565d3ff66499bc" class="topiclink">setEnableStrictKeyUsageCheck</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a8bd3f16d0f2740e537286f9b24588dbf" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a9dc54b6ebd0cf0291022b1b5dbbd9007"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::checkUrlMatch</span>(bool <span class="f_Parameter">checkMatch</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Defines whether the check of matching URI in certificate against URI in application description is performed.</p>
+<p class="p_Paragraph">Default value is 'false'.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This flag should only be used for PKI stores which store application instance certificates. This check will fail if it is used on a PKI store for user certificates without application URI </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a1c14588dddf20e70c53a32c4f67707e8" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ab14e031faff60bbed38c292780b692ee"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::isUrlMatchChecked</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether the check of matching URI in certificate against URI in application description is performed. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ac150830c292c524c4f05507f21aa5f01" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a06f6711fb40a387ad133d1dd223e9da5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration" class="topiclink">IPkiStoreConfiguration</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1af1f31a1557981601643bf8c7317b0c26" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1af47944e81a4d7e305e5e2068cdd1fd0d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration" class="topiclink">IPkiStoreConfiguration</a> &amp; <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1aa26b290d47a0708160ad104eaf0ca80d" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a161582a8ddefe63b0c3ce69176901ca3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration" class="topiclink">IPkiStoreConfiguration</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ac5e188a0abe16ef193a38a3d4d6921b8" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a1b13fb9d0676d4497e3eab3f0c4fbc87"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration" class="topiclink">IPkiStoreConfiguration</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1af916da82142bd9456c2775d162839e0b" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1afbe0a5e7fc5ff78a40b9c8433f20c6f8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration" class="topiclink">IPkiStoreConfiguration</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a1cd9c9c596c6ae06683c73f6959e2ffc" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a21efb650205991ee5f7a582996eba81e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration" class="topiclink">IPkiStoreConfiguration</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a8a630998b2934a0eae848ef059db78bf" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ab736e6d3f622ad9e65c9aa3a81efbf79"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IPkiStoreConfiguration::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1a96860dccc158e20b8a804c3c35031a27" class="topiclink">SoftingOPCToolbox5::PkiStoreConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

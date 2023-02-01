@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Export</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_modeldesigner_methods_export.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Export</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_modeldesigner_methods_import.htm">Previous</a>&nbsp;
+     <a href="html_modeldesigner_methods_resetaddressspace.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph">The Export method is used to export specific namespaces of the address space. T<span class="f_Paragraph">he </span><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a6cb8f2a5721c393c1f6377bb1d9ec752" class="topiclink">handleExportCustomNodes</a></span><span class="f_Paragraph"> on the AddressSpaceRoot is called with a </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction" class="topiclink">ExportCustomNodesTransaction</a><span class="f_Paragraph">. If the Server has an <a href="html_programmersguide_how_to_server_dynamic_adressspace.htm" class="topiclink">dynamic AddressSpace</a> the application must export the Virtual Nodes by using the export methods in the transaction.</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">Input Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50%; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">NamespaceUris</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p style="line-height: 1.15; margin: 0px 0px 13px 0px;">An array of Namespace uris that should be exported to the XML file</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50%; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">ExportFile</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p style="line-height: 1.15; margin: 0px 0px 13px 0px;">The (path and) filename of the XML file</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50%; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">GlobalExtensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p style="line-height: 1.15; margin: 0px 0px 13px 0px;">An array of XmlElements to be written in the global &quot;Extension&quot; tags. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Output Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50%; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">Status</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">This shows if the action was successful</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">Result</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><span class="f_Paragraph">A list of errors or warnings occurred while executing the method, or a message that everything is fine. </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>For description of &quot;GlobalExtensions&quot; see <a href="html_modeldesigner_methods_import.htm" class="topiclink">Import</a>.</p>
+<p>&nbsp;</p>
+<p>The OPC UA C++ Server &amp; Client SDK V6.00 does not verify the content any given XmlElement. Malformed XmlElements will cause a malformed XML file.</p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_modeldesigner_methods_export.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

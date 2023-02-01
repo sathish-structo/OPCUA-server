@@ -1,0 +1,270 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>View Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">View Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_write_request.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_view"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerView.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map162" id="map162"><area shape="rect" coords="5,6,91,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="5,59,91,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm" alt="" /><area shape="rect" coords="5,123,91,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.gif" width="96" height="163" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_view" style="width:96px;height:163px;border:none" usemap="#map162" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> class is used to define a view node in the address space.</p>
+<p class="p_Paragraph">A view node can be used to reduce results of client browse and query requests (if specified).</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>A server cannot use views to restrict client access in general. If a client browses without specified view the complete address space is visible and accessible.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The OPC UA SDK gives no support of view filters in this version. The implementation of view filters has to be implemented completely in the server application. </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1a5b8f9eff38682c9af34bab9e91101718" class="topiclink">View</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a890aa2ace7e7d8e921736168452294aa.htm#_enums_8h_1a890aa2ace7e7d8e921736168452294aa" class="topiclink">EnumEventNotifier</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1a1772395d9128c2845885381dc2f7f599" class="topiclink">getEventNotifier</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1adf1646714f4d487e59666578f8d3a689" class="topiclink">setEventNotifier</a></span>(EnumEventNotifier eventNotifier)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTBoolean</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1aa63b0c4dc2477dc40fc84fb7ab3b4c76" class="topiclink">getContainsNoLoops</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1a74a0473524d12b9e8db98b3b468eb5fd" class="topiclink">setContainsNoLoops</a></span>(OTBoolean containsNoLoops)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1a630320e773802057c93683a614d38123" class="topiclink">~View</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1ae9dab0ed8f2804d5858dadc4c55aada8" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1acab5f53c5ed41f9c5e22a4795e569845" class="topiclink">View</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1ae9dab0ed8f2804d5858dadc4c55aada8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::View::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1a5b8f9eff38682c9af34bab9e91101718"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::View::View</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1a1772395d9128c2845885381dc2f7f599"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a890aa2ace7e7d8e921736168452294aa.htm#_enums_8h_1a890aa2ace7e7d8e921736168452294aa" class="topiclink">EnumEventNotifier</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::View::getEventNotifier</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the 'EventNotifier' attribute of this view.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1adf1646714f4d487e59666578f8d3a689" class="topiclink">setEventNotifier()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1adf1646714f4d487e59666578f8d3a689"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::View::setEventNotifier</span>(<a href="_enums_8h_1a890aa2ace7e7d8e921736168452294aa.htm#_enums_8h_1a890aa2ace7e7d8e921736168452294aa" class="topiclink">EnumEventNotifier</a> <span class="f_Parameter">eventNotifier</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the 'EventNotifier' attribute of this view.</p>
+<p class="p_Paragraph">The EventNotifier attribute is used to indicate if the node can be used to subscribe to events or to read/write historical events.</p>
+<p class="p_Paragraph">By default, the event notifier attribute contains 0.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="_enums_8h_1a890aa2ace7e7d8e921736168452294aa.htm#_enums_8h_1a890aa2ace7e7d8e921736168452294aa" class="topiclink">EnumEventNotifier</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1aa63b0c4dc2477dc40fc84fb7ab3b4c76"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTBoolean<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::View::getContainsNoLoops</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the 'ContainsNoLoops' attribute of this view.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1a74a0473524d12b9e8db98b3b468eb5fd" class="topiclink">setContainsNoLoops()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1a74a0473524d12b9e8db98b3b468eb5fd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::View::setContainsNoLoops</span>(OTBoolean <span class="f_Parameter">containsNoLoops</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the 'ContainsNoLoops' attribute of this view.</p>
+<p class="p_Paragraph">If set to true this attribute indicates that following references in the context of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> contains no loops, i.e. starting from a Node &quot;A&quot; contained in the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> and following the forward References in the context of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> Node &quot;A&quot; will not be reached again. It does not specify that there is only one path starting from the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> Node to reach a Node contained in the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a>.</p>
+<p class="p_Paragraph">If set to false this Attribute indicates that following References in the context of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> may lead to loops.</p>
+<p class="p_Paragraph">By default, the ContainsNoLoops attribute contains false. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1a630320e773802057c93683a614d38123"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::View::~View</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_view_1acab5f53c5ed41f9c5e22a4795e569845"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::View::View</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

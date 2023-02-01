@@ -1,0 +1,372 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>AuditCreateSessionEvent Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">AuditCreateSessionEvent Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_shelving_event.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_event.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerAuditCreateSessionEvent.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map50" id="map50"><area shape="rect" coords="12,315,164,349" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_url_mismatch_event.htm" alt="" /><area shape="rect" coords="45,6,131,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="15,59,161,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event_notification.htm" alt="" /><area shape="rect" coords="45,123,131,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_event.htm" alt="" /><area shape="rect" coords="25,187,151,221" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_session_event.htm" alt="" /><area shape="rect" coords="5,251,171,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.gif" width="176" height="355" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event" style="width:176px;height:355px;border:none" usemap="#map50" /></p>
+<p class="p_Paragraph">This event shall be generated if a client creates a session.</p>
+<p class="p_Paragraph">The SourceNode property for events of this type should be assigned to the Server object. The ClientUserId property for audit events is not available for this call thus this parameter shall be set to the &quot;System/CreateSession&quot;.</p>
+<p class="p_Paragraph">Beside mandatory properties of the base class additionally the following mandatory properties shall be set: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SecureChannelId: Shall uniquely identify the SecureChannel. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ClientCertificate: The clientCertificate parameter of the CreateSession Service call. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ClientCertificateThumbprint: A thumb print of the ClientCertificate. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">RevisedSessionTimeout: The returned revisedSessionTimeout parameter of the CreateSession Service call. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a64f61476b1032a8d3aadfe7a51f83919" class="topiclink">~AuditCreateSessionEvent</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a73961e766b9354d1fd87f12adb78d4be" class="topiclink">getSecureChannelId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a8d502881b51295b3c66d3ec786067361" class="topiclink">setSecureChannelId</a></span>(const tstring &amp;secureChannelId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a81ffb03a71a51c78e94efc7fe424affa" class="topiclink">getClientCertificate</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1ae1f22dc0774f6312527fcbea2f713a26" class="topiclink">setClientCertificate</a></span>(const IByteString *clientCertificate)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1aafe47f0fb225e087e9624ec1b884927a" class="topiclink">getClientCertificateThumbprint</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a2c990455c4b680be45abbbea2b251055" class="topiclink">setClientCertificateThumbprint</a></span>(const tstring &amp;clientCertificateThumbprint)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTDouble</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a89326375b83efaeadf4564be0ba4c18a" class="topiclink">getRevisedSessionTimeout</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a7b465a35f964462503463bd64f27878e" class="topiclink">setRevisedSessionTimeout</a></span>(const OTDouble &amp;revisedSessionTimeout)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event" class="topiclink">AuditCreateSessionEvent</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1aec021ea1672c773e63d84d58eb6df67e" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a4864271354fbfa07009adc0758b66a70" class="topiclink">AuditCreateSessionEvent</a></span>(const INodeId *eventTypeNode)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1aec021ea1672c773e63d84d58eb6df67e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event" class="topiclink">AuditCreateSessionEvent</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event" class="topiclink">AuditCreateSessionEvent</a> instance.</p>
+<p class="p_Paragraph">The newly created object has already the following properties initially set: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SourceName: &quot;Session/CreateSession&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SourceNode: The server object </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ClientUserId: &quot;System/CreateSession&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Time: The actual time. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ActionTimeStamp: The actual time. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ReceiveTime: The actual time. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Severity: 1 </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ServerId: The ID of the server from the application description. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_session_event_1a7531a3644dcf399c247bd028fd4cacec" class="topiclink">SoftingOPCToolbox5::Server::AuditSessionEvent</a>.</p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_url_mismatch_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_url_mismatch_event_1a04c1576e51c74670dd69bc9a88cd2a82" class="topiclink">SoftingOPCToolbox5::Server::AuditUrlMismatchEvent</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a4864271354fbfa07009adc0758b66a70"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::AuditCreateSessionEvent</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">eventTypeNode</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new audit event for the given audit event type</p>
+<p class="p_Paragraph">This constructor shall be used from derived classes with the concrete event type. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a64f61476b1032a8d3aadfe7a51f83919"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::~AuditCreateSessionEvent</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a73961e766b9354d1fd87f12adb78d4be"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::getSecureChannelId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the SecureChannelId that uniquely identifies the secure channel.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a8d502881b51295b3c66d3ec786067361" class="topiclink">setSecureChannelId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a8d502881b51295b3c66d3ec786067361"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::setSecureChannelId</span>(const tstring &amp; <span class="f_Parameter">secureChannelId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the SecureChannelId that uniquely identifies the secure channel.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">secureChannelId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The ID of the secure channel </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a81ffb03a71a51c78e94efc7fe424affa"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::getClientCertificate</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the client certificate provided with the CreateSession service invocation.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1ae1f22dc0774f6312527fcbea2f713a26" class="topiclink">setClientCertificate()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1ae1f22dc0774f6312527fcbea2f713a26"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::setClientCertificate</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_i_byte_string" class="topiclink">IByteString</a> * <span class="f_Parameter">clientCertificate</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the client certificate provided with the CreateSession service invocation.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">clientCertificate</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The certificate of the client creating a session </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1aafe47f0fb225e087e9624ec1b884927a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::getClientCertificateThumbprint</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the SHA1 thumbprint of the client certificate. The thumbprint is formatted as hexadecimal string.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a2c990455c4b680be45abbbea2b251055" class="topiclink">setClientCertificateThumbprint()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a2c990455c4b680be45abbbea2b251055"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::setClientCertificateThumbprint</span>(const tstring &amp; <span class="f_Parameter">clientCertificateThumbprint</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the SHA1 thumbprint of the client certificate. The thumbprint is formatted as hexadecimal string.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">clientCertificateThumbprint</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The thumb print of the client certificate </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a89326375b83efaeadf4564be0ba4c18a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTDouble<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::getRevisedSessionTimeout</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the revised session timeout provided with the CreateSession response.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a7b465a35f964462503463bd64f27878e" class="topiclink">setRevisedSessionTimeout()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event_1a7b465a35f964462503463bd64f27878e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditCreateSessionEvent::setRevisedSessionTimeout</span>(const OTDouble &amp; <span class="f_Parameter">revisedSessionTimeout</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the revised session timeout provided with the CreateSession response.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">revisedSessionTimeout</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The revised timeout of the created session </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_create_session_event.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

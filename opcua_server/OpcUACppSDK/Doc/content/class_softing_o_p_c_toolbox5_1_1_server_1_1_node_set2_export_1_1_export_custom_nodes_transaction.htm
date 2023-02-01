@@ -1,0 +1,967 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ExportCustomNodesTransaction Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">ExportCustomNodesTransaction Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_rate_of_change_alarm.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerExportCustomNodesTransaction.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map91" id="map91"><area shape="rect" coords="63,6,150,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="5,59,209,106" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.gif" width="213" height="112" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction" style="width:213px;height:112px;border:none" usemap="#map91" /></p>
+<p class="p_Paragraph">A transaction to provide data of custom nodes during a NodeSet2 export. Providing data via this transaction allows to export nodes, which are not stored within the server's address space, or export nodes with a different content.</p>
+<p class="p_Paragraph">The export of the nodes in the server's address space will take place after the handling of the custom nodes is done. The server application must ensure to always complete this transaction (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1aa50c8d02eca956d4980b20b950376561" class="topiclink">complete()</a>).</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a46b5cf4dd846f0408a2d6456bc7d346f" class="topiclink">Server::AddressSpaceRoot::exportNodes()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1aa825531ecaf56ba8350730dd35e2b4fc" class="topiclink">ExportCustomNodesTransaction</a></span>(void *exporter)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;">~ExportCustomNodesTransaction</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const std::vector&lt; tstring &gt; &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1a14ece2a0d02205820500b5245447f5f3" class="topiclink">getNamespacesToExport</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1aa50c8d02eca956d4980b20b950376561" class="topiclink">complete</a></span>(EnumModelDesignerStatus operationStatus)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1ae9ddc4eda2cdd2fda434ffd76e96013d" class="topiclink">exportCustomUaMethod</a></span>(const NodeId &amp;nodeId, const NodeId &amp;parentNodeId, const QualifiedName &amp;browseName, const LocalizedText &amp;displayName, const LocalizedText &amp;description, OTUInt32 writeMask, OTBoolean executable, const std::vector&lt; ReferenceDescription &gt; &amp;references, const std::vector&lt; ByteString &gt; &amp;extensions)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1adcc91aa0e4e4465361bc179def281b5f" class="topiclink">exportCustomUaView</a></span>(const NodeId &amp;nodeId, const NodeId &amp;parentNodeId, const QualifiedName &amp;browseName, const LocalizedText &amp;displayName, const LocalizedText &amp;description, OTUInt32 writeMask, OTUInt8 eventNotifier, OTBoolean containsNoLoops, const std::vector&lt; ReferenceDescription &gt; &amp;references, const std::vector&lt; ByteString &gt; &amp;extensions)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1ad4d627679851f47ad53c0e861a0b0fae" class="topiclink">exportCustomDataType</a></span>(const NodeId &amp;nodeId, const QualifiedName &amp;browseName, const LocalizedText &amp;displayName, const LocalizedText &amp;description, OTUInt32 writeMask, OTBoolean isAbstract, DataTypeDescriptionConstPtr dataTypeDescription, const std::vector&lt; ReferenceDescription &gt; &amp;references, const std::vector&lt; ByteString &gt; &amp;extensions)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1a4e71fb1ee48c52dd5e1a84f80197ca87" class="topiclink">exportCustomReferenceType</a></span>(const NodeId &amp;nodeId, const QualifiedName &amp;browseName, const LocalizedText &amp;displayName, const LocalizedText &amp;description, OTUInt32 writeMask, OTBoolean isAbstract, OTBoolean symmetric, const LocalizedText &amp;inverseName, const std::vector&lt; ReferenceDescription &gt; &amp;references, const std::vector&lt; ByteString &gt; &amp;extensions)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1a0a671929b145b8e75eafee005757b70e" class="topiclink">exportCustomObjectType</a></span>(const NodeId &amp;nodeId, const QualifiedName &amp;browseName, const LocalizedText &amp;displayName, const LocalizedText &amp;description, OTUInt32 writeMask, OTBoolean isAbstract, const std::vector&lt; ReferenceDescription &gt; &amp;references, const std::vector&lt; ByteString &gt; &amp;extensions)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1a42f8769c5815f17fdd36125049591383" class="topiclink">exportCustomObject</a></span>(const NodeId &amp;nodeId, const NodeId &amp;parentNodeId, const QualifiedName &amp;browseName, const LocalizedText &amp;displayName, const LocalizedText &amp;description, OTUInt32 writeMask, OTUInt8 eventNotifier, const std::vector&lt; ReferenceDescription &gt; &amp;references, const std::vector&lt; ByteString &gt; &amp;extensions)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1afb2dccacaaaa9cae6576c2d889ce2ef0" class="topiclink">exportCustomVariableType</a></span>(const NodeId &amp;nodeId, const QualifiedName &amp;browseName, const LocalizedText &amp;displayName, const LocalizedText &amp;description, OTUInt32 writeMask, const NodeId &amp;dataType, OTInt32 valueRank, const std::vector&lt; OTUInt32 &gt; &amp;arrayDimensions, const IValue *pValue, OTBoolean isAbstract, const std::vector&lt; ReferenceDescription &gt; &amp;references, const std::vector&lt; ByteString &gt; &amp;extensions)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1ab10f4b2f681c7a3ad84fcd2dfa1026b2" class="topiclink">exportCustomVariable</a></span>(const NodeId &amp;nodeId, const NodeId &amp;parentNodeId, const QualifiedName &amp;browseName, const LocalizedText &amp;displayName, const LocalizedText &amp;description, OTUInt32 writeMask, const NodeId &amp;dataType, OTInt32 valueRank, const std::vector&lt; OTUInt32 &gt; &amp;arrayDimensions, const IValue *pValue, OTUInt8 accessLevel, OTDouble minimumSamplingInterval, OTBoolean historizing, const std::vector&lt; ReferenceDescription &gt; &amp;references, const std::vector&lt; ByteString &gt; &amp;extensions)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1aa825531ecaf56ba8350730dd35e2b4fc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::ExportCustomNodesTransaction</span>(void * <span class="f_Parameter">exporter</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1a14ece2a0d02205820500b5245447f5f3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const std::vector&lt; tstring &gt; &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::getNamespacesToExport</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return the namespace URIs, for which the nodes shall be exported </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1aa50c8d02eca956d4980b20b950376561"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::complete</span>(<a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a> <span class="f_Parameter">operationStatus</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Marks this transaction as completed, which means that all custom nodes were encoded and the exporter will continue with the nodes of the address space.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumModelDesignerStatus </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Parameters:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">operationStatus</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">A status to indicate, whether an error occurred or everything went good. Providing a bad status will abort the export. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This method should only be called once, every further call has no effect and returns an error. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1ae9ddc4eda2cdd2fda434ffd76e96013d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::exportCustomUaMethod</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">parentNodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">description</span>, OTUInt32 <span class="f_Parameter">writeMask</span>, OTBoolean <span class="f_Parameter">executable</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt; &amp; <span class="f_Parameter">references</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &gt; &amp; <span class="f_Parameter">extensions</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">exports a method with the provided attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumModelDesignerStatus</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Parameters:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the exported node </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">parentNodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the parent Node </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method" class="topiclink">Method</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method" class="topiclink">Method</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">description</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">writeMask</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">write mask of the node which indicates the attributes that can be written by a client, default value is 0 (none of the attributes are writable by default) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">executable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">executable flag default value is true </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">references</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">extensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Only the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a>, the isForward flag and the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the target are used while exporting one <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> of the references Array. All other attributes of the <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> are not touched. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1adcc91aa0e4e4465361bc179def281b5f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::exportCustomUaView</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">parentNodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">description</span>, OTUInt32 <span class="f_Parameter">writeMask</span>, OTUInt8 <span class="f_Parameter">eventNotifier</span>, OTBoolean <span class="f_Parameter">containsNoLoops</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt; &amp; <span class="f_Parameter">references</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &gt; &amp; <span class="f_Parameter">extensions</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">exports a view with the provided attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumModelDesignerStatus</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Parameters:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the exported node </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">parentNodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the parent Node </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">description</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">writeMask</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">write mask of the node which indicates the attributes that can be written by a client, default value is 0 (none of the attributes are writable by default) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">eventNotifier</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as Bit mask see EnumEventNotifier, default value is 0 </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">containsNoLoops</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">flag if the view contains Loops, default value is false </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">references</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">extensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Only the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a>, the isForward flag and the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the target are used while exporting one <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> of the references Array. All other attributes of the <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> are not touched. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1ad4d627679851f47ad53c0e861a0b0fae"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::exportCustomDataType</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">description</span>, OTUInt32 <span class="f_Parameter">writeMask</span>, OTBoolean <span class="f_Parameter">isAbstract</span>, <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">DataTypeDescriptionConstPtr</a> <span class="f_Parameter">dataTypeDescription</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt; &amp; <span class="f_Parameter">references</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &gt; &amp; <span class="f_Parameter">extensions</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">exports a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type" class="topiclink">DataType</a> with the provided attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumModelDesignerStatus</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Parameters:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the exported <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type" class="topiclink">DataType</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type" class="topiclink">DataType</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">description</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">writeMask</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">write mask of the node which indicates the attributes that can be written by a client, default value is 0 (none of the attributes are writable by default) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">isAbstract</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">flag if the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type" class="topiclink">DataType</a> is abstract, default value is false </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">dataTypeDescription</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The data type description of the exported <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type" class="topiclink">DataType</a>, this parameter can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">references</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">extensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Only the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a>, the isForward flag and the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the target are used while exporting one <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> of the references Array. All other attributes of the <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> are not touched. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1a4e71fb1ee48c52dd5e1a84f80197ca87"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::exportCustomReferenceType</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">description</span>, OTUInt32 <span class="f_Parameter">writeMask</span>, OTBoolean <span class="f_Parameter">isAbstract</span>, OTBoolean <span class="f_Parameter">symmetric</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">inverseName</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt; &amp; <span class="f_Parameter">references</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &gt; &amp; <span class="f_Parameter">extensions</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">exports a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a> with the provided attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumModelDesignerStatus</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Parameters:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the exported <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">description</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">writeMask</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">write mask of the node which indicates the attributes that can be written by a client, default value is 0 (none of the attributes are writable by default) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">isAbstract</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">flag if the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a> is abstract, default value is false </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">symmetric</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">flag if referenceType is symmetric, default value is false </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">inverseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">references</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">extensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Only the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a>, the isForward flag and the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the target are used while exporting one <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> of the references Array. All other attributes of the <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> are not touched. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1a0a671929b145b8e75eafee005757b70e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::exportCustomObjectType</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">description</span>, OTUInt32 <span class="f_Parameter">writeMask</span>, OTBoolean <span class="f_Parameter">isAbstract</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt; &amp; <span class="f_Parameter">references</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &gt; &amp; <span class="f_Parameter">extensions</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">exports a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_object_type" class="topiclink">ObjectType</a> with the provided attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumModelDesignerStatus</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Parameters:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the exported <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_object_type" class="topiclink">ObjectType</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_object_type" class="topiclink">ObjectType</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">description</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">writeMask</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">write mask of the node which indicates the attributes that can be written by a client, default value is 0 (none of the attributes are writable by default) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">isAbstract</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">isAbstract flag if the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_object_type" class="topiclink">ObjectType</a> is abstract, default value is false </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">references</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">extensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Only the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a>, the isForward flag and the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the target are used while exporting one <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> of the references Array. All other attributes of the <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> are not touched. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1a42f8769c5815f17fdd36125049591383"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::exportCustomObject</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">parentNodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">description</span>, OTUInt32 <span class="f_Parameter">writeMask</span>, OTUInt8 <span class="f_Parameter">eventNotifier</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt; &amp; <span class="f_Parameter">references</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &gt; &amp; <span class="f_Parameter">extensions</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">exports a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_object" class="topiclink">Object</a> with the provided attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumModelDesignerStatus</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Parameters:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the exported <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_object" class="topiclink">Object</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">parentNodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the parent Node </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_object" class="topiclink">Object</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_view.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_view" class="topiclink">View</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">description</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">writeMask</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">write mask of the node which indicates the attributes that can be written by a client, default value is 0 (none of the attributes are writable by default) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">eventNotifier</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as Bit mask see EnumEventNotifier, default value is 0 </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">references</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">extensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Only the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a>, the isForward flag and the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the target are used while exporting one <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> of the references Array. All other attributes of the <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> are not touched. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1afb2dccacaaaa9cae6576c2d889ce2ef0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::exportCustomVariableType</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">description</span>, OTUInt32 <span class="f_Parameter">writeMask</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">dataType</span>, OTInt32 <span class="f_Parameter">valueRank</span>, const std::vector&lt; OTUInt32 &gt; &amp; <span class="f_Parameter">arrayDimensions</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> * <span class="f_Parameter">pValue</span>, OTBoolean <span class="f_Parameter">isAbstract</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt; &amp; <span class="f_Parameter">references</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &gt; &amp; <span class="f_Parameter">extensions</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">exports a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type" class="topiclink">VariableType</a> with the provided attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumModelDesignerStatus</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Parameters:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the exported <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Variable</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Variable</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Variable</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">description</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">writeMask</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">write mask of the node which indicates the attributes that can be written by a client, default value is 0 (none of the attributes are writable by default) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">dataType</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type" class="topiclink">DataType</a> default value is numericNodeId with ns = 0, i = 24 </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">valueRank</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Sets whether the variable's value is an array and if, how many dimensions the array has, default value is -1 </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">arrayDimensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Sets a field of integer values describing the length of each array dimension if the variable has an array value, default value is NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">pValue</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">a value of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type" class="topiclink">VariableType</a>, default value is NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">isAbstract</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">flag if the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type" class="topiclink">VariableType</a> is abstract, default value is false </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">references</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">extensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Only the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a>, the isForward flag and the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the target are used while exporting one <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> of the references Array. All other attributes of the <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> are not touched. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction_1ab10f4b2f681c7a3ad84fcd2dfa1026b2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm#_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39" class="topiclink">EnumModelDesignerStatus</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::NodeSet2Export::ExportCustomNodesTransaction::exportCustomVariable</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">parentNodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> &amp; <span class="f_Parameter">description</span>, OTUInt32 <span class="f_Parameter">writeMask</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">dataType</span>, OTInt32 <span class="f_Parameter">valueRank</span>, const std::vector&lt; OTUInt32 &gt; &amp; <span class="f_Parameter">arrayDimensions</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> * <span class="f_Parameter">pValue</span>, OTUInt8 <span class="f_Parameter">accessLevel</span>, OTDouble <span class="f_Parameter">minimumSamplingInterval</span>, OTBoolean <span class="f_Parameter">historizing</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt; &amp; <span class="f_Parameter">references</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &gt; &amp; <span class="f_Parameter">extensions</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">exports a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type" class="topiclink">VariableType</a> with the provided attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumModelDesignerStatus</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Parameters:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the exported <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Variable</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">parentNodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the parent Node </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Variable</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Variable</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">description</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">as <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> can be NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">writeMask</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">write mask of the node which indicates the attributes that can be written by a client, default value is 0 (none of the attributes are writable by default) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">dataType</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type" class="topiclink">DataType</a> default value is numericNodeId with ns = 0, i = 24 </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">valueRank</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Sets whether the variable's value is an array and if, how many dimensions the array has, default value is -1 </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">arrayDimensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Sets a field of integer values describing the length of each array dimension if the variable has an array value, default value is NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">pValue</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">a value of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type" class="topiclink">VariableType</a>, default value is NULL </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">accessLevel</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Sets the access level of the variable that indicates how the variable's value can be accessed and if it contains current and/or historic data, default value is 1 </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">minimumSamplingInterval</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Sets the value of the MinimumSamplingInterval attribute, default value is 0 </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">historizing</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Sets the Historizing attribute that indicates whether the server is actively collecting data for the history of the variable, default value is false </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">references</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">extensions</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">array of <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Only the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_type" class="topiclink">ReferenceType</a>, the isForward flag and the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the target are used while exporting one <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> of the references Array. All other attributes of the <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> are not touched. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

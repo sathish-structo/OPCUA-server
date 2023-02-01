@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns="http://opcfoundation.org/UA/SDK/Configuration.xsd">
+  <ApplicationName>Softing OPC UA StructoAutomoldServer</ApplicationName>
+  <ApplicationUri>urn:localhost/Softing/OpcUa/StructoAutomoldServer</ApplicationUri>
+  <ProductUri>urn:Softing/Products/OpcUa/StructoAutomoldServer</ProductUri>
+  <ApplicationType>Server_0</ApplicationType>
+
+  <SecurityConfiguration>
+    <!-- Where the application instance certificate is stored -->
+    <ApplicationCertificate>
+     <StorePath>PKI/test_server/own</StorePath>
+     <StoreName>cert_server_self_signed.der</StoreName>
+     <PrivateKeyName>private_key_server_self_signed.pem</PrivateKeyName>
+    </ApplicationCertificate>
+    <!-- Where the issuer certificate are stored (certificate authorities) -->
+    <TrustedIssuerCertificates>
+      <StorePath>PKI/test_server/issuer</StorePath>
+    </TrustedIssuerCertificates>
+    <!-- Where the trust list is stored (UA Applications) -->
+    <TrustedPeerCertificates>
+      <StorePath>PKI/test_server/trusted</StorePath>
+      <!-- All ValidationOptions are configured at the TrustedPeerCertificates.
+      It is a bit mask which supports combinations of the following decimal numbers:
+      checkUrlMatch                                               4     (0x0004)
+      EnumCertificateCheck_SuppressCertificateValidityPeriodCheck 64    (0x0040)
+      EnumCertificateCheck_SuppressCrlValidityPeriodCheck         128   (0x0080)
+      EnumCertificateCheck_SuppressCrlNotFoundError               256   (0x0100)
+      EnumCrlCheckOption_None                                     0     (0x0000)
+      EnumCrlCheckOption_OnlyLeaf                                 512   (0x0200)
+      EnumCrlCheckOption_AllExceptSelfSigned                      1024  (0x0400)
+      EnumCrlCheckOption_All                                      1536  (0x0600)
+      checkSelfSignedSignature                                    2048  (0x0800)
+      allowProxyCertificates                                      8192  (0x2000)
+      checkStrictKeyUsage                                         32768 (0x8000) -->
+      <!-- <ValidationOptions>0</ValidationOptions> -->
+    </TrustedPeerCertificates>  
+   <CertificateRevocationLists>
+     <StorePath>PKI/test_server/trusted_crls</StorePath>
+   </CertificateRevocationLists>
+    <!-- The directory used to store invalid certificates for later review by the administrator. -->
+    <RejectedCertificateStore>
+      <StorePath>PKI/test_server/rejected</StorePath>
+    </RejectedCertificateStore>
+  </SecurityConfiguration>
+
+  <ServerConfiguration>
+    <BaseAddresses>
+      <ua:String>opc.tcp://localhost:4880/Softing/OpcUa/StructoAutomoldServer</ua:String>
+      <!-- <ua:String>https://localhost:1234/Softing/OpcUa/StructoAutomoldServer/</ua:String> -->
+    </BaseAddresses>
+    <SecurityPolicies>
+      <ServerSecurityPolicy>
+        <SecurityMode>None_1</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#None</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+
+      <!-- These security policies are deprecated: -->
+      <ServerSecurityPolicy>
+        <SecurityMode>Sign_2</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+      <ServerSecurityPolicy>
+        <SecurityMode>SignAndEncrypt_3</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+      <ServerSecurityPolicy>
+        <SecurityMode>Sign_2</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic256</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+      <ServerSecurityPolicy>
+        <SecurityMode>SignAndEncrypt_3</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic256</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+
+      <ServerSecurityPolicy>
+        <SecurityMode>Sign_2</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+      <ServerSecurityPolicy>
+        <SecurityMode>SignAndEncrypt_3</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+      <ServerSecurityPolicy>
+        <SecurityMode>Sign_2</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Aes128_Sha256_RsaOaep</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+      <ServerSecurityPolicy>
+        <SecurityMode>SignAndEncrypt_3</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Aes128_Sha256_RsaOaep</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+      <ServerSecurityPolicy>
+        <SecurityMode>Sign_2</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Aes256_Sha256_RsaPss</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+      <ServerSecurityPolicy>
+        <SecurityMode>SignAndEncrypt_3</SecurityMode>
+        <SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Aes256_Sha256_RsaPss</SecurityPolicyUri>
+      </ServerSecurityPolicy>
+    </SecurityPolicies>
+    <UserTokenPolicies>
+      <!-- Allows anonymous users -->
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>Anonymous_Policy1</ua:PolicyId>
+        <ua:TokenType>Anonymous_0</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#None</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>Anonymous_Policy2</ua:PolicyId>
+        <ua:TokenType>Anonymous_0</ua:TokenType>
+        <ua:SecurityPolicyUri></ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      
+      <!-- Allows username/password -->
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>UserName_Policy_1</ua:PolicyId>
+        <ua:TokenType>UserName_1</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#None</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>UserName_Policy_2</ua:PolicyId>
+        <ua:TokenType>UserName_1</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>UserName_Policy_3</ua:PolicyId>
+        <ua:TokenType>UserName_1</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic256</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>UserName_Policy_4</ua:PolicyId>
+        <ua:TokenType>UserName_1</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>UserName_Policy_4a</ua:PolicyId>
+        <ua:TokenType>UserName_1</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Aes128_Sha256_RsaOaep</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>UserName_Policy_4b</ua:PolicyId>
+        <ua:TokenType>UserName_1</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Aes256_Sha256_RsaPss</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>UserName_Policy_5</ua:PolicyId>
+        <ua:TokenType>UserName_1</ua:TokenType>
+        <ua:SecurityPolicyUri></ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+
+      <!-- Allows user certificates: -->
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>Certificate_Policy_1</ua:PolicyId>
+        <ua:TokenType>Certificate_2</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#None</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>Certificate_Policy_2</ua:PolicyId>
+        <ua:TokenType>Certificate_2</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>Certificate_Policy_3</ua:PolicyId>
+        <ua:TokenType>Certificate_2</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic256</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>Certificate_Policy_4</ua:PolicyId>
+        <ua:TokenType>Certificate_2</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>Certificate_Policy_5</ua:PolicyId>
+        <ua:TokenType>Certificate_2</ua:TokenType>
+        <ua:SecurityPolicyUri></ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+
+      <!-- Allows issued token: -->
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>IssuedToken_Policy_1</ua:PolicyId>
+        <ua:TokenType>IssuedToken_3</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#None</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>IssuedToken_Policy_2</ua:PolicyId>
+        <ua:TokenType>IssuedToken_3</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>IssuedToken_Policy_3</ua:PolicyId>
+        <ua:TokenType>IssuedToken_3</ua:TokenType>
+        <ua:SecurityPolicyUri>http://opcfoundation.org/UA/SecurityPolicy#Basic256</ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+      <ua:UserTokenPolicy>
+        <ua:PolicyId>IssuedToken_Policy_4</ua:PolicyId>
+        <ua:TokenType>IssuedToken_3</ua:TokenType>
+        <ua:SecurityPolicyUri></ua:SecurityPolicyUri>
+      </ua:UserTokenPolicy>
+    </UserTokenPolicies>
+    
+    <MinPublishingInterval>50</MinPublishingInterval>
+    <ServerProfileArray>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/StandardEventSubscription</ua:String>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/AddressSpaceNotifier</ua:String>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/ACExclusiveAlarming</ua:String>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/ACNon-ExclusiveAlarming</ua:String>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/HistoricalRawData</ua:String>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/AggregateHistorical</ua:String>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/BaseHistoricalEvent</ua:String>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/FileAccess</ua:String>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/ComplexTypes</ua:String>
+      <ua:String>http://opcfoundation.org/UA-Profile/Server/Auditing</ua:String>
+    </ServerProfileArray>
+  </ServerConfiguration>
+
+  <Extensions>
+    <ua:XmlElement>
+      <ServerToolkitConfiguration>
+        <ManufacturerName>Softing</ManufacturerName>
+        <MajorVersion>5</MajorVersion>
+        <MinorVersion>62</MinorVersion>
+        <PatchVersion>0</PatchVersion>
+        <BuildNumber>0</BuildNumber>
+        <BuildDate>2019-11-19T13:45:30Z</BuildDate>
+      </ServerToolkitConfiguration>
+    </ua:XmlElement>  
+    <ua:XmlElement>
+        <!-- Configure StructoAutomoldServer trace options (disabled by default) -->
+        <TraceOptions>
+            <TraceEnabled>true</TraceEnabled>
+            <OutputFilePath>TestServer_trace.log</OutputFilePath>
+            <TraceLevels>
+              <!-- <Level>None</Level> -->
+              <!-- <Level>Debug</Level> -->
+              <!-- <Level>Info</Level> -->
+              <!-- <Level>Warning</Level> -->
+              <!-- <Level>Error</Level> -->
+              <!-- <Level>Fatal</Level> -->
+              <!-- <Level>ErrorAndHigher</Level> -->
+              <Level>WarningAndHigher</Level>
+              <!-- <Level>InfoAndHigher</Level> -->
+              <!-- <Level>All</Level> -->
+            </TraceLevels>
+            <!-- Specify a list of EnumTraceGroup strings, the result is the "or"-combination of all selected values -->
+            <TraceGroups>
+              <!-- <Group>None</Group> -->
+              <!-- <Group>Core</Group> -->
+              <!-- <Group>Api</Group> -->
+              <!-- <Group>Stack</Group> -->
+              <!-- <Group>User1</Group> -->
+              <!-- <Group>User2</Group> -->
+              <!-- <Group>User3</Group> -->
+              <!-- <Group>User4</Group> -->
+              <!-- <Group>ModelDesigner</Group> -->
+              <!-- <Group>PubSub_Publisher</Group> -->
+              <!-- <Group>PubSub_Subscriber</Group> -->
+              <Group>All</Group>
+            </TraceGroups>
+            <MaxFileSize>10000000</MaxFileSize>
+            <NumberOfFiles>10</NumberOfFiles>
+            <BufferSize>250</BufferSize>
+        </TraceOptions>
+    </ua:XmlElement>
+
+    <!-- Custom (application specific) extensions -->
+    <ua:XmlElement>
+      <CPPTestServerConfiguration>Unused extension.</CPPTestServerConfiguration>
+    </ua:XmlElement>
+  </Extensions>
+
+</ApplicationConfiguration>

@@ -1,0 +1,1262 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IDecimal Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_decimal.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IDecimal Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_identity_mapping_rule_type.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal"></a></p>
+<p><span class="f_CodeExample">#include &quot;IDecimal.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map252" id="map252"><area shape="rect" coords="5,6,91,29" href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm" alt="" /><area shape="rect" coords="5,59,91,82" href="class_softing_o_p_c_toolbox5_1_1_decimal.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_decimal.gif" width="96" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_decimal" style="width:96px;height:88px;border:none" usemap="#map252" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal" class="topiclink">Decimal</a> data type describes a high-precision signed decimal number.</p>
+<p class="p_Paragraph">It consists of an arbitrary precision integer unscaled value and an integer scale. The scale is the inverse power of ten that is applied to the unscaled value.</p>
+<p class="p_Paragraph">I.e. the decimal number is &quot;value * 10^(-scale)&quot;. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa4e67ed33f75b0fff2a1a86ddc3df22e" class="topiclink">~IDecimal</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1abfa87fbd5da73b5e13eac5378b513ec4" class="topiclink">set</a></span>(OTUInt8 value, OTInt16 scale, OTBoolean changeBitLength=true)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1acc0efea12aeffb5aad7efcb36df0bd03" class="topiclink">get</a></span>(OTUInt8 &amp;value, OTInt16 &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a3e7747e6db15c903b4282e648feb1783" class="topiclink">set</a></span>(OTUInt16 value, OTInt16 scale, OTBoolean changeBitLength=true)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a3d894da922f88cba1cf9b3934058bce9" class="topiclink">get</a></span>(OTUInt16 &amp;value, OTInt16 &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1aeec21e7c71e787a728a7032538d816dd" class="topiclink">set</a></span>(OTUInt32 value, OTInt16 scale, OTBoolean changeBitLength=true)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a8bc02288672d62f77318edc1fdba07e4" class="topiclink">get</a></span>(OTUInt32 &amp;value, OTInt16 &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a585730522d3935106988158789dce0da" class="topiclink">set</a></span>(OTUInt64 value, OTInt16 scale, OTBoolean changeBitLength=true)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a3ffc785dfd73ae7aa85d940cba208d51" class="topiclink">get</a></span>(OTUInt64 &amp;value, OTInt16 &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a9264235e69db417ec03f54e49781e6a0" class="topiclink">set</a></span>(OTInt8 value, OTInt16 scale, OTBoolean changeBitLength=true)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a24007711705022fc4687a76b398646c5" class="topiclink">get</a></span>(OTInt8 &amp;value, OTInt16 &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa295d78a87a380b75901ba1a152a722c" class="topiclink">set</a></span>(OTInt16 value, OTInt16 scale, OTBoolean changeBitLength=true)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa90f45b685c2617838d1ee1cd3030726" class="topiclink">get</a></span>(OTInt16 &amp;value, OTInt16 &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a6654422efe699732fe06ca960348539e" class="topiclink">set</a></span>(OTInt32 value, OTInt16 scale, OTBoolean changeBitLength=true)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a211fed4ac095494de472eb30501aa00d" class="topiclink">get</a></span>(OTInt32 &amp;value, OTInt16 &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1ab7b13f7445b7f6955baf9faf41092233" class="topiclink">set</a></span>(OTInt64 value, OTInt16 scale, OTBoolean changeBitLength=true)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a0f167142ceba1e01f446f7dfe5bfdcc4" class="topiclink">get</a></span>(OTInt64 &amp;value, OTInt16 &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a85864e66753710ab6b2af90203ba8c66" class="topiclink">set</a></span>(const ByteString &amp;value, OTInt16 scale)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1aec2e6636c985a01a89e1c4d5956bb04d" class="topiclink">get</a></span>(ByteString &amp;value, OTInt16 &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a59ba17b1335d133343de25525abf78eb" class="topiclink">set</a></span>(const tstring &amp;value, const tstring &amp;scale, OTBoolean changeBitLength=true)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a922e37bf728e0c8fd03bb419c89d6448" class="topiclink">get</a></span>(tstring &amp;value, tstring &amp;scale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a24c7a044c31f812705a2174bb77d80ab" class="topiclink">getValueSize</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTBoolean</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1afe58ecd57a1cc1eab630f96612431687" class="topiclink">isNegative</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a641e73ec81dd740ff803665214e79003" class="topiclink">setZero</a></span>()=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTInt16</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a80b5de81e48f1bd6ff462f55293db9fb" class="topiclink">getScale</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1ad0f4b1305e2209b26f469e40c9ff7fa7" class="topiclink">setScale</a></span>(OTInt16 scale)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a8006a5a109593b86fbb163f6f4298b47" class="topiclink">set</a></span>(const IDecimal *cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa426c37967cefa0e7433f4b081ec1852" class="topiclink">set</a></span>(const IDecimal &amp;cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1ab5cc38e096f2dd5d97873daa4352903d" class="topiclink">compare</a></span>(const IDecimal *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1ab01b7b6ab5938a628bce070b81291ae5" class="topiclink">compare</a></span>(const IDecimal &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1aba5413390cb6b49b273c6be27140ecfb" class="topiclink">operator==</a></span>(const IDecimal &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a188288f45f0edca7d7a70cb67505db65" class="topiclink">operator!=</a></span>(const IDecimal &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1ac4e093a91419b54bcdf091822b1c3da6" class="topiclink">toString</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa4cc0fd73ca9ae529df6c8d82650d982" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa4e67ed33f75b0fff2a1a86ddc3df22e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::~IDecimal</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1abfa87fbd5da73b5e13eac5378b513ec4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(OTUInt8 <span class="f_Parameter">value</span>, OTInt16 <span class="f_Parameter">scale</span>, OTBoolean <span class="f_Parameter">changeBitLength</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is provided as an 8 bit unsigned integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">changeBitLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The decimal value's bit length is adjusted to fit the provided data type size if 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Set will fail with status code BadNumericOverflow if changeBitLength is 'false' and the current value's bit length is too small for the provided value. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a8692bcec6b58c9f2b4444e7f07bee44c" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1acc0efea12aeffb5aad7efcb36df0bd03"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(OTUInt8 &amp; <span class="f_Parameter">value</span>, OTInt16 &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is converted to an 8 bit unsigned integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the value. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the scale.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Get will fail with status code BadNumericOverflow if the current value doesn't fit the target variable or if it's negative. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a0f962d2bc4e0399e8efaf692fe335127" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a3e7747e6db15c903b4282e648feb1783"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(OTUInt16 <span class="f_Parameter">value</span>, OTInt16 <span class="f_Parameter">scale</span>, OTBoolean <span class="f_Parameter">changeBitLength</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is provided as a 16 bit unsigned integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">changeBitLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The decimal value's bit length is adjusted to fit the provided data type size if 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Set will fail with status code BadNumericOverflow if changeBitLength is 'false' and the current value's bit length is too small for the provided value. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1aced4133981367786aeccd4080d45399e" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a3d894da922f88cba1cf9b3934058bce9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(OTUInt16 &amp; <span class="f_Parameter">value</span>, OTInt16 &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is converted to a 16 bit unsigned integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the value. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the scale.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Get will fail with status code BadNumericOverflow if the current value doesn't fit the target variable or if it's negative. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a5a22cccc038e97a615945053417e4dd5" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1aeec21e7c71e787a728a7032538d816dd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(OTUInt32 <span class="f_Parameter">value</span>, OTInt16 <span class="f_Parameter">scale</span>, OTBoolean <span class="f_Parameter">changeBitLength</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is provided as a 32 bit unsigned integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">changeBitLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The decimal value's bit length is adjusted to fit the provided data type size if 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Set will fail with status code BadNumericOverflow if changeBitLength is 'false' and the current value's bit length is too small for the provided value. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1ad0e7daf8589f494862f60ac4fd3e2ac4" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a8bc02288672d62f77318edc1fdba07e4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(OTUInt32 &amp; <span class="f_Parameter">value</span>, OTInt16 &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is converted to a 32 bit unsigned integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the value. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the scale.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Get will fail with status code BadNumericOverflow if the current value doesn't fit the target variable or if it's negative. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1ace3992b13105d52df606edca02223813" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a585730522d3935106988158789dce0da"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(OTUInt64 <span class="f_Parameter">value</span>, OTInt16 <span class="f_Parameter">scale</span>, OTBoolean <span class="f_Parameter">changeBitLength</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is provided as a 64 bit unsigned integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">changeBitLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The decimal value's bit length is adjusted to fit the provided data type size if 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Set will fail with status code BadNumericOverflow if changeBitLength is 'false' and the current value's bit length is too small for the provided value. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a88bc9a65c9e8caf88eb1b3e467be9627" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a3ffc785dfd73ae7aa85d940cba208d51"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(OTUInt64 &amp; <span class="f_Parameter">value</span>, OTInt16 &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is converted to a 64 bit unsigned integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the value. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the scale.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Get will fail with status code BadNumericOverflow if the current value doesn't fit the target variable or if it's negative. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1afe1d0ed556d06e265eb53fcc8dcc9929" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a9264235e69db417ec03f54e49781e6a0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(OTInt8 <span class="f_Parameter">value</span>, OTInt16 <span class="f_Parameter">scale</span>, OTBoolean <span class="f_Parameter">changeBitLength</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is provided as an 8 bit signed integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">changeBitLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The decimal value's bit length is adjusted to fit the provided data type size if 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Set will fail with status code BadNumericOverflow if changeBitLength is 'false' and the current value's bit length is too small for the provided value. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1af7551e8417ccd58781f02e9c2ef7b84d" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a24007711705022fc4687a76b398646c5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(OTInt8 &amp; <span class="f_Parameter">value</span>, OTInt16 &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is converted to an 8 bit signed integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the value. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the scale.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Get will fail with status code BadNumericOverflow if the current value doesn't fit the target variable. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a6a90802b61da681236130a47bab1b3ec" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa295d78a87a380b75901ba1a152a722c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(OTInt16 <span class="f_Parameter">value</span>, OTInt16 <span class="f_Parameter">scale</span>, OTBoolean <span class="f_Parameter">changeBitLength</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is provided as a 16 bit signed integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">changeBitLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The decimal value's bit length is adjusted to fit the provided data type size if 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Set will fail with status code BadNumericOverflow if changeBitLength is 'false' and the current value's bit length is too small for the provided value. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1aef92a8457e07b10bf82146c24ae6d461" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa90f45b685c2617838d1ee1cd3030726"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(OTInt16 &amp; <span class="f_Parameter">value</span>, OTInt16 &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is converted to a 16 bit signed integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the value. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the scale.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Get will fail with status code BadNumericOverflow if the current value doesn't fit the target variable. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a2abe63dd559dbb11878c598938aedd4d" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a6654422efe699732fe06ca960348539e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(OTInt32 <span class="f_Parameter">value</span>, OTInt16 <span class="f_Parameter">scale</span>, OTBoolean <span class="f_Parameter">changeBitLength</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is provided as a 32 bit signed integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">changeBitLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The decimal value's bit length is adjusted to fit the provided data type size if 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Set will fail with status code BadNumericOverflow if changeBitLength is 'false' and the current value's bit length is too small for the provided value. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a0021fc06079854cf0443ec0e74ba7913" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a211fed4ac095494de472eb30501aa00d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(OTInt32 &amp; <span class="f_Parameter">value</span>, OTInt16 &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is converted to a 32 bit signed integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the value. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the scale.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Get will fail with status code BadNumericOverflow if the current value doesn't fit the target variable. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a551179b377bd4938f4f81e881944916e" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1ab7b13f7445b7f6955baf9faf41092233"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(OTInt64 <span class="f_Parameter">value</span>, OTInt16 <span class="f_Parameter">scale</span>, OTBoolean <span class="f_Parameter">changeBitLength</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is provided as a 64 bit signed integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">changeBitLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The decimal value's bit length is adjusted to fit the provided data type size if 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Set will fail with status code BadNumericOverflow if changeBitLength is 'false' and the current value's bit length is too small for the provided value. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1ac5cba8d842af635f473fc1dde8d313a3" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a0f167142ceba1e01f446f7dfe5bfdcc4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(OTInt64 &amp; <span class="f_Parameter">value</span>, OTInt16 &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is converted to a 64 bit signed integer.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the value. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the scale.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Get will fail with status code BadNumericOverflow if the current value doesn't fit the target variable. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1aa698be1a887b3c1e69f4aca1cab3b990" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a85864e66753710ab6b2af90203ba8c66"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &amp; <span class="f_Parameter">value</span>, OTInt16 <span class="f_Parameter">scale</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> is provided as a <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This method will set the raw binary data of the decimal's unscaled value. The application has to provide it in the correct binary format: A 2's complement signed integer with least significant byte first. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a>'s bit length is always changed. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1aad5346063487706f6740413694aac5f3" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1aec2e6636c985a01a89e1c4d5956bb04d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(<a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &amp; <span class="f_Parameter">value</span>, OTInt16 &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal. <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal" class="topiclink">Decimal</a>'s raw unscaled value is returned in a <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the value. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target variable to store the scale. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1ae95e68be1c961b0172b74d2694d60efe" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a59ba17b1335d133343de25525abf78eb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(const tstring &amp; <span class="f_Parameter">value</span>, const tstring &amp; <span class="f_Parameter">scale</span>, OTBoolean <span class="f_Parameter">changeBitLength</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal from strings. Both value and scale should be base 10 representations of integers.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The source scale to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">changeBitLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The decimal value's bit length is adjusted to fit the provided value if 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Set will fail with status code BadNumericOverflow if changeBitLength is 'false' and the current value's bit length is too small for the provided value. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a36bae17eb3271c827a7c12072e3554a5" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a922e37bf728e0c8fd03bb419c89d6448"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::get</span>(tstring &amp; <span class="f_Parameter">value</span>, tstring &amp; <span class="f_Parameter">scale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the value and scale of the decimal as strings. Both value and scale will be returned as base 10 representations of integers.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target value to set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">scale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The target scale to set. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a38bf0b948ae0a91ae2201789b6e1cd29" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a24c7a044c31f812705a2174bb77d80ab"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::getValueSize</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the size (in bytes) of the decimal's value.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>When the decimal is initialized by a setter from an unsigned source value, <a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal_1a24c7a044c31f812705a2174bb77d80ab" class="topiclink">getValueSize()</a> will return 1 byte more than the base data type's size. Since 2's complement requires 1 bit more to store full range of unsigned types, the setter will use this extra byte when a change of bit length is allowed. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a08326c4e33a6194f08a55c9db1fa53d0" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1afe58ecd57a1cc1eab630f96612431687"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTBoolean<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::isNegative</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Verify the sign of the stored value. Returns 'true' when the value &lt; 0. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1adfc9cc029f0e4c05802a237db405ca68" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a641e73ec81dd740ff803665214e79003"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::setZero</span>()<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the value and scale of the decimal to 0. <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a>'s bit length is preserved. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1abdff839019b771ef62c0623ac70f6f2a" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a80b5de81e48f1bd6ff462f55293db9fb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTInt16<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::getScale</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the scale of the decimal. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a45bd6122a843a94d88101cd7497239f8" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1ad0f4b1305e2209b26f469e40c9ff7fa7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::setScale</span>(OTInt16 <span class="f_Parameter">scale</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the scale of the decimal. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1ab399b7c556c347390111769dde5975d1" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a8006a5a109593b86fbb163f6f4298b47"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal" class="topiclink">IDecimal</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a8818c1ac93cc45402c02a23878099ba3" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa426c37967cefa0e7433f4b081ec1852"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal" class="topiclink">IDecimal</a> &amp; <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a0ffa39c15835a7be9b71965307724473" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1ab5cc38e096f2dd5d97873daa4352903d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal" class="topiclink">IDecimal</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; <span class="f_Heading3">Note:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>A binary comparison is performed between the two instances, the decimals compare equal when the scales are equal and the values are same in bit size and binary equal. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a7fc331d0629496ce79a576f80aedc678" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1ab01b7b6ab5938a628bce070b81291ae5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal" class="topiclink">IDecimal</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a90bdc96b1f8b28b2e2781f6ad21003ad" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1aba5413390cb6b49b273c6be27140ecfb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal" class="topiclink">IDecimal</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a9badddb7968ed3e7dadc05ee51c4affe" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1a188288f45f0edca7d7a70cb67505db65"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm#class_softing_o_p_c_toolbox5_1_1_i_decimal" class="topiclink">IDecimal</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1aedfe1b370384c31149c3ead904751f69" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1ac4e093a91419b54bcdf091822b1c3da6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::toString</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a string representation of the <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal" class="topiclink">Decimal</a> for debugging purposes </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1adb7de515aee9b672ae8aabff89a6c72e" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_decimal_1aa4cc0fd73ca9ae529df6c8d82650d982"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDecimal::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm#class_softing_o_p_c_toolbox5_1_1_decimal_1a9f0f4dff9ff58307d019248591405280" class="topiclink">SoftingOPCToolbox5::Decimal</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_decimal.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

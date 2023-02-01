@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Variables</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uaaddressspacevariables.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Variables</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uaaddressspacenotation.htm">Previous</a>&nbsp;
+     <a href="html_uaaddressspaceobjects.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">Variables</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Variables are used to represent values. There are two types of variables – data variables and properties. Properties represent additional characteristics of other objects, variables and other nodes. DataVariables then represent the value itself.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For example, temperature measured by a thermometer may be represented by a data variable. The range of the thermometer may be then represented by a property. Both the temperature and the range will be variables. Their relationship will be represented by a reference named HasProperty. These two nodes will represent the fact that ‘temperature has a range’ and expose the actual values of the temperature and of its range.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Most important attributes of variables:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Attribute</span></p>
+</td>
+<td style="vertical-align:top; width:484px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Value</span></p>
+</td>
+<td style="vertical-align:top; width:484px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">The most recent value of the variable. This is the only attribute, which data type is not defined by the OPA UA specification, but it is exposed as DataType attribute.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">DataType</span></p>
+</td>
+<td style="vertical-align:top; width:484px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Data type of the Value attribute.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">AccessLevel</span></p>
+</td>
+<td style="vertical-align:top; width:484px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Indicates how the Value can be accessed (readable, writeable); it does not take user rights into account. It should rather represent the nature of the underlying hardware.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">UserAccessLevel</span></p>
+</td>
+<td style="vertical-align:top; width:484px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">User rights to access the Value attribute.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">A variable may have references to other nodes. For example, data variables may have references to their properties and other data variables. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Each variable must have a reference to its type definition. The type of that reference is HasTypeDefinition and the target node of that reference is a VariableType.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uaaddressspacevariables.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

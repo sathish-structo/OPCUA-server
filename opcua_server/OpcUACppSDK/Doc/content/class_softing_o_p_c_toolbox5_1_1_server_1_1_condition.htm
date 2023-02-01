@@ -1,0 +1,1447 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Condition Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Condition Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_transaction.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_add_comment.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerCondition.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map65" id="map65"><area shape="rect" coords="225,571,410,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm.htm" alt="" /><area shape="rect" coords="893,6,979,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="948,571,1087,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_level_alarm.htm" alt="" /><area shape="rect" coords="1093,571,1179,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_trip_alarm.htm" alt="" /><area shape="rect" coords="893,251,979,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm" alt="" /><area shape="rect" coords="849,315,1023,349" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm" alt="" /><area shape="rect" coords="780,571,943,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm.htm" alt="" /><area shape="rect" coords="5,571,219,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_rate_of_change_alarm.htm" alt="" /><area shape="rect" coords="881,379,991,413" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm" alt="" /><area shape="rect" coords="961,443,1063,477" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_alarm.htm" alt="" /><area shape="rect" coords="1007,507,1121,541" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm" alt="" /><area shape="rect" coords="893,59,979,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm" alt="" /><area shape="rect" coords="893,123,979,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object.htm" alt="" /><area shape="rect" coords="893,187,979,221" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event.htm" alt="" /><area shape="rect" coords="793,507,929,541" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm" alt="" /><area shape="rect" coords="583,571,775,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_rate_of_change_alarm.htm" alt="" /><area shape="rect" coords="818,443,905,477" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm.htm" alt="" /><area shape="rect" coords="327,507,486,541" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm" alt="" /><area shape="rect" coords="415,571,577,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_level_alarm.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.gif" width="1184" height="611" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" style="width:1184px;height:611px;border:none" usemap="#map65" /></p>
+<p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_base.htm#class_softing_o_p_c_toolbox5_1_1_base" class="topiclink">Base</a> class for all Alarm and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Condition</a> instances. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a9a291d745760915c34fdd9653422a10f" class="topiclink">Condition</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad294ec2e74af93f56fdfb8f79f4e6dda" class="topiclink">~Condition</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a0686bd01cf8164d4392630bf6f60b2a6" class="topiclink">onEnable</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae9a80d9e5f644e9cb33ac5da7a0a2be9" class="topiclink">onDisable</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a14d5870a23787ff02ad759b08ddea245" class="topiclink">enable</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1afc5bbc91d26e3f799f994e190547ebec" class="topiclink">disable</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a7b237880f1578cd98e825144bb155845" class="topiclink">createBranch</a></span>(Server::Condition *branchToConstruct)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a6b7e4f06533c9b4b9ac67e7b6c6c97eb" class="topiclink">addBranch</a></span>(Server::ConditionPtr conditionBranch, NodeId &amp;branchId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a3b7934124c8985fea9e78ab9821dcb6e" class="topiclink">addBranch</a></span>(Server::ConditionPtr conditionBranch, bool reportAddedBranch, NodeId &amp;branchId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad6153e791ba36e320dd2074f9a684b82" class="topiclink">getBranch</a></span>(const INodeId *branchId, ObjectPointer&lt; Server::Condition &gt; &amp;conditionBranch)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ac856005568c47e20f793e1663e1d9cd7" class="topiclink">getBranch</a></span>(const INodeId *branchId, ObjectPointer&lt; const Server::Condition &gt; &amp;conditionBranch) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a6009d09c2584a03fcad9bb41a6400946" class="topiclink">getBranches</a></span>(std::vector&lt; NodeId &gt; &amp;conditionBranches) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a828b30025ff688142bc3e7205ca7f025" class="topiclink">deleteBranch</a></span>(const INodeId *branchId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1afe153b7e6464a51ea556f29bed0982ce" class="topiclink">deleteBranch</a></span>(const INodeId *branchId, bool reportDeletedBranch)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a8fb8aab03b0bff6e9326df092191f9d5" class="topiclink">getTrunk</a></span>(ObjectPointer&lt; Server::Condition &gt; &amp;trunk)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a3c0745682e22eb1dc813d6c1cdb5f6a6" class="topiclink">getTrunk</a></span>(ObjectPointer&lt; const Server::Condition &gt; &amp;trunk) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1abb3cb22c4cc99b65948a920964dcfd43" class="topiclink">onVariableChanged</a></span>(Server::Variable *var, const IDataValue *value)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad57e216c8556ac1dbc6ef69544c6f748" class="topiclink">report</a></span>(const INodeId *reportingNode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a4eac6c5d558286d5778dfa2f45e155a3" class="topiclink">getEnabledStateVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a808aca44edbdcf6ca29a414db28f2631" class="topiclink">getEnabledStateVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a41fe2a37071cdc183063be5f0580fdd3" class="topiclink">getEnabledState</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ab47b3ee70374b10d1d68350cc9ec257b" class="topiclink">getBranchIdVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a947931bcb9ea2e06d837a3a5a9572e83" class="topiclink">getBranchIdVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a5dd712d179a1ae7576cdcd6a7082f40b" class="topiclink">getBranchId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a05d48f464e1e2acabca43fd044f8a55a" class="topiclink">setBranchId</a></span>(const INodeId *branchId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ac85fbc46f923b7abaadec5ade065b8b5" class="topiclink">setBranchId</a></span>(const INodeId &amp;branchId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1adac6699bf26946fcaed46ec02e700243" class="topiclink">getRetainVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a19cb19824da83508ed05942385a05718" class="topiclink">getRetainVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a0eea102d3129846c7465ff52ac5c0be1" class="topiclink">getRetain</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1af94bc874b28ccb1e33b7c42b4c404d1a" class="topiclink">setRetain</a></span>(bool retain)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a7402eed22dc651cb15ac60f89b3bba76" class="topiclink">getQualityVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad40da92f0aadb7917fa18406029535ea" class="topiclink">getQualityVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ab9bd37dbb1bf04ad0107f381359ba3e3" class="topiclink">getQuality</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a71b3871d9727019ff90d952300630382" class="topiclink">setQuality</a></span>(EnumStatusCode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae1b36979a51e1f5189b7863e515ad4a2" class="topiclink">getLastSeverityVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a142406895c90faed9d4c5fc5f882b979" class="topiclink">getLastSeverityVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt16</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1abe0a90b002bdb9f87618a1e45e5a8c4f" class="topiclink">getLastSeverity</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a82ca8af562093fbc703a12a6d2ba6839" class="topiclink">setLastSeverity</a></span>(OTUInt16 lastSeverity)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1acf8b6f93e39e7cb7b8ac3eac2a1da919" class="topiclink">getCommentVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a13cf69edf08e52981e088df1c18428bc" class="topiclink">getCommentVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a073db95938ff1919c7d552bf8a9344f5" class="topiclink">getComment</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1aba756cfa0c2de3de4e6d611573c76229" class="topiclink">setComment</a></span>(const ILocalizedText *comment)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a14fd27d5d12765c0d300a6c457fa94cc" class="topiclink">setComment</a></span>(const ILocalizedText &amp;comment)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1abc739e0dfaaa2daea3df0521025c675c" class="topiclink">getClientUserIdVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a73a8265d0c6e65c4f90a16f7fdbd289a" class="topiclink">getClientUserIdVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ada9ff2a3ed1cd5f9c33ed8b27f50dc03" class="topiclink">getClientUserId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a86040b1d72a46c3618bfdb077180ccb9" class="topiclink">setClientUserId</a></span>(const tstring &amp;clientUserId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable" class="topiclink">Server::ConditionEnable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a7164a9ecce89d0c72e7c545e06d78bc2" class="topiclink">getEnable</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable" class="topiclink">Server::ConditionEnable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a76f3caa19f79f9232cb4be61c0504dd0" class="topiclink">getEnable</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable" class="topiclink">Server::ConditionDisable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad012686002d41359d811666420284385" class="topiclink">getDisable</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable" class="topiclink">Server::ConditionDisable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1acd877cad2965db0a3a895b29499e18c8" class="topiclink">getDisable</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh" class="topiclink">Server::ConditionRefresh</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a52423009013dd0b61130378bdcd82093" class="topiclink">getConditionRefresh</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh" class="topiclink">Server::ConditionRefresh</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1aaaf7b68db899d3d1b5ced3bfce4d5890" class="topiclink">getConditionRefresh</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_add_comment.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_add_comment" class="topiclink">Server::ConditionAddComment</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad8f5677869ec76bb69a4e8d898cb7816" class="topiclink">getAddComment</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_add_comment.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_add_comment" class="topiclink">Server::ConditionAddComment</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a17002c068ddbb5a2289531ad06ac3ff6" class="topiclink">getAddComment</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae6082ba081e32aa51716721bb5262636" class="topiclink">setConditionName</a></span>(const tstring &amp;conditionName)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a6f4b5b7a7a2e75f49820f45ec5197a58" class="topiclink">getConditionName</a></span>(tstring &amp;conditionName) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Condition</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae8ac8a7bb54933d6a02aa9cc9106840b" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a36ed46cde450dfd46f67f7e2ef8b58ac" class="topiclink">Condition</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a335a942e7b0e622ce1cf5e15f390c0f1" class="topiclink">Condition</a></span>(bool suppressCoreInstanceCreate)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae8ac8a7bb54933d6a02aa9cc9106840b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Condition</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Condition</a> instance </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event_1a14ebdd8a4b2e66b4810500ccea3de803" class="topiclink">SoftingOPCToolbox5::Server::BaseEvent</a>.</p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_alarm_1a5c177e5c3596d50af6265c4da67b119d" class="topiclink">SoftingOPCToolbox5::Server::DiscreteAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_rate_of_change_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_rate_of_change_alarm_1a467e6977da88687b11c8c891cd0668b1" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveRateOfChangeAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_level_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_level_alarm_1ad67b4edb0fcb0c9bfd3788a7e404e6d0" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveLevelAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_trip_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_trip_alarm_1a6247c44de8ea0f5d6636af900190d181" class="topiclink">SoftingOPCToolbox5::Server::TripAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_level_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_level_alarm_1a1edc21cd5a790f9233153b6e39212d31" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveLevelAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_rate_of_change_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_rate_of_change_alarm_1a8fa1b10e076b68a813b0333caac0ef66" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveRateOfChangeAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm_1a314bd297e085b67ac50878c059f9dcea" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveLimitAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm_1a24729a9ec7e7648a5c2596e38919d6fa" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveLimitAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm_1ad61d5c5691a31d377d81a816f0c1e2b5" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveDeviationAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm_1a11ce749e93ad0ace739245a54be46196" class="topiclink">SoftingOPCToolbox5::Server::OffNormalAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm_1af6bbb11969f776ddb73f424c0539d5d2" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveDeviationAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm_1a488ab85bd370e5b2ea317e6aeff70f29" class="topiclink">SoftingOPCToolbox5::Server::LimitAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1af3d04a8e699beb8b9e24c3a53abd5e1c" class="topiclink">SoftingOPCToolbox5::Server::AlarmCondition</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition_1af9162385bc18638931513c0b399f1023" class="topiclink">SoftingOPCToolbox5::Server::AcknowledgeableCondition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a9a291d745760915c34fdd9653422a10f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::Condition</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad294ec2e74af93f56fdfb8f79f4e6dda"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::~Condition</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a0686bd01cf8164d4392630bf6f60b2a6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::onEnable</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback method that shall be executed when the condition is enabled by the 'Enable' method. </p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1aa1aa1d5dcb009d228d7c4554762d8132" class="topiclink">SoftingOPCToolbox5::Server::AlarmCondition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae9a80d9e5f644e9cb33ac5da7a0a2be9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::onDisable</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback method that shall be executed when the condition is disabled by the 'Disable' method. </p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a9efd26dbbdf4e1292a88c3ef3c9cd9ae" class="topiclink">SoftingOPCToolbox5::Server::AlarmCondition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a14d5870a23787ff02ad759b08ddea245"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::enable</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Enables the condition by setting the state of the EnabledState to true.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This will automatically update all the sub-states of the EnabledState component. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1afc5bbc91d26e3f799f994e190547ebec"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::disable</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Disables the condition by setting the state of the EnabledState to false.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This will automatically update all the sub-states of the EnabledState component. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a7b237880f1578cd98e825144bb155845"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::createBranch</span>(<a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Server::Condition</a> * <span class="f_Parameter">branchToConstruct</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Creates a new branch (copy) of this condition. The branch is made available after construction by calling <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a6b7e4f06533c9b4b9ac67e7b6c6c97eb" class="topiclink">Condition::addBranch()</a>.</p>
+<p class="p_Paragraph">The caller must provide a valid pointer to an &quot;empty&quot; branch (instance of a condition (sub-)type). Override this method to add custom components (Objects, Variables, Methods) to your branch instance. Default implementations populate the branch with all components of a condition (sub-)type except for state machines. </p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm_1a0687e5536a6ba7ae92d1ad6420f217c4" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveLimitAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition_1a215d4df66dece656529283d667af648f" class="topiclink">SoftingOPCToolbox5::Server::AcknowledgeableCondition</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm_1aad93193308f5cea3356620f42290e756" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveDeviationAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm_1af2df92ae9e352552591bf892aed4e71b" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveDeviationAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm_1a0b17aabf17e15188d600bd6c808f6f52" class="topiclink">SoftingOPCToolbox5::Server::OffNormalAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm_1a5ed96b93d17c96ecab27989d30e5c165" class="topiclink">SoftingOPCToolbox5::Server::LimitAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm_1ab907b455e63df14799ef6c9e044a38c8" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveLimitAlarm</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a292372a1ab6e785cc541c750c9674727" class="topiclink">SoftingOPCToolbox5::Server::AlarmCondition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a6b7e4f06533c9b4b9ac67e7b6c6c97eb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::addBranch</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Server::ConditionPtr</a> <span class="f_Parameter">conditionBranch</span>, <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">branchId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds a branch to this condition. This will create and assign a new BranchId to the provided branch which uniquely identifies the branch within this condition.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">conditionBranch</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The condition branch to add </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">branchId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The BranchId of the added branch</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a7b237880f1578cd98e825144bb155845" class="topiclink">createBranch()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a3b7934124c8985fea9e78ab9821dcb6e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::addBranch</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Server::ConditionPtr</a> <span class="f_Parameter">conditionBranch</span>, bool <span class="f_Parameter">reportAddedBranch</span>, <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">branchId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. <span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">conditionBranch</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The condition branch to add </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">reportAddedBranch</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Denotes whether the added branch is reported to clients. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">branchId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The BranchId of the added branch </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad6153e791ba36e320dd2074f9a684b82"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getBranch</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">branchId</span>, <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Server::Condition</a> &gt; &amp; <span class="f_Parameter">conditionBranch</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns an existing condition branch identified by the given branch id.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">branchId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The identifier of the branch to return </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">conditionBranch</span><span style="font-size: 10pt; font-family: Arial; color: #000000;"> (out)</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The condition branch </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ac856005568c47e20f793e1663e1d9cd7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getBranch</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">branchId</span>, <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Server::Condition</a> &gt; &amp; <span class="f_Parameter">conditionBranch</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a6009d09c2584a03fcad9bb41a6400946"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getBranches</span>(std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &gt; &amp; <span class="f_Parameter">conditionBranches</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns all branches of this condition. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a828b30025ff688142bc3e7205ca7f025"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::deleteBranch</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">branchId</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Deletes a branch of this condition.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">branchId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The identifier of the branch to delete</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1afe153b7e6464a51ea556f29bed0982ce"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::deleteBranch</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">branchId</span>, bool <span class="f_Parameter">reportDeletedBranch</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. <span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">branchId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The identifier of the branch to delete. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">reportDeletedBranch</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Denotes whether the deleted branch is reported to clients. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a8fb8aab03b0bff6e9326df092191f9d5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getTrunk</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Server::Condition</a> &gt; &amp; <span class="f_Parameter">trunk</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This method returns the trunk of the condition.</p>
+<p class="p_Paragraph">If the object on which <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a8fb8aab03b0bff6e9326df092191f9d5" class="topiclink">getTrunk()</a> is called is a branch of the condition, the condition trunk is returned. If the object is the trunk itself, this method returns 'this'.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">trunk</span><span style="font-size: 10pt; font-family: Arial; color: #000000;"> (out)</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The trunk of the condition </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a3c0745682e22eb1dc813d6c1cdb5f6a6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getTrunk</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Server::Condition</a> &gt; &amp; <span class="f_Parameter">trunk</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1abb3cb22c4cc99b65948a920964dcfd43"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::onVariableChanged</span>(<a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> * <span class="f_Parameter">var</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> * <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback method that is called whenever the input variable changes its value.</p>
+<p class="p_Paragraph">Please note that the input variable needs to have a 'HasCondition' reference that points to this alarm in order to trigger this callback method. The callback allows the condition instance to react on a value change of the input variable by evaluating its states and if required by sending an event. Both evaluation and resulting actions are dependent on the concrete condition types.</p>
+<p class="p_Paragraph">The implementation of this abstract class sets the Quality property of the condition to the status of the <span class="f_Parameter">value</span>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">var</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The variable which has changed </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The new value of that variable </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm_1a9f77f60f1fee320062b4b2998d35641c" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveLimitAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm_1aaabc6a978d626c45c1d3a0a4b87cbca4" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveDeviationAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm_1a65e6c057a33307e346e5f6cfd28267ab" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveDeviationAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm_1af288f71d1b1bbdde0dfce4b82324d402" class="topiclink">SoftingOPCToolbox5::Server::OffNormalAlarm</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm_1a454f98c15ecdbfda99e01d3c50b6697b" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveLimitAlarm</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad57e216c8556ac1dbc6ef69544c6f748"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::report</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">reportingNode</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Reports the current state of the condition to clients subscribed for notifications.</p>
+<p class="p_Paragraph">The notification will be sent on the source node (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event_1a4c1bfd12f483f5d8169d34c55bfc2d51" class="topiclink">BaseEvent::setSourceNode()</a>) of the alarm. If the source node property is not specified, the source node is set to the node that points with a &quot;HasCondition&quot; reference to the condition. If the event type is not yet specified, the call sets the event type to the node ID of the correct type node. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event_1a5b3bca6c40574dbcdaf2b0a939fcdd01" class="topiclink">SoftingOPCToolbox5::Server::BaseEvent</a>.</p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a6dcafa6cc5719e0bd8bbced5c05da343" class="topiclink">SoftingOPCToolbox5::Server::AlarmCondition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a4eac6c5d558286d5778dfa2f45e155a3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getEnabledStateVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">TwoStateVariable</a> that indicates whether the condition is enabled or disabled. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a808aca44edbdcf6ca29a414db28f2631"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getEnabledStateVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a41fe2a37071cdc183063be5f0580fdd3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getEnabledState</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the localized text that describes the current enabled state.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable_1a41668010c142483d412d0c2f14943edf" class="topiclink">TwoStateVariable::getCurrentState()</a> to retrieve the current enabled state (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a4eac6c5d558286d5778dfa2f45e155a3" class="topiclink">Condition::getEnabledStateVar()</a>). The localized texts that describe the 'true' and 'false' enabled state can be retrieved by <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable_1a86152a61ff7d3232bf83f6c2b21e8580" class="topiclink">TwoStateVariable::getTrueState()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable_1af0f76418145b3dc5c87760c36ebb6add" class="topiclink">TwoStateVariable::getFalseState()</a>. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ab47b3ee70374b10d1d68350cc9ec257b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getBranchIdVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the BranchId variable.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a5dd712d179a1ae7576cdcd6a7082f40b" class="topiclink">getBranchId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a947931bcb9ea2e06d837a3a5a9572e83"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getBranchIdVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a5dd712d179a1ae7576cdcd6a7082f40b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getBranchId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the BranchId that is used to distinguish several branches of the same condition instance.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>setBrachId() </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a05d48f464e1e2acabca43fd044f8a55a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::setBranchId</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">branchId</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the BranchId that is used to distinguish several branches of the same condition instance.</p>
+<p class="p_Paragraph">The BranchId is null (i.e. the null <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a>) for all event notifications that relate to the current state of the condition instance. If the BranchId is not null, it identifies a previous state of this condition instance that still needs attention by an operator.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>A BranchId is automatically generated and assigned to branches during <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a6b7e4f06533c9b4b9ac67e7b6c6c97eb" class="topiclink">addBranch()</a>. Server applications do not need to set the BranchId manually. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ac85fbc46f923b7abaadec5ade065b8b5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::setBranchId</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> &amp; <span class="f_Parameter">branchId</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1adac6699bf26946fcaed46ec02e700243"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getRetainVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the Retain variable that indicates whether this condition is still interesting to a client that wishes to synchronize its state with the server's state.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a0eea102d3129846c7465ff52ac5c0be1" class="topiclink">getRetain()</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1af94bc874b28ccb1e33b7c42b4c404d1a" class="topiclink">setRetain()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a19cb19824da83508ed05942385a05718"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getRetainVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a0eea102d3129846c7465ff52ac5c0be1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getRetain</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether this condition is still interesting to a client that wishes to synchronize its state with the server's state. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1af94bc874b28ccb1e33b7c42b4c404d1a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::setRetain</span>(bool <span class="f_Parameter">retain</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Defines whether this condition is still interesting to a client that wishes to synchronize its state with the server's state.</p>
+<p class="p_Paragraph">When a client wishes to synchronize its state with the server (so called &quot;condition refresh&quot;) the server evaluates this flag, and only conditions re-announces only those conditions that have this flag set to 'true'. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a7402eed22dc651cb15ac60f89b3bba76"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getQualityVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the Quality variable that reveals the status of the process values or other resources that this condition instance is based upon.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a71b3871d9727019ff90d952300630382" class="topiclink">setQuality()</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ab9bd37dbb1bf04ad0107f381359ba3e3" class="topiclink">getQuality()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad40da92f0aadb7917fa18406029535ea"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getQualityVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ab9bd37dbb1bf04ad0107f381359ba3e3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getQuality</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the quality that reveals the status of the process values or other resources that this condition instance is based upon.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a71b3871d9727019ff90d952300630382" class="topiclink">setQuality()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a71b3871d9727019ff90d952300630382"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::setQuality</span>(<a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a> <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the quality that reveals the status of the process values or other resources that this condition instance is based upon. If, for example, a process value is 'Uncertain', the associated 'LevelAlarm' condition is also questionable. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae1b36979a51e1f5189b7863e515ad4a2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getLastSeverityVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the LastSeverity variable that indicates the previous severity of the condition.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a82ca8af562093fbc703a12a6d2ba6839" class="topiclink">setLastSeverity()</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1abe0a90b002bdb9f87618a1e45e5a8c4f" class="topiclink">getLastSeverity()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a142406895c90faed9d4c5fc5f882b979"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getLastSeverityVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1abe0a90b002bdb9f87618a1e45e5a8c4f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt16<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getLastSeverity</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the previous severity of the condition.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a82ca8af562093fbc703a12a6d2ba6839" class="topiclink">setLastSeverity()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a82ca8af562093fbc703a12a6d2ba6839"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::setLastSeverity</span>(OTUInt16 <span class="f_Parameter">lastSeverity</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the previous severity of the condition.</p>
+<p class="p_Paragraph">Initially this variable contains a zero value; it will return a value only after the condition's severity has changed.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The current severity of the condition is set by <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event_1a64976bf1cae52cbb5d8ed57b612577cc" class="topiclink">BaseEvent::setSeverity()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1acf8b6f93e39e7cb7b8ac3eac2a1da919"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getCommentVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the Comment variable that contains the latest comment for a certain state of the condition.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1aba756cfa0c2de3de4e6d611573c76229" class="topiclink">setComment()</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a073db95938ff1919c7d552bf8a9344f5" class="topiclink">getComment()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a13cf69edf08e52981e088df1c18428bc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_variable" class="topiclink">Server::ConditionVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getCommentVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a073db95938ff1919c7d552bf8a9344f5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getComment</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the latest comment for a certain state of the condition. The comment may have been provided by a client using the AddComment method or by some other <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method" class="topiclink">Method</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1aba756cfa0c2de3de4e6d611573c76229" class="topiclink">setComment()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1aba756cfa0c2de3de4e6d611573c76229"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::setComment</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_i_localized_text" class="topiclink">ILocalizedText</a> * <span class="f_Parameter">comment</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the latest comment for a certain state of the condition. The comment may have been provided by a client using the AddComment method or by some other <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method" class="topiclink">Method</a>. Initially, the comment is an empty text.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a86040b1d72a46c3618bfdb077180ccb9" class="topiclink">setClientUserId()</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The ClientUserId shall be set to the user who inserted the comment. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a14fd27d5d12765c0d300a6c457fa94cc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::setComment</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_i_localized_text" class="topiclink">ILocalizedText</a> &amp; <span class="f_Parameter">comment</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1abc739e0dfaaa2daea3df0521025c675c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getClientUserIdVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the ClientUserId variable that contains the UserId of the client that inserted the most recent comment.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a86040b1d72a46c3618bfdb077180ccb9" class="topiclink">setClientUserId()</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ada9ff2a3ed1cd5f9c33ed8b27f50dc03" class="topiclink">getClientUserId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a73a8265d0c6e65c4f90a16f7fdbd289a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getClientUserIdVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ada9ff2a3ed1cd5f9c33ed8b27f50dc03"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getClientUserId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the UserId of the client that inserted the most recent comment.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a86040b1d72a46c3618bfdb077180ccb9" class="topiclink">setClientUserId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a86040b1d72a46c3618bfdb077180ccb9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::setClientUserId</span>(const tstring &amp; <span class="f_Parameter">clientUserId</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the UserId of the client that inserted the most recent comment.</p>
+<p class="p_Paragraph">The ClientUserId can be obtained from the <a href="class_softing_o_p_c_toolbox5_1_1_user_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_identity_token" class="topiclink">UserIdentityToken</a> passed in the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a0629090cbc9ca8f67f2d651eab87e358" class="topiclink">Endpoint::onAuthenticateUser()</a> callback. This token can contain the information in multiple formats depending on the type of User Identity that is passed to the service. If the <a href="class_softing_o_p_c_toolbox5_1_1_user_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_identity_token" class="topiclink">UserIdentityToken</a> that was passed was defined as a UserName, then the structure contains an explicit string that is the user. If the passed <a href="class_softing_o_p_c_toolbox5_1_1_user_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_identity_token" class="topiclink">UserIdentityToken</a> was defined as X509v3, then the CertificateData byte string contains an element that is the user string which can be extracted from the subject key in this structure. If the passed <a href="class_softing_o_p_c_toolbox5_1_1_user_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_identity_token" class="topiclink">UserIdentityToken</a> was defined as WSS, then the user string can be extracted from the WS-Security XML token. If an <a href="class_softing_o_p_c_toolbox5_1_1_anonymous_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_anonymous_identity_token" class="topiclink">AnonymousIdentityToken</a> was used, the value is null. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a7164a9ecce89d0c72e7c545e06d78bc2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable" class="topiclink">Server::ConditionEnable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getEnable</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable" class="topiclink">ConditionEnable</a> method that may be used by clients to enable a condition. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a76f3caa19f79f9232cb4be61c0504dd0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_enable" class="topiclink">Server::ConditionEnable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getEnable</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad012686002d41359d811666420284385"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable" class="topiclink">Server::ConditionDisable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getDisable</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable" class="topiclink">ConditionDisable</a> method that may be used by clients to disable a condition. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1acd877cad2965db0a3a895b29499e18c8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_disable" class="topiclink">Server::ConditionDisable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getDisable</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a52423009013dd0b61130378bdcd82093"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh" class="topiclink">Server::ConditionRefresh</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getConditionRefresh</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh" class="topiclink">ConditionRefresh</a> method that may be used by clients to synchronize its state with the server's state. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1aaaf7b68db899d3d1b5ced3bfce4d5890"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_refresh" class="topiclink">Server::ConditionRefresh</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getConditionRefresh</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad8f5677869ec76bb69a4e8d898cb7816"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_add_comment.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_add_comment" class="topiclink">Server::ConditionAddComment</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getAddComment</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the AddComment method that may be used by clients to add a comment for a condition state. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a17002c068ddbb5a2289531ad06ac3ff6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_add_comment.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_add_comment" class="topiclink">Server::ConditionAddComment</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getAddComment</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae6082ba081e32aa51716721bb5262636"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::setConditionName</span>(const tstring &amp; <span class="f_Parameter">conditionName</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the mandatory ConditionName property of a condition.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">conditionName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">ConditionName identifies the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Condition</a> instance that the Event originated from. It can be used together with the SourceName in a user display to distinguish between different <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Condition</a> instances. If a ConditionSource has only one instance of a ConditionType, and the Server has no instance name, the Server shall supply the ConditionType browse name. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a6f4b5b7a7a2e75f49820f45ec5197a58"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::getConditionName</span>(tstring &amp; <span class="f_Parameter">conditionName</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the mandatory ConditionName property of a condition </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a36ed46cde450dfd46f67f7e2ef8b58ac"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::Condition</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a335a942e7b0e622ce1cf5e15f390c0f1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Condition::Condition</span>(bool <span class="f_Parameter">suppressCoreInstanceCreate</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

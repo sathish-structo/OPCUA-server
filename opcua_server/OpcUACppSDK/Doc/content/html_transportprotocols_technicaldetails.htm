@@ -1,0 +1,145 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Technical Details</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_transportprotocols_technicaldetails.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Technical Details</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_transportprotocolsoverview.htm">Previous</a>&nbsp;
+     <a href="html_services.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">OPC UA Part 6 – Mappings provides a great deal of technical details regarding transports, security and encodings. This section will provide some additional details regarding stacks and transport protocols.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Stack </span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">A stack is a collection of software libraries that implement one or more stack profiles. The interface between an OPC UA application and the stack is an API which hides the details of the stack implementation. An API depends on a specific development platform. The development platforms available for OPC UA currently include C#, C++, ANSI “C” and Java. The stacks that exist are written in C# (.NET), ANSI “C” and Java.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The figure below illustrates the relationships between the different concepts defined in this document.</span></p>
+<p class="p_Paragraph"><img src="ua_introduction_stack.png" width="618" height="379" alt="UA_Introduction_Stack" style="width:618px;height:379px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Each layer has choices, but some combinations do not make sense – such as WS Secure Conversation using UA TCP transport. WS Secure Conversation would only be practical with SOAP/HTTP or HTTPS. Also XML Encoding could be shipped over TCP, but in reality this would not be supported by most SDKs (this does not mean that XML data is not part of UA Binary Encoding, just that UA XML Encoding would typically be sent over a SOAP/HTTP or HTTPS transport). </span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Transport Protocol - TCP</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA TCP transport communication steps are described here. Connections are always initiated by the client who creates the socket before it sends the first OpenSecureChannel request. After creating the socket the first message sent shall be a “Hello” which specifies the buffer sizes that the client supports. The server shall respond with an acknowledge message which completes the buffer negotiation. OPC UA TCP transport allows for large messages to be broken down into message chunks. This break down allows smaller buffers on both the client and server, but does not restrict the message size being transmitted. The negotiated SendBufferSize specifies the size of the message chunks to use for messages sent over the connection.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The figure below illustrates the structure of a TCP message placed on the wire. This also illustrates how the message elements defined by the OPC UA Binary Encoding and the OPC UA Secure Conversation relate to the OPC UA TCP messages.</span></p>
+<p><img src="ua_introduction_messageencoding_zoom70.png" width="533" height="327" alt="UA_Introduction_MessageEncoding" style="width:533px;height:327px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This chunking of messages is a key feature, especially on an embedded platform where buffer space is very limited. It can allow messages that are larger than an embedded platform can buffer to still be transmitted and received, since only one message chunk would need to be buffered.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Transport Protocol – SOAP/HTTP and HTTPS</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">SOAP standards allow for great deal of variability in what and how communications is handled. This variability allows a particular application to communicate with a server only if they are aware of what was selected by the server. In OPC UA the SOAP/HTTP transport specifications does little more then make selections between all of the available option for SOAP messages. These selections allow for interoperability. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">All OPC UA messages are exchanged using the request-response message exchange pattern defined in ”SOAP Part 2: SOAP Version 1.2 Part 2: Adjuncts” even if the OPC UA service does not specify any output parameters. In these cases, the server shall return an empty response message that tells the client that no errors occurred.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">“WS-I Basic Profile 1.1: WS-I Basic Profile Version 1.1” defines best practices when using SOAP messages which will help ensure interoperability. All OPC Foundation provided OPC UA implementations conform to this specification.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">HTTP is the network communication protocol used to exchange SOAP messages. An OPC UA service request message is always sent by the client in the body of an HTTP POST request. The server returns an OPC UA response message in the body of the HTTP response. The HTTP binding for SOAP is described completely in SOAP Part 2.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">HTTPS is a variant of HTTP that encrypts and/or signs HTTP messages using the SSL/TLS protocol. HTTPS provides an efficient way to encrypt data sent across the network when two applications can communicate directly without intermediaries. As HTTPS is independent to OPC UA, it is possible to encrypt the messages with an extra HTTPS certificate instead of the application instance certificate.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA does not define any SOAP headers; however, SOAP messages containing OPC UA messages will include headers used by the other WS specifications in the stack.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">SOAP faults are returned only for errors that occurred within the SOAP stack. Errors that occur within in the application are returned as OPC UA error response.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">WS-Addressing defines standard headers used to route SOAP messages through intermediaries. The headers that are used are listed in the table below.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:11px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Header</span></p>
+</td>
+<td style="vertical-align:top; width:71px; height:11px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Request</span></p>
+</td>
+<td style="vertical-align:top; width:72px; height:11px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Response</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">wsa:To</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Required</span></p>
+</td>
+<td style="vertical-align:top; width:72px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Optional</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">wsa:From</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Optional</span></p>
+</td>
+<td style="vertical-align:top; width:72px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Optional</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">wsa:ReplyTo</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Required</span></p>
+</td>
+<td style="vertical-align:top; width:72px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Not Used</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">wsa:Action</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Required</span></p>
+</td>
+<td style="vertical-align:top; width:72px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Required</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">wsa:MessageID</span></p>
+</td>
+<td style="vertical-align:top; width:71px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Required</span></p>
+</td>
+<td style="vertical-align:top; width:72px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Optional</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:114px; height:5px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">wsa:RelatesTo</span></p>
+</td>
+<td style="vertical-align:top; width:71px; height:5px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Not Used</span></p>
+</td>
+<td style="vertical-align:top; width:72px; height:5px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Required</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">Note that WS-Addressing defines standard URIs to use in the ReplyTo and From headers when a client does not have an externally accessible endpoint. In these cases, the SOAP response is always returned to the client using the same communication channel that sent the request.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The key point to note is that OPC UA uses the standard WS-* and SOAP specifications, it does not invent anything. It simply made selections of various options that are available. These selections could be updated in the future. This will allow for easy updates (that add new support) as the WS-* specifications change or new specifications are created. The drawback to this approach is performance, since all of the WS-* headers must be processed.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_transportprotocols_technicaldetails.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

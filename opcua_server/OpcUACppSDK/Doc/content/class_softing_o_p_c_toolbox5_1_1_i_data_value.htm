@@ -1,0 +1,635 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IDataValue Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_data_value.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IDataValue Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value"></a></p>
+<p><span class="f_CodeExample">#include &quot;IDataValue.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map250" id="map250"><area shape="rect" coords="5,59,91,82" href="class_softing_o_p_c_toolbox5_1_1_data_value.htm" alt="" /><area shape="rect" coords="5,6,91,29" href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_data_value.gif" width="96" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_data_value" style="width:96px;height:88px;border:none" usemap="#map250" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value" class="topiclink">DataValue</a> data type is a complex type that contains a value along with its quality and timestamps.</p>
+<p class="p_Paragraph">DataValues are returned by OPC UA servers as result of, for example, Read service calls (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ac91107393b87fb7a7281bac1f6354860" class="topiclink">Client::Session::read()</a>) or via DataChange notifications (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ac71cce02fe3805a3d803c349f20bf80a" class="topiclink">Client::Subscription::onDataChange()</a>). </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1ab20bd9094e7f28e5ba6b0594e658eb4f" class="topiclink">~IDataValue</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a61a0e712ca349eedcba9d1cdda4bbd0d" class="topiclink">getValue</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1ae375316b7afb6cd8e2a7a90c107dd67f" class="topiclink">getValue</a></span>()=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a05ee31227df087de1b78f4d004b80ef4" class="topiclink">setValue</a></span>(const IValue *value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a503eccc50b38a1be890e932d9aa7a0b8" class="topiclink">setValue</a></span>(const Value &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1ab2b159546ae4cc21059c004ee7fc9993" class="topiclink">getStatusCode</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a47ea9db0fa9f6c9f43fd41015ab9e9d9" class="topiclink">setStatusCode</a></span>(EnumStatusCode value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a1e7840feddfc4cb50cb6d7a22af8a16f" class="topiclink">getSourceTimestamp</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a16ab1691902395c6b909623bc93ccfa6" class="topiclink">getSourceTimestamp</a></span>()=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1aaeffa6a34c4d48d7451dc00e10b26ff6" class="topiclink">setSourceTimestamp</a></span>(const IDateTime *value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a20d09f150d5ea71d4e24ed0e9c5eeccb" class="topiclink">setSourceTimestamp</a></span>(const DateTime &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual unsigned short</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1aaf3764217be3d22ecff3818e940a46b8" class="topiclink">getSourcePicoseconds</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1ad8e1ad2c431aa11591ff2136ea82cd9e" class="topiclink">setSourcePicoseconds</a></span>(unsigned short value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a52d687736c54c8e39ff3d6c6f7e11d8e" class="topiclink">getServerTimestamp</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a70a0adcef9e8250f9efc36a6cd6e6824" class="topiclink">getServerTimestamp</a></span>()=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a50c04ddf8d265514fb3bad3238743694" class="topiclink">setServerTimestamp</a></span>(const IDateTime *value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a206e9fe5757c9aa80ad4db1aa5a14d7c" class="topiclink">setServerTimestamp</a></span>(const DateTime &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual unsigned short</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a3e91be1bbd12d5090b11f343517ea61a" class="topiclink">getServerPicoseconds</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a752354b44884fc1c1f894e0bb9bd8449" class="topiclink">setServerPicoseconds</a></span>(unsigned short value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a9c1790d6a195448325d3552eb26f5339" class="topiclink">toString</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a28956283b6a282fc9242105fdc25ad35" class="topiclink">set</a></span>(const IDataValue *source)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1af88855dff88688f2b13efdc0aae75d54" class="topiclink">set</a></span>(const IDataValue &amp;source)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a95948de3bc08f82c383119c66a414bdd" class="topiclink">compare</a></span>(const IDataValue *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a4299354cd8aebeb0b7c758e0840733f4" class="topiclink">compare</a></span>(const IDataValue &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a9296de56b195aa351f7f36ce180a70c5" class="topiclink">operator==</a></span>(const IDataValue &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1ac80b3db742e427a1c8c1ca84f8cef6e7" class="topiclink">operator!=</a></span>(const IDataValue &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a7368c517fb15f9b15859c1d4dfe10de0" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1ab20bd9094e7f28e5ba6b0594e658eb4f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::~IDataValue</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a61a0e712ca349eedcba9d1cdda4bbd0d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getValue</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the actual data value. If the status code indicates an error then the value is to be ignored and the server shall set it to null. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1ae807906d4300623b0bb561e9eade394c" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1ae375316b7afb6cd8e2a7a90c107dd67f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getValue</span>()<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1aa1066cd099448d714a421fe6fe4348dd" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a05ee31227df087de1b78f4d004b80ef4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::setValue</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> * <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the actual data value. If the status code indicates an error then the value is to be ignored and the server shall set it to null. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a3312b34e54f9b6c8586f1b9cddd437f0" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a503eccc50b38a1be890e932d9aa7a0b8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::setValue</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a93dab99a583cd43fd88ee3606cd55a45" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1ab2b159546ae4cc21059c004ee7fc9993"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getStatusCode</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the status code that defines the server's ability to access and/or provide the value. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a7662998f8fcd4b5bb8bea9e0a6b43e1a" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a47ea9db0fa9f6c9f43fd41015ab9e9d9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::setStatusCode</span>(<a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a> <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the status code that defines the server's ability to access and/or provide the value. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a7d3358758d61113b939649e537d348a3" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a1e7840feddfc4cb50cb6d7a22af8a16f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getSourceTimestamp</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the source timestamp (in UTC time) of the value.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1aaeffa6a34c4d48d7451dc00e10b26ff6" class="topiclink">setSourceTimestamp()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a7235c5b3e699bb84e54965725c2c7762" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a16ab1691902395c6b909623bc93ccfa6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getSourceTimestamp</span>()<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1acd2c217c4e728eee80818bf63d0d1500" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1aaeffa6a34c4d48d7451dc00e10b26ff6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::setSourceTimestamp</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> * <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the source timestamp (in UTC time) of the value.</p>
+<p class="p_Paragraph">The source timestamp is used to reflect the timestamp that was applied to a value by the data source. Once a value has been assigned a source timestamp, the source timestamp for that value instance never changes. In this context, &quot;value instance&quot; refers to the value received, independent of its actual value. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a203300798b700f52f124e579be5b7862" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a20d09f150d5ea71d4e24ed0e9c5eeccb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::setSourceTimestamp</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_date_time.htm#class_softing_o_p_c_toolbox5_1_1_date_time" class="topiclink">DateTime</a> &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a2d755a6439bef515cfa4c3776d422660" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1aaf3764217be3d22ecff3818e940a46b8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual unsigned short<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getSourcePicoseconds</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the number of 10 picoseconds (1.0 e-11 seconds) intervals which are added to the source timestamp. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a04403625831bc8bdd6179303aafa3b49" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1ad8e1ad2c431aa11591ff2136ea82cd9e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::setSourcePicoseconds</span>(unsigned short <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the number of 10 picoseconds (1.0 e-11 seconds) intervals which shall be added to the source timestamp.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1aaeffa6a34c4d48d7451dc00e10b26ff6" class="topiclink">setSourceTimestamp()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a97079c25f752519c4aba5b85aee89e49" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a52d687736c54c8e39ff3d6c6f7e11d8e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getServerTimestamp</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the server timestamp (in UTC time) of the value.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a50c04ddf8d265514fb3bad3238743694" class="topiclink">setServerTimestamp()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a4e0bedd92c831e401ff0cc712da3751f" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a70a0adcef9e8250f9efc36a6cd6e6824"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getServerTimestamp</span>()<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1ab0968907b3e1a7c2e006aa2f91e5e377" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a50c04ddf8d265514fb3bad3238743694"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::setServerTimestamp</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time" class="topiclink">IDateTime</a> * <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the server timestamp (in UTC time) of the value.</p>
+<p class="p_Paragraph">The server timestamp is the time a server </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">received a value or </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">received the status for the value or </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">made the last attempt to recover from a bad or uncertain status. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a11809caaabf3caae36cb33954eaf3037" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a206e9fe5757c9aa80ad4db1aa5a14d7c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::setServerTimestamp</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_date_time.htm#class_softing_o_p_c_toolbox5_1_1_date_time" class="topiclink">DateTime</a> &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1afe364f5c9c93e54556c017bfbd3b0b7f" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a3e91be1bbd12d5090b11f343517ea61a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual unsigned short<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getServerPicoseconds</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the number of 10 picoseconds (1.0 e-11 seconds) intervals which are added to the server timestamp. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1ab1a85e9d262624b5d7b02c74c9a0548f" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a752354b44884fc1c1f894e0bb9bd8449"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::setServerPicoseconds</span>(unsigned short <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the number of 10 picoseconds (1.0 e-11 seconds) intervals which shall be added to the server timestamp.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value_1a50c04ddf8d265514fb3bad3238743694" class="topiclink">setServerTimestamp()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a61c43efb04452527beec66e618852510" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a9c1790d6a195448325d3552eb26f5339"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::toString</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a string representation of the <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value" class="topiclink">DataValue</a> for debugging purposes </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1af59684f59b56d75d32f1cf4c8a2b9c31" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a28956283b6a282fc9242105fdc25ad35"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> * <span class="f_Parameter">source</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">source</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1aa05dc0b1dcee8f11dc8bc51471877550" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1af88855dff88688f2b13efdc0aae75d54"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> &amp; <span class="f_Parameter">source</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1ad317e645e8d21de51d6a7ca6839bbb2a" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a95948de3bc08f82c383119c66a414bdd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a214d3f51cdd0ccf96aa3cba4851bc75a" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a4299354cd8aebeb0b7c758e0840733f4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1acf74d2cfe5f6b316169e24eed3d95917" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a9296de56b195aa351f7f36ce180a70c5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a8b8371e46aa7f1e7ca5811d9755bb18a" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1ac80b3db742e427a1c8c1ca84f8cef6e7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a151247af4fce60252abb4c2db585f742" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_value_1a7368c517fb15f9b15859c1d4dfe10de0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataValue::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a2e9e0ef15cb4710384d122a2b009a6e6" class="topiclink">SoftingOPCToolbox5::DataValue</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_data_value.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

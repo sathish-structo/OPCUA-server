@@ -1,0 +1,72 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Type Definitions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uaaddressspacetypedefinitions.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Type Definitions</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uaaddressspaceviews.htm">Previous</a>&nbsp;
+     <a href="html_uaaddressspacereferencetypes.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">Type Definitions</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Nodes of classes DataType, VariableType, ObjectType and ReferenceType represent types of other entities exposed in an UA server’s address space.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">VariableType and ObjectType nodes represent types of variables and objects. The instances of variables/objects have a HasTypeDefinition reference to the node, which represents their type. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">A DataType node represents a data type of a Value attribute of a variable. The data type is not bound to the Value attribute with a reference, but it is exposed as the DataType attribute.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">There is a difference between a variable type and a data type. A data type defines the type of a value, such as Int32, String, Double, Float etc. A variable type then defines the ‘meaning’ of a variable and its properties, for example AnalogItemType defines a property named ‘Range’.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">All nodes that define types are organized in trees that represent the type hierarchies. There are four trees in the UA server’s address space – for data types, variable types, object types and reference types. Each type tree has a root node, which represents the base type for each type hierarchy. The type nodes are interconnected with HasSubtype references. The HasSubtype references interconnect parent types with their derived types. The derived types inherit from their parent types.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">As in programming languages, some of the types may be abstract. This means there must be no instances of that type in the address space. However, other (concrete) types may be derived from an abstract type. Concrete types may be instantiated.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">There are many standard types defined by the OPC UA specification.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uaaddressspacetypedefinitions.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

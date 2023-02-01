@@ -1,0 +1,413 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HistoryReadDataResult Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">HistoryReadDataResult Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_history_event_field_list.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_history_read_event_result.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result"></a></p>
+<p><span class="f_CodeExample">#include &quot;HistoryReadDataResult.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> data type is used by the HistoryRead service (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a9606a22b23f857e084301ceed8a138a5" class="topiclink">Client::Session::historyReadRaw()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1afef48a38b3e7f33616bf2d66c4ea9bd8" class="topiclink">Client::Session::historyReadProcessed()</a>) to return historical data for one node to the client.</p>
+<p class="p_Paragraph">This data type may contain a continuation point if the historical values to return exceeds the requested (or server defined) maximum. In this case, the client shall either use the continuation point to proceed the HistoryRead call or the continuation point shall be released. Both possible actions can be accomplished using the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a9606a22b23f857e084301ceed8a138a5" class="topiclink">Client::Session::historyReadRaw()</a> resp. <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1afef48a38b3e7f33616bf2d66c4ea9bd8" class="topiclink">Client::Session::historyReadProcessed()</a> service.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please note that this data type is not defined by the OPC UA specifications. </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1af07f03beb79a4173db696cae70956c0b" class="topiclink">HistoryReadDataResult</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a4b11a077e76e431f741b545a4d673599" class="topiclink">HistoryReadDataResult</a></span>(const HistoryReadDataResult *)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a4d8c5662e5fba61ebe0de6c2b52ac52f" class="topiclink">HistoryReadDataResult</a></span>(const HistoryReadDataResult &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a66d3c2bd10a04963f7e038b663f197d1" class="topiclink">~HistoryReadDataResult</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aee1170384a8edb387868eec1ab2dca69" class="topiclink">operator=</a></span>(const HistoryReadDataResult &amp;cp)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a8ff4093efcb62f31356ef5cd46213c2c" class="topiclink">set</a></span>(const HistoryReadDataResult *src)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a0737fa37fc5c08ee74a32f7ebef784f3" class="topiclink">set</a></span>(const HistoryReadDataResult &amp;src)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a5d4c8b1f9ff273e6051e627b8110a2a9" class="topiclink">compare</a></span>(const HistoryReadDataResult *other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aa9f88e2219fd6fe51ea41378398f8785" class="topiclink">compare</a></span>(const HistoryReadDataResult &amp;other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1acafc9211736c2254a5381b91399aada7" class="topiclink">operator==</a></span>(const HistoryReadDataResult &amp;other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aeecec5acf6eb28759c6bee9ea977c67f" class="topiclink">operator!=</a></span>(const HistoryReadDataResult &amp;other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a159888f41a574722f0aad16f3e4bfdc0" class="topiclink">getContinuationPoint</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aaf007f083cd203d7b3f17b28b1e5e218" class="topiclink">getStatusCode</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a31e9c0b1e0148bd9b11e87d802387c93" class="topiclink">getNumberOfValues</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aa08f3014a432b0b95a68dd4307ed9b83" class="topiclink">getValue</a></span>(OTUInt32 index) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aabdd60cf929df803fb1037b9b6e941dd" class="topiclink">clear</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a068894bc3c0e88935cfd36c1f5645775" class="topiclink">getInternHandle</a></span>() const </p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1af07f03beb79a4173db696cae70956c0b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::HistoryReadDataResult</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a4b11a077e76e431f741b545a4d673599"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::HistoryReadDataResult</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> * <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a copy of the given instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a4d8c5662e5fba61ebe0de6c2b52ac52f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::HistoryReadDataResult</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a66d3c2bd10a04963f7e038b663f197d1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::~HistoryReadDataResult</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aee1170384a8edb387868eec1ab2dca69"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> &amp; <span class="f_Parameter">cp</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Assigns the contents of <span class="f_Parameter">cp</span> to this instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a8ff4093efcb62f31356ef5cd46213c2c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> * <span class="f_Parameter">src</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">source</span> to this instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a0737fa37fc5c08ee74a32f7ebef784f3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> &amp; <span class="f_Parameter">src</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a5d4c8b1f9ff273e6051e627b8110a2a9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aa9f88e2219fd6fe51ea41378398f8785"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1acafc9211736c2254a5381b91399aada7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aeecec5acf6eb28759c6bee9ea977c67f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result" class="topiclink">HistoryReadDataResult</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a159888f41a574722f0aad16f3e4bfdc0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::getContinuationPoint</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This parameter is used only if the number of values was too large to be returned in a single response. If this parameter is not used, <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string_1a83936dcaddf00c4dbbaac905fa8ee0ed" class="topiclink">ByteString::getSize()</a> returns 0.</p>
+<p class="p_Paragraph">The continuation point has to be passed to the next HistoryRead call for that node. If the continuation point is no longer needed, it has to be released by a separate HistoryRead call. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aaf007f083cd203d7b3f17b28b1e5e218"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::getStatusCode</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the status code for the read node. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a31e9c0b1e0148bd9b11e87d802387c93"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::getNumberOfValues</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the number of values that the server returned for the read node.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aa08f3014a432b0b95a68dd4307ed9b83" class="topiclink">getValue()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aa08f3014a432b0b95a68dd4307ed9b83"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::getValue</span>(OTUInt32 <span class="f_Parameter">index</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Provides access to a specific historical value in the returned list of values.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm#class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a31e9c0b1e0148bd9b11e87d802387c93" class="topiclink">getNumberOfValues()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1aabdd60cf929df803fb1037b9b6e941dd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::clear</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Clears the contents of this object to enable its re-use. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_history_read_data_result_1a068894bc3c0e88935cfd36c1f5645775"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::HistoryReadDataResult::getInternHandle</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_history_read_data_result.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

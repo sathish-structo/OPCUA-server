@@ -1,0 +1,286 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ReadTransaction Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">ReadTransaction Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_reference_iterator.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerReadTransaction.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map135" id="map135"><area shape="rect" coords="5,123,123,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm" alt="" /><area shape="rect" coords="21,6,107,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="7,59,121,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.gif" width="128" height="163" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction" style="width:128px;height:163px;border:none" usemap="#map135" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction" class="topiclink">ReadTransaction</a> allows server applications to process 'Read' service calls. Clients use the 'Read' service to read attribute values from one or more nodes on the server. The transaction contains a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request" class="topiclink">ReadRequest</a> object for each node and attribute value that is to be read.</p>
+<p class="p_Paragraph">The SDK creates a new transaction object for every service call and triggers the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1acbcdd9e8b225f062745c972834b3829c" class="topiclink">handleRequests()</a> callback that is responsible for processing the call. The default implementation of <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1acbcdd9e8b225f062745c972834b3829c" class="topiclink">handleRequests()</a> calls <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a3ddfbea26ac50279764e0edf208e5aeb" class="topiclink">BaseNode::handleReadRequest()</a> for each node and attribute that is to be read.</p>
+<p class="p_Paragraph">A transaction is completed when all requests in the transaction have been completed by <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request_1a5696acd53a042e30ff7d3be86ab46814" class="topiclink">ReadRequest::complete()</a>. Only when the transaction is completed, the response to the service call is sent to the client. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1ad835a1ed0d18796489a4a3114c2acfff" class="topiclink">ReadTransaction</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1ae67fc22f8345974102b2da1f20ec08ce" class="topiclink">~ReadTransaction</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request" class="topiclink">Server::ReadRequest</a> &gt; &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1af1db7fea417db0bf8bc3927728e8e542" class="topiclink">getRequests</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request" class="topiclink">Server::ReadRequest</a> &gt; &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a1f81159dde0a14a697a57e6e9c04c07a" class="topiclink">getRequests</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1acbcdd9e8b225f062745c972834b3829c" class="topiclink">handleRequests</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a4a8ba1a06b910c5f1b14d512aa30af86" class="topiclink">updateTimeStamps</a></span>(IDataValue *localValue, EnumAttributeId attributeId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1ae8a1b8b78f38696d6c5364f1b49d0698.htm#_enums_8h_1ae8a1b8b78f38696d6c5364f1b49d0698" class="topiclink">EnumTimestampsToReturn</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a399357b952824805b45c644b364282d7" class="topiclink">getTimestampToReturn</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">double</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a33a1e312d860cf6595da1b04ba436b1d" class="topiclink">getMaxAge</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a3abdd0e68049c6ce3d9bc04c4caa06cf" class="topiclink">initMembers</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1ad835a1ed0d18796489a4a3114c2acfff"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ReadTransaction::ReadTransaction</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1ae67fc22f8345974102b2da1f20ec08ce"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::ReadTransaction::~ReadTransaction</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1af1db7fea417db0bf8bc3927728e8e542"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request" class="topiclink">Server::ReadRequest</a> &gt; &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ReadTransaction::getRequests</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the array of requests contained in this transaction instance. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a1f81159dde0a14a697a57e6e9c04c07a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request" class="topiclink">Server::ReadRequest</a> &gt; &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ReadTransaction::getRequests</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1acbcdd9e8b225f062745c972834b3829c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ReadTransaction::handleRequests</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback method that is called by the SDK whenever a client uses the 'Read' service to read attribute values from one or more nodes.</p>
+<p class="p_Paragraph">The default implementation calls <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a3ddfbea26ac50279764e0edf208e5aeb" class="topiclink">BaseNode::handleReadRequest()</a> for every node and attribute that is to be read.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>When overriding this method you mustn't use blocking calls within this method since this blocks the UA communication.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The requests within this transaction are already preprocessed by the SDK. If the SDK has found any errors (e.g. BadNodeIdUnknown, ...) in most cases the request should not be processed any more. Just complete the request and continue with the next. In some cases (e.g. processing &quot;virtual&quot; node, not known to the AddresSpaceRoot) further processing can be executed and the status code can be overwritten. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a4a8ba1a06b910c5f1b14d512aa30af86"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ReadTransaction::updateTimeStamps</span>(<a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm#class_softing_o_p_c_toolbox5_1_1_i_data_value" class="topiclink">IDataValue</a> * <span class="f_Parameter">localValue</span>, <a href="_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b.htm#_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b" class="topiclink">EnumAttributeId</a> <span class="f_Parameter">attributeId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Removes timestamps from the given <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value" class="topiclink">DataValue</a> that have not been requested by the client and initializes timestamps that have been requested but not provided by the server application to the current time.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">localValue</span><span style="font-size: 10pt; font-family: Arial; color: #000000;"> (in, out)</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value" class="topiclink">DataValue</a> that is to be updated </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">attributeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The attribute that has been requested</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a399357b952824805b45c644b364282d7" class="topiclink">getTimestampToReturn()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a399357b952824805b45c644b364282d7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1ae8a1b8b78f38696d6c5364f1b49d0698.htm#_enums_8h_1ae8a1b8b78f38696d6c5364f1b49d0698" class="topiclink">EnumTimestampsToReturn</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ReadTransaction::getTimestampToReturn</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the timestamps that the server application shall return for each read value attribute of a variable. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a33a1e312d860cf6595da1b04ba436b1d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>double<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ReadTransaction::getMaxAge</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the maximum allowed age of the value (in milliseconds) that is to be read.</p>
+<p class="p_Paragraph">The age of the value is based on the difference between the server timestamp and the time when the server starts processing the request. For example if the client specifies a maximum age of 500 milliseconds and it takes 100 milliseconds until the server starts processing the request, the age of the returned value could be 600 milliseconds prior to the time it was requested.</p>
+<p class="p_Paragraph">If the server has one or more values of an attribute that are within the maximum age, it can return any one of the values or it can read a new value from the data source. If the server does not have a value that is within the maximum age, it shall attempt to read a new value from the data source.</p>
+<p class="p_Paragraph">If the server cannot meet the requested maxAge, it returns its &quot;best effort&quot; value rather than rejecting the request. This may occur when the time it takes the server to process and return the new data value after it has been accessed is greater than the specified maximum age.</p>
+<p class="p_Paragraph">If maxAge is set to 0, the server shall attempt to read a new value from the data source. If maxAge is set to the max Int32 value or greater, the server shall attempt to get a cached value. Negative values are invalid for maxAge. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a3abdd0e68049c6ce3d9bc04c4caa06cf"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ReadTransaction::initMembers</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a296fa36986f21445918d16ba8751ff90" class="topiclink">SoftingOPCToolbox5::Server::DataTransaction</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

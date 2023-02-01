@@ -1,0 +1,395 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>AuditUpdateMethodEvent Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">AuditUpdateMethodEvent Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_session_event.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_url_mismatch_event.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerAuditUpdateMethodEvent.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map54" id="map54"><area shape="rect" coords="995,251,1170,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_enable_event.htm" alt="" /><area shape="rect" coords="803,251,989,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_shelving_event.htm" alt="" /><area shape="rect" coords="585,251,797,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_acknowledge_event.htm" alt="" /><area shape="rect" coords="546,6,633,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="517,59,662,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event_notification.htm" alt="" /><area shape="rect" coords="397,251,579,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_confirm_event.htm" alt="" /><area shape="rect" coords="198,251,391,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_comment_event.htm" alt="" /><area shape="rect" coords="546,123,633,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_event.htm" alt="" /><area shape="rect" coords="507,187,671,221" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm" alt="" /><area shape="rect" coords="5,251,192,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_respond_event.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.gif" width="1175" height="291" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event" style="width:1175px;height:291px;border:none" usemap="#map54" /></p>
+<p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_base.htm#class_softing_o_p_c_toolbox5_1_1_base" class="topiclink">Base</a> class of all method related audit events.</p>
+<p class="p_Paragraph">The SourceNode property for events of this type should be assigned to the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the object that the method resides on. The SourceName property for events of this type should be &quot;Attribute/Call&quot;.</p>
+<p class="p_Paragraph">Beside mandatory properties of the base class additionally the following mandatory properties shall be set: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">MethodId: Identifies the method that was called. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">InputArguments: Identifies the input arguments for the method. This property can be omitted if no input arguments have been provided. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a9f352eeb74c606e067fa37fe36d8cadd" class="topiclink">~AuditUpdateMethodEvent</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a3d6d1e179c5256d1ba77d398a4275f45" class="topiclink">setMethodAuditInformation</a></span>(const Server::MethodCallRequest *request, const Server::MethodCallTransaction *transaction, bool status)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a6d3278da80e29f75cc1f470bea140eef" class="topiclink">getMethodId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1ab5eb24cbd61fa2af32007acb62da43af" class="topiclink">setMethodId</a></span>(const INodeId *methodId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a4b58c479c2d5679728e92ee9e6927647" class="topiclink">getInputArguments</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1ad527f018c24a786fc4900ede5553f893" class="topiclink">setInputArguments</a></span>(const std::vector&lt; Value &gt; &amp;inputArguments)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a57b526a3786795a172de97e82723e0ec" class="topiclink">getComment</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1ac33cb6e84d31f7630467d2a1bc4a4f05" class="topiclink">setComment</a></span>(ILocalizedText *comment)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event" class="topiclink">AuditUpdateMethodEvent</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a49d953f49ab7a11934ff29e6f2ed028f" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a7064d15a0ba756c9cb9d3bb1a15ff85a" class="topiclink">AuditUpdateMethodEvent</a></span>(const INodeId *eventTypeNode)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a49d953f49ab7a11934ff29e6f2ed028f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event" class="topiclink">AuditUpdateMethodEvent</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event" class="topiclink">AuditUpdateMethodEvent</a> instance.</p>
+<p class="p_Paragraph">The newly created object has already the following properties initially set: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Time: The actual time. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ActionTimeStamp: The actual time. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ReceiveTime: The actual time. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Severity: 1 </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ServerId: The ID of the server from the application description. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_enable_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_enable_event_1a0601a917915307db5fa09cdd7db94d2c" class="topiclink">SoftingOPCToolbox5::Server::AuditConditionEnableEvent</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_shelving_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_shelving_event_1af39892b7c4e2c98285deaee42d72ac86" class="topiclink">SoftingOPCToolbox5::Server::AuditConditionShelvingEvent</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_respond_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_respond_event_1a1968c806d13d60faa59d7d9fb6570726" class="topiclink">SoftingOPCToolbox5::Server::AuditConditionRespondEvent</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_confirm_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_confirm_event_1a10d3706724cf11895a577defd0215f9e" class="topiclink">SoftingOPCToolbox5::Server::AuditConditionConfirmEvent</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_comment_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_comment_event_1a12874c77f02e589b7b36d45889e73b24" class="topiclink">SoftingOPCToolbox5::Server::AuditConditionCommentEvent</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_acknowledge_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_acknowledge_event_1afc7b9b9fa44da9a16925f47d2af5ff46" class="topiclink">SoftingOPCToolbox5::Server::AuditConditionAcknowledgeEvent</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a7064d15a0ba756c9cb9d3bb1a15ff85a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::AuditUpdateMethodEvent</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">eventTypeNode</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This constructor is used for derived classes.</p>
+<p class="p_Paragraph">This constructor shall be called for specialized events with the concrete event type.</p>
+<p class="p_Paragraph">The newly created object has already the following properties initially set: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Time: The actual time. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ActionTimeStamp: The actual time. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ReceiveTime: The actual time. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Severity: 1 </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ServerId: The ID of the server from the application description. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a9f352eeb74c606e067fa37fe36d8cadd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::~AuditUpdateMethodEvent</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a3d6d1e179c5256d1ba77d398a4275f45"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::setMethodAuditInformation</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request" class="topiclink">Server::MethodCallRequest</a> * <span class="f_Parameter">request</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction" class="topiclink">Server::MethodCallTransaction</a> * <span class="f_Parameter">transaction</span>, bool <span class="f_Parameter">status</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the method related information.</p>
+<p class="p_Paragraph">The properties filled with method are: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">MethodId: Identifies the method that was called. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">InputArguments: Identifies the input Arguments for the method. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ClientAuditEntryId: Contains the human-readable AuditEntryId. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SourceNode: Identifies the Node that the Event originated from. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Status: Identifies whether the requested action could be performed.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">request</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The request of the method call </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">transaction</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The transaction containing the request </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">status</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The Status property identifies whether the requested action could be performed (set Status to TRUE) or not (set Status to FALSE). </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a6d3278da80e29f75cc1f470bea140eef"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::getMethodId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the method that was called.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1ab5eb24cbd61fa2af32007acb62da43af" class="topiclink">setMethodId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1ab5eb24cbd61fa2af32007acb62da43af"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::setMethodId</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">methodId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the method that was called.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">methodId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The node ID of the called method</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a3d6d1e179c5256d1ba77d398a4275f45" class="topiclink">setMethodAuditInformation()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a4b58c479c2d5679728e92ee9e6927647"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::getInputArguments</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the input arguments that have been provided with the method call.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1ad527f018c24a786fc4900ede5553f893" class="topiclink">setInputArguments()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1ad527f018c24a786fc4900ede5553f893"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::setInputArguments</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> &gt; &amp; <span class="f_Parameter">inputArguments</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the input arguments that have been provided with the method call. This property needs not to be filled if no input arguments have been provided.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">inputArguments</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The input arguments of the method</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a3d6d1e179c5256d1ba77d398a4275f45" class="topiclink">setMethodAuditInformation()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1a57b526a3786795a172de97e82723e0ec"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::getComment</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the comment property of an audit event.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1ac33cb6e84d31f7630467d2a1bc4a4f05" class="topiclink">setComment()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event_1ac33cb6e84d31f7630467d2a1bc4a4f05"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AuditUpdateMethodEvent::setComment</span>(<a href="class_softing_o_p_c_toolbox5_1_1_i_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_i_localized_text" class="topiclink">ILocalizedText</a> * <span class="f_Parameter">comment</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the comment property of an audit event.</p>
+<p class="p_Paragraph">The comment property is mandatory for the following derived audit event types: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_comment_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_comment_event" class="topiclink">AuditConditionCommentEvent</a>: Report the &quot;AddComment&quot; action. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_acknowledge_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_acknowledge_event" class="topiclink">AuditConditionAcknowledgeEvent</a>: Indicates acknowledgment or confirmation of one or more conditions. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_confirm_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_condition_confirm_event" class="topiclink">AuditConditionConfirmEvent</a>: Reports a &quot;Confirm&quot; action.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"> All other derived audit events shall not set the comment property.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">comment</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The comment that was added </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_audit_update_method_event.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

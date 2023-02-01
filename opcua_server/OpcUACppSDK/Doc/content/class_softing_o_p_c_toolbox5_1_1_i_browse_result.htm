@@ -1,0 +1,338 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IBrowseResult Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IBrowseResult Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_path_target.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_build_info.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result"></a></p>
+<p><span class="f_CodeExample">#include &quot;IBrowseResult.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map231" id="map231"><area shape="rect" coords="5,6,109,29" href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm" alt="" /><area shape="rect" coords="8,59,107,82" href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_browse_result.gif" width="115" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_browse_result" style="width:115px;height:88px;border:none" usemap="#map231" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result" class="topiclink">BrowseResult</a> data type is used by the Browse and BrowseNext services (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1aae8a31cfe9680a09eb65eb216788fd98" class="topiclink">Client::Session::browse()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a7e522ec992e732e9a3dc944260be921b" class="topiclink">Client::Session::browseNext()</a>) and contains a list of browse results for one browsed node.</p>
+<p class="p_Paragraph">The browse result may contain a continuation point, if the number of references to return exceeds the requested (or server-defined) maximum. In this case, the client shall either use the continuation point to proceed the browse call or the continuation point shall be released. Both possible actions can be accomplished using the BrowseNext service. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a518b67925c8ba9daa4f7968103f5d115" class="topiclink">~IBrowseResult</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a87c4480125770a02277c4c430a9c311f" class="topiclink">getStatusCode</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1ae22c7f01afe3111867b6648d757a9088" class="topiclink">getContinuationPoint</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual unsigned</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a80e574a9e1290b803eb080ef763824c4" class="topiclink">getReferenceCount</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_i_reference_description" class="topiclink">IReferenceDescription</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a4607d155a140ff53abdf6ae16a33ff7d" class="topiclink">getReference</a></span>(unsigned index) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a73c6fc096f98489dfc56beb758610f67" class="topiclink">getReferences</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1ae1fb1c202b3024f49a245e0ba53723fa" class="topiclink">set</a></span>(const IBrowseResult *cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a288a92ddec1346d342cb3c1a03ed1c68" class="topiclink">set</a></span>(const IBrowseResult &amp;cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a80178cb850b6d94a427dac2a32e77847" class="topiclink">compare</a></span>(const IBrowseResult *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a882e3f7edc077471030ba892f1f14766" class="topiclink">compare</a></span>(const IBrowseResult &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a9bd527d8600063d24473533d7fabcd92" class="topiclink">operator==</a></span>(const IBrowseResult &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a83f9d10ed72ab73b056439855c568d37" class="topiclink">operator!=</a></span>(const IBrowseResult &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a32e1082a97d721af69f1b1102fb26041" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a518b67925c8ba9daa4f7968103f5d115"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::~IBrowseResult</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a87c4480125770a02277c4c430a9c311f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::getStatusCode</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the status code for the browse result of a single node. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1a4f07ea6cc307277d002170ddeaca7401" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1ae22c7f01afe3111867b6648d757a9088"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::getContinuationPoint</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the continuation point provided by the server. If the continuation point is empty (i.e. <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string_1a83936dcaddf00c4dbbaac905fa8ee0ed" class="topiclink">ByteString::getSize()</a> returns 0), the server did not provide a continuation point.</p>
+<p class="p_Paragraph">The browse result may contain a continuation point, if the number of references to return exceeds the requested (or server-defined) maximum. In this case, the client shall either use the continuation point to proceed the browse call or the continuation point shall be released. Both possible actions can be accomplished using the BrowseNext service.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a7e522ec992e732e9a3dc944260be921b" class="topiclink">Client::Session::browseNext()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1ae45d6e256f99abe576427fb7aad5bb2c" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a80e574a9e1290b803eb080ef763824c4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual unsigned<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::getReferenceCount</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The methods <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a80e574a9e1290b803eb080ef763824c4" class="topiclink">getReferenceCount()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a4607d155a140ff53abdf6ae16a33ff7d" class="topiclink">getReference()</a> are provided for efficient access to data. The semantics of these methods are documented in <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a73c6fc096f98489dfc56beb758610f67" class="topiclink">getReferences()</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1a13e374b6625e918a34239f7d53133f6f" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a4607d155a140ff53abdf6ae16a33ff7d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_i_reference_description" class="topiclink">IReferenceDescription</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::getReference</span>(unsigned <span class="f_Parameter">index</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The methods <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a80e574a9e1290b803eb080ef763824c4" class="topiclink">getReferenceCount()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a4607d155a140ff53abdf6ae16a33ff7d" class="topiclink">getReference()</a> are provided for efficient access to data. The semantics of these methods are documented in <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a73c6fc096f98489dfc56beb758610f67" class="topiclink">getReferences()</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1a3dd7b52c03fe56cd2993b7c60eaf7ad9" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a73c6fc096f98489dfc56beb758610f67"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm#class_softing_o_p_c_toolbox5_1_1_reference_description" class="topiclink">ReferenceDescription</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::getReferences</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the set of references that meet the criteria specified in the <a href="class_softing_o_p_c_toolbox5_1_1_browse_description.htm#class_softing_o_p_c_toolbox5_1_1_browse_description" class="topiclink">BrowseDescription</a>. Since each node can have more than one reference, an array of references is returned for each node. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1a810c31f364c42763e7607060d26a49b9" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1ae1fb1c202b3024f49a245e0ba53723fa"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result" class="topiclink">IBrowseResult</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1ac2c0f6dc6173eae1767aee7ee8f15e57" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a288a92ddec1346d342cb3c1a03ed1c68"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result" class="topiclink">IBrowseResult</a> &amp; <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1aca107f1d34fb0a71840a3fb181fbb5d1" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a80178cb850b6d94a427dac2a32e77847"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result" class="topiclink">IBrowseResult</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1ade119c0ce9f8da2735f123146649c217" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a882e3f7edc077471030ba892f1f14766"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result" class="topiclink">IBrowseResult</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1ab1e3f65e6ce1ea5bbe5979a80700f0f2" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a9bd527d8600063d24473533d7fabcd92"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result" class="topiclink">IBrowseResult</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1acb16481e3705f4f559b206de4b6a31fc" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a83f9d10ed72ab73b056439855c568d37"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_i_browse_result" class="topiclink">IBrowseResult</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1a46d1122a029b37e1d62c9bd3341e0b83" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_browse_result_1a32e1082a97d721af69f1b1102fb26041"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IBrowseResult::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm#class_softing_o_p_c_toolbox5_1_1_browse_result_1ac6b31d938f64a6de6ea44c27c734b4d1" class="topiclink">SoftingOPCToolbox5::BrowseResult</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_browse_result.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

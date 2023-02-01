@@ -1,0 +1,750 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Connection Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Connection Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_write_transaction.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection"></a></p>
+<p><span class="f_CodeExample">#include &quot;PubSubConnection.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map165" id="map165"><area shape="rect" coords="5,6,91,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="5,59,91,93" href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.gif" width="96" height="99" alt="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection" style="width:96px;height:99px;border:none" usemap="#map165" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection" class="topiclink">Connection</a> class represents a PubSub connection.</p>
+<p class="p_Paragraph">This class is used both for publisher and subscriber. Please note that connections have to be added to the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application" class="topiclink">Application</a> object (see <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ad1dd17d91881a21c7f14d6764fd5e9f6" class="topiclink">Application::addPubSubConnection()</a>). </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a7c51dd70a1b4ac8723ac81b2c450e379" class="topiclink">~Connection</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a2cc1148c9d9a1f722c3dbea4cf004e88" class="topiclink">setName</a></span>(const tstring &amp;name)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1ad51aea00b1357da69ba048a97bc5358b" class="topiclink">getName</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1aff8482e3cbfbef622b28ea5d7188d587" class="topiclink">setPublisherId</a></span>(const Value &amp;publisherId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a245bbd5c76300ab2b55fa1ff9d5c494e" class="topiclink">getPublisherId</a></span>(Value &amp;publisherId) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a0a6fe7d6f7c53eb482791c8a0908a558" class="topiclink">setEnabled</a></span>(bool enabled)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a9ec30e8041c45d2e0b9a410bf027101a" class="topiclink">getEnabled</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a1a9bdaa265f4d19b157df45b4352679b.htm#_enums_8h_1a1a9bdaa265f4d19b157df45b4352679b" class="topiclink">EnumPubSubState</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1af00feb85022a7607b497d93f8dbf55e1" class="topiclink">getPubSubState</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a0907bf9e7e29a41b18cc37475fa4e6e8" class="topiclink">setTransportProfileUri</a></span>(const tstring &amp;transportProfileUri)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1af3ebed88616574c742abc20a9cb653a3" class="topiclink">getTransportProfileUri</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a9f13ae8fc0afbda9121956c4dbf7bc6b" class="topiclink">setNetworkAddress</a></span>(const NetworkAddressDataType &amp;networkAddress)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1adba98c92e70d90019906b38a0fe074be" class="topiclink">getNetworkAddress</a></span>(NetworkAddressDataType &amp;networkAddress) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a8875c47f2f376421dec8798a1b8a71e5" class="topiclink">setTransportSettings</a></span>(const ConnectionTransportDataType &amp;transportSettings)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a4ec82d44d3ada38723e70b4a8f744943" class="topiclink">getTransportSettings</a></span>(IConnectionTransportDataType &amp;transportSettings) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a108ec1e7b642cf19d27d34380d8251fe" class="topiclink">setProperties</a></span>(const std::vector&lt; KeyValuePair &gt; &amp;properties)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_key_value_pair.htm#class_softing_o_p_c_toolbox5_1_1_key_value_pair" class="topiclink">KeyValuePair</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1ac0a97b64473052b20ac81b4d2bac277d" class="topiclink">getProperties</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a6313941b1f630dba2bd0cb60d656db5a" class="topiclink">addWriterGroup</a></span>(WriterGroupPtr writerGroup)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a45019e1e8c1f2aa63daad3c94c2af867" class="topiclink">removeWriterGroup</a></span>(WriterGroupPtr writerGroup)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">WriterGroupPtr</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a73a73e775be0a68bdc177725297710f1" class="topiclink">getWriterGroups</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1afdca7d67dfeff269de035f0e6aa778e9" class="topiclink">addReaderGroup</a></span>(ReaderGroupPtr readerGroup)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a9b62ed12cd5cb6a2f626283e95e629b5" class="topiclink">removeReaderGroup</a></span>(ReaderGroupPtr readerGroup)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ReaderGroupPtr</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a30c5633695e1f89295349ac807c86af2" class="topiclink">getReaderGroups</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1addbfb6a941e1bc5d8f970ed0c1f6f60f" class="topiclink">onPubSubStateChanged</a></span>(EnumPubSubState newState)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection" class="topiclink">Connection</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a65500b01d53c685f670faf0cc1e695c7" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1ae0c8f1e41dd86c1adcf9c79cee958c29" class="topiclink">Connection</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a65500b01d53c685f670faf0cc1e695c7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection" class="topiclink">Connection</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection" class="topiclink">Connection</a> instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1ae0c8f1e41dd86c1adcf9c79cee958c29"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::Connection</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a7c51dd70a1b4ac8723ac81b2c450e379"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::~Connection</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a2cc1148c9d9a1f722c3dbea4cf004e88"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::setName</span>(const tstring &amp; <span class="f_Parameter">name</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the Name of the <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection" class="topiclink">Connection</a>.</p>
+<p class="p_Paragraph">The name must be valid and unique among all Connections of the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application" class="topiclink">Application</a>. This name is used to generate NodeIds for the server address space.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ad1dd17d91881a21c7f14d6764fd5e9f6" class="topiclink">Application::addPubSubConnection()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1ad51aea00b1357da69ba048a97bc5358b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getName</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the Name of the <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection" class="topiclink">Connection</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1aff8482e3cbfbef622b28ea5d7188d587"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::setPublisherId</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> &amp; <span class="f_Parameter">publisherId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the publisher ID to the connection</p>
+<p class="p_Paragraph">The PublisherId is a unique identifier for a publisher within a Message Oriented Middleware. It can be included in sent NetworkMessage for identification or filtering. The value of the PublisherId is typically shared between PubSubConnections but the assignment of the PublisherId is vendor specific.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">publisherId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Publisher ID of this connection. Valid data types are OTUInt8, OTUInt16, OTUInt32, OTUInt64 and String </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a245bbd5c76300ab2b55fa1ff9d5c494e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getPublisherId</span>(<a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> &amp; <span class="f_Parameter">publisherId</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the publisher ID of the connection</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1aff8482e3cbfbef622b28ea5d7188d587" class="topiclink">setPublisherId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a0a6fe7d6f7c53eb482791c8a0908a558"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::setEnabled</span>(bool <span class="f_Parameter">enabled</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the enabled state of the connection</p>
+<p class="p_Paragraph">Only an enabled connection will publish or subscribe data for their writer or reader groups.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">enabled</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">enables the connection (default is true) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a9ec30e8041c45d2e0b9a410bf027101a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getEnabled</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the enabled state of the connection</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a0a6fe7d6f7c53eb482791c8a0908a558" class="topiclink">setEnabled()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1af00feb85022a7607b497d93f8dbf55e1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a1a9bdaa265f4d19b157df45b4352679b.htm#_enums_8h_1a1a9bdaa265f4d19b157df45b4352679b" class="topiclink">EnumPubSubState</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getPubSubState</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the status of this PubSub component.</p>
+<p class="p_Paragraph">The status is calculated by the EnabledFlag, by an internal error status and by the status of the parent (<a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application" class="topiclink">Application</a>).</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="_enums_8h_1a1a9bdaa265f4d19b157df45b4352679b.htm#_enums_8h_1a1a9bdaa265f4d19b157df45b4352679b" class="topiclink">EnumPubSubState</a>, <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a0a6fe7d6f7c53eb482791c8a0908a558" class="topiclink">setEnabled()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a0907bf9e7e29a41b18cc37475fa4e6e8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::setTransportProfileUri</span>(const tstring &amp; <span class="f_Parameter">transportProfileUri</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the TransportProfileUri of the connection</p>
+<p class="p_Paragraph">The TransportProfileUri indicates the transport protocol mapping and the message mapping used. Defined transports are: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">TransportProfileUri_PubSub_Udp_Uadp (default) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">TransportProfileUri_PubSub_Mqtt_Uadp (not supported) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">TransportProfileUri_PubSub_Mqtt_Json (not supported)</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">transportProfileUri</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The transport profile URI</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Currently only TransportProfileUri_PubSub_Udp_Uadp is supported.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This setting is currently ignored. The used transport profile is detected from the network address. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1af3ebed88616574c742abc20a9cb653a3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getTransportProfileUri</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the TransportProfileUri of the connection</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a0907bf9e7e29a41b18cc37475fa4e6e8" class="topiclink">setTransportProfileUri()</a>) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a9f13ae8fc0afbda9121956c4dbf7bc6b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::setNetworkAddress</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_network_address_data_type.htm#class_softing_o_p_c_toolbox5_1_1_network_address_data_type" class="topiclink">NetworkAddressDataType</a> &amp; <span class="f_Parameter">networkAddress</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the mandatory network address of the connection</p>
+<p class="p_Paragraph">The network address used for the communication relation. The <a href="class_softing_o_p_c_toolbox5_1_1_network_address_data_type.htm#class_softing_o_p_c_toolbox5_1_1_network_address_data_type" class="topiclink">NetworkAddressDataType</a> represents the network address information. For UDP connections the derived class <a href="class_softing_o_p_c_toolbox5_1_1_network_address_url_data_type.htm#class_softing_o_p_c_toolbox5_1_1_network_address_url_data_type" class="topiclink">NetworkAddressUrlDataType</a> shall be used as address information.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">networkAddress</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The address used for publishing or subscribing </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1adba98c92e70d90019906b38a0fe074be"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getNetworkAddress</span>(<a href="class_softing_o_p_c_toolbox5_1_1_network_address_data_type.htm#class_softing_o_p_c_toolbox5_1_1_network_address_data_type" class="topiclink">NetworkAddressDataType</a> &amp; <span class="f_Parameter">networkAddress</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the NetworkInterface of the connection</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>setNetworkInterface()) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a8875c47f2f376421dec8798a1b8a71e5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::setTransportSettings</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_connection_transport_data_type.htm#class_softing_o_p_c_toolbox5_1_1_connection_transport_data_type" class="topiclink">ConnectionTransportDataType</a> &amp; <span class="f_Parameter">transportSettings</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the optional transport settings of the connection</p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_connection_transport_data_type.htm#class_softing_o_p_c_toolbox5_1_1_connection_transport_data_type" class="topiclink">ConnectionTransportDataType</a> represents the transport mapping specific PubSubConnection parameters. For UDP connections the derived class <a href="class_softing_o_p_c_toolbox5_1_1_datagram_connection_transport_data_type.htm#class_softing_o_p_c_toolbox5_1_1_datagram_connection_transport_data_type" class="topiclink">DatagramConnectionTransportDataType</a> shall be used as transport mapping. The discovery URL can be configured via this setting.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">transportSettings</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The transport setting used for publishing or subscribing </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a4ec82d44d3ada38723e70b4a8f744943"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getTransportSettings</span>(<a href="class_softing_o_p_c_toolbox5_1_1_i_connection_transport_data_type.htm#class_softing_o_p_c_toolbox5_1_1_i_connection_transport_data_type" class="topiclink">IConnectionTransportDataType</a> &amp; <span class="f_Parameter">transportSettings</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the NetworkInterface of the connection</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>setNetworkInterface()) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a108ec1e7b642cf19d27d34380d8251fe"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::setProperties</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_key_value_pair.htm#class_softing_o_p_c_toolbox5_1_1_key_value_pair" class="topiclink">KeyValuePair</a> &gt; &amp; <span class="f_Parameter">properties</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the properties of the connection</p>
+<p class="p_Paragraph">The properties specify additional properties for the configured connection. The mapping of the namespace, name, and value to concrete functionality may be defined by transport protocol mappings, future versions of this specification or vendor specific extensions.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">properties</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The properties of the connection</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>connection properties are only used by AMQP transport (not yet supported). All other transports will ignore all configured properties.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This functionality is not yet implemented - any configuration done here is currently ignored. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1ac0a97b64473052b20ac81b4d2bac277d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_key_value_pair.htm#class_softing_o_p_c_toolbox5_1_1_key_value_pair" class="topiclink">KeyValuePair</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getProperties</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the properties of the connection</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a108ec1e7b642cf19d27d34380d8251fe" class="topiclink">setProperties()</a>) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a6313941b1f630dba2bd0cb60d656db5a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::addWriterGroup</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">WriterGroupPtr</a> <span class="f_Parameter">writerGroup</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds a PubSub writer group to the connection</p>
+<p class="p_Paragraph">A writer group can publish data only if configured for a connection. A connection can contain multiple groups but a group can belong only to one connection.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">writerGroup</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The writer group to be added to this connection</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The name of the <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_writer_group.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_writer_group" class="topiclink">WriterGroup</a> must be valid and unique among all other WriterGroups and ReaderGroups of this <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection" class="topiclink">Connection</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a45019e1e8c1f2aa63daad3c94c2af867"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::removeWriterGroup</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">WriterGroupPtr</a> <span class="f_Parameter">writerGroup</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Removes a PubSub writer group from the connection </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a73a73e775be0a68bdc177725297710f1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">WriterGroupPtr</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getWriterGroups</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets all writer groups from the connection </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1afdca7d67dfeff269de035f0e6aa778e9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::addReaderGroup</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ReaderGroupPtr</a> <span class="f_Parameter">readerGroup</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds a PubSub reader group to the connection</p>
+<p class="p_Paragraph">A writer group can publish data only if configured for a connection. A connection can contain multiple groups but a group can belong only to one connection.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The name of the <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_reader_group.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_reader_group" class="topiclink">ReaderGroup</a> must be valid and unique among all other ReaderGroups and WriterGroups of this <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection" class="topiclink">Connection</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a9b62ed12cd5cb6a2f626283e95e629b5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::removeReaderGroup</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ReaderGroupPtr</a> <span class="f_Parameter">readerGroup</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Removes a PubSub reader group from the connection </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a30c5633695e1f89295349ac807c86af2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ReaderGroupPtr</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::getReaderGroups</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets all writer reader from the connection </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1addbfb6a941e1bc5d8f970ed0c1f6f60f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::Connection::onPubSubStateChanged</span>(<a href="_enums_8h_1a1a9bdaa265f4d19b157df45b4352679b.htm#_enums_8h_1a1a9bdaa265f4d19b157df45b4352679b" class="topiclink">EnumPubSubState</a> <span class="f_Parameter">newState</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Notification that that the state has changed</p>
+<p class="p_Paragraph">Overwrite this method to implement specific handling if the state changes.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The notification can result by changing the enabled state of this object or registering / unregistering the connection at application. It can be invoked as well independent on the enabled configuration, e.g. in case of errors. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ad1dd17d91881a21c7f14d6764fd5e9f6" class="topiclink">Application::addPubSubConnection</a>, <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a7eb8ee7d07c46f2f1ed14360d7f29f28" class="topiclink">Application::removePubSubConnection</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This notification is executed asynchronously. Between detection of state change and notification, the state can have changed again. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

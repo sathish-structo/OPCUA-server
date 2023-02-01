@@ -1,0 +1,136 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>EnumUadpNetworkMessageContentMask Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "_enums_8h_1a475dffc9fab03d815e1366282182e5e0.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">EnumUadpNetworkMessageContentMask Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="_enums_8h_1acfff4b317b3da0f891c7a15ad59c5bd9.htm">Previous</a>&nbsp;
+     <a href="_enums_8h_1ad46b52bcdda75f16e142fb1ccb5350d9.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="_enums_8h_1a475dffc9fab03d815e1366282182e5e0"></a></p>
+<p class="p_Paragraph">Defines the optional header fields to be included in the NetworkMessages produced by the WriterGroup. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="EnumValues" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_PublisherId = 0x01</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The PublisherId is included in the NetworkMessages. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_GroupHeader = 0x02</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The GroupHeader is included in the NetworkMessages. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_WriterGroupId = 0x04</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The WriterGroupId is included in the NetworkMessages. The flag is only valid if Bit 1 is set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_GroupVersion = 0x08</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The GroupVersion is included in the NetworkMessages. The flag is only valid if Bit 1 is set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_NetworkMessageNumber = 0x10</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The NetworkMessageNumber is included in the NetworkMessages. </p>
+<p class="p_Paragraph">The field is required if more than one NetworkMessage is needed to transfer all DataSets of the group. The flag is only valid if Bit 1 is set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_SequenceNumber = 0x20</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The SequenceNumber is included in the NetworkMessages. The flag is only valid if Bit 1 is set. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_PayloadHeader = 0x40</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The PayloadHeader is included in the NetworkMessages. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_Timestamp = 0x80</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Timestamp is included in the NetworkMessages. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_PicoSeconds = 0x100</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The PicoSeconds is included in the NetworkMessages. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_DataSetClassId = 0x200</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The DataSetClassId is included in the NetworkMessages. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumUadpNetworkMessageContentMask_PromotedFields = 0x400</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The PromotedFields is included in the NetworkMessages. </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=_enums_8h_1a475dffc9fab03d815e1366282182e5e0.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

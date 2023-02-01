@@ -1,0 +1,1023 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IDiagnosticInfo Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IDiagnosticInfo Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_identity_mapping_rule_type.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info"></a></p>
+<p><span class="f_CodeExample">#include &quot;IDiagnosticInfo.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map254" id="map254"><area shape="rect" coords="8,59,112,82" href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm" alt="" /><area shape="rect" coords="5,6,115,29" href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.gif" width="120" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" style="width:120px;height:88px;border:none" usemap="#map254" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> data type contains diagnostic information that is returned by an OPC UA server. Diagnostic information is vendor-specific and complements status codes defined by the OPC UA specification.</p>
+<p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> contains the following information: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">A reference to a vendor-specific error or condition represented by the tuple (namespaceUri, symbolicId, locale, localizedText). </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">A free-form string containing additional information. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">The status code and <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> originating from an underlying system.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"> Please note that the strings in the tuple (namespaceUri, symbolicId, locale, localizedText) are not stored in the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> itself. Instead, <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> contains indices that refer to a <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that is being provided with each response to a service call. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1aab337031387d3bbdc9bffa96211ea6ad" class="topiclink">~IDiagnosticInfo</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a4c643e9c62e8dd97a2e6860bb296aad5" class="topiclink">getNamespaceUri</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a2fde4af01cfe36356cc730802f3c5f05" class="topiclink">getNamespaceUri</a></span>(ObjectPointer&lt; const StringTable &gt; stringTable, tstring &amp;namespaceUri) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a268a07aa9aa3341cfd0e88de3aee68eb" class="topiclink">setNamespaceUri</a></span>(OTInt32 index)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a627df3158962532fc3cac0ced0012bde" class="topiclink">setNamespaceUri</a></span>(const tstring &amp;namespaceUri, ObjectPointer&lt; StringTable &gt; stringTable)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a6782a827feaac7ea658e075a2df8c13a" class="topiclink">getSymbolicId</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a895a65e0e16e989b3067e75a445ff8bc" class="topiclink">getSymbolicId</a></span>(ObjectPointer&lt; const StringTable &gt; stringTable, tstring &amp;symbolicId) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a8e8c2e6cc858ed6568b6896a51643c83" class="topiclink">setSymbolicId</a></span>(OTInt32 index)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a75cc7aeb2651d3a69f89c0089fb076dd" class="topiclink">setSymbolicId</a></span>(const tstring &amp;symbolicId, ObjectPointer&lt; StringTable &gt; stringTable)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a15518e8a3e83fafbb9ef8964b43fdbfc" class="topiclink">getLocale</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a2172d58915e810a41be2b0d1bc39fc24" class="topiclink">getLocale</a></span>(ObjectPointer&lt; const StringTable &gt; stringTable, tstring &amp;locale) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a5aee2a6af5f781a841952dfb1ceb0802" class="topiclink">setLocale</a></span>(OTInt32 index)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1ab5cd184151c8a90b7bd7697b8aefeb4e" class="topiclink">setLocale</a></span>(const tstring &amp;locale, ObjectPointer&lt; StringTable &gt; stringTable)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a980c84f3f49be046a09a9f981bc7cbc2" class="topiclink">getLocalizedText</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1af029276256f6b87dc815b24b234577d6" class="topiclink">getLocalizedText</a></span>(ObjectPointer&lt; const StringTable &gt; stringTable, tstring &amp;localizedText) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a3c6d41dbd390d68ec74ccfc87b2f18b1" class="topiclink">setLocalizedText</a></span>(OTInt32 index)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1aec3006912a332542e1e78027470f0dd8" class="topiclink">setLocalizedText</a></span>(const tstring &amp;localizedText, ObjectPointer&lt; StringTable &gt; stringTable)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1aed2320001c82ed21064d85686ccb242a" class="topiclink">getAdditionalInfo</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a836d9add73d65c3da84b45d6e61eaa2e" class="topiclink">setAdditionalInfo</a></span>(const tstring &amp;additionalInfo)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a5fe368dc7233d566ff145b93f44ad5a3" class="topiclink">getInnerStatusCode</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a445ba1c2e9c7c44ff8e3332c3d29443c" class="topiclink">setInnerStatusCode</a></span>(EnumStatusCode innerStatusCode)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a35553ac473220c3f8f38ccf4bffc993a" class="topiclink">getInnerDiagnosticInfo</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a9617f0040de7c0a778c8d482b0258dd8" class="topiclink">setInnerDiagnosticInfo</a></span>(const IDiagnosticInfo *pInnerDiagnosticInfo)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1af44cc0657ee4b230d8a4ef74d66b50a7" class="topiclink">toString</a></span>(ObjectPointer&lt; const StringTable &gt; stringTable) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1ab418549c9e5529a4c880964f18d76356" class="topiclink">set</a></span>(const IDiagnosticInfo *cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1abe789c6562a5a26a02b8bfdebdb48396" class="topiclink">set</a></span>(const IDiagnosticInfo &amp;cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a25042c8aeff202668ed21c7f94214e18" class="topiclink">compare</a></span>(const IDiagnosticInfo *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a47427656508642055e11d8c219732002" class="topiclink">compare</a></span>(const IDiagnosticInfo &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a6afc0ff838c16fa06fc0345566870f02" class="topiclink">operator==</a></span>(const IDiagnosticInfo &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1ad9ed61bc9d4ba73be6fd428382e20ee9" class="topiclink">operator!=</a></span>(const IDiagnosticInfo &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1afce2d4774043135ca79c01aa8b97b85c" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1aab337031387d3bbdc9bffa96211ea6ad"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::~IDiagnosticInfo</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a4c643e9c62e8dd97a2e6860bb296aad5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getNamespaceUri</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the index into the <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that contains the NamespaceUri of the vendor-specific error or condition.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a268a07aa9aa3341cfd0e88de3aee68eb" class="topiclink">setNamespaceUri()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a83bdb41432486401023e6f9c21a1be18" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a2fde4af01cfe36356cc730802f3c5f05"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getNamespaceUri</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>, tstring &amp; <span class="f_Parameter">namespaceUri</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the NamespaceUri of the vendor-specific error or condition. The provided <span class="f_Parameter">stringTable</span> is used to resolve the string.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The string table that is used to resolve the NamespaceUri string. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">namespaceUri</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The NamespaceUri of the vendor-specific error or condition.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the server did not specify a NamespaceUri, this method will return EnumStatusCode_BadNotFound.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a268a07aa9aa3341cfd0e88de3aee68eb" class="topiclink">setNamespaceUri()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1ac48adbc3b1a819cf52235642f0a3f82f" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a268a07aa9aa3341cfd0e88de3aee68eb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setNamespaceUri</span>(OTInt32 <span class="f_Parameter">index</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the index for the NamespaceUri of a vendor-specific error or condition. The index must point to an entry in a <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that is conveyed to the client along with the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">index</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The index of the NamespaceUri string in a <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> associated with the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a8263651fbd120af4848910076fd38ffe" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a627df3158962532fc3cac0ced0012bde"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setNamespaceUri</span>(const tstring &amp; <span class="f_Parameter">namespaceUri</span>, <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Sets the NamespaceUri of a vendor-specific error or condition. If the given <span class="f_Parameter">stringTable</span> does not contain an entry for the <span class="f_Parameter">namespaceUri</span> string, the string is added to the <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">namespaceUri</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The NamespaceUri of a vendor-specific error or condition </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that should be used to store the NamespaceUri. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a6eaa2a6a31a0c19ad2338df73cb42cdf" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a6782a827feaac7ea658e075a2df8c13a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getSymbolicId</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the index into the <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that contains the SymbolicId of the vendor-specific error or condition.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a8e8c2e6cc858ed6568b6896a51643c83" class="topiclink">setSymbolicId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a7f05c245eb31e69cb717a130e5308b28" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a895a65e0e16e989b3067e75a445ff8bc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getSymbolicId</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>, tstring &amp; <span class="f_Parameter">symbolicId</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the SymbolicId of the vendor-specific error or condition. The provided <span class="f_Parameter">stringTable</span> is used to resolve the string.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The string table that is used to resolve the SymbolicId string. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">symbolicId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The SymbolicId of the vendor-specific error or condition.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the server did not specify a SymbolicId, this method will return EnumStatusCode_BadNotFound.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a8e8c2e6cc858ed6568b6896a51643c83" class="topiclink">setSymbolicId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1ad339c107a83b20f6f472cb70a661fe21" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a8e8c2e6cc858ed6568b6896a51643c83"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setSymbolicId</span>(OTInt32 <span class="f_Parameter">index</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the index for the SymbolicId of a vendor-specific error or condition. The index must point to an entry in a <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that is conveyed to the client along with the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">index</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The index of the SymbolicId string in a <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> associated with the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a8c357b91f24885f9c966728cf214b9cc" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a75cc7aeb2651d3a69f89c0089fb076dd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setSymbolicId</span>(const tstring &amp; <span class="f_Parameter">symbolicId</span>, <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Sets the SymbolicId of a vendor-specific error or condition. If the given <span class="f_Parameter">stringTable</span> does not contain an entry for the <span class="f_Parameter">symbolicId</span> string, the string is added to the <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">symbolicId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The SymbolicId of a vendor-specific error or condition </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that should be used to store the SymbolicId. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a0595c34e924bf5feb2b69caf23bef873" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a15518e8a3e83fafbb9ef8964b43fdbfc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getLocale</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the index into the <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that contains the Locale-part of the <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> describing the symbolicId.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a5aee2a6af5f781a841952dfb1ceb0802" class="topiclink">setLocale()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1af706a01b6a6685ad6fff356335115e91" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a2172d58915e810a41be2b0d1bc39fc24"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getLocale</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>, tstring &amp; <span class="f_Parameter">locale</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the Locale-part of the <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> describing the symbolicId. The provided <span class="f_Parameter">stringTable</span> is used to resolve the string.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The string table that is used to resolve the Locale string. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">locale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The Locale-part of the symbolicId.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the server did not specify a Locale, this method will return EnumStatusCode_BadNotFound.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a5aee2a6af5f781a841952dfb1ceb0802" class="topiclink">setLocale()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a17b6c33ecf0c34adc706f25b3a989909" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a5aee2a6af5f781a841952dfb1ceb0802"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setLocale</span>(OTInt32 <span class="f_Parameter">index</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the index for the Locale-part of the <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> describing the symbolicId. The index must point to an entry in a <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that is conveyed to the client along with the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">index</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The index of the Locale string in a <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> associated with the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a9132708b98e426636e61846532ce24d0" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1ab5cd184151c8a90b7bd7697b8aefeb4e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setLocale</span>(const tstring &amp; <span class="f_Parameter">locale</span>, <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Sets the Locale-part of the <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> describing the symbolicId. If the given <span class="f_Parameter">stringTable</span> does not contain an entry for the <span class="f_Parameter">locale</span> string, the string is added to the <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">locale</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The Locale of a vendor-specific error or condition </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that should be used to store the Locale. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1ab3b1db186ba0d63bffdb9ff17718d56a" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a980c84f3f49be046a09a9f981bc7cbc2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getLocalizedText</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the index into the <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that contains the <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> of the vendor-specific error or condition.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a3c6d41dbd390d68ec74ccfc87b2f18b1" class="topiclink">setLocalizedText()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a13cdbec6c153a141bc4a50b7b79497df" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1af029276256f6b87dc815b24b234577d6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getLocalizedText</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>, tstring &amp; <span class="f_Parameter">localizedText</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the vendor-specific <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> string that describes the symbolicId. The provided <span class="f_Parameter">stringTable</span> is used to resolve the string.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The string table that is used to resolve the <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> string. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">localizedText</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The vendor-specific <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> string that describes the symbolicId.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the server did not specify a <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a>, this method will return EnumStatusCode_BadNotFound.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a3c6d41dbd390d68ec74ccfc87b2f18b1" class="topiclink">setLocalizedText()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a2542399a7660e0dda0da041c3bf87667" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a3c6d41dbd390d68ec74ccfc87b2f18b1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setLocalizedText</span>(OTInt32 <span class="f_Parameter">index</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the index for the vendor-specific <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> string that describes the symbolicId. The index must point to an entry in a <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that is conveyed to the client along with the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">index</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The index of the <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> string in a <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> associated with the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a768613fab32fa2820df644ed276b9c9c" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1aec3006912a332542e1e78027470f0dd8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setLocalizedText</span>(const tstring &amp; <span class="f_Parameter">localizedText</span>, <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Sets the vendor-specific <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> string that describes the symbolicId. If the given <span class="f_Parameter">stringTable</span> does not contain an entry for the <span class="f_Parameter">localizedText</span> string, the string is added to the <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">localizedText</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The vendor-specific <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> string that describes the symbolicId. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> that should be used to store the <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a>. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1aff8f4a87ee3f0ba6355386bec4f7ec08" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1aed2320001c82ed21064d85686ccb242a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getAdditionalInfo</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns vendor-specific diagnostic information.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a836d9add73d65c3da84b45d6e61eaa2e" class="topiclink">setAdditionalInfo()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1abb7dd8d184ca50a437e150a18a1d76a5" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a836d9add73d65c3da84b45d6e61eaa2e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setAdditionalInfo</span>(const tstring &amp; <span class="f_Parameter">additionalInfo</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets vendor-specific diagnostic information.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">additionalInfo</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Additional vendor-specific diagnostic information. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1aacd31df4eb593755619015ddd0056a63" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a5fe368dc7233d566ff145b93f44ad5a3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getInnerStatusCode</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns The status code from the inner operation.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a445ba1c2e9c7c44ff8e3332c3d29443c" class="topiclink">setInnerStatusCode()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a6709702704021f4dc24865183dabb35d" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a445ba1c2e9c7c44ff8e3332c3d29443c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setInnerStatusCode</span>(<a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a> <span class="f_Parameter">innerStatusCode</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the status code from the inner operation.</p>
+<p class="p_Paragraph">Many applications will make calls into underlying systems during OPC UA request processing. An OPC UA server has the option of reporting the status from the underlying system in the diagnostic info.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">innerStatusCode</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The status code associated with an inner operation.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a9617f0040de7c0a778c8d482b0258dd8" class="topiclink">setInnerDiagnosticInfo()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1adc489dbd8663a22bcb53eb58fdc754e7" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a35553ac473220c3f8f38ccf4bffc993a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getInnerDiagnosticInfo</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns diagnostic information associated with an inner status code.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please note that inner diagnostic information is optional. If no diagnostic information has been provided, this method returns NULL.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a9617f0040de7c0a778c8d482b0258dd8" class="topiclink">setInnerDiagnosticInfo()</a> <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a445ba1c2e9c7c44ff8e3332c3d29443c" class="topiclink">setInnerStatusCode()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a83eab45b47f850a66b058c43c4b07809" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a9617f0040de7c0a778c8d482b0258dd8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::setInnerDiagnosticInfo</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> * <span class="f_Parameter">pInnerDiagnosticInfo</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets diagnostic information associated with an inner status code. Please note that inner diagnostic information is optional.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">pInnerDiagnosticInfo</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Diagnostic information associated with an inner status code. This method accepts a NULL pointer if the server does not wish to provide diagnostic information for an inner status code. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a3aa31e5decd5172b80248ea35b6699ac" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1af44cc0657ee4b230d8a4ef74d66b50a7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::toString</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a string that contains a textual representation of the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> instance</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The string table that is used to resolve the strings referenced by the <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> instance. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a3134b64bd1888278482c2a4fe624b06f" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1ab418549c9e5529a4c880964f18d76356"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a884e4c0aacf6936bfa42d8c9b348b045" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1abe789c6562a5a26a02b8bfdebdb48396"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> &amp; <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a82064b17fc8dd1524edd0661b2f59b78" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a25042c8aeff202668ed21c7f94214e18"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1adf1eb5ce0d2d447ee23968bf55021436" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a47427656508642055e11d8c219732002"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1aabe012d51115aa88bdd892bd2b2bf6fb" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1a6afc0ff838c16fa06fc0345566870f02"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a45c80284c92464a0552fac40ceb892f8" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1ad9ed61bc9d4ba73be6fd428382e20ee9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1ad50c18e81a3a5eb99aaef5e91c6fbddb" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info_1afce2d4774043135ca79c01aa8b97b85c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDiagnosticInfo::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a60573f79bd1826ee2c6e871ba9e587c3" class="topiclink">SoftingOPCToolbox5::DiagnosticInfo</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

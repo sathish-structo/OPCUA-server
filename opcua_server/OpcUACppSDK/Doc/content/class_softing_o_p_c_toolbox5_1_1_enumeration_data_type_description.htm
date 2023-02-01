@@ -1,0 +1,320 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>EnumerationDataTypeDescription Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">EnumerationDataTypeDescription Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_data_type_description.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_datagram_connection_transport_data_type.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description"></a></p>
+<p><span class="f_CodeExample">#include &quot;EnumerationDataTypeDescription.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map4" id="map4"><area shape="rect" coords="69,6,155,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="41,59,183,82" href="class_softing_o_p_c_toolbox5_1_1_data_type_description.htm" alt="" /><area shape="rect" coords="5,113,219,135" href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.gif" width="224" height="141" alt="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description" style="width:224px;height:141px;border:none" usemap="#map4" /></p>
+<p class="p_Paragraph">This class stores the information of an enumeration data type, it holds a list of <a href="class_softing_o_p_c_toolbox5_1_1_enum_field.htm#class_softing_o_p_c_toolbox5_1_1_enum_field" class="topiclink">EnumField</a>.</p>
+<p class="p_Paragraph">Any &quot;normal&quot; enumeration DataType has to reside below the abstract &quot;Enumeration&quot; DataType. Subtypes of enumerations can only restrict the enumeration values of its super-type. The enumeration values have to be specified completely.</p>
+<p class="p_Paragraph">A &quot;special&quot; enumeration data type is an OptionSet, which describes a bitset, i.e. multiple bits can be set to represent different flags. In this case the enumerated values specify the bit position to be set if enabled (e.g. enumerated value == 0, the first bit is set, i.e. the value is 0x01) The withs of the bitset can be defined via the width of any unsigned number data type.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_enum_field.htm#class_softing_o_p_c_toolbox5_1_1_enum_field" class="topiclink">EnumField</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1af34a6c0ed958e46dd308e041fcbc324d" class="topiclink">EnumerationDataTypeDescription</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a1e55efddc2ce6c58ccf9e567d5325086" class="topiclink">~EnumerationDataTypeDescription</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1ada48eefc117a726d91328463828947ac" class="topiclink">setEnumeratedValues</a></span>(const std::vector&lt; EnumField &gt; &amp;enumeratedValues)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1aadcaa996e899ad717d8ba249f56b9432" class="topiclink">getEnumeratedValues</a></span>(std::vector&lt; EnumField &gt; &amp;enumeratedValues) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1aa330796287612d01cb77edf5925b347f" class="topiclink">getDefinition</a></span>(EnumDefinition &amp;definition) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1ad46b81217f643b43df92fc4eb34d77dd.htm#_enums_8h_1ad46b81217f643b43df92fc4eb34d77dd" class="topiclink">EnumDataTypeId</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1af534bf2df4b32304236e4791418b2271" class="topiclink">getTransportDataType</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a1bef0d2e8a8522cf2c9384d0ecfb17ec" class="topiclink">isEnumValue</a></span>(OTInt64 integerRepresentation) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a555579a064d4060816171ff9d3f09b25" class="topiclink">getEnumeratedValue</a></span>(OTInt64 integerRepresentation, EnumField &amp;enumeratedValue) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description" class="topiclink">EnumerationDataTypeDescription</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a90da006630c64e38c6d6191645959992" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a24a5d40e6dbcdf6cf7ac5c9ab668c918" class="topiclink">EnumerationDataTypeDescription</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a90da006630c64e38c6d6191645959992"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description" class="topiclink">EnumerationDataTypeDescription</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description" class="topiclink">EnumerationDataTypeDescription</a> instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1af34a6c0ed958e46dd308e041fcbc324d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::EnumerationDataTypeDescription</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a1e55efddc2ce6c58ccf9e567d5325086"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::~EnumerationDataTypeDescription</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1ada48eefc117a726d91328463828947ac"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::setEnumeratedValues</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_enum_field.htm#class_softing_o_p_c_toolbox5_1_1_enum_field" class="topiclink">EnumField</a> &gt; &amp; <span class="f_Parameter">enumeratedValues</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the list of <a href="class_softing_o_p_c_toolbox5_1_1_enum_field.htm#class_softing_o_p_c_toolbox5_1_1_enum_field" class="topiclink">EnumField</a></p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">enumeratedValues</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The EnumeratedValues of the <a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description" class="topiclink">EnumerationDataTypeDescription</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The integer representations of all given EnumeratedValues must be different. It is recommended to use different names as well. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1aadcaa996e899ad717d8ba249f56b9432"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::getEnumeratedValues</span>(std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_enum_field.htm#class_softing_o_p_c_toolbox5_1_1_enum_field" class="topiclink">EnumField</a> &gt; &amp; <span class="f_Parameter">enumeratedValues</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the list of <a href="class_softing_o_p_c_toolbox5_1_1_enum_field.htm#class_softing_o_p_c_toolbox5_1_1_enum_field" class="topiclink">EnumField</a></p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">enumeratedValues</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The EnumeratedValues of the <a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description" class="topiclink">EnumerationDataTypeDescription</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1aa330796287612d01cb77edf5925b347f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::getDefinition</span>(<a href="class_softing_o_p_c_toolbox5_1_1_enum_definition.htm#class_softing_o_p_c_toolbox5_1_1_enum_definition" class="topiclink">EnumDefinition</a> &amp; <span class="f_Parameter">definition</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the definition of the enumerated data type.</p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_enum_definition.htm#class_softing_o_p_c_toolbox5_1_1_enum_definition" class="topiclink">EnumDefinition</a> just contain the list of enumerated fields, so this is more an overload to the getEnumeratedValues. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1af534bf2df4b32304236e4791418b2271"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1ad46b81217f643b43df92fc4eb34d77dd.htm#_enums_8h_1ad46b81217f643b43df92fc4eb34d77dd" class="topiclink">EnumDataTypeId</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::getTransportDataType</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Get the transport data type</p>
+<p class="p_Paragraph">Normal enumerations have to use transport data type Int32. Those enumerations have to reside below the abstract &quot;Enumeration&quot; DataType node.</p>
+<p class="p_Paragraph">Enumerations used as &quot;OptionSet&quot; have to use transport data types Byte, UInt16, UInt32, or UInt64. The enumerated values of OptionSets identify the bit number which can be set.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Use a value of the transport data type to set or get a value in the <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> for this data type. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a1bef0d2e8a8522cf2c9384d0ecfb17ec"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::isEnumValue</span>(OTInt64 <span class="f_Parameter">integerRepresentation</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Determines, whether this <a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description" class="topiclink">EnumerationDataTypeDescription</a> has an enumeration representation for the given integer </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a555579a064d4060816171ff9d3f09b25"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::getEnumeratedValue</span>(OTInt64 <span class="f_Parameter">integerRepresentation</span>, <a href="class_softing_o_p_c_toolbox5_1_1_enum_field.htm#class_softing_o_p_c_toolbox5_1_1_enum_field" class="topiclink">EnumField</a> &amp; <span class="f_Parameter">enumeratedValue</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the <a href="class_softing_o_p_c_toolbox5_1_1_enum_value_type.htm#class_softing_o_p_c_toolbox5_1_1_enum_value_type" class="topiclink">EnumValueType</a>, that represents the given integer value <span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>An error is returned, if there is no matching representation </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description_1a24a5d40e6dbcdf6cf7ac5c9ab668c918"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::EnumerationDataTypeDescription::EnumerationDataTypeDescription</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

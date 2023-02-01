@@ -1,0 +1,309 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IEventFieldList Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IEventFieldList Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_e_u_information.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_event_filter.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list"></a></p>
+<p><span class="f_CodeExample">#include &quot;IEventFieldList.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map262" id="map262"><area shape="rect" coords="5,6,109,29" href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm" alt="" /><area shape="rect" coords="8,59,107,82" href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.gif" width="115" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_event_field_list" style="width:115px;height:88px;border:none" usemap="#map262" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list" class="topiclink">EventFieldList</a> data type contains a list of events being delivered to a client (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707" class="topiclink">Client::Subscription::onEventsReceived()</a>). The size and order of the elements in this list is determined by the select clauses in the <a href="class_softing_o_p_c_toolbox5_1_1_event_filter.htm#class_softing_o_p_c_toolbox5_1_1_event_filter" class="topiclink">EventFilter</a>. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a88dc600e41b868c371eb244e2a128d98" class="topiclink">~IEventFieldList</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a86268fc8f6c6530977336b9d50684639" class="topiclink">getEventFieldCount</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a385ed173e9f6ac0c4ea7f25f0cd33a67" class="topiclink">getEventField</a></span>(OTUInt32 index) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a4257ea8c510dc406daba75158df78d57" class="topiclink">getEventFields</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1abee6ecfcf2f92d75b42b55ca1f908996" class="topiclink">addEventField</a></span>(const IValue *value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a27304fd3b51c3ef892178e8ea31bdb12" class="topiclink">set</a></span>(const IEventFieldList *cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a6bc47e003ebe904ab48e3c1c23de3320" class="topiclink">set</a></span>(const IEventFieldList &amp;cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1acf7a9c2dd362336d311e903808ccf5c3" class="topiclink">compare</a></span>(const IEventFieldList *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a0e2272ff034901d413e2bc8a0891d3b4" class="topiclink">compare</a></span>(const IEventFieldList &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a00696ef6cc3f9a9f2dd2a20406affbdb" class="topiclink">operator==</a></span>(const IEventFieldList &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a7e2e7606c862aa5ee9b40c0aa80b19ab" class="topiclink">operator!=</a></span>(const IEventFieldList &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a18b0acb5bf4c491e2fd4c8405d533534" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a88dc600e41b868c371eb244e2a128d98"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::~IEventFieldList</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a86268fc8f6c6530977336b9d50684639"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::getEventFieldCount</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The methods <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a86268fc8f6c6530977336b9d50684639" class="topiclink">getEventFieldCount()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a385ed173e9f6ac0c4ea7f25f0cd33a67" class="topiclink">getEventField()</a> are provided for efficient access to data. The semantics of these methods are documented in <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a4257ea8c510dc406daba75158df78d57" class="topiclink">getEventFields()</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1a375a2b1d70fe9f5218e96ee9ec150327" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a385ed173e9f6ac0c4ea7f25f0cd33a67"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::getEventField</span>(OTUInt32 <span class="f_Parameter">index</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The methods <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a86268fc8f6c6530977336b9d50684639" class="topiclink">getEventFieldCount()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a385ed173e9f6ac0c4ea7f25f0cd33a67" class="topiclink">getEventField()</a> are provided for efficient access to data. The semantics of these methods are documented in <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a4257ea8c510dc406daba75158df78d57" class="topiclink">getEventFields()</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1a035ec89ea0a44213209589e55a4666f4" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a4257ea8c510dc406daba75158df78d57"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::getEventFields</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the list of selected event fields. The size and order of the elements in this list is determined by the select clauses in the <a href="class_softing_o_p_c_toolbox5_1_1_event_filter.htm#class_softing_o_p_c_toolbox5_1_1_event_filter" class="topiclink">EventFilter</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1a7c3635584fa4b0641eda9ab9da81732d" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1abee6ecfcf2f92d75b42b55ca1f908996"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::addEventField</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> * <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds an event field to the list of event fields to return. The size and order of the elements in the event field list is determined by the select clauses in the <a href="class_softing_o_p_c_toolbox5_1_1_event_filter.htm#class_softing_o_p_c_toolbox5_1_1_event_filter" class="topiclink">EventFilter</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1aeecc912094cdf8ad58f9bda798135cd1" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a27304fd3b51c3ef892178e8ea31bdb12"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list" class="topiclink">IEventFieldList</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1afd4cdf909d506e4f7b41c668eb4b94b3" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a6bc47e003ebe904ab48e3c1c23de3320"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list" class="topiclink">IEventFieldList</a> &amp; <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1a5a2237e876805b62e35373de2acb3a6d" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1acf7a9c2dd362336d311e903808ccf5c3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list" class="topiclink">IEventFieldList</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1a80e68989078f1b96a32c72766ecbe3f4" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a0e2272ff034901d413e2bc8a0891d3b4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list" class="topiclink">IEventFieldList</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1afc2fbab2207775a308481694a3bcd967" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a00696ef6cc3f9a9f2dd2a20406affbdb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list" class="topiclink">IEventFieldList</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1abfd540e987850c04762d650cd6b53903" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a7e2e7606c862aa5ee9b40c0aa80b19ab"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_i_event_field_list" class="topiclink">IEventFieldList</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1aecaf37a60ae727c38b7da753a6faaee1" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_event_field_list_1a18b0acb5bf4c491e2fd4c8405d533534"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEventFieldList::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list_1aa6315151798e436c0d653f310e5576fc" class="topiclink">SoftingOPCToolbox5::EventFieldList</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_event_field_list.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

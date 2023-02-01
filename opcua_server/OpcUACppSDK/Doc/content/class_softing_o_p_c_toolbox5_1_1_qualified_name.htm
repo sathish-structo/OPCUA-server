@@ -1,0 +1,626 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>QualifiedName Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_qualified_name.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">QualifiedName Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_group_data_type.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_query_data_description.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name"></a></p>
+<p><span class="f_CodeExample">#include &quot;QualifiedName.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map341" id="map341"><area shape="rect" coords="5,6,115,29" href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm" alt="" /><area shape="rect" coords="7,59,113,82" href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_qualified_name.gif" width="120" height="88" alt="class_softing_o_p_c_toolbox5_1_1_qualified_name" style="width:120px;height:88px;border:none" usemap="#map341" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> data type describes a name that is qualified by a namespace. The namespace is identified by an index into the server's NamespaceArray. A <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> is, for example, used as BrowseName of a node.</p>
+<p class="p_Paragraph">The NamespaceArray is a list of namespace URIs. Each URI identifies the naming authority responsible for assigning the identifier element of the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a>. A server's NamespaceArray always contains the URI <a href="http://opcfoundation.org/UA/" class="weblink">http://opcfoundation.org/UA/</a> at index 0 which is the OPC UA namespace that contains well-known NodeIds. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1ac9585b473175bd0f2c4715effca68c54" class="topiclink">QualifiedName</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a2f346788c2afb654d3f45d69606d5dac" class="topiclink">QualifiedName</a></span>(const tstring &amp;name, OTUInt16 namespaceIndex)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a722b8b3bcd70adb3ea18cc34fbd6f7ab" class="topiclink">QualifiedName</a></span>(const IQualifiedName *)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1ad75b8f81bf49802d6e739fb598845817" class="topiclink">QualifiedName</a></span>(const IQualifiedName &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1ae2020537124579edf9889f0bf8f73abb" class="topiclink">QualifiedName</a></span>(const QualifiedName &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a963c316dd6b16649113815da51c08039" class="topiclink">~QualifiedName</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a3fa550442996e20aacb0b3d25e467ee2" class="topiclink">operator=</a></span>(const IQualifiedName *)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a5b6fd85a39cb35f0a3f73696119a139e" class="topiclink">operator=</a></span>(const IQualifiedName &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1ad22008511264c20d34061d61179fb834" class="topiclink">operator=</a></span>(const QualifiedName &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a47d761a9520da18872da3ccdf756b235" class="topiclink">set</a></span>(const IQualifiedName *pSrc)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a2dc623e72db2e27b41d14607b9020da8" class="topiclink">set</a></span>(const IQualifiedName &amp;pSrc)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a35c95c1d8f59d022f45240c7d32e9643" class="topiclink">compare</a></span>(const IQualifiedName *) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1ab246c950a0c741d8ea22a28047e05ee8" class="topiclink">compare</a></span>(const IQualifiedName &amp;) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1aeb805709bd132b4e7a6a342435e17f28" class="topiclink">operator==</a></span>(const IQualifiedName &amp;other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1ab051ae5b041af69dfdeb9cdd89e13ab9" class="topiclink">operator!=</a></span>(const IQualifiedName &amp;other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a651fbea6aa863c71797f94e805648750" class="topiclink">setNameAndIndex</a></span>(const tstring &amp;name, OTUInt16 namespaceIndex)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTUInt16</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a9b4e7c90e3253a37ac43cac72a41b75e" class="topiclink">getNamespaceIndex</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1aa983dc08686a3fd7ca654012270118a5" class="topiclink">setNamespaceIndex</a></span>(OTUInt16 value)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a22402b9b6bd461c16a6497072e04bfe2" class="topiclink">getName</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a6f7f4d2f9bfc3f8f435635593ea56252" class="topiclink">setName</a></span>(const tstring &amp;value)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a5e849a6f81f50ad8cddacf835df2dbe0" class="topiclink">parse</a></span>(const tstring &amp;nameString)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a4fc33876bb47b09bc7aefbe649537401" class="topiclink">toString</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a31191360c7d1eca233885f9a241a2e57" class="topiclink">clear</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a2cbc1e3f5774305a23fd014a780d55db" class="topiclink">getInternHandle</a></span>() const </p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1ac9585b473175bd0f2c4715effca68c54"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::QualifiedName</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a2f346788c2afb654d3f45d69606d5dac"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::QualifiedName</span>(const tstring &amp; <span class="f_Parameter">name</span>, OTUInt16 <span class="f_Parameter">namespaceIndex</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> from a name that is defined within a certain namespace.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">name</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The text portion of the <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">namespaceIndex</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The index that identifies the namespace that defines the name </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a722b8b3bcd70adb3ea18cc34fbd6f7ab"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::QualifiedName</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> * <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a copy of the given instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1ad75b8f81bf49802d6e739fb598845817"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::QualifiedName</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1ae2020537124579edf9889f0bf8f73abb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::QualifiedName</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a963c316dd6b16649113815da51c08039"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::~QualifiedName</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a3fa550442996e20aacb0b3d25e467ee2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> * <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Assigns the contents of <span class="f_Parameter">cp</span> to this instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a5b6fd85a39cb35f0a3f73696119a139e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1ad22008511264c20d34061d61179fb834"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a47d761a9520da18872da3ccdf756b235"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1ae6e0e9ad7f6310af9e1a9cf251a63706" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a2dc623e72db2e27b41d14607b9020da8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter">pSrc</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1ae05938df4421fa4cedb034e444ffbdd0" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a35c95c1d8f59d022f45240c7d32e9643"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1a11c28cdf5fbdef61ea6c9f0325f5fab2" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1ab246c950a0c741d8ea22a28047e05ee8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter"> </span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1ae3db492c0b43c6fdd77a10412e6789df" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1aeb805709bd132b4e7a6a342435e17f28"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1a6e93a351ff382892d1c7ca12cf6a14ec" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1ab051ae5b041af69dfdeb9cdd89e13ab9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1a38d70ff2e69c249792c48648242b8091" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a651fbea6aa863c71797f94e805648750"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::setNameAndIndex</span>(const tstring &amp; <span class="f_Parameter">name</span>, OTUInt16 <span class="f_Parameter">namespaceIndex</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> to a name that is defined within a certain namespace.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">name</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The text portion of the <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">namespaceIndex</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The index that identifies the namespace that defines the name </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1a9d10fc646d3fe440c67b6d583fa8f228" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a9b4e7c90e3253a37ac43cac72a41b75e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTUInt16<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::getNamespaceIndex</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the index that identifies the namespace that defines the name.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1aa983dc08686a3fd7ca654012270118a5" class="topiclink">setNamespaceIndex()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1ae68612089fbdd951e656fc6ccf26e7fe" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1aa983dc08686a3fd7ca654012270118a5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::setNamespaceIndex</span>(OTUInt16 <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the index that identifies the namespace that defines the name. The index is an index into the server's NamespaceArray (see class description of <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a>). </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1aec298d15e25ef942c917455841755c55" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a22402b9b6bd461c16a6497072e04bfe2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::getName</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the text portion of the <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a9b4e7c90e3253a37ac43cac72a41b75e" class="topiclink">getNamespaceIndex()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1a58b90b7a660488cf569909d4ea80b510" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a6f7f4d2f9bfc3f8f435635593ea56252"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::setName</span>(const tstring &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the text portion of the <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1aa983dc08686a3fd7ca654012270118a5" class="topiclink">setNamespaceIndex()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1a2b211bcd2fed712529a267d8f259dd0f" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a5e849a6f81f50ad8cddacf835df2dbe0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::parse</span>(const tstring &amp; <span class="f_Parameter">nameString</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Parses the given string for a namespace index and name and sets the content to this <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> instance.</p>
+<p class="p_Paragraph">The string syntax is [&lt;NamespaceIndex&gt;:]&lt;Name&gt;.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&lt;NamespaceIndex&gt; is a decimal number from 0 to 65535. The &lt;NamespaceIndex&gt; and colon can be left out to use index 0. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">&lt;Name&gt; can contain any character except the reserved characters '/', '.', '&lt;', '&gt;', ':', '#', '!' and '&amp;'. Any reserved character within &lt;Name&gt; needs to be escaped with the '&amp;'. For example &quot;Car.Wheel&quot; needs to be escaped as &quot;Car&amp;.Wheel&quot;.</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"> Examples: &quot;5:MyName&quot;, &quot;Objects&quot;, &quot;3:Engine&amp;:Temperature&quot;.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Only the reserved characters are allowed to be escaped. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a4fc33876bb47b09bc7aefbe649537401" class="topiclink">toString()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1ab59991944b42a17580ac4a9b911fd0ae" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a4fc33876bb47b09bc7aefbe649537401"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::toString</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a string representation of the <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a>.</p>
+<p class="p_Paragraph">The string can be used for debugging purposes or to export this data type.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The string uses the same syntax as it is required by <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a5e849a6f81f50ad8cddacf835df2dbe0" class="topiclink">parse()</a>. By that it is possible to use the the <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a4fc33876bb47b09bc7aefbe649537401" class="topiclink">toString()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a5e849a6f81f50ad8cddacf835df2dbe0" class="topiclink">parse()</a> methods to export and re-import this data type via string. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name_1a5e849a6f81f50ad8cddacf835df2dbe0" class="topiclink">parse()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1aa388018b1819de123f6506974d7cf378" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a31191360c7d1eca233885f9a241a2e57"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::clear</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Clears the contents of this object to enable its re-use. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_qualified_name_1a2cbc1e3f5774305a23fd014a780d55db"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::QualifiedName::getInternHandle</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name_1abfd5a38e7ecc1ca46118940fce2806d4" class="topiclink">SoftingOPCToolbox5::IQualifiedName</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_qualified_name.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

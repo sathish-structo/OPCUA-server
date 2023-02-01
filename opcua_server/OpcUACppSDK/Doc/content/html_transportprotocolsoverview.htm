@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Overview</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_transportprotocolsoverview.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Overview</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_transportprotocolsconcepts.htm">Previous</a>&nbsp;
+     <a href="html_transportprotocols_technicaldetails.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">A stack is composed of data encodings, security protocols and transports. Stacks are also implemented in some programming languages. A stack implementation would have some low level API to allow access to the functionality provided by the stack. Stacks are provided by the OPC Foundation and are usually embedded in a SDK which would have its own API. The API details are specific to the programming language used to implement them. Most developers would not be exposed to a stack, they would be exposed to the SDK only, and these SDKs would obscure the stack. This has the added benefit that when a new stack is developed, the application would require little to no updates to support it. The application would only be required to be re-linked against an updated SDK or stack that adds the new support.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The OPC UA specification currently defined two data encodings (XML and UA Binary), multiple security protocols and three transports (HTTP/SOAP, HTTPS and TCP). A single stack could implement all of these and expose each combination as a stack profile. For example a single stack could expose a stack profile that is XML Encoding and HTTP/ SOAP transport. The same stack could also contain a stack profile for OPC UA Binary encoding and TCP transport. The stack profiles would also include security options and a single stack could result in multiple stack profiles.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Data Encodings</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Data encodings are available for XML and UA Binary. OPC UA Part 6 - Mappings provides the detailed encoding for all standard types. These details provide example and technical details on how to map an abstract type to the actual data that will be on the wire. For example it describes how a floating point number should be encoded (as IEEE-754 binary for UA Binary Encoding and XS:Float for XML Encoding). OPC UA selected industry standard encodings, like IEEE formats or W3 XML schemas.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This applies well to all standard types, but OPC UA also supports custom types. If a custom type is defined, then it must be mapped to the existing type(s) or encoded as a binary BLOB. Many custom types are only structures composed on other standard types. The specification includes a description of how to encode this type of structure. In some cases the custom type is a new type. These are encoded as extension objects. An extension object includes a description of the encoding used. An example of this would be a new video compression algorithm. If a server provides video in a format, that a client does not understand, the data would be received by the client as a binary BLOB including the encoding used. The client could store the BLOB and later find an appropriate piece of software that would understand the encoding. This description applies equally to UA Binary and XML Encodings. The technical details vary from encoding to encoding and are covered in OPC UA Part 6 – Mappings.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The major differences between the two encodings are performance and system resources. The XML Encoding typically results in larger messages, more buffer space and requires more bandwidth on the wire resulting in slower performance. The actual difference varies according to the data being transferred. The XML Encoding does allow for easy processing of complex data types and easier support by generic applications.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Security Protocols</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA provides support for several security protocols. It is worth noting that a stack can and usually does support multiple security protocols. The security protocols used are modeled after industry standard security measures such as WS security protocols and TCP based SSL like security. The processing of security protocols is affected by the transport that is chosen. HTTP/SOAP coupled with XML Data Encoding Transport uses standard WS-* algorithms to implement the selected security protocols. The HTTPS transport uses the SSL/TLS protocol for security. The TCP transport uses OPC UA Secure Conversation (UASC) which is a binary version of WS-Secure Conversation. UASC is designed to operate with transport protocols that may have limited buffer sizes. For this reason, OPC UA Secure Conversation will break OPC UA messages into several pieces (called ‘MessageChunks’) that are smaller than the buffer size allowed by the transport protocol.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Transport Protocols</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">A transport protocol is a way to exchange serialized OPC UA messages between OPC UA applications. OPC UA supports three transport protocols:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">HTTP/SOAP</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">HTTPS</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">TCP/IP</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">The major difference between the transports relates to performance and code size. The HTTP/SOAP and HTTPS are almost similar, they share the same syntax but HTTP/SOAP uses a TCP/IP connection where HTTPS uses a secured connection via SSL/TLS. A stack that only implements the HTTP/SOAP or HTTPS transport will be larger than one that only implements the TCP/IP transport protocol. This is primarily due to the WS-* specifications. This has a bearing on embedded platforms or other small devices that may be communicating using OPC UA. The HTTP/SOAP and HTTPS transport protocols are more internet friendly than the TCP/IP protocol. The TCP/IP requires that specific ports are opened on firewalls, which, when trying to communicate over a corporate network to the internet, can be difficult to accomplish especially if the network is managed by an IT department.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA usually signs and encrypts messages within a communication layer, which resides on top of the transport layer. As the HTTPS transport protocol supports to sign and encrypt messages, HTTPS does this within the transport layer and omits it at the communication layer.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In the future other transport protocols may be added such as UDP or a custom transport for on box communication.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">It is also worth noting that when evaluating performance of a stack all aspects of the stack must be taken into account. For example XML verse binary encoding has a performance impact, as does WS-* security verse UASC, so the performance of a stack profile will depend on all of the options that are part of the stack profile. Different implementation of a stack can also affect the performance of the stack. For example a stack written in ANSI “C” and one written in Java and one written C# will have different performance. They will also have different memory and processor utilization.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_transportprotocolsoverview.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

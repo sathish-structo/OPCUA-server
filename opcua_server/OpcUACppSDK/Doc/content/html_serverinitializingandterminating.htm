@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Initializing and Terminating</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_serverinitializingandterminating.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Initializing and Terminating</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_serverstep1.htm">Previous</a>&nbsp;
+     <a href="html_providingendpoints.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h3 class="p_Heading3"><a id="init"></a><span class="f_Heading3">Initialize and Terminate a SDK Server Application</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The initialization and the termination process of a server application consists of</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">loading and unloading the SDK and</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">initializing and starting / stopping and uninitializing the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> singleton.</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Initialization of your Application</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">These steps have to be performed to initialize a server application:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List">Initialize the SDK.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">loadToolbox(NULL);&nbsp;&nbsp;&nbsp;//&nbsp;&quot;NULL&quot;&nbsp;only&nbsp;in&nbsp;the&nbsp;case&nbsp;that&nbsp;no&nbsp;creator&nbsp;is&nbsp;needed</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">Please configure the SDK with the location of an application instance certificate and associated private key. Please refer to the topic <a href="html_securityimplementatioin.htm" class="topiclink">Security in OPC UA Applications</a> for more details. For testing purposes you may use a shell script delivered with the SDK to <a href="html_setupcertificates.htm" class="topiclink">create an instance certificate</a>.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">ApplicationPtr&nbsp;pApp&nbsp;=&nbsp;Application::instance();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pApp-&gt;setInstanceCertificate(_T(&quot;../MyCertificateStore/MyInstanceCertificate.der&quot;)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_T(&quot;../MyCertificateStore/MyInstancePrivateKey.pem&quot;),_T(&quot;pass&quot;));</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph">Optional: If you want to ensure that only trusted client applications can connect to your server, you need to configure the SDK with the location of trusted certificates. See the section <a href="html_securityimplementatioin.htm" class="topiclink">Security in OPC UA Applications</a> for more details on application authentication.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">PkiStoreConfiguration&nbsp;configuration;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">configuration.setCertificateTrustListLocation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_T(&quot;../MyCertificateStore/TrustList&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">configuration.setCertificateRevocationListLocation(_T(&quot;../MyCertificateStore/Crl&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">configuration.setRejectedCertificateLocation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_T(&quot;../MyCertificateStore/MyRejectedCertificates&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;setPkiStoreConfiguration(&amp;configuration);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">4.</span></td><td style="border:none"><span class="f_Paragraph">Create a description of your application.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">ApplicationDescription&nbsp;appDesc;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">appDesc.setApplicationType(EnumApplicationType_Server);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">appDesc.setApplicationName(LocalizedText(_T(&quot;My&nbsp;Server&nbsp;Application&quot;),&nbsp;_T(&quot;en&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;The&nbsp;ApplicationUri&nbsp;shall&nbsp;match&nbsp;the&nbsp;URI&nbsp;defined&nbsp;in&nbsp;the&nbsp;application&nbsp;instance&nbsp;certificate</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">appDesc.setApplicationUri(_T(&quot;urn:MyHost:MyServerApplication&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">appDesc.setProductUri(_T(&quot;urn:MyCompany:MyProduct&quot;));</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.</span></td><td style="border:none"><span class="f_Paragraph">Initialize the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> instance with the application description.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">pApp-&gt;initialize(&amp;appDesc);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.</span></td><td style="border:none"><span class="f_Paragraph">Start the application.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">pApp-&gt;start();</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Termination of your Application</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">These steps have to be performed at the termination of the server application:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List">Stop the application.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">ApplicationPtr&nbsp;pApp&nbsp;=&nbsp;Application::instance();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">pApp-&gt;stop();</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">Uninitialize the application.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">pApp-&gt;uninitialize();</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph">Release all references to SDK objects. This includes not only references held by smart pointers but also objects that are created on the stack.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">pApp.reset();</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">4.</span></td><td style="border:none"><span class="f_Paragraph">Unload the SDK.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">unloadToolbox();</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">You have to care for the correct execution order during termination of your application, especially in multithreaded applications. Trying to release SDK objects after <a href="globalfunctions.htm#namespace_softing_o_p_c_toolbox5_1ac6ff128daf670e7e1aad20842bc4991d" class="topiclink">unloadToolbox()</a> may crash your application.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Under no circumstance the application shall try to close an endpoint, stop the server or uninitialize the SDK from within a callback method. This might lead to a crash, deadlock or other undefined behavior.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="html_providingendpoints.htm" class="topiclink">Providing Endpoints</a>, <a href="html_serverstep1sample.htm" class="topiclink">Sample Application</a>, <a href="html_servertutorial.htm" class="topiclink">Server Tutorial</a>, <a href="html_serverendpointsecuritysetup.htm" class="topiclink">Server Endpoint Security Setup</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_serverinitializingandterminating.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

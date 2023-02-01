@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>VxWorks</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "source_code_license_vxworks.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">VxWorks</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="source_code_license_linux.htm">Previous</a>&nbsp;
+     <a href="html_addressspacemodeling.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">Compile the SDK from Source Code for VxWorks</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">VxWorks 6.x:</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 1: Configure a new linked resource in the Workspace</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Open menu </span><span class="f_Reference">Window</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">Preferences</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">General</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">Workspace</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">Linked Resources</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Select </span><span class="f_Reference">New,</span><span class="f_Paragraph"> add the name </span><span class="f_FixedSize">TB5ROOT</span><span class="f_Paragraph"> and specify the absolute path of the installation directory up to </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source</span><span class="f_Paragraph">.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 2: Import the existing projects into workspace</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Open menu File -&gt; Import</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Select </span><span class="f_Reference">General</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">Existing Projects into Workspace</span><span class="f_Paragraph"> and click the </span><span class="f_Reference">Next</span><span class="f_Paragraph"> button.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Browse for the Root directory to </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Workspace&lt;VxWorksVersion&gt;</span><span class="f_Paragraph">, select all projects and click the </span><span class="f_Reference">Finish</span><span class="f_Paragraph"> button.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 3: Configure the build order</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The projects have some dependencies on each other, they should be built in the correct order to prevent build errors or outdated projects.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Open menu </span><span class="f_Reference">Window</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">Preferences</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">General</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">Workspace</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">BuildOrder</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Disable </span><span class="f_Reference">Use default build order</span><span class="f_Paragraph"> and specify the following order:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">libcrypto</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">TB5Stack</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">TB5Util</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">TB5OT</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">libxml2</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">TB5CPP</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Step 4: Build the SDK</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Select menu </span><span class="f_Reference">Project</span><span class="f_Paragraph"> -&gt; </span><span class="f_Reference">Build All</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> In case you wish to build a for a VxWorks version for which the SDK does not provide projects you will find a file named </span><span class="f_FixedSize">VxWorks.README</span><span class="f_Paragraph"> in the root folders for the sources of every SDK component. It explains how to create a new VxWorks project for the current component.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">VxWorks 7:</span></h2>
+<h3 class="p_Heading3"><span class="f_Paragraph">In VxWorks 7 all projects have to be based on a VSB.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">Build scripts / batches named &quot;BuildAll.*&quot; are delivered, to build the SDK for your VSB.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">Please adapt the &quot;BUILD_INFOS&quot; variable in the script / batch to your need.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">If the VSB project does not exist (in the workspace), the VSB project will be created according the specified CPU / BSP.</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">We noticed several API interface changes of VxWorks functions between service releases, especially for DKM and especially between SR0540, SR0610 and newer.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">We tried to support all of them in our sources, but may have missed some changes within service releases.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">If you encounter compilation issues, please contact the support.</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h2 class="p_Heading2"><span class="f_Heading2">Executing the Self-Test</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">If you like to verify the new build, you can run the </span><span class="f_Reference">Test Server</span><span class="f_Paragraph"> executable and verify the server and client behavior with the </span><span class="f_Reference">Test Client</span><span class="f_Paragraph">.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_setupcertificates.htm#createdemopkistores" class="topiclink">Create Demo PKI Stores</a> for the StructoAutomoldServer and TestClient if the demo stores don't exist yet and deploy them on the target system.</span><br />
+<span class="f_Paragraph">In case you test between two systems, create the demo PKI stores on both systems and update the </span><span class="f_FixedSize">trusted</span><span class="f_Paragraph"> folders with the certificates of the remote machine.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> Make sure the Test Client can access the test files at </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Apps/Test/Cpp/TestClient/TestFiles</span><span class="f_Paragraph">, either copy the content to the target system or make it accessible via remote access.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">If StructoAutomoldServer and TestClient run on the same system and your system supports hostnames:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Start the CPPTestServer without additional parameters</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Start the CPPTestClient with the file </span><span class="f_FixedSize">&lt;TestFiles&gt;/System.xml</span><span class="f_Paragraph">.</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">If StructoAutomoldServer and TestClient run on different systems or your system does NOT support hostnames:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Start the CPPTestServer with the additional parameter </span><span class="f_FixedSize">/endpointurl</span><span class="f_Paragraph"> to specify the network interface to use</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">/endpointurl&nbsp;opc.tcp://</span><span class="f_CodeExample" style="font-weight: bold;">&lt;IP&nbsp;address&nbsp;or&nbsp;hostname&gt;</span><span class="f_CodeExample">:4880/Softing/OpcUa/StructoAutomoldServer</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Start the CPPTestClient and provide the test file </span><span class="f_FixedSize">&lt;TestFiles&gt;/System.xml</span><span class="f_Paragraph"> and some modified test parameters for the different host and server application URI as additional parameters.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">&lt;TestFiles&gt;/System.xml&nbsp;/envVar&nbsp;TARGET_HOST=&lt;</span><span class="f_CodeExample" style="font-weight: bold;">IP&nbsp;address&nbsp;or&nbsp;hostname</span><span class="f_CodeExample">&gt;&nbsp;/envVar&nbsp;SERVER_URI=urn:&lt;</span><span class="f_CodeExample" style="font-weight: bold;">IP&nbsp;address&nbsp;or&nbsp;hostname</span><span class="f_CodeExample">&gt;/Softing/OpcUa/StructoAutomoldServer</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> In case of the </span><span class="f_Paragraph" style="font-style: italic;">Client Source Code License</span><span class="f_Paragraph"> the delivered server source code is not complete. Although you can rebuild the StructoAutomoldServer without compilation errors, the server will not start. In this situation it is still safe to use the originally installed StructoAutomoldServer binaries for running the server in demo mode.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Please note that for executing the self-test on VxWorks some files of the installation are needed on the VxWorks target running the server.</span><br />
+<span class="f_Paragraph">Especially the files / folders corresponding to the Files Objects in the address space should exists and some of them are expected to be writeable, they are stored at </span><span class="f_FixedSize">Source\Apps\Test\Cpp\StructoAutomoldServer\TestFiles</span><span class="f_Paragraph">.</span><br />
+<span class="f_Paragraph">If those files / folders are missing or not writable then some tests in FileTransferTests.xml and FileDirectoryTests.xml will report test failures, such test failures can be ignored.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=source_code_license_vxworks.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

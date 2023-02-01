@@ -1,0 +1,396 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IUserNameIdentityToken Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IUserNameIdentityToken Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_user_identity_token.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_user_token_policy.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token"></a></p>
+<p><span class="f_CodeExample">#include &quot;IUserNameIdentityToken.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map315" id="map315"><area shape="rect" coords="8,59,168,82" href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm" alt="" /><area shape="rect" coords="5,6,171,29" href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.gif" width="176" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token" style="width:176px;height:88px;border:none" usemap="#map315" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token" class="topiclink">UserNameIdentityToken</a> data type is used to pass username/password credentials to the server.</p>
+<p class="p_Paragraph">UA defines various tokens for user identification. This one is using a user name and a password for identification.</p>
+<p class="p_Paragraph">The password is transported encrypted to avoid a &quot;man in the middle&quot; seeing the password. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1ae69a82e1570fb59395dc5fa9dbe58012" class="topiclink">~IUserNameIdentityToken</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1aabb0362e8130bab2dc1587c6abc5ea36" class="topiclink">getPolicyId</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1aacbfcbaa4c4b19e4f2fa7bac0a791788" class="topiclink">setPolicyId</a></span>(const tstring &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a6a16663523690ead3685b61ead05dffc" class="topiclink">getUserName</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a8febd34c5e45512f8b865cfc7dfc1b4a" class="topiclink">setUserName</a></span>(const tstring &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_i_byte_string" class="topiclink">IByteString</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1ad301c0a741e38b38bb9146b0c91efe0a" class="topiclink">getPassword</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a7592b6ae0ecfe90087afd126f7e0c68f" class="topiclink">setPassword</a></span>(const IByteString *value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a27c5a50816b1f312d38dc5e3490218bf" class="topiclink">setPassword</a></span>(const ByteString &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1ae234d39a6161e77ba732e82ffc0f843b" class="topiclink">getEncryptionAlgorithm</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a6c7500f9e39c1ceef142e97a3f254cb1" class="topiclink">set</a></span>(const IUserNameIdentityToken *cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a29ba8c17605fc534326d60c890497753" class="topiclink">set</a></span>(const IUserNameIdentityToken &amp;cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a1ed958cd1e409f84d1c709833620818c" class="topiclink">compare</a></span>(const IUserNameIdentityToken *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a710a80412b0adaa042513e0427198a54" class="topiclink">compare</a></span>(const IUserNameIdentityToken &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a458761403d01364e3bc3c3cd7eb52e6a" class="topiclink">operator==</a></span>(const IUserNameIdentityToken &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1ae9e5871445d7839d9712baacc1920cff" class="topiclink">operator!=</a></span>(const IUserNameIdentityToken &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a6a5980c56ad0b09b6925c51e45cbe20e" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1ae69a82e1570fb59395dc5fa9dbe58012"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::~IUserNameIdentityToken</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1aabb0362e8130bab2dc1587c6abc5ea36"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::getPolicyId</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the identifier for the <a href="class_softing_o_p_c_toolbox5_1_1_user_token_policy.htm#class_softing_o_p_c_toolbox5_1_1_user_token_policy" class="topiclink">UserTokenPolicy</a> that the token conforms to.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1aacbfcbaa4c4b19e4f2fa7bac0a791788" class="topiclink">setPolicyId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a62c74e8a9b2e0abd11b4721c8960e091" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1aacbfcbaa4c4b19e4f2fa7bac0a791788"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::setPolicyId</span>(const tstring &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the identifier for the <a href="class_softing_o_p_c_toolbox5_1_1_user_token_policy.htm#class_softing_o_p_c_toolbox5_1_1_user_token_policy" class="topiclink">UserTokenPolicy</a> that the token conforms to.</p>
+<p class="p_Paragraph">The PolicyId is an identifier, specified by the user identities returned from server during GetEndpoints service call (see <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a>). This value is only unique within the context of a single server. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a79991fc4cb733751388733109d27eb10" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a6a16663523690ead3685b61ead05dffc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::getUserName</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a string that identifies the user. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1ac54eae904b40e2cdbb5bc43bc9af67a4" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a8febd34c5e45512f8b865cfc7dfc1b4a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::setUserName</span>(const tstring &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the string that identifies the user. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a71d7571ef0c8be82bb6be3d2c67c46df" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1ad301c0a741e38b38bb9146b0c91efe0a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_i_byte_string" class="topiclink">IByteString</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::getPassword</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the password for the user. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a5b2925d88d78d37a4b16980d0bd8c4d9" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a7592b6ae0ecfe90087afd126f7e0c68f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::setPassword</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_i_byte_string" class="topiclink">IByteString</a> * <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the password for the user. The password can be an empty string. The password is used to verify a specific user. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1ac85332b8ed748a62e5022244e5b29c8a" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a27c5a50816b1f312d38dc5e3490218bf"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::setPassword</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a8578c8026ce3d213b17f23775253dc76" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1ae234d39a6161e77ba732e82ffc0f843b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::getEncryptionAlgorithm</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a URI that identifies the encryption algorithm used for encrypting and decrypting the password. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a41cbdf6948d8027d84543f1c9a364d18" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a6c7500f9e39c1ceef142e97a3f254cb1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token" class="topiclink">IUserNameIdentityToken</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">source</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1aff849239e83e626fc73588c2fd5c2661" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a29ba8c17605fc534326d60c890497753"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token" class="topiclink">IUserNameIdentityToken</a> &amp; <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1aa08d25113bbcee8d312a441e9527077b" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a1ed958cd1e409f84d1c709833620818c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token" class="topiclink">IUserNameIdentityToken</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a33369cb925a08a93369526d95fecd55d" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a710a80412b0adaa042513e0427198a54"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token" class="topiclink">IUserNameIdentityToken</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a70d6157f42bf3907f75e951e3843d68b" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a458761403d01364e3bc3c3cd7eb52e6a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token" class="topiclink">IUserNameIdentityToken</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a2b68b9d59ff96b09ff20f8f8e91c5055" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1ae9e5871445d7839d9712baacc1920cff"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token" class="topiclink">IUserNameIdentityToken</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a34abb579bd85e0a1465e3e5838688c0c" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token_1a6a5980c56ad0b09b6925c51e45cbe20e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IUserNameIdentityToken::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_user_name_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_name_identity_token_1a12671f784e71833ac54102d35e12239c" class="topiclink">SoftingOPCToolbox5::UserNameIdentityToken</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_user_name_identity_token.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

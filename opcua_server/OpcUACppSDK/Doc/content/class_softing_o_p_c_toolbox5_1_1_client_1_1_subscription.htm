@@ -1,0 +1,1440 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Subscription Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Subscription Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription"></a></p>
+<p><span class="f_CodeExample">#include &quot;ClientSubscription.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map26" id="map26"><area shape="rect" coords="7,6,94,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="5,59,97,93" href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.gif" width="101" height="99" alt="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" style="width:101px;height:99px;border:none" usemap="#map26" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> class is used to publish data changes and/or events that occur in a server.</p>
+<p class="p_Paragraph">A subscription aggregates one or more monitored items that collect data changes and/or events in a server. The publishing interval of the subscription defines the rate at which those data changes and/or events are published to the client (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7a39aa3050ebc98c51915e96d4da612d" class="topiclink">setPublishingInterval()</a>). Client applications must derive from this class and override the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ac71cce02fe3805a3d803c349f20bf80a" class="topiclink">onDataChange()</a> and/or <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707" class="topiclink">onEventsReceived()</a> methods to process received data changes and/or events.</p>
+<p class="p_Paragraph">A configured subscription is created on the server only after it has been added to a session and connected (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1af7a8019b9d3228960b614ef452f57ac3" class="topiclink">Session::addSubscription()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1c56fd491dadf4c5ed03782cb0e5ee8e" class="topiclink">connect()</a>).</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a0c89aa11ee880d3c7c3225bd6289e894" class="topiclink">Subscription</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a56991ee53ace01f77d33e27cbc051127" class="topiclink">Subscription</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a96d268adbe4414e4f92ff9320ebc5d7b" class="topiclink">~Subscription</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aada875efe12701f9398c8c1c5fe3926c" class="topiclink">getId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session" class="topiclink">Client::Session</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ae7009d01fe5ac620c63be8992e7b4c3c" class="topiclink">getSession</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session" class="topiclink">Client::Session</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aca911e429c0b515b6910a6168f4fdf84" class="topiclink">getSession</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">double</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a5afa9da0267e4e335ca8a6e9980f08c6" class="topiclink">getPublishingInterval</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7a39aa3050ebc98c51915e96d4da612d" class="topiclink">setPublishingInterval</a></span>(double publishingInterval)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">double</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7a69b37b7e33042872df977c0b10dd70" class="topiclink">getRevisedPublishingInterval</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a66ad465251ba169acf286ef0fa3bcbc8" class="topiclink">getLifeTimeCount</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad3590c4dca381217e1f46f2f0a6879ac" class="topiclink">setLifeTimeCount</a></span>(OTUInt32 lifeTimeCount)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a38699d65976a2d236be4819384628776" class="topiclink">getRevisedLifeTimeCount</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1abb71ec0da04ca9dc33d2633177d1ffae" class="topiclink">getMaxKeepAliveCount</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4b7c3e79bd34794e937ef961e460258b" class="topiclink">setMaxKeepAliveCount</a></span>(OTUInt32 maxKeepAliveCount)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2e350c1a3bdbfa98d67f21ed3adf9c8e" class="topiclink">getRevisedMaxKeepAliveCount</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a104c8367259e6567d82fd55cfa34f340" class="topiclink">getMaxNotificationsPerPublish</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aaf3e7a314eddc71973c1c3ad7a6cc0ca" class="topiclink">setMaxNotificationsPerPublish</a></span>(OTUInt32 maxNotificationsPerPublish)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a86df34456774a9e4a191f84b2833531a" class="topiclink">getPublishingEnabled</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7d30d321d7f183282d8475ad1a7ba9fe" class="topiclink">setPublishingEnabled</a></span>(bool publishingEnabled)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1af99855163f273b777dea92a5611b9877" class="topiclink">getRePublishingEnabled</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1abb7376952237920845d21df48af9d479" class="topiclink">setRePublishingEnabled</a></span>(bool rePublishingEnabled)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">unsigned char</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ae69d174b44a472d499fcbbf8b273423f" class="topiclink">getPriority</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ab1783ac941c3a81897136cd408bbcdd1" class="topiclink">setPriority</a></span>(unsigned char priority)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1c56fd491dadf4c5ed03782cb0e5ee8e" class="topiclink">connect</a></span>(bool deep)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a8f038c04aeec692dd7bd59ce90654585" class="topiclink">disconnect</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1b6aadcd7613d98cb116abac8412ee55" class="topiclink">isConnected</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a01867c04254d759594f87923752b01ca" class="topiclink">addMonitoredItem</a></span>(Client::MonitoredItemPtr monitoredItem)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a87ec1b233594dc11da43a5616f1546de" class="topiclink">addMonitoredItems</a></span>(const std::vector&lt; Client::MonitoredItemPtr &gt; &amp;items)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2ea6b214b372ba43d8935efbb0fe1f8e" class="topiclink">connectMonitoredItems</a></span>(std::vector&lt; Client::MonitoredItemPtr &gt; &amp;items, std::vector&lt; EnumStatusCode &gt; *pConnectResults)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad4d9733e10ea9ca931b0548c8b082162" class="topiclink">getMonitoredItems</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a75413dc915d308d49b7866add355f412" class="topiclink">removeMonitoredItem</a></span>(Client::MonitoredItemPtr monitoredItem)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a6f51368f34c013796e45b916ad8ef993" class="topiclink">removeMonitoredItems</a></span>(const std::vector&lt; Client::MonitoredItemPtr &gt; &amp;items)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a18219a5cb141036cb1e49f481d3ae8f4" class="topiclink">removeAllMonitoredItems</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1af616d63f989d19ac437c206ba450cfed" class="topiclink">updateMonitoredItems</a></span>(const std::vector&lt; Client::MonitoredItemPtr &gt; &amp;items)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1a7194be05a69a005c330afa54d9a748" class="topiclink">updateChangedMonitoredItems</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a6c2cf4a60625a3de25e741ddbd880503" class="topiclink">setAllMonitoredItemsMonitoringMode</a></span>(EnumMonitoringMode eMonitoringMode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2c061d20c800b09a4c11dd62e1fe879c" class="topiclink">setMonitoredItemsMonitoringMode</a></span>(const std::vector&lt; Client::MonitoredItemPtr &gt; &amp;monitoredItems, EnumMonitoringMode eMonitoringMode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ab608cb7977a1124258b5564e1aa7a6be" class="topiclink">enablePublishing</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad0a7d87795f3934d05f7145f4d5efbfc" class="topiclink">disablePublishing</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a412a0f70e2b06d225268574b89ddae3f" class="topiclink">update</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aa26cd98f617f0521b7e828ead59ef6fa" class="topiclink">conditionRefresh</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ab77101e674e742aa8524100b7a1ee75e" class="topiclink">resendData</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ac71cce02fe3805a3d803c349f20bf80a" class="topiclink">onDataChange</a></span>(const std::vector&lt; Client::MonitoredItem * &gt; &amp;items, const std::vector&lt; DataValue &gt; &amp;values)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707" class="topiclink">onEventsReceived</a></span>(const std::vector&lt; Client::MonitoredItem * &gt; &amp;items, const std::vector&lt; EventFieldList &gt; &amp;values)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4f57e643dd87b67dedb59ac5ff60742a" class="topiclink">onError</a></span>(EnumStatusCode status)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a80192733047651957ac982e21af8cb60" class="topiclink">onStatusChange</a></span>(bool status)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a92d7b98443d09136f230f3780bfd05dd" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a92d7b98443d09136f230f3780bfd05dd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a0c89aa11ee880d3c7c3225bd6289e894"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::Subscription</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a56991ee53ace01f77d33e27cbc051127"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::Subscription</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a96d268adbe4414e4f92ff9320ebc5d7b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::~Subscription</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aada875efe12701f9398c8c1c5fe3926c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the ID that the server assigned to this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. This parameter is only valid after the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> has been connected. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ae7009d01fe5ac620c63be8992e7b4c3c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session" class="topiclink">Client::Session</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getSession</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The client session to which this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is bound. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aca911e429c0b515b6910a6168f4fdf84"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session" class="topiclink">Client::Session</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getSession</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a5afa9da0267e4e335ca8a6e9980f08c6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>double<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getPublishingInterval</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the publishing interval (in milliseconds) that has been provided by the client. This is not necessarily the interval that the server actually uses. The actually used interval can be retrieved by <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7a69b37b7e33042872df977c0b10dd70" class="topiclink">getRevisedPublishingInterval()</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7a39aa3050ebc98c51915e96d4da612d" class="topiclink">setPublishingInterval()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7a69b37b7e33042872df977c0b10dd70" class="topiclink">getRevisedPublishingInterval()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7a39aa3050ebc98c51915e96d4da612d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::setPublishingInterval</span>(double <span class="f_Parameter">publishingInterval</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Defines the publishing interval in milliseconds. The publishing interval defines the cycle time in which the server sends notifications (data changes, events or status changes) periodically to the client.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">publishingInterval</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The publishing interval in milliseconds</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The default value is the 1000.0. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a412a0f70e2b06d225268574b89ddae3f" class="topiclink">update()</a> to apply changes to this parameter if the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is already connected. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7a69b37b7e33042872df977c0b10dd70"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>double<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getRevisedPublishingInterval</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Holds the revised publishing interval that has been returned by the server. This value is set automatically during the connect operation. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a66ad465251ba169acf286ef0fa3bcbc8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getLifeTimeCount</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the threshold for the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>'s life time counter.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad3590c4dca381217e1f46f2f0a6879ac" class="topiclink">setLifeTimeCount()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad3590c4dca381217e1f46f2f0a6879ac"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::setLifeTimeCount</span>(OTUInt32 <span class="f_Parameter">lifeTimeCount</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the threshold for the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>'s life timer counter. Whenever the life time counter reaches the provided threshold, the server deletes the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>.</p>
+<p class="p_Paragraph">The server uses a life time counter to keep track of client activity for the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. The life time counter of a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is incremented by one whenever the publishing interval expires and it is reset to zero on every Subscription-related client activity (e.g. when the server receives a publish request). When the life time counter reaches the threshold provided by this method the server deletes the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>.</p>
+<p class="p_Paragraph">In order to ensure regular client activity in case the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> has no notifications to publish, the server publishes keep-alive messages when a given number of publishing intervals have elapsed without notifications being available at the server (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4b7c3e79bd34794e937ef961e460258b" class="topiclink">setMaxKeepAliveCount()</a>). Therefore, the life time count depends on the maximum keep-alive count of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. The life time count should always be set to at least three times the maximum keep-alive count.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">lifeTimeCount</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">When the publishing interval of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> has elapsed this number of times, the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> will be deleted from the server. This value should be not less than three times the maximum keep-alive count. Please note that the server may revise the provided value.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4b7c3e79bd34794e937ef961e460258b" class="topiclink">setMaxKeepAliveCount()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a38699d65976a2d236be4819384628776" class="topiclink">getRevisedLifeTimeCount()</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The default value is the value 60. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a412a0f70e2b06d225268574b89ddae3f" class="topiclink">update()</a> to apply changes to this parameter if the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is already connected. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a38699d65976a2d236be4819384628776"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getRevisedLifeTimeCount</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the revised life time count that has been assigned by the server. This value is set automatically during the connect operation.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad3590c4dca381217e1f46f2f0a6879ac" class="topiclink">setLifeTimeCount()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1abb71ec0da04ca9dc33d2633177d1ffae"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getMaxKeepAliveCount</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The number of consecutive empty publish cycles after that the Server has to send a keep alive message.</p>
+<p class="p_Paragraph">The server is allowed to adapt this value to its capabilities (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4b7c3e79bd34794e937ef961e460258b" class="topiclink">setMaxKeepAliveCount()</a>). </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4b7c3e79bd34794e937ef961e460258b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::setMaxKeepAliveCount</span>(OTUInt32 <span class="f_Parameter">maxKeepAliveCount</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the threshold for the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>'s keep-alive counter. Whenever the keep-alive counter reaches the provided threshold, the server publishes a keep-alive notification message for this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>.</p>
+<p class="p_Paragraph">The server uses a keep-alive counter to inform the client that the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is still alive and to provoke activity from the client in order to prevent the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> from being deleted (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad3590c4dca381217e1f46f2f0a6879ac" class="topiclink">setLifeTimeCount()</a>). The keep-alive counter is incremented by one whenever the publishing interval expires and is reset to zero when the server publishes any notification message (including the keep-alive message) for the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">maxKeepAliveCount</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The maximum value of the keep alive counter. When the counter reaches this threshold, the server publishes a keep-alive notification message for this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> and resets the counter. Please note that the server may revise the provided value.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad3590c4dca381217e1f46f2f0a6879ac" class="topiclink">setLifeTimeCount()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2e350c1a3bdbfa98d67f21ed3adf9c8e" class="topiclink">getRevisedMaxKeepAliveCount()</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The default value is the value 10. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a412a0f70e2b06d225268574b89ddae3f" class="topiclink">update()</a> to apply changes to this parameter if the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is already connected. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2e350c1a3bdbfa98d67f21ed3adf9c8e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getRevisedMaxKeepAliveCount</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the revised keep alive count that has been assigned by the server. This value is set automatically during the connect operation.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4b7c3e79bd34794e937ef961e460258b" class="topiclink">setMaxKeepAliveCount()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a104c8367259e6567d82fd55cfa34f340"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getMaxNotificationsPerPublish</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the maximum number of notifications that a server sends in one publish response. A value of 0 means that there is no limit.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aaf3e7a314eddc71973c1c3ad7a6cc0ca" class="topiclink">setMaxNotificationsPerPublish()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aaf3e7a314eddc71973c1c3ad7a6cc0ca"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::setMaxNotificationsPerPublish</span>(OTUInt32 <span class="f_Parameter">maxNotificationsPerPublish</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the maximum number of notifications that a client wishes to receive per publish response.</p>
+<p class="p_Paragraph">Every queued data change or event of every <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> of this subscription is a notification. If a server reaches this number, then it splits the notifications into several PublishResponses and sends the several PublishResponses in a row. The callbacks <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ac71cce02fe3805a3d803c349f20bf80a" class="topiclink">onDataChange()</a> or <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707" class="topiclink">onEventsReceived()</a> are triggered for every received PublishResponse that contains the related notification type. If the client does not want to impose restrictions on the message size of the publish response, this parameter should be set to 0.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Default value is 0. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a412a0f70e2b06d225268574b89ddae3f" class="topiclink">update()</a> to apply changes to this parameter if the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is already connected. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a86df34456774a9e4a191f84b2833531a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getPublishingEnabled</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether publishing of notification messages is enabled for this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a></p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7d30d321d7f183282d8475ad1a7ba9fe" class="topiclink">setPublishingEnabled()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7d30d321d7f183282d8475ad1a7ba9fe"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::setPublishingEnabled</span>(bool <span class="f_Parameter">publishingEnabled</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Defines whether publishing of notification messages (i.e. data changes or events) is enabled or not for this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Same as <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad0a7d87795f3934d05f7145f4d5efbfc" class="topiclink">disablePublishing()</a> or <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ab608cb7977a1124258b5564e1aa7a6be" class="topiclink">enablePublishing()</a></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Publishing is enabled by default. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1af99855163f273b777dea92a5611b9877"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getRePublishingEnabled</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether republishing of lost notifications is enabled.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1abb7376952237920845d21df48af9d479" class="topiclink">setRePublishingEnabled</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1abb7376952237920845d21df48af9d479"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::setRePublishingEnabled</span>(bool <span class="f_Parameter">rePublishingEnabled</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Enables or disables republishing in case of lost notifications.</p>
+<p class="p_Paragraph">RePublishing is a UA specific way to force the server to re-send lost notifications of a subscription. If republishing is enabled lost notifications are again requested from server (if available). By default republishing is enabled for a subscription.</p>
+<p class="p_Paragraph">It is recommended to enable republishing for subscriptions which need to receive every single notification (e.g. subscriptions receiving events, ...). For subscriptions which simply are interested in newest data values republishing is not necessary.</p>
+<p class="p_Paragraph">In case of lost notifications (either republishing disabled or server cannot provide lost notifications) the error EnumStatusCode_BadSequenceNumberInvalid is reported via the error callback. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ae69d174b44a472d499fcbbf8b273423f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>unsigned char<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getPriority</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the priority which is assigned to this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ab1783ac941c3a81897136cd408bbcdd1" class="topiclink">setPriority()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ab1783ac941c3a81897136cd408bbcdd1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::setPriority</span>(unsigned char <span class="f_Parameter">priority</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The relative priority of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. If several Subscriptions are ready to publish notification messages (Data changes, event notifications), the server uses the priority to decide which <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is allowed to publish first. In this case, the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> with higher priority will be allowed to publish its notification messages first.</p>
+<p class="p_Paragraph">Use priority value &quot;0&quot; if the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> does not require special priority settings (recommended!).</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The default value is 0. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a412a0f70e2b06d225268574b89ddae3f" class="topiclink">update()</a> to apply changes to this parameter if the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is already connected. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1c56fd491dadf4c5ed03782cb0e5ee8e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::connect</span>(bool <span class="f_Parameter">deep</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Connects the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> to the Server. If MonitoredItems are configured to report data changes the reporting will start after a successful connect.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">deep</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">If true, not only the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> but also the added MonitoredItems will be connected.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a8f038c04aeec692dd7bd59ce90654585" class="topiclink">disconnect()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a8f038c04aeec692dd7bd59ce90654585"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::disconnect</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Disconnects the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> from the server. All contained MonitoredItems are also disconnected. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1b6aadcd7613d98cb116abac8412ee55"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::isConnected</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns true, if the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is connected (i.e. registered at the server), false otherwise. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a01867c04254d759594f87923752b01ca"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::addMonitoredItem</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> <span class="f_Parameter">monitoredItem</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> to the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. Changes will only take effect in the server after connecting the added <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> via connect(true) or by calling <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1a15daa12230bccefba4dcfd99267e858a" class="topiclink">MonitoredItem::connect()</a> on the added item.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">monitoredItem</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> to add</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1c56fd491dadf4c5ed03782cb0e5ee8e" class="topiclink">connect()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a87ec1b233594dc11da43a5616f1546de" class="topiclink">addMonitoredItems()</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Preferred sequence is adding monitored items to a subscription after the subscription is already added to a session. Otherwise (if the subscription will never be added to a session) deletion of a subscription requires that the monitored items are explicitly removed via <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a18219a5cb141036cb1e49f481d3ae8f4" class="topiclink">removeAllMonitoredItems()</a>. Otherwise a memory leak will be produced because subscription and monitored items stay alive by a linkage between them. If a subscription is added to a session, the SDK takes care of breaking this linkage. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a87ec1b233594dc11da43a5616f1546de"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::addMonitoredItems</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> &gt; &amp; <span class="f_Parameter">items</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds an array of MonitoredItems to the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. Changes will only take effect in the server after connecting the added MonitoredItems via <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2ea6b214b372ba43d8935efbb0fe1f8e" class="topiclink">connectMonitoredItems()</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">items</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The MonitoredItems to add to the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1c56fd491dadf4c5ed03782cb0e5ee8e" class="topiclink">connect()</a></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Preferred sequence is adding monitored items to a subscription after the subscription is already added to a session. Otherwise (if the subscription will never be added to a session) deletion of a subscription requires that the monitored items are explicitly removed via <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a18219a5cb141036cb1e49f481d3ae8f4" class="topiclink">removeAllMonitoredItems()</a>. Otherwise a memory leak will be produced because subscription and monitored items stay alive by a linkage between them. If a subscription is added to a session, the SDK takes care of breaking this linkage. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2ea6b214b372ba43d8935efbb0fe1f8e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::connectMonitoredItems</span>(std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> &gt; &amp; <span class="f_Parameter">items</span>, std::vector&lt; <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a> &gt; * <span class="f_Parameter">pConnectResults</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Connects several MonitoredItems, that belong to this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. <span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">items</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The MonitoredItems to connect </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">pConnectResults</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">optional array of operational results for each connect, can be NULL </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad4d9733e10ea9ca931b0548c8b082162"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::getMonitoredItems</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the MonitoredItems that belong to this subscription. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a75413dc915d308d49b7866add355f412"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::removeMonitoredItem</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> <span class="f_Parameter">monitoredItem</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Removes the given <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> from the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. The given <span class="f_Parameter">monitoredItem</span> will be removed from the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> on the server immediately.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">monitoredItem</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> to remove from the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a6f51368f34c013796e45b916ad8ef993"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::removeMonitoredItems</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> &gt; &amp; <span class="f_Parameter">items</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Removes the given MonitoredItems from the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. The given <span class="f_Parameter">items</span> will be removed from the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> on the server immediately.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">items</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> to remove from the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a18219a5cb141036cb1e49f481d3ae8f4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::removeAllMonitoredItems</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Removes all MonitoredItems from the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. The items will be removed from the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> on the server immediately. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1af616d63f989d19ac437c206ba450cfed"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::updateMonitoredItems</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> &gt; &amp; <span class="f_Parameter">items</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Applies local changes to the given list of MonitoredItems in the server. The following <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> parameters are updated in the server: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SamplingInterval </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Filter </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">QueueSize </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">DiscardOldest</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"> The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> must be connected when this method is called.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">items</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The list of MonitoredItems that contain local modifications </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a1a7194be05a69a005c330afa54d9a748"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::updateChangedMonitoredItems</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Convenience methods to apply local changes to MonitoredItems that have been changed since the last update in the server.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1af616d63f989d19ac437c206ba450cfed" class="topiclink">updateMonitoredItems()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a6c2cf4a60625a3de25e741ddbd880503"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::setAllMonitoredItemsMonitoringMode</span>(<a href="_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6.htm#_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6" class="topiclink">EnumMonitoringMode</a> <span class="f_Parameter">eMonitoringMode</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the monitoring mode of all the MonitoredItems contained in this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. Changes are applied immediately in the server.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">eMonitoringMode</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The monitoring mode to apply to all items</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2c061d20c800b09a4c11dd62e1fe879c" class="topiclink">setMonitoredItemsMonitoringMode()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a2c061d20c800b09a4c11dd62e1fe879c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::setMonitoredItemsMonitoringMode</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">Client::MonitoredItemPtr</a> &gt; &amp; <span class="f_Parameter">monitoredItems</span>, <a href="_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6.htm#_enums_8h_1a57b2e2b0d5a60208538fecef22ecb2c6" class="topiclink">EnumMonitoringMode</a> <span class="f_Parameter">eMonitoringMode</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the monitoring mode of the given MonitoredItems contained in this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>. Changes are applied immediately in the server.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">monitoredItems</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The list of MonitoredItems for which you want to change the monitoring mode </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">eMonitoringMode</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The monitoring mode to apply to the given items</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a6c2cf4a60625a3de25e741ddbd880503" class="topiclink">setAllMonitoredItemsMonitoringMode()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ab608cb7977a1124258b5564e1aa7a6be"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::enablePublishing</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Enable publishing of notification messages for this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>same as setPublishingEnabled(true) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad0a7d87795f3934d05f7145f4d5efbfc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::disablePublishing</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Disables publishing of notification messages for this <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>same as setPublishingEnabled(false) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a412a0f70e2b06d225268574b89ddae3f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::update</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Applies local changes to the following <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> parameters in the server: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">PublishingInterval </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">LifeTimeCount </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">MaxKeepAliveCount </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">MaxNotificationsPerPublish, </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Priority</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"> The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> must be connected when this method is called, otherwise an error code will be returned. If successful, the RevisedLifetimeCount, RevisedMaxKeepAliveCount, and RevisedPublishingInterval will be updated with the values received in the server response.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a7a39aa3050ebc98c51915e96d4da612d" class="topiclink">setPublishingInterval()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ad3590c4dca381217e1f46f2f0a6879ac" class="topiclink">setLifeTimeCount()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4b7c3e79bd34794e937ef961e460258b" class="topiclink">setMaxKeepAliveCount()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aaf3e7a314eddc71973c1c3ad7a6cc0ca" class="topiclink">setMaxNotificationsPerPublish()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ab1783ac941c3a81897136cd408bbcdd1" class="topiclink">setPriority()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aa26cd98f617f0521b7e828ead59ef6fa"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::conditionRefresh</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Refreshes the current state of all monitored conditions</p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> must be connected when this method is called, otherwise an error code will be returned. If successful, the subscription will receive notifications for all event monitored items. For each event monitored item in the subscription the following sequence of notifications shall be received:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">An event of type RefreshStartEventType </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">The current status of all retained conditions notifying the monitored item </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">An event of type RefreshEndEventType</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"> The notification of events can start before the method returns.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumStatusCode_Good if refresh was successful. EnumStatusCode_BadInvalidState if session is not connected EnumStatusCode_BadSubscriptionIdInvalid if subscription is unknown in server EnumStatusCode_BadRefreshInProgress if another refresh of this subscription is already in progress</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707" class="topiclink">onEventsReceived()</a>, MonitoredItem() </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ab77101e674e742aa8524100b7a1ee75e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::resendData</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sends the latest values for all data change monitored items</p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> must be connected when this method is called, otherwise an error code will be returned. If successful, the subscription will receive notifications for all data change monitored items in monitoring mode Reporting.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ac71cce02fe3805a3d803c349f20bf80a" class="topiclink">onDataChange()</a>, MonitoredItem() </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ac71cce02fe3805a3d803c349f20bf80a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::onDataChange</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">Client::MonitoredItem</a> * &gt; &amp; <span class="f_Parameter">items</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value" class="topiclink">DataValue</a> &gt; &amp; <span class="f_Parameter">values</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback for data changes. This function must be overridden in a derived class to obtain data change events.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">items</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The MonitoredItems that have received data changes. This vector may contain a NULL pointer if the client receives a notification for a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has has been already removed. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">values</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The received data changes. The number of elements in this vector matches the number of notified <span class="f_Parameter">items</span>. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::onEventsReceived</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">Client::MonitoredItem</a> * &gt; &amp; <span class="f_Parameter">items</span>, const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list" class="topiclink">EventFieldList</a> &gt; &amp; <span class="f_Parameter">values</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback for reported events. This function must be overridden in a derived class to obtain event reports</p>
+<p class="p_Paragraph">The reported events are filtered by the monitored items where clause of the filter. The received event fields match the specified select clause of the filter.</p>
+<p class="p_Paragraph">In case of a queue overflow of a monitored item in the server, an event of type RefreshRequiredEventType is reported. It indicates that due to queue overflow some events are missing. An application can perform a conditionRefresh to update the current states of the monitored conditions. The reporting of this event type ignores any filtering.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">items</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The MonitoredItems that have received events. This vector may contain a NULL pointer if the client receives a notification for a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item" class="topiclink">MonitoredItem</a> has has been already removed. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">values</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The received events. The number of elements in this vector matches the number of notified <span class="f_Parameter">items</span>. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The EventFields in <span class="f_Parameter">values</span> can be null if the selected value is not accessible, e.g. if not all events have a selected property</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aa26cd98f617f0521b7e828ead59ef6fa" class="topiclink">conditionRefresh()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4f57e643dd87b67dedb59ac5ff60742a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::onError</span>(<a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a> <span class="f_Parameter">status</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Error callback. This must be overridden in a derived class in order to receive error notifications.</p>
+<p class="p_Paragraph">Typical contexts in which this callback can be called are errors in following situations: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">creating the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> on the server (connect) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">deleting the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">setting the publishing mode </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">modifying the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">processing notification message or publish response from server </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">notification messages from server were missing</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">status</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The error condition </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a80192733047651957ac982e21af8cb60"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Client::Subscription::onStatusChange</span>(bool <span class="f_Parameter">status</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Connection status change callback. This callback will be called whenever the connection status of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> changes.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">status</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">If true, the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is connected and data changes or events may arrive at MonitoredItems. If false, the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription" class="topiclink">Subscription</a> is disconnected and no data changes or events may arrive at MonitoredItems. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

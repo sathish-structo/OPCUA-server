@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Monitored items queuing</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_programmersguide_how_to_server_monitored_items_queuing.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Monitored items queuing</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="synchronizewithdevice.htm">Previous</a>&nbsp;
+     <a href="html_programmersguide_how_to_server_dynamic_adressspace.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p><span class="f_Paragraph">A value is reported to the Server from a device or cache etc. The actual system time is not used for the decision whether and when a value is published. The determining factor is the ServerTimestamp of the value.</span></p>
+<p>&nbsp;</p>
+<p><span class="f_Paragraph">The figure shows on the left the timestamps in ms when the value is reported. The blue line represents the timeline of the publishing interval of 1000 ms. The bold black line shows the publishing Interval of 400 ms. The boxes between the two intervals are the values to publish with an identifier (Valx) and the ServerTimestamp. </span></p>
+<p>&nbsp;</p>
+<p><img src="monitoreditemsequenz.png" width="497" height="587" alt="MonitoredItemSequenz" style="width:497px;height:587px;border:none" /></p>
+<p>&nbsp;</p>
+<p class="p_Paragraph"><span class="f_Paragraph">Some of the values are reported with a delay, e.g. Val5. It is reported at 1800 ms but has a ServerTimestamp of 1500ms.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_Paragraph">The first publish (1000ms) publishes the Val1 and Val2. Val3 is not published. It is in the publish interval, but the sampling interval is still not expired.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">With the second publish (2000ms) Val3 and Val5 is published. Val4 is obsolete because of the ServerTimestamp (1500ms) of Val5 which is in the same sampling interval (1200 - 1600) as the ServerTimestamp of Val4 (1300), although it appeared at 1800 ms.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph">At 3000ms only Val7 is published. Val6 is replaced by Val7, both appeared in the same Sampling interval and the newer replaces the older. The sampling interval for Val8 id still not expired, so Val8 is not published in this publishing interval.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">4.</span></td><td style="border:none"><span class="f_Paragraph">At 3200 ms Val8 is a candidate for publishing, but Val9 replaces Val8 because of the ServerTimestamp. Val10 is also published. Later Val11 appears with a ServerTimestamp which would replace Val10, but at the time the publishing Interval expires this Val11 was not yet sampled.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.</span></td><td style="border:none"><span class="f_Paragraph">In the last Publish of this figure the Val11 is published. It cannot replace Val10 because it was already published. Val11 has to be published although the ServerTimestamp is not in this publishing interval (it is in the past)</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">This Figure shows the behavior how and when the values are published by a subscription. For information about the queue of the published MonitoredItems please read the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1aee02a711465fd7326f2376f53c5756bc" class="topiclink">Client::MonitoredItem</a>.</span></p>
+<p>The handling of write requests regarding ServerTimestamp is shown in the Tutorial <a href="html_serverstep3.htm" class="topiclink">Server Step 3</a> and <a href="html_clientstep4.htm" class="topiclink">Client Step 4</a>. In most cases there is no need to set the ServerTimestamp, because it is set to current time if the ServerTimestamp is not initialized. To set the ServerTimestamp anyway, have a look at <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a11809caaabf3caae36cb33954eaf3037" class="topiclink">DataValue::SetServerTimestamp()</a>. Please be aware of that some servers may deny writing ServerTimestamps, so problems can occur when ServerTimestamp is written by a client.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Note:</span></p>
+<p>The<span class="f_Paragraph"> OPC UA C++ Server &amp; Client SDK V6.00 uses a monotonic clock to calculate expiration of sampling and publishing intervals. The first server timestamp provided is used as a reference to detect expired sampling intervals.</span></p>
+<p>If providing a ServerTimestamp in the future or past, a changed <span class="f_Paragraph">system time (either local or in the device) is assumed.</span></p>
+<p><span class="f_Paragraph">In this case an already sampled value is immediately added to the publishing queue and will be sent to the client with the next publish.</span></p>
+<p><span class="f_Paragraph">The ServerTimestamp shall be monotonic increasing for one variable - except changed system time; otherwise more values than expected will be added to the queue and the queue might overflow.</span><br />
+<span class="f_Paragraph">Therefore avoid timestamps from different sources (for one variable).</span><br />
+<span class="f_Paragraph">&nbsp;</span></p>
+<p>&nbsp;</p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_programmersguide_how_to_server_monitored_items_queuing.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

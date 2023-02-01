@@ -1,0 +1,129 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Address Space</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uaaddressspace.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Address Space</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_opcuaintroduction.htm">Previous</a>&nbsp;
+     <a href="html_uaaddressspacenotation.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">Classic OPC Address Space</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">An address space is a collection of information that an OPC server makes available to its clients. Classic OPC servers expose their internal structures as hierarchical trees. OPC DA servers expose a hierarchy of branches and items, where branches are used to organize other branches and items, and only items may have a value. OPC AE servers organize their information as areas and sources.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In any case, the address space in Classic OPC is always a tree structure with some kind of folders and leaves. When there is a need to expose some other type of information or metadata (like event categories or attributes in OPC AE), Classic OPC uses a specialized function for that purpose.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">OPC UA Address Space</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA employs the address space in much broader and more generic way than Classic OPC. As unification was one of the most important goals of the OPC UA specification, anything possible in Classic OPC should be possible with OPC UA. As mentioned above, Classic OPC does only expose multiple hierarchies. It also exposes metadata, even though this information is only available via specialized functions. OPC UA considers metadata as part of the address space and is not limited to hierarchical trees. It provides a generic way of exposing any kind of relationship.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Nodes and References</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA address space consists of nodes and references. Nodes represent various entities exposed by the server, such as variables, objects and data types. References represent relationships between nodes. Each reference interconnects two different nodes. References are of different types. The reference type indicates kind of relationship between nodes. A referenced node is called target node. The node where the reference ‘begins’ is called source node.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Node Classes</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Nodes in the address space are divided into 8 classes, depending on the meaning of the particular node. Each node belongs to one of the following classes:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_uaaddressspacevariables.htm" class="topiclink">Variable</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_uaaddressspaceobjects.htm" class="topiclink">Object</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_uaaddressspacemethods.htm" class="topiclink">Method</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_uaaddressspaceviews.htm" class="topiclink">View</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_uaaddressspacetypedefinitions.htm" class="topiclink">DataType</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_uaaddressspacetypedefinitions.htm" class="topiclink">VariableType</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_uaaddressspacetypedefinitions.htm" class="topiclink">ObjectType</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_uaaddressspacereferencetypes.htm" class="topiclink">ReferenceType</a></span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">These node classes have been defined by the OPC UA specification and the server implementer cannot add new classes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For better readability, a node of a specific node class will be referred to with the name of the class, for instance a node of class Variable will be referred to as variable.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For each node class there is a defined set of attributes, which the node of the given node class should expose. Some of the attributes are optional. The meaning of particular attributes is defined by the OPC UA specification. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Attributes common for all node classes:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Attribute</span></p>
+</td>
+<td style="vertical-align:top; width:130px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Mandatory/Optional</span></p>
+</td>
+<td style="vertical-align:top; width:341px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">NodeId</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Mandatory</span></p>
+</td>
+<td style="vertical-align:top; width:341px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">A structure uniquely identifying the node within the server’s address space.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">NodeClass</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Mandatory</span></p>
+</td>
+<td style="vertical-align:top; width:341px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Identifies the node class the node belongs to.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">BrowseName</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Mandatory</span></p>
+</td>
+<td style="vertical-align:top; width:341px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">A human-readable name of the node. The browse name does not have to be unique within the server’s address space. Sequences of browse names are used to identify paths in the server’s address space.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">DisplayName</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Mandatory</span></p>
+</td>
+<td style="vertical-align:top; width:341px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">A localizable, human-readable name of the node. It is supposed to be shown to the user.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:125px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Description</span></p>
+</td>
+<td style="vertical-align:top; width:130px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Optional</span></p>
+</td>
+<td style="vertical-align:top; width:341px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">An optional localizable explanation of the meaning of the node.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">Besides of these common attributes there are more attributes defined for each particular node class. Also, the OPC UA specification defines what references a node may have to other nodes, depending on its node class.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uaaddressspace.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

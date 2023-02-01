@@ -1,0 +1,1010 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Changes to Previous Versions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_changestopreviousversion.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Changes to Previous Versions</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_revisionhistory.htm">Previous</a>&nbsp;
+     <a href="html_opcuaintroduction.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h1 class="p_Heading1"><span class="f_Heading1">Changes to Previous Versions</span></h1>
+<p class="p_Paragraph"><span class="f_Paragraph">This chapter is intended to document changes in SDK, which may need reaction at developer side when updating to a new SDK version.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">New functionality is not explicitly documented here but in the <a href="html_whatsnew.htm" class="topiclink">What's New</a> chapter. A short reminder of new functionality will stay at <a href="html_revisionhistory.htm" class="topiclink">Revision History</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 6.00 and 5.70</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Changed interface of Server::BaseNode::generateNodeIdForSubNode</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The virtual </span><span class="f_Paragraph">method </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1ab709597a113d32cb259803247c1cce89" class="topiclink">Server::BaseNode::generateNodeIdForSubNode</a> <span class="f_Paragraph">now</span><span class="f_Paragraph"> has an additional parameter &quot;isMandatory&quot; to indicate whether the child node is modelled as mandatory in type definition.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If you have overwritten this method, you need to adapt the signature; otherwise your implementation is no longer invoked.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changed interface of Application::enableServerRegistration</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The method <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a11670739c41d8cda2c28e621d5baf2ee" class="topiclink">Application::enableServerRegistration()</a> now has an additional parameter &quot;serverCapabilities&quot;. It allow application developers to define the set of server capabilities used when registering the Server with a Discovery Server (now supporting RegisterServer2 service). It defaults to a list with only &quot;NA&quot; capability identifier (No capability information is available). See also the programming sample <a href="html_samplediscoveryservice.htm" class="topiclink">Enumerating UA Servers</a> for a list of server capability identifiers.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading1">Changes Between Version 5.70 and 5.66</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">There are no incompatible changes between 5.70 and 5.66.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading1">Changes Between Version 5.66 and 5.65</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Discontinued support for writing DataTypeDefinition attribute</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK does no longer support functionality of writing the data type definition attribute at server.</span><br />
+<span class="f_Paragraph">A client still can write this attribute (if the server supports this).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">There were some issues detected when changing the DataTypeDefinition attribute of a data type via write operations, especially for derived structures.</span><br />
+<span class="f_Paragraph">We removed this functionality since the functionality is almost never used.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If you encounter problems with the removal, please contact the support</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changed behaviour of Server::BaseNode::init() method</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">Server::BaseNode::init</a> method creates nodes according to the type definition (VariableType or ObjectType). If any node already exists with the matching reference and browse name, the existing node is not touched.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In former versions already existing nodes were not initialized at all, i.e. properties and other nodes were not created, a HasTypeDefinition reference was not added.</span><br />
+<span class="f_Paragraph">The application had to initialize the component programmatically with the type used in the type declaration.</span><br />
+<span class="f_Paragraph">With this initialization the attributes of the component properties were not copied from the original type definition.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Since version 5.66 the initialization does not stop at existing components, but continues to initialize the components according to the type definition.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Example:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">An object type has a variable of variable type AnalogItemType as component.</span><br />
+<span class="f_Paragraph">The &quot;EngeneeringUnits&quot; property of the component in the type is configured to &quot;°C&quot;.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The application created an object instance and its variable as component.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The application invoked &quot;init()&quot; on the new object instance</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">In older versions the application needed to initialize the component programmatically to &quot;AnaolgItemType&quot; but this type has no configured EngeneeringUnits.</span><br />
+<span class="f_Paragraph">The application had to configure each instance in the same way as in the object type.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Since version 5.66 the initialization of the component can be skipped - invoking &quot;init()&quot; on the new instance does the job.</span><br />
+<span class="f_Paragraph">It does no longer stop initialization at existing components, but continues to initialize the component according to the type definition.</span><br />
+<span class="f_Paragraph">The HasTypeDefinition reference is added to the component, the &quot;EngeneeringUnits&quot; property is created and contains the attributes as configured in the type definition.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span> <span class="f_Paragraph">The existing component itself will not be touched. Any configured attribute (e.g. description, ...) will NOT be copied from the type definition.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changed approach to create Server::ContinuationPoints and to store custom data</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">To increase the usability to store custom information to the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm" class="topiclink">Server::ContinuationPoints</a> some implementation was changed and several complicated interfaces were marked as deprecated.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Deprecated Interfaces</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Replacement</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_request_1acf7e9064d3a92c0b4be82a9fb618892f" class="topiclink">Server::BrowseRequest::createContinuationPoint()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_request_1aad72604921082db0aa0da44033e05d3f" class="topiclink">Server::HistoryReadEventRequest::createContinuationPoint()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request_1ad5601342e93481641874eb3e8b43df04" class="topiclink">Server::HistoryReadProcessedRequest::createContinuationPoint()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_request_1a1e5d7714d2e94db0462312810946993e" class="topiclink">Server::HistoryReadRawRequest::createContinuationPoint()</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p class="p_Paragraph"><span class="f_Paragraph">Create a matching <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm" class="topiclink">Server::ContinuationPoint</a> class from the SDK via the class specific </span><span class="f_Reference">create()</span><span class="f_Paragraph"> methods or for any custom derived class e.g. via the </span><span class="f_Reference">new</span><span class="f_Paragraph"> operator.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a78c950149c9afa496b43dd2cfaaff7c2" class="topiclink">Server::ContinuationPoint::setContext()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1af1fe40f12e2432edcf3ebcc9160e28e3" class="topiclink">Server::ContinuationPoint::getContext()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_continuation_point_1a73e19997f9810143dd5d734928f13415" class="topiclink">Server::BrowseContinuationPoint::setContextFromByteString()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_continuation_point_1a25ae89084ba4aacec9d5e2b04f963170" class="topiclink">Server::BrowseContinuationPoint::getContextAsByteString()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_continuation_point_1ac148408c56d99180a6ce9419fdfd1220" class="topiclink">Server::HistoryReadEventContinuationPoint::setContextFromByteString()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_continuation_point_1a536970954572f7eabc91a9c9eba8f51e" class="topiclink">Server::HistoryReadEventContinuationPoint::getContextAsByteString()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_continuation_point_1a258993af7dbdd88c6c94695e7e632f86" class="topiclink">Server::HistoryReadProcessedContinuationPoint::setContextFromByteString()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_continuation_point_1aa4678e8bb232dd90ce64bcc4087a23ae" class="topiclink">Server::HistoryReadProcessedContinuationPoint::getContextAsByteString()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_continuation_point_1a8214c85a59cbe9db7aac28414f66e8f5" class="topiclink">Server::HistoryReadRawContinuationPoint::setContextFromByteString()</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_continuation_point_1ac51936b47711286862423bb775705ce4" class="topiclink">Server::HistoryReadRawContinuationPoint::getContextAsByteString()</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>The interfaces to access the context as common data should no longer be used as it requires to know exactly how the data is organized and requires extra steps to free the memory.</p>
+<p>To store custom context create a derived class from the desired <span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm" class="topiclink">Server::ContinuationPoint</a></span> class and store the custom data as member.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session_1a861145ca984d5f33ea6a6fcc9ab4b14c" class="topiclink">Server::Session::onDeleteContinuationPoint()</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>This callback was used to free the custom context.</p>
+<p>As the custom context should be stored on derived classes, the destructor should take care to free the memory and this callback is no longer required.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> The now deprecated methods are still usable and keep the existing behavior, but raise a deprecation warning. The deprecated methods may be removed in a future release.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> Every concrete <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm" class="topiclink">Server::ContinuationPoint</a> still has at least one non-deprecated and usable context interface for a specific type. These interfaces should suit for a basic usage without the need to create a derived class.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.65 and 5.64</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Changed behaviour of Server::BaseNode::init() method</span></h2>
+<h2 class="p_Heading2">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">Server::BaseNode::init</a> method creates nodes according to the type definition (VariableType or ObjectType). The NodeIds assigned to these nodes are always generated to be unique.</h2>
+<h2 class="p_Heading2">In former versions these nodes were provided with NodeIds generated as GUID (changed on every start-up).</h2>
+<h2 class="p_Heading2">Now the NodeIDds are generated in a different way, dependent on the NodeId of the node where init() is called:</h2>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Parent NodeId Identifier</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Child NodeId Identifier</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">String</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">String</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Numeric</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">ByteString</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">GUID</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">ByteString</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">ByteString</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">ByteString</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note: </span><span class="f_Paragraph">Since the generated NodeIds now use a different identifier it can happen that a &quot;init()&quot; method is occupying NodeIds which might be accessed by the application later (even if unlikely).</span><br />
+<span class="f_Paragraph">Please verify that you assign a not yet used NodeId to your nodes - verify result of &quot;BaseNode::setNodeId()&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changed behaviour of inserting nodes into address space</span></h2>
+<h2 class="p_Heading2">In 5.58 we introduced that each node was immediately inserted into address space. This behaviour caused some problems since the desired node might not have been fully configured by the server application but was already accessible by clients.</h2>
+<h2 class="p_Heading2">Now the node - including children like properties - can be composed without inserting them into the address space.</h2>
+<h2 class="p_Heading2">Once the node is referenced (by a hierarchical forward reference) from a node within the address space, the complete tree of the referenced node will be inserted.<br />
+Of course an explicit invocation of &quot;insertTree&quot;is still possible.</h2>
+<h2 class="p_Heading2"><span style="font-weight: bold;">Note: </span>If you have relied on this behaviour please invoke <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1ad58bb8f81f995ed0bd701143eb1db538" class="topiclink">BaseNode::insertTree()</a> explicitly. This may be necessary if you want to expose nodes not connected to the address space, e.g. islands or virtual nodes</h2>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Change API Classes and Interfaces to Improve Access to Array Members</span></h2>
+<h2 class="p_Heading2">To improve stability of applications using the SDK in a multi-threaded environment, some of the Data Type API classes were changed. For certain accessors minor changes were performed in the implemented interface thus requiring adjustments in the application code using these interfaces. The affected interfaces are:</h2>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Interface <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm" class="topiclink">IEndpointDescriptionIUserTokenPolicy</a><br />
+The method <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ae2307508f5b5ca37a2539625feceaa82" class="topiclink">IEndpointDescription::getUserIdentityToken</a> was modified to return by value. The caller can no longer expect a const pointer to a <a href="class_softing_o_p_c_toolbox5_1_1_i_user_token_policy.htm" class="topiclink">IUserTokenPolicy</a> interface, an instance of <a href="class_softing_o_p_c_toolbox5_1_1_user_token_policy.htm" class="topiclink">UserTokenPolicy</a> class will be used instead.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Interface <a href="class_softing_o_p_c_toolbox5_1_1_i_event_filter.htm" class="topiclink">IEventFilter</a><br />
+The method <a href="class_softing_o_p_c_toolbox5_1_1_i_event_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_event_filter_1aedec598734d4ba09d259fc8055311500" class="topiclink">IEventFilter::getSelectClause</a> was modified to return by value. The caller can no longer expect a const pointer to a <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm" class="topiclink">ISimpleAttributeOperand</a> interface, an instance of <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm" class="topiclink">SimpleAttributeOperand</a> class will be used instead.</td></tr></table></div><h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Support for Decimal Data Type</span></h2>
+<h2 class="p_Heading2">The SDK now supports the Decimal data type, a high-precision signed decimal number described by the OPC UA specification.</h2>
+<h2 class="p_Heading2">See <a href="class_softing_o_p_c_toolbox5_1_1_i_decimal.htm" class="topiclink">IDecimal</a> and <a href="class_softing_o_p_c_toolbox5_1_1_decimal.htm" class="topiclink">Decimal</a> for the new interfaces.</h2>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span></h2>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.64 and 5.63</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Support of User Specific Access via RolePermissions for Servers</span></h2>
+<h2 class="p_Heading2">The concept of role permissions and session roles from the OPC UA Spec. 1.04 now can be used to replace the former concept of access patterns and user group indices.</h2>
+<h2 class="p_Heading2"><span style="font-weight: bold;">Note: </span>By default the SDK assumes usage of RolePermissions and an application has to adapt its configuration.</h2>
+<h2 class="p_Heading2">With the new concept it is also possible to configure more restrictions to UA nodes than with the old concept.<br />
+Where the old concept only was restricted to variables (read / write access) and methods (executable), now all nodes can be configured with various permission bits.</h2>
+<h2 class="p_Heading2">With this concept it is even possible to hide specific nodes for specific session roles, i.e. they will not be returned in Browse or TranslateBrowsePathsToNodeIds calls.</h2>
+<h2 class="p_Heading2"><span style="font-weight: bold;">Note: </span>The former concept of AccessPattern is still fully functional but must be explicitly enabled via <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ab76197c1834a2996d69d0f41466ad4cc" class="topiclink">Application::enableUserAccessPattern</a>.<br />
+Without enabling the AccessPattern related methods will return a bad status code and have no effect and only the RolePermission related methods will work. When enabled, the AccessPattern related methods will work but the RolePermission related methods will have no effect and cause error traces.</h2>
+<h2 class="p_Heading2">When the usage of AccessPattern is enabled, then the method <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1a4016662bee422ee58bea857587627f08" class="topiclink">Server::Variable::setAccessPatternKey</a> now defines NodeIds in the Toolkit namespace and implicitly adds the Toolkit namespace if it was not yet defined.<br />
+This can lead to a different namespace index for all following namespaces.<br />
+To ensure the same order of namespaces as in version 5.63 define and add all own namespace URIs before calling <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1a4016662bee422ee58bea857587627f08" class="topiclink">Server::Variable::setAccessPatternKey</a> (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1ab6c6f527522d204b55da104e14d64565" class="topiclink">Server::AddressSpaceRoot::addNamespace</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a09837eb728311043bcad9ee4958ea175" class="topiclink">Server::AddressSpaceRoot::getToolkitNamespaceIndex</a>).</h2>
+<h2 class="p_Heading2"><span style="font-weight: bold;">Note:</span> The usage of the new method <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ab76197c1834a2996d69d0f41466ad4cc" class="topiclink">Application::enableUserAccessPattern</a> and of the old methods regarding AccessPattern and user groups now produce deprecation warnings.<br />
+&nbsp;</h2>
+<h2 class="p_Heading2">See <a href="html_serveruserauthorization.htm" class="topiclink">User Authorization</a> for how to use the new concept, but the usage is pretty similar to the AccessPattern.</h2>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Old Method</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">New Method</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ab9bdf706fee23d9adb50662593d3d874" class="topiclink">Application::setAccessPattern</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a6341ddc1dbc5082bae85198f4bee2c51" class="topiclink">Application::getAccessPatterns</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>-</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Those methods are no longer required, as there is no need to predefine the permissions at a central location.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a1df21dd3a6ab68316ed87a3708a667b4" class="topiclink">Application::getUserAccessLevel</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1ad49fbec4429f1e38bd6469faae858e4a" class="topiclink">Server::BaseNode::getUserPermissions</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Instead of the UInt8 representing the bits of EnumAccessLevel for a specific user group, now the bits of the EnumPermissionType for a specific session are returned.</p>
+<p>The mapping of the bits are obvious.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1a4016662bee422ee58bea857587627f08" class="topiclink">Server::Variable::setAccessPatternKey</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_1ae58952b117c557274a1d06114cf31294" class="topiclink">Server::Method::setAccessPatternKey</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_file_1ac0486258b4002310a5cf04849b3c97ab" class="topiclink">Server::File::setAccessPatternKey</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory_1acc95ac8d5dbc9eb804d927d9961cbdf6" class="topiclink">Server::FileDirectory::setAccessPatternKey</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a49111fc24212be21af319c32d951c6bd" class="topiclink">Server::BaseNode::setRolePermissions</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Instead of the key to an existing pattern, directly assign a vector of desired <a href="class_softing_o_p_c_toolbox5_1_1_role_permission_type.htm" class="topiclink">RolePermissionTypes</a>.</p>
+<p><span style="font-weight: bold;">Note: </span>Do not forget to add the EnumPermissionType_Browse bit - otherwise the node will not be visible for this role.</p>
+<p><span style="font-weight: bold;">Note: </span>According to specification UA methods need the EnumPermissionType_Call bit on both method and object node. Former access rights needed only configuration on method node.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1a7e4dc40e9b8ed4f06596d479e0126f37" class="topiclink">Server::Variable::getAccessPatternKey</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_1aab05bb689bd2ce4ea92495bcc3624bf7" class="topiclink">Server::Method::getAccessPatternKey</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_file_1a80a2a94e3e56ceb6ec935f3ce276d620" class="topiclink">Server::File::getAccessPatternKey</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory_1ae4846c58958ae8125ad403718f50541d" class="topiclink">Server::FileDirectory::getAccessPatternKey</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1ad7a6408af071562d67040cedbfd32cb4" class="topiclink">Server::BaseNode::getRolePermissions</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Get the configured role permissions</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a0629090cbc9ca8f67f2d651eab87e358" class="topiclink">Server::Endpoint::onAuthenticateUser</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session_1aa4936d82caaa3273924a44d7cfdf6ffa" class="topiclink">Server::Session::setRoles</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>The last output parameter &quot;userGroupIndex&quot; of the endpoint callback was formerly used to define a user group to the session.</p>
+<p>For new behaviour provide the number 0 to the callback's output parameter and call the new method on the parameter &quot;session&quot; to assign any amount of roles.</p>
+<p>An application can change the session roles at any time.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session_1a58ac7dd10144e33d2e7f3d8cee05c4e8" class="topiclink">Server::Session::getUserGroupIndex</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session_1ade19b33d7f90993e8af171695286addc" class="topiclink">Server::Session::getRoles</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Access the assigned roles instead of the assigned user group index.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1abb42460a3654e479b9277eeb0964fd65" class="topiclink">Server::DataTransaction::getUserGroupIndex</a></p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request_1afa51265b5d3c44da8a8dbce5e942c33f" class="topiclink">Server::DataRequest::getUserGroupIndex</a></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>-</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Those methods are not necessary and don't get a Role specific replacement.</p>
+<p>The functionality can be replaced by <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a93e89e95a9c7698f1d0f6021bd247492" class="topiclink">Server::DataTransaction::getSession</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session_1ade19b33d7f90993e8af171695286addc" class="topiclink">Server::Session::getRoles</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h2 class="p_Heading2"><span class="f_Heading2">Changed signatures on Server::BaseNode to get references or referenced nodes</span></h2>
+<p>The methods <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1af78c8f0eb5feea55b5a3f86af783383b" class="topiclink">Server::BaseNode::getReferenceIterator()</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1aac634d6832a7fc9272a5bd7350e2d6f1" class="topiclink">Server::BaseNode::findNode()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a526e4cb34477b848e0fb1114957c5a64" class="topiclink">Server::BaseNode::findNodes()</a> got an additional parameter for the server session to evaluate user-specific permissions.<br />
+If the method shall not take care about user permissions (e.g. server internal) then a NULL session can be provided.</p>
+<p>&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changed signatures on Server::File and Server::FileDirectory methods</span></h2>
+<p>Various methods like <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_file_1aa8199de1cd11cc2869d06e4a83693e93" class="topiclink">Server::File::open</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory_1a421c1893e3e3db3020547bdb5e279b99" class="topiclink">Server::FileDirectory::createDirectory</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory_1a97fa52cbdccfa2473cdb5ba8e15a525e" class="topiclink">Server::FileDirectory::createFile</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory_1ab9a26f8fa074fd2f1a65af8fac30042e" class="topiclink">Server::FileDirectory::deleteFileOrDirectory</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_file_directory_1a210d4ceb62fcc4e38c7ea3bb4627d763" class="topiclink">Server::FileDirectory::moveOrCopy</a> have changed their signature,</p>
+<p>The added parameter methodNodeId is used to evaluate user specific rights for the method to be executed.</p>
+<p class="p_NoteHeader"><span class="f_NoteHeader" style="font-size: 12pt;">Note</span><span class="f_NoteHeader">: </span><span class="f_Paragraph">Since those methods are virtual you may not get compiler warnings if you have overridden the SDK functionality., but your code will simply not be invoked!</span><br />
+<span class="f_Paragraph">Please adapt your implementation to the new signature.</span></p>
+<p class="p_NoteHeader"><span class="f_NoteHeader">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading1">Changes Between Version 5.63 and 5.62</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Support for ARMv7 / Reduced Linux Installer Size</span></h2>
+<h2 class="p_Heading2">Binary delivery now contains libraries for ARMv7, using gcc7 compiler.</h2>
+<h2 class="p_Heading2">The size of the Linux installer was reduced by removing the debug libraries.<br />
+Debug libraries of the SDK defer from the release libraries only by missing optimization.<br />
+The no longer delivered debug libraries are still available on request. </h2>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration of Hostname Resolution</span></h2>
+<h2 class="p_Heading2"><span class="f_Paragraph">The methods </span><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a73a81690bbc5b78c6bdfef604d1466d5" class="topiclink">Application::findServers()</a>,<span class="f_Paragraph"> </span><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a>, <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a7ab450091d876976df0266fbf97e3daa" class="topiclink">Client::Session::setHostnameResolution()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_redundant_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_redundant_session_1a3af5ca4e8ae56bbd2d91173f5bc586cc" class="topiclink">Client::RedundantSession::setHostnameResolution()</a> have changed its signature.</h2>
+<h2 class="p_Heading2">The former boolean is now replaced with an enumeration to configure, how the hostname part of an URL shall be resolved.</h2>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading1">Changes Between Version 5.62 and 5.61</span></h2>
+<h2 class="p_Heading2"><a id="refactordatatype"></a><span class="f_Heading2">Refactored Definition and Access of User-Defined Data Types</span></h2>
+<h3 class="p_Heading3"><span class="f_Paragraph">The class FieldDescription and EnumeratedValueDescription was removed from SDK.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">Please use classes </span><a href="class_softing_o_p_c_toolbox5_1_1_structure_field.htm#class_softing_o_p_c_toolbox5_1_1_structure_field" class="topiclink">StructureField</a><span class="f_Paragraph"> and </span><a href="class_softing_o_p_c_toolbox5_1_1_enum_field.htm#class_softing_o_p_c_toolbox5_1_1_enum_field" class="topiclink">EnumField</a><span class="f_Paragraph"> instead of it.</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph" style="font-weight: bold;">Changes in interfaces</span></h3>
+<h3 class="p_Heading3"><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_data_type_description" class="topiclink">DataTypeDescription</a></span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Method name</span></p>
+</th>
+<th style="vertical-align:top; width:1323px; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Comment</span></p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>setName</p>
+</td>
+<td style="vertical-align:top; width:1323px; padding:3px; border:solid 1px #000000;"><p>Method is removed. The name of the data type is automatically set, once the data type description is assigned to a data type node via <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type_1a22d13309b68477f020a387b9e7653e0c" class="topiclink">setDataTypeDescription</a></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>getName</p>
+</td>
+<td style="vertical-align:top; width:1323px; padding:3px; border:solid 1px #000000;"><p>The data type of the name of the description has been changed to Qualified name</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>setDocumentation</p>
+<p>getDocumentation</p>
+<p>setVersion</p>
+<p>getVersion</p>
+<p>setDocumentationAttributes</p>
+<p>getDocumentationAttributes</p>
+<p>setCustomAttributes</p>
+<p>getCustomAttributes</p>
+</td>
+<td style="vertical-align:top; width:1323px; padding:3px; border:solid 1px #000000;"><p>These methods have been removed.</p>
+<p>The methods were only relevant for creation and explanation of the dictionary XML, which exposes the data type descriptions.</p>
+<p>The newly supported attribute EnumAttributeId_DataTypeDefinition exposes the data type descriptions in a way which does not need dictionary XML.</p>
+<p>The formerly supported methods are obsolete and are removed.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>getEncodingId</p>
+</td>
+<td style="vertical-align:top; width:1323px; padding:3px; border:solid 1px #000000;"><p>This method is relevant for structured data types only and was moved to the derived class.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_enumeration_data_type_description" class="topiclink">EnumerationDataTypeDescription</a></span><span class="f_Paragraph" style="font-weight: bold;"> </span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Method name</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>setEnumeratedValues</p>
+<p>getEnumeratedValues</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>The data type of enumerated value definition has changed.</p>
+<p>The new used type <a href="class_softing_o_p_c_toolbox5_1_1_enum_field.htm#class_softing_o_p_c_toolbox5_1_1_enum_field" class="topiclink">EnumField</a> is not reference counted, i.e. it is possible to create variables directly on the stack.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>getDefinition</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>A new method to extract the definition of the description.</p>
+<p>The definition just contains the fields, so it is almost an overload.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>getTransportDataType</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>The support for OptionSet changes the data type used at transport.</p>
+<p>A &quot;normal&quot; enumeration always needs for a value the data type Int32.</p>
+<p>An OptionSet can use Byte, UInt16, UInt32 or UInt64</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>isEnumValue</p>
+<p>getEnumeratedValue</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>The integer representation changed from Int32 to Int64.</p>
+<p>So also 64 bit values can be presented. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_structured_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_structured_data_type_description" class="topiclink">StructuredDataTypeDescription</a></span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Method name</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>setFields</p>
+<p>getFields</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>The data type of field definition has changed.</p>
+<p>The new used type <a href="class_softing_o_p_c_toolbox5_1_1_structure_field.htm#class_softing_o_p_c_toolbox5_1_1_structure_field" class="topiclink">StructureField</a> is not reference counted, i.e. it is possible to create variables directly on the stack.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>getEncodingId</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>The method was moved from base class DataTypeDescription</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>getDefinition</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>A structured data type is completely described by this information.</p>
+<p>It contains - beside the structure fields descriptions - also the encoding ID, the base type and the structure type.</p>
+<p>All information is defined, when a structured data type description is assigned to a data type node via <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type_1a22d13309b68477f020a387b9e7653e0c" class="topiclink">setDataTypeDescription</a>.</p>
+<p>Clients can retrieve this information for processing</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_node_set2_export_1_1_export_custom_nodes_transaction.htm" class="topiclink">ExportCustomNodesTransaction</a></span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Method name</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:200px; padding:3px; border:solid 1px #000000;"><p>exportCustomDataType</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>The method got an additional parameter to provide a DataTypeDescription to export the definition.</p>
+<p>Provide a NULL pointer to keep the same behavior as in 5.61.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Port Code</span></h3>
+<p>To port your code from older versions of SDK to 5.62 please follow the steps described here:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Old code</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">New code</span></p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p><span style="font-weight: bold;">Comment</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>StructuredDataTypeDescriptionPtr structureDescription = StructuredDataTypeDescription::create();</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>StructuredDataTypeDescriptionPtr structureDescription = StructuredDataTypeDescription::create();</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Nothing changed here</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>structureDescription-&gt;setName(_T(&quot;MyStructType&quot;));</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Data type name is specified when the description is attached to the data type node.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>structureDescription-&gt;setDocumentation(_T(&quot;MyDocumentation&quot;));</p>
+<p>structureDescription-&gt;setVersion(_T(&quot;1.0&quot;));</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><br />
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>All documentation, custom attributes and version information is removed.</p>
+<p>It was relevant for readability of dictionary XML only.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>std::vector&lt;FieldDescriptionPtr&gt; fields;</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>std::vector&lt;StructureField&gt; fields;</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Use different class for structure field description</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>FieldDescriptionPtr field1 = FieldDescription::create();</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>StructureField field1;</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>New field description is not reference counted, directly on stack</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>field1-&gt;setName(_T(&quot;CondenserMotorRunning&quot;));</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>fields.setName(_T(&quot;CondenserMotorRunning&quot;));</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Use &quot;.&quot; instad of &quot;-&gt;&quot;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>result = field1-&gt;setType(NodeId(EnumNumericNodeId_Boolean));</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>result = field1.setDataType(NodeId(EnumNumericNodeId_Boolean));</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Use different method name to specify data type</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>field1-&gt;getLength(3);</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>std::vector&lt;OTUInt32&gt; arrayDimensions;</p>
+<p>arrayDimensions.push_back(3);</p>
+<p>field1.setArrayDimensions(arrayDimensions);</p>
+</td>
+<td style="vertical-align:top; padding:3px; border:solid 1px #000000;"><p>Use &quot;setArrayDimensions&quot; instead of &quot;setLength&quot;.<br />
+With this method also matrix values of fields are possible.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The porting of code for enumerations is similar.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading2">Configuration of Derived Structured Data Types</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Up to version 5.61 all fields of a structured data type have to be provided in the description.</span><br />
+<span class="f_Paragraph">From 5.62 on derived structured data types (i.e. data types located with a HasSubtype reference below another structured data type) automatically inherit the fields from its super-type.</span><br />
+<span class="f_Paragraph">The derived structure definition shall define only additional fields, however when providing a Value for a variable, all fields - including all fields of the base type(s) - have to be provided.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Methods ignoreMantis4545 and ignoreMissingNonce are replaced by method disableSecurityChecks</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The former SDK methods to allow workaround regarding non-compliant UA applications are now replaced by the new method <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a6f6134df1bc98eb9977260ec0f720184" class="topiclink">Application::disableSecurityChecks</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ad63112180a510d9bc99121f6c819aa4a" class="topiclink">Client::Session::disableSecurityChecks</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">There are multiple security checks that can be disabled which are all described at <a href="_enums_8h_1a010e5fc3de2f9d31fbb3f78e65a0fd61.htm#_enums_8h_1a010e5fc3de2f9d31fbb3f78e65a0fd61" class="topiclink">EnumSecurityCheck</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">We recommend to keep security checks enabled. Disabling is the last mean to allow communication and will introduce security risks.</span><br />
+<span class="f_Paragraph">If any UA application needs security checks to be disabled, please inform both the application vendor and Softing <a href="html_supportinfo.htm" class="topiclink">Technical Support</a>.</span></p>
+<p class="p_NoteHeader"><span class="f_NoteHeader">Note: </span><span class="f_Paragraph">If your code used one of the removed methods, please replace the old method with the matching value of <a href="_enums_8h_1a010e5fc3de2f9d31fbb3f78e65a0fd61.htm#_enums_8h_1a010e5fc3de2f9d31fbb3f78e65a0fd61" class="topiclink">EnumSecurityCheck</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changed signature of ModelDesigner OPC UA Method ModifyAttributes</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The OPC UA Method &quot;ModifyAttributes&quot; got an additional argument &quot;DataTypeDefinition&quot;, which changes the signature for method calls.</span><br />
+<span class="f_Paragraph">See <a href="html_addressspacemodeling.htm" class="topiclink">Address Space Modeling</a>.</span><br />
+<span class="f_Paragraph">If a server exposes these OPC UA methods to allow clients to modify the address space, then the clients need to provide an additional method argument for this method.</span><br />
+<span class="f_Paragraph">The method argument can be a NULL value.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.61 and 5.60</span></h1>
+<p class="p_Paragraph"><span class="f_Paragraph">Beside new features and some bug fixes no relevant changes are done.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">There is no need to adapt existing applications.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading1">Changes Between Version 5.60 and 5.59</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">PubSub::SubscribedDataSet</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The signature of the callback <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1a883d3c723915e8f5420857dfe214a263" class="topiclink">PubSub::SubscribedDataSet::onValuesReceived()</a> has changed to use only one parameter of the class <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm" class="topiclink">ReceivedValuesInformation</a> instead of two parameters (one for the indices and one for the values).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> If you have overridden the callback with the old signature, then the changes won't produce any build errors. The callback with the old signature won't be called anymore until it is adopted to the new signature.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Instead of the previous parameters </span><span class="f_Reference">indices</span><span class="f_Paragraph"> and </span><span class="f_Reference">values</span><span class="f_Paragraph">, you can call <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a9c5ba42a858c833e475931e6298be109" class="topiclink">ReceivedValuesInformation::getIndices()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a0d99cc1d6a548f09d33499d1742dad96" class="topiclink">ReceivedValuesInformation::getValues()</a> on the parameter </span><span class="f_Reference">receivedValues</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> The <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a0d99cc1d6a548f09d33499d1742dad96" class="topiclink">ReceivedValuesInformation::getValues()</a> now returns </span><span class="f_Reference">std::vector&lt;<a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm" class="topiclink">DataValue</a>&gt;</span><span class="f_Paragraph"> instead of </span><span class="f_Reference">std::vector&lt;const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm" class="topiclink">IDataValue</a>*&gt;</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.59 and 5.58</span></h1>
+<h3 class="p_Heading3"><span class="f_Heading3">New Default value for channel sharing</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The default value of channel sharing has been changed to false. You can change this setting via </span><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a72d12cbeee2fcbf0dad60c70ce6ff1f0" class="topiclink">Application::setChannelSharing</a><span class="f_Paragraph"> if you establish multiple sessions to one server and save used secure channels.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In most client applications this setting will have almost no effect.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.58 and 5.57</span></h1>
+<h3 class="p_Heading3"><span class="f_Heading3">New License Keys</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The licensing of the SDK has changed. New license keys will be provided to all customers with a valid subscription.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Please adapt your code with the new license key like:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;activateLicense(EnumFeature_Server,&nbsp;_T(&quot;XXXXX-XXXXX-XXXXX-XXXXX-XXXXX&quot;));</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Model Designer</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The Model Designer functionality can no longer be switched off via the define TOOLKIT_HAVE_MODEL_DESIGNER since the SDK uses the functionality to build the standard address space.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::BaseNode</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_Paragraph">method </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a6c0c2e528cb5070361844f3dfbc4ff31" class="topiclink">Server::BaseNode::addReference</a><span class="f_Paragraph"> automatically inserts both source and target node into the servers address space. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Thus the often made error by forgetting to invoke the </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a29029be7213e42062606bbe8834b3a8f" class="topiclink">Server::BaseNode::insert</a> method (which causes the nodes to be invisible for clients) is avoided.<br />
+However any nodes linked by references <span class="f_Paragraph">now have to be removed explicitly from address space via </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a51671ab7640cc72a6a53187698b46f8e" class="topiclink">remove</a>() or <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1abe72844b700f478809050173e104f7fc" class="topiclink">removeTree</a>(), even if they are not inserted explicitly.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::AddressSpaceRoot</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The method <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a61e59372ea60cd00a651ce9c3b6560a5" class="topiclink">Server::AddressSpaceRoot::createObjectInstance()</a> is marked as deprecated but is still functional. The method should be replaced by a create() method of the most matching API class.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::Endpoint</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_Paragraph">methods to specify PKI folders for validation of user certificates </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a7d695d2677624bf32d6bc460a70c29d9" class="topiclink">setUserCertificateTrustListLocation</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a93128cc7e2a12a8dd9f44df3e0ebd287" class="topiclink">setUserCertificateIssuerListLocation</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1ad070817701fa6b4a217860bcc34aac33" class="topiclink">setUserCertificateRevocationListLocation</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a76d16e384aa11540ae065a5fd3b64ef1" class="topiclink">getUserCertificateTrustListLocation</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a4f593af04cb0e8b13acd4d35855c3e51" class="topiclink">getUserCertificateIssuerListLocation</a><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a249454ef10409dd2d386f1d14516778f" class="topiclink">getUserCertificateRevocationListLocation</a> <span class="f_Paragraph">, are marked as deprecated but are still functional.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The new methods, which replace the functionality are </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1ac1975e1887340029142aca92392da534" class="topiclink">setUserPkiConfiguration</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1ad0921c879fd2616daf91b2ed24f4d7c6" class="topiclink">getUserPkiConfiguration</a>, which allow additional configuration on PKI like CRL check options.</p>
+<p class="p_Table"><span class="f_Table">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Removed deprecated functions of 5.52 and earlier</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">All methods, which were marked as deprecated in 5.52 and earlier have been removed.</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An SDK upgrade of version 5.52 or earlier to 5.58 or later may cause compiler or linker errors or may result in no longer called callbacks without any deprecation warnings as hints.</span><br />
+<span class="f_Paragraph">If you perform such big upgrades, please have a closer look on the changes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Several deprecated constructors are changed to be protected instead of public, these constructors didn't report a deprecation warning, as this was not possible in a correct way.</span><br />
+<span class="f_Paragraph">If such constructors are used, this will produce compiler errors.</span><br />
+<span class="f_Paragraph">Calls like</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Server::ObjectPtr&nbsp;obj&nbsp;=&nbsp;new&nbsp;Server::Object()</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">can be replaced by using the related </span><span class="f_Reference">create()</span><span class="f_Paragraph"> Method</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Server::ObjectPtr&nbsp;obj&nbsp;=&nbsp;Server::Object::create()</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Produce deprecation warnings for all deprecated function</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Several deprecated functions/method were just documented as deprecated, but didn't produce a deprecation warning as hint for the programmers.</span><br />
+<span class="f_Paragraph">These deprecated functions will be removed in a later version of the SDK.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Using one of the following deprecated functions/methods produces a deprecation warning:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="globalfunctions.htm#namespace_softing_o_p_c_toolbox5_1a80a294603cdb10a6435dbec5249b1ac3" class="topiclink">registerApplication()</a> of Toolbox.h</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="globalfunctions.htm#namespace_softing_o_p_c_toolbox5_1a1c5bcab1373deea4a4ea890964c8f2d6" class="topiclink">registerCreator()</a> of Toolbox.h</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1aafcc3fda78b771af2c336a5376428cf5" class="topiclink">Application::loadCertificate()</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a6254b7c21ab26e015ec21ebe4d96df24" class="topiclink">Application::loadPrivateKey()</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ac6a05caa1903ad0a12e801cf1f8c45c9" class="topiclink">Application::getDefaultRequestTimeoutHint()</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a20107cba0f8916b7631c8354319ac548" class="topiclink">Application::setDefaultRequestTimeoutHint()</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ae49ff0e29023a0be5c9db4de06b77530" class="topiclink">Client::Session::getDefaultRequestTimeoutHint()</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a0e5e1af9932ea3aad8a57e54171c8e19" class="topiclink">Client::Session::setDefaultRequestTimeoutHint()</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_finite_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_finite_state_variable_1a561152924477aed16035ba5cd7be40a6" class="topiclink">Server::FiniteStateVariable::setId()</a></span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading1">Changes Between Version 5.57 and 5.56</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Configuration to prefer IPv4 or IPv6</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The host name part of a server URI can be resolved to an IPv4 or an IPv6 address. In older versions, it was unpredictable (computer / DNS dependant) which IP version was found first.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Now the preferred IP version can be configured (default IPv4), which changes the behaviour slightly. If a client previously relied on first finding an IPv6 address for the host name (but IPv4 addresses were also available), now the client shall configure its preference at the session. See</span><span class="f_Paragraph"> </span><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a7ab450091d876976df0266fbf97e3daa" class="topiclink">setHostnameResolution()</a><span class="f_Paragraph"> for</span><span class="f_Paragraph"> more information.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The methods </span><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a73a81690bbc5b78c6bdfef604d1466d5" class="topiclink">Application::findServers()</a><span class="f_Paragraph"> and </span><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a> got also an additional parameter for the preferred host name part resolution.</p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Replaced FieldDescription::getTypeName() by FieldDescription::getType()</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The method FieldDescription::getTypeName() returned a string and this was insufficient to identify a certain type and could only be used to print messages.</span><br />
+<span class="f_Paragraph">This method was replaced by the method </span><span class="f_Paragraph" style="text-decoration: underline;">FieldDescription::getType()</span><span class="f_Paragraph">, which returns the unique <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the data type.</span><br />
+<span class="f_Paragraph">If this method was used to produce string messages, then you can use </span><span class="f_Paragraph" style="text-decoration: underline;">FieldDescription::getType() </span><span class="f_Paragraph">and call <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id_1a418a232681512b8d92338964c6e0e4bf" class="topiclink">NodeId::toString()</a> on the returned data type <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a>, but this will produce different strings than FieldDescription::getTypeName().</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Changed signatures for setting custom structured data type values</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The signature of the methods <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value_1a555f2ded7bcea89d3b15619e31a67121" class="topiclink">Value::setStructuredValue()</a>, <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value_1ad5e476a2dddae7d7ff664032286a024e" class="topiclink">Value::setStructuredValueArray()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value_1a22ac62a2bbc223af09638fffaed0d477" class="topiclink">Value::setStructuredValueMatrix()</a> were simplified, the first parameter &quot;dataTypeId&quot; is no longer required.</span><br />
+<span class="f_Paragraph">The old signature methods are marked as deprecated but are still functional.</span><br />
+<span class="f_Paragraph">New overloaded methods with the same name but one parameter less are added. Calls to the deprecated methods can be changed to the new signatures by removing the first parameter &quot;dataTypeId&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.56 and 5.54</span></h1>
+<h3 class="p_Heading3"><span class="f_Heading3">Changed signature of Client::Session::getDataTypeDescription</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The signature of <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a79a937cc1b1ac9c29e0912628843c1e8" class="topiclink">Session::getDataTypeDescription()</a> has changed to return the <a href="class_softing_o_p_c_toolbox5_1_1_data_type_description.htm" class="topiclink">DataTypeDescription</a> by an output parameter and report a status code as return value.</span><br />
+<span class="f_Paragraph">Change the code to validate the returned status code instead of testing the returned pointer to be not NULL.</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.54 and 5.53</span></h1>
+<h3 class="p_Heading3"><span class="f_Heading3">Changed signature of Application::findServers</span></h3>
+<h1 class="p_Heading1"><span class="f_Paragraph">The parameters </span><span class="f_Reference">securityPolicy</span><span class="f_Paragraph"> and </span><span class="f_Reference">messageSecurityMode</span><span class="f_Paragraph"> were removed from the method </span><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a73a81690bbc5b78c6bdfef604d1466d5" class="topiclink">Application::findServers()</a><span class="f_Paragraph"> </span><span class="f_Paragraph">since the FindServers service shall work without security.</span></h1>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Changed default values of Client::Subscription</span></h3>
+<h1 class="p_Heading1"><span class="f_Paragraph">When creating a subscription, the initial values of its members have changed.</span></h1>
+<h1 class="p_Heading1"><span class="f_Paragraph">If you have not explicitly set those values and rely on the default values, you shall adapt your code.</span></h1>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Member</span></p>
+</td>
+<td style="vertical-align:top; width:253px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Old value</span></p>
+</td>
+<td style="vertical-align:top; width:789px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">New value</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; background-color:#ffffff; padding:3px;"><p>PublishingInterval</p>
+</td>
+<td style="vertical-align:top; width:253px; background-color:#ffffff; padding:3px;"><p>0.0 (invalid)</p>
+</td>
+<td style="vertical-align:top; width:789px; background-color:#ffffff; padding:3px;"><p>1000.0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; background-color:#ffffff; padding:3px;"><p>LifeTimeCount</p>
+</td>
+<td style="vertical-align:top; width:253px; background-color:#ffffff; padding:3px;"><p>0 (invalid)</p>
+</td>
+<td style="vertical-align:top; width:789px; background-color:#ffffff; padding:3px;"><p>60</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; background-color:#ffffff; padding:3px;"><p>MaxKeepAliveCount</p>
+</td>
+<td style="vertical-align:top; width:253px; background-color:#ffffff; padding:3px;"><p>0 (invalid)</p>
+</td>
+<td style="vertical-align:top; width:789px; background-color:#ffffff; padding:3px;"><p>10</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; background-color:#ffffff; padding:3px;"><p>PublishingEnabled</p>
+</td>
+<td style="vertical-align:top; width:253px; background-color:#ffffff; padding:3px;"><p>false</p>
+</td>
+<td style="vertical-align:top; width:789px; background-color:#ffffff; padding:3px;"><p>true</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Changed default values of Client::MonitoredItem</span></h3>
+<h1 class="p_Heading1"><span class="f_Paragraph">When creating a a monitored item, , the initial values of its members have changed.</span></h1>
+<h1 class="p_Heading1"><span class="f_Paragraph">If you have not explicitly set those values and rely on the default values, you shall adapt your code.</span></h1>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Member</span></p>
+</td>
+<td style="vertical-align:top; width:253px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Old value</span></p>
+</td>
+<td style="vertical-align:top; width:789px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">New value</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; background-color:#ffffff; padding:3px;"><p>AttributeId</p>
+</td>
+<td style="vertical-align:top; width:253px; background-color:#ffffff; padding:3px;"><p>(invalid)</p>
+</td>
+<td style="vertical-align:top; width:789px; background-color:#ffffff; padding:3px;"><p>EnumAttributeId_Value</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; background-color:#ffffff; padding:3px;"><p>MonitoringMode</p>
+</td>
+<td style="vertical-align:top; width:253px; background-color:#ffffff; padding:3px;"><p>EnumMonitoringMode_Disabled</p>
+</td>
+<td style="vertical-align:top; width:789px; background-color:#ffffff; padding:3px;"><p>EnumMonitoringMode_Reporting</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading3">State machines</span></h1>
+<h1 class="p_Heading1"><span class="f_Paragraph">The states and the transitions of state machines are now no longer copied from the state machine type to the state machine instance.</span><br />
+<span class="f_Paragraph">Do NOT remove any states or transitions from instances - the states or transitions would be removed from the type definition!</span></h1>
+<h1 class="p_Heading1"><span class="f_Paragraph">The decision, whether states and transitions are copied, is taken from the modelling rule at the type definition.</span></h1>
+<h1 class="p_Heading1"><span class="f_Paragraph">Previous versions needed a copy of the states; otherwise the state machines did not work properly.</span><br />
+<span class="f_Paragraph">Now state machines also work with original</span> &quot;Opc.Ua.NodeSet2.xml&quot;<span class="f_Paragraph"> file from OPC Foundation.</span></h1>
+<h1 class="p_Heading1"><span class="f_Paragraph">Affected classes:</span></h1>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Server::StateMachine</span><br />
+<span class="f_Paragraph">getState(const QualifiedName&amp; browseName)</span><br />
+<span class="f_Paragraph">getTransition(const QualifiedName&amp; browseName)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Server::ExclusiveLimitStateMachine</span><br />
+<span class="f_Paragraph">getHighHigh()</span><br />
+<span class="f_Paragraph">getHigh()</span><br />
+<span class="f_Paragraph">getLow()</span><br />
+<span class="f_Paragraph">getLowLow()</span><br />
+<span class="f_Paragraph">getLowLowToLow()</span><br />
+<span class="f_Paragraph">getLowToLowLow()</span><br />
+<span class="f_Paragraph">getHighHighToHigh()</span><br />
+<span class="f_Paragraph">getHighToHighHigh()</span><br />
+<span class="f_Paragraph">getLowLow()</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Server::ShelvedStateMachine</span><br />
+<span class="f_Paragraph">getUnshelved()</span><br />
+<span class="f_Paragraph">getTimedShelved()</span><br />
+<span class="f_Paragraph">getOneShotShelved()</span><br />
+<span class="f_Paragraph">getUnshelvedToTimedShelved()</span><br />
+<span class="f_Paragraph">getUnshelvedToOneShotShelved()</span><br />
+<span class="f_Paragraph">getTimedShelvedToUnshelved()</span><br />
+<span class="f_Paragraph">getTimedShelvedToOneShotShelved()</span><br />
+<span class="f_Paragraph">getOneShotShelvedToUnshelved()</span><br />
+<span class="f_Paragraph">getOneShotShelvedToTimedShelved()</span></td></tr></table></div><p>&nbsp;</p>
+<p><span class="f_Heading1">Changes Between Version 5.53 and 5.52</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Renamed libeay64 and ssleay64 .lib and .dll to libeay32 and libssl32</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The library names were reverted to their default names, as they are generated by OpenSSL, even though the name might be misleading to a 32 bit library.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> This change will only affect applications that linked and used the 64 bit OpenSSL libraries in their application code.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Removed NumericRange constructor from string</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The constructor </span><span class="f_FixedSize">NumericRange(const &amp;tstring numericRange);</span><span class="f_Paragraph"> and then associated </span><span class="f_FixedSize">EnumStatusCode getParseResult(); </span><span class="f_Paragraph">were removed from API.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Please change your code into using the default constructor and the <a href="class_softing_o_p_c_toolbox5_1_1_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_numeric_range_1a5fe7aaf443e3b8d474c3dd80c7258506" class="topiclink">NumericRange::parse()</a> method, which will return the parse result.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Validation of Certificate signatures</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The toolkit performs some additional security checks when validating certificates. The signature algorithms used for the creation of a certificate must fit to the security level of the desired action. Using a low secure certificate to establish a high secure connection will be rejected. For insecure actions any certificate signature algorithms are accepted.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> This validation takes place for Application Instance Certificates when establishing secure communication and for user certificates for X509 user authentication (see <a href="html_securityimplementatioin.htm" class="topiclink">Security in OPC UA Applications</a>).</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Removed methods to set / get specific UserIdentityToken</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The methods like </span><span class="f_FixedSize">IValue::setAnonymousIdentityToken()</span><span class="f_Paragraph"> or </span><span class="f_FixedSize">IValue::setUserNameIdentityToken()</span><span class="f_Paragraph"> were removed from the toolkit.</span><br />
+<span class="f_Paragraph">If your application has used such values, please change your code to use the methods like </span><span class="f_FixedSize">IValue::setUserIdentityToken() </span><span class="f_Paragraph">to set a specific UserIdentityToken.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The adapted code shall look like</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">UserNameIdentityToken&nbsp;userNameToken=&nbsp;generateUserNameIdentityToken(randomizationNumber&nbsp;+&nbsp;i);</span><br />
+<span class="f_CodeExample">UserIdentityToken&nbsp;token;</span><br />
+<span class="f_CodeExample">token.setUserNameIdentityToken(&amp;userNameToken);</span><br />
+<span class="f_CodeExample">Value&nbsp;value;</span><br />
+<span class="f_CodeExample">value.setUserIdentityToken(&amp;token);</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading1">Changes Between Version 5.52 and 5.51</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Trace.h renamed to ToolkitTrace.h</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">To resolve a name conflict with the system header file &quot;trace.h&quot; on some platforms the Trace.h file is renamed to a toolkit specific name</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> If you already use the Trace in your Application, the compiler will produce a fatal error like &quot;cannot open include file&quot;. Please change the code to include the ToolkitTrace.h file.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Enumeration Data Types check range</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Variables having a enumeration data type check the valid range of the enumeration and refuse write requests if the value is out of range.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The check is performed only if the enumeration data type has a property named &quot;EnumStrings&quot; or &quot;EnumValues&quot; describing the valid enumeration values.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Removed deprecated constructors</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The constructors of AnalogItem, DataItem, DiscreteItem, MultiStateItem and TwoStateItem are removed. If these constructors were used, change them to use the static create() methods.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Changed &quot;Treat WChar_t As Built in Type&quot; setting for Visual Studio 2008</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">This project setting was removed, to apply to the default setting, which is </span><span class="f_Reference">Yes</span><span class="f_Paragraph">. The former toolkit version used the setting &quot;</span><span class="f_Reference">No (/Zc:wchar_t-)</span><span class="f_Paragraph">&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Change in the project properties &quot;</span><span class="f_Reference">Configuration Properties</span><span class="f_Paragraph">&quot; -&gt; &quot;</span><span class="f_Reference">C/C++</span><span class="f_Paragraph">&quot; -&gt; &quot;</span><span class="f_Reference">Language</span><span class="f_Paragraph">&quot; -&gt; &quot;</span><span class="f_Reference">Treat WChar_t As Built in Type</span><span class="f_Paragraph">&quot; to &quot;</span><span class="f_Reference">Yes</span><span class="f_Paragraph">&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.51 and 5.50</span></h1>
+<h3 class="p_Heading3"><span class="f_Heading3">Security checks on Client side</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A Client, establishing a secure connection, receives a certificate of the sever, to check if the client trust the server. The client now needs to configure the PKIStoreConfiguration. The code can be similar to the server implementation:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">PkiStoreConfiguration&nbsp;configuration;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">configuration.setCertificateTrustListLocation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_T(&quot;C:/certificates/trustlist&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">configuration.setCertificateRevocationListLocation&nbsp;(_T(&quot;C:/certificates/revocationlist&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">configuration.setRejectedCertificateLocation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_T(&quot;C:/certificates/rejected&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;setPkiStoreConfiguration(&amp;configuration);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Some information can be found in <a href="html_clientsecuritysetup.htm" class="topiclink">Security in Client Applications</a></span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">MultiStateValueDiscreteType</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Toolkit supports MultiStateValueDiscreteType as described in part 8, chapter 5.3.3.4 MultiStateValueDiscreteType of the OPC UA specification.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Export of Virtual Nodes</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Export of AddressSpace functionality provides a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a6cb8f2a5721c393c1f6377bb1d9ec752" class="topiclink">Callback</a> to export <a href="html_programmersguide_how_to_server_dynamic_adressspace.htm" class="topiclink">virtual nodes</a> not existing in the AddressSpace permanently</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.50 and 5.41</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Delivery</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">ErrorReport library</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Removed from delivery. Functionality moved to TB5CPP.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">NodeSet2Import library</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Removed from delivery. Functionality moved to TB5CPP.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">CppApi</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Source files removed from delivery.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">ModelDesigner</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Classes and structure are named ModelDesigner. Previous ModelCompiler classes are adapted to the new name. If applications already use some functionality of the old ModelCompiler, it must be renamed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">It is no longer possible to disable this feature unless source code of CppApi is available. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To disable this feature in file </span><span class="f_FixedSize">ToolkitConfig.h</span><span class="f_Paragraph"> the define </span><span class="f_FixedSize">TOOLKIT_HAVE_MODEL_DESIGNER</span><span class="f_Paragraph"> needs to be changed to </span><span class="f_FixedSize">TOOLKIT_CONFIG_NO</span><span class="f_Paragraph"> and both CppApi and applications have to be re-compiled.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changes Affecting Server and Client Applications</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">Argument</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Changing the ValueRank parameter of an <a href="class_softing_o_p_c_toolbox5_1_1_argument.htm" class="topiclink">Argument</a> automatically revises the ArrayDimensions parameter to a valid value if they don't fit together and vice versa. This guarantees that no invalid combination can be set.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading2">Changes Affecting Server Applications</span></h1>
+<p class="p_Paragraph"><span class="f_Heading3">Toolkit Namespace</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Former OPC UA toolkit versions reserved namespace ID 1 for toolkit internal use (e.g. for NodeId of diagnostic variables).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The namespace ID 1 is the only one guaranteed to be server-local and the namespace URI has to be the URI of the application (see <a href="namespaces.htm" class="topiclink">Namespaces</a>).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The toolkit internal namespace is now added at the moment when the first endpoint is opened or the modeling is enabled (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a1bd9df23d9bbccfd1369a75a54d07122" class="topiclink">AddressSpaceRoot::enableModeling</a>). </span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Trace Groups</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="_enums_8h_1ade0ab8d5c00cd70492809107808b54e4.htm" class="topiclink">EnumTraceGroup</a> value </span><span class="f_Reference">EnumTraceGroup_Import</span><span class="f_Paragraph"> has been renamed to </span><span class="f_Reference">EnumTraceGroup_ModelDesigner</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">It is used to report and or filter traces from node set import, node set export and address space manipulation by the model designer.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::Variable and Server::VariableType</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Changing the ValueRank attribute of a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm" class="topiclink">Server::Variable</a> or <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type.htm" class="topiclink">Server::VariableType</a> automatically revises the ArrayDimensions attribute to a valid value if they don't fit together and vice versa. This guarantees that no invalid combination can be set.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Changing the attributes ValueRank, ArrayDimensions or DataType of a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm" class="topiclink">Server::Variable</a> or <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_type.htm" class="topiclink">Server::VariableType</a> via <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1aecd25f22e1cb1e51be6179cdc7978ae1" class="topiclink">Server::BaseNode::setAttribute()</a> will set Value attribute to NULL if the changed attribute is incompatible to the stored value. This method is mainly meant to modify attributes related to client actions like the write service. The methods <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1a3e227716354a14905e281fe67fd3d795" class="topiclink">setDataType()</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1a333d3b535da0a9401fa992b7f7faccf3" class="topiclink">setValueRank()</a> or <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1af3b88576963e8749541d1054bfed63d3" class="topiclink">setArrayDimensions()</a> still allow to modify the attributes without clearing the Value attribute.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.41 and 5.40</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Changes Affecting Server Applications</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::Subscription</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_subscription_1a169d390c61ce1575dba93f6c96ad95de" class="topiclink">onProvideInitialValues</a> is only called for the first not disabled data change monitored item, or the initial value is not valid on an additional monitored item on the same node.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The callback method </span><span class="f_Reference">onDelete()</span><span class="f_Paragraph"> is marked as deprecated but is still functional. The method can be replaced with <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_subscription_1a494a40ca9e8bc31ba494de09febc0422" class="topiclink">handleDelete</a>() with the handling described at declaration.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::BaseNode</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Using multiple nodes sharing the same NodeId caused many issues within server development. The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1abb6b5155ef6b2705fadc11a4cdb819f2" class="topiclink">Server::BaseNode::setNodeId</a> now validates that no other node with this NodeId exists. If another node using the same nodeId, an error EnumStatusCode_BadNodeIdExists is returned.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In former versions of the toolkit is was possible to create (temporary) nodes sharing the same NodeId. Please use the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1af8d5a497196362086354b9749b5b3aeb" class="topiclink">AddressSpaceRoot::instance()-&gt;getNode</a> to retrieve an already existing node instead of creating such (temporary) nodes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changes Affecting Client Applications</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">Client::Subscription</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Former toolkit versions notified a broken session via client generated notifications for every monitored item with a status code &quot;BadNoCommunication&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This notification is no longer generated by the toolkit since after a reconnect of a broken session monitored items at server side did not provide a new notification if the value has not changed.</span><br />
+<span class="f_Paragraph">A client application now has to overwrite the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1af7b2fbffdd3bee8873c93d9dab572429" class="topiclink">Client::MonitoredItem::onStatusChange</a> or <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a80192733047651957ac982e21af8cb60" class="topiclink">Client::Subscription::onStatusChange</a> to detect broken connections.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.40 and 5.36</span></h1>
+<p class="p_Paragraph"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id_1a418a232681512b8d92338964c6e0e4bf" class="topiclink">NodeId::toString()</a> now uses &quot;i=&quot; for numeric node IDs.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">NodeSet Import</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The data type for returned XML fragments has changed from tstring to XmlElement (<a href="class_softing_o_p_c_toolbox5_1_1_i_byte_string.htm" class="topiclink">ByteString</a>).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This affects the global extensions parameter on the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a53e25aa564f979738e65cd241f25da19" class="topiclink">Server::AddressSpaceRoot::importNodes()</a> method and the UA node fragments on the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm" class="topiclink">Creator</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> If you have already overridden the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm" class="topiclink">Creator</a> callbacks, which return the UA node fragments, then the changes won't produce any build errors.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The previously overridden callbacks won't be called anymore until they are adapted to the new interface.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::Endpoint</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The interface to restrict a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm" class="topiclink">Server::Endpoint</a> to a single network interface has changed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In the previous version, restricting a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm" class="topiclink">Server::Endpoint</a> to a single network interface was done by a Boolean parameter at <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a13a07c6ce47253382b6a4edf5d3985af" class="topiclink">Server::Endpoint::open()</a></span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myEndpoint-&gt;open(true);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The interface it now at <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1ab19acecd9db2e886233f0cf16dfbd4cc" class="topiclink">Server::Endpoint::setRestrictToSingleInterface()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The previous code can be replaced by</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myEndpoint-&gt;setRestrictToSingleInterface(true);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myEndpoint-&gt;open();</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.36 and 5.35</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Changes Affecting Server Applications</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">NodeSet Import </span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">Importing of NodeSet2 XML files now supports UA extensions, both global extensions and node specific extensions.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">The global extensions are returned via the Server::AddressSpace::import() method. </span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph" style="font-weight: bold;">Note: </span><span class="f_Paragraph">If you have used this method please pass additionally a vector of strings for these extensions.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">The node specific extensions are passed via extended creator callbacks.</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Monitored Item Queuing</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">Former toolkit versions used the current system time in the calculation whether a changed value is in the same sampling interval of a monitored item.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">Now the server timestamp of the <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm" class="topiclink">DataValue</a> is used for this calculation in the value attribute of variables. If the server timestamp is not set the toolkit still uses the current time.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">Usually server applications use the current time for this timestamp and can skip initialization and deny writing of server timestamp by a client.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">Allowing write of server timestamps may lead to unexpected behavior of the reported values. See <a href="html_customhandlingofwriterequests.htm#notewriterequest" class="topiclink">Server Tutorial Step 5</a> for different handling of writing timestamps.</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">See also article </span><a href="html_programmersguide_how_to_server_monitored_items_queuing.htm" class="topiclink">Monitored Items Queuing</a> for further details regarding how the queue of a monitored item is maintained.</h3>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading1">Changes Between Version 5.30 and 5.35</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">There were no incompatible changes between these version.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The following methods are marked as deprecated and can be replaced as described at the declaration, but all methods are still functional:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Server::Subscription::onCreateMonitoredItems()</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Server::Subscription::onModifyMonitoredItems()</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Server::Subscription::onDeleteMonitoredItems()</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.21 and 5.30</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Changes Affecting Server and Client Applications</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">NodeSet Import Library</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The component TB5CPP requires some additional libraries for a NodeSet model import feature.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To be able to recompile existing projects from a previous toolkit version you can either integrate the new libraries to your project or disable the NodeSet import feature to omit the additional libraries.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">To integrate the new libraries to the project, you have to link the new libraries (see <a href="html_preparingproject.htm" class="topiclink">Setting up a Project</a>).</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">To disable the import feature, open the file </span><span class="f_FixedSize">ToolkitConfig.h</span><span class="f_Paragraph"> and set the </span><span class="f_FixedSize">TOOLKIT_HAVE_MODEL_COMPILER </span><span class="f_Paragraph">(now named</span><span class="f_FixedSize"> TOOLKIT_HAVE_MODEL_DESIGNER</span><span class="f_Paragraph">) define to </span><span class="f_FixedSize">TOOLKIT_CONFIG_NO</span><span class="f_Paragraph">.</span></td></tr></table></div><h2 class="p_Heading2"><span class="f_Heading2">Changes Affecting Server Applications</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">PKI Store Configuration</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The interface to configure the PKI store has been changed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In the previous version the methods to get and set the trust list location, the revocation list location and the rejected certificate location were directly on the class <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a>:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;setCertificateTrustListLocation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_T(&quot;C:/certificates/trustlist&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;setCertificateRevocationListLocation&nbsp;(_T(&quot;C:/certificates/revocationlist&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;setRejectedCertificateLocation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_T(&quot;C:/certificates/rejected&quot;));</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">These methods are now on the class <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm" class="topiclink">PkiStoreConfiguration</a> and then the entire configuration is set to the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> object via <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1acd666a38804279b18da3266355d75a13" class="topiclink">Application::setPkiStoreConfiguration()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Code like the one above can be replaced like this:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">PkiStoreConfiguration&nbsp;configuration;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">configuration.setCertificateTrustListLocation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_T(&quot;C:/certificates/trustlist&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">configuration.setCertificateRevocationListLocation&nbsp;(_T(&quot;C:/certificates/revocationlist&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">configuration.setRejectedCertificateLocation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(_T(&quot;C:/certificates/rejected&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;setPkiStoreConfiguration(&amp;configuration);</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Local Discovery Server</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">For Windows operating systems, the installation of the toolkit also installs the Local Discovery Server complying to the OPC UA Specification 1.02 which may overtake the LDS service from an older Local Discovery Server version. Existing server applications using the LDS have to exchange certificates with the new LDS in order to trust each other and to be able to use the LDS service.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The batch file </span><span class="f_FixedSize">&lt;InstallDir&gt;Source/PKI/update_discovery_server_store.bat</span><span class="f_Paragraph"> shows how to exchange the certificate of the CPPTestServer with the LDS.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The new LDS requires IPv6 to be installed on the operating system. In case that the operating system is Windows XP, IPv6 isn't installed per default.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::BaseNode</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The special constructor which could be used within a custom <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm" class="topiclink">Creator</a></span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Server::BaseNode::BaseNode(TBHandle&nbsp;otbHandle);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">was removed because it mustn't be called. Instead this constructor of the most appropriate subclass shall be used.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> In case you have used this, replace the call with the most appropriate subclass, e.g.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">return&nbsp;new&nbsp;MyObject(otbHandle);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In case you directly derived from </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm" class="topiclink">BaseNode</a>, simply remove that constructor. Only the predefined subclasses of <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm" class="topiclink">BaseNode</a> and their subclasses shall be inserted to the address space.</p>
+<h1 class="p_Heading1"><span class="f_Heading1">Changes Between Version 5.10 and 5.21</span></h1>
+<h2 class="p_Heading2"><span class="f_Heading2">Changes Affecting Server and Client Applications</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">New Data Types</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">In the Toolkit new data types are defined. The old, mixed type definitions like </span><span class="f_FixedSize">SoCmnUInt32</span><span class="f_Paragraph"> and </span><span class="f_FixedSize">uint32</span><span class="f_Paragraph"> are now completely replaced by a new data type definition </span><span class="f_FixedSize">OTUInt32</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> It is recommended to use the new data types only.</span></p>
+<p class="p_FixedSize"><span class="f_Paragraph">Since updating existing projects would mean that all old data types have to be replaced, it is possible to use the old names in a compatible way. To enable the compatible mode define the pre-processor variable </span><span class="f_FixedSize">OT_V510_TYPE_COMPATIBILITY</span><span class="f_Paragraph"> in your project settings.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">With this define your application should compile without (or at least with very few) errors / warnings. The remaining warnings are results of an incompatible necessary change from </span><span class="f_FixedSize">long</span><span class="f_Paragraph"> to </span><span class="f_FixedSize">int</span><span class="f_Paragraph">.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">ObjectPointer</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_FixedSize">addRef()</span><span class="f_Paragraph"> method has been removed from the <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm" class="topiclink">ObjectPointer</a> class since smart pointers do not require the user to modify the reference count manually.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_FixedSize">release()</span><span class="f_Paragraph"> method has been renamed to </span><span class="f_FixedSize">reset()</span><span class="f_Paragraph"> to better reflect its real meaning and to avoid confusing </span><span class="f_FixedSize">ObjectPointer&lt;T&gt;::release()</span><span class="f_Paragraph"> with <a href="class_softing_o_p_c_toolbox5_1_1_base.htm#class_softing_o_p_c_toolbox5_1_1_base_1ab1c7a8085a1ff78cae0de1b05c6e266b" class="topiclink">T-&gt;release()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm" class="topiclink">ObjectPointer</a> does no longer provide the constructor </span><span class="f_FixedSize">ObjectPointer(Base*)</span><span class="f_Paragraph"> that performs a dynamic cast on construction. If your code relies on dynamic casts of <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm" class="topiclink">ObjectPointers</a>, please use the new method <a href="globalfunctions.htm#namespace_softing_o_p_c_toolbox5_1ae3045bda2062cda2f7796565a05b048e" class="topiclink">dynamic_pointer_cast</a> to explicitly cast the smart pointer.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">If you have used </span><span class="f_FixedSize">ObjectPointer&lt;T&gt;::addRef()</span><span class="f_Paragraph">, please replace all occurrences with <a href="class_softing_o_p_c_toolbox5_1_1_base.htm#class_softing_o_p_c_toolbox5_1_1_base_1a581a10172e66057516e0e40362c95338" class="topiclink">T-&gt;addRef()</a>.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">If you have used </span><span class="f_FixedSize">ObjectPointer&lt;T&gt;::release()</span><span class="f_Paragraph">, please replace all occurrences with <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer_1a2db074ae081e08762866ce555156ae78" class="topiclink">ObjectPointer&lt;T&gt;::reset()</a>.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">If you have used the constructor </span><span class="f_FixedSize">ObjectPointer&lt;T&gt;::ObjectPointer(Base* p)</span><span class="f_Paragraph"> which applied the dynamic_cast operator during construction to cast </span><span class="f_FixedSize">typeof(p)</span><span class="f_Paragraph"> to type </span><span class="f_FixedSize">T</span><span class="f_Paragraph">, please use </span><span class="f_FixedSize">dynamic_cast</span><span class="f_Paragraph"> (for raw pointers) or <a href="globalfunctions.htm#namespace_softing_o_p_c_toolbox5_1ae3045bda2062cda2f7796565a05b048e" class="topiclink">dynamic_pointer_cast</a> (for ObjectPointers) to cast the pointer to type </span><span class="f_FixedSize">T</span><span class="f_Paragraph">.</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Index Ranges</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The API regarding index ranges has changed. Now index ranges are passed via a <a href="class_softing_o_p_c_toolbox5_1_1_numeric_range.htm" class="topiclink">NumericRange</a> class instead of a string which needs to be parsed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The existing code handling index ranges in client was in the previous version like this:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">monitoredItem-&gt;setIndexRange(strIndexRange);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In the current version this is changed to</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">monitoredItem-&gt;setIndexRange(NumericRange(strIndexRange));</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In server code the index ranges might be used within the overridden <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1acbcdd9e8b225f062745c972834b3829c" class="topiclink">ReadTransaction::handleRequests()</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_write_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_write_transaction_1ad2d3150b923f2b67d6fff90eae1785cf" class="topiclink">WriteRequest::handleRequests()</a> methods.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See examples for code changes in the default implementation and default implementation in e.g. <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1a2418b27d471d1c8ca13348aa2c709059" class="topiclink">Variable::handleReadRequest()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> If your application has used index ranges in implementation of read/write services your code needs adoption to the new interface.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Localized Text</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> now can store more than one locale. The storage is internally memory optimized, so that many identical localized text definitions are stored only once.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To define a preferred locale a client (and server) can specify a vector of locales.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Caution:</span><span class="f_Paragraph"> It is necessary to initialize the Toolkit (loadToolbox) before defining any localized text values. Thus static definition of node description (including localized text e.g. display name, description, ...) is no longer possible - all definitions need to be created after &quot;loadToolbox&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">On the other side all localized texts have to be removed before unloading the Toolkit. Not removed localized texts will cause assertions.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This includes also storage of reference counted pointers which contain node objects. All reference counted pointers have to be set to NULL (release the pointer) before &quot;unloadToolbox&quot; is called.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If there is such code in your application you won't get compiler errors / warnings.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">ByteString</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">In the <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm" class="topiclink">ByteString</a> class the constructor</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ByteString::ByteString(unsigned&nbsp;size,&nbsp;unsigned&nbsp;char*&nbsp;data,&nbsp;bool&nbsp;allocate)</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">and the method</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">void&nbsp;ByteString::attach(unsigned&nbsp;size,&nbsp;unsigned&nbsp;char*&nbsp;data)</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">were removed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In both cases the given data is copied and you can release the given data after calling.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> In case you have used these, please replace the constructor with</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ByteString::ByteString(unsigned&nbsp;size,&nbsp;unsigned&nbsp;char*&nbsp;data)</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">and the method with</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">bool&nbsp;ByteString::init(unsigned&nbsp;size,&nbsp;const&nbsp;unsigned&nbsp;char*&nbsp;pData)</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Trace</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The methods </span><span class="f_FixedSize">getXxxLevelMask</span><span class="f_Paragraph"> and </span><span class="f_FixedSize">setXxxLevelMask</span><span class="f_Paragraph"> have been removed since they had no effect.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changes Affecting Client Applications</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">Structures Containing an Array of Structs</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The C++ interface to structures containing an array of structs has been changed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The changes are easy to understand in the following example. The struct <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm" class="topiclink">BrowseResult</a> has a contained array of references.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In the previous version the interface to this member was:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">class&nbsp;BrowseResult</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;//&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;virtual&nbsp;unsigned&nbsp;getReferencesCount()&nbsp;const&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;virtual&nbsp;IReferenceDescription*&nbsp;getReferences(unsigned&nbsp;index)&nbsp;const&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In the current version this is changed to</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">class&nbsp;BrowseResult</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;//&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;virtual&nbsp;unsigned&nbsp;getReferenceCount()&nbsp;const&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;virtual&nbsp;const&nbsp;IReferenceDescription*&nbsp;getReference(unsigned&nbsp;index)&nbsp;const&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;virtual&nbsp;std::vector&lt;ReferenceDescription&gt;&nbsp;getReferences()&nbsp;const&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;virtual&nbsp;EnumStatusCode&nbsp;addReference(const&nbsp;IReferenceDescription*&nbsp;value)&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The returned pointer in the single access function is now a const interface pointer. Existing code using this function may need to be changed to use const pointer declaration.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The ending &quot;s&quot; in the single access functions has been removed. Existing code must be changed by removing the &quot;s&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An additional function has been added returning all contained structures as an array of copied values.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An additional function has been added to add a single new member to the contained array.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Changes Affecting Server Applications</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">Reserved Namespace for the Toolkit</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">With the introduction of server diagnostics the Toolkit needs to define NodeIds in a server. Therefore, the Toolkit reserves a namespace with index 1 that is intended to be used by Toolkit internals only. It is strongly recommended to not use this namespace for your own nodes.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">LocalTime</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_FixedSize">LocalTime</span><span class="f_Paragraph"> property of events now uses the correct data type. Regarding to OPC UA specification the data type of this property has to be of type </span><span class="f_FixedSize">TimeZoneDataType</span><span class="f_Paragraph">. The interfaces to set and get the value are adapted to this type.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Removed Event Classes</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The classes </span><span class="f_FixedSize">Server::RefreshStartEvent</span><span class="f_Paragraph"> and </span><span class="f_FixedSize">Server::RefreshEndEvent</span><span class="f_Paragraph"> are removed since servers have no chance to report such events.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Audit Events</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The formerly existing audit event related classes were completely reworked. It is highly unlikely that any existing implementation used these classes since it was actually not possible to notify such events which were invoked within the core.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Now the audit event notification is invoked in the API with the possibility to specify more detailed information for the events. Therefore new callback methods are available, where the default implementation invokes the audit events as in the previous version.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The callback methods related to audit event notifications are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a1f94273690f343c507ca37342b6ed63f" class="topiclink">Server::Endpoint::onSecureChannelOpened()</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1ae74c92fa9eda24bc9616df5cc40ce3bc" class="topiclink">Server::Endpoint::onUrlMismatch()</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a0e2ec9985b2df6e53d633397ab8a3298" class="topiclink">Server::Endpoint::onSessionCreated()</a></span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a126820a38cb688fbf9138b277c6e70d9" class="topiclink">Server::Endpoint::onSessionActivated()</a></span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Caution:</span><span class="f_Paragraph"> The default implementation of the already existing <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1aa833ad609543c5457b312b17a76fb587" class="topiclink">Server::Endpoint::onInvalidCertificate()</a> callback now invokes audit events. If you have overridden this method you should verify that your implementation calls the method of the base class if you want to use the default implementation of these audit events.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::Object</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The method </span><span class="f_FixedSize">construct()</span><span class="f_Paragraph"> has been removed since a call had no effect.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::Endpoint</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The method </span><span class="f_FixedSize">internalAuthenticate()</span><span class="f_Paragraph"> has been replaced by </span><span class="f_FixedSize">validateUserCertificate()</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The old method combined both validation of user certificates and validation of the user certificate signature in one method. Now the Toolkit validates the signature internally and allows server applications to validate user certificates using validateUserCertificate(). If you have used internalAuthenticate() before, please use validateUserCertificate() instead.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Caution:</span><span class="f_Paragraph"> The </span><span class="f_FixedSize">authenticate()</span><span class="f_Paragraph"> interface was changed and renamed to <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1ae346fbc74721fc58afd1b486de88a115" class="topiclink">validateUserCertificate()</a>!</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This method is called when a client activates a session. The application can validate the user credentials and assign the user to a user group. Instead of deprecated </span><span class="f_CodeExample">IUserAuthenticationToken* userIdentityToken</span><span class="f_Paragraph"> now the token itself </span><span class="f_FixedSize">const IUserIdentityToken* userIdentityToken</span><span class="f_Paragraph"> is given for authentication.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">You won't get a compiler error if you have implemented the old fashioned interface. Instead of a compiler error the former implementation of the derived class will hide the virtual method of the base class and the derived class method never will be called! If you have implemented user validation you have to adapt your interface!</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::StateMachine</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The method </span><span class="f_FixedSize">isActivate(State*)</span><span class="f_Paragraph"> was replaced by <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine_1a2a760fe022036bd716b31fc73c4e31c1" class="topiclink">isActive()</a>.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::BaseNode</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The method getUserWriteMask() has been removed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">User Write Masks cannot be evaluated since this information is session specific.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Caution:</span><span class="f_Paragraph"> The method </span><span class="f_Reference">Server::BaseNode::reportEvent()</span><span class="f_Paragraph"> has changed semantically.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In old version the Toolkit core has checked the </span><span class="f_CodeExample">SuppressedOrShelved</span><span class="f_Paragraph"> flag of a </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm" class="topiclink">Server::AlarmCondition()</a><span class="f_Paragraph"> and has not reported these events to the client. Now the check of this flag is removed, hence the subscriptions are always updated. Only the UA client is expected to suppress the display of suppressed or shelved events.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server::EventNotification</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The internal handling of properties reported by events has changed. If the </span><span class="f_Reference">EventNotification</span><span class="f_Paragraph"> is initialized using an instance of a node derived from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event.htm" class="topiclink">BaseEvent</a> (i.e. init(myAlarm) ) nothing changed in implementation.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> However if you used the other possibility of initializing using the type node of an event (<a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event.htm" class="topiclink">BaseEvent</a> or derived events) the method </span><span class="f_FixedSize">setEventField()</span><span class="f_Paragraph"> was removed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The usual ways to set property values was</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">- create a variable</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">- set the property value to that variable</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">- add an event field with a property name using this variable</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The new interface only allows adding values to a property using the </span><span class="f_Reference">setEventFieldValue()</span><span class="f_Paragraph"> method.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_changestopreviousversion.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

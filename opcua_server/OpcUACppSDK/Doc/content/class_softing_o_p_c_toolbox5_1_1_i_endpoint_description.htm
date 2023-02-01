@@ -1,0 +1,474 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IEndpointDescription Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IEndpointDescription Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_type.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description"></a></p>
+<p><span class="f_CodeExample">#include &quot;IEndpointDescription.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map256" id="map256"><area shape="rect" coords="7,59,142,82" href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm" alt="" /><area shape="rect" coords="5,6,145,29" href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.gif" width="149" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description" style="width:149px;height:88px;border:none" usemap="#map256" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description" class="topiclink">EndpointDescription</a> data type describes the endpoint for a server and is returned by the GetEndpoints service (see <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a>).</p>
+<p class="p_Paragraph">An <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description" class="topiclink">EndpointDescription</a> contains all information a client needs to establish a session with the server. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a6f3aea52ea036fa5faeae5f6020a55ae" class="topiclink">~IEndpointDescription</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1adff84993d2d333be032e7f1aefb464b4" class="topiclink">getEndpointUrl</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_application_description.htm#class_softing_o_p_c_toolbox5_1_1_i_application_description" class="topiclink">IApplicationDescription</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a41a67af693813456294541708e75df8f" class="topiclink">getServer</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_application_description.htm#class_softing_o_p_c_toolbox5_1_1_i_application_description" class="topiclink">IApplicationDescription</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ae4b19fc0d37156acb8f573f57410abaf" class="topiclink">getServer</a></span>()=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a81b36bfcb6da56fc661dceca5dfaadd9" class="topiclink">getServerCertificate</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a7989972f8efdf4a41346d6a9f8462c95.htm#_enums_8h_1a7989972f8efdf4a41346d6a9f8462c95" class="topiclink">EnumMessageSecurityMode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a99b84e9cf11df86a2bcd6d5193382fb0" class="topiclink">getMessageSecurityMode</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a5f4600ed642f2b352974535a5dff9a4c" class="topiclink">getSecurityPolicy</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual unsigned</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a8fb641be6e34befe0a5bd01a992eb550" class="topiclink">getUserIdentityTokenCount</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="class_softing_o_p_c_toolbox5_1_1_user_token_policy.htm#class_softing_o_p_c_toolbox5_1_1_user_token_policy" class="topiclink">UserTokenPolicy</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ae2307508f5b5ca37a2539625feceaa82" class="topiclink">getUserIdentityToken</a></span>(unsigned index) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_user_token_policy.htm#class_softing_o_p_c_toolbox5_1_1_user_token_policy" class="topiclink">UserTokenPolicy</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ad6fecd74ae203e51c929f376b031a3ce" class="topiclink">getUserIdentityTokens</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a4fea616e98d395a96b44f99c8df82eb5" class="topiclink">getTransportProfile</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual unsigned char</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1af15d1a1cd50fed85a20272750e226da9" class="topiclink">getSecurityLevel</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a4646bf6d65edeb32413e31a35d4491a3" class="topiclink">set</a></span>(const IEndpointDescription *cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a00f5ca79dca442aaf9b114da009d1005" class="topiclink">set</a></span>(const IEndpointDescription &amp;cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a8278585da53948d3ae8f203ae17b46e9" class="topiclink">compare</a></span>(const IEndpointDescription *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a126ec497c28962d6ad871375cd679ed8" class="topiclink">compare</a></span>(const IEndpointDescription &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a36cbf9774d2da482f05fde9d77652162" class="topiclink">operator==</a></span>(const IEndpointDescription &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a80c7e18b070fa4a34815babe7ec6a772" class="topiclink">operator!=</a></span>(const IEndpointDescription &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1accdf591d5e50832f0ea2a4b59836c1a9" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a6f3aea52ea036fa5faeae5f6020a55ae"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::~IEndpointDescription</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1adff84993d2d333be032e7f1aefb464b4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getEndpointUrl</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the URL of the described endpoint. Clients may use this URL to connect to the endpoint of the server. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1ad06680d449560574ae6e39c42a8a32e0" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a41a67af693813456294541708e75df8f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_application_description.htm#class_softing_o_p_c_toolbox5_1_1_i_application_description" class="topiclink">IApplicationDescription</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getServer</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a description for the server that the endpoint belongs to. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1aa80d77db761240687b5d519a8340112f" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ae4b19fc0d37156acb8f573f57410abaf"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_application_description.htm#class_softing_o_p_c_toolbox5_1_1_i_application_description" class="topiclink">IApplicationDescription</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getServer</span>()<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1ab067e9b8ca6433159da7aae11d7e51c6" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a81b36bfcb6da56fc661dceca5dfaadd9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getServerCertificate</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the application instance certificate issued to the server. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1aa130e3086e903ac05a795d77b266e230" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a99b84e9cf11df86a2bcd6d5193382fb0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a7989972f8efdf4a41346d6a9f8462c95.htm#_enums_8h_1a7989972f8efdf4a41346d6a9f8462c95" class="topiclink">EnumMessageSecurityMode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getMessageSecurityMode</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the type of security that is applied to messages exchanged between the client and the server.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="_enums_8h_1a7989972f8efdf4a41346d6a9f8462c95.htm#_enums_8h_1a7989972f8efdf4a41346d6a9f8462c95" class="topiclink">EnumMessageSecurityMode</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1a150ed88f51ff64be83b6cc9783d955d3" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a5f4600ed642f2b352974535a5dff9a4c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getSecurityPolicy</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns The URI for the SecurityPolicy to use when securing messages.</p>
+<p class="p_Paragraph">The following constants are defined as convenience for the security policy URIs defined by the OPC UA specifications: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SecurityPolicyUri_None </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SecurityPolicyUri_Basic128Rsa15 (deprecated - shall no longer be used) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SecurityPolicyUri_Basic256 (deprecated - shall no longer be used) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SecurityPolicyUri_Basic256Sha256 </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SecurityPolicyUri_Aes128Sha256RsaOaep </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SecurityPolicyUri_Aes256Sha256RsaPss </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1ad4a9d4b7c5638aca0926f95ae9ec9296" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a8fb641be6e34befe0a5bd01a992eb550"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual unsigned<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getUserIdentityTokenCount</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The methods <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a8fb641be6e34befe0a5bd01a992eb550" class="topiclink">getUserIdentityTokenCount()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ae2307508f5b5ca37a2539625feceaa82" class="topiclink">getUserIdentityToken()</a> are provided for efficient access to data. The semantics of these methods are documented in <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ad6fecd74ae203e51c929f376b031a3ce" class="topiclink">getUserIdentityTokens()</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1adf259a807ff8aece72600529673f851e" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ae2307508f5b5ca37a2539625feceaa82"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="class_softing_o_p_c_toolbox5_1_1_user_token_policy.htm#class_softing_o_p_c_toolbox5_1_1_user_token_policy" class="topiclink">UserTokenPolicy</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getUserIdentityToken</span>(unsigned <span class="f_Parameter">index</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The methods <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a8fb641be6e34befe0a5bd01a992eb550" class="topiclink">getUserIdentityTokenCount()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ae2307508f5b5ca37a2539625feceaa82" class="topiclink">getUserIdentityToken()</a> are provided for efficient access to data. A copy of the <a href="class_softing_o_p_c_toolbox5_1_1_user_token_policy.htm#class_softing_o_p_c_toolbox5_1_1_user_token_policy" class="topiclink">UserTokenPolicy</a> object at the specified index will be returned. The semantics of these methods are documented in <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ad6fecd74ae203e51c929f376b031a3ce" class="topiclink">getUserIdentityTokens()</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1a3973ea466f52adb2ac3c4c1c6cf1be17" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1ad6fecd74ae203e51c929f376b031a3ce"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_user_token_policy.htm#class_softing_o_p_c_toolbox5_1_1_user_token_policy" class="topiclink">UserTokenPolicy</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getUserIdentityTokens</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a list of user token policies that define the user identity tokens that the server will accept. One of these policies must be used when creating a session with a server.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ae609f9d2435fb67cc9d727683724ca71" class="topiclink">Client::Session::setUserSecurityPolicy()</a> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a97236b9936ca09f822c09296cf91cbf9" class="topiclink">Client::Session::setUserIdentityToken()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1a5dc987fc0080272c202156e59f093451" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a4fea616e98d395a96b44f99c8df82eb5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getTransportProfile</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the URI of the Transport Profile supported by the endpoint. In this version, the SDK has only support for the TransportProfileUri_UaTcp_UaSc_UaBinary transport profile.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>TransportProfileUri_UaTcp_UaSc_UaBinary et al. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1abf0250c7f44dcb4630dec6bc63484529" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1af15d1a1cd50fed85a20272750e226da9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual unsigned char<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getSecurityLevel</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a numeric value that indicates how secure the <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description" class="topiclink">EndpointDescription</a> is compared to other EndpointDescriptions for the same server. A value of 0 indicates that the <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description" class="topiclink">EndpointDescription</a> is not recommended and is only supported for backward compatibility. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1a7a7f3833cdfe051959498c41a79c6b89" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a4646bf6d65edeb32413e31a35d4491a3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description" class="topiclink">IEndpointDescription</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1ae7b0934e35c4b99bfa4e8bebfb56648c" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a00f5ca79dca442aaf9b114da009d1005"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description" class="topiclink">IEndpointDescription</a> &amp; <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1a419eb5f72bd1c41beb45f77f8a909995" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a8278585da53948d3ae8f203ae17b46e9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description" class="topiclink">IEndpointDescription</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1ae4decf240edbd8c15622954a4a9bff05" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a126ec497c28962d6ad871375cd679ed8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description" class="topiclink">IEndpointDescription</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1a5d845b3a7327720234c3cadbf1a2ed40" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a36cbf9774d2da482f05fde9d77652162"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description" class="topiclink">IEndpointDescription</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1a62faca5c91d170c336058b8f0cdf6f6a" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1a80c7e18b070fa4a34815babe7ec6a772"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_i_endpoint_description" class="topiclink">IEndpointDescription</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1a935da00ea9db59ed6b3016cb8acc2ba3" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_endpoint_description_1accdf591d5e50832f0ea2a4b59836c1a9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IEndpointDescription::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_description_1a45519937e00f3dd63fa6452b22981585" class="topiclink">SoftingOPCToolbox5::EndpointDescription</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_endpoint_description.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

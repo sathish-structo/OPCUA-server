@@ -1,0 +1,137 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>EnumDiagnosticsToReturn Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "_enums_8h_1a5b0a2711605e0628dce6ca0fea2209d1.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">EnumDiagnosticsToReturn Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="_enums_8h_1adfc3316be08657727f61df5115f56e3e.htm">Previous</a>&nbsp;
+     <a href="_enums_8h_1a890aa2ace7e7d8e921736168452294aa.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="_enums_8h_1a5b0a2711605e0628dce6ca0fea2209d1"></a></p>
+<p class="p_Paragraph">Defines bit masks that are used to request diagnostic information for service invocations. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="EnumValues" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_ServiceLevel_SymbolicId = 0x001</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return a namespace-qualified, symbolic identifier for an error or condition. </p>
+<p class="p_Paragraph">The maximum length of this identifier is 32 characters. The diagnostic info shall be related to a transaction (also known as service). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_ServiceLevel_LocalizedText = 0x002</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return up to 256 bytes of localized text that describes the symbolic id. </p>
+<p class="p_Paragraph">The diagnostic info shall be related to a transaction (also known as service). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_ServiceLevel_AdditionalInfo = 0x004</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return a byte string that contains additional diagnostic information, such as a memory image. </p>
+<p class="p_Paragraph">The format of this byte string is vendor-specific, and may depend on the type of error or condition encountered. The diagnostic info shall be related to a transaction (also known as service). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_ServiceLevel_InnerStatusCode = 0x008</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return the inner <a href="class_status_code.htm#class_status_code" class="topiclink">StatusCode</a> associated with the transaction (also known as service). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_ServiceLevel_InnerDiagnostics = 0x010</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return the inner diagnostic info associated with the transaction (also known as service). </p>
+<p class="p_Paragraph">The contents of the inner diagnostic info structure are determined by other bits in the mask. Note that setting this bit could cause multiple levels of nested diagnostic info structures to be returned. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_OperationLevel_SymbolicId = 0x020</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return a namespace-qualified, symbolic identifier for an error or condition. </p>
+<p class="p_Paragraph">The maximum length of this identifier is 32 characters. The diagnostic info shall be related to a request (also known as operation). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_OperationLevel_LocalizedText = 0x040</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return up to 256 bytes of localized text that describes the symbolic id. </p>
+<p class="p_Paragraph">The diagnostic info shall be related to a request (also known as operation). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_OperationLevel_AdditionalInfo = 0x080</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return a byte string that contains additional diagnostic information, such as a memory image. </p>
+<p class="p_Paragraph">The format of this byte string is vendor-specific, and may depend on the type of error or condition encountered. The diagnostic info shall be related to a request (also known as operation). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_OperationLevel_InnerStatusCode = 0x100</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return the inner <a href="class_status_code.htm#class_status_code" class="topiclink">StatusCode</a> associated with the request (also known as operation). </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumDiagnosticsToReturn_OperationLevel_InnerDiagnostics = 0x200</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Return the inner diagnostic info associated with the request (also known as operation). </p>
+<p class="p_Paragraph">The contents of the inner diagnostic info structure are determined by other bits in the mask. Note that setting this bit could cause multiple levels of nested diagnostic info structures to be returned. </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=_enums_8h_1a5b0a2711605e0628dce6ca0fea2209d1.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

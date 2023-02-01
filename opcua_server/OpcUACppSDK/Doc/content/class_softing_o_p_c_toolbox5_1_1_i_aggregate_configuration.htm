@@ -1,0 +1,539 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IAggregateConfiguration Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IAggregateConfiguration Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_anonymous_identity_token.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration"></a></p>
+<p><span class="f_CodeExample">#include &quot;IAggregateConfiguration.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map222" id="map222"><area shape="rect" coords="5,6,168,29" href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm" alt="" /><area shape="rect" coords="7,59,166,82" href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.gif" width="173" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration" style="width:173px;height:88px;border:none" usemap="#map222" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration" class="topiclink">AggregateConfiguration</a> data type is used by clients in requests that return aggregated historical data (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1afef48a38b3e7f33616bf2d66c4ea9bd8" class="topiclink">Client::Session::historyReadProcessed()</a>) to tell the server whether to use the default or a custom configuration for calculating aggregated values. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a64093ec09b0f68eaddeb17eb8bdfbea8" class="topiclink">~IAggregateConfiguration</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTBoolean</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1ad706e6e7d10325d2ff2dc560635f1e85" class="topiclink">getUseServerCapabilitiesDefaults</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1afe9f3d1da65e34f3123ff92966ff3309" class="topiclink">setUseServerCapabilitiesDefaults</a></span>(const OTBoolean &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTBoolean</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a99f2ac7d79e5077359e09eb768705284" class="topiclink">getTreatUncertainAsBad</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a405038bb0fd78c5405c0b2b2176b2f2c" class="topiclink">setTreatUncertainAsBad</a></span>(const OTBoolean &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTUInt8</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1aabc4e34f057e3d3e7334736388d73b85" class="topiclink">getPercentDataBad</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a3f282524b6f61db6ede9f4f0a30f4287" class="topiclink">setPercentDataBad</a></span>(const OTUInt8 &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTUInt8</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1afd53703ab3dd25d9bd99dff10d96ac98" class="topiclink">getPercentDataGood</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1aeb1f3cc6b122501edc007daca864d914" class="topiclink">setPercentDataGood</a></span>(const OTUInt8 &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTBoolean</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a6f4bcbdfad6ecbd79e92073b9403ddf2" class="topiclink">getUseSlopedExtrapolation</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1ade25a62f63d42c279a27df8b32f81e07" class="topiclink">setUseSlopedExtrapolation</a></span>(const OTBoolean &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a510d5e1d77d0d10f8fdc74419905abc0" class="topiclink">set</a></span>(const IAggregateConfiguration *cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a4c930a03e64f4315e47b915a1074bc68" class="topiclink">set</a></span>(const IAggregateConfiguration &amp;cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1ac87233e6ad9178aae6ad55a3d916523d" class="topiclink">compare</a></span>(const IAggregateConfiguration *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1afe013564e905e161ae064d4a174fb62e" class="topiclink">compare</a></span>(const IAggregateConfiguration &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a3081c3f8b01232d5666c3dc3e332cd08" class="topiclink">operator==</a></span>(const IAggregateConfiguration &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a53ef01eb06a5d08392b020b369e552cd" class="topiclink">operator!=</a></span>(const IAggregateConfiguration &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1abe7ccd7cf1a471509d65751e34fc70e1" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a64093ec09b0f68eaddeb17eb8bdfbea8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::~IAggregateConfiguration</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1ad706e6e7d10325d2ff2dc560635f1e85"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTBoolean<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::getUseServerCapabilitiesDefaults</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether the server uses default values to calculate aggregate values.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1afe9f3d1da65e34f3123ff92966ff3309" class="topiclink">setUseServerCapabilitiesDefaults()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a6eb4a5a287e1cc25ee74f834ff7e828c" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1afe9f3d1da65e34f3123ff92966ff3309"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::setUseServerCapabilitiesDefaults</span>(const OTBoolean &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets whether the server shall use default values to calculate aggregate values. If <span class="f_Parameter">value</span> is 'false', the server uses the configuration provided by this object to calculate aggregate values.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">If true, the server ignores the other values of this object. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1ace1836716e5c704fa9b806584a4176bd" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a99f2ac7d79e5077359e09eb768705284"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTBoolean<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::getTreatUncertainAsBad</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether values with 'Uncertain' status code are considered equally as values with 'Bad' status code when calculating an aggregate value.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a405038bb0fd78c5405c0b2b2176b2f2c" class="topiclink">setTreatUncertainAsBad()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a5f65ef13e51d14a4f2e1de915fa044db" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a405038bb0fd78c5405c0b2b2176b2f2c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::setTreatUncertainAsBad</span>(const OTBoolean &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets whether values with 'Uncertain' status code are considered equally as values with 'Bad' status code when calculating aggregate values.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">If true, 'Uncertain' values are considered as 'Bad' values when calculating aggregate values, i.e. 'Uncertain' values are not included in the aggregate calculation. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a58fe30f6eeb08c4f21fffd22ae498e49" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1aabc4e34f057e3d3e7334736388d73b85"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTUInt8<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::getPercentDataBad</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the minimum percentage of 'Bad' values in a processing interval required for status code of the interval to be set to 'Bad'.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a3f282524b6f61db6ede9f4f0a30f4287" class="topiclink">setPercentDataBad()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1af0d0c3cfd0ab4d6fb9a9ba0843f2554d" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a3f282524b6f61db6ede9f4f0a30f4287"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::setPercentDataBad</span>(const OTUInt8 &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the minimum percentage of 'Bad' values in a processing interval required for status code of the interval to be set to 'Bad'.</p>
+<p class="p_Paragraph">Please note that the following relationship must hold true for PercentDataGood and PercentDataBad: PercentDataGood &gt;= (100 - PercentDataBad). If both sides of the inequation are equal, the result of the PercentDataGood calculation is used.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The minimum percentage of 'Bad' values required for the status code of the processing interval to become 'Bad'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the value exceeds 100 the server shall return EnumStatusCode_BadAggregateInvalidInputs. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the relationship of PercentDataGood &gt;= (100 - PercentDataBad) is not fulfilled the server shall return EnumStatusCode_BadAggregateInvalidInputs. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a24977b1c65b74fd6bf10ad17be6b2fea" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1afd53703ab3dd25d9bd99dff10d96ac98"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTUInt8<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::getPercentDataGood</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the minimum percentage of 'Good' values in a processing interval required for status code of the interval to be set to 'Good'.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1aeb1f3cc6b122501edc007daca864d914" class="topiclink">setPercentDataGood()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1aa8064c0ea0c85a1300df8956c9b8562f" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1aeb1f3cc6b122501edc007daca864d914"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::setPercentDataGood</span>(const OTUInt8 &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the minimum percentage of 'Good' values in a processing interval required for status code of the interval to be set to 'Good'.</p>
+<p class="p_Paragraph">Please note that the following relationship must hold true for PercentDataGood and PercentDataBad: PercentDataGood &gt;= (100 - PercentDataBad). If both sides of the inequation are equal, the result of the PercentDataGood calculation is used.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The minimum percentage of 'Good' values required for the status code of the processing interval to become 'Good'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the value exceeds 100 the server shall return EnumStatusCode_BadAggregateInvalidInputs. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the relationship of PercentDataGood &gt;= (100 - PercentDataBad) is not fulfilled the server shall return EnumStatusCode_BadAggregateInvalidInputs. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a5671118f1de4d773b686f1d6b951abde" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a6f4bcbdfad6ecbd79e92073b9403ddf2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTBoolean<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::getUseSlopedExtrapolation</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether the server uses linear extrapolation (sloped extrapolation) or extrapolation based on horizontal line fit (stepped extrapolation) for projecting values that are farther in the future than available in the historian.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1ade25a62f63d42c279a27df8b32f81e07" class="topiclink">setUseSlopedExtrapolation()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1aa9174c2713dab67ac374ec99358a5a9e" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1ade25a62f63d42c279a27df8b32f81e07"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::setUseSlopedExtrapolation</span>(const OTBoolean &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Defines whether the server uses linear extrapolation (sloped extrapolation) or extrapolation based on horizontal line fit (stepped extrapolation) for projecting values that are farther in the future than available in the historian.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">value</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">If true, the server uses linear extrapolation for projecting values. If false, the server uses horizontal line fit (i.e. the last non-bad value is assumed as constant and used as projected value). </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a189971d0e9d066fc82adf92923e3a4ec" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a510d5e1d77d0d10f8fdc74419905abc0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration" class="topiclink">IAggregateConfiguration</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">source</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a226ed86fd47666738eecbc809d4802f0" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a4c930a03e64f4315e47b915a1074bc68"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration" class="topiclink">IAggregateConfiguration</a> &amp; <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a908885019cfa0392fbaf146e04ef0db8" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1ac87233e6ad9178aae6ad55a3d916523d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration" class="topiclink">IAggregateConfiguration</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a949ce20e78a6267c663b801779366202" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1afe013564e905e161ae064d4a174fb62e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration" class="topiclink">IAggregateConfiguration</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a12d80e176400658e3b3243771fbd8b89" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a3081c3f8b01232d5666c3dc3e332cd08"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration" class="topiclink">IAggregateConfiguration</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a3f1ec60f270167aacad604f72abd76dd" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1a53ef01eb06a5d08392b020b369e552cd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration" class="topiclink">IAggregateConfiguration</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1a27eda8b7c57796caab15d7d9df41d5cd" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration_1abe7ccd7cf1a471509d65751e34fc70e1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IAggregateConfiguration::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration_1ab33af3ec03c3a0a5500e6aa054b7b27c" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

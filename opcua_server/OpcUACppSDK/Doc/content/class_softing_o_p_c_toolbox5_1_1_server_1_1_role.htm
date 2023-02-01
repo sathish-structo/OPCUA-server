@@ -1,0 +1,373 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Role Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Role Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_resend_data.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_server_base_model_change_event.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerRole.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map139" id="map139"><area shape="rect" coords="5,6,91,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="5,59,91,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm" alt="" /><area shape="rect" coords="5,123,91,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object.htm" alt="" /><area shape="rect" coords="5,187,91,221" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.gif" width="96" height="227" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_role" style="width:96px;height:227px;border:none" usemap="#map139" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> class is used to define a node in the servers address space of type RoleType.</p>
+<p class="p_Paragraph">A role node has optional properties which define rules, how this role is assigned to a client session. The properties contain sensitive security related information and shall only be browseable, readable and writeable by authorized administrators through an encrypted channel.</p>
+<p class="p_Paragraph">The role node itself shall be also configured with permissions, so UA methods cannot be invoked by everybody.</p>
+<p class="p_Paragraph">The rules defined in the properties are logically anded.</p>
+<p class="p_Paragraph">The RoleType also defines optional methods to change the role properties. Those methods are not yet supported by the SDK. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a65f42d2350751c492ced93597c6031fc" class="topiclink">Role</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a9fb4d465429e7204789164bd2a769ef2" class="topiclink">setIdentities</a></span>(const std::vector&lt; IdentityMappingRuleType &gt; &amp;identities)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a135bacc6c9ed42ff84bf4e46b0a35643" class="topiclink">getIdentities</a></span>(std::vector&lt; IdentityMappingRuleType &gt; &amp;identities)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a50512822a7b262fd0570ea2c046248fc" class="topiclink">setApplications</a></span>(const std::vector&lt; tstring &gt; &amp;applications, bool excludeApplications)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1aae68304d84021b9df9d1590b2323fe0b" class="topiclink">getApplications</a></span>(std::vector&lt; tstring &gt; &amp;applications, bool &amp;excludeApplications)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a0718b50502a80e0615693d6a745acb84" class="topiclink">setEndpoints</a></span>(const std::vector&lt; EndpointType &gt; &amp;endpoints, bool excludeEndpoints)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1aa8c70bb14d26646d942bcadb235e0600" class="topiclink">getEndpoints</a></span>(std::vector&lt; EndpointType &gt; &amp;endpoints, bool &amp;excludeEndpoints)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a1bca4b9c522f0a7743f90f465e093f4e" class="topiclink">~Role</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1af9820168a023ca63055fde15bbd4ead6" class="topiclink">init</a></span>(const INodeId *typeId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a4f4ec43c996c45312359aa86f87bc62d" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1acb81bd8207f663ef901453ace087d683" class="topiclink">getWellKnown</a></span>(EnumNumericNodeId wellknownRoleId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1aaaf22b968af86c9de97c0136f91d4777" class="topiclink">Role</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a4f4ec43c996c45312359aa86f87bc62d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> instance </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_object_1a1554673852da9c7b478386460031cfb1" class="topiclink">SoftingOPCToolbox5::Server::Object</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1acb81bd8207f663ef901453ace087d683"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::getWellKnown</span>(<a href="_enums_8h_1a6f39a79b55bb28377e5b0709c5a38133.htm#_enums_8h_1a6f39a79b55bb28377e5b0709c5a38133" class="topiclink">EnumNumericNodeId</a> <span class="f_Parameter">wellknownRoleId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets a well-known <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> instance</p>
+<p class="p_Paragraph">The well-known roles, predefined by specification, are not yet configured an are not added to the address space. If an application wants to use these roles, it is necessary to configure (at least Identities property) the role and add it to the address space</p>
+<p class="p_Paragraph">Well-known roles are </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Anonymous </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">AuthenticatedUser </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Observer </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Operator </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Engineer </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Supervisor </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ConfigureAdmin </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">SecurityAdmin</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The role object, Null if role object is not available.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a1fb957a9328ca92900ba50d69b0428da" class="topiclink">AddressSpaceRoot::addRole</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a65f42d2350751c492ced93597c6031fc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::Role</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a9fb4d465429e7204789164bd2a769ef2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::setIdentities</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_identity_mapping_rule_type.htm#class_softing_o_p_c_toolbox5_1_1_identity_mapping_rule_type" class="topiclink">IdentityMappingRuleType</a> &gt; &amp; <span class="f_Parameter">identities</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the Identities property of the role</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">identities</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The identities specifies the currently configured rules for mapping a <a href="class_softing_o_p_c_toolbox5_1_1_user_identity_token.htm#class_softing_o_p_c_toolbox5_1_1_user_identity_token" class="topiclink">UserIdentityToken</a> to the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. If this Property is an empty array, then the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> cannot be granted to any <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session" class="topiclink">Session</a> by the SDK. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a135bacc6c9ed42ff84bf4e46b0a35643"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::getIdentities</span>(std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_identity_mapping_rule_type.htm#class_softing_o_p_c_toolbox5_1_1_identity_mapping_rule_type" class="topiclink">IdentityMappingRuleType</a> &gt; &amp; <span class="f_Parameter">identities</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the Identities property of the role </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a50512822a7b262fd0570ea2c046248fc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::setApplications</span>(const std::vector&lt; tstring &gt; &amp; <span class="f_Parameter">applications</span>, bool <span class="f_Parameter">excludeApplications</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the Applications and ApplicationsExclude property of the role</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">applications</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The Applications property specifies the application instance certificates of clients which shall be included or excluded from this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. Each element in the array is an ApplicationUri from a client certificate which is trusted by the Server. An empty list of application implies that this filter is not active for this role.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">excludeApplications</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The ApplicationsExclude property defines the applications property as an include list or exclude list. If this property is has a value of FALSE then only application instance certificates included in the applications property shall be included in this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. All other application instance certificates shall not be included in this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. If this property has a value of TRUE then all application instance certificates included in the applications property shall be excluded from this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. All other application instance certificates shall be included in this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1aae68304d84021b9df9d1590b2323fe0b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::getApplications</span>(std::vector&lt; tstring &gt; &amp; <span class="f_Parameter">applications</span>, bool &amp; <span class="f_Parameter">excludeApplications</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the Applications and ApplicationsExclude property of the role </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a0718b50502a80e0615693d6a745acb84"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::setEndpoints</span>(const std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_type.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_type" class="topiclink">EndpointType</a> &gt; &amp; <span class="f_Parameter">endpoints</span>, bool <span class="f_Parameter">excludeEndpoints</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the Endpoints and EndpointsExclude property of the role</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">endpoints</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The Endpoints property specifies the endpoints which shall be included or excluded from this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. The value is an <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_type.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_type" class="topiclink">EndpointType</a> array which contains one or more endpoint descriptions. An empty list of endpoints implies that this filter is not active for this role.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">excludeEndpoints</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The EndpointsExclude property defines Endpoints property as an include list or exclude list. If this property is has a value of FALSE then only endpoints with matching descriptions in the Endpoints property shall be included in this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. All other endpoints shall not be included in this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. If this property has a value of TRUE then all endpoints included in the Endpoints property shall be excluded from this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. All other endpoints shall be included in this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a>. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1aa8c70bb14d26646d942bcadb235e0600"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::getEndpoints</span>(std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_type.htm#class_softing_o_p_c_toolbox5_1_1_endpoint_type" class="topiclink">EndpointType</a> &gt; &amp; <span class="f_Parameter">endpoints</span>, bool &amp; <span class="f_Parameter">excludeEndpoints</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the Endpoints and EndpointsExclude property of the role </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1a1bca4b9c522f0a7743f90f465e093f4e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::~Role</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1af9820168a023ca63055fde15bbd4ead6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::init</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">typeId</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Initialize the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_role" class="topiclink">Role</a> object and create properties</p>
+<p class="p_Paragraph">The NodeIds of the property nodes are generated by the SDK. An application provide own NodeIds by overwriting the method generateNodeIdForSubNode. Default implementation will provide unique NodeIds for the properties generated by SDK. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">SoftingOPCToolbox5::Server::BaseNode</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_role_1aaaf22b968af86c9de97c0136f91d4777"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::Role::Role</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_role.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

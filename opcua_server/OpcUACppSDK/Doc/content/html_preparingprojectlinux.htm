@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Linux</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_preparingprojectlinux.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Linux</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_preparingprojectwindows.htm">Previous</a>&nbsp;
+     <a href="html_preparingprojectvxworks.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">Setting up a Project on Linux</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The following instructions describe how to use the OPC UA C++ Server &amp; Client SDK in a development process that is based on Makefiles. If you use a different approach or an integrated development environment, please consult the manual of your development environment on how to apply the instructions described below.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creating a new Project</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">If you are creating a new Makefile-based project, the following Makefile template may help you getting started quickly.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To adapt the Makefile to your need, please configure the variables in the first lines:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">APPLICATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;application&nbsp;name&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">INSTALL_DIR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;InstallDir&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">BUILD_CONFIGURATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;build&nbsp;configuration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">MACHINE_TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;machine&nbsp;type&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">GCCVER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=</span><span class="f_CodeExample" style="font-weight: bold;">&nbsp;&lt;gcc&nbsp;version&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">LINK_SHARED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;use&nbsp;shared&nbsp;toolkit&nbsp;library&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">CFLAGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">&lt;specific&nbsp;compiler&nbsp;flags&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">LIB_PATH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=&nbsp;$(INSTALL_DIR)/Source/lib/linux/$(MACHINE_TYPE)/gcc$(GCCVER)/$(BUILD_CONFIGURATION)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">INCLUDE_DIRS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;$(INSTALL_DIR)/Source/api/include&nbsp;$(INSTALL_DIR)/Source/Core/include</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ADD_LIBS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=&nbsp;-lxml2&nbsp;-lssl&nbsp;-lcrypto&nbsp;-lrt&nbsp;-lm&nbsp;-ldl&nbsp;-lpthread</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">CC_OPTIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;-pthread</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">SOURCES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;$(wildcard&nbsp;*.cpp)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">HEADERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;$(wildcard&nbsp;*.h&nbsp;$(patsubst&nbsp;%,%/*.h,$(INCLUDE_DIRS)))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">OBJECTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;$(SOURCES:%.cpp=$(CC)/%.o)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">CC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;$(CROSS_COMPILE)gcc</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">CXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;$(CROSS_COMPILE)g++</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">MKDIR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;mkdir&nbsp;-p</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ifeq&nbsp;($(</span><span class="f_CodeExample">LINK_SHARED</span><span class="f_CodeExample">),1)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">LIBS&nbsp;&nbsp;&nbsp;=&nbsp;ToolkitUA&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">LIB_EXTENSION&nbsp;=&nbsp;so</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">LIB_RPATH&nbsp;=&nbsp;-Wl,-rpath=$(abspath&nbsp;$(LIB_PATH))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">else</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">LIBS&nbsp;&nbsp;&nbsp;=&nbsp;tb5cpp&nbsp;tb5ot&nbsp;tb5util&nbsp;tb5stack</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">LIB_EXTENSION&nbsp;=&nbsp;a</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">endif</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">LIB_FLAGS&nbsp;=&nbsp;$(patsubst&nbsp;%,-l%,$(LIBS))&nbsp;$(LIB_RPATH)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">all:&nbsp;$(APPLICATION)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">$(APPLICATION):&nbsp;$(OBJECTS)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">$(MKDIR)&nbsp;$(dir&nbsp;$@)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">$(CXX)&nbsp;-o&nbsp;$@&nbsp;$(OBJECTS)&nbsp;-L$(LIB_PATH)&nbsp;$(LIB_FLAGS)&nbsp;$(ADD_LIBS)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">clean:</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">$(RM)&nbsp;$(OBJECTS)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">$(OBJECTS):&nbsp;$(HEADERS)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">$(CC)/%.o&nbsp;:&nbsp;%.cpp</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">$(MKDIR)&nbsp;$(dir&nbsp;$@)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">$(CC)&nbsp;-c&nbsp;$(CC_OPTIONS)&nbsp;$(CFLAGS)&nbsp;$(patsubst&nbsp;%,-I%,$(INCLUDE_DIRS))&nbsp;-o&nbsp;$@&nbsp;$&lt;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The variables to specify:</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">&lt;application name&gt;: </span><span class="f_Paragraph">The name (including the path) of your application.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">&lt;InstallDir&gt;: The </span><span class="f_Paragraph">path where the SDK is installed (e.g. /home/user/SDK).</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">&lt;build configuration&gt;:</span><span class="f_Paragraph"> &quot;release&quot; or &quot;release-shared&quot; depending whether you want to link the SDK static or shared libraries.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">&lt;machine type&gt;:</span><span class="f_Paragraph"> i386 or x86_64 depending on the target system using 32 or 64 bit</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">&lt;gcc version&gt;:</span><span class="f_Paragraph"> The used gcc major version. If the delivered libraries are not available for this version, please use the highest available below your version.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">&lt;use shared toolkit library&gt;:</span><span class="f_Paragraph"> &quot;0&quot; or &quot;1&quot; depending whether you want to link SDK as static or shared library. See also &lt;build configuration&gt;.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">&lt;specific compiler flags&gt;:</span><span class="f_Paragraph"> If you need specific compiler options for your application, defined them here.</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">Using the SDK with an Existing Project</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 1</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Please open the existing Makefile for your application in your favorite text editor.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 2</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Add the following additional include directories to the GCC invocation that compiles your source files to object files:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_FixedSize">-I&lt;InstallDir&gt;/Source/api/include</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_FixedSize">-I&lt;InstallDir&gt;/Source/Core/include</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Step 3</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Add the following additional library directories to the GCC invocation that links your object files:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_FixedSize">-L&lt;InstallDir&gt;/Source/lib/linux/&lt;machine type&gt;/gcc&lt;gcc version&gt;/&lt;build configuration&gt;</span></td></tr></table></div><p class="p_FixedSize"><span class="f_Paragraph">The <a href="html_linux.htm#toolkit_components_binary" class="topiclink">Installation Directory Structure</a> lists and describes all available build configurations. Please note that the selected build configuration should match the build configuration of your application.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 4</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Please add the following parameters to the GCC invocation that links your object files in order to link the static SDK libraries:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_FixedSize">-ltb5cpp -lxml2 -ltb5ot -ltb5util -ltb5stack -lcrypto -lssl -lrt -lm</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Hint:</span><span class="f_Paragraph"> If you use the SDK as shared library, use the delivered shared library. You have to ensure, that the library is installed at a place where it can be loaded during runtime.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_FixedSize">-ToolkitUA -lxml2 -lcrypto -lssl -lrt -lm</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Step 5</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK requires the availability of POSIX threads. Therefore, you need to add the </span><span class="f_FixedSize">-pthread</span><span class="f_Paragraph"> flag to GCC invocations during both compilation and linking stage.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Next Steps</span></h2>
+<p><span class="f_Paragraph">You are now ready to develop an OPC UA-enabled application using the OPC UA C++ Server &amp; Client SDK. Please ensure to </span><span class="f_Paragraph" style="font-weight: bold;">always include the </span><span class="f_Reference" style="font-weight: bold;">Toolbox.h</span><span class="f_Paragraph" style="font-weight: bold;"> header file</span><span class="f_Paragraph"> as your first SDK-related header file when using the SDK in one of your compilation units.</span></p>
+<p><span class="f_Paragraph">If you are new to the SDK, you may want to read the <a href="html_introductiontothecppapi.htm" class="topiclink">Introduction to the C++ API</a> and work through the <a href="html_gettingstarted.htm" class="topiclink">Programming Tutorial</a>.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_preparingprojectlinux.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

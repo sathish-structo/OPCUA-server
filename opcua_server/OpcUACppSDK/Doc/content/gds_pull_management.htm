@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Pull Management</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "gds_pull_management.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Pull Management</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="gds_certificate_management.htm">Previous</a>&nbsp;
+     <a href="gds_push_management.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">See the <a href="html_uagdspullmanagement.htm" class="topiclink">OPC UA - GDS - Pull Management</a> for a common description of the specified Certificate Pull Management of the OPC Foundation and what it supports.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To enable the Pull Certificate Management support for the application instance certificates, all that needs to be done is to provide the </span><span class="f_Reference">GDS Configuration</span><span class="f_Paragraph">.</span><br />
+<span class="f_Paragraph">The SDK takes care to perform the registration and to keep the own application instance certificate and the application PKI store up to date.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">It can be that an application needs to use multiple certificates or multiple PKI stores, e.g. an X509 user certificate on a client, an X509 user PKI store on a server or for any custom purposes.</span><br />
+<span class="f_Paragraph">Those additional certificates and PKI stores can be maintained manually by using the convenience methods from the SDK.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">GDS Configuration</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK requires some configuration settings to be able to connect to the Certificate Manager and some settings for automated operations.</span><br />
+<span class="f_Paragraph">This configuration is usable for client and server applications.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To set the configuration parameters invoke the method <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a1d9ad63870ab1306223572c89c404ba3" class="topiclink">Application::gdsSetConfiguration()</a>.</span><br />
+<span class="f_Paragraph">The SDK will use these settings whenever a manual or automated operation requires to communicate with the GDS.</span></p>
+<p class="p_NoteHeader"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> The supported and trusted user identity token is GDS specific, the GDS may allow anonymous user authentication, but access is then restricted.</span><br />
+<span class="f_Paragraph">Contact the GDS administrator or see the GDS vendor documentation for this information.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> The initial trust list relationship needs to be established manually, i.e. the GDS certificate shall be trusted and the GDS shall trust this application's instance certificate.</span></p>
+<p><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> When using GDS functionality then the provided PKI store shall be configured via <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_pki_store_configuration_1ac3bbc8f9a2ce205395c4e02427d5d159" class="topiclink">PkiStoreConfiguration::setBasePath()</a>. With this configuration all necessary sub-folders will be created by the SDK and the sub folders can no longer be assigned individually. The PKI store shall be configured before the GDS configuration is provided.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">RegisterApplication</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The registration is done automatically by the SDK if the GDS configuration was provided.</span><br />
+<span class="f_Paragraph">Registration is performed after application start and before invoking any other GDS methods.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">During the registration process the GDS provides an application ID for this application.</span><br />
+<span class="f_Paragraph">This application ID can be retrieved via <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a3d0bbaeb1314ec5bd01b078d24eeca72" class="topiclink">Application::gdsGetApplicationId()</a> in case an application needs to invoke any specific GDS methods by its own.</span><br />
+<span class="f_Paragraph">An application can also invoke the registration programmatically via <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1abc60e5c4882e0bed024d404e729c4861" class="topiclink">Application::gdsRegisterApplication()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1abc60e5c4882e0bed024d404e729c4861" class="topiclink">Application::gdsRegisterApplication()</a> requires the GDS configuration to be set.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> A GDS should store the registration persistent and should survive any restart or down time of the GDS or UA application, so in theory a registration needs to be done only once. The SDK does not provide a convenience function for the unregistration as this is no frequent operation. The unregistration can be done either by a manual method call on the GDS or by a GDS administrator. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">Create a new signed certificate</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The GDS (or a Certificate Manager) is able to create and sign certificates.</span><br />
+<span class="f_Paragraph">The SDK provides the convenience method <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ab5ef618b4322057f3f1073418d8eeec9" class="topiclink">Application::gdsCreateSignedCertificateAsync()</a> so that an application can easily create certificates which will be issued by the GDS.</span><br />
+<span class="f_Paragraph">This method can be used to create application instance certificates (which require some special certificate fields) or user certificates e.g. for x509 authentication.</span><br />
+<span class="f_Paragraph">Once GDS has finished signing, the application is notified by the callback <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1af90ff47a3bd1a77cd648b47eddab3c93" class="topiclink">Application::gdsCreateSignedCertificateCompleted()</a> and can perform operations like replacing the currently active certificate file and ensure that the current file is not in use.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> If the </span><span class="f_Reference">GDS Configuration</span><span class="f_Paragraph"> was set with an automatic update cycle, then the SDK takes care to keep the own application instance certificate up to date.</span></p>
+<p class="p_NoteHeader"><span class="f_NoteHeader">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">Get status of the last created / signed certificate</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The GDS validates whether a certificate needs to be updated in case of validity period is about to expire.</span><br />
+<span class="f_Paragraph">This certificate status is set to </span><span class="f_Reference">false</span><span class="f_Paragraph"> quite some time before the certificate actually expires, e.g. one week or one month. This gives the applications some time to update and distribute the new certificate.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An application can access the status via <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ad41b6b3a7f752a3ab10193dadab41ebc" class="topiclink">Application::gdsGetCertificateStatus()</a> to check if any certificate should be updated.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> If the </span><span class="f_Reference">GDS Configuration</span><span class="f_Paragraph"> was set with an automatic update cycle, then the SDK takes care to check the status of the own application instance certificate. Using this method is only required to manage additional PKI stores.</span></p>
+<p class="p_NoteHeader"><span class="f_NoteHeader">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">GetCertificateGroups</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK provides a convenience method to request the CertificateGroupIds from the Certificate Manager which belong to this application.</span><br />
+<span class="f_Paragraph">These CertificateGroupIds can be used to request the status or contents of a PKI store from the Certificate manager.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK provides the convenience method <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a2a6788837e8c4e74319b232582e30c08" class="topiclink">Application::gdsGetCertificateGroups()</a>, which invokes the </span><span class="f_Reference">GetCertificateGroups</span><span class="f_Paragraph"> method on the GDS.</span><br />
+<span class="f_Paragraph">Typically at least the </span><span class="f_Reference">DefaultApplicationGroup</span><span class="f_Paragraph"> is always provided.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> The SDK takes care to check and update the PKI store for the application instance certificates. Using this method is only required to manage additional PKI stores.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">GetTrustList</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">You can use the convenience method <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a16c95897857af12a2e6be5b524628823" class="topiclink">Application::gdsGetTrustListAsync()</a> and its callback <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a7f362bd9cbb22a19b8bc15398e4d9619" class="topiclink">Application::gdsGetTrustListCompleted()</a> to retrieve the content of a certificate group from the Certificate Manager (see </span><span class="f_Reference">GetCertificateGroups</span><span class="f_Paragraph">).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The reported content can be used with <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1abf457a9f73ae2801353c12c83fbaccae" class="topiclink">Application::replacePkiContent()</a> to overwrite an existing PKI store.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> Alternatively it is also possible to read the TrustList completely manually from the Certificate Manager via OPC UA File transfer (see the <a href="samplefiletransfer.htm" class="topiclink">FileTransfer</a> same), the CertificateGroupId is the NodeId of the </span><span class="f_Reference">TrustList</span><span class="f_Paragraph"> instance to read.</span><br />
+<span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1abf457a9f73ae2801353c12c83fbaccae" class="topiclink">Application::replacePkiContent()</a> provides a second overload to provide the read ByteString as input parameter.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=gds_pull_management.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

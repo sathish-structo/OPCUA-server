@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>State Machines Classes</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_serverstatemachines.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">State Machines Classes</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_ancserverreporting.htm">Previous</a>&nbsp;
+     <a href="html_programmersguide_ac_predefined.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><a id="hdr"></a><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine.htm" class="topiclink">StateMachine </a>is the base class for all state machines. It defines a single variable which represents the current state of the machine. </span><br />
+<span class="f_Paragraph">An instance of the state machine shall generate an event whenever a significant state change occurs. </span><br />
+<span class="f_Paragraph">The Server decides which state changes are significant. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Servers shall use the </span><span class="f_Reference">GeneratesEvent</span><span class="f_Paragraph"> reference to indicate which event(s) could be produced by the StateMachine.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Active/Inactive State Machines</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A state machine is considered to be active if it represents a current state. There are cases however when a state machine is inactive (meaning it does not represent any state) because the surrounding conditions are not met. That might be the case if the state machine is in fact a sub state machine and the containing state machine has a different current state. The </span><span class="f_Paragraph" style="font-style: italic;">ShelvingState</span><span class="f_Paragraph"> state machine of an <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm" class="topiclink">AlarmCondition</a> for example is only active when the alarm is in the enabled state, otherwise the </span><span class="f_Paragraph" style="font-style: italic;">ShelvingState</span><span class="f_Paragraph"> does not represent an active state.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">When the state machine is inactive, then the </span><span class="f_Paragraph" style="font-style: italic;">CurrentState</span><span class="f_Paragraph"> and </span><span class="f_Paragraph" style="font-style: italic;">LastTransition</span><span class="f_Paragraph"> properties will have their status code set to BadStateNotActive.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine.htm" class="topiclink">StateMachine</a> provides methods for activating/deactivating or verifying the state of a state machine: <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine_1aabb516f9aefd4448d2c4e1b0a92c3fd5" class="topiclink">activate</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine_1a2a760fe022036bd716b31fc73c4e31c1" class="topiclink">deactivate</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine_1af64bc623dbe8b0f77f5c7a97662a0a0f" class="topiclink">isActive</a>. See the specification of <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine.htm" class="topiclink">StateMachine</a> for more details.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Performing a State Change</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">In order to change the state of a state machine, the application needs to update/change the </span><span class="f_Reference">CurrentState</span><span class="f_Paragraph"> and </span><span class="f_Reference">LastTransition</span><span class="f_Paragraph"> components of the state machine object.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_finite_state_machine.htm" class="topiclink">FiniteStateMachine</a> class however provides a convenience method which can be used to perform a state change: <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_finite_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_finite_state_machine_1a7da5629743cc40e56ac2bbbd019028ef" class="topiclink">FiniteStateMachine::changeState(Server::State* target)</a>. </span><br />
+<span class="f_Paragraph">The parameter provided to this method must be one of the states that have been defined as components for this state machine. This method will:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">update the </span><span class="f_Reference">CurrentState</span><span class="f_Paragraph"> component - this will be set to indicate the target which has been provided as parameter</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">try to figure out the correct value for </span><span class="f_Reference">LastTransition</span><span class="f_Paragraph">, by checking the state of the machine before the call, the target state and if a transition having the corresponding </span><span class="f_Reference">FromState</span><span class="f_Paragraph"> and </span><span class="f_Reference">ToState</span><span class="f_Paragraph"> references has been defined for this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_finite_state_machine.htm" class="topiclink">FiniteStateMachine</a>.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">If a corresponding transition cannot be found, then this component will be reset (the </span><span class="f_Reference">Id</span><span class="f_Paragraph"> property will be set to NULL NodeId, the </span><span class="f_Reference">Number</span><span class="f_Paragraph"> to 0, </span><span class="f_Reference">Name</span><span class="f_Paragraph"> will be empty and </span><span class="f_Reference">TransitionTime</span><span class="f_Paragraph"> will also be reset).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Some state machines (subtypes of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine.htm" class="topiclink">StateMachine</a> or <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_finite_state_machine.htm" class="topiclink">FiniteStateMachine</a>) might include other convenience methods for performing state changes (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine.htm" class="topiclink">ShelvedStateMachine</a> for an example) or they might even expose UA Methods in the address space which can perform a state change (that is also the case of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine.htm" class="topiclink">ShelvedStateMachine</a>).</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span><span class="f_Paragraph"> By default the implementation of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_state_machine.htm" class="topiclink">StateMachine</a> or <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_finite_state_machine.htm" class="topiclink">FiniteStateMachine</a> do not provide any mechanism to validate that a certain state change is valid (the </span><span class="f_FixedSize">FiniteStateMachine::changeState()</span><span class="f_Paragraph"> method does also not provide this). The validity of a certain state and/or state change must be ensured by the caller.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Whether an event shall be produced is also not part of the StateMachine. The application using a state machine is responsible for producing an event on transitions.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_serverstatemachines.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

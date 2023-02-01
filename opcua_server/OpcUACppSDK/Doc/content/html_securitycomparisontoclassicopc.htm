@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Comparison to Classic OPC</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_securitycomparisontoclassicopc.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Comparison to Classic OPC</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_securityconcepts.htm">Previous</a>&nbsp;
+     <a href="html_securityopcuasecurity.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">OPC COM and OPC UA </span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC COM had DCOM security. DCOM security was not very interoperable with Non-Windows platforms. It was difficult to configure and as a result was routinely turned off instead of configured (see chapter 4.3). DCOM does support data encryption, but this can have performance issues and in the authors experience was never enabled at a plant site. DCOM is difficult to use for Internet access and thru Firewalls, especially if some level of security is desired. Nothing else was built into the OPC specifications for security, such as auditing or a standard manner for user security. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An in-depth approach was taken in OPC UA for security. Security was applied to communication, connections, application identification and user identification. Auditing is also provided to assist in recovery. Security was also taken into account during design, implementation and testing of the software deliverables from the OPC Foundation. Furthermore OPC UA and the OPC Foundation deliverables were subjected to standard security expert reviews and all issues discovered by the reviews were addressed. OPC UA was designed with standard security infrastructures in mind; it is Firewall friendly and can be accessed across the internet. Testing was performed to ensure that the addition of security features did not affect performance when compared to DCOM (i.e. OPC UA performs as well as DCOM, but includes security).</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_securitycomparisontoclassicopc.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

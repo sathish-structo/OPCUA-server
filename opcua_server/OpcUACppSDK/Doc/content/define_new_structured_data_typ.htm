@@ -1,0 +1,124 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Define New Structured Data Types</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "define_new_structured_data_typ.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Define New Structured Data Types</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="structured_data_types.htm">Previous</a>&nbsp;
+     <a href="retrieve_existing_custom_datatypes.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">Defining new structured data types is only possible for server applications.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Before creating a custom structured data type, it is highly recommended to create a DataTypeDictionary.</span><br />
+<span class="f_Paragraph">&nbsp;</span><br />
+<span class="f_NoteHeader">Note:</span><br />
+<span class="f_Paragraph">The DataTypeDictionary exposes the data type definition in the format, which was required before of the OPC UA Specification version 1.04.</span><br />
+<span class="f_Paragraph">When the DataTypeDictionary is omitted, then clients, which rely on an older Specification version won't be able to read the data type definitions of the custom data types.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Create a New DataTypeDictionary</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">First, create a new instance of a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_dictionary_variable.htm" class="topiclink">DictionaryVariable</a> and configure the common node attributes NodeId, BrowseName, DisplayName and Description.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DictionaryVariablePtr&nbsp;dictionary&nbsp;=&nbsp;DictionaryVariable::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dictionary-&gt;setNodeId(NodeId(2,&nbsp;_T(&quot;MyDictionary&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dictionary-&gt;setBrowseName(QualifiedName(_T(&quot;MyDictionary&quot;),&nbsp;2));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dictionary-&gt;setDisplayName(LocalizedText(_T(&quot;MyDictionary&quot;),&nbsp;_T(&quot;&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dictionary-&gt;setDescription(LocalizedText(_T(&quot;My&nbsp;test&nbsp;data&nbsp;type&nbsp;dictionary&quot;),&nbsp;_T(&quot;&quot;)));</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">After the configuration, it is necessary to insert the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_dictionary_variable.htm" class="topiclink">DictionaryVariable</a> at the right position in the address space and register it, so that any assigned data type will be exposed to the. Both actions are done by calling <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_dictionary_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_dictionary_variable_1a6221096a505712bd5dda772002008966" class="topiclink">DictionaryVariable::registerDictionary()</a>.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;register&nbsp;the&nbsp;dictionary&nbsp;to&nbsp;expose&nbsp;the&nbsp;data&nbsp;type&nbsp;descriptions</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dictionary-&gt;registerDictionary();</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span class="f_Paragraph">Now the DataTypeDictionary is fully operational, but it can have two additional optional property nodes:</span><span class="f_Paragraph" style="font-weight: bold;"> NamespaceUri </span><span class="f_Paragraph">and</span><span class="f_Paragraph" style="font-weight: bold;"> DataTypeVersion</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_Paragraph" style="font-weight: bold;">NamespaceUri</span><span class="f_Paragraph"> property is not required but highly recommended to be set. It is convenience for client applications to easily identify the namespace of the dictionary and from all its contained data types.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To set it, call <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_dictionary_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_dictionary_variable_1ae2c988f7b1ac53caca19a4932d19545f" class="topiclink">DictionaryVariable::addNamespaceUri()</a>:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dictionary-&gt;addNamespaceUri(NodeId(2,&nbsp;_T(&quot;NamespaceUriProperty&quot;)));</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">It is not necessary to set a value to this property. The OPC UA C++ Server &amp; Client SDK V6.00 automatically extracts the URI of this dictionary from the namespace array using the index from the NodeId of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_dictionary_variable.htm" class="topiclink">DictionaryVariable</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The optional </span><span class="f_Paragraph" style="font-weight: bold;">DataTypeVersion</span><span class="f_Paragraph"> property is used to display client applications whether a contained data type has changed. It is only required, if the content of some data types have changed and when clients need to be able deal with different versions of the same data types in parallel.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">It is likely that defined data types won't change, or if it happens, no other applications are still using the old version of the data type.</span><br />
+<span class="f_Paragraph">Thus the </span><span class="f_Paragraph" style="font-weight: bold;">DataTypeVersion</span><span class="f_Paragraph"> property is usually not needed.</span></p>
+<p class="p_Paragraph" style="margin: 0px 0px 0px 0px;"><span class="f_Paragraph">It is highly recommended to not change any data type while another application still uses it. In such cases it is recommended to create and use a completely new data type instead.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Create a New Structured Data Type</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">To define a custom structured data type, a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm" class="topiclink">DataType</a> node has to be created and configured. This <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm" class="topiclink">DataType</a> has to be inserted to the address space and marked as a subtype of the abstract data type </span><span class="f_Paragraph" style="font-weight: bold;">Structure</span><span class="f_Paragraph"> or from any of its subtypes.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DataTypePtr&nbsp;dataType&nbsp;=&nbsp;DataType::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dataType-&gt;setNodeId(NodeId(2,&nbsp;_T(&quot;MyIntegerDoubleStructure&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dataType-&gt;setBrowseName(QualifiedName(_T(&quot;MyIntegerDoubleStructure&quot;),&nbsp;2));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dataType-&gt;setDisplayName(LocalizedText(_T(&quot;MyIntegerDoubleStructure&quot;),&nbsp;_T(&quot;&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dataType-&gt;setDescription(LocalizedText(_T(&quot;My&nbsp;structured&nbsp;data&nbsp;type&nbsp;containing&nbsp;Integer&nbsp;and&nbsp;Double&quot;),&nbsp;_T(&quot;&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dataType-&gt;init(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;parentDataTypeId(EnumNumericNodeId_Structure);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DataTypePtr&nbsp;parentType&nbsp;=&nbsp;AddressSpaceRoot::instance()-&gt;getDataType(&amp;parentDataTypeId);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">parentType-&gt;addReference(Statics::ReferenceTypeId_HasSubtype,&nbsp;dataType);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The next step is to describe the contained fields and the encoding. For this, a </span><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_structured_data_type_description.htm" class="topiclink">StructuredDataTypeDescription</a> and some </span><a href="class_softing_o_p_c_toolbox5_1_1_structure_field.htm#class_softing_o_p_c_toolbox5_1_1_structure_field" class="topiclink">StructureFields</a> <span class="f_Paragraph">have to be configured. The order of the </span><a href="class_softing_o_p_c_toolbox5_1_1_structure_field.htm#class_softing_o_p_c_toolbox5_1_1_structure_field" class="topiclink">StructureFields</a><span class="f_Paragraph"> defines the order of the encoding.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;StructureField&gt;&nbsp;fields;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">StructureField&nbsp;field1;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">field1.setName(_T(&quot;IntegerField&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">field1.setDataType(NodeId(EnumNumericNodeId_Int32));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">fields.push_back(field1);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">StructureField&nbsp;field2;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">field2.setName(_T(&quot;DoubleField&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">field2.setDataType(NodeId(EnumNumericNodeId_Double));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">fields.push_back(field2);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">StructuredDataTypeDescriptionPtr&nbsp;dataTypeDescription&nbsp;=&nbsp;StructuredDataTypeDescription::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dataTypeDescription-&gt;setFields(fields);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">dataType-&gt;setDataTypeDescription(dataTypeDescription,&nbsp;NodeId(2,&nbsp;_T(&quot;MyIntegerDoubleStructureDescription&quot;)),&nbsp;NodeId(2,&nbsp;1234),&nbsp;NodeId(2,&nbsp;_T(&quot;MyDictionary&quot;)));</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">It is possible that fields of a custom structured data type make use of other custom structured data types.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">If a structured data type is a subtype of another structured data type, then the </span><span class="f_Paragraph">subtype implicitly derives all fields from the base type.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The developer has to call <a href="class_softing_o_p_c_toolbox5_1_1_structured_data_type_description.htm#class_softing_o_p_c_toolbox5_1_1_structured_data_type_description_1ab5ab03b8b7e0a77b21dc6729751a1c68" class="topiclink">StructuredDataTypeDescription::setUnion</a> when configuring a <a href="class_softing_o_p_c_toolbox5_1_1_structured_data_type_description.htm" class="topiclink">StructuredDataTypeDescription</a> for a union data type.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">For performance reasons, it is recommended to set the </span><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeId</a> of the Encoding node to a numeric identifier (in this example &quot;</span><span class="f_FixedSize">NodeId(2, 1234)</span><span class="f_Paragraph">&quot;). This <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeId</a> is transported with every single value and numeric <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeIds</a> require the fewest memory.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeIds</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_dictionary_variable.htm" class="topiclink">DictionaryVariable</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm" class="topiclink">DataType</a>, <a href="class_softing_o_p_c_toolbox5_1_1_data_type_description.htm" class="topiclink">DataTypeDescription</a> node and Encoding node must be in the same namespace, thus require the same namespace index (in the example, namespace index 2).</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="structured_data_types.htm" class="topiclink">Structured Data Types</a>, <a href="use_custom_structured_data_typ.htm" class="topiclink">Access Custom Structured Data Type Values</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=define_new_structured_data_typ.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

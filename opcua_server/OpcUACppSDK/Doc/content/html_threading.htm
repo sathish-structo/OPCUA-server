@@ -1,0 +1,178 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Threading</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_threading.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Threading</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_licensing.htm">Previous</a>&nbsp;
+     <a href="html_deployment.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><a id="hdr"></a><span class="f_Heading2">Threading Model</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK uses the POSIX standard PThreads (Linux) or WinApi Threads (Windows) for multithreading in order to be portable on most of the platforms. With threading it is possible that the SDK can handle methods asynchronously. The SDK uses mutexes to prevent concurrent access to shared data. The callbacks are usually called without locks with few exceptions that are documented e.g. <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a278e45207dd9a7cec0fea26c630ebef3" class="topiclink">Server::Endpoint::onCreateSession()</a>. It is strongly recommended that the callback methods should not run for a long time so that the calling thread is not blocked. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Since callbacks can be called from multiple thread contexts, the application is responsible for thread safety of its own data. Shared data accessed within callbacks has to be protected against concurrent access. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Server:</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">All server callbacks with a request (derived from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request.htm" class="topiclink">Server::DataRequest</a>) in the parameter list (e.g. <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a74756e4fa7405d7dab98baad82bbcb2d" class="topiclink">Server::Endpoint::handleDeleteSession</a>) or the typical &quot;handleRequests&quot; methods of a transaction (like <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1acbcdd9e8b225f062745c972834b3829c" class="topiclink">Server::ReadTransaction::handleRequests</a>()) can be executed asynchronously. The application can pass the requests / transaction to a separate thread and complete (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request_1a5696acd53a042e30ff7d3be86ab46814" class="topiclink">Server::DataRequest::complete</a>) the requests asynchronously. This asynchronous completion ensures that the actual thread context (in many cases the endpoint) is not blocked.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The result is sent to the server once all requests are completed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note: </span><span class="f_Paragraph">If an application does not complete all requests they will remain in memory and cause leaks!</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Other server callbacks expect a result when they return, so they have to be handled synchronously. While executing such callbacks the caller is blocked. For example, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a278e45207dd9a7cec0fea26c630ebef3" class="topiclink">Server::Endpoint::onCreateSession()</a> locks the Endpoint in the thread context of the UA stack during its execution.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Some platforms have limited resources, and the application should not use too many threads. The default configuration for the stack is that for each server session one worker thread is created, but it can also be configured (via re-compilation of the SDK core; only with source code license) that all server sessions share a single thread. In this case it is even more important that the callbacks return quickly. Otherwise the other sessions are blocked, too.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Client:</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The client callbacks (e.g. <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a877957a5c42a1fec1464e37d90d9b797" class="topiclink">Client::Session::onReadComplete</a> or <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1ac71cce02fe3805a3d803c349f20bf80a" class="topiclink">Client::Subscription::onDataChange</a>) are typically executed in the context of a &quot;worker thread&quot; within the SDK. However an application shall not rely that all callbacks are executed in the same context. Blocking this thread will cause delay on all other tasks executed in this thread and can lead to unexpected behaviour (e.g. connection loss).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Any application data accessed in these callbacks have to ensure protection against concurrent access.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If time consuming actions shall be executed just copy the parameters in the callbacks and pass execution to a separate thread.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Client Example:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">onDatachange</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">void&nbsp;SampleSubscription::onDataChange(const&nbsp;std::vector&lt;Client::MonitoredItem*&gt;&amp;&nbsp;items,&nbsp;const&nbsp;std::vector&lt;DataValue&gt;&amp;&nbsp;values)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;forward&nbsp;the&nbsp;data&nbsp;changes&nbsp;to&nbsp;consumers</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">for(unsigned&nbsp;int&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;items.size();&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;if&nbsp;one&nbsp;consumer&nbsp;performs&nbsp;time&nbsp;consuming&nbsp;(or&nbsp;blocking)&nbsp;execution,&nbsp;pass&nbsp;data&nbsp;(items&nbsp;and&nbsp;values)&nbsp;to&nbsp;a&nbsp;separate&nbsp;thread</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Server Example:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Reading nodes that need &quot;special&quot; handling, e.g. read via a different communication:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;MyServerReadTransaction::handleRequests()</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;handle&nbsp;the&nbsp;read&nbsp;of&nbsp;the&nbsp;node</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">std::vector&lt;Server::ReadRequestPtr&gt;&nbsp;requests&nbsp;=&nbsp;getRequests();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">for(size_t&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;requests.size();&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;SDK&nbsp;might&nbsp;have&nbsp;already&nbsp;detected&nbsp;some&nbsp;errors&nbsp;(e.g.&nbsp;unknown&nbsp;node,&nbsp;access&nbsp;rights,&nbsp;...)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">if(!StatusCode::isGood(requests[i]-&gt;getStatusCode()))</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;no&nbsp;further&nbsp;action&nbsp;necessary&nbsp;-&nbsp;just&nbsp;complete&nbsp;and&nbsp;proceed&nbsp;in&nbsp;loop</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">requests[i]-&gt;complete();</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">continue;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;somehow&nbsp;determine&nbsp;whether&nbsp;asynchronous&nbsp;execution&nbsp;is&nbsp;necessary,&nbsp;e.g.&nbsp;by&nbsp;node&nbsp;ID&nbsp;of&nbsp;read&nbsp;request</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">if(needsAsyncExecution(requests[i]-&gt;getValueId()-&gt;getNodeId()))</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;if&nbsp;execution&nbsp;for&nbsp;request&nbsp;is&nbsp;time&nbsp;consuming&nbsp;or&nbsp;contain&nbsp;possibly&nbsp;blocking&nbsp;calls&nbsp;(e.g.&nbsp;read&nbsp;values&nbsp;from&nbsp;a&nbsp;device,&nbsp;..)&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;just&nbsp;copy&nbsp;the&nbsp;request&nbsp;and&nbsp;handle&nbsp;execution&nbsp;in&nbsp;separate&nbsp;thread&nbsp;and&nbsp;set&nbsp;the&nbsp;request&nbsp;to&nbsp;completed</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;assume&nbsp;global&nbsp;class&nbsp;which&nbsp;is&nbsp;storing&nbsp;the&nbsp;requests&nbsp;to&nbsp;be&nbsp;processed&nbsp;(including&nbsp;synchronization)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;always&nbsp;store&nbsp;smart&nbsp;pointers&nbsp;ReadRequestPtr.&nbsp;Otherwise&nbsp;instances&nbsp;could&nbsp;be&nbsp;deleted!</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">AsyncExecuter::addReadRequest(requests[i]);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">continue;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;let&nbsp;the&nbsp;SDK&nbsp;just&nbsp;return&nbsp;the&nbsp;cached&nbsp;value&nbsp;already&nbsp;stored&nbsp;in&nbsp;address&nbsp;space</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;SDK&nbsp;will&nbsp;complete&nbsp;this&nbsp;request</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">requests[i]-&gt;getNode()-&gt;handleReadRequest(this,&nbsp;requests[i]);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;assume&nbsp;global&nbsp;class&nbsp;which&nbsp;is&nbsp;now&nbsp;passing&nbsp;the&nbsp;requests&nbsp;to&nbsp;a&nbsp;separate&nbsp;thread&nbsp;(if&nbsp;any)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">AsyncExecuter::executeReadRequests();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;do&nbsp;NOT&nbsp;invoke&nbsp;execution&nbsp;of&nbsp;base&nbsp;class&nbsp;(Server::ReadTransaction::handleRequests()&nbsp;)&nbsp;if&nbsp;ANY&nbsp;request&nbsp;is&nbsp;handled&nbsp;asynchronously</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;base&nbsp;class&nbsp;will&nbsp;complete&nbsp;ALL&nbsp;requests!</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">return&nbsp;EnumStatusCode_Good;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Writing nodes that need asynchronous handling (represented in address space) or are located in dynamic address space (see <a href="html_programmersguide_how_to_server_dynamic_adressspace.htm" class="topiclink">Dynamic Address Space</a>):</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;TestServerWriteTransaction::handleRequests()</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;process&nbsp;the&nbsp;requests</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">std::vector&lt;&nbsp;ObjectPointer&lt;Server::WriteRequest&gt;&nbsp;&gt;&nbsp;requests&nbsp;=&nbsp;getRequests();</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">for(unsigned&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;requests.size();&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">ObjectPointer&lt;Server::BaseNode&gt;&nbsp;pNode&nbsp;=&nbsp;requests[i]-&gt;getNode();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">if(inDynamicAddressSpace(requests[i]-&gt;getWriteValue()-&gt;getNodeId()))</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;DynamicAddressSpace&nbsp;always&nbsp;has&nbsp;to&nbsp;complete&nbsp;the&nbsp;request&nbsp;-&nbsp;good&nbsp;or&nbsp;bad</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">DynamicAddressSpace::handleReadRequest(requests[i]);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;might&nbsp;be&nbsp;already&nbsp;completed&nbsp;or&nbsp;later&nbsp;-&nbsp;don't&nbsp;care</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">continue;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;SDK&nbsp;might&nbsp;have&nbsp;already&nbsp;detected&nbsp;some&nbsp;errors&nbsp;(e.g.&nbsp;other&nbsp;unknown&nbsp;node,&nbsp;access&nbsp;rights,&nbsp;...)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">if(!StatusCode::isGood(requests[i]-&gt;getStatusCode()))</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">requests[i]-&gt;complete();</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">continue;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">if(needsAsyncExecution(requests[i]-&gt;getWriteValue()-&gt;getNodeId()))</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;async&nbsp;execution&nbsp;necessary&nbsp;(e.g.&nbsp;write&nbsp;to&nbsp;a&nbsp;device)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;just&nbsp;store&nbsp;the&nbsp;request</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">AsyncExecuter::addWriteRequest(requests[i]);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;not&nbsp;yet&nbsp;completed,&nbsp;but&nbsp;will&nbsp;be&nbsp;completed&nbsp;later</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">continue;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;if&nbsp;the&nbsp;request&nbsp;is&nbsp;not&nbsp;handled&nbsp;by&nbsp;application,&nbsp;then&nbsp;pass&nbsp;it&nbsp;to&nbsp;the&nbsp;node,&nbsp;which&nbsp;will&nbsp;simply&nbsp;update&nbsp;the&nbsp;cache&nbsp;in&nbsp;address&nbsp;space</span><br />
+<span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;and&nbsp;complete&nbsp;the&nbsp;request</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">requests[i]-&gt;getNode()-&gt;handleWriteRequest(this,&nbsp;requests[i]);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;assume&nbsp;global&nbsp;class&nbsp;which&nbsp;is&nbsp;now&nbsp;passing&nbsp;the&nbsp;requests&nbsp;to&nbsp;a&nbsp;separate&nbsp;thread&nbsp;(if&nbsp;any)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">AsyncExecuter::executeWriteRequests();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">return&nbsp;EnumStatusCode_Good;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_threading.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

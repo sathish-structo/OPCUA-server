@@ -1,0 +1,70 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Sample Application</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_serverstep4sample.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Sample Application</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_servermethod.htm">Previous</a>&nbsp;
+     <a href="html_programmersguide.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h3 class="p_Heading3"><a id="hdr"></a><span class="f_Paragraph">This topic belongs to <a href="html_servermethod.htm" class="topiclink">Creating a Custom UA Method</a>. It refers to the sample application </span><span class="f_Reference">Server_4</span><span class="f_Paragraph"> and should be tested with the sample application </span><span class="f_Reference">Client_6</span><span class="f_Paragraph">. (See <a href="html_gettingstarted.htm" class="topiclink">Programming Tutorial</a> for where to find the tutorial samples)</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Where to Find</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Source code and project files belonging to the sample application are located in the directory </span><span class="f_FixedSize">&lt;InstallDir&gt;/Apps/Samples/Cpp/Tutorial/Server_4</span><span class="f_Paragraph">.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Running the Server</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Compile and start the sample applications </span><span class="f_Reference">Server_4</span><span class="f_Paragraph"> and </span><span class="f_Reference">Client_6</span><span class="f_Paragraph">. Run the server application in the debugger and step through the code.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">After connecting the client with the command &quot;</span><span class="f_Reference">co</span><span class="f_Paragraph">&quot; and browsing the address space to get the necessary NodeIds with </span><span class="f_Reference">&quot;br&quot;</span><span class="f_Paragraph">, use the command </span><span class="f_Reference">&quot;op&quot;</span><span class="f_Paragraph"> (open) and </span><span class="f_Reference">&quot;cl&quot;</span><span class="f_Paragraph"> (close) to call the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm" class="topiclink">Method</a> with a different input argument to perform an action. These commands also have optional parameters to specify an instance of a simulated device. </span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Points of Interest</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The related steps are implemented in </span><span class="f_FixedSize">Refrigerator::initialize()</span><span class="f_Paragraph">, </span><span class="f_FixedSize">Refrigerator::handleCallRequest()</span><span class="f_Paragraph">, </span><span class="f_FixedSize">Refrigerator::openDoor() </span><span class="f_Paragraph">and</span><span class="f_FixedSize"> Refrigerator::closeDoor()</span><span class="f_Paragraph">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">How the Method is configured and added to the </span><span class="f_FixedSize">RefrigeratorType</span><span class="f_Paragraph">. (See </span><span class="f_FixedSize">Refrigerator::initialiaze()</span><span class="f_Paragraph">)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">How to handle the </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_request.htm" class="topiclink">MethodCallRequest</a> with an overridden <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_object_1adcbd8233803195b9106191b411a35f47" class="topiclink">handleCallRequest</a> of the class <span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object.htm" class="topiclink">Object</a></span>.<span class="f_Paragraph"> (See </span><span class="f_FixedSize">Refrigerator::handleCallRequest() </span><span class="f_Paragraph">for handling the call and</span><span class="f_FixedSize"> Refrigerator::openDoor </span><span class="f_Paragraph">and</span><span class="f_FixedSize"> Refrigerator::closeDoor() </span><span class="f_Paragraph">for method handling)</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="html_servermethod.htm" class="topiclink">Creating a Custom UA Method</a>, <a href="html_servertutorial.htm" class="topiclink">Server Tutorial</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_serverstep4sample.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

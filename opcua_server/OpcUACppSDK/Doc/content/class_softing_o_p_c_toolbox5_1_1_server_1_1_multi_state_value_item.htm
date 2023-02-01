@@ -1,0 +1,386 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>MultiStateValueItem Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">MultiStateValueItem Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_item.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerMultiStateValueItem.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map126" id="map126"><area shape="rect" coords="5,315,142,349" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm" alt="" /><area shape="rect" coords="30,187,117,221" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm" alt="" /><area shape="rect" coords="25,251,121,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_item.htm" alt="" /><area shape="rect" coords="30,6,117,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="30,59,117,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm" alt="" /><area shape="rect" coords="30,123,117,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.gif" width="147" height="355" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" style="width:147px;height:355px;border:none" usemap="#map126" /></p>
+<p class="p_Paragraph">This class represents a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_item" class="topiclink">DiscreteItem</a> that can have more than two states and where the state values does not consist of consecutive numeric values (may have gaps).</p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> can contain values of any numeric data type.</p>
+<p class="p_Paragraph">Properties of <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a>: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumValues (mandatory): A list of pairs which map specific discrete values to <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a>. Example: {&quot;1/OPEN&quot;, &quot;2/CLOSE&quot;, &quot;4/IN TRANSIT&quot;}. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ValueAsText (mandatory): A property showing the <a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a> matching the corresponding value. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1ab3ecab5dfe0e02f23abdb8fe6e3b59a1" class="topiclink">MultiStateValueItem</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a8d55381f63e90136919764117a6e6471" class="topiclink">~MultiStateValueItem</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1af3d9817959ab448f57a4cf6474197e75" class="topiclink">addState</a></span>(const EnumValueType &amp;stateValue)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a98738c29abbd5c73bed2f311aeaadb86" class="topiclink">setState</a></span>(const Value &amp;newState)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a35c1f384aa67b155404cf265d02e25b1" class="topiclink">validateValue</a></span>(const IValue &amp;value, const INumericRange *pIndexRange)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a5637dd24f47502887f60ed230def152b" class="topiclink">init</a></span>(const INodeId *typeId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a83b7f343316a603561916731d2e16d33" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a6f58524f486e83fbcac0cbf33d846e5f" class="topiclink">create</a></span>(const INodeId &amp;nodeId, const ILocalizedText &amp;displayName, const IQualifiedName &amp;browseName, const INodeId *dataTypeNodeId, const INodeId *enumValuesPropertyNodeId=NULL, const INodeId *valueAsTextPropertyNodeId=NULL)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a1c00fb5172194bbde03fb92d9a021292" class="topiclink">MultiStateValueItem</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a240964cb62beda503608c8b091c05ef4" class="topiclink">MultiStateValueItem</a></span>(const INodeId &amp;nodeId, const ILocalizedText &amp;displayName, const IQualifiedName &amp;browseName, const INodeId *dataTypeNodeId, const INodeId *enumValuesPropertyNodeId=NULL, const INodeId *valueAsTextPropertyNodeId=NULL)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a83b7f343316a603561916731d2e16d33"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> instance</p>
+<p class="p_Paragraph">After construction the object has not a single state. Use <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1af3d9817959ab448f57a4cf6474197e75" class="topiclink">addState()</a> to add additional states and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a98738c29abbd5c73bed2f311aeaadb86" class="topiclink">setState()</a> to set the state to a valid value. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a771d79b02959b3f03dfa1ed7f51aae87" class="topiclink">SoftingOPCToolbox5::Server::DataItem</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a6f58524f486e83fbcac0cbf33d846e5f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::create</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_i_localized_text" class="topiclink">ILocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">dataTypeNodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">enumValuesPropertyNodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">valueAsTextPropertyNodeId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor with mandatory attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> to be created </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The display name of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> to be created </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The browse name of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> to be created </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">dataTypeNodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The data type of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> (it has to be numeric) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">enumValuesPropertyNodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">optional <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the EnumValues property of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> to be created. (If no <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> is specified, a nodeId will be generated) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">valueAsTextPropertyNodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the ValueAsText property of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a> to be created. (If no <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> is specified, a nodeId will be generated) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a1c00fb5172194bbde03fb92d9a021292"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::MultiStateValueItem</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a240964cb62beda503608c8b091c05ef4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::MultiStateValueItem</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_i_localized_text" class="topiclink">ILocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter">browseName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">dataTypeNodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">enumValuesPropertyNodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">valueAsTextPropertyNodeId</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Please use MultiStateValueItem::create(const INodeId&amp;, const ILocalizedText&amp;, const IQualifiedName&amp;, const INodeId&amp; dataTypeNodeId) to construct an instance of this type.</p>
+<p class="p_Paragraph">Constructor with mandatory attributes </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1ab3ecab5dfe0e02f23abdb8fe6e3b59a1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::MultiStateValueItem</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a8d55381f63e90136919764117a6e6471"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::~MultiStateValueItem</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1af3d9817959ab448f57a4cf6474197e75"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::addState</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_enum_value_type.htm#class_softing_o_p_c_toolbox5_1_1_enum_value_type" class="topiclink">EnumValueType</a> &amp; <span class="f_Parameter">stateValue</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds a new state to the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stateValue</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The pair value / text that shall be added as a new state.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Returns:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumStatusCode_Good if everything is ok EnumStatusCode_BadInvalidState if the property EnumValues cannot be found EnumStatusCode_BadInvalidArgument if a state with this value does already exist </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a98738c29abbd5c73bed2f311aeaadb86"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::setState</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> &amp; <span class="f_Parameter">newState</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the actual state of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item" class="topiclink">MultiStateValueItem</a>.</p>
+<p class="p_Paragraph">The property &quot;ValueAsText&quot; is updated automatically.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">newState</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The new state set to this item. The value is provided as <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> since the instance can have any numeric data type. The value is validated that a defined state for this value exists.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Returns:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>EnumStatusCode_Good if everything is ok EnumStatusCode_BadInvalidArgument if the value cannot be converted to an OTInt64 EnumStatusCode_BadOutOfRange if there is no state defined for the given value EnumStatusCode_BadTypeMismatch if the data type of the value does not match the data type of the item </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a35c1f384aa67b155404cf265d02e25b1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::validateValue</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> &amp; <span class="f_Parameter">value</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_i_numeric_range" class="topiclink">INumericRange</a> * <span class="f_Parameter">pIndexRange</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Validates whether an input value is valid to be used for the <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> attribute of this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Variable</a>.</p>
+<p class="p_Paragraph">Overridden method that additionally validates the range according to the configured states. This method may be called when handling a write request to the <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> attribute.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">dataValue</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The data value to validate </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">pIndexRange</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The optional index range when only a subset shall be updated. Use NULL or an empty <a href="class_softing_o_p_c_toolbox5_1_1_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_numeric_range" class="topiclink">NumericRange</a> for no index range checks.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1ad352fa3a875d657fdc33347c54f7bfed" class="topiclink">Variable::validateValue</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1ad352fa3a875d657fdc33347c54f7bfed" class="topiclink">SoftingOPCToolbox5::Server::Variable</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a5637dd24f47502887f60ed230def152b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::MultiStateValueItem::init</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">typeId</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">BaseNode::init()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1ac16b8f7e0a2342a20b2962fcf0921895" class="topiclink">SoftingOPCToolbox5::Server::DataItem</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

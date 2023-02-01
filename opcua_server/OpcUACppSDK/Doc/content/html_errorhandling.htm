@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Error Handling</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_errorhandling.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Error Handling</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_lifetimeoftoolkitobjects.htm">Previous</a>&nbsp;
+     <a href="html_licensing.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><a id="hdr"></a><span class="f_Heading2">The Use of Status Codes in the SDK</span></h2>
+<h2 class="p_Heading2"><span class="f_Paragraph">All functions that may encounter errors during execution use the enumeration <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm" class="topiclink">EnumStatusCode</a> to specify the error condition. The values of the StatusCode enumeration are defined by the OPC Foundation and are also used to denote errors in service calls. Also the quality of a <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm" class="topiclink">variable's value</a> is denoted by the same StatusCode. See the <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm" class="topiclink">reference manual</a> to receive the complete list of all enumeration values.</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK provides the global function <a href="globalfunctions.htm#_enums_8h_1ab12ccb1f254d40604dc7cd9bfaa3ff7c" class="topiclink">getEnumStatusCodeString()</a> to retrieve the textual description of a StatusCode. This method can be useful for debugging error conditions.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_status_code.htm" class="topiclink">StatusCode</a> class provides convenience methods for testing status codes. The static method <a href="class_status_code.htm#class_status_code_1a444aa4d9f5cbabb8450e3c9d1281817c" class="topiclink">StatusCode::isGood()</a>, for example, may be used to test whether a given status code is 'good', i.e. does not indicate an error.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Enabling Tracing for the SDK Components</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">If a status code does not provide enough information to identify a problem, you may turn on tracing of diagnostic messages. Tracing of diagnostic messages can be enabled in the <a href="class_softing_o_p_c_toolbox5_1_1_trace.htm" class="topiclink">Trace</a> singleton class. The following code illustrates how to enable tracing to a log file:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Trace::instance()-&gt;enableFileLogging(_T(&quot;logging.txt&quot;),&nbsp;10000,&nbsp;5,&nbsp;256);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Trace::instance()-&gt;enableTraceLevel(EnumTraceGroup_All,&nbsp;EnumTraceLevel_WarningAndHigher);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The trace output can also be streamed over a TCP connection. See the <a href="html_traceviewer.htm" class="topiclink">Trace Viewer</a> topic for further reference.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">It is also possible to implement an individual tracing. To do this, invoke the <a href="class_softing_o_p_c_toolbox5_1_1_trace.htm#class_softing_o_p_c_toolbox5_1_1_trace_1aa4667f9eddb1aa7c71ef8e0edf561a8c" class="topiclink">Trace::enableCallbackLogging()</a>. The given callback will be invoked on every enabled trace level / trace group.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_errorhandling.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

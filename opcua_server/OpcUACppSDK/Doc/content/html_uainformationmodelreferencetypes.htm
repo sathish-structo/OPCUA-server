@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Reference Types</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uainformationmodelreferencetypes.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Reference Types</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uainformationmodeldatatypes.htm">Previous</a>&nbsp;
+     <a href="html_uainformationmodelstatemachines.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">Reference types are used to create interconnections between nodes. They are not instantiated, i.e. a node class representing a reference is not defined. Instead of instantiating the references, they are added to a collection associated with each node class. The node class of the node and its type decide what references are allowed to be added to this collection. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The base of all references is an abstract references type. There is no semantics associated with it.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">There are two disjoint sets of standard references:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">HierarchicalReferences</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">NonHierarchicalReferences</span></td></tr></table></div><p class="p_Paragraph"><img src="ua_introduction_referencetypes_full.png" width="559" height="398" alt="UA_Introduction_ReferenceTypes_Full" style="width:559px;height:398px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This distinction reflects two fundamental relationship categories that can be generally distinguished: the association and the dependency. Associations are used to build information architecture – nodes hierarchy - that can be discovered by the clients using the browsing mechanism. An example of the association is the parent/child relationship. In this case we can say that the target belongs to the source. A dependency from a source element (called the client) to a target element (called the supplier) indicates that the source element uses or depends on the target element. An example of dependency is the variable/variable type relationship. In this case we can state that the target describes the source.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">HierarchicalReferences do not forbid loops. For example, starting from node “A” and following HierarchicalReferences may lead to browse to node “A” again.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">HasChild is an abstract type derived from HierarchicalReferences that creates a branch of types, which forbids loops. In this case, starting from node “A” and only following references, which are subtypes of HasChild, we shall never be able to return to “A”. But it is allowed that there may be more than one path leading to another node “B”.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The HasChild branch contains HasComponent and HasProperty. Both are derived from the Aggregates type and used to reflect belongs to the relationship. There is also HasSubtype on this branch, but in this case it is used to expose the inheritance hierarchy.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The HasComponent derived from the Aggregates is defined to build the part-of relationship, i.e. the target node of HasComponent is a part of the source node. This type is used to relate objects, object types, variables and methods. The table below contains the allowed composite nodes (source) and allowed components as target of this type of reference. By using this reference, the variable is defined as a data variable. </span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:104px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Source</span></p>
+</td>
+<td style="vertical-align:top; width:114px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Target</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:104px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Object</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">ObjectType</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Object, Variable</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Method</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:104px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">DataVariable</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">VariableType</span></p>
+</td>
+<td style="vertical-align:top; width:114px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Variable</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">The semantics of HasProperty derived from Aggregates is to identify the properties of a node. The source node of this type can be of any node class. The target node shall be a variable. By using the HasProperty, the variable is defined as property. Since properties shall not have properties, a property shall never be the source node of a HasProperty reference.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An example of a complex object using the references described above is shown in the figure below. The ServerType has HasProperty references (double hashed lines) pointing to the ServerArray, NamespaceArray, ServiceLevel and Auditing properties. The ServerStatus is a child variable pointed by a reference of the HasComponent (single hashed line) type. Objects of this type have also components: ServerCapabilities, ServerDiagnostics, VendorServerInfo, ServerRedundancy objects pointed also by a reference of the HasComponent type.</span></p>
+<p class="p_Paragraph"><img src="ua_introduction_servertype.png" width="317" height="377" alt="UA_Introduction_ServerType" style="width:317px;height:377px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The HasSubtype is a subtype of the HasChild type. It is worth noting, that inheritance using HasSubtype is represented using the one-to-many (parent/child) relationship. Because new types can be freely derived from the existing ones we cannot enumerate all children in advance - the tree must be built and maintained dynamically during the lifecycle of the address space. This means that when a new type is created it is created with a reference to its base (parent), which results in a new subtype being added to the parent.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The Organizes reference is the next subtype of HierarchicalReferences. The semantics of it is to organize nodes in the address space. It can be used to span multiple hierarchies independent of any hierarchy created with the non-looping Aggregates references. The source node of references of this type shall be an object or a view. If it is an object it should be of the FolderType or one of its subtypes. The target node of this type can be of any node class.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The types: HasModellingRule, HasModelParent, HasTypeDefinition, HasEncoding, HasDescription, GeneratesEvent belong to the NonHierarchicalReferences branch.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uainformationmodelreferencetypes.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

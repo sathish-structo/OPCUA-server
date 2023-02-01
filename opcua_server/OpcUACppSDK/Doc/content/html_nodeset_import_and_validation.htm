@@ -1,0 +1,198 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>NodeSet import and validation</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_nodeset_import_and_validation.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">NodeSet import and validation</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="model_import.htm">Previous</a>&nbsp;
+     <a href="html_programming_samples.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h1 class="p_Heading1"><a id="hdr"></a><span class="f_Heading1">Import Nodeset XML file</span></h1>
+<p class="p_Paragraph"><span class="f_Paragraph">The functionality to import a NodeSet2 xml file into servers address space is activated by default. To import a xml file one of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a53e25aa564f979738e65cd241f25da19" class="topiclink">importNodes()</a> methods on the AddressSpaceRoot has to be called.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">While importing a Nodeset xml file some problems can occur. The Server is notified about these problems by the callback <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a4107fa35ffd6d09ac9658afccb2fbe18" class="topiclink">onImportNodesError()</a> in the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm" class="topiclink">AddressSpaceRoot</a>. The enum <a href="_error_enums_8h_1a33a7ea77323fa261a3fd4896b1516b39.htm" class="topiclink">EnumModelDesignerStatus</a> gives a hint what happened:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table class="EnumValues" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table" style="font-weight: bold;">Enum value</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_good" class="topiclink">EnumModelDesignerStatus_Good</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">Everything is as expected.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_bad" class="topiclink">EnumModelDesignerStatus_Bad</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">An error occurred.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badinvalidargument" class="topiclink">EnumModelDesignerStatus_BadInvalidArgument</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">One or more arguments are invalid.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badoutofmemory" class="topiclink">EnumModelDesignerStatus_BadOutOfMemory</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">Not enough memory to complete the operation.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badinvalidstate" class="topiclink">EnumModelDesignerStatus_BadInvalidState</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">The operation cannot be completed because the object is closed, uninitialized or in some other invalid state.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badinternalerror" class="topiclink">EnumModelDesignerStatus_BadInternalError</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">An internal error occurred as a result of a programming or configuration error.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badparsererror" class="topiclink">EnumModelDesignerStatus_BadParserError</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">The parser failed to parse the input</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_baddatatypeunsupported" class="topiclink">EnumModelDesignerStatus_BadDataTypeUnsupported</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">The parser encountered an unsupported OPC UA data type</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badnotimplemented" class="topiclink">EnumModelDesignerStatus_BadNotImplemented</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">Requested operation is not implemented.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badfileopenerror" class="topiclink">EnumModelDesignerStatus_BadFileOpenError</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">A file could not be opened.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badnotsupported" class="topiclink">EnumModelDesignerStatus_BadNotSupported</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">The requested operation is not supported.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badnodeidexists" class="topiclink">EnumModelDesignerStatus_BadNodeIdExists</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">The requested node id is already used by another node.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badnomatch" class="topiclink">EnumModelDesignerStatus_BadNoMatch</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">The requested operation has no match to return.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badimporterror" class="topiclink">EnumModelDesignerStatus_BadImportError</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">The import failed due to some OPC UA specification restriction.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table"><a href="html_nodeset_import_and_validation.htm#enummodelcompilerstatus_badnamespaceunknown" class="topiclink">EnumModelDesignerStatus_BadNamespaceUnknown</a></span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Table"><span class="f_Table">The specified namespace does not exist.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">When one of these errors occurs the whole import of the current imported xml file is rolled back.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_good"></a><span class="f_Heading3">Good</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Everything is fine, nothing to do.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Easily recoverable errors</span></h2>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badparsererror"></a><span class="f_Heading3">BadParserError</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The xml file is not well formed, or contains unknown elements or tags. It is possible to validate the xml file against the UANodeSet.xsd schema file.</span></p>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_baddatatypeunsupported"></a><span class="f_Heading3">BadDataTypeUnsupported</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The xml file contains an unsupported DataType.</span></p>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badfileopenerror"></a><span class="f_Heading3">BadFileOpenError</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The xml file could not be opened. There can be several reasons, e.g. the file cannot be found at the given location, or it is locked by another program etc. Please verify that the file is accessible.</span></p>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badnodeidexists"></a><span class="f_Heading3">BadNodeIdExists</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The NodeId of the Node at the provided location already exists. That means another Node has the same NodeId in this namespace. Check if the namespace of this NodeId is correct, or change one of the NodeIds. Either change the NodeId on the provided line number or search the other one in the xml file.</span></p>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badnamespaceunknown"></a><span class="f_Heading3">BadNamespaceUnknown</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The namespace index of the node cannot be matched to a namespace uri.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Unexpected errors</span></h2>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_bad"></a><span class="f_Heading3">Bad</span></h3>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badinvalidargument"></a><span class="f_Heading3">BadInvalidArgument</span></h3>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badoutofmemory"></a><span class="f_Heading3">BadOutOfMemory</span></h3>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badinvalidstate"></a><span class="f_Heading3">BadInvalidState</span></h3>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badinternalerror"></a><span class="f_Heading3">BadInternalError</span></h3>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badnotimplemented"></a><span class="f_Heading3">BadNotImplemented</span></h3>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badnotsupported"></a><span class="f_Heading3">BadNotSupported</span></h3>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badnomatch"></a><span class="f_Heading3">BadNoMatch</span></h3>
+<h3 class="p_Heading3"><a id="enummodelcompilerstatus_badimporterror"></a><span class="f_Heading3">BadImportError</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">for these errors it is not easy to give a universal solution, please contact the <a href="html_supportinfo.htm" class="topiclink">Technical Support</a></span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h1 class="p_Heading1"><span class="f_Heading1">Validate AddressSpace</span></h1>
+<p class="p_Paragraph"><span class="f_Paragraph">It is good practice to validate the AddressSpace after a NodeSet xml file was imported. The validation of the AddressSpace is also available if the address space was built up programmatically. The call of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a59ac3fabcb2b3af4ebb660f18287420d" class="topiclink">validate()</a> method on the AddressSpaceRoot checks:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">if there are mandatory references missing in the AddressSpace. E.g. a AnalogItemType has a mandatory reference to an EURange.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">if there is a node which references more than one modeling rule. </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">if the type of a Object or Variable Node is different to the referenced type of the ObjectType or VariableType.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">For each occurrence of these validation errors the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1a8f7a68c7866c4caced3235a5cea83689" class="topiclink">onValidateError()</a> Callback is invoked. Unlike the rollback on importing when an error comes up, the validation goes on and nothing is rolled back.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_nodeset_import_and_validation.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

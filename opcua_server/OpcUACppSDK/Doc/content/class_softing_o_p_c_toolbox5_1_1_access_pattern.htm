@@ -1,0 +1,544 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>AccessPattern Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_access_pattern.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">AccessPattern Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_writer_group.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern"></a></p>
+<p><span class="f_CodeExample">#include &quot;AccessPattern.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map174" id="map174"><area shape="rect" coords="5,6,112,29" href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm" alt="" /><area shape="rect" coords="7,59,110,82" href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_access_pattern.gif" width="117" height="88" alt="class_softing_o_p_c_toolbox5_1_1_access_pattern" style="width:117px;height:88px;border:none" usemap="#map174" /></p>
+<p class="p_Paragraph">An <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> is used to implement user authorization in an OPC UA server and defines access rights for Variables and Methods for one or more user groups.</p>
+<p class="p_Paragraph">The SDK uses a matrix to organize user access rights. The AccessPatterns represent the rows and user groups represent the columns of this matrix. The whole matrix is represented as a vector of AccessPatterns which contain an AccessField (<a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a>) where each byte is a bit mask for one user group of this pattern.</p>
+<p class="p_Paragraph">A server may define user rights for accessing the &quot;Value&quot; attribute of Variables and user rights for executing Methods. In the address space, the right of a certain user to access a Variable's value or to execute a Method is made visible by the attributes &quot;UserAccessLevel&quot; resp. &quot;UserExecutable&quot;.</p>
+<p class="p_Paragraph">Each <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> is identified by an arbitrary key and each Variable or Method in the server may use the key to refer to an <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a>. The SDK defines a reserved default access pattern (key = 0) that uses the AccessLevel (not UserAccessLevel) attribute of a Variable resp. the Executable (not UserExecutable) attribute of a Method, regardless of the user group.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please note that the SDK defines a default <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> with key &quot;0&quot; that uses the value of the Variable's AccessLevel resp. the Method's Executable attribute. This special <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> cannot be overridden. Please note that the ByteStrings for the user groups of all AccessPatterns shall have the same size.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ab9bdf706fee23d9adb50662593d3d874" class="topiclink">Application::setAccessPattern()</a> <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a1df21dd3a6ab68316ed87a3708a667b4" class="topiclink">Application::getUserAccessLevel()</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a0629090cbc9ca8f67f2d651eab87e358" class="topiclink">Server::Endpoint::onAuthenticateUser()</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1a4016662bee422ee58bea857587627f08" class="topiclink">Server::Variable::setAccessPatternKey()</a> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_1ae58952b117c557274a1d06114cf31294" class="topiclink">Server::Method::setAccessPatternKey()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a1a3092240f66d22aa86df214b12262e1" class="topiclink">AccessPattern</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a28f84528fc9282034c194d0f345b7418" class="topiclink">AccessPattern</a></span>(const IAccessPattern *)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a795b82724c91072571855aca11051956" class="topiclink">AccessPattern</a></span>(const IAccessPattern &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1af831f165267f3a3856f2a4d27c114049" class="topiclink">AccessPattern</a></span>(const AccessPattern &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1afc852abc1a25fe619078ba6172b3c785" class="topiclink">~AccessPattern</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1ab482870181ece0865a4702a8cab0ec06" class="topiclink">operator=</a></span>(const IAccessPattern *cp)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a80869c58239d1185504199dfa7a55b62" class="topiclink">operator=</a></span>(const IAccessPattern &amp;cp)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a3ed5afda51ac96f87397995f241c6aca" class="topiclink">operator=</a></span>(const AccessPattern &amp;cp)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1abe2eeb7cca7fcbeab99572505f641900" class="topiclink">set</a></span>(const IAccessPattern *pSrc)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1ade4e65697b6b0764a9c8e9387454e9ab" class="topiclink">set</a></span>(const IAccessPattern &amp;pSrc)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a64bfe8936a83acc234108e35b88a552c" class="topiclink">compare</a></span>(const IAccessPattern *) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1af3e9fcdd8b670903ed05d058b733deb7" class="topiclink">compare</a></span>(const IAccessPattern &amp;) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a9f077b2ecc61d17859ee70665a1a4172" class="topiclink">operator==</a></span>(const IAccessPattern &amp;other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1adb969e55db4ded82004230a7ade1ce89" class="topiclink">operator!=</a></span>(const IAccessPattern &amp;other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a28932fae471a8509969d302476ddeba4" class="topiclink">getAccessField</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a43a76614a66803d33dbe1700f3eabdbb" class="topiclink">setAccessField</a></span>(const ByteString &amp;value)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a298afb63a5000392dbba70599b46e3a5" class="topiclink">getKey</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a079580573654115cd3d3d71883c6dcdf" class="topiclink">setKey</a></span>(OTUInt32 value)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a4f806b0b85ba0973f45e0eb4b646757d" class="topiclink">getName</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a309abe4311c37a9a99b2742e564f9fad" class="topiclink">setName</a></span>(const tstring &amp;value)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1af9db076764bacf1628688fc3e0ad3122" class="topiclink">clear</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1aaab11df8ae5f8892996b57cf4e8119a0" class="topiclink">getInternHandle</a></span>() const </p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a1a3092240f66d22aa86df214b12262e1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::AccessPattern</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a28f84528fc9282034c194d0f345b7418"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::AccessPattern</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> * <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a copy of the given instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a795b82724c91072571855aca11051956"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::AccessPattern</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1af831f165267f3a3856f2a4d27c114049"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::AccessPattern</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1afc852abc1a25fe619078ba6172b3c785"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::~AccessPattern</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1ab482870181ece0865a4702a8cab0ec06"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> * <span class="f_Parameter">cp</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Assigns the contents of <span class="f_Parameter">cp</span> to this instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a80869c58239d1185504199dfa7a55b62"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> &amp; <span class="f_Parameter">cp</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a3ed5afda51ac96f87397995f241c6aca"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a> &amp; <span class="f_Parameter">cp</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1abe2eeb7cca7fcbeab99572505f641900"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">source</span> to this instance </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1a4f38094fda44a5bc5ade45f1401f7175" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1ade4e65697b6b0764a9c8e9387454e9ab"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> &amp; <span class="f_Parameter">pSrc</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1a244996b3903408054eb4d25118d2f32c" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a64bfe8936a83acc234108e35b88a552c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1a2ce4be2d1c73a3d9779ba470cf1e051b" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1af3e9fcdd8b670903ed05d058b733deb7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> &amp; <span class="f_Parameter"> </span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1add1d3d2684f844df9abde733b0af1087" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a9f077b2ecc61d17859ee70665a1a4172"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1a18995a933cd5ad3724ecb1f46f86f07b" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1adb969e55db4ded82004230a7ade1ce89"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern" class="topiclink">IAccessPattern</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1af1e25f402319879310ccbd8d8db3a558" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a28932fae471a8509969d302476ddeba4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::getAccessField</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the field of bytes that defines the rights for accessing the &quot;Value&quot; attribute of Variables and the rights for executing Methods.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a43a76614a66803d33dbe1700f3eabdbb" class="topiclink">setAccessField()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1a695ca953314b194eae274fc13c6801c3" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a43a76614a66803d33dbe1700f3eabdbb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::setAccessField</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_byte_string.htm#class_softing_o_p_c_toolbox5_1_1_byte_string" class="topiclink">ByteString</a> &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the field of bytes that defines the rights for accessing the &quot;Value&quot; attribute of Variables and the rights for executing Methods.</p>
+<p class="p_Paragraph">Each byte in that field defines in the lower 5 bits (0..4) the UserAccessLevel of Variables. Bit 7 of a byte is used for marking a method as executable. The allowed bits and semantics correspond to the enumeration values of EnumAcessLevel. Bits 5 and 6 are currently unused and shall be set to 0.</p>
+<p class="p_Paragraph">For example, the byte sequence &quot;0x00, 0x03, 0x01&quot; defines the following pattern: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Users in the default group (anonymous authentication) don't have any access rights to the Variable's value (see EnumAccessLevel_CurrentRead) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Users in group 1 are allowed to read and write the value of the Variable (see EnumAccessLevel_CurrentRead and EnumAccessLevel_CurrentWrite) </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Users in group 2 are only allowed to read the Variable's value (see EnumAccessLevel_CurrentRead) </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1a5f2813d579737cfca2967dc843b2311c" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a298afb63a5000392dbba70599b46e3a5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::getKey</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the key of this <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a>. The key is used by Variables and Methods to refer to this <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a079580573654115cd3d3d71883c6dcdf" class="topiclink">setKey()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1abc9269954c440836ab3dc50f47a9570c" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a079580573654115cd3d3d71883c6dcdf"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::setKey</span>(OTUInt32 <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the key of this <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a>. The key is used by Variables and Methods to refer to this <a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern" class="topiclink">AccessPattern</a>.</p>
+<p class="p_Paragraph">Only keys in the range of 1...0xFFFF are allowed. The key value 0 is reserved for the default access pattern which cannot be modified. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1a4b37806eb708e3aff2adcddaf24246a4" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a4f806b0b85ba0973f45e0eb4b646757d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::getName</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the name of the pattern.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_access_pattern_1a309abe4311c37a9a99b2742e564f9fad" class="topiclink">setName()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1affc72e56d2a56bad107f621a0b7d409a" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1a309abe4311c37a9a99b2742e564f9fad"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::setName</span>(const tstring &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the name of the pattern.</p>
+<p class="p_Paragraph">Server applications are not forced to provide a name for AccessPatterns. However, it may be useful for management purposes to assign names. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1ab76fc643e845b164facd41189fb7fb1c" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1af9db076764bacf1628688fc3e0ad3122"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::clear</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Clears the contents of this object to enable its re-use. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_access_pattern_1aaab11df8ae5f8892996b57cf4e8119a0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::AccessPattern::getInternHandle</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_access_pattern.htm#class_softing_o_p_c_toolbox5_1_1_i_access_pattern_1a4ffe2c1431f52680e0a339e8830fced3" class="topiclink">SoftingOPCToolbox5::IAccessPattern</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_access_pattern.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

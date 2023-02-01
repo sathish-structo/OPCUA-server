@@ -1,0 +1,333 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HistoryReadProcessedTransaction Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">HistoryReadProcessedTransaction Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_continuation_point.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerHistoryReadProcessedTransaction.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map104" id="map104"><area shape="rect" coords="5,123,219,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm" alt="" /><area shape="rect" coords="69,6,155,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="55,59,169,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.gif" width="224" height="163" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction" style="width:224px;height:163px;border:none" usemap="#map104" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction" class="topiclink">HistoryReadProcessedTransaction</a> class encapsulates client requests for processed (aggregated) historical data of variables and allows the server application to handle such requests.</p>
+<p class="p_Paragraph">The default implementation handles read requests for processed historical data by dispatching each request of a transaction to the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1acfe0db1d2e6abb3f26e58629131d4883" class="topiclink">Server::Variable::handleHistoryReadProcessedRequest()</a> method of the affected variable. In order to provide the requested aggregated values for the variable, a server application may want to override this method.</p>
+<p class="p_Paragraph">For optimization reasons, a server application may want to change the request dispatching behavior of the transaction (e.g. to bundle requests for nodes when requesting values from an underlying historian). This can be achieved by sub-classing the transaction and providing a custom implementation for <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1af5244113c5fb86a25657474810fc624e" class="topiclink">handleRequests()</a>. Please note that the subclass must also be added to the application's <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> (Transactions are created by the toolbox core - so the it must be able to instantiate the derived class).</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request" class="topiclink">HistoryReadProcessedRequest</a> <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a28e4e4e94c9697ef6cb572ca79c1bfc2" class="topiclink">HistoryReadProcessedTransaction</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a55cd048ee77d78e97d5dfbdabeaa43e2" class="topiclink">~HistoryReadProcessedTransaction</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1af5244113c5fb86a25657474810fc624e" class="topiclink">handleRequests</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request" class="topiclink">HistoryReadProcessedRequest</a> &gt; &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a1245da117ec24af6c1251a151bda2964" class="topiclink">getRequests</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request" class="topiclink">HistoryReadProcessedRequest</a> &gt; &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1af83f73bf8c2ea7e555c664afa747f5bc" class="topiclink">getRequests</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_date_time.htm#class_softing_o_p_c_toolbox5_1_1_date_time" class="topiclink">DateTime</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1acc77237da1f01bf75e7af021713a308a" class="topiclink">getStartTime</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_date_time.htm#class_softing_o_p_c_toolbox5_1_1_date_time" class="topiclink">DateTime</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a2ed942a9d85c906afc0b7fe49aca2893" class="topiclink">getEndTime</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">double</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1ac0d7290352aa10c89e5bb7568acc4b19" class="topiclink">getProcessingInterval</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1ae2749c87ead85120160d5157c560d9e9" class="topiclink">getAggregateConfiguration</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1ae8a1b8b78f38696d6c5364f1b49d0698.htm#_enums_8h_1ae8a1b8b78f38696d6c5364f1b49d0698" class="topiclink">EnumTimestampsToReturn</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a6bd3afbae0ce838a5d33d3ab90fc4020" class="topiclink">getTimestampToReturn</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a793a351d106d5e0f37f36d9bb3a36db5" class="topiclink">initMembers</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a28e4e4e94c9697ef6cb572ca79c1bfc2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::HistoryReadProcessedTransaction</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a55cd048ee77d78e97d5dfbdabeaa43e2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::~HistoryReadProcessedTransaction</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1af5244113c5fb86a25657474810fc624e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::handleRequests</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback function that is called to handle all read requests of the data transaction in one call. That allows to sort the different requests e.g. depending on the target which contains the requested value.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>When overriding this method you mustn't use blocking calls within this method since this blocks the UA communication.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The requests within this transaction are already preprocessed by the SDK. If the SDK has found any errors (e.g. BadNodeIdUnknown, BadContinuationPointInvalid, ...) in most cases the request should not be processed any more. Just complete the request and continue with the next. In some cases (e.g. processing &quot;virtual&quot; node, not known to the AddresSpaceRoot) further processing can be executed and the status code can be overwritten. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a1245da117ec24af6c1251a151bda2964"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request" class="topiclink">HistoryReadProcessedRequest</a> &gt; &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::getRequests</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the array of requests contained in this transaction instance. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1af83f73bf8c2ea7e555c664afa747f5bc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_request" class="topiclink">HistoryReadProcessedRequest</a> &gt; &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::getRequests</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1acc77237da1f01bf75e7af021713a308a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_date_time.htm#class_softing_o_p_c_toolbox5_1_1_date_time" class="topiclink">DateTime</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::getStartTime</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the beginning of the period for which to calculate aggregated historical values</p>
+<p class="p_Paragraph">If the client does not provide a start time, this method returns the NULL time (<span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time_1a7a2483199fe589b7f7a7d37fbea16154" class="topiclink">IDateTime::isNull</a>) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a2ed942a9d85c906afc0b7fe49aca2893"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_date_time.htm#class_softing_o_p_c_toolbox5_1_1_date_time" class="topiclink">DateTime</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::getEndTime</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the end of the period for which to calculate aggregated historical values</p>
+<p class="p_Paragraph">If the client does not provide an end time, this method returns the NULL time (<span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_date_time.htm#class_softing_o_p_c_toolbox5_1_1_i_date_time_1a7a2483199fe589b7f7a7d37fbea16154" class="topiclink">IDateTime::isNull</a>) </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1ac0d7290352aa10c89e5bb7568acc4b19"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>double<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::getProcessingInterval</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the processing interval (in ms) that divides the total range |StartTime - EndTime| into sub-ranges of the given length. The server shall return aggregate values for each sub-range. If the processing interval is zero, only one aggregate value shall be calculated for the total time range |StartTime - EndTime|. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1ae2749c87ead85120160d5157c560d9e9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_aggregate_configuration" class="topiclink">SoftingOPCToolbox5::AggregateConfiguration</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::getAggregateConfiguration</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the configuration that is to be used for calculating aggregate values.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_aggregate_configuration" class="topiclink">IAggregateConfiguration</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a6bd3afbae0ce838a5d33d3ab90fc4020"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1ae8a1b8b78f38696d6c5364f1b49d0698.htm#_enums_8h_1ae8a1b8b78f38696d6c5364f1b49d0698" class="topiclink">EnumTimestampsToReturn</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::getTimestampToReturn</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the timestamps requested by the client: 'ServerTimestamp', 'SourceTimestamp' or 'Both' ('Neither' is not allowed for history read processed requests).</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If the server does not support the requested timestamps the status code EnumStatusCode_BadTimestampNotSupported shall be used for every request. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a793a351d106d5e0f37f36d9bb3a36db5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction::initMembers</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a296fa36986f21445918d16ba8751ff90" class="topiclink">SoftingOPCToolbox5::Server::DataTransaction</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

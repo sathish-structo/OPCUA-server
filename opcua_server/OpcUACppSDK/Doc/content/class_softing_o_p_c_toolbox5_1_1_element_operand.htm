@@ -1,0 +1,416 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ElementOperand Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_element_operand.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">ElementOperand Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_endpoint_description.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand"></a></p>
+<p><span class="f_CodeExample">#include &quot;ElementOperand.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map205" id="map205"><area shape="rect" coords="5,6,128,29" href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm" alt="" /><area shape="rect" coords="8,59,125,82" href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_element_operand.gif" width="133" height="88" alt="class_softing_o_p_c_toolbox5_1_1_element_operand" style="width:133px;height:88px;border:none" usemap="#map205" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand" class="topiclink">ElementOperand</a> data type is used in the context of event or node filters (in queries) to link sub-elements within a <a href="class_softing_o_p_c_toolbox5_1_1_content_filter.htm#class_softing_o_p_c_toolbox5_1_1_content_filter" class="topiclink">ContentFilter</a>.</p>
+<p class="p_Paragraph">The link is in the form of an integer that is used to index into the array of elements contained in the <a href="class_softing_o_p_c_toolbox5_1_1_content_filter.htm#class_softing_o_p_c_toolbox5_1_1_content_filter" class="topiclink">ContentFilter</a>. An index is considered valid if its value is greater than the element index it is part of and it does not reference a non-existent element. Clients shall construct filters in this way to avoid circular and invalid References. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a007a0af713fbc04e99e98a68dd53c321" class="topiclink">ElementOperand</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a4aeaa8e9ae069c0d51542a7a515b7db7" class="topiclink">ElementOperand</a></span>(const IElementOperand *)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1aa8d97c4a6e63285a0b1199f3a6f1c76d" class="topiclink">ElementOperand</a></span>(const IElementOperand &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a2af4a17b6e8f1582c0e5ee45a31ba603" class="topiclink">ElementOperand</a></span>(const ElementOperand &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1ab3cbbc723afbe90b7a8a657d8330117c" class="topiclink">~ElementOperand</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand" class="topiclink">ElementOperand</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1afb4ef433ab58a07433ec5dae930c074d" class="topiclink">operator=</a></span>(const IElementOperand *)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand" class="topiclink">ElementOperand</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a0629a1a558b7b0698d4a38d59695c08f" class="topiclink">operator=</a></span>(const IElementOperand &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand" class="topiclink">ElementOperand</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1aea0d052164ef6104fef6a86dc9934509" class="topiclink">operator=</a></span>(const ElementOperand &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1ab2ba6905bfee6907d2d4aed25daa33c4" class="topiclink">set</a></span>(const IElementOperand *pSrc)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1aca9d585fb0391751c473c8b75a6aa149" class="topiclink">set</a></span>(const IElementOperand &amp;pSrc)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a96bd481e9c63dfc6cb93af939cb7d5a2" class="topiclink">compare</a></span>(const IElementOperand *) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a096a8d5815c0c638248b4bca1d5f62b2" class="topiclink">compare</a></span>(const IElementOperand &amp;) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a5309c3cd08b3ab0112c9b99acf095b4c" class="topiclink">operator==</a></span>(const IElementOperand &amp;other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1ad7210ede30ab9ae8430e5bdc7ff62a33" class="topiclink">operator!=</a></span>(const IElementOperand &amp;other) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a1e30ecc95a003becf20a16a102948744" class="topiclink">getIndex</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a29611dd1c4307ee681ceb87dc4b2d507" class="topiclink">setIndex</a></span>(OTUInt32 value)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1a39cb9062bf6e1db37af3f4e900c7b2fa" class="topiclink">clear</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand_1ab2a1f10ee45e13d4f767ad431257c6b1" class="topiclink">getInternHandle</a></span>() const </p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a007a0af713fbc04e99e98a68dd53c321"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::ElementOperand</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a4aeaa8e9ae069c0d51542a7a515b7db7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::ElementOperand</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> * <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a copy of the given instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1aa8d97c4a6e63285a0b1199f3a6f1c76d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::ElementOperand</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a2af4a17b6e8f1582c0e5ee45a31ba603"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::ElementOperand</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand" class="topiclink">ElementOperand</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1ab3cbbc723afbe90b7a8a657d8330117c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::~ElementOperand</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1afb4ef433ab58a07433ec5dae930c074d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand" class="topiclink">ElementOperand</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> * <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Assigns the contents of <span class="f_Parameter">cp</span> to this instance </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a0629a1a558b7b0698d4a38d59695c08f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand" class="topiclink">ElementOperand</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1aea0d052164ef6104fef6a86dc9934509"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand" class="topiclink">ElementOperand</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_element_operand" class="topiclink">ElementOperand</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1ab2ba6905bfee6907d2d4aed25daa33c4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand_1a8c29bf3853aafa9f7806659f7047189b" class="topiclink">SoftingOPCToolbox5::IElementOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1aca9d585fb0391751c473c8b75a6aa149"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> &amp; <span class="f_Parameter">pSrc</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand_1a2e6626faa3e6442801b52e3c7b64034b" class="topiclink">SoftingOPCToolbox5::IElementOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a96bd481e9c63dfc6cb93af939cb7d5a2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand_1a8d8b7f3583063f3dc68805bb5cb1556e" class="topiclink">SoftingOPCToolbox5::IElementOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a096a8d5815c0c638248b4bca1d5f62b2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> &amp; <span class="f_Parameter"> </span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand_1ac92ba6336ba86a56db528e64aaa48b32" class="topiclink">SoftingOPCToolbox5::IElementOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a5309c3cd08b3ab0112c9b99acf095b4c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand_1ab57553d65e761f98d4ae12b3a6ebb4c3" class="topiclink">SoftingOPCToolbox5::IElementOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1ad7210ede30ab9ae8430e5bdc7ff62a33"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand" class="topiclink">IElementOperand</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand_1aeb42873d7ff47858fe49f9b4f25b8c76" class="topiclink">SoftingOPCToolbox5::IElementOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a1e30ecc95a003becf20a16a102948744"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::getIndex</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the index into the vector of ContentFilterElements. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand_1ac8096eab863b880709c526576114a40e" class="topiclink">SoftingOPCToolbox5::IElementOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a29611dd1c4307ee681ceb87dc4b2d507"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::setIndex</span>(OTUInt32 <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the index into the vector of ContentFilterElements. Please note that it is not allowed to define circular references between elements. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand_1aa8817af6665ee2b0ec6234e20de94039" class="topiclink">SoftingOPCToolbox5::IElementOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1a39cb9062bf6e1db37af3f4e900c7b2fa"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::clear</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Clears the contents of this object to enable its re-use. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_element_operand_1ab2a1f10ee45e13d4f767ad431257c6b1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ElementOperand::getInternHandle</span>() const<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_i_element_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_element_operand_1ac4d74c26683199b8a74f56fa00871384" class="topiclink">SoftingOPCToolbox5::IElementOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_element_operand.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

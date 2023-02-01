@@ -1,0 +1,159 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Setting up a Certificate Store</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_setupcertificates.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Setting up a Certificate Store</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_preparingprojectvxworks.htm">Previous</a>&nbsp;
+     <a href="html_introductiontothecppapi.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">Certificate Store</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA uses certificates to ensure the integrity and confidentiality of messages that are exchanged between a client and a server application. Several sample applications that are shipped with the SDK make use of OPC UA's security features. Therefore it is crucial to create an application instance certificate for every OPC UA application for identification.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If security is used at any place (message security, user identity token security, ...) in either server or client application, a Public Key Infrastructure (PKI) store shall be provided that contains the required certificates (trusted, issuer, crls) before running any of the shipped samples or test applications.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See also <a href="html_securitycertificates.htm" class="topiclink">OPC UA Certificates</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">A certificate store contains the following elements:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">A list of trusted application instance certificates and/or certificate authorities (CA) including the root certificates (self-signed)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Optional: A list of issuer certificates. Here those CA certificates can be provided which are used to issue the trusted certificates.</span><br />
+<span class="f_Paragraph">This list can be used if not all certificates issued by these CA shall be trusted.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Optional: A list of certificate revocation lists (CRL), provided either as one folder for all CRLs or as two folders, one for the trusted CRLs and one for the issuer CRLs.</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Application Instance Certificates</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">An application instance certificate is an X.509v3 certificate that identifies an instance of an OPC UA application running on a single host. Different installations of one software product shall have different application instance certificates. The certificate contains information such as application version, issuer, product name, and organization running the application. It also includes a public key that other applications can use to verify the identity of the application.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The value of the field &quot;Subject&quot; must be unique within a certificate store. If multiple certificates use the same subject, the result of certificate validation is unpredictable.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The URL in the &quot;Subject Alternative Name&quot; field must match the URL in the <a href="class_softing_o_p_c_toolbox5_1_1_application_description.htm#class_softing_o_p_c_toolbox5_1_1_application_description_1a7e6fdf6c1066ffd85668040e57457270" class="topiclink">ApplicationDescription::setApplicationUri()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An OPC UA server application must expose its full qualified DNS name and the IP address in the &quot;Subject Alternative Name&quot; field. Those values can be validated by a client application.</span><br />
+<span class="f_Paragraph">The exposed IP address or DNS name shall be the same as used in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a9367164fe2ba3d1db409229584e2ae82" class="topiclink">Server::Endpoint::setUrl()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> When using DNS names in the Application Instance Certificate and Application URI, then it is recommended due to RFC 3986 to use lower case characters for the schema (e.g. &quot;uri:&quot;) and hostname (e.g. &quot;localhost&quot;), or at least ensure to use the same character casing on all locations. The schema and hostname should be compared case insensitive, but several OPC UA applications are known to compare case sensitive and will treat a case mismatch as URI mismatch.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">According to specification UA applications can skip the application instance certificate if the certificate is not used (e.g. only communication without security, including user authentication).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">However it is strongly recommended that all UA applications provide an application instance certificate since some OPC UA clients or servers might refuse connections if no certificate is given.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Trust List, Issuer Certificate List and Revocation List</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">When a client connects to a server, the client first retrieves the server certificate, usually via the GetEndpoints service and when trusted transmits its client application instance certificate to the server when opening the SecureChannel for the Session connection.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">When the connection uses security (Sign or SignAndEncrypt for message security or user token security), then the SDK as server or client validates the received certificate using the following steps:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The certificate must be a valid certificate (i.e. is conform to X509)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The issuer of the certificate and all issuers up to the root certificate are tested whether the certificate is really issued by the named issuer.</span><br />
+<span class="f_Paragraph">A valid chain does not necessary imply a trusted certificate, it just ensures that all certificates are really issued by the named issuer.</span><br />
+<span class="f_Paragraph">In case of a self-signed certificate the issuer is the certificate itself, i.e. it is a root certificate.</span><br />
+<span class="f_Paragraph">Those issuers are supplied in the issuer certificate list or trust list (in case all issued certificates of the issuer shall be trusted).</span><br />
+<span class="f_Paragraph">All issuer certificates of the chain must be found and resolved successfully, they must either be stored on the local PKI store or must be sent together with the transported instance certificate or both.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The given application instance certificate or one of its issuer is trusted, i.e. one of these certificates is stored in the trust list.</span><br />
+<span class="f_Paragraph">Only if a certificate in the trust list matches the client's instance certificate or the certificate was signed by a trusted certificate authority, the UA application accepts the connection.</span><br />
+<span class="f_Paragraph">A trust list can be empty if only non-secure communication is used.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Each certificate in the chain is tested against the issuers CRL. A revocation list specifies a list of certificates that have been revoked, i.e. that are no longer trusted by the CA. </span><br />
+<span class="f_Paragraph">A certificate may be revoked if the private key associated with the certificate has been compromised. </span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">Some of the steps above can be skipped and some validation errors can be ignored using specific <a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm" class="topiclink">PkiStoreConfiguration</a> set with the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1acd666a38804279b18da3266355d75a13" class="topiclink">Application::setPkiStoreConfiguration()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The same validation rules and options apply for validating X509 user certificates for certificate authentication, with a separate user PKI store on the server (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1ac1975e1887340029142aca92392da534" class="topiclink">Server::Endpoint::setUserPkiConfiguration()</a>).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See also <a href="html_securityimplementatioin.htm#html.securityimplementatioin.applicationauthentication" class="topiclink">Application Authentication</a> for authentication description and <a href="html_securityimplementatioin.htm#html.securityimplementatioin.applicationauthenticationstrategies" class="topiclink">Sample Application Authentication Strategies</a> for samples.</span></p>
+<h2 class="p_Heading2"><a id="createdemopkistores"></a><span class="f_Heading2">Creating a Certificate Store</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK comes with a shell script that creates exemplary PKI stores for test, sample and tutorial applications. This shell script uses a command line tool that is distributed by the OpenSSL project. Please consult the </span><span class="f_Paragraph"><a href="http://www.openssl.org/docs/manmaster/man1/openssl.html" target="_blank" class="weblink">OpenSSL documentation</a></span><span class="f_Paragraph"> for further reference on the command line tool.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To create the PKI store that is required by the test, sample and tutorial applications, please open a command shell and enter the commands depicted below.</span></p>
+<p>On Microsoft Windows systems:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&gt;&nbsp;cd&nbsp;&lt;InstallDir&gt;/Source/PKI</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&gt;&nbsp;create_demo_store.bat</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">On Linux systems:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&gt;&nbsp;cd&nbsp;&lt;InstallDir&gt;/Source/PKI</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&gt;&nbsp;./create_demo_store.sh</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This script generates certificate stores for server and client, both for test and sample applications in the directories &quot;test_client&quot;, &quot;test_server&quot;, &quot;sample_client&quot; and &quot;sample_server&quot; below the </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI</span><span class="f_Paragraph"> folder with the following layout:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:466px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Directory location</span></p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:466px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">.../trusted</span></p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location containing application instance trusted by the application, i.e. for a server application here the trusted client certificates are stored.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:466px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">.../trusted_crls</span></p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location that contains the certificate revocation lists of trusted CA certificates.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In a CRL revoked certificates are stored. Those certificates are not trusted even if the CA is still trusted. </span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:466px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">.../issuer</span></p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location containing CA certificates which are necessary to validate the complete certificate chain up to the root certificate. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Not all certificates signed by these CA are trusted, only if the an intermediate CA or an applications instance certificate is in the </span><span class="f_FixedSize">trusted</span><span class="f_Paragraph"> location validation succeeds.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:466px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">.../issuer_crls</span></p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location that contains the certificate revocation lists of issuer certificates.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In a CRL revoked certificates are stored. Those certificates are not trusted even if the CA is still trusted. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In general it is not relevant in which folder (trusted_crls or issuer_crls) the revocation lists are stored. GDS requires both folders.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:466px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">.../own</span></p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the applications own certificate, private key and CRL. These files shall be private to the application.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:466px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">.../rejected</span></p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">If this optional location is specified, the SDK stores any certificate which fail certificate validation. The content of this folder has no effect on validation.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">Additionally a folder </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI/all_certificates </span><span class="f_Paragraph">is created, where many additional client and server certificates, CLRs and private keys are stored.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The certificates in this folder include CA, intermediate CA, issued certificates and revoked certificates which can be used for extended validation options.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Troubleshooting</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">If you encounter errors while executing the script, you should check the following items:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">If you run Microsoft Windows on a 64 bit machine and if you have disabled WoW64 (32 bit emulation), please replace the original 32 bit OpenSSL command line tool which is found at </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI/batches/openssl.exe </span><span class="f_Paragraph">with the 64 bit variant located at </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI/batches/openssl_x64.exe</span><span class="f_Paragraph">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">On rare cases the shell script fails because it is unable to detect your network settings. Please try to specify the required script arguments manually using the </span><span class="f_FixedSize">-c</span><span class="f_Paragraph"> option (use the </span><span class="f_FixedSize">--help</span><span class="f_Paragraph"> argument for further reference).</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The user that executes the shell script needs to have the access rights to modify files. </span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note: </span><span class="f_Paragraph">This script is not meant to create certificates for your application.</span><br />
+<span class="f_Paragraph">Adapting the script to your special needs may be quite complicated since the script sets environment variables which are referred in openssl.cfg.</span><br />
+<span class="f_Paragraph">You can create your own application instance certificate by any means, e.g. openssl command line tool, other X509 certificate creation tools or via </span><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a828b0546d21ced3636ce3012324137b7" class="topiclink">Application::createSelfSignedCertificate()</a>.</p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_setupcertificates.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,327 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>DataItem Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">DataItem Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_create_monitored_item_request.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerDataItem.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map74" id="map74"><area shape="rect" coords="255,315,361,349" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_item.htm" alt="" /><area shape="rect" coords="113,315,250,349" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm" alt="" /><area shape="rect" coords="5,315,107,349" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_item.htm" alt="" /><area shape="rect" coords="235,251,323,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_analog_item.htm" alt="" /><area shape="rect" coords="186,187,273,221" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm" alt="" /><area shape="rect" coords="133,251,229,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_item.htm" alt="" /><area shape="rect" coords="186,6,273,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="186,59,273,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm" alt="" /><area shape="rect" coords="186,123,273,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.gif" width="365" height="355" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" style="width:365px;height:355px;border:none" usemap="#map74" /></p>
+<p class="p_Paragraph">A <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> represents a link to automation data.</p>
+<p class="p_Paragraph">This class is abstract and used as base for other item classes e.g. <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_analog_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_analog_item" class="topiclink">AnalogItem</a> or <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_item" class="topiclink">DiscreteItem</a>. Properties of <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> are: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Definition (optional): A vendor-specific, human readable string that specifies how the value of this <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> is calculated. Definition is non-localized and will often contain an equation that can be parsed by certain clients. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">ValuePrecision (optional): Specifies the maximum precision that the server can maintain for the item based on restrictions in the target environment. For Float and Double values it specifies the number of digits after the decimal place. For <a href="class_softing_o_p_c_toolbox5_1_1_date_time.htm#class_softing_o_p_c_toolbox5_1_1_date_time" class="topiclink">DateTime</a> values it indicates the minimum time difference in nanoseconds. E.g., a ValuePrecision of 20.000.000 defines a precision of 20 milliseconds. </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a9f40cca521556f11d05f1da0a0436620" class="topiclink">DataItem</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1aa5884c6e3ba1d336020d7a9b28b9a8f9" class="topiclink">~DataItem</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a6a494f98114839ccbad1d283729d433f" class="topiclink">setDefinition</a></span>(const tstring definition)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a035e79f2d47b5fde987ef46e9fbed4fd" class="topiclink">setPrecision</a></span>(double valuePrecision)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1ac16b8f7e0a2342a20b2962fcf0921895" class="topiclink">init</a></span>(const INodeId *typeId)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a771d79b02959b3f03dfa1ed7f51aae87" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a19d384f7146219c7e81173ecdf16b57d" class="topiclink">create</a></span>(const INodeId &amp;nodeId, const ILocalizedText &amp;displayName, const IQualifiedName &amp;browseName)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a619833621432d2a1bf3ab6f96cf1c36a" class="topiclink">DataItem</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a9e3094cbf91b467c2359f90f62843deb" class="topiclink">DataItem</a></span>(bool suppressCoreInstanceCreate)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1ae38b5d77f2a7da98d1391166137f5d74" class="topiclink">setMandatoryAttributes</a></span>(const INodeId &amp;nodeId, const ILocalizedText &amp;displayName, const IQualifiedName &amp;browseName)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a771d79b02959b3f03dfa1ed7f51aae87"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> instance </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable_1ad496133357d261be6483a8ae3f932947" class="topiclink">SoftingOPCToolbox5::Server::Variable</a>.</p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_analog_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_analog_item_1a11a6525e05ea71ed6d42ce4130594ad3" class="topiclink">SoftingOPCToolbox5::Server::AnalogItem</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_item_1a972894ea1ce6fad8ea22c712a6206667" class="topiclink">SoftingOPCToolbox5::Server::TwoStateItem</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a83b7f343316a603561916731d2e16d33" class="topiclink">SoftingOPCToolbox5::Server::MultiStateValueItem</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_item_1a5d56db6e3b823e02bbce0f84d89d3762" class="topiclink">SoftingOPCToolbox5::Server::MultiStateItem</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a19d384f7146219c7e81173ecdf16b57d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::create</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_i_localized_text" class="topiclink">ILocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter">browseName</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor with mandatory attributes</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> to be created </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The display name of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> to be created </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The browse name of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> to be created </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a619833621432d2a1bf3ab6f96cf1c36a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::DataItem</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a9e3094cbf91b467c2359f90f62843deb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::DataItem</span>(bool <span class="f_Parameter">suppressCoreInstanceCreate</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1ae38b5d77f2a7da98d1391166137f5d74"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::setMandatoryAttributes</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> &amp; <span class="f_Parameter">nodeId</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_i_localized_text" class="topiclink">ILocalizedText</a> &amp; <span class="f_Parameter">displayName</span>, const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> &amp; <span class="f_Parameter">browseName</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets mandatory attributes to the data item</p>
+<p class="p_Paragraph">This method is meant to be invoked within the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a771d79b02959b3f03dfa1ed7f51aae87" class="topiclink">create()</a> method of this and derived classes where the attributes are given.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">nodeId</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> to be created </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">displayName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The display name of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> to be created </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">browseName</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The browse name of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item" class="topiclink">DataItem</a> to be created </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a9f40cca521556f11d05f1da0a0436620"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::DataItem</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1aa5884c6e3ba1d336020d7a9b28b9a8f9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::~DataItem</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a6a494f98114839ccbad1d283729d433f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::setDefinition</span>(const tstring <span class="f_Parameter">definition</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the Definition property of the data item. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1a035e79f2d47b5fde987ef46e9fbed4fd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::setPrecision</span>(double <span class="f_Parameter">valuePrecision</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Set the ValuePrecision property of the data item. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item_1ac16b8f7e0a2342a20b2962fcf0921895"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataItem::init</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">typeId</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">BaseNode::init()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">SoftingOPCToolbox5::Server::BaseNode</a>.</p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_item_1a222260a73a32125b10dbf7e36dbacc0f" class="topiclink">SoftingOPCToolbox5::Server::TwoStateItem</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_item_1a4ea045d9b7868f073f4dd69b0bbcdd4b" class="topiclink">SoftingOPCToolbox5::Server::MultiStateItem</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_analog_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_analog_item_1a2efa5e3da0e8715b9b34ab64419ff644" class="topiclink">SoftingOPCToolbox5::Server::AnalogItem</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_multi_state_value_item_1a5637dd24f47502887f60ed230def152b" class="topiclink">SoftingOPCToolbox5::Server::MultiStateValueItem</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_data_item.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

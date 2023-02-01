@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Standard Nodes in the Address Space</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uaaddressspacestandardnodes.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Standard Nodes in the Address Space</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uaaddressspacereferencetypes.htm">Previous</a>&nbsp;
+     <a href="namespaces.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">Standard Nodes in the UA Address Space</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Each OPC UA address space has to expose couple of standard nodes defined by the UA specification. The standard nodes have well-known NodeIds, meaning and some attributes, such as BrowseName.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The standard nodes organize the OPC UA address space and actually divide it into parts. The address space begins in node Root. The Root node is an object of type FolderType and organizes (contains) three folders named Objects, Views and Types.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The Objects folder organizes all objects and variables exposed by the server (obviously except of the standard folders mentioned above). Besides the server specific objects and variables, each server should expose a complex object named Server. The Server object contains status information of the UA server.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The Views folder organizes all views, and the Types folder organizes all types exposed by the server. It contains five folders: Object Types, Variable Types, Data Types, Reference Types and Event Types. Each of the folders contains the corresponding base type. All other types are then derived from the base types with the HasSubtype reference.</span></p>
+<p class="p_Paragraph"><img src="ua_introduction_serverlayout.png" width="884" height="347" alt="UA_Introduction_ServerLayout" style="width:884px;height:347px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uaaddressspacestandardnodes.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Writing Node Attributes</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_writingnodeattributes.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Writing Node Attributes</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_readingnodeattributes.htm">Previous</a>&nbsp;
+     <a href="html_clientstep3sample.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h3 class="p_Heading3"><a id="hdr"></a><span class="f_Paragraph">The write service can be used to set the value from any attribute of any node (but usually only the 'value' attribute of variables is configured to be writable). This service allows clients to write several attribute values with a single call.</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The write service can be invoked either synchronously or asynchronously by the methods <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1abde50c2f42927aea6dac81456f24ced1" class="topiclink">Client::Session::write()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ac8bf001061e105065231b8611476a077" class="topiclink">Client::Session::writeAsync()</a>. The topic <a href="html_sampleasynchronousaccess.htm" class="topiclink">Asynchronous Access</a> describes how to use the asynchronous methods.</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">Preconditions</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Before the write service can be invoked, the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> has to be initialized and a connected <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> must be available (see <a href="html_clientstep1.htm" class="topiclink">Client Tutorial Step 1</a>).</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Calling the Write Service</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Writing values is composed of three steps:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List">Create and configure <a href="class_softing_o_p_c_toolbox5_1_1_write_value.htm" class="topiclink">WriteValues</a> to specify</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeId</a> of the node that is the target of the write call (this again can be fetched from a browse call, see </span><span class="f_List"><a href="html_browse.htm" class="topiclink">Browsing the Adress Space</a>)</span><span class="f_Paragraph">,</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">the attribute to write, and</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">the <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm" class="topiclink">DataValue</a> containing the value and a timestamp to write (see <a href="class_softing_o_p_c_toolbox5_1_1_write_value.htm" class="topiclink">WriteValue</a>).</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;WriteValue&gt;&nbsp;writeValues;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">WriteValue&nbsp;tmpWriteValue;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">DataValue&nbsp;tmpDataValue;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tmpWriteValue.setNodeId(nodeId);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tmpWriteValue.setAttributeId(EnumAttributeId_Value);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tmpDataValue.setValue(Value(value));&nbsp;//&nbsp;the&nbsp;value&nbsp;to&nbsp;be&nbsp;written&nbsp;(e.g.&nbsp;obtained&nbsp;via&nbsp;command&nbsp;line&nbsp;input)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tmpDataValue.setSourceTimestamp(DateTime::getUtcNow());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tmpWriteValue.setDataValue(tmpDataValue);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">writeValues.push_back(tmpWriteValue);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tmpWriteValue.clear();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tmpDataValue.clear();</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">Call the write service.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EnumStatusCode&gt;&nbsp;writeResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;write(writeValues,&nbsp;writeResults);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph">Check the results of the write call.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">if(StatusCode::isBad(writeResults[i]))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;...&nbsp;//&nbsp;logging&nbsp;of&nbsp;the&nbsp;error</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Servers can restrict the access to attributes (e.g. by granting write access only to certain users). In this case, a corresponding result will be returned.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="html_readingnodeattributes.htm" class="topiclink">Reading Node Attributes</a>, <a href="html_clientstep3sample.htm" class="topiclink">Sample Application</a>, <a href="html_clienttutorial.htm" class="topiclink">Client Tutorial</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_writingnodeattributes.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

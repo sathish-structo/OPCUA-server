@@ -1,0 +1,819 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>AlarmCondition Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">AlarmCondition Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_aggregate_function.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_analog_item.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerAlarmCondition.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map33" id="map33"><area shape="rect" coords="225,571,410,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm.htm" alt="" /><area shape="rect" coords="893,6,979,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="948,571,1087,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_level_alarm.htm" alt="" /><area shape="rect" coords="1093,571,1179,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_trip_alarm.htm" alt="" /><area shape="rect" coords="893,251,979,285" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm" alt="" /><area shape="rect" coords="849,315,1023,349" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm" alt="" /><area shape="rect" coords="780,571,943,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm.htm" alt="" /><area shape="rect" coords="5,571,219,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_rate_of_change_alarm.htm" alt="" /><area shape="rect" coords="881,379,991,413" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm" alt="" /><area shape="rect" coords="961,443,1063,477" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_alarm.htm" alt="" /><area shape="rect" coords="1007,507,1121,541" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm" alt="" /><area shape="rect" coords="893,59,979,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm" alt="" /><area shape="rect" coords="893,123,979,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_object.htm" alt="" /><area shape="rect" coords="893,187,979,221" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event.htm" alt="" /><area shape="rect" coords="793,507,929,541" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm" alt="" /><area shape="rect" coords="583,571,775,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_rate_of_change_alarm.htm" alt="" /><area shape="rect" coords="818,443,905,477" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm.htm" alt="" /><area shape="rect" coords="327,507,486,541" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm" alt="" /><area shape="rect" coords="415,571,577,605" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_level_alarm.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.gif" width="1184" height="611" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition" style="width:1184px;height:611px;border:none" usemap="#map33" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition" class="topiclink">AlarmCondition</a> is an abstract type that extends the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition" class="topiclink">AcknowledgeableCondition</a> by introducing an ActiveState, SuppressedState and ShelvingState.</p>
+<p class="p_Paragraph">SuppressedState (<a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">TwoStateVariable</a>), ShelvingState (<a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine" class="topiclink">ShelvedStateMachine</a>) and MaxTimeShelved (<a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Variable</a>) are optional components / properties. Nevertheless these optional components / properties are initially created using the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">init()</a> method of this or derived classes. If the server application does not want these components, it can remove them after calling <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">init()</a>. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1aaa06cec9b423ab614e4aa264f80973a1" class="topiclink">AlarmCondition</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3ddedfcd39993b4896fdc15b65b5d28c" class="topiclink">~AlarmCondition</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1aa1aa1d5dcb009d228d7c4554762d8132" class="topiclink">onEnable</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a9efd26dbbdf4e1292a88c3ef3c9cd9ae" class="topiclink">onDisable</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a1cdfc50ae8b879da49d37c5bc5594ae9" class="topiclink">onActivate</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1aa43b42e8ad27547bd096c52808210815" class="topiclink">onDeactivate</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a22b82f93291ee55a0a68c18261e0013f" class="topiclink">onAcknowledge</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a56fc6c5035c81a4d90eb396d4e637ac4" class="topiclink">onConfirm</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3ed1021a5f3b573c6a288109cf24025c" class="topiclink">suppress</a></span>(bool suppressed)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a6dcafa6cc5719e0bd8bbced5c05da343" class="topiclink">report</a></span>(const INodeId *reportingNode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a292372a1ab6e785cc541c750c9674727" class="topiclink">createBranch</a></span>(Server::Condition *branchToConstruct)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1ab88d033da2eb2e5d8486c9bb04d65124" class="topiclink">getActiveStateVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1abf9f0f09673e1c2a1a4f26d264f830c5" class="topiclink">getActiveStateVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a0ba878368578cf65a60e3298fd86ab87" class="topiclink">getActiveState</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a9c375ba0f9067e1eb6816308a54461fe" class="topiclink">getSuppressedOrShelved</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1addd7718ffd2e2f288426d1771e6c5dd5" class="topiclink">getSuppressedOrShelvedVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a1385b8dae4bcdcf2cf8f452cb9e371b3" class="topiclink">getSuppressedOrShelvedVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a06db22ed21729a2f374560bd3cf10237" class="topiclink">getSuppressedStateVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a2f0dd297a1f24235a37d22476e158fbc" class="topiclink">getSuppressedStateVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1abf621591caa30f97604a68b521e122cd" class="topiclink">getSuppressedState</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a85f5a64b118bc93e41b8ba7156f7233f" class="topiclink">getMaxTimeShelvedVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a0fb800d8719e2330ed604e83bba3410d" class="topiclink">getMaxTimeShelvedVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">double</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1abfd61efa827465687c864aabf8825f1e" class="topiclink">getMaxTimeShelved</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a229a72939fbce3ea91190bba4f7ad383" class="topiclink">setMaxTimeShelved</a></span>(double maxTimeShelved)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine" class="topiclink">Server::ShelvedStateMachine</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1ac8452e45d70f834d98b12cb85a35675a" class="topiclink">getShelvingState</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine" class="topiclink">Server::ShelvedStateMachine</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3d6e5c4daabf4c257e33a8a1887c354d" class="topiclink">getShelvingState</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a1e6bed190ecb3bcebb28f1d28b6a0444" class="topiclink">getInputNodeVar</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3715cb51b2e0c3a7cfd26cba657b70e9" class="topiclink">getInputNodeVar</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a12305eb2dc86aba249ace06947c1768e" class="topiclink">getInputNode</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a549fbf257c02a8da4026eacf3dd85ab7" class="topiclink">setInputNode</a></span>(const INodeId *inputNode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a122f55512a63add7166139fc25a728e7" class="topiclink">setInputNode</a></span>(const INodeId &amp;inputNode)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Static Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition" class="topiclink">AlarmCondition</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1af3d04a8e699beb8b9e24c3a53abd5e1c" class="topiclink">create</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1affdbb948e5745476ae13ba3b34b69e32" class="topiclink">AlarmCondition</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a66d961e93de16969f87553e64a56df13" class="topiclink">AlarmCondition</a></span>(bool suppressCoreInstanceCreate)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1af3d04a8e699beb8b9e24c3a53abd5e1c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>static <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition" class="topiclink">AlarmCondition</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::create</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructs a new <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition" class="topiclink">AlarmCondition</a> instance </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition_1af9162385bc18638931513c0b399f1023" class="topiclink">SoftingOPCToolbox5::Server::AcknowledgeableCondition</a>.</p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_alarm_1a5c177e5c3596d50af6265c4da67b119d" class="topiclink">SoftingOPCToolbox5::Server::DiscreteAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_rate_of_change_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_rate_of_change_alarm_1a467e6977da88687b11c8c891cd0668b1" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveRateOfChangeAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_level_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_level_alarm_1ad67b4edb0fcb0c9bfd3788a7e404e6d0" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveLevelAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_trip_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_trip_alarm_1a6247c44de8ea0f5d6636af900190d181" class="topiclink">SoftingOPCToolbox5::Server::TripAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_level_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_level_alarm_1a1edc21cd5a790f9233153b6e39212d31" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveLevelAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_rate_of_change_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_rate_of_change_alarm_1a8fa1b10e076b68a813b0333caac0ef66" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveRateOfChangeAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm_1a314bd297e085b67ac50878c059f9dcea" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveLimitAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm_1a24729a9ec7e7648a5c2596e38919d6fa" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveLimitAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm_1ad61d5c5691a31d377d81a816f0c1e2b5" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveDeviationAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm_1a11ce749e93ad0ace739245a54be46196" class="topiclink">SoftingOPCToolbox5::Server::OffNormalAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm_1af6bbb11969f776ddb73f424c0539d5d2" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveDeviationAlarm</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm_1a488ab85bd370e5b2ea317e6aeff70f29" class="topiclink">SoftingOPCToolbox5::Server::LimitAlarm</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1aaa06cec9b423ab614e4aa264f80973a1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::AlarmCondition</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3ddedfcd39993b4896fdc15b65b5d28c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::~AlarmCondition</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1aa1aa1d5dcb009d228d7c4554762d8132"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::onEnable</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback that will be called in case that the alarm is enabled.</p>
+<p class="p_Paragraph">An application can override this callback in order to get this notification. The default implementation updates the states of AckedState, ConfiremdState (if configured) and Retain flag. The optional ShelvingState is also updated if configured. Additionally notification reporting to client is triggered here.</p>
+<p class="p_Paragraph">In case of overwritten callback either the default implementation shall be called or appropriate parts needs to be implemented in overwritten method. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a0686bd01cf8164d4392630bf6f60b2a6" class="topiclink">SoftingOPCToolbox5::Server::Condition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a9efd26dbbdf4e1292a88c3ef3c9cd9ae"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::onDisable</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback that will be called in case that the alarm is disabled.</p>
+<p class="p_Paragraph">An application can override this callback in order to get this notification. The default implementation updates the states of AckedState, ConfiremdState (if configured) and Retain flag. The optional ShelvingState is also updated if configured. Additionally notification reporting to client is triggered here.</p>
+<p class="p_Paragraph">In case of overwritten callback either the default implementation shall be called or appropriate parts needs to be implemented in overwritten method. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ae9a80d9e5f644e9cb33ac5da7a0a2be9" class="topiclink">SoftingOPCToolbox5::Server::Condition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a1cdfc50ae8b879da49d37c5bc5594ae9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::onActivate</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Executes the necessary steps whenever an alarm condition is activated.</p>
+<p class="p_Paragraph">The default implementation updates the states of AckedState, ConfiremdState (if configured) and Retain flag. Additionally notification reporting to client is triggered here.</p>
+<p class="p_Paragraph">In case of overwritten callback either the default implementation shall be called or appropriate parts needs to be implemented in overwritten method.</p>
+<p class="p_Paragraph">This method is invoked by the various &quot;onVariableChanged&quot; implementations of SDK alarms, after the ActiveState has been updated.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If you overwrite the &quot;onVariableChanged&quot; of any condition (and do not explicitly invoke the onActivate), this method is not invoked. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1aa43b42e8ad27547bd096c52808210815"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::onDeactivate</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Executes the necessary steps whenever an alarm condition is deactivated.</p>
+<p class="p_Paragraph">The default implementation updates the states of AckedState, ConfiremdState (if configured) and Retain flag. The optional ShelvingState is also updated if configured. Additionally notification reporting to client is triggered here.</p>
+<p class="p_Paragraph">In case of overwritten callback either the default implementation shall be called or appropriate parts needs to be implemented in overwritten method.</p>
+<p class="p_Paragraph">This method is invoked by the various &quot;onVariableChanged&quot; implementations of SDK alarms, after the ActiveState has been updated.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If you overwrite the &quot;onVariableChanged&quot; of any condition (and do not explicitly invoke the onDeactivate), this method is not invoked. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a22b82f93291ee55a0a68c18261e0013f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::onAcknowledge</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback that will be called in case that the alarm is acknowledged.</p>
+<p class="p_Paragraph">An application can override this callback in order to get this notification. The default implementation updates the states of AckedState, ConfiremdState (if configured) and Retain flag. Additionally notification reporting to client is triggered here.</p>
+<p class="p_Paragraph">In case of overwritten callback either the default implementation shall be called or appropriate parts needs to be implemented in overwritten method. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition_1a3fc9288375dcddceafa7855c35e60cf3" class="topiclink">SoftingOPCToolbox5::Server::AcknowledgeableCondition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a56fc6c5035c81a4d90eb396d4e637ac4"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::onConfirm</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Callback that will be called in case that the alarm is confirmed.</p>
+<p class="p_Paragraph">An application can override this callback in order to get this notification. The default implementation updates the states of AckedState, ConfiremdState (if configured) and Retain flag. Additionally notification reporting to client is triggered here.</p>
+<p class="p_Paragraph">In case of overwritten callback either the default implementation shall be called or appropriate parts needs to be implemented in overwritten method. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition_1a9d1c0716b7e8b0c14990db3e268d448d" class="topiclink">SoftingOPCToolbox5::Server::AcknowledgeableCondition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3ed1021a5f3b573c6a288109cf24025c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::suppress</span>(bool <span class="f_Parameter">suppressed</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the suppressed state of the alarm.</p>
+<p class="p_Paragraph">SuppressState is used internally by a server to automatically suppress alarms due to system specific reasons. For example a system may be configured to suppress alarms that are associated with machinery that is being shutdown, such as a low level alarm for a tank that is currently not in use. In this case some of the alarms can be suppressed to avoid flooding of UA clients.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>This method does also update the &quot;SuppressedOrShelved&quot; flag of the alarm. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a6dcafa6cc5719e0bd8bbced5c05da343"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::report</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">reportingNode</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Reports the current state of the alarm to clients subscribed for notifications.</p>
+<p class="p_Paragraph">The notification will be sent regardless of the suppressed or shelved state. If a notification shall not be sent due to the SuppressedOrShelved flag use <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a9c375ba0f9067e1eb6816308a54461fe" class="topiclink">AlarmCondition::getSuppressedOrShelved()</a> before calling this method.</p>
+<p class="p_Paragraph">The notification will be sent on the source node (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_event_1a4c1bfd12f483f5d8169d34c55bfc2d51" class="topiclink">BaseEvent::setSourceNode()</a>) of the alarm. If the source node property is not specified, the source node is set to the node that points with a &quot;HasCondition&quot; reference to the alarm. If the event type is not yet specified, the call sets the event type to the node ID of the correct type node. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1ad57e216c8556ac1dbc6ef69544c6f748" class="topiclink">SoftingOPCToolbox5::Server::Condition</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a292372a1ab6e785cc541c750c9674727"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::createBranch</span>(<a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition" class="topiclink">Server::Condition</a> * <span class="f_Parameter">branchToConstruct</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Creates a new branch (copy) of this condition. The branch is made available after construction by calling <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1a6b7e4f06533c9b4b9ac67e7b6c6c97eb" class="topiclink">Condition::addBranch()</a>.</p>
+<p class="p_Paragraph">The caller must provide a valid pointer to an &quot;empty&quot; branch (instance of a condition (sub-)type). Override this method to add custom components (Objects, Variables, Methods) to your branch instance. Default implementations populate the branch with all components of a condition (sub-)type except for state machines. </p>
+<p>Reimplemented from <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition_1a215d4df66dece656529283d667af648f" class="topiclink">SoftingOPCToolbox5::Server::AcknowledgeableCondition</a>.</p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm_1a0687e5536a6ba7ae92d1ad6420f217c4" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveLimitAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm_1aad93193308f5cea3356620f42290e756" class="topiclink">SoftingOPCToolbox5::Server::ExclusiveDeviationAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm_1af2df92ae9e352552591bf892aed4e71b" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveDeviationAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm_1a0b17aabf17e15188d600bd6c808f6f52" class="topiclink">SoftingOPCToolbox5::Server::OffNormalAlarm</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm_1a5ed96b93d17c96ecab27989d30e5c165" class="topiclink">SoftingOPCToolbox5::Server::LimitAlarm</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm_1ab907b455e63df14799ef6c9e044a38c8" class="topiclink">SoftingOPCToolbox5::Server::NonExclusiveLimitAlarm</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1ab88d033da2eb2e5d8486c9bb04d65124"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getActiveStateVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the variable holding the &quot;Active&quot; state of the alarm.</p>
+<p class="p_Paragraph">When active (i.e. <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable_1a41668010c142483d412d0c2f14943edf" class="topiclink">TwoStateVariable::getCurrentState()</a> returns true), it indicates that the situation the alarm is representing currently exists. When an alarm instance is in the inactive state (i.e. <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable_1a41668010c142483d412d0c2f14943edf" class="topiclink">TwoStateVariable::getCurrentState()</a> returns false) it is representing a situation that has returned to a normal state.</p>
+<p class="p_Paragraph">The transitions of the active state are triggered by server specific actions. The handling of the active state depends on specialized alarms like <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm" class="topiclink">Server::ExclusiveLimitAlarm</a> or <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm" class="topiclink">Server::OffNormalAlarm</a>. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1abf9f0f09673e1c2a1a4f26d264f830c5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getActiveStateVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a0ba878368578cf65a60e3298fd86ab87"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getActiveState</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the localized text that describes the current active state. <span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable_1a41668010c142483d412d0c2f14943edf" class="topiclink">TwoStateVariable::getCurrentState()</a> to retrieve the current active state (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1ab88d033da2eb2e5d8486c9bb04d65124" class="topiclink">AlarmCondition::getActiveStateVar()</a>). The localized texts that describe the 'true' and 'false' active state can be retrieved by <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable_1a86152a61ff7d3232bf83f6c2b21e8580" class="topiclink">TwoStateVariable::getTrueState()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable_1af0f76418145b3dc5c87760c36ebb6add" class="topiclink">TwoStateVariable::getFalseState()</a>. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a9c375ba0f9067e1eb6816308a54461fe"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getSuppressedOrShelved</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns whether the alarm is currently suppressed or shelved.</p>
+<p class="p_Paragraph">The SuppressedState and the ShelvingState together result in the SuppressedOrShelved status of the alarm. When an alarm is either suppressed (by the UA server) or shelved (by a UA client), the SuppressedOrShelved property is set true. This allows client to filter suppressed or shelved alarms. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1addd7718ffd2e2f288426d1771e6c5dd5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getSuppressedOrShelvedVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the variable holding the &quot;SuppressedOrShelved&quot; property.</p>
+<p class="p_Paragraph">Please note that writing directly to the suppressed or shelved states of the alarm will not update SuppressedOrShelved attribute. Instead please use the helper functions which are provided to update the states of the alarms as these will also update the SuppressedOrShelved flag. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a1385b8dae4bcdcf2cf8f452cb9e371b3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getSuppressedOrShelvedVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a06db22ed21729a2f374560bd3cf10237"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getSuppressedStateVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the variable holding the &quot;Suppressed&quot; state. In order to modify the suppressed state, please use <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3ed1021a5f3b573c6a288109cf24025c" class="topiclink">AlarmCondition::suppress()</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3ed1021a5f3b573c6a288109cf24025c" class="topiclink">suppress()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a2f0dd297a1f24235a37d22476e158fbc"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_two_state_variable" class="topiclink">Server::TwoStateVariable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getSuppressedStateVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1abf621591caa30f97604a68b521e122cd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_localized_text.htm#class_softing_o_p_c_toolbox5_1_1_localized_text" class="topiclink">LocalizedText</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getSuppressedState</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the localized text that describes the current suppression state. <span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please use <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3ed1021a5f3b573c6a288109cf24025c" class="topiclink">AlarmCondition::suppress()</a> to change the current suppression state. The localized texts that describe the 'true' and 'false' suppression state can be retrieved by <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a06db22ed21729a2f374560bd3cf10237" class="topiclink">getSuppressedStateVar()</a>-&gt;getTrueState() and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a06db22ed21729a2f374560bd3cf10237" class="topiclink">getSuppressedStateVar()</a>-&gt;getFalseState(). </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a85f5a64b118bc93e41b8ba7156f7233f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getMaxTimeShelvedVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the variable holding the &quot;MaxTimeShelved&quot; property.</p>
+<p class="p_Paragraph">Consider using <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1abfd61efa827465687c864aabf8825f1e" class="topiclink">AlarmCondition::getMaxTimeShelved()</a> to retrieve the actual value of the MaxTimeShelved variable.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1abfd61efa827465687c864aabf8825f1e" class="topiclink">AlarmCondition::getMaxTimeShelved()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a0fb800d8719e2330ed604e83bba3410d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getMaxTimeShelvedVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1abfd61efa827465687c864aabf8825f1e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>double<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getMaxTimeShelved</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the maximum time (in milliseconds) the alarm may be shelved by a client.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a229a72939fbce3ea91190bba4f7ad383" class="topiclink">setMaxTimeShelved()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a229a72939fbce3ea91190bba4f7ad383"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::setMaxTimeShelved</span>(double <span class="f_Parameter">maxTimeShelved</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the maximum time (in milliseconds) the alarm may be shelved by a client.</p>
+<p class="p_Paragraph">OPC UA servers may use this property to prevent permanent shelving of an alarm. Shelved alarms are automatically unshelved when this time expires. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1ac8452e45d70f834d98b12cb85a35675a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine" class="topiclink">Server::ShelvedStateMachine</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getShelvingState</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the shelving state machine object.</p>
+<p class="p_Paragraph">The shelving state machine is an optional component of an alarm. Using this state machine a client can prevent the server from further notification of status changes.</p>
+<p class="p_Paragraph">See <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine" class="topiclink">Server::ShelvedStateMachine</a> for exact definition of the shelving state machine. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3d6e5c4daabf4c257e33a8a1887c354d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_shelved_state_machine" class="topiclink">Server::ShelvedStateMachine</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getShelvingState</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a1e6bed190ecb3bcebb28f1d28b6a0444"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getInputNodeVar</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the &quot;InputNode&quot; property that contains the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the InputNode.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a549fbf257c02a8da4026eacf3dd85ab7" class="topiclink">setInputNode()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a3715cb51b2e0c3a7cfd26cba657b70e9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_variable.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_variable" class="topiclink">Server::Variable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getInputNodeVar</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a12305eb2dc86aba249ace06947c1768e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::getInputNode</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the InputNode that is used as primary input in the calculation of the alarm state.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a549fbf257c02a8da4026eacf3dd85ab7" class="topiclink">setInputNode()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a549fbf257c02a8da4026eacf3dd85ab7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::setInputNode</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">inputNode</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the InputNode.</p>
+<p class="p_Paragraph">The InputNode property provides the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of the variable the value of which is used as primary input in the calculation of the alarm state. If this variable is not in the AddressSpace, a &quot;null&quot; <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> shall be provided.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The InputNode must match the source node of the alarm and must point to the alarm with a &quot;HasCondition&quot; reference. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a122f55512a63add7166139fc25a728e7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::setInputNode</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> &amp; <span class="f_Parameter">inputNode</span>)<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1affdbb948e5745476ae13ba3b34b69e32"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::AlarmCondition</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a66d961e93de16969f87553e64a56df13"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::AlarmCondition::AlarmCondition</span>(bool <span class="f_Parameter">suppressCoreInstanceCreate</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

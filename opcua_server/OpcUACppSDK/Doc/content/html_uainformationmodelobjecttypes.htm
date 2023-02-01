@@ -1,0 +1,148 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Object Types</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uainformationmodelobjecttypes.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Object Types</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uainformationmodel.htm">Previous</a>&nbsp;
+     <a href="html_uainformationmodelvariabletypes.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">The primary objective of the OPC UA address space is to provide a standard way for servers to represent objects to clients. The object node class is used to define objects. Each object in the address space has an assigned object type. The OPC Foundation has defined a BaseObjectType from which all other object types shall either directly or indirectly inherit.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">All standard types derived from the BaseObjectType are listed in the table below.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Name </span></p>
+</td>
+<td style="vertical-align:top; width:429px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">ServerType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type provide information about the server to the clients.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">ServerCapabilitiesType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type define the capabilities supported by the OPC UA server.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">ServerDiagnosticsType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type define diagnostic information about the OPC UA server.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">SessionsDiagnosticsSummaryType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type define summary diagnostic information about the client sessions to the OPC UA server.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">SessionDiagnosticsObjectType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type define diagnostic information about the client sessions to the OPC UA server.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">VendorServerInfoType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type are placeholder objects for vendor-specific information about the server. This object type defines an empty object type that has no components and vendors should derive from this type to expose application specific information.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">ServerRedundancyType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type define the redundancy capabilities supported by the OPC UA server.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">BaseEventType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type define all general characteristics of an Event. All other EventTypes derive from it.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">ModellingRuleType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type provide information that identifies what happens when an object of a given type is instantiated. The instance of this type contains a property NamingRule which has the following values i.e. Optional, Mandatory, or Constraint.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">FolderType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Instances of this type are used to organize the address space into a hierarchy of nodes. They represent the root node of a subtree, and have no other semantics associated with them, except the DisplayName attribute should imply the semantics associated with the use of it.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">DataTypeEncodingType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Objects of this type are used to describe the serialization and deserialization process of the Value attributes, e.g. “Default”, “UA Binary” or “XML”.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:184px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">DataTypeSystemType</span></p>
+</td>
+<td style="vertical-align:top; width:429px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Objects of this type are used to define data types of variables node class</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">Many of these standard types are used for describing OPC UA server functionality and to provide diagnostic information. Most of these are described in the OPC UA specification. The BaseEventType has many specialized subtypes to allow handling most common transient Events. System configuration changes, operator interaction and system errors are examples of Events.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uainformationmodelobjecttypes.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

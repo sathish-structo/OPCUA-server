@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Setting up your Application for Remote Tracing</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_tracefromapplication.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Setting up your Application for Remote Tracing</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_traceviewapplication.htm">Previous</a>&nbsp;
+     <a href="html_filtertraceviewapplication.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><a id="hdr"></a><span class="f_Paragraph">To enable TCP tracing in your application you have provide the SDK with the <a href="html_traceviewapplication.htm" class="topiclink">trace endpoint</a> that you have configured previously.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;set&nbsp;up&nbsp;TCP&nbsp;trace&nbsp;to&nbsp;a&nbsp;listener&nbsp;on&nbsp;127.0.0.1:1235,&nbsp;the&nbsp;message&nbsp;buffer&nbsp;is&nbsp;set&nbsp;to&nbsp;100&nbsp;msgs</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Trace::instance()-&gt;enableTcpLogging(_T(&quot;127.0.0.1&quot;),&nbsp;1235,&nbsp;100);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;allow&nbsp;traces&nbsp;for&nbsp;all&nbsp;trace&nbsp;groups&nbsp;and&nbsp;all&nbsp;levels</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Trace::instance()-&gt;enableTraceLevel(EnumTraceGroup_All,&nbsp;EnumTraceLevel_All);</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Writing you own trace messages</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The following code illustrates how to use the SDK tracing mechanism to write trace messages for your own application:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;allow&nbsp;traces&nbsp;for&nbsp;all&nbsp;trace&nbsp;groups&nbsp;and&nbsp;all&nbsp;levels</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Trace::instance()-&gt;enableTraceLevel(EnumTraceGroup_All,&nbsp;EnumTraceLevel_All);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Trace::instance()-&gt;writeLine(EnumTraceLevel_Error,&nbsp;EnumTraceGroup_User1,&nbsp;_T(&quot;Something&nbsp;is&nbsp;wrong!&quot;),&nbsp;_T(&quot;ObjectID&quot;));</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Using the <a href="class_softing_o_p_c_toolbox5_1_1_trace.htm#class_softing_o_p_c_toolbox5_1_1_trace_1a5dbe5d26dd513c1e38d0afaadabe348f" class="topiclink">writeSourceLine()</a> method, you can even include information about source files and lines:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Trace::instance()-&gt;writeSourceLine(EnumTraceLevel_Warning,&nbsp;EnumTraceGroup_User1,&nbsp;_T(&quot;Something&nbsp;is&nbsp;wrong&nbsp;but&nbsp;not&nbsp;that&nbsp;bad!&quot;),&nbsp;_T(__FILE__),&nbsp;__LINE__);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The trace output of these two example lines are depicted in the following figure:</span></p>
+<p class="p_ImageCaption"><img src="traceviewuserlines.png" width="782" height="49" alt="TraceViewUserLines" style="width:782px;height:49px;border:none" /></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_tracefromapplication.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,308 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ContinuationPoint Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">ContinuationPoint Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_configuration.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_create_monitored_item_request.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerContinuationPoint.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map72" id="map72"><area shape="rect" coords="657,123,871,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_continuation_point.htm" alt="" /><area shape="rect" coords="402,123,651,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_continuation_point.htm" alt="" /><area shape="rect" coords="174,123,397,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_continuation_point.htm" alt="" /><area shape="rect" coords="362,6,449,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="344,59,467,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm" alt="" /><area shape="rect" coords="5,123,169,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_continuation_point.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.gif" width="876" height="163" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point" style="width:876px;height:163px;border:none" usemap="#map72" /></p>
+<p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_base.htm#class_softing_o_p_c_toolbox5_1_1_base" class="topiclink">Base</a> class for all continuation points.</p>
+<p class="p_Paragraph">Some OPC UA services (e.g. HistoryRead to retrieve historical values from a variable) allow clients to restrict the maximum number of results per request. If a server has more results to deliver, it returns a continuation point along with the results which the client can use to request more results. A server application must be able to deliver the remaining result with context information stored within a continuation point. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a74efff0c3fbc6cb1fde3034863b7e7d0" class="topiclink">ContinuationPoint</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a5e6448abe6c9494c5d36d67b4b6e414c" class="topiclink">~ContinuationPoint</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1af1fe40f12e2432edcf3ebcc9160e28e3" class="topiclink">getContext</a></span>(void **ppContext) const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a78c950149c9afa496b43dd2cfaaff7c2" class="topiclink">setContext</a></span>(const void *context, OTUInt32 contextLength)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a86c4b368901c4b7eab2a405bf47c18f7.htm#_enums_8h_1a86c4b368901c4b7eab2a405bf47c18f7" class="topiclink">EnumContinuationPointType</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a145b1cfc0028bf111a897a58d2cb7b87" class="topiclink">getType</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a9dd2bd9353be944683e77b3924da1fa2" class="topiclink">ContinuationPoint</a></span>(bool suppressCoreInstanceCreate)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;">ContinuationPoint</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point" class="topiclink">ContinuationPoint</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a39b600ee2b9ea1d1ff4f0922077c1fe0" class="topiclink">operator=</a></span>(const ContinuationPoint &amp;)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a67eee3585256fcef32f087627a4647cd" class="topiclink">ContinuationPoint</a></span>(const ContinuationPoint &amp;)</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a74efff0c3fbc6cb1fde3034863b7e7d0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ContinuationPoint::ContinuationPoint</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a5e6448abe6c9494c5d36d67b4b6e414c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::ContinuationPoint::~ContinuationPoint</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1af1fe40f12e2432edcf3ebcc9160e28e3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ContinuationPoint::getContext</span>(void ** <span class="f_Parameter">ppContext</span>) const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Parameter">Deprecation warning:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please store custom context as members in derived subclasses of the used <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point" class="topiclink">ContinuationPoint</a> class.</p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph">Returns the previously provided context information.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">ppContext</span><span style="font-size: 10pt; font-family: Arial; color: #000000;"> (out)</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The address of a pointer to point to the context information </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Returns:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The length of the context information in bytes</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The given pointer will point to the internal storage of the context information, the context information itself won't be copied. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a78c950149c9afa496b43dd2cfaaff7c2" class="topiclink">setContext()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a78c950149c9afa496b43dd2cfaaff7c2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ContinuationPoint::setContext</span>(const void * <span class="f_Parameter">context</span>, OTUInt32 <span class="f_Parameter">contextLength</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Parameter">Deprecation warning:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please store custom context as members in derived subclasses of the used <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point" class="topiclink">ContinuationPoint</a> class.</p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph">Sets the application-specific context information to be able to continue the request. The content of <span class="f_Parameter">context</span> is copied to an internal storage.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">context</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">A pointer to the context information </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">contextLength</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The length of the context information in bytes </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a145b1cfc0028bf111a897a58d2cb7b87"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a86c4b368901c4b7eab2a405bf47c18f7.htm#_enums_8h_1a86c4b368901c4b7eab2a405bf47c18f7" class="topiclink">EnumContinuationPointType</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ContinuationPoint::getType</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the type of the continuation point.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Returns:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The continuation point type </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_continuation_point_1a3ec412a40c920f48e8fe9832e4fa6dbc" class="topiclink">SoftingOPCToolbox5::Server::HistoryReadRawContinuationPoint</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_continuation_point_1ae0456e7c2e3c4d9d7140507e9f02c7f3" class="topiclink">SoftingOPCToolbox5::Server::HistoryReadProcessedContinuationPoint</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_continuation_point_1a39c391f5265fb1509b2a9b1a74807a16" class="topiclink">SoftingOPCToolbox5::Server::HistoryReadEventContinuationPoint</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_continuation_point_1ab09e09eb82f42f6288865c15f4652720" class="topiclink">SoftingOPCToolbox5::Server::BrowseContinuationPoint</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a9dd2bd9353be944683e77b3924da1fa2"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ContinuationPoint::ContinuationPoint</span>(bool <span class="f_Parameter">suppressCoreInstanceCreate</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a39b600ee2b9ea1d1ff4f0922077c1fe0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point" class="topiclink">ContinuationPoint</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ContinuationPoint::operator=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point" class="topiclink">ContinuationPoint</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Forbid use assignment operator </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point_1a67eee3585256fcef32f087627a4647cd"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::ContinuationPoint::ContinuationPoint</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point" class="topiclink">ContinuationPoint</a> &amp; <span class="f_Parameter"> </span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Forbid use of copy constructor </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_continuation_point.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

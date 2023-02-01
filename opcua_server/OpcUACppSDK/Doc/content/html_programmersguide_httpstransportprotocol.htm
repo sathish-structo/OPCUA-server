@@ -1,0 +1,84 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>HTTPS Transport Protocol</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_programmersguide_httpstransportprotocol.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">HTTPS Transport Protocol</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_clienteventfilter.htm">Previous</a>&nbsp;
+     <a href="html_programmersguide_https_setupclient.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">Besides the TCP/IP transport protocol, which is used in the <a href="html_gettingstarted.htm" class="topiclink">Programming Tutorial</a> and <a href="html_programming_samples.htm" class="topiclink">Programming Samples</a>, the OPC UA C++ Server &amp; Client SDK V6.00 also supports the HTTPS transport protocol (see <a href="html_uaintroductiontransportprotocols.htm" class="topiclink">Transport Protocols</a>).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">HTTPS has a lower performance than TCP/IP due to a bigger protocol size, but has the benefit to be more internet friendly.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This section describes the SDK specific parts of the HTTPS protocol implementation and how to use it within an application:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_programmersguide_https_setupclient.htm" class="topiclink">Setup Client Application</a>: Describes how to configure a client application to use HTTPS</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_programmersguide_https_setupserver.htm" class="topiclink">Setup Server Application</a>: Describes how to configure a server application to use HTTPS</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Trust Relationship</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The HTTPS transport protocol is meant to be used for secure communication only, where Client and Server applications have to trust each other. If an insecure communication is required, we recommend to use TCP/IP communication without security.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Due to the fact that HTTPS is independent of OPC UA, it can require up to two certificates to establish a communication, one for HTTPS and one to identify the application instance. To keep the interfaces and the handling of the trust relationship simple, the SDK uses the one </span><span class="f_Reference">Application Instance Certificate</span><span class="f_Paragraph"> and one PKI store for both purposes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For convenience, the Client SDK usually allows that client application don't have to explicitly trust the server, where it wants to connect to. As HTTPS is independent of OPC UA, now even the client applications are required to have a PKI store with the trusted HTTPS certificates.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> It is not possible to check and add the certificate to the trust list during the first connection trial, like it is possible for the TCP/IP protocol. The trust has to be established before the first connection.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Limitations</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The HTTPS transport protocol has some restrictions within the stack and OpenSSL, that need to be considered when using HTTPS:</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Limited Number of Open Requests</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Compared to TCP/IP, the handling of the HTTPS protocol requires to hold more context data for open requests. The stack implementation supports only a limited number of open requests in parallel for every </span><span class="f_Reference">Secure Channel</span><span class="f_Paragraph">, this limitation is hardcoded to 10 requests.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Those available requests are occupied for every running service call and especially for the </span><span class="f_Reference">Subscription</span><span class="f_Paragraph"> services.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The nature of the </span><span class="f_Reference">Subscription</span><span class="f_Paragraph"> mechanism is designed to provide a number of publish requests to the server. The server queues those requests and responds to only one request for every publish response. The Client SDK </span><span class="f_Reference">Subscription</span><span class="f_Paragraph"> mechanism ensures that the server queues up to a total of 5 publish requests, but the publish requests are shared for all </span><span class="f_Reference">Subscriptions</span><span class="f_Paragraph"> of one </span><span class="f_Reference">Session</span><span class="f_Paragraph">. This means whenever </span><span class="f_Reference">Subscriptions</span><span class="f_Paragraph"> are used on a </span><span class="f_Reference">Session</span><span class="f_Paragraph">, only half of the open requests can be used for other service calls.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The Client SDK supports to share </span><span class="f_Reference">Secure Channels</span><span class="f_Paragraph"> between several </span><span class="f_Reference">Sessions</span><span class="f_Paragraph">, but we propose to not use this feature together with HTTPS, because all </span><span class="f_Reference">Sessions</span><span class="f_Paragraph"> with shared </span><span class="f_Reference">Secure Channels</span><span class="f_Paragraph"> have to share the available open requests.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Server in Several Domains</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Some HTTPS implementations require that all servers have a certificate with a </span><span class="f_Reference">Common Name</span><span class="f_Paragraph"> (CN) that matches the domain name of the server machine. This means that a server, which can be identified by several Domain Name Servers (DNS) will need multiple HTTPS certificates while using only one </span><span class="f_Reference">Application Instance Certificate</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">As described in the </span><span class="f_Reference">Trust Relationship</span><span class="f_Paragraph">, the SDK reuses the </span><span class="f_Reference">Application Instance Certificate</span><span class="f_Paragraph"> for HTTPS, which may cause issues for servers within several domains.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_programmersguide_httpstransportprotocol.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

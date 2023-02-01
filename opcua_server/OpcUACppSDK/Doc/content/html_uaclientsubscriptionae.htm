@@ -1,0 +1,162 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Receive Events</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uaclientsubscriptionae.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Receive Events</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_programmersguide_how_to_client.htm">Previous</a>&nbsp;
+     <a href="html_clienteventfilter.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><a id="hdr"></a><span class="f_Paragraph">OPC UA allows servers to raise events which can be received by a client. When an event occurs in the server it is conveyed as </span><span class="f_Reference">event notification</span><span class="f_Paragraph">. An event notification contains one or more </span><span class="f_Reference">event fields</span><span class="f_Paragraph">. Event fields store the actual event information such as an event message or the time when the event was triggered.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">When a client subscribes to event notifications, it needs to define an </span><span class="f_Reference">event filter</span><span class="f_Paragraph"> that consists of a select-clause and a where-clause. With the select-clause, the client defines in which information of an event it is interested in. The </span>available<span class="f_Paragraph"> information is defined in the event type. The where-clause allows the client to state filter conditions for an event. Only if the event satisfies the conditions in the where-clause, it is reported to the client.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The figure below illustrates the event processing that takes place at the server when an event is raised. Please note that the illustration depicts only the concept, the actual implementation in a server may vary.</span></p>
+<p class="p_Paragraph"><img src="eventprocessing.png" width="890" height="396" alt="EventProcessing" style="width:890px;height:396px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In the figure, the server raises an event of a specific type and provides all available information about the event according to its type. Whenever a monitored item is found with a matching where clause at a reporting node, a notification message is created according to the monitored items select clause. In this example, the event satisfies the conditions stated by the where-clause. Therefore, the server provides the values according to the select-clause to the event notification. Since the client has requested the </span><span class="f_Reference">EventType</span><span class="f_Paragraph">, </span><span class="f_Reference">Message</span><span class="f_Paragraph">, </span><span class="f_Paragraph" style="font-style: italic;">SourceNode</span><span class="f_Paragraph">, </span><span class="f_Paragraph" style="font-style: italic;">AcitveState/ID</span><span class="f_Paragraph"> property in this example, other information is not delivered via the event notification.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Subscription for Event Monitored Items</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Creating a subscription for Alarms &amp; Events and for Data Access is almost similar, only the configuration of <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm" class="topiclink">MonitoredItems</a> is slightly different (see <a href="html_clienteventfilter.htm" class="topiclink">MonitoredItem for Events</a>).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">How to create and configure an instance of a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm" class="topiclink">Subscription</a> class see <a href="html_uaclientsubscriptionda.htm" class="topiclink">Data Change Subscription</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Defining Inheriting Classes</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">To be able to receive events from the subscription, it is necessary to define a new class which inherits from <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm" class="topiclink">Subscription</a> and overrides the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707" class="topiclink">Subscription::onEventsReceived()</a> callback. (The same class can also be used for a data change subscription.) This Callback receives the events of all <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm" class="topiclink">MonitoredItems</a> which the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm" class="topiclink">Subscription</a> contains. (See also <a href="html_lifetimeoftoolkitobjects.htm" class="topiclink">Lifetime of SDK Objects</a> for how to implement the recommended </span><span class="f_FixedSize">create()</span><span class="f_Paragraph"> method for smart pointer usage)</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Optionally the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4f57e643dd87b67dedb59ac5ff60742a" class="topiclink">Subscription::onError()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a80192733047651957ac982e21af8cb60" class="topiclink">Subscription::onStatusChange()</a> callbacks can be overridden to notice additional errors or connection status changes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Subscription::onEventsReceived()</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The method is invoked every time one or more monitored items have received an event.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">A monitored item can be contained multiple times in the given list of monitored items.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Each received event is represented by a</span> <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list" class="topiclink">EventFieldList</a>, i.e. an array of <a href="class_softing_o_p_c_toolbox5_1_1_value.htm#class_softing_o_p_c_toolbox5_1_1_value" class="topiclink">Value</a> objects.</p>
+<p class="p_Paragraph">The number of values match exactly the number of select clauses specified for the monitored item using the same order <span class="f_Paragraph">(see <a href="html_clienteventfilter.htm" class="topiclink">MonitoredItem for Events</a>).</span><br />
+If one select clause cannot be resolved by the server, the server shall provide a NULL value, i.e. a value with data type Null.</p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph">Example for two events received for a monitoring item on the server node (without where clause):</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Select Clause</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Event 1 values</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Event 2 values</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">EventType</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">NodeId: i=9482 (ExclusiveLevelAlarmType)</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">NodeId: i=2075 (AuditActivateSessionEventType)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">SourceNode</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">NodeId: ns=1;s=TestAlarm</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">NodeId: i=2253 (server object)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">SourceName</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">String; &quot;TestAlarm&quot;</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">String: &quot;Session/ActivateSession&quot;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">Severity</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">UInt16: 100</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">UInt16: 100</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">Message</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">LocalizedText: &quot;Test message&quot;, &quot;&quot;</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">LocalizedText: &quot;&quot;, &quot;&quot;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">ClientAuditEntryId</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Null (the event type does not have this property)</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">String: &quot;Operator1&quot;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; height:18px; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">ActiveState</span></p>
+</td>
+<td style="vertical-align:top; height:18px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">LocalizedTest: &quot;Active&quot;, &quot;&quot;</span></p>
+</td>
+<td style="vertical-align:top; height:18px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Null (the event type does not have this property)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uaclientsubscriptionae.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,143 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Browsing the Address Space</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_browse.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Browsing the Address Space</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_clientstep2.htm">Previous</a>&nbsp;
+     <a href="html_clientstep2sample.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h3 class="p_Heading3"><a id="hdr"></a><span class="f_Heading3">Browsing the Address Space</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA provides the services </span><span class="f_Paragraph" style="font-style: italic;">BrowseNode</span><span class="f_Paragraph">, </span><span class="f_Reference">Browse</span><span class="f_Paragraph"> and </span><span class="f_Reference">BrowseNext</span><span class="f_Paragraph"> to browse the address space of a server. Browsing the address space is a way to get all nodes that are connected to another node by references. To retrieve for example complete trees or the whole address space, several browse calls are necessary which use the results of previous browse calls. The service allows both the client and the server to restrict the number of the returned results. If the number of results exceed this maximum, a so-called </span><span class="f_Reference">continuation point</span><span class="f_Paragraph"> is created in the server and passed to the client. The continuation can be passed with the </span><span class="f_Reference">BrowseNext</span><span class="f_Paragraph"> to retrieve the remaining browse results.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Apart from the </span><span class="f_Reference">Browse</span><span class="f_Paragraph"> and </span><span class="f_Reference">BrowseNext</span><span class="f_Paragraph"> services, OPC UA provides the </span><span class="f_Reference">TranslateBrowsePathsNodeIds</span><span class="f_Paragraph"> service. This service is useful when a client has the NodeId of an object or variable and it knows the type definition of the node. In this case, the client can ask the server to translate browse paths found on the type to NodeIds found in the instance. For example, by knowing the </span><span class="f_Reference">RefrigeratorType</span><span class="f_Paragraph"> the client can ask the server for the NodeId of the </span><span class="f_Reference">Temperature </span><span class="f_Paragraph">variable found in </span><span class="f_Reference">Refrigerator1</span><span class="f_Paragraph">. The </span><span class="f_Reference">TranslateBrowsePathsNodeIds</span><span class="f_Paragraph"> service is covered in the <a href="html_getnodeidsbybrowsenames.htm" class="topiclink">Step 5</a> of the tutorial.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Preconditions</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Before the client can browse the address space of the server, the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> must be initialized and a connected <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> must be available (see <a href="html_clientstep1.htm" class="topiclink">Client Tutorial Step 1</a>).</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">The browse service</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">There are two methods defined in the client <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> which allow to browse the address space:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1aae8a31cfe9680a09eb65eb216788fd98" class="topiclink">Client::Session::browse()</a> allows to specify several starting nodes. Returned continuation points need to be handled by the application.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a313d6f7bd83f01c5ae9da100e8ea1350" class="topiclink">Client::Session::browseNode()</a> is a convenient method for browsing from a single node. Returned continuation points are followed automatically.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">A useful application of the</span><span class="f_FixedSize"> </span><span class="f_Reference">Browse</span><span class="f_Paragraph"> service is browsing for a specific Object and stopping the browse, when this Object is found. This is shown in this section of the client tutorial. An example implementation of this is shown in the </span><span class="f_FixedSize">Client_5</span><span class="f_Paragraph"> project.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Browsing the address space can be divided into three steps:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List">Preparing the parameters by configuring a <a href="class_softing_o_p_c_toolbox5_1_1_browse_description.htm" class="topiclink">BrowseDescription</a> and a <a href="class_softing_o_p_c_toolbox5_1_1_view_description.htm" class="topiclink">ViewDescription</a>.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Specify the NodeId of the starting node.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">BrowseDescription&nbsp;bd;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">bd.setNodeId(NodeId(EnumNumericNodeId_ObjectsFolder));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;e.g.&nbsp;start&nbsp;from&nbsp;the&nbsp;object&nbsp;folder</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Specify the reference types to follow and the browse direction. The browse direction <span class="f_FixedSize">EnumBrowseDirection_Forward</span><span class="f_Paragraph"> indicates that all references starting from </span>the starting node are returned. <span class="f_FixedSize">EnumBrowseDirection_Inverse</span><span class="f_Paragraph"> will return all references that end in the starting node.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">bd.setReferenceTypeId(Statics::ReferenceTypeId_Organizes);&nbsp;&nbsp;&nbsp;//&nbsp;e.g.&nbsp;use&nbsp;an&nbsp;&quot;Organizes&quot;&nbsp;reference&nbsp;type</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">bd.setIncludeSubtypes(false);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Follow&nbsp;also&nbsp;nodes&nbsp;referenced&nbsp;by&nbsp;subtypes&nbsp;of&nbsp;&quot;Organizes&quot;?</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">bd.setBrowseDirection(EnumBrowseDirection_Forward);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Set the result mask to specify additional attributes that are to be returned for the browsed nodes. By default, only the <span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeId</a> of browsed nodes is returned.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">bd.setResultMask(EnumResultMask_ReferenceType&nbsp;|&nbsp;EnumResultMask_DisplayName&nbsp;|&nbsp;EnumResultMask_TypeDefinition);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Create a <a href="class_softing_o_p_c_toolbox5_1_1_view_description.htm" class="topiclink">ViewDescription</a>. If you do not configure the <a href="class_softing_o_p_c_toolbox5_1_1_view_description.htm" class="topiclink">ViewDescription</a>, the entire address space will be browsed. The <a href="class_softing_o_p_c_toolbox5_1_1_view_description.htm" class="topiclink">ViewDescription</a> allows clients to restrict the set of browsed nodes to a certain <a href="html_uaaddressspaceviews.htm" class="topiclink">view</a>.</td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">ViewDescription&nbsp;vd;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph"> Calling the browse service. We will show both browseNode() and browse(). </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">a.</span></td><td style="border:none"><span class="f_Paragraph"> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a313d6f7bd83f01c5ae9da100e8ea1350" class="topiclink">Client::Session::browseNode()</a>: Browsing on a single node until all references are available</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">session-&gt;browseNode(&amp;vd,&nbsp;&amp;bd,&nbsp;refDescriptions);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">b.</span></td><td style="border:none"><span class="f_Paragraph"> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1aae8a31cfe9680a09eb65eb216788fd98" class="topiclink">Client::Session::browse()</a>: Multiple starting nodes possible; can return with a &quot;continuationPoint&quot;. The number of the results can be limited. If the value 0 is provided as limit, the client does not impose any limit on the results.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;BrowseDescription&gt;&nbsp;bdArray;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">bdArray.push_back(bd);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...&nbsp;//&nbsp;add&nbsp;further&nbsp;BrowseDescriptions</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;BrowseResult&gt;&nbsp;browseResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;session-&gt;browse(&amp;vd,&nbsp;bdArray,&nbsp;100,&nbsp;browseResults);&nbsp;&nbsp;&nbsp;//&nbsp;we&nbsp;limit&nbsp;the&nbsp;number&nbsp;of&nbsp;results&nbsp;to&nbsp;100</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph"> Consume the results. The returned results contain everything that was specified in the result mask. One useful application is to store NodeIds of Nodes of a specific <a href="_enums_8h_1a0c209f741415ea53ce2809116880ca11.htm" class="topiclink">NodeClass</a> (e.g. Variable or Object) or even of specific objects.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">a.</span></td><td style="border:none"><span class="f_Paragraph"> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a313d6f7bd83f01c5ae9da100e8ea1350" class="topiclink">Client::Session::browseNode()</a> returns the <a href="class_softing_o_p_c_toolbox5_1_1_reference_description.htm" class="topiclink">ReferenceDescriptions</a> of the found references.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">for(size_t&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;refDescriptions.size();&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;//&nbsp;e.g.&nbsp;print&nbsp;the&nbsp;returned&nbsp;attributes</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;//&nbsp;e.g.&nbsp;look&nbsp;for&nbsp;Nodes&nbsp;of&nbsp;a&nbsp;specific&nbsp;NodeClass&nbsp;(e.g.&nbsp;Variable)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;if(refDescriptions[i].getNodeClass()&nbsp;==&nbsp;EnumNodeClass_Variable)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;e.g.&nbsp;store&nbsp;the&nbsp;NodeIds&nbsp;of&nbsp;these&nbsp;Nodes</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">b.</span></td><td style="border:none"><span class="f_Paragraph"> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1aae8a31cfe9680a09eb65eb216788fd98" class="topiclink">Client::Session::browse()</a> returns the <a href="class_softing_o_p_c_toolbox5_1_1_browse_result.htm" class="topiclink">BrowseResults</a> of the found references containing a StatusCode, possibly a continuationPoint, the references and the refernceCount.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;ByteString&gt;&nbsp;continuationPoints;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">do</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;bool&nbsp;found&nbsp;=&nbsp;false;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;//&nbsp;Search&nbsp;for&nbsp;an&nbsp;object&nbsp;&nbsp;with&nbsp;known&nbsp;name&nbsp;(tstring)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;std::vector&lt;ReferenceDescription&gt;&nbsp;refDescriptions&nbsp;=&nbsp;browseResults[i].getReferences();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;for(size_t&nbsp;j&nbsp;=&nbsp;0;&nbsp;j&nbsp;&lt;&nbsp;refDescriptions.size();&nbsp;j++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if((refDescriptions[i].getNodeClass()&nbsp;==&nbsp;EnumNodeClass_Object)&nbsp;&amp;&amp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(refDescriptions[i].getBrowseName()-&gt;getName()&nbsp;==&nbsp;name))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;e.g.&nbsp;store&nbsp;the&nbsp;NodeId&nbsp;of&nbsp;the&nbsp;object</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;found&nbsp;=&nbsp;true;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;//&nbsp;Is&nbsp;there&nbsp;a&nbsp;continuation&nbsp;point&nbsp;to&nbsp;continue&nbsp;browsing?</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;continuationPoints.clear();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;ByteString&nbsp;continuationPoint&nbsp;=&nbsp;browseResults[i].getContinuationPoint();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;if(continuationPoint.getSize()&nbsp;!=&nbsp;0)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continuationPoints.push_back(continuationPoint);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;if(!continuationPoints.empty())</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;If&nbsp;the&nbsp;object&nbsp;was&nbsp;already&nbsp;found,&nbsp;we&nbsp;do&nbsp;not&nbsp;need&nbsp;to&nbsp;continue&nbsp;browsing</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;releaseContinuationPoints&nbsp;=&nbsp;found;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Get&nbsp;next&nbsp;bunch&nbsp;of&nbsp;references&nbsp;(or&nbsp;stop&nbsp;browsing)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;session-&gt;browseNext(continuationPoints,&nbsp;releaseContinuationPoints,&nbsp;browseResults);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASSERT_STATUS(result,&nbsp;_T(&quot;The&nbsp;call&nbsp;of&nbsp;'browseNext'&nbsp;failed&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;By&nbsp;releasing&nbsp;the&nbsp;continuation&nbsp;point(s)&nbsp;the&nbsp;server&nbsp;can&nbsp;free&nbsp;resources</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(releaseContinuationPoints)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;released&nbsp;continuation&nbsp;points&nbsp;cannot&nbsp;be&nbsp;used&nbsp;any&nbsp;more&nbsp;-&nbsp;stop&nbsp;browseNext</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continuationPoints.clear();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">while(!continuationPoints.empty());</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">An OPC UA server created with the OPC UA C++ Server &amp; Client SDK V6.00 does currently not support views.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="html_clientstep2sample.htm" class="topiclink">Sample Application</a>, <a href="html_clienttutorial.htm" class="topiclink">Client Tutorial</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_browse.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

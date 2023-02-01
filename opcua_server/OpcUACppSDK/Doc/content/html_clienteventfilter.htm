@@ -1,0 +1,169 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>MonitoredItem for Events</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_clienteventfilter.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">MonitoredItem for Events</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uaclientsubscriptionae.htm">Previous</a>&nbsp;
+     <a href="html_programmersguide_httpstransportprotocol.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><a id="hdr"></a><span class="f_Heading3">Creating an Event MonitoredItem</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm" class="topiclink">MonitoredItem</a> can be used to either monitor changes on an attribute of a node (in most cases the value of a Variable) or an event.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For monitoring events you have to </span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Specify a NodeId of on object with the </span><span class="f_Paragraph" style="font-style: italic;">SubscribeToEvents</span><span class="f_Paragraph"> bit set in its EventNotifier attribute.</span><br />
+<span class="f_Paragraph">You can specify any node in the servers address space which is connected via a &quot;HasNotifier&quot; reference to the nodes) of interest.</span><br />
+<span class="f_Paragraph">A server reporting events typically has the </span><span class="f_Paragraph" style="font-style: italic;">SubscribeToEnvent</span><span class="f_Paragraph"> bit set at the well-known &quot;Server&quot; node, where all events are reported.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Specify the </span><span class="f_Paragraph" style="font-style: italic;">EventNotifier</span><span class="f_Paragraph"> attribute as attribute.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Configure an event filter (at least the select clause).</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">Typically you should use a sampling interval of 0 (fastest possible) to allow sampling of events occurring at the same time.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">A queue size of 0 (default queue size for event monitored items) is also recommended. The server shall use a queue size where a queue overflow is unlikely.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Client::MonitoredItemPtr&nbsp;monitoredItem&nbsp;=&nbsp;Client::MonitoredItem::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">monitoredItem-&gt;setNodeId(monitorNodeId);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">monitoredItem-&gt;setAttributeId(EnumAttributeId_EventNotifier);&nbsp;&nbsp;//&nbsp;an&nbsp;event&nbsp;monitored&nbsp;item&nbsp;needs&nbsp;to&nbsp;target&nbsp;the&nbsp;EventNotifier&nbsp;attribute</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">monitoredItem-&gt;setSamplingInterval(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;an&nbsp;event&nbsp;monitored&nbsp;item&nbsp;needs&nbsp;a&nbsp;sampling&nbsp;interval&nbsp;of&nbsp;0</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">monitoredItem-&gt;setQueueSize(0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;let&nbsp;the&nbsp;server&nbsp;choose&nbsp;the&nbsp;appropriate&nbsp;quque&nbsp;size</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EventFilter&nbsp;eventFilter;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;for&nbsp;events&nbsp;we&nbsp;need&nbsp;an&nbsp;event&nbsp;filter</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;configure&nbsp;the&nbsp;EventFilter</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">monitoredItem-&gt;setEventFilter(filter);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Defining an Event Filter</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">These steps must be performed to create an <a href="class_softing_o_p_c_toolbox5_1_1_event_filter.htm" class="topiclink">EventFilter</a>:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List">Create an <a href="class_softing_o_p_c_toolbox5_1_1_event_filter.htm" class="topiclink">EventFilter</a> object.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">EventFilter&nbsp;eventFilter;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">Configure the select clause using the <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm" class="topiclink">SimpleAttributeOperand</a> class (see <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm" class="topiclink">SimpleAttributeOperand</a> and <a href="class_softing_o_p_c_toolbox5_1_1_event_filter.htm#class_softing_o_p_c_toolbox5_1_1_event_filter_1a90f1913bb7656adf144fbb9573bb8610" class="topiclink">EventFilter::addSelectClause()</a> for further reference).</span><br />
+<span class="f_Paragraph">Typically properties like &quot;Message&quot;, &quot;SourceNode&quot;, &quot;Severity&quot;, &quot;EventId&quot;, &quot;Retain&quot; or &quot;ActiveState&quot; (&quot;ActiveState&quot;/&quot;Id&quot;) are of interest.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">SimpleAttributeOperand&nbsp;selectClause;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setTypeDefinitionId(Statics::ObjectTypeId_BaseEventType); &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;the&nbsp;NodeId&nbsp;of&nbsp;the&nbsp;event&nbsp;type</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">QualifiedName&nbsp;browseName;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">browseName&nbsp;=&nbsp;QualifiedName(BrowseName_EventType,&nbsp;0);&nbsp;&nbsp;//&nbsp;the&nbsp;browse&nbsp;path&nbsp;from&nbsp;the&nbsp;type&nbsp;to&nbsp;the&nbsp;desired&nbsp;property</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.addBrowsePath(&amp;browseName);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setAttributeId(EnumAttributeId_Value);&nbsp;&nbsp;&nbsp;//&nbsp;the&nbsp;desired&nbsp;Attribute,&nbsp;here&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;property</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">eventFilter.addSelectClause(&amp;selectClause);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;add&nbsp;more&nbsp;select&nbsp;clauses</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph">Configure the optional where clause as a <a href="class_softing_o_p_c_toolbox5_1_1_content_filter.htm" class="topiclink">ContentFilter</a> containing several <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElements</a>. A <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElement</a> consists of an operator and one or more operands of various types depending on the operator. (See <a href="class_softing_o_p_c_toolbox5_1_1_content_filter.htm" class="topiclink">ContentFilter</a>, <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElement</a> and see below how to create a <a href="class_softing_o_p_c_toolbox5_1_1_content_filter.htm" class="topiclink">ContentFilter</a>)</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">ContentFilter&nbsp;whereClause;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ContentFilterElement&nbsp;filterElement;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">filterElement.setFilterOperator(EnumFilterOperator_OfType);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;for&nbsp;example&nbsp;we&nbsp;filter&nbsp;for&nbsp;the&nbsp;event&nbsp;type</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">FilterOperand&nbsp;filterOperand;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">LiteralOperand&nbsp;literalOperand;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;desiredEventTypeNode&nbsp;=&nbsp;Statics::ObjectTypeId_AlarmConditionType;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;and&nbsp;all&nbsp;alarm&nbsp;conditions&nbsp;and&nbsp;their&nbsp;subtypes</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">literalOperand.setValue(Value(&amp;desiredEventTypeNode));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">filterOperand.setLiteralOperand(&amp;literalOperand);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">filterElement.addFilterOperand(&amp;filterOperand);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">whereClause.addElement(&amp;filterElement);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">eventFilter.setWhereClause(whereClause);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">monitoredItem-&gt;setEventFilter(filter);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;use&nbsp;the&nbsp;event&nbsp;filter&nbsp;at&nbsp;the&nbsp;monitored&nbsp;item</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Creating a ContentFilter</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A <a href="class_softing_o_p_c_toolbox5_1_1_content_filter.htm" class="topiclink">ContentFilter</a> can contain several <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElements</a>. A <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElement</a> consists of an operator and one or more operands of various types depending on the operator. For each operator a distinct action is taken that works on the evaluation of the operands. The operators are defined in <a href="_enums_8h_1a5ba46a0c2c67fd59eddc38b1aed743e5.htm" class="topiclink">EnumFilterOperator</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An operand can be </span><span class="f_Reference">Literal</span><span class="f_Paragraph"> for values, </span><span class="f_Reference">SimpleAttribute</span><span class="f_Paragraph"> for an Attribute of the event or one of its Properties, or </span><span class="f_Reference">Element</span><span class="f_Paragraph"> to use another operator as operand. The operands are listed in <a href="_enums_8h_1af4b1f9440856d9067976e5d4333853ac.htm" class="topiclink">EnumFilterOperand</a> and specify the classes <a href="class_softing_o_p_c_toolbox5_1_1_literal_operand.htm" class="topiclink">LiteralOperand</a>, <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm" class="topiclink">SimpleAttributeOperand</a> and <a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm" class="topiclink">ElementOperand</a>. The defined operator &quot;Attribute&quot; is not allowed for Event filter.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_Reference">Element</span><span class="f_Paragraph"> operand refers to another <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElement</a> by its index in the <a href="class_softing_o_p_c_toolbox5_1_1_content_filter.htm" class="topiclink">ContentFilter</a>. With this it is possible to create an evaluation tree using more than one operand. Only forward references are allowed to avoid circular references which means that the referenced index must be greater than the index of the actual <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElement</a> where the <a href="class_softing_o_p_c_toolbox5_1_1_element_operand.htm" class="topiclink">ElementOperand</a> resides in.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">What is important to keep track while working with the API is that only the first <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElement</a> and the referenced ones are evaluated. <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElements</a> that are not connected to the evaluation tree of the first element will be ignored. Also, keep in mind that if the content filter does not represent an evaluation tree, the event <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm" class="topiclink">MonitoredItem</a> creation in the server will be rejected.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElement</a> can return the results TRUE, FALSE and in some cases NULL. The NULL result is interpreted as an error. If the root of the evaluation tree (the first <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElement</a>) returns a NULL value, then the <a href="class_softing_o_p_c_toolbox5_1_1_content_filter.htm" class="topiclink">ContentFilter</a> will also return FALSE.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Example:</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For example we want a filter that returns all events of a certain event type (the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeId</a> of the event type must be known) but only the important events (a severity higher than a certain one, here 500)(severity 0 is the lowest and 1000 the highest possible severity).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">So we want an evaluation tree like this one:</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span style="width:48px">&nbsp;</span><img src="eventfilter.png" width="464" height="202" alt="EventFilter" style="width:464px;height:202px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To get this evaluation tree we define the <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElements</a> and insert them to the <a href="class_softing_o_p_c_toolbox5_1_1_content_filter.htm" class="topiclink">ContentFilter</a> in this order:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:700px; border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:181px; padding:3px; border:solid 1px #000000;"><h3 class="p_Heading3"><span class="f_Heading3">ContentFilterElement[]</span></h3>
+</th>
+<th style="vertical-align:top; width:92px; padding:3px; border:solid 1px #000000;"><h3 class="p_Heading3"><span class="f_Heading3">Operator</span></h3>
+</th>
+<th style="vertical-align:top; width:190px; padding:3px; border:solid 1px #000000;"><h3 class="p_Heading3"><span class="f_Heading3">Operand 0</span></h3>
+</th>
+<th style="vertical-align:top; width:220px; padding:3px; border:solid 1px #000000;"><h3 class="p_Heading3"><span class="f_Heading3">Operand 1</span></h3>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:181px; padding:3px; border:solid 1px #000000;"><p>0</p>
+</td>
+<td style="vertical-align:top; width:92px; padding:3px; border:solid 1px #000000;"><p>And</p>
+</td>
+<td style="vertical-align:top; width:190px; padding:3px; border:solid 1px #000000;"><p>Element {1}</p>
+</td>
+<td style="vertical-align:top; width:220px; padding:3px; border:solid 1px #000000;"><p>Element 2</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:181px; padding:3px; border:solid 1px #000000;"><p>1</p>
+</td>
+<td style="vertical-align:top; width:92px; padding:3px; border:solid 1px #000000;"><p>OfType</p>
+</td>
+<td style="vertical-align:top; width:190px; padding:3px; border:solid 1px #000000;"><p>Literal {NodeId of Type}</p>
+</td>
+<td style="vertical-align:top; width:220px; padding:3px; border:solid 1px #000000;"><p>-</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:181px; padding:3px; border:solid 1px #000000;"><p>2</p>
+</td>
+<td style="vertical-align:top; width:92px; padding:3px; border:solid 1px #000000;"><p>GreaterThan</p>
+</td>
+<td style="vertical-align:top; width:190px; padding:3px; border:solid 1px #000000;"><p>Attribute {Severity; Value}</p>
+</td>
+<td style="vertical-align:top; width:220px; padding:3px; border:solid 1px #000000;"><p>Literal {500}</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph">(Of course there are different possible ways to define an evaluation tree with the same meaning e.g. by switching the elements 1 and 2.)</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The chosen values for the select clause can be any Attribute or Property of an event type. Have a look on the desired event types to see its Attributes and Properties.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">If a selected Property doesn't exist (e.g. only a certain part of the results has this Property) then a null value will be returned for it.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">If the where clause is left empty then all event types are selected.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The in <a href="_enums_8h_1a5ba46a0c2c67fd59eddc38b1aed743e5.htm" class="topiclink">EnumFilterOperator</a> defined operators </span><span class="f_Reference">InView</span><span class="f_Paragraph"> and </span><span class="f_Reference">RelatedTo</span><span class="f_Paragraph"> are not allowed for event filters.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">When defining a <a href="class_softing_o_p_c_toolbox5_1_1_content_filter_element.htm" class="topiclink">ContentFilterElement</a>, the number of operands must fit to the used operator. Defining less or more will cause errors.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="html_uaclientsubscriptionae.htm" class="topiclink">Event Subscription</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_clienteventfilter.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

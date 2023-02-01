@@ -1,0 +1,87 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>&nbsp;Reading Node Attributes</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_readingnodeattributes.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">&nbsp;Reading Node Attributes</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_clientstep3.htm">Previous</a>&nbsp;
+     <a href="html_writingnodeattributes.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><a id="hdr"></a><span class="f_Paragraph">The read service can be used to get the value from any attribute of any node. This service allows to read several nodes and attributes with a single call.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The read service can be invoked either synchronously or asynchronously by the methods <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ac91107393b87fb7a7281bac1f6354860" class="topiclink">Client::Session::read()</a> or <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1aa3b1480df8dda6f30e5e4890780b4c78" class="topiclink">Client::Session::readAsync()</a>. The topic <a href="html_sampleasynchronousaccess.htm" class="topiclink">Asynchronous Access</a> describes how to use the asynchronous methods.</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">Preconditions</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Before the read service can be invoked, the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> has to be initialized and a connected <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> must be available (see <a href="html_clientstep1.htm" class="topiclink">Client Tutorial Step 1</a>).</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Calling the Read Service</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Reading values is composed of three steps:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List">Create and configure <a href="class_softing_o_p_c_toolbox5_1_1_read_value_id.htm" class="topiclink">ReadValueIds</a> to specify the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeId</a> and the attribute of the node. The NodeId can e.g. be fetched from a browse call (see <a href="html_browse.htm" class="topiclink">Browsing the Adress Space</a>). If you want to read several attributes of the same node, you need to create a <a href="class_softing_o_p_c_toolbox5_1_1_read_value_id.htm" class="topiclink">ReadValueId</a> object for each attribute to read. Optionally an index range can be specified if the value is an array and if you want only to read only a certain range of the array.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;ReadValueId&gt;&nbsp;readIds;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">readIds.push_back(ReadValueId());</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">readIds.back().setNodeId(nodeId);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">readIds.back().setAttributeId(EnumAttributeId_Value);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">Call the read service with the <a href="class_softing_o_p_c_toolbox5_1_1_read_value_id.htm" class="topiclink">ReadValueIds</a>. The call accepts additional parameters to define which timestamps are to be returned and to define a maximum age for the read value. See <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ac91107393b87fb7a7281bac1f6354860" class="topiclink">Session::read()</a> for further reference.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;DataValue&gt;&nbsp;readResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">OTDouble&nbsp;maxAge&nbsp;=&nbsp;100;&nbsp;//&nbsp;milliseconds</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;read(EnumTimestampsToReturn_Both,&nbsp;readIds,&nbsp;maxAge,&nbsp;readResults);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph">Consume the returned <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm" class="topiclink">DataValue</a>. If you are reading from a device (e.g. an component variable of an object, see the <a href="html_clientstep5sample.htm" class="topiclink">Sample Application of Handling of Custom Types and Their Instances</a>), the read value should be stored on the device. The returned <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm" class="topiclink">DataValue</a> contains</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">a status code that indicates the quality of the read value and the result of the read operation,</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">the value of the attribute, and</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">the timestamps if they have been requested.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">if(StatusCode::isGood(readResults[i].getStatusCode()))</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;OTDouble&nbsp;readValue;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;readResults[i].getValue()-&gt;getDouble(&amp;readValue);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;//&nbsp;e.g.&nbsp;print&nbsp;the&nbsp;value&nbsp;to&nbsp;the&nbsp;console</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Servers can restrict the access to attributes (e.g. by granting read access only to certain users). In this case, the status code of the DataValue contains an error code.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="html_writingnodeattributes.htm" class="topiclink">Writing Node Attributes</a>, <a href="html_clientstep3sample.htm" class="topiclink">Sample Application</a>, <a href="html_clienttutorial.htm" class="topiclink">Client Tutorial</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_readingnodeattributes.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

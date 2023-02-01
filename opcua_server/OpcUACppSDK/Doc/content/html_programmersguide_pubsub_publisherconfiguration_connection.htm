@@ -1,0 +1,89 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Configure Connection</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_programmersguide_pubsub_publisherconfiguration_connection.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Configure Connection</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_programmersguide_pubsub_publisherconfiguration_writergroup.htm">Previous</a>&nbsp;
+     <a href="html_programmersguide_pubsub_subscriberconfiguration.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" class="topiclink">Connection</a> describes how to send NetworkMessages to the subscribers and groups a list of <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_writer_group.htm" class="topiclink">WriterGroups</a>, whose NetworkMessages shall reach the same target(s).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" class="topiclink">Connection</a> can be used for both, publishers and subscribers.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To configure the <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" class="topiclink">Connection</a> for a publisher, you need to set the following fields:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Invoke <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1aff8482e3cbfbef622b28ea5d7188d587" class="topiclink">Connection::setPublisherId()</a> to assign an ID for this publisher.</span><br />
+<span class="f_Paragraph">This ID needs to be unique within the same network and can be used by subscribers to filter messages.</span><br />
+<span class="f_Paragraph">The PublisherId allows values of the type UInteger (OTUInt8, OTUInt16, OTUInt32 or OTUInt64) and String.</span><br />
+<span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> If you have several <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" class="topiclink">Connections</a>, which publish data to different networks, then you can use the same PublisherId for all <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" class="topiclink">Connections</a>.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Assign the network address via <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a9f13ae8fc0afbda9121956c4dbf7bc6b" class="topiclink">Connection::setNetworkAddress()</a>, currently the only supported concrete data type to set is the <a href="class_softing_o_p_c_toolbox5_1_1_network_address_url_data_type.htm" class="topiclink">NetworkAddressUrlDataType</a>.</span><br />
+<span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_network_address_url_data_type.htm" class="topiclink">NetworkAddressUrlDataType</a> has two fields:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f_Paragraph">Assign the URL via <a href="class_softing_o_p_c_toolbox5_1_1_network_address_url_data_type.htm#class_softing_o_p_c_toolbox5_1_1_network_address_url_data_type_1a533d07abf15b69d73cb57eb2adb48719" class="topiclink">NetworkAddressUrlDataType::setUrl()</a>.</span><br />
+<span class="f_Paragraph">The URL defines both the protocol and the target.</span><br />
+<span class="f_Paragraph">Currently the only supported protocol is UADP and the syntax is </span><span class="f_FixedSize">opc.udp://&lt;host&gt;[:&lt;port&gt;]</span><span class="f_Paragraph">, which allows hostnames and IP addresses. The default port is 4840.</span><br />
+<span class="f_Paragraph">It allows unicast and multicast.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Courier New';color:#000000;">o</span></td><td style="border:none"><span class="f_Paragraph">Assign the desired network interface (network card) via <a href="class_softing_o_p_c_toolbox5_1_1_network_address_url_data_type.htm#class_softing_o_p_c_toolbox5_1_1_network_address_url_data_type_1a00666d90370b671f48180d7315406be8" class="topiclink">NetworkAddressUrlDataType::setNetworkInterface()</a>.</span><br />
+<span class="f_Paragraph">Provide the IP address of your desired network interface; in case of an empty string, the &quot;default&quot; interface will be used, which is typically a real interface (not the loop-back).</span><br />
+<span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> Network interface names like &quot;eth0&quot; are not supported.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Add the <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_writer_group.htm" class="topiclink">WriterGroups</a>, that shall use this <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" class="topiclink">Connection</a> to publish notifications via <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a6313941b1f630dba2bd0cb60d656db5a" class="topiclink">Connection::addWriterGroup()</a> (see <a href="html_programmersguide_pubsub_publisherconfiguration_writergroup.htm" class="topiclink">Configure WriterGroup</a>).</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">After the <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" class="topiclink">Connection</a> is configured, you have to register this <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" class="topiclink">Connection</a> to the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> via <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ad1dd17d91881a21c7f14d6764fd5e9f6" class="topiclink">Application::addPubSubConnection()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Once everything is configured, you can start to publish by enabling the <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm" class="topiclink">Connection</a> via <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_connection_1a0a6fe7d6f7c53eb482791c8a0908a558" class="topiclink">Connection::setEnabled()</a> (see <a href="html_programmersguide_pubsub_pubsubstate.htm" class="topiclink">PubSubState</a>)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">PubSub::ConnectionPtr&nbsp;connection&nbsp;=&nbsp;PubSub::Connection::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">connection-&gt;setPublisherId(Value((OTUInt32)13));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NetworkAddressUrlDataType&nbsp;address;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">address.setUrl(_T(&quot;opc.udp://239.0.0.1&quot;);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">connection.setNetworkAddress(address);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">connection-&gt;addWriterGroup(writerGroup);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;addPubSubConnection(connection);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">connection-&gt;setEnabled(true);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_programmersguide_pubsub_publisherconfiguration_connection.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

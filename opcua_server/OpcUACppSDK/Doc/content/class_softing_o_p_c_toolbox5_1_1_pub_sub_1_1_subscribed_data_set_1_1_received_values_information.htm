@@ -1,0 +1,355 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ReceivedValuesInformation Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">ReceivedValuesInformation Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_reader_group.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information"></a></p>
+<p><span class="f_CodeExample">#include &quot;PubSubSubscribedDataSet.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p class="p_Paragraph">The helper class <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information" class="topiclink">ReceivedValuesInformation</a> is used to provide the information of received subscribed data.</p>
+<p class="p_Paragraph">This class provides the received values from a KeyFrameMessage, DeltaFrameMessage or EventMessages and some information to identify the origin of the data. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a5a9d3d137a5fc6dcdf83d75c64104b48" class="topiclink">ReceivedValuesInformation</a></span>(ValueStruct &amp;publisherId, GuidStruct &amp;dataSetClassId, OTUInt16 writerGroupId, OTUInt16 writerId, ConfigurationVersionDataTypeStruct *pConfigVersion, OTUInt32 noOfValues, OTUInt32 *pIndices, DataValueStruct **ppValues)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a88f1bdcc096ed8bb85257bfabc1105d9" class="topiclink">~ReceivedValuesInformation</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const std::vector&lt; OTUInt32 &gt; &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a9c5ba42a858c833e475931e6298be109" class="topiclink">getIndices</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value" class="topiclink">DataValue</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a0d99cc1d6a548f09d33499d1742dad96" class="topiclink">getValues</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> &amp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a348113227eaff791d4a97f3a29ee47d7" class="topiclink">getPublisherId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_guid.htm#class_softing_o_p_c_toolbox5_1_1_guid" class="topiclink">Guid</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a80a94d03a9296a15f4609ef5e217f27e" class="topiclink">getDataSetClassId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt16</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1ae0499ad11dfcae461e75022647e9c5c7" class="topiclink">getWriterGroupId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt16</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a1f64f0c443b62053ba027cc5047f4e42" class="topiclink">getWriterId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const <a href="class_softing_o_p_c_toolbox5_1_1_i_configuration_version_data_type.htm#class_softing_o_p_c_toolbox5_1_1_i_configuration_version_data_type" class="topiclink">IConfigurationVersionDataType</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a98199fc89abd984e62f173ceadce3df5" class="topiclink">getConfigurationVersion</a></span>() const </p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a5a9d3d137a5fc6dcdf83d75c64104b48"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::SubscribedDataSet::ReceivedValuesInformation::ReceivedValuesInformation</span>(ValueStruct &amp; <span class="f_Parameter">publisherId</span>, GuidStruct &amp; <span class="f_Parameter">dataSetClassId</span>, OTUInt16 <span class="f_Parameter">writerGroupId</span>, OTUInt16 <span class="f_Parameter">writerId</span>, ConfigurationVersionDataTypeStruct * <span class="f_Parameter">pConfigVersion</span>, OTUInt32 <span class="f_Parameter">noOfValues</span>, OTUInt32 * <span class="f_Parameter">pIndices</span>, DataValueStruct ** <span class="f_Parameter">ppValues</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a88f1bdcc096ed8bb85257bfabc1105d9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::SubscribedDataSet::ReceivedValuesInformation::~ReceivedValuesInformation</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a9c5ba42a858c833e475931e6298be109"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const std::vector&lt; OTUInt32 &gt; &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::SubscribedDataSet::ReceivedValuesInformation::getIndices</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the indices in the meta data fields which belong to the published values.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The indices and values belong to the current meta data of the publisher, this might be different to the local meta data of the <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader" class="topiclink">DataSetReader</a>. Make sure to check the configuration version of the received message (when it was part of the sent message) with the configuration version of the local meta data. </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a98199fc89abd984e62f173ceadce3df5" class="topiclink">getConfigurationVersion</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a0d99cc1d6a548f09d33499d1742dad96"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value" class="topiclink">DataValue</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::SubscribedDataSet::ReceivedValuesInformation::getValues</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the received values.</p>
+<p class="p_Paragraph">The reported values belong to the reported indices of the meta data fields. KeyFrameMessages and EventMessages always contain all fields, while DeltaFrameMessages report only the changed data.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a9c5ba42a858c833e475931e6298be109" class="topiclink">getIndices()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a348113227eaff791d4a97f3a29ee47d7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const <a href="class_softing_o_p_c_toolbox5_1_1_i_value.htm#class_softing_o_p_c_toolbox5_1_1_i_value" class="topiclink">IValue</a> &amp;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::SubscribedDataSet::ReceivedValuesInformation::getPublisherId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the PublisherId from the published data.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Returns a NULL-Value when the publisher didn't send the PublisherId as part of the NetworkMessage </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The returned values might be limited by the PublisherId filter of the related <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader" class="topiclink">PubSub::DataSetReader</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader_1ab230faac558a3aadc3566eb1bbed1a44" class="topiclink">PubSub::DataSetReader::setPublisherId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a80a94d03a9296a15f4609ef5e217f27e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_guid.htm#class_softing_o_p_c_toolbox5_1_1_guid" class="topiclink">Guid</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::SubscribedDataSet::ReceivedValuesInformation::getDataSetClassId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the DataSetClassId from the published data.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Returns a NULL-Guid when the publisher didn't send the DataSetClassId as part of the NetworkMessage </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The returned values might be limited by the DataSetClassId filter of the related <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader" class="topiclink">PubSub::DataSetReader</a> within the MetaData </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader_1a3a851289f18e660153fbaa43e020d9c6" class="topiclink">PubSub::DataSetReader::setDataSetMetaData()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1ae0499ad11dfcae461e75022647e9c5c7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt16<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::SubscribedDataSet::ReceivedValuesInformation::getWriterGroupId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the WriterGroupId from the published data.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Returns 0 when the publisher didn't send the WriterGroupId as part of the NetworkMessage </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The returned values might be limited by the WriterGroupId filter of the related <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader" class="topiclink">PubSub::DataSetReader</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader_1a48bb835c78c9c5001eff17e540eb4032" class="topiclink">PubSub::DataSetReader::setWriterGroupId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a1f64f0c443b62053ba027cc5047f4e42"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt16<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::SubscribedDataSet::ReceivedValuesInformation::getWriterId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the WriterId from the published data.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Returns 0 when the publisher didn't send the WriterId as part of the DataSetMessage </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The returned values might be limited by the WriterId filter of the related <a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader" class="topiclink">PubSub::DataSetReader</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader.htm#class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_data_set_reader_1a1bf53d56fc66e725ba26a775dbee8318" class="topiclink">PubSub::DataSetReader::setDataSetWriterId()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information_1a98199fc89abd984e62f173ceadce3df5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const <a href="class_softing_o_p_c_toolbox5_1_1_i_configuration_version_data_type.htm#class_softing_o_p_c_toolbox5_1_1_i_configuration_version_data_type" class="topiclink">IConfigurationVersionDataType</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::PubSub::SubscribedDataSet::ReceivedValuesInformation::getConfigurationVersion</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the ConfigurationVersion from the published data.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>The publisher may not send the configuration version with the published data. In this case, the configuration version is 0 / 0. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If a valid version is reported and this version differs from the stored version in the readers metadata, the reader may request an update of the meta data from the publisher. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_pub_sub_1_1_subscribed_data_set_1_1_received_values_information.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

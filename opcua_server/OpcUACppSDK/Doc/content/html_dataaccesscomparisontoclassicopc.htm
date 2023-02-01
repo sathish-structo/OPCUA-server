@@ -1,0 +1,239 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Comparison to Classic OPC</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_dataaccesscomparisontoclassicopc.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Comparison to Classic OPC</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uadataaccess.htm">Previous</a>&nbsp;
+     <a href="html_dataaccessconcepts.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">Since OPC Data Access is the most widely implemented and well known of the Classic OPC specifications, many of the fundamental basics of data connectivity are associated with OPC DA. Concepts such as address space organization, browsing, item and group management and the reading and writing interfaces form the basis for the ‘core’ functionality of OPC UA. As can be seen in the table below, only the topics that are directly related to automation data are covered by Part 8 – OPC UA Data Access.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">OPC DA 3.0 Concept</span></p>
+</td>
+<td style="vertical-align:top; width:205px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">OPC UA Counterpart</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Address Space</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Server Configuration</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">CACHE data, DEVICE data</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Timestamps and Time Series Values</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Asynchronous vs. Synchronous Interfaces</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Update Rate</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4 </span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Item Properties</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Synchronous IO</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Asynchronous IO</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Subscription via Data Callbacks</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">OPC Server Object</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Common Interfaces, </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Group interfaces, Error Strings, Get Status</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">OPC Browsing</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Single OPC Item IO </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Reading, WriteVQT</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">OPC Group Object</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 5 – Replaced by MonitoredItems</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">General Properties</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Cached data</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Activation</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Update Rate</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Percent Deadband</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Reading and Writing Data</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Item Management</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Add, Remove, Validate Items</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 5</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">OPC Group State Management</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Get, Set, Manage groups</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 5 – Replaced by MonitoredItems</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Deadband Management</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4 / Part 8</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Data Callback</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 4</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:269px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Item Definition</span></p>
+</td>
+<td style="vertical-align:top; width:205px; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Part 5</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">OPC Items in OPC UA</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">In Classic OPC, Items had several important properties, including: Value, Quality, Timestamp, Description, Data Type, EU Type and EU Info. Since OPC UA standardizes connectivity for more than just automation type data, these features are now separated over different objects:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Node Name, Browse Name and Description are part of all base OPC UA nodes.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Part 6 defines the DataValue object which incorporates the Value, Status (Quality) and Timestamp information. Part 8 defines the automation specific features related to Engineering Units.</span></td></tr></table></div><h2 class="p_Heading2"><span class="f_Heading2">OPC Groups in OPC UA</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The concept of OPC Groups which was an integral part of Classic OPC DA is not used in OPC UA. The same functionality of being able to group multiple items together with a common update rate does exist in OPC UA. Clients define MonitoredItems to subscribe to Data and Events. Each MonitoredItem identifies the item to be monitored and the Subscription to use to send notifications. This functionality is described by Part 4. As part of the Core functionality it allows the concept of ‘grouping’ to be applied to data changes, events and status changes.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_dataaccesscomparisontoclassicopc.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,119 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Pull Management</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uagdspullmanagement.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Pull Management</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uagdscertificatemanagement.htm">Previous</a>&nbsp;
+     <a href="html_uagdspushmanagement.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">This model is mainly targeted for UA client applications where the client takes the active role to retrieve the certificates and trust lists from the Certificate Manager (typically the GDS).</span><br />
+<span class="f_Paragraph">The Certificate Manager acts as an OPC UA server and provides an information model where registered applications can retrieve certificates and trust lists.</span><br />
+<span class="f_Paragraph">The registered UA applications act as clients and connect to the Certificate Manager to invokes UA methods to pull the certificate data from the Certificate Manager.</span><br />
+<span class="f_Paragraph">The UA application is responsible to ensure that the certificates and trust lists are kept up to date.</span></p>
+<p class="p_NoteHeader"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> Even though the Pull Management is mainly targeted for UA client applications, it is also usable for UA servers, even in addition to the Push Management.</span></p>
+<p><img src="gds_pullmanagement.png" width="595" height="452" alt="GDS_PullManagement" style="width:595px;height:452px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> For the certificate pull management via OPC UA, all managed UA applications must be trusted and registered to the Certificate Manager and the communication for registering applications and exchanging certificate contents must use an encrypted connection.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> An encrypted connection usually requires that the initial trust relation is already between two OPC UA application, but a GDS usually allows to establish an encrypted connection without the initial trust if the incoming connection can be trusted by some other means.</span><br />
+<span class="f_Paragraph">One common way for a GDS is to accept untrusted encrypted connections is when the connecting UA application provides certain user credentials.</span><br />
+<span class="f_Paragraph">This behavior is GDS specific and different GDS can provide different ways.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">These following OPC UA methods on the GDS can be used for the pull management model:</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">RegisterApplication</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Registers a UA application instance at the GDS.</span><br />
+<span class="f_Paragraph">A registered application is identified by a NodeId.</span></p>
+<p class="p_Paragraph"><span class="f_Reference">RegisterApplication</span><span class="f_Paragraph"> would create duplicate records if the ApplicationUri already exists in the GDS data base.</span><br />
+<span class="f_Paragraph">Misconfiguration of applications can result in different applications having the same ApplicationUri!</span><br />
+<span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">FindApplications</span></h2>
+<p class="p_Paragraph"><span class="f_Reference">FindApplications</span><span class="f_Paragraph"> is used to find the ApplicationId for an OPC UA Application which is registered on the GDS.</span><br />
+<span class="f_Paragraph">Besides of getting the ApplicationId, this method is also a good way to check if an application is already registered before invoking </span><span class="f_Reference">RegisterApplication</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">UpdateApplication</span></h2>
+<h2 class="p_Heading2"><span class="f_Reference">UpdateApplication</span><span class="f_Paragraph"> is used to update an existing Application record in a Global Discovery Server.</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">StartSigningRequest</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This method passes a certificate signing request to the GDS.</span><br />
+<span class="f_Paragraph">After the GDS finishes signing, the signed certificate is available and can be retrieved via </span><span class="f_Reference">FinishRequest</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">StartNewKeyPairRequest</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This method starts the creation of a new private / public key pair at the GDS.</span><br />
+<span class="f_Paragraph">After the GDS finishes this request, the private key and the certificate are available and can be retrieved via </span><span class="f_Reference">FinishRequest</span><span class="f_Paragraph">.</span><br />
+<span class="f_Paragraph">This method is only meant for UA applications which are not able to create private / public key pairs by themselves.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">FinishRequest</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Both </span><span class="f_Reference">StartSigningRequest</span><span class="f_Paragraph"> and </span><span class="f_Reference">StartNewKeyPairRequest</span><span class="f_Paragraph"> are handled asynchronously at GDS and may take some time until completed.</span><br />
+<span class="f_Paragraph">By invoking this method a UA application can check whether a request is finished or not.</span><br />
+<span class="f_Paragraph">In case of a finished request the results are available as output parameters of the method call.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> This </span><span class="f_Reference">FinishRequest</span><span class="f_Paragraph"> method is a defined access point to wait for long lasting operations, which may not be limited to the certificate creation.</span><br />
+<span class="f_Paragraph">A GDS may use this method e.g. to delay requests until the administrator accepts the new application or until the usable certificate groups are assigned for a new application.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">GetCertificateGroups</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Retrieves the certificate group IDs managed by the GDS for an application ID.</span><br />
+<span class="f_Paragraph">These group IDs can be used as input for the </span><span class="f_Reference">GetTrustList</span><span class="f_Paragraph"> and </span><span class="f_Reference">GetCertificateStatus</span><span class="f_Paragraph"> methods.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">GetTrustList</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This method retrieves the NodeId of the trust list for a specific certificate group.</span><br />
+<span class="f_Paragraph">This trust list NodeId can be used to access the related </span><span class="f_Reference">TrustList</span><span class="f_Paragraph"> object on the GDS to read the trust list configuration.</span><br />
+<span class="f_Paragraph">&nbsp;</span><br />
+<span class="f_Paragraph">The </span><span class="f_Reference">TrustList</span><span class="f_Paragraph"> object identified by this NodeId is a specialized </span><span class="f_Reference">File</span><span class="f_Paragraph"> object on the GDS and can be read using the normal OPC UA methods defied for a file, e.g. &quot;Open&quot;, &quot;Read&quot; and &quot;Close&quot;.</span><br />
+<span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">GetCertificateStatus</span></h2>
+<p class="p_Paragraph"><span class="f_Reference">GetCertificateStatus</span><span class="f_Paragraph"> is used to check if an Application needs to update its Certificate for a certain certificate group.</span><br />
+<span class="f_Paragraph">This certificate status is set to </span><span class="f_Reference">false</span><span class="f_Paragraph"> quite some time before the certificate actually expires, e.g. one week or one month. This gives the applications some time to update and distribute the new certificate.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uagdspullmanagement.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

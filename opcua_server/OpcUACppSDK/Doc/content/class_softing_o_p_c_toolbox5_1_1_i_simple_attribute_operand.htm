@@ -1,0 +1,527 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ISimpleAttributeOperand Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">ISimpleAttributeOperand Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_signed_software_certificate.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_type_description.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand"></a></p>
+<p><span class="f_CodeExample">#include &quot;ISimpleAttributeOperand.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map306" id="map306"><area shape="rect" coords="5,6,169,29" href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm" alt="" /><area shape="rect" coords="7,59,166,82" href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.gif" width="173" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand" style="width:173px;height:88px;border:none" usemap="#map306" /></p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand" class="topiclink">SimpleAttributeOperand</a> data type is used as operand in event and query filters to specify an attribute of an Object or Variable node using a node in the type system and relative path constructed from browse names.</p>
+<p class="p_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand" class="topiclink">SimpleAttributeOperand</a> is a simplified form of the <a href="class_softing_o_p_c_toolbox5_1_1_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_attribute_operand" class="topiclink">AttributeOperand</a> and all of the rules that apply to the <a href="class_softing_o_p_c_toolbox5_1_1_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_attribute_operand" class="topiclink">AttributeOperand</a> also apply to the <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand" class="topiclink">SimpleAttributeOperand</a>. The <a href="class_softing_o_p_c_toolbox5_1_1_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_attribute_operand" class="topiclink">AttributeOperand</a> can be replaced by a <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand" class="topiclink">SimpleAttributeOperand</a> whenever all ReferenceTypes in the <a href="class_softing_o_p_c_toolbox5_1_1_relative_path.htm#class_softing_o_p_c_toolbox5_1_1_relative_path" class="topiclink">RelativePath</a> are subtypes of HierarchicalReferences and the targets are Object or Variable nodes and an alias (see <a href="class_softing_o_p_c_toolbox5_1_1_i_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_attribute_operand_1a62348953d24403d697979659bc7c5429" class="topiclink">IAttributeOperand::getAlias()</a>) is not required.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_content_filter.htm#class_softing_o_p_c_toolbox5_1_1_i_content_filter" class="topiclink">IContentFilter</a> <a href="class_softing_o_p_c_toolbox5_1_1_i_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_attribute_operand" class="topiclink">IAttributeOperand</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a8bafb1430eedfa7c3dbb9e4776740b0d" class="topiclink">~ISimpleAttributeOperand</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1ad0c554e06e4b27fd4f316eba865c9db5" class="topiclink">getTypeDefinitionId</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a21424c9812dd9b746fb870eb0104ca16" class="topiclink">getTypeDefinitionId</a></span>()=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a927fc33f4f426cf1f491c5fdac6dbfe5" class="topiclink">setTypeDefinitionId</a></span>(const INodeId *value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1ad06d69e8e998023265ce08043db116db" class="topiclink">setTypeDefinitionId</a></span>(const NodeId &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a19cdb7f6a7015783e8facc759ed741b5" class="topiclink">getBrowsePathCount</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9acddcdb8f6bf53577a108a40c86b37b" class="topiclink">getBrowsePath</a></span>(OTUInt32 index) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a4b06dfaff2bae90e38f369a256af4228" class="topiclink">getBrowsePath</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1aaf339afa3f5620dca94b37addd6e588b" class="topiclink">addBrowsePath</a></span>(const IQualifiedName *pValue)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a953c046672e0c1a9dad24934fe2fd7f5" class="topiclink">addBrowsePath</a></span>(const QualifiedName &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b.htm#_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b" class="topiclink">EnumAttributeId</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a1fe2b2d0790c8014cecc7b0ed81ab7fa" class="topiclink">getAttributeId</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a22cdd48f2108ec29fbd98ba00d182d52" class="topiclink">setAttributeId</a></span>(EnumAttributeId value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_i_numeric_range" class="topiclink">INumericRange</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1afdc9cae6161b974f5513950b4f08ab8f" class="topiclink">getIndexRange</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1aa37a5cdbe3c2c052dedd63b5f9551194" class="topiclink">setIndexRange</a></span>(const INumericRange *value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a6d781aaa970b205633d0e9d52c254f48" class="topiclink">setIndexRange</a></span>(const NumericRange &amp;value)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a404452aaab3b9a5cf3f57f916bb598a3" class="topiclink">set</a></span>(const ISimpleAttributeOperand *)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a4110c3202ee6999f83baa17e4a216b98" class="topiclink">set</a></span>(const ISimpleAttributeOperand &amp;)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1ad92b7d09042d2b7605dbe588dbcb8328" class="topiclink">compare</a></span>(const ISimpleAttributeOperand *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9c87f522fd9f0dfbd671436f8351c78d" class="topiclink">compare</a></span>(const ISimpleAttributeOperand &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a477b22d37e4f25950682b5e5a175d49b" class="topiclink">operator==</a></span>(const ISimpleAttributeOperand &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9ba17a7e7506680772ffc1c52fd10399" class="topiclink">operator!=</a></span>(const ISimpleAttributeOperand &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9c9dcc8abe2fa53b2ca1e06f5b3787c8" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a8bafb1430eedfa7c3dbb9e4776740b0d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::~ISimpleAttributeOperand</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1ad0c554e06e4b27fd4f316eba865c9db5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::getTypeDefinitionId</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of a type definition node. This parameter restricts the operand to instances of the type definition node or one of its subtypes. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a8eaa71d5124808e025b3c2499ebd0c1f" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a21424c9812dd9b746fb870eb0104ca16"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::getTypeDefinitionId</span>()<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1ae08bc05162f970ebabab97b8d1ecea62" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a927fc33f4f426cf1f491c5fdac6dbfe5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::setTypeDefinitionId</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm#class_softing_o_p_c_toolbox5_1_1_i_node_id" class="topiclink">INodeId</a> * <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> of a type definition node. This parameter restricts the operand to instances of the type definition node or one of its subtypes. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a75a94f660e00d76f0b85ce4b400e9aae" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1ad06d69e8e998023265ce08043db116db"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::setTypeDefinitionId</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a2619d7044fcfe627233c10119ed028e3" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a19cdb7f6a7015783e8facc759ed741b5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::getBrowsePathCount</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The methods <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a19cdb7f6a7015783e8facc759ed741b5" class="topiclink">getBrowsePathCount()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9acddcdb8f6bf53577a108a40c86b37b" class="topiclink">getBrowsePath()</a> are provided for efficient access to data. The semantics of these methods are documented in <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9acddcdb8f6bf53577a108a40c86b37b" class="topiclink">getBrowsePath()</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a772693485070953a07d78a34209f4154" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9acddcdb8f6bf53577a108a40c86b37b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::getBrowsePath</span>(OTUInt32 <span class="f_Parameter">index</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The methods <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a19cdb7f6a7015783e8facc759ed741b5" class="topiclink">getBrowsePathCount()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9acddcdb8f6bf53577a108a40c86b37b" class="topiclink">getBrowsePath()</a> are provided for efficient access to data. The semantics of these methods are documented in <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9acddcdb8f6bf53577a108a40c86b37b" class="topiclink">getBrowsePath()</a>. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a0c4613b612a691d2345b7a3226300603" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a4b06dfaff2bae90e38f369a256af4228"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::getBrowsePath</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a relative path to a node.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1aaf339afa3f5620dca94b37addd6e588b" class="topiclink">addBrowsePath()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1ad9ed03ee6419abec0a0de6616fe048e6" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1aaf339afa3f5620dca94b37addd6e588b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::addBrowsePath</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_i_qualified_name" class="topiclink">IQualifiedName</a> * <span class="f_Parameter">pValue</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds an browse name to the list of browse names that make up a relative path to a node.</p>
+<p class="p_Paragraph">The list of browse names is equivalent to a <a href="class_softing_o_p_c_toolbox5_1_1_relative_path.htm#class_softing_o_p_c_toolbox5_1_1_relative_path" class="topiclink">RelativePath</a> that specifies forward references which are subtypes of the HierarchicalReferences reference type. If this list is empty the node is the instance of the type definition. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a2be6e9e3f09006cb42dbf49239996e3c" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a953c046672e0c1a9dad24934fe2fd7f5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::addBrowsePath</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_qualified_name.htm#class_softing_o_p_c_toolbox5_1_1_qualified_name" class="topiclink">QualifiedName</a> &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1ac6889d1b00940418516eb9df35f004cf" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a1fe2b2d0790c8014cecc7b0ed81ab7fa"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b.htm#_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b" class="topiclink">EnumAttributeId</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::getAttributeId</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the attribute of the node that is to be selected. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a7c1a0c7baf5514880c4f9fb3b6875b53" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a22cdd48f2108ec29fbd98ba00d182d52"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::setAttributeId</span>(<a href="_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b.htm#_enums_8h_1a2ef939f633bdb6ee0cc895b929ab992b" class="topiclink">EnumAttributeId</a> <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the attribute of the node that is to be selected. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a5dc79a0824df80c754ccbac48b5d8a7b" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1afdc9cae6161b974f5513950b4f08ab8f"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual const <a href="class_softing_o_p_c_toolbox5_1_1_i_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_i_numeric_range" class="topiclink">INumericRange</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::getIndexRange</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the index range that is applied to the attribute value if the attribute value is an array.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1aa37a5cdbe3c2c052dedd63b5f9551194" class="topiclink">setIndexRange()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a83c51b55a226afdcd4eaddcda3342302" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1aa37a5cdbe3c2c052dedd63b5f9551194"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::setIndexRange</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_i_numeric_range" class="topiclink">INumericRange</a> * <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the index range that is applied to the attribute value if the attribute value is an array.</p>
+<p class="p_Paragraph">This parameter is used to identify a single element of an array, or a single range of indexes for an array. The first element is identified by index 0 (zero). This parameter is ignored if the selected node is not a Variable or the value of a Variable is not an array.</p>
+<p class="p_Paragraph">All values in the array are used if this parameter is not specified. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a2b03cf0d376f2d82193e4e3a99692913" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a6d781aaa970b205633d0e9d52c254f48"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::setIndexRange</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_numeric_range.htm#class_softing_o_p_c_toolbox5_1_1_numeric_range" class="topiclink">NumericRange</a> &amp; <span class="f_Parameter">value</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a997ea4f09bff9c78147a71549587db62" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a404452aaab3b9a5cf3f57f916bb598a3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand" class="topiclink">ISimpleAttributeOperand</a> * <span class="f_Parameter"> </span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a2a320adc1dfcca2c2ab6b2c0739700b9" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a4110c3202ee6999f83baa17e4a216b98"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand" class="topiclink">ISimpleAttributeOperand</a> &amp; <span class="f_Parameter"> </span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1ab672d9d2e036a366f9db9c699edec05b" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1ad92b7d09042d2b7605dbe588dbcb8328"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand" class="topiclink">ISimpleAttributeOperand</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &lt;0, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns &gt;0, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1aa4f3924ecacab53a24c2ba0fc648147f" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9c87f522fd9f0dfbd671436f8351c78d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand" class="topiclink">ISimpleAttributeOperand</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a205b7977672f3099c19405329472a1f1" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a477b22d37e4f25950682b5e5a175d49b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand" class="topiclink">ISimpleAttributeOperand</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1ab04fabc45b49a14495197901cb8cf5ab" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9ba17a7e7506680772ffc1c52fd10399"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand" class="topiclink">ISimpleAttributeOperand</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1a3fd338969e99af3305144bf323d6678b" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand_1a9c9dcc8abe2fa53b2ca1e06f5b3787c8"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::ISimpleAttributeOperand::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand.htm#class_softing_o_p_c_toolbox5_1_1_simple_attribute_operand_1ae64d6625a3ccb3d4df50329e780c0e22" class="topiclink">SoftingOPCToolbox5::SimpleAttributeOperand</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_simple_attribute_operand.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

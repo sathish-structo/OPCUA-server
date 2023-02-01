@@ -1,0 +1,425 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>IDataTypeSchemaHeader Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">IDataTypeSchemaHeader Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_description.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_i_data_value.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header"></a></p>
+<p><span class="f_CodeExample">#include &quot;IDataTypeSchemaHeader.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map249" id="map249"><area shape="rect" coords="5,6,174,29" href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm" alt="" /><area shape="rect" coords="7,59,171,82" href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.gif" width="179" height="88" alt="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header" style="width:179px;height:88px;border:none" usemap="#map249" /></p>
+<p class="p_Paragraph">The interface to <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header" class="topiclink">DataTypeSchemaHeader</a>, which is an abstract base type used to provide OPC UA DataType definitions for an OPC UA Binary encoded byte blob used outside an OPC UA Server AddressSpace. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a83956a92013ca70e014b4196be6f5d8a" class="topiclink">~IDataTypeSchemaHeader</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a4fc9d6e195753490f1d4cc454e84f683" class="topiclink">setNamespaces</a></span>(const std::vector&lt; tstring &gt; &amp;namespaces)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual std::vector&lt; tstring &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1ae153afacc060f9cafb12798d57271787" class="topiclink">getNamespaces</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1ae34059bf6b6f8647b68bd45d707a148d" class="topiclink">addStructureDataType</a></span>(const IStructureDescription &amp;structureDescription)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_structure_description.htm#class_softing_o_p_c_toolbox5_1_1_structure_description" class="topiclink">StructureDescription</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a6db7b585ce5ff1da2770480f165d59e3" class="topiclink">getStructureDataTypes</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a2abf52e041d7c95f47882a19fbcfa737" class="topiclink">addEnumDataType</a></span>(const IEnumDescription &amp;enumDescription)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_enum_description.htm#class_softing_o_p_c_toolbox5_1_1_enum_description" class="topiclink">EnumDescription</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1ab23ef375e7100087521535c8e5cbc333" class="topiclink">getEnumDataTypes</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a63057a5c3d5b4e20da570c9389d095fb" class="topiclink">addSimpleDataType</a></span>(const ISimpleTypeDescription &amp;simpleTypeDescription)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_simple_type_description.htm#class_softing_o_p_c_toolbox5_1_1_simple_type_description" class="topiclink">SimpleTypeDescription</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1afa3e57d7233c2f84fb558318f9b2ca39" class="topiclink">getSimpleDataTypes</a></span>() const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a01d1c47399769adeafa5b87e0226465c" class="topiclink">compare</a></span>(const IDataTypeSchemaHeader *other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual int</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a18114f10981353e0b6479dffeb3d9e21" class="topiclink">compare</a></span>(const IDataTypeSchemaHeader &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1adc7fbf9e2db9fdfeba749742051cf518" class="topiclink">operator==</a></span>(const IDataTypeSchemaHeader &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual bool</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a82d81b785e18229d2c96e633fbcde170" class="topiclink">operator!=</a></span>(const IDataTypeSchemaHeader &amp;other) const =0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a343f4b70f1e0f52ededa0baebf8302ba" class="topiclink">set</a></span>(const IDataTypeSchemaHeader *cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a8e4cc1dc3b8091bfce5d6e778ec3ec3d" class="topiclink">set</a></span>(const IDataTypeSchemaHeader &amp;cp)=0</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual void *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a14510f8a700ccb38e21013797265d1b7" class="topiclink">getInternHandle</a></span>() const =0</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a83956a92013ca70e014b4196be6f5d8a"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::~IDataTypeSchemaHeader</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a4fc9d6e195753490f1d4cc454e84f683"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::setNamespaces</span>(const std::vector&lt; tstring &gt; &amp; <span class="f_Parameter">namespaces</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets the Namespaces member in the class</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">namespaces</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Defines an array of namespace URIs. The index into the array is referred to as NamespaceIndex. The NamespaceIndex is used in NodeIds and QualifiedNames, rather than the longer namespace URI. NamespaceIndex 0 is reserved for the OPC UA namespace and it is not included in this array. The array contains the namespaces used in the data that follows the <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header" class="topiclink">DataTypeSchemaHeader</a>. The index used in <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm#class_softing_o_p_c_toolbox5_1_1_node_id" class="topiclink">NodeId</a> and QualifiedNames identify an element in this list. The first entry in this array maps to NamespaceIndex 1. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a5f776966c99f5111d6a998bb55b12608" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1ae153afacc060f9cafb12798d57271787"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual std::vector&lt; tstring &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::getNamespaces</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the Namespaces member of the class </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a140a1f917c8a756d96fe162181361bc1" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1ae34059bf6b6f8647b68bd45d707a148d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::addStructureDataType</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_structure_description.htm#class_softing_o_p_c_toolbox5_1_1_i_structure_description" class="topiclink">IStructureDescription</a> &amp; <span class="f_Parameter">structureDescription</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds a StructureDataType to the StructureDataTypes member of the class</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">structureDescription</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Description of structure and Union (not yet supported) DataTypes used in the data that follows the <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header" class="topiclink">DataTypeSchemaHeader</a>. This includes nested structures. DataType NodeIds for Structure DataTypes used in the data refer to entries in this array. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a1cdc74c22ea025d3a7dae667a8deb7ef" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a6db7b585ce5ff1da2770480f165d59e3"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_structure_description.htm#class_softing_o_p_c_toolbox5_1_1_structure_description" class="topiclink">StructureDescription</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::getStructureDataTypes</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the StructureDataTypes member of the class </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1abc8bf6f4ebe52946bb813734f19ae664" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a2abf52e041d7c95f47882a19fbcfa737"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::addEnumDataType</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_enum_description.htm#class_softing_o_p_c_toolbox5_1_1_i_enum_description" class="topiclink">IEnumDescription</a> &amp; <span class="f_Parameter">enumDescription</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds a EnumDataType to the EnumDataTypes member of the class</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">enumDescription</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Description of Enumeration or OptionSet DataTypes used in in the data that follows the <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header" class="topiclink">DataTypeSchemaHeader</a>. DataType NodeIds for Enumeration or OptionSet (not yet supported) DataTypes used in the data refer to entries in this array. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a0c0abb1bbab1fdc36da4b165b738a169" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1ab23ef375e7100087521535c8e5cbc333"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_enum_description.htm#class_softing_o_p_c_toolbox5_1_1_enum_description" class="topiclink">EnumDescription</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::getEnumDataTypes</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the EnumDataTypes member of the class </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a150aee3a4a3081447781eefb5b233ca7" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a63057a5c3d5b4e20da570c9389d095fb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::addSimpleDataType</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_simple_type_description.htm#class_softing_o_p_c_toolbox5_1_1_i_simple_type_description" class="topiclink">ISimpleTypeDescription</a> &amp; <span class="f_Parameter">simpleTypeDescription</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Adds a SimpleDataType to the SimpleDataTypes member of the class</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">simpleTypeDescription</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">Description of DataTypes derived from built-in DataTypes. This excludes OptionSet DataTypes. </p>
+</td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a47e93502941a24879931431f5bdd40be" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1afa3e57d7233c2f84fb558318f9b2ca39"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual std::vector&lt; <a href="class_softing_o_p_c_toolbox5_1_1_simple_type_description.htm#class_softing_o_p_c_toolbox5_1_1_simple_type_description" class="topiclink">SimpleTypeDescription</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::getSimpleDataTypes</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Gets the SimpleDataTypes member of the class </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a54f4b6918e07c2264122aba53533870b" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a01d1c47399769adeafa5b87e0226465c"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header" class="topiclink">IDataTypeSchemaHeader</a> * <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares this instance to the given <span class="f_Parameter">other</span> instance.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns -1, if &quot;this &lt; other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 0, if &quot;this == other&quot; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">Returns 1, if &quot;this &gt; other&quot; </td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a0d3dde65cd56da18ccae8f652597da09" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a18114f10981353e0b6479dffeb3d9e21"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual int<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::compare</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header" class="topiclink">IDataTypeSchemaHeader</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1ae63adc495eed6a0e83998738755c5414" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1adc7fbf9e2db9fdfeba749742051cf518"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::operator==</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header" class="topiclink">IDataTypeSchemaHeader</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for equality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1acfff5a5a9bcc4ffc9fe1af2b0f1a7f13" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a82d81b785e18229d2c96e633fbcde170"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual bool<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::operator!=</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header" class="topiclink">IDataTypeSchemaHeader</a> &amp; <span class="f_Parameter">other</span>) const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Compares two instances for inequality </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1af08ecc7c0a3c82df2fba69faaedeaaf6" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a343f4b70f1e0f52ededa0baebf8302ba"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header" class="topiclink">IDataTypeSchemaHeader</a> * <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Copies the content of <span class="f_Parameter">cp</span> to this instance </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a87cf9e6c04d13cfbc6b2cd88e4ab71e7" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a8e4cc1dc3b8091bfce5d6e778ec3ec3d"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::set</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header" class="topiclink">IDataTypeSchemaHeader</a> &amp; <span class="f_Parameter">cp</span>)<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1aa7db915dd571756f0a35cd10007c6bd8" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header_1a14510f8a700ccb38e21013797265d1b7"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual void *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::IDataTypeSchemaHeader::getInternHandle</span>() const<span class="f_CodeExample"> [pure virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Implemented in <a href="class_softing_o_p_c_toolbox5_1_1_data_type_schema_header.htm#class_softing_o_p_c_toolbox5_1_1_data_type_schema_header_1a8fc1a79f772215f48ec255be8e6d668c" class="topiclink">SoftingOPCToolbox5::DataTypeSchemaHeader</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_i_data_type_schema_header.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

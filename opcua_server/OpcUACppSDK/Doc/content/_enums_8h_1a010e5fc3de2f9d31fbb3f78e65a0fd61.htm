@@ -1,0 +1,155 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>EnumSecurityCheck Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "_enums_8h_1a010e5fc3de2f9d31fbb3f78e65a0fd61.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">EnumSecurityCheck Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="_enums_8h_1a33885b311f6363a15062b4e979a86692.htm">Previous</a>&nbsp;
+     <a href="_enums_8h_1a182e78252d4d1236b51a9afc93544dcf.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="_enums_8h_1a010e5fc3de2f9d31fbb3f78e65a0fd61"></a></p>
+<p class="p_Paragraph">The EnumSecurityCheck defines bits for security check related validations, which can be disabled Disabling any security related validation will introduce a risk and should not be needed, if the corresponding UA application is implemented according to specification and implements all CVE risks. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="EnumValues" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumSecurityCheck_None = 0x0</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Enabled all security checks - default. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumSecurityCheck_MissingNonce = 0x01</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Allows to connect to a server, which does not send a nonce.</p>
+<p class="p_Paragraph">Client session specific. Client sessions will use the application setting by default. If only specific sessions shall disable this validation, disable it at the specific session.</p>
+<p class="p_Paragraph">This nonce is a random number (at least 32 byte), which has to be generated on every CreateSession and ActivateSession response by the server. The nonce is part of the encrypted part for user validation and validated at server side. When allowing empty or repeated nonces, then the messages are vulnerable for replay attacks.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Ignoring this validation is a security risk and contradicts to the OPC UA specification. This option shall only be used when dealing with a non compliant server, where the session establishment would fail otherwise.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Using this option will ignore a missing nonce for user token security, missing nonces for message security cannot be ignored. Problems with missing nonces in message security shall be solved by using MessageSecurityMode None.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>There is a released CVE (CVE-2019-19135) that this behaviour has high security impacts. If you need to enable this work-around, please contact the vendor of the UA server causing this need. The vendor shall fix the issue as soon as possible - the work-around for this issue may be removed in later releases of the SDK. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumSecurityCheck_DuplicateNonce = 0x02</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Allows to connect to a server, which does not generate new nonces.</p>
+<p class="p_Paragraph">Client session specific. Client sessions will use the application setting by default. If only specific sessions shall disable this validation, disable it at the specific session.</p>
+<p class="p_Paragraph">The effects are similar to sending empty nonces (see EnumSecurityCheck_MissingNonce).</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>There is a released CVE (CVE-2019-19135) that this behaviour has high security impacts. If you need to enable this work-around, please contact the vendor of the UA server causing this need. The vendor shall fix the issue as soon as possible - the work-around for this issue may be removed in later releases of the SDK. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumSecurityCheck_WrongSeqenceNumber = 0x04</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Allows to ignore implementation regarding mantis issue (released with Errata 1.04.3)</p>
+<p class="p_Paragraph">General communication setting. Can be disabled on complete communication, both for server and client. Needs to be disabled at Application.</p>
+<p class="p_Paragraph">The mantis issue contains the problem that messages can be removed during a roll-over of sequence numbers (at 4.294.966.271). The issue was solved by defining a concrete start of sequence numbers (1023) including after roll-over. Previous specifications allowed all starting sequence numbers less than 1024, so the new definition does not contradict the older specifications. For compatibility reasons sequence numbers less than 1023 and greater than 4.294.966.271 shall be still accepted.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Ignoring the mantis issue will allow the client or server to communicate with non-compliant OPC UA applications. This option shall only be used if dealing with a non-compliant UA applications, where the session establishment would fail otherwise. When ignoring the implementation for the issue, messages can be lost without recognizing.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If you need to enable this work-around, please contact the vendor of the UA application causing this need. The vendor shall fix the issue as soon as possible - the work-around for this issue may be removed in later releases of the SDK. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumSecurityCheck_IdenticalEndpointDescription = 0x08</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Allows to ignore different EndpointDescriptions</p>
+<p class="p_Paragraph">Client session specific. Client sessions will use the application setting by default. If only specific sessions shall disable this validation, disable it at the specific session.</p>
+<p class="p_Paragraph">A server returns endpoint descriptions both in the GetEndpoints response as in the CreateSession response. Both endpoint descriptions shall be identical and a client shall validate this. The reason for validation: The GetEndpoints is invoked on a non-secure communication and the response may be altered by man-in-the-middle. By altering the response, either security policies can be removed, endpoint URLs can be changed, ... This may cause connections to a wrong server, using a non-secure policy, ...</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Ignoring the validation will allow the client to communicate with non-compliant OPC UA applications. This option shall only be used if dealing with a non-compliant UA applications, where the session establishment would fail otherwise. When ignoring the validation you introduce security risks.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>If you need to enable this work-around, please contact the vendor of the UA server causing this need. The vendor shall fix the issue as soon as possible - the work-around for this issue may be removed in later releases of the SDK. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=_enums_8h_1a010e5fc3de2f9d31fbb3f78e65a0fd61.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

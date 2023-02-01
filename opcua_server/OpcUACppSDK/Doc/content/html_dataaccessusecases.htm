@@ -1,0 +1,72 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Use Cases</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_dataaccessusecases.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Use Cases</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_dataaccessconcepts.htm">Previous</a>&nbsp;
+     <a href="html_dataaccesstechnicaldetails.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">The following simple use cases outline typical OPC UA applications that would only make use of the Core Specifications, and those that would implement Part 8 – Data Access.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Use Case A: OPC UA Server for an Inventory Control Application.</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">An OPC UA client that is part of a Maintenance application might require real-time data on particular equipment parts are currently stored on-site. This information may change based on parts being scanned out of inventory or new shipments arriving. This data could be modelled as nodes which represent discrete counts of parts. For example: Widget_A_Part_Count, Current_Sprocket_Count. An OPC UA server designed to expose this information would not be required to implement Part 8 – Data Access.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The data would be represented as base DataValues, which supplies Value, Status and Timestamp information. OPC UA clients would access the data using the attribute, MonitoredItem and Subscription services. </span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Use Case B: OPC UA Server for a PLC.</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">An OPC UA client that provides real-time information to an HMI from a PLC which is controlling a pump and a flow controller would require implementing Part 8 – Data Access to best represent the automation type data.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The data would be represented as Part 8 defined DataItems. Data flow values would be modelled as AnalogItems with associated EngineeringUnits and Deadband. Pump controls would be modelled as DiscreteItems with associated States. OPC UA clients would also access the data using the attribute, MonitoredItem and Subscription services.</span></p>
+<p><img src="ua_introduction_dataaccessusecase.png" width="384" height="310" alt="UA_Introduction_DataAccessUseCase" style="width:384px;height:310px;border:none" /></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_dataaccessusecases.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

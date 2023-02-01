@@ -1,0 +1,960 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Application Configuration File</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "application_configuration_file.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Application Configuration File</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_programmersguide_how_to.htm">Previous</a>&nbsp;
+     <a href="matrix_serialization.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">In addition to the possibility to configure a Server or Client application through the C++ API (covered in the <a href="html_opcuatoolkitintroduction.htm" class="topiclink">Introduction to the SDK</a> and <a href="html_gettingstarted.htm" class="topiclink">Programming Tutorial</a>) the application developer has the possibility to load configuration settings from an external XML configuration file. This approach offers a lot of flexibility, allowing the change of configuration without recompiling the application binaries.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The use of configuration files is demonstrated in the sample for <a href="html_samplemessagesecurity.htm" class="topiclink">Secure Communication</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Enable configuration file usage</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The structure of the application configuration XML file and the available configuration elements are described in the next section. In order to enable the use of this configuration file the application developer needs to follow some simple steps:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_Paragraph"> Store the configuration file in a location accessible for the application.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph"> Avoid configuring settings that will be loaded from the configuration file (e.g. do not call <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1acd666a38804279b18da3266355d75a13" class="topiclink">Application::setPkiStoreConfiguration()</a>), unless it is intended to set or overwrite some specific settings.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph"> Initialize the application by using the overloaded method <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ac3b9c5ee040d95b54868a3a79e7375b6" class="topiclink">Application::initialize()</a>, providing the correct path to the configuration file and the password for the private key file.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> All imported configuration settings except th</span><span class="f_Paragraph">e <a href="class_softing_o_p_c_toolbox5_1_1_application_description.htm" class="topiclink">ApplicationDescription</a> can still be modified or extended by the application code.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">4.</span></td><td style="border:none"><span class="f_Paragraph"> After a successful call to <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ac3b9c5ee040d95b54868a3a79e7375b6" class="topiclink">Application::initialize()</a> the application is configured and initialized. It is now safe to start the application using <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9e2bc77fe2b30db133ef660ee4ffbb2b" class="topiclink">Application::start()</a>.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.</span></td><td style="border:none"><span class="f_Paragraph"> (For Server application) Endpoints are added by the initialization method according to the configuration file. After a successful start of the application you should be able to access the endpoints using <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a4db850ffc004c9ecfd9c25935d2bcdcb" class="topiclink">Application::getEndpoints()</a> and call <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a13a07c6ce47253382b6a4edf5d3985af" class="topiclink">Endpoint::open()</a> to make them available to clients.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration File Structure</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">All the available options and settings are grouped under the root element </span><span class="f_Reference">ApplicationConfiguration</span><span class="f_Paragraph">. The XML configuration file for both Server and Client applications should have the following structure:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;?xml&nbsp;version=&quot;1.0&quot;&nbsp;encoding=&quot;utf-8&quot;?&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;ApplicationConfiguration</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;xmlns:ua=&quot;http://opcfoundation.org/UA/2008/02/Types.xsd&quot;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;xmlns=&quot;http://opcfoundation.org/UA/SDK/Configuration.xsd&quot;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Configuration&nbsp;elements&nbsp;in&nbsp;predefined&nbsp;order&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/ApplicationConfiguration&gt;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The supported configuration elements are listed in the following list, in the order they should appear in the configuration file. Some elements are not mandatory, they can be left out or inserted as empty elements. Equivalence between API calls and the configuration elements is presented where possible.</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> All paths used in the configuration file should be absolute or relative to the current working directory. On VxWorks only absolute paths are accepted.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ApplicationName</span><span class="f_Paragraph"> [mandatory] - Provide a descriptive name for the application.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ApplicationUri</span><span class="f_Paragraph"> [mandatory] - Configures the globally unique identifier for the application instance. This URI shall match to the ApplicationUri in the ApplicationInstanceCertificate and shall be unique among all OPC UA applications.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> If the ApplicationUri contains the full name &quot;localhost&quot;, the SDK automatically replaces &quot;localhost&quot; by the real hostname. This is useful when using the same config file on several machines. The name &quot;localhost&quot; itself should not appear within the effective ApplicationUri, as it is no global unique identifier.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ProductUri</span><span class="f_Paragraph"> [optional] - Configures the globally unique identifier for the product.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">4.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ApplicationType</span><span class="f_Paragraph"> [mandatory] - Specify the type of the application. Valid options are according to the possible values of <a href="_enums_8h_1ad29e0f41c2993ee257fb7669eacaa5a5.htm" class="topiclink">EnumApplicationType</a> enumeration:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:178px; padding:3px;"><p><span style="font-weight: bold;">Server_0</span></p>
+</td>
+<td style="vertical-align:top; width:256px; padding:3px;"><p>EnumApplicationType_Server</p>
+</td>
+<td style="vertical-align:top; width:561px; padding:3px;"><p>The application is acting as Server only.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:178px; padding:3px;"><p><span style="font-weight: bold;">Client_1</span></p>
+</td>
+<td style="vertical-align:top; width:256px; padding:3px;"><p>EnumApplicationType_Client</p>
+</td>
+<td style="vertical-align:top; width:561px; padding:3px;"><p>The application is acting as Client only.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:178px; padding:3px;"><p><span style="font-weight: bold;">ClientAndServer_2</span></p>
+</td>
+<td style="vertical-align:top; width:256px; padding:3px;"><p>EnumApplicationType_Both</p>
+</td>
+<td style="vertical-align:top; width:561px; padding:3px;"><p>The application is both Server and Client.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:28px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:178px; height:23px; padding:3px;"><p><span style="font-weight: bold;">DiscoveryServer_3</span></p>
+</td>
+<td style="vertical-align:top; width:256px; height:23px; padding:3px;"><p>EnumApplicationType_DiscoveryServer</p>
+</td>
+<td style="vertical-align:top; width:561px; height:23px; padding:3px;"><p>The application is acting as a Discovery Server.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:370px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:653px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:370px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1aec3562a8c8e762ff91926e45e7fa2adb" class="topiclink">Application::initialize</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application_description.htm" class="topiclink">ApplicationDescription</a> class</td></tr></table></div></td>
+<td style="vertical-align:top; width:653px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ApplicationName&gt;Softing&nbsp;OPC&nbsp;UA&nbsp;StructoAutomoldServer&lt;/ApplicationName&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ApplicationUri&gt;urn:localhost:/Softing/OpcUa/StructoAutomoldServer&lt;/ApplicationUri&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ProductUri&gt;urn:Softing/Products/OpcUa/StructoAutomoldServer&lt;/ProductUri&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ApplicationType&gt;Server_0&lt;/ApplicationType&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">SecurityConfiguration</span><span class="f_Paragraph"> [optional] - Configures the application's security options.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ApplicationCertificate</span><span class="f_Paragraph"> [mandatory] - Configures the location of the application instance certificate and its private key file. This certificate is used for authentication in secured connections.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.1.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">StorePath</span><span class="f_Paragraph"> [optional] - The location of the certificate and private key files.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.1.2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">StoreName</span><span class="f_Paragraph"> [optional] - Name of the application instance certificate file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.1.3.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">PrivateKeyName</span><span class="f_Paragraph"> [optional] - Name of the private key file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:368px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:655px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:368px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9ba7b51ae0902492e747df3032b23e56" class="topiclink">Application::setInstanceCertificate</a></td></tr></table></div></td>
+<td style="vertical-align:top; width:655px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;SecurityConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Where&nbsp;the&nbsp;application&nbsp;instance&nbsp;certificate&nbsp;is&nbsp;stored&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ApplicationCertificate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;StorePath&gt;PKI/test_server/own&lt;/StorePath&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;StoreName&gt;cert_server_self_signed.der&lt;/StoreName&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;PrivateKeyName&gt;private_key_server_self_signed.pem&lt;/PrivateKeyName&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ApplicationCertificate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/SecurityConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> The pass phrase that was used to protect the private key is not provided through the configuration file for obvious security reasons. It is provided as argument to the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ac3b9c5ee040d95b54868a3a79e7375b6" class="topiclink">Application::initialize()</a> overload called to initialize the application based on the XML configuration file.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">TrustedIssuerCertificates</span><span class="f_Paragraph"> [optional] - Configures the path to the folder containing certificates needed for validating a certificate chain to the root certificate. </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.2.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">StorePath</span><span class="f_Paragraph"> [optional] - Location of the certificates.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:367px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:656px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:367px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"> <a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1a93edf5cf64cf6a4b7278b8293e0b299e" class="topiclink">IPkiStoreConfiguration::setIssuerCertificateListLocation</a> </td></tr></table></div><p>&nbsp;</p>
+<p>See also:</p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1acd666a38804279b18da3266355d75a13" class="topiclink">Application::setPkiStoreConfiguration</a></p>
+</td>
+<td style="vertical-align:top; width:656px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;SecurityConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Where&nbsp;the&nbsp;issuer&nbsp;certificate&nbsp;are&nbsp;stored&nbsp;(certificate&nbsp;authorities)&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;TrustedIssuerCertificates&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;StorePath&gt;PKI/test_server/issuer&lt;/StorePath&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TrustedIssuerCertificates&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/SecurityConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.3.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">TrustedPeerCertificates</span><span class="f_Paragraph"> [optional] - Configures the path to the folder containing trusted client instance certificates. </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.3.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">StorePath</span><span class="f_Paragraph"> [optional] - Location of the certificates.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.3.2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ValidationOptions</span><span class="f_Paragraph"> [optional] - It is a bit mask which supports combinations of the following numerical values:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:27px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:60px; padding:3px;"><p><span style="font-weight: bold;">4</span></p>
+</td>
+<td style="vertical-align:top; width:101px; padding:3px;"><p><span style="font-weight: bold;">(0x0004)</span></p>
+</td>
+<td style="vertical-align:top; width:824px; padding:3px;"><p>checkUrlMatch</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:27px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:60px; padding:3px;"><p><span style="font-weight: bold;">64</span></p>
+</td>
+<td style="vertical-align:top; width:101px; padding:3px;"><p><span style="font-weight: bold;">(0x0040)</span></p>
+</td>
+<td style="vertical-align:top; width:824px; padding:3px;"><p>EnumCertificateCheck_SuppressCertificateValidityPeriodCheck</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:27px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:60px; padding:3px;"><p><span style="font-weight: bold;">128</span></p>
+</td>
+<td style="vertical-align:top; width:101px; padding:3px;"><p><span style="font-weight: bold;">(0x0080)</span></p>
+</td>
+<td style="vertical-align:top; width:824px; padding:3px;"><p>EnumCertificateCheck_SuppressCrlValidityPeriodCheck</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:27px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:60px; padding:3px;"><p><span style="font-weight: bold;">256</span></p>
+</td>
+<td style="vertical-align:top; width:101px; padding:3px;"><p><span style="font-weight: bold;">(0x0100)</span></p>
+</td>
+<td style="vertical-align:top; width:824px; padding:3px;"><p>EnumCertificateCheck_SuppressCrlNotFoundError</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:27px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:60px; padding:3px;"><p><span style="font-weight: bold;">512</span></p>
+</td>
+<td style="vertical-align:top; width:101px; padding:3px;"><p><span style="font-weight: bold;">(0x0200)</span></p>
+</td>
+<td style="vertical-align:top; width:824px; padding:3px;"><p>EnumCrlCheckOption_OnlyLeaf</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:27px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:60px; padding:3px;"><p><span style="font-weight: bold;">1024</span></p>
+</td>
+<td style="vertical-align:top; width:101px; padding:3px;"><p><span style="font-weight: bold;">(0x0400)</span></p>
+</td>
+<td style="vertical-align:top; width:824px; padding:3px;"><p>EnumCrlCheckOption_AllExceptSelfSigned</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:27px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:60px; padding:3px;"><p><span style="font-weight: bold;">2048</span></p>
+</td>
+<td style="vertical-align:top; width:101px; padding:3px;"><p><span style="font-weight: bold;">(0x0800)</span></p>
+</td>
+<td style="vertical-align:top; width:824px; padding:3px;"><p>checkSelfSignedSignature</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:27px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:60px; padding:3px;"><p><span style="font-weight: bold;">8192</span></p>
+</td>
+<td style="vertical-align:top; width:101px; padding:3px;"><p><span style="font-weight: bold;">(0x2000)</span></p>
+</td>
+<td style="vertical-align:top; width:824px; padding:3px;"><p>allowProxyCertificates</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:27px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:60px; padding:3px;"><p><span style="font-weight: bold;">32768</span></p>
+</td>
+<td style="vertical-align:top; width:101px; padding:3px;"><p><span style="font-weight: bold;">(0x8000)</span></p>
+</td>
+<td style="vertical-align:top; width:824px; padding:3px;"><p>checkStrictKeyUsage</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:365px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:658px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:365px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ad9d1a9106c63a81436e42207170dca55" class="topiclink">IPkiStoreConfiguration::setCertificateTrustListLocation</a></td></tr></table></div><p>&nbsp;</p>
+<p>See also:</p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1acd666a38804279b18da3266355d75a13" class="topiclink">Application::setPkiStoreConfiguration</a></p>
+</td>
+<td style="vertical-align:top; width:658px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;SecurityConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Where&nbsp;the&nbsp;trust&nbsp;list&nbsp;is&nbsp;stored&nbsp;(UA&nbsp;Applications)&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;TrustedPeerCertificates&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;StorePath&gt;PKI/test_server/trusted&lt;/StorePath&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;default&nbsp;validation&nbsp;+&nbsp;urlMatch&nbsp;+&nbsp;selfSignedSignature&nbsp;+&nbsp;strictKeyUsage&nbsp;flags&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ValidationOptions&gt;34820&lt;/ValidationOptions&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TrustedPeerCertificates&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/SecurityConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.4.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">CertificateRevocationLists</span><span class="f_Paragraph"> [optional] - Configures the path to the certificate revocation list. The path can be either a specific file with suffix .crl or a folder containing those files.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.4.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">StorePath</span><span class="f_Paragraph"> [optional] - Location of the certificate revocation list.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1ae446a7f5110b5ab533382e31699bd023" class="topiclink">IPkiStoreConfiguration::setCertificateRevocationListLocation</a></td></tr></table></div><p>&nbsp;</p>
+<p>See also:</p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1acd666a38804279b18da3266355d75a13" class="topiclink">Application::setPkiStoreConfiguration</a></p>
+</td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;SecurityConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&lt;CertificateRevocationLists&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;StorePath&gt;PKI/test_server/crl&lt;/StorePath&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&lt;/CertificateRevocationLists&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/SecurityConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.5.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">RejectedCertificateStore</span><span class="f_Paragraph"> [optional] - Configures the path to the folder where rejected client certificates will be stored.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">5.5.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">StorePath</span><span class="f_Paragraph"> [optional] - Location of rejected client certificates. This can be an empty string or left out completely (e.g. in case of read-only file systems). Rejected certificates are not stored in this case.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration.htm#class_softing_o_p_c_toolbox5_1_1_i_pki_store_configuration_1af81c4a0a6f32968befd09bcf8fd4a650" class="topiclink">IPkiStoreConfiguration::setRejectedCertificateLocation</a></td></tr></table></div><p>&nbsp;</p>
+<p>See also:</p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1acd666a38804279b18da3266355d75a13" class="topiclink">Application::setPkiStoreConfiguration</a></p>
+</td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;SecurityConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;The&nbsp;directory&nbsp;used&nbsp;to&nbsp;store&nbsp;invalid&nbsp;certificates&nbsp;for&nbsp;later&nbsp;review&nbsp;by&nbsp;the&nbsp;administrator.&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;RejectedCertificateStore&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;StorePath&gt;PKI/test_server/rejected&lt;/StorePath&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/RejectedCertificateStore&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/SecurityConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ServerConfiguration</span><span class="f_Paragraph"> [optional] - Server application specific configuration. This is used only for ApplicationType Server_0 or ClientAndServer_3.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">BaseAddresses</span><span class="f_Paragraph"> [optional] - List of server endpoint URLs.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> If a URL uses &quot;localhost&quot; as hostname, then the SDK automatically replaces the hostname with the real computer name. This is useful when you use or copy the same configuration file on several machines. If it is intended to use the local loopback adapter, you should use IP representation &quot;127.0.0.1&quot; for IPv4 or &quot;[::1]&quot; for IPv6.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a9367164fe2ba3d1db409229584e2ae82" class="topiclink">Server::Endpoint::setUrl</a></td></tr></table></div></td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ServerConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;BaseAddresses&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:String&gt;opc.tcp://localhost:4880/Softing/OpcUa/StructoAutomoldServer&lt;/ua:String&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/BaseAddresses&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/ServerConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">SecurityPolicies</span><span class="f_Paragraph"> [optional] - Specifies a list of message security configurations that will be added to all endpoints.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.2.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ServerSecurityPolicy</span><span class="f_Paragraph"> [optional] - One message security configuration.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 39px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.2.1.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">SecurityMode</span><span class="f_Paragraph"> [optional] - Message security mode. Valid options are according to the possible values of <a href="_enums_8h_1a7989972f8efdf4a41346d6a9f8462c95.htm" class="topiclink">EnumMessageSecurityMode</a> enumeration:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:74px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:167px; padding:3px;"><p><span style="font-weight: bold;">None_1</span></p>
+</td>
+<td style="vertical-align:top; width:487px; padding:3px;"><p>EnumMessageSecurityMode_None</p>
+</td>
+<td style="vertical-align:top; width:734px; padding:3px;"><p>No security mode. Messages are neither signed nor encrypted.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:74px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:167px; padding:3px;"><p><span style="font-weight: bold;">Sign_2</span></p>
+</td>
+<td style="vertical-align:top; width:487px; padding:3px;"><p>EnumMessageSecurityMode_Sign</p>
+</td>
+<td style="vertical-align:top; width:734px; padding:3px;"><p>Messages are only signed.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:74px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:167px; padding:3px;"><p><span style="font-weight: bold;">SignAndEncrypt_3</span></p>
+</td>
+<td style="vertical-align:top; width:487px; padding:3px;"><p>EnumMessageSecurityMode_SignAndEncrypt</p>
+</td>
+<td style="vertical-align:top; width:734px; padding:3px;"><p>Messages are signed and encrypted.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 39px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.2.1.2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">SecurityPolicyUri</span><span class="f_Paragraph"> [optional] - One of the following security policies which define the algorithms that are used to sign and/or encrypt exchanged messages:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:664px; padding:3px;"><p><span style="font-weight: bold;">http://opcfoundation.org/UA/SecurityPolicy#None</span></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:3px;"><p>SecurityPolicyUri_None</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:664px; padding:3px;"><p><span style="font-weight: bold;">http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15</span></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:3px;"><p>SecurityPolicyUri_Basic128Rsa15</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:664px; padding:3px;"><p><span style="font-weight: bold;">http://opcfoundation.org/UA/SecurityPolicy#Basic256</span></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:3px;"><p>SecurityPolicyUri_Basic256</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:664px; padding:3px;"><p><span style="font-weight: bold;">http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256</span></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:3px;"><p>SecurityPolicyUri_Basic256Sha256</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:664px; padding:3px;"><p><span style="font-weight: bold;">http://opcfoundation.org/UA/SecurityPolicy#Aes128_Sha256_RsaOaep</span></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:3px;"><p>SecurityPolicyUri_Aes128Sha256RsaOaep</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:76px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:664px; padding:3px;"><p><span style="font-weight: bold;">http://opcfoundation.org/UA/SecurityPolicy#Aes256_Sha256_RsaPss</span></p>
+</td>
+<td style="vertical-align:top; width:744px; padding:3px;"><p>SecurityPolicyUri_Aes256Sha256RsaPss</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a1392ca7213dac69ed674408072fcf064" class="topiclink">Server::Endpoint::addSecurityConfiguration</a></td></tr></table></div></td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ServerConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ServerSecurityPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;SecurityMode&gt;None_1&lt;/SecurityMode&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;SecurityPolicyUri&gt;http://opcfoundation.org/UA/SecurityPolicy#None&lt;/SecurityPolicyUri&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ServerSecurityPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ServerSecurityPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;SecurityMode&gt;Sign_2&lt;/SecurityMode&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;SecurityPolicyUri&gt;http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256&lt;/SecurityPolicyUri&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ServerSecurityPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/ServerConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.3.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">UserTokenPolicies</span><span class="f_Paragraph"> [optional] - Specifies a list of user token policies that will be added to all endpoints.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.3.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">UserTokenPolicy</span><span class="f_Paragraph"> [optional] - One user token policy.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 39px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.3.1.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">PolicyId</span><span class="f_Paragraph"> [optional] - Identifier for the UserTokenPolicy, unique within the context of a single server.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 39px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.3.1.2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">TokenType</span><span class="f_Paragraph"> [optional] - Type of user identity token required. Valid options are according to the possible values of <a href="_enums_8h_1ad46b52bcdda75f16e142fb1ccb5350d9.htm" class="topiclink">EnumUserTokenType</a> enumeration:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:74px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:167px; padding:3px;"><p><span style="font-weight: bold;">Anonymous_0</span></p>
+</td>
+<td style="vertical-align:top; width:256px; padding:3px;"><p>EnumUserTokenType_Anonymous</p>
+</td>
+<td style="vertical-align:top; width:561px; padding:3px;"><p>No authentication. The user is anonymous.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:74px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:167px; padding:3px;"><p><span style="font-weight: bold;">UserName_1</span></p>
+</td>
+<td style="vertical-align:top; width:256px; padding:3px;"><p>EnumUserTokenType_UserName</p>
+</td>
+<td style="vertical-align:top; width:561px; padding:3px;"><p>Authentication via user name and password.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:74px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:167px; padding:3px;"><p><span style="font-weight: bold;">Certificate_2</span></p>
+</td>
+<td style="vertical-align:top; width:256px; padding:3px;"><p>EnumUserTokenType_Certificate</p>
+</td>
+<td style="vertical-align:top; width:561px; padding:3px;"><p>Authentication via user specific certificates.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:74px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:167px; padding:3px;"><p><span style="font-weight: bold;">IssuedToken_3</span></p>
+</td>
+<td style="vertical-align:top; width:256px; padding:3px;"><p>EnumUserTokenType_IssuedToken</p>
+</td>
+<td style="vertical-align:top; width:561px; padding:3px;"><p>Authentication via issued token.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 39px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.3.1.3.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">IssuedTokenType</span><span class="f_Paragraph"> [optional] - Configures the URI for the type of the issued token. The URI identifies a WS-Security profile.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 39px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.3.1.4.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">IssuerEndpointUrl</span><span class="f_Paragraph"> [optional] - Optional URL for the token issuing service. The meaning of this value depends on the type of the issued token.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 39px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.3.1.5.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">SecurityPolicyUri</span><span class="f_Paragraph"> [optional] - Configures the security policy URI to encrypt the secret of the user token (e.g. the password).</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1add1abc3c028f72f6fc847be18c2a428f" class="topiclink">Server::Endpoint::addUserTokenPolicy</a></td></tr></table></div><p>&nbsp;</p>
+<p>See also:</p>
+<p><a href="class_softing_o_p_c_toolbox5_1_1_i_user_token_policy.htm#class_softing_o_p_c_toolbox5_1_1_i_user_token_policy_1a6668540c8f1d7e7a5e5b9c66c7bcb6a1" class="topiclink">IUserTokenPolicy</a> interface</p>
+</td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ServerConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;UserTokenPolicies&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Allows&nbsp;anonymous&nbsp;users&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:UserTokenPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:PolicyId&gt;Anonymous_0&lt;/ua:PolicyId&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:TokenType&gt;Anonymous_0&lt;/ua:TokenType&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:SecurityPolicyUri&gt;http://opcfoundation.org/UA/SecurityPolicy#None&lt;/ua:SecurityPolicyUri&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ua:UserTokenPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Allows&nbsp;username/password&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:UserTokenPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:PolicyId&gt;UserName_1&lt;/ua:PolicyId&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:TokenType&gt;UserName_1&lt;/ua:TokenType&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;passwords&nbsp;must&nbsp;be&nbsp;encrypted&nbsp;-&nbsp;this&nbsp;specifies&nbsp;what&nbsp;algorithm&nbsp;to&nbsp;use&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:SecurityPolicyUri&gt;http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256&lt;/ua:SecurityPolicyUri&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ua:UserTokenPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Allows&nbsp;user&nbsp;certificates&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:UserTokenPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:PolicyId&gt;Certificate_2&lt;/ua:PolicyId&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:TokenType&gt;Certificate_2&lt;/ua:TokenType&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;certificate&nbsp;possession&nbsp;must&nbsp;be&nbsp;proven&nbsp;with&nbsp;a&nbsp;digital&nbsp;signature&nbsp;-&nbsp;this&nbsp;specifies&nbsp;what&nbsp;algorithm&nbsp;to&nbsp;use&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:SecurityPolicyUri&gt;http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256&lt;/ua:SecurityPolicyUri&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ua:UserTokenPolicy&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/UserTokenPolicies&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/ServerConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.4.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">DiagnosticsEnabled</span><span class="f_Paragraph"> [optional] - Enables or disables the expose of server diagnostics as nodes in a server address space.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.5.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MinSessionTimeout</span><span class="f_Paragraph"> [optional] - Configures the minimum acceptable session timeout (in ms) for new created sessions.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.6.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxSessionTimeout</span><span class="f_Paragraph"> [optional] - Configures the maximum acceptable session timeout (in ms) for new created sessions.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.7.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxBrowseContinuationPoints</span><span class="f_Paragraph"> [optional] - Configures the maximum number of continuation points per session for browse services.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.8.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxQueryContinuationPoints</span><span class="f_Paragraph"> [optional] - Configures the maximum number of continuation points per session for query services.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.9.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxHistoryContinuationPoints</span><span class="f_Paragraph"> [optional] - Configures the maximum number of continuation points per session for history read services.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.10.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MinPublishingInterval</span><span class="f_Paragraph"> [optional] - Configures the minimum allowed publishing interval (in ms) for Subscriptions.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.11.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxPublishingInterval</span><span class="f_Paragraph"> [optional] - Configures the maximum allowed publishing interval (in ms) for Subscriptions.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.12.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxNotificationQueueSize</span><span class="f_Paragraph"> [optional] - Configures the maximum allowed queue size for DataChange-MonitoredItems.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.13.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxPublishRequestCount</span><span class="f_Paragraph"> [optional] - Sets the maximum number of received publish requests a server session store in its publish request queue.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.14.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxEventQueueSize</span><span class="f_Paragraph"> [optional] - Sets the maximum allowed queue size for Event-MonitoredItems.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_diagnostics.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_diagnostics_1a13d0f27ef681b401888089d597993125" class="topiclink">Server::Diagnostics::setEnabled</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ab9bf3fdadaa793e51350259d3f552bc9" class="topiclink">Application::setMinSessionTimeout</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a70b5ae042159978d51248a1651dd5901" class="topiclink">Application::setMaxSessionTimeout</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a536af8079c895db4ffce3d2a5162820e" class="topiclink">Application::setMaxBrowseContinuationPoints</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a713c78ba0f19f9a18f9ba5c9418f813d" class="topiclink">Application::setMaxQueryContinuationPoints</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1af933823ca886ab8720eb222eaea1abae" class="topiclink">Application::setMaxHistoryContinuationPoints</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a994aff3f90606256eb81041c1d41df59" class="topiclink">Application::setMinPublishingInterval</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a0f64303a399cdb235c80c8f328da7653" class="topiclink">Application::setMaxPublishingInterval</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a8298e48b9fa358568e8af50cb343d2e9" class="topiclink">Application::setMaxDataChangeMonitoringQueueSize</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a8a7b8e645d82d028287505b691c13598" class="topiclink">Application::setMaxPipedPublishRequests</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a86f827f8937fe4a740eebbf508c53656" class="topiclink">Application::setMaxEventMonitoringQueueSize</a></td></tr></table></div></td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ServerConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;DiagnosticsEnabled&gt;false&lt;/DiagnosticsEnabled&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MinSessionTimeout&gt;10000&lt;/MinSessionTimeout&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxSessionTimeout&gt;3600000&lt;/MaxSessionTimeout&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxBrowseContinuationPoints&gt;10&lt;/MaxBrowseContinuationPoints&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxQueryContinuationPoints&gt;10&lt;/MaxQueryContinuationPoints&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxHistoryContinuationPoints&gt;100&lt;/MaxHistoryContinuationPoints&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MinPublishingInterval&gt;100&lt;/MinPublishingInterval&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxPublishingInterval&gt;3600000&lt;/MaxPublishingInterval&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxNotificationQueueSize&gt;100&lt;/MaxNotificationQueueSize&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxPublishRequestCount&gt;5&lt;/MaxPublishRequestCount&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxEventQueueSize&gt;1000&lt;/MaxEventQueueSize&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/ServerConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">6.15.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ServerProfileArray</span><span class="f_Paragraph"> [optional] - Configures a list of supported profiles or facet URIs for the server application.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a57461605f9afc130eddfd95d9ab0cd3f" class="topiclink">Application::addServerProfileURI</a></td></tr></table></div></td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ServerConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ServerProfileArray&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:String&gt;Standard&nbsp;UA&nbsp;Server&nbsp;Profile&lt;/ua:String&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:String&gt;Data&nbsp;Access&nbsp;Server&nbsp;Facet&lt;/ua:String&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:String&gt;Method&nbsp;Server&nbsp;Facet&lt;/ua:String&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ServerProfileArray&gt;&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/ServerConfiguration&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">7.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ClientConfiguration</span><span class="f_Paragraph"> [optional] - Client application specific configuration.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">Currently there's no configuration option for this element. It will be ignored if present in the configuration file.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;"> Extensions</span><span class="f_Paragraph"> [optional] - Store custom configuration options, specific to the </span><span class="f_Paragraph">OPC UA C++ Server &amp; Client SDK V6.00</span><span class="f_Paragraph"> or specific to the application.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;"> ServerToolkitConfiguration</span><span class="f_Paragraph"> [optional] - Groups the SDK specific settings for a server application. This is only used for ApplicationType Server_0 or ClientAndServer_3.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ManufacturerName</span><span class="f_Paragraph"> [optional] - Configures the name of the manufacturer of this application. The manufacturer name is exposed as &quot;ManufacturerName&quot; variable in the AddressSpace.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MajorVersion</span><span class="f_Paragraph"> [optional] - Configures the major version of this application. The major version is exposed as part of the &quot;SoftwareVersion&quot; variable in the AddressSpace.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.3.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MinorVersion</span><span class="f_Paragraph"> [optional] - Configures the minor version of this application. The minor version is exposed as part of the &quot;SoftwareVersion&quot; variable in the AddressSpace.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.4.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">PatchVersion</span><span class="f_Paragraph"> [optional] - Configures the patch version of this application. The patch version is exposed as part of the &quot;SoftwareVersion&quot; variable in the AddressSpace.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.5.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">BuildNumber</span><span class="f_Paragraph"> [optional] - Configures the build number of this application. The build number is exposed as &quot;BuildNumber&quot; variable in the AddressSpace.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.6.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">BuildDate</span><span class="f_Paragraph"> [optional] - Configures the build date of this application. The build date is exposed as &quot;BuildDate&quot; variable in the AddressSpace.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.7.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MinSamplingInterval</span><span class="f_Paragraph"> [optional] - Configures the minimum sampling interval (in ms) that shall be accepted for DataChange-MonitoredItems.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.8.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxSamplingInterval</span><span class="f_Paragraph"> [optional] - Configures the maximum sampling interval (in ms) that shall be accepted for DataChange-MonitoredItems.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.1.9.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxReferencesToReturn</span><span class="f_Paragraph"> [optional] - Configures the maximum number of references a server should return in a response to a Browse or BrowseNext request.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a8d54aef622c37d18afdefff44bb3d9f6" class="topiclink">Application::setManufacturerName</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a2811381cb34fa04bbd31c5334b8a00a9" class="topiclink">Application::setMajorVersion</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a68d4a2ed62819e5044d5415d3e644b7c" class="topiclink">Application::setMinorVersion</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a78f6fc2646da405e21863c26cc1d9ec4" class="topiclink">Application::setPatchVersion</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a6bb6d66942c5ac817b5a970a754b33a3" class="topiclink">Application::setBuildNumber</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ac752269528535338c2be7f5f7eda1195" class="topiclink">Application::setBuildDate</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a3aeb3fed5139b1b74cd257ddcc9ce587" class="topiclink">Application::setMinSamplingInterval</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ac7fd511b9a6815d73077efd8e56bd973" class="topiclink">Application::setMaxSamplingInterval</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1aa288beb1d4b17dfd3e246cf614a7abe4" class="topiclink">Application::setMaxReferencesToReturn</a></td></tr></table></div></td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;Extensions&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:XmlElement&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ServerToolkitConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ManufacturerName&gt;Softing&lt;/ManufacturerName&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MajorVersion&gt;5&lt;/MajorVersion&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MinorVersion&gt;62&lt;/MinorVersion&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;PatchVersion&gt;0&lt;/PatchVersion&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;BuildNumber&gt;1234&lt;/BuildNumber&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;BuildDate&gt;2019-11-19T13:45:30Z&lt;/BuildDate&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;optional&nbsp;-&nbsp;default&nbsp;is&nbsp;0&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MinSamplingInterval&gt;100&lt;/MinSamplingInterval&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxSamplingInterval&gt;30000&lt;/MaxSamplingInterval&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxReferencesToReturn&gt;100&lt;/MaxReferencesToReturn&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ServerToolkitConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ua:XmlElement&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/Extensions&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.2.</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;"> ClientToolkitConfiguration</span><span class="f_Paragraph"> [optional] - Groups the SDK specific settings for a client application. This is only used for ApplicationType Client_0 or ClientAndServer_3.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.2.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">PreferredLocales</span><span class="f_Paragraph"> [optional] - Configures the list of preferred locales. This ordered list contains locales conforming to RFC 3066. The first list entry contains the locale with the highest priority.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.2.2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">SessionReconnectDelay</span><span class="f_Paragraph"> [optional] - Configures the default interval (in ms) when a client tries to re-connect of an interrupted session.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.2.3.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">ConnectionMonitoringInterval</span><span class="f_Paragraph"> [optional] - Configures the default interval (in ms) for testing the connection to a server.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.2.4.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">DefaultNetworkTimeout</span><span class="f_Paragraph"> [optional] - Configures the default timeout to be used when trying to establish connections over the network.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a3d451016bed1f5b6facd26c906e64862" class="topiclink">Application::setPreferredLocales</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a4e7c04e40b38c40b7f9a9653e3c0cd28" class="topiclink">Application::setDefaultAutoReconnectInterval</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a95edc2f18dc446b5d7e47b05b85f29a0" class="topiclink">Application::setDefaultConnectionMonitoringInterval</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a0d6784824d63aaa05f012fbbc751793d" class="topiclink">Application::setDefaultNetworkTimeout</a></td></tr></table></div></td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;Extensions&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:XmlElement&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ClientToolkitConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Client&nbsp;custom&nbsp;configuration&nbsp;please&nbsp;use&nbsp;the&nbsp;same&nbsp;order!!!!--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;PreferredLocales&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:String&gt;de&lt;/ua:String&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:String&gt;en&lt;/ua:String&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/PreferredLocales&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;SessionReconnectDelay&gt;10000&lt;/SessionReconnectDelay&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ConnectionMonitoringInterval&gt;10000&lt;/ConnectionMonitoringInterval&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DefaultNetworkTimeout&gt;10000&lt;/DefaultNetworkTimeout&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ClientToolkitConfiguration&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ua:XmlElement&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/Extensions&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 13px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.3.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">TraceOptions</span><span class="f_Paragraph"> [optional] - Configure trace messages for the application. This element is common for both server and client applications.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.3.1.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">TraceEnabled</span><span class="f_Paragraph"> [optional] - Enables or disables logging to a file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.3.2.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">OutputFilePath</span><span class="f_Paragraph"> [optional] - The file name used for tracing. The file name is modified by &lt;basename&gt;_&lt;n&gt;.&lt;ext&gt; in case of backup files (see MaxFileSize and NumberOfFiles).</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.3.3.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">TraceLevels</span><span class="f_Paragraph"> [optional] - Define the trace filter level for the configured trace group(s). Valid options are according to the possible values of <a href="_enums_8h_1a97c77270ef219f0c54af0cb9e9f8ba86.htm" class="topiclink">EnumTraceLevel</a> enumeration. If a list is provided the values are combined.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; padding:3px;"><p><span style="font-weight: bold;">None</span></p>
+</td>
+<td style="vertical-align:top; width:310px; padding:3px;"><p>EnumTraceLevel_None</p>
+</td>
+<td style="vertical-align:top; width:933px; padding:3px;"><p>No trace messages will be dumped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; padding:3px;"><p><span style="font-weight: bold;">Debug</span></p>
+</td>
+<td style="vertical-align:top; width:310px; padding:3px;"><p>EnumTraceLevel_Debug</p>
+</td>
+<td style="vertical-align:top; width:933px; padding:3px;"><p>If set trace messages with an Debug level will be dumped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; padding:3px;"><p><span style="font-weight: bold;">Info</span></p>
+</td>
+<td style="vertical-align:top; width:310px; padding:3px;"><p>EnumTraceLevel_Info</p>
+</td>
+<td style="vertical-align:top; width:933px; padding:3px;"><p>If set trace messages with an Info level will be dumped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">Warning</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceLevel_Warning</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>If set trace messages with an Warning level will be dumped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">Error</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceLevel_Error</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>If set trace messages with an Error level will be dumped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">Fatal</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceLevel_Fatal</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>If set trace messages with an Fatal level will be dumped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">ErrorAndHigher</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceLevel_ErrorAndHigher</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>If set trace messages with an ErrorAndHigher or a higher level will be dumped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">WarningAndHigher</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceLevel_WarningAndHigher</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>If set trace messages with an WarningAndHigher or a higher level will be dumped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">InfoAndHigher</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceLevel_InfoAndHigher</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>If set trace messages with an InfoAndHigher or a higher level will be dumped.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">All</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceLevel_All</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>If set any trace message will be dumped to the trace.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.3.4.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">TraceGroups</span><span class="f_Paragraph"> [optional] - Configure the trace groups. Valid options are according to the possible values of <a href="_enums_8h_1ade0ab8d5c00cd70492809107808b54e4.htm" class="topiclink">EnumTraceGroup</a> enumeration. If a list is provided the values are combined.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; padding:3px;"><p><span style="font-weight: bold;">None</span></p>
+</td>
+<td style="vertical-align:top; width:310px; padding:3px;"><p>EnumTraceGroup_None</p>
+</td>
+<td style="vertical-align:top; width:933px; padding:3px;"><p>This trace group reports no traces.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; padding:3px;"><p><span style="font-weight: bold;">Core</span></p>
+</td>
+<td style="vertical-align:top; width:310px; padding:3px;"><p>EnumTraceGroup_Core</p>
+</td>
+<td style="vertical-align:top; width:933px; padding:3px;"><p>This trace group reports traces from the SDK's core.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; padding:3px;"><p><span style="font-weight: bold;">Api</span></p>
+</td>
+<td style="vertical-align:top; width:310px; padding:3px;"><p>EnumTraceGroup_Api</p>
+</td>
+<td style="vertical-align:top; width:933px; padding:3px;"><p>This trace group reports traces from the SDK's C++ API.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">Stack</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceGroup_Stack</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>This trace group reports traces from the underlying OPC UA communication stack.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">User1</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceGroup_User1</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>This trace group may be used by applications for their own purposes.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">User2</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceGroup_User2</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>This trace group may be used by applications for their own purposes.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">User3</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceGroup_User3</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>This trace group may be used by applications for their own purposes.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-weight: bold; background-color: #ffffff;">User4</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceGroup_User4</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>This trace group may be used by applications for their own purposes.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">ModelDesigner</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceGroup_ModelDesigner</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>This trace group reports traces from node set import, node set export and address space manipulation by the model designer.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">PubSub_Publisher</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceGroup_PubSub_Publisher</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>This trace group reports traces from the PubSub Publisher.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">PubSub_Subscriber</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceGroup_PubSub_Subscriber</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>This trace group reports traces from the PubSub Subscriber.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:56px; height:23px; padding:3px;"><br />
+</td>
+<td style="vertical-align:top; width:171px; height:23px; padding:3px;"><p><span style="font-weight: bold;">All</span></p>
+</td>
+<td style="vertical-align:top; width:310px; height:23px; padding:3px;"><p>EnumTraceGroup_All</p>
+</td>
+<td style="vertical-align:top; width:933px; height:23px; padding:3px;"><p>This bit mask can be used to select all available trace groups.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.3.5.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">MaxFileSize</span><span class="f_Paragraph"> [optional] - The maximum size per file in bytes. If a file exceeds this size, then the actual file is renamed to the next backup name.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.3.6.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">NumberOfFiles</span><span class="f_Paragraph"> [optional] - The maximal number of backup files. If this number is exceeded the oldest backup file is deleted.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 26px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">8.3.7.</span></td><td style="border:none"><span class="f_Paragraph"> </span><span class="f_Paragraph" style="font-weight: bold;">BufferSize</span><span class="f_Paragraph"> [optional] - The size of a memory buffer to use, in bytes.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:415px; background-color:#99ccff; padding:3px;"><p>API</p>
+</th>
+<th style="vertical-align:top; width:743px; background-color:#99ccff; padding:3px;"><p>Configuration file</p>
+</th>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:415px; padding:3px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_trace.htm#class_softing_o_p_c_toolbox5_1_1_trace_1a39595ba20863f7039e09b080aa50872f" class="topiclink">Trace::enableFileLogging</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="class_softing_o_p_c_toolbox5_1_1_trace.htm#class_softing_o_p_c_toolbox5_1_1_trace_1a3e198fcfd974def8a362f13b4930ea1c" class="topiclink">Trace::enableTraceLevel</a></td></tr></table></div></td>
+<td style="vertical-align:top; width:743px; padding:3px;"><p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;Extensions&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;...&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ua:XmlElement&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Configure&nbsp;trace&nbsp;options&nbsp;(disabled&nbsp;by&nbsp;default&nbsp;if&nbsp;TraceOptions&nbsp;element&nbsp;missing)&nbsp;--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TraceOptions&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TraceEnabled&gt;true&lt;/TraceEnabled&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OutputFilePath&gt;StructoAutomoldServer.log&lt;/OutputFilePath&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TraceLevels&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Level&gt;Error&lt;/Level&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Level&gt;Warning&lt;/Level&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TraceLevels&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TraceGroups&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Group&gt;All&lt;/Group&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TraceGroups&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MaxFileSize&gt;10000000&lt;/MaxFileSize&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;NumberOfFiles&gt;10&lt;/NumberOfFiles&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;BufferSize&gt;250&lt;/BufferSize&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TraceOptions&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ua:XmlElement&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;/Extensions&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold; text-decoration: underline;">Custom Extensions</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The method </span><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1ac3b9c5ee040d95b54868a3a79e7375b6" class="topiclink">Application::initialize()</a> returns a list with all unknown extensions</span><span class="f_Paragraph">. The application developer can use this to add application specific extensions to the configuration file.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=application_configuration_file.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

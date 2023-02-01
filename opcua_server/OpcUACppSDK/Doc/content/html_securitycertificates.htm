@@ -1,0 +1,141 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Certificates</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_securitycertificates.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Certificates</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_securitytechnicaldetails.htm">Previous</a>&nbsp;
+     <a href="html_uapubsub.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">OPC UA uses certificates in multiple aspects. These include security and application identification and software certificates. Users must be aware of these certificates and how to handle them. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In general OPC UA applications use certificates to store the public keys needed for asymmetric cryptography operations. All security protocols use X509 version 3 certificates encoded using the DER format. Certificates used by OPC UA applications shall also conform to RFC 3280 which defines a profile for X509 certificates when they are used as part of an Internet based application.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Application Instance Certificate</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Every OPC UA application needs its own, unique application instance certificate.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The application instance certificate is used as part of the OpenSecureChannel service. An ApplicationInstanceCertificate is a ByteString containing the DER encoded form of an X509v3 certificate. This certificate is issued by a certifying authority (or self-signed) and identifies an instance of an application running on a single host. The X509v3 fields contained in an ApplicationInstanceCertificate include information such as application version, issuer, product name, organization running the application and the public key associated with the application. The fields are defined completely in RFC 3280. The application must also have a private key that is associated with the public key. Certificates are signed to ensure their authenticity. For complete details on ApplicationInstanceCertificates see OPC UA Part 6 – Mappings.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Necessary fields and their contents:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:293px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Filed name</span></p>
+</td>
+<td style="vertical-align:top; width:682px; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Content</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:293px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">Subject (Issued to)</span></p>
+</td>
+<td style="vertical-align:top; width:682px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">CN (Common Name, mandatory): A name to identify the UA application</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">O (Organization, optional): The company created the application</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Many more content, but all optional</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:293px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">Issuer (Issued by)</span></p>
+</td>
+<td style="vertical-align:top; width:682px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Same information as in Subject, &nbsp;but from issuer, i.e. the CA which signed this certificate</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:293px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">Valid from, Valid to</span></p>
+</td>
+<td style="vertical-align:top; width:682px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Validity period. Shall be specified with signing certificate.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:293px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">Subject Alternative Name</span></p>
+</td>
+<td style="vertical-align:top; width:682px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph" style="text-indent: -99px; margin: 5px 0px 5px 99px;"><span class="f_Paragraph">URL: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A global unique URL which identifies the instance of the application.</span><br />
+<span class="f_Paragraph">Typically the IP address or host name is used to produce unique names.</span><br />
+<span class="f_Paragraph">This URL shall match the application URI</span></p>
+<p class="p_Paragraph" style="text-indent: -99px; margin: 5px 0px 5px 99px;"><span class="f_Paragraph">DNS Name: The host name(s) of the machine where the application is running.</span><br />
+<span class="f_Paragraph">The host name shall be resolvable via DNS requests.</span></p>
+<p class="p_Paragraph" style="text-indent: -99px; margin: 5px 0px 5px 99px;"><span class="f_Paragraph">IP Address: The IP address(es) of the machine where the application is running.</span></p>
+<p class="p_Paragraph" style="text-indent: -99px; margin: 5px 0px 5px 99px;"><span class="f_Paragraph">For server applications either &quot;DNS Name&quot; or &quot;IP Address&quot; is mandatory.</span></p>
+<p class="p_Paragraph" style="text-indent: -99px; margin: 5px 0px 5px 99px;"><span class="f_Paragraph">Client application can omit this information.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:293px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">Key usage</span></p>
+</td>
+<td style="vertical-align:top; width:682px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Digital Signature</span><br />
+<span class="f_Paragraph">Non-Repudiation</span><br />
+<span class="f_Paragraph">Key Encipherment</span><br />
+<span class="f_Paragraph">Data Encipherment</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Only for self-signed certificates:</span><br />
+<span class="f_Paragraph">Certificate Signing</span><br />
+<span class="f_Paragraph">Off-line CRL Signing</span><br />
+<span class="f_Paragraph">CRL Signing (f6)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:293px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">Extended Key Usage</span></p>
+</td>
+<td style="vertical-align:top; width:682px; height:40px; background-color:#ffffff; padding:3px;"><p class="p_Paragraph" style="text-indent: -56px; margin: 5px 0px 5px 56px;"><span class="f_Paragraph">Server Authentication (1.3.6.1.5.5.7.3.1)</span><br />
+<span class="f_Paragraph">Only for server applications</span></p>
+<p class="p_Paragraph" style="text-indent: -56px; margin: 5px 0px 5px 56px;"><span class="f_Paragraph">Client Authentication (1.3.6.1.5.5.7.3.2)</span><br />
+<span class="f_Paragraph">May be omitted for server-only applications.</span><br />
+<span class="f_Paragraph">Some client functionality (GDS, LDS) may validate this usage.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Software Certificates</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The ServerSoftwareCertificates and ClientSoftwareCertificates parameters in the abstract CreateSession and ActivateSession services are instances of the SignedSoftwareCertificate data type. A SignedSoftwareCertificate is a ByteString containing the DER encoded form of an X509v3 certificate. This certificate is issued by a certifying authority and contains an X509v3 extension with the SoftwareCertificate which specifies the claims verified by the certifying authority. The X509v3 fields contained in a SignedSoftwareCertificate include software version information, issuer of certificate (OPC Foundation for example), the product name and vendor of the product. Software certificates also include expiration dates and signatures to ensure validity. The fields are defined completely in RFC 3280.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">User Certificates</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The certificates used in OPC UA must be handled by the application and user. In a typical IT infrastructure, certificates are stored and handled by administrators. To facilitate this applications are expected to place their certificates in standard locations called certificate stores. The mechanisms used to access the certificate store will depend on the operating system and the cryptographic infrastructure used by the application.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The Subject (CN) field for a user certificate defines the &quot;user name&quot;. This user name is exposed e.g. in some audit events.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Beside the required version-1 fields (Subject, Issuer, Valid from, Valid to, ...) only &quot;Key usage&quot; is mandatory with same content as for application instance certificate.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_securitycertificates.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Alarm and Condition Classes</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_programmersguide_ac_predefined.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Alarm and Condition Classes</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_serverstatemachines.htm">Previous</a>&nbsp;
+     <a href="html_serverancdefininganalarm.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><a id="hdr"></a><span class="f_Heading2">Alarm Categories</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">Limit Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Alarms can be modeled with multiple exclusive sub-states and assigned limits or they may be modeled with non exclusive limits that can be used to group multiple states together. </span><br />
+<span class="f_Paragraph">The limit alarm is an abstract type used to provide a base Type for Alarm Conditions with multiple limits.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The alarm limits may cause an alarm to be generated when a value equals or exceeds the limit, (e.g. the Value is greater than or equal the limit for High and HighHigh limits and lower than or equal for for Low and LowLow limits). The exact behavior with regards to equals the limit is server specific.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Level Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A level alarm is commonly used to report when a limit is exceeded. It typically relates to an instrument - e.q. a temperature meter. The Level Alarm becomes active when the observed value is above or equal a high limit or below or equal a low limit.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Deviation Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A Deviation Alarm is commonly used to report an excess deviation between a desired setpoint level of a process value and an actual measurement of that value. The Deviation Alarm becomes active when the deviation exceeds or drops below a defined limit.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Rate of Change Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A RateOfChangeAlarm is commonly used to report an unusual change or lack of change in a measured value related to the speed at which the value has changed. The RateOfChangeAlarm becomes active when the rate at which the value changes exceeds or drops below a defined limit.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">A Rate of Change is measured in some time unit, such as seconds or minutes and some unit of measure such as percent or meter.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For example a tank may have a High limit for the Rate of Change of its level (measured in meters) which would be 4 meters per minute. If the tank level changes at a rate that is greater than 4 meters per minute then the High substate is entered.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The behavior is the same as for Limit alarms, just the semantic of this type is different.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Discrete Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A discrete alarm is commonly used to monitor discrete values. </span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">UA Alarm Types</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA specifies the following types.</span></p>
+<h2 class="p_Heading2"><img src="ac_conditiontypehierarchy.png" width="853" height="416" alt="AC_ConditionTypeHierarchy" style="width:853px;height:416px;border:none" /></h2>
+<p class="p_ImageCaption"><span class="f_ImageCaption">OPC UA defined condition and alarm types</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Alarm Classes</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The alarm types defined in OPC UA are implemented in classes in OPC UA C++ Server &amp; Client SDK V6.00.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The predefined alarms are a set of alarms that have a built in behavior. For each of this alarms the behavior can be customized by the user. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For each of the predefined alarms a class in the OPC UA C++ Server &amp; Client SDK V6.00 implements a default behavior in case of value changes of the monitored variable..</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The default implementation <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1abb3cb22c4cc99b65948a920964dcfd43" class="topiclink">onVariableChanged</a> can be directly used if:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The data type of the monitored variable can be casted to a double value. Thus all numeric data types and Boolean are covered.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The application is updating the monitored variable with the current value, e.g. by communication to an underlying system.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The alarm does not have an own time stamp (e.g. from an underlying system)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">No special handling of alarms shall be implemented (e.g. branches for old alarm states).</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">In case of any of the previous preconditions is violated the application has to overwrite the method and adapt the code to the special need.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The default implementation of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_condition_1abb3cb22c4cc99b65948a920964dcfd43" class="topiclink">onVariableChanged</a> method is very similar for all alarm types. The only relevant difference is the calculation of violations and new states.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The general implementation contains the following steps:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Get the current state of the state machine.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Evaluate whether the specific constraints are violated evaluate the new state. </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">If the state has changed </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">update the current state in the state machine to correspond to the violation that occurred.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">update the active state to the current state</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">update receive time and time properties of the alarm to current time</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">activate / deactivate the alarm depending whether a limit is violated or not.</span><br />
+<span class="f_Paragraph">To change the active status the methods <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1a1cdfc50ae8b879da49d37c5bc5594ae9" class="topiclink">AlarmCondition::onActivate</a> / <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_alarm_condition_1aa43b42e8ad27547bd096c52808210815" class="topiclink">AlarmCondition::onDeactivate</a> are used.</span><br />
+<span class="f_Paragraph">The implementation of these methods ensure that other properties (e.g. retain, acknowledged, confirmed) are set to correct values.</span><br />
+<span class="f_Paragraph">Also reporting of the alarm is initiated in this implementation. </span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Paragraph"><span class="f_Heading3">LimitAlarm</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_limit_alarm.htm" class="topiclink">LimitAlarm</a> is an abstract type used to provide a base Type for Alarm Conditions with multiple limits.</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">Exclusive Limit Alarm</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm" class="topiclink">ExclusiveLimitAlarm</a> is used to specify the common behavior for Alarm Types with multiple mutually exclusive limits. </span><br />
+<span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_state_machine.htm" class="topiclink">ExclusiveLimitStateMachine</a> represents the actual limit violation of the alarm when it is in the active state.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Exclusive Level Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_level_alarm.htm" class="topiclink">ExclusiveLevelAlarm</a> is a specialization of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm" class="topiclink">ExclusiveLimitAlarm</a>. The implementation is identical, just the semantic is different.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Exclusive RateOfChange Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_rate_of_change_alarm.htm" class="topiclink">ExclusiveRateOfChangeAlarm</a> is a specialization of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm" class="topiclink">ExclusiveLimitAlarm</a>. The implementation is identical, just the semantic is different.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Exclusive Deviation Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_deviation_alarm.htm" class="topiclink">ExclusiveDeviationAlarm</a> is similar to the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_exclusive_limit_alarm.htm" class="topiclink">ExclusiveLimitAlarm</a>. In deviation alarms the difference between input value and a set point value is used for evaluating violations.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">NonExclusive Limit Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm" class="topiclink">NonExclusiveLimitAlarm</a> is used to specify the common behavior for Alarm Types with multiple non-exclusive limits.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-style: italic;">HighHighState</span><span class="f_Paragraph">, </span><span class="f_Paragraph" style="font-style: italic;">HighState</span><span class="f_Paragraph">, </span><span class="f_Paragraph" style="font-style: italic;">LowState</span><span class="f_Paragraph">, and </span><span class="f_Paragraph" style="font-style: italic;">LowLowState</span><span class="f_Paragraph"> represent the non-exclusive states.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">NonExclusive Level Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_level_alarm.htm" class="topiclink">NonExclusiveLevelAlarm</a> is a specialization of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm" class="topiclink">NonExclusiveLimitAlarm</a>. The implementation is identical, just the semantic is different</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">NonExclusive RateOfChange Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_rate_of_change_alarm.htm" class="topiclink">NonExclusiveRateOfChangeAlarm</a> is a specialization of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm" class="topiclink">NonExclusiveLimitAlarm</a>. The implementation is identical, just the semantic is different</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">NonExclusive Deviation Alarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_deviation_alarm.htm" class="topiclink">NonExclusiveDeviationAlarm</a> is similar to the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_non_exclusive_limit_alarm.htm" class="topiclink">NonExclusiveLimitAlarm</a>. In deviation alarms the difference between input value and a set point value is used for evaluating violations.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">DiscreteAlarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_discrete_alarm.htm" class="topiclink">DiscreteAlarm</a> is an abstract type used to classify Types into Alarm Conditions where the input for the Alarm may take on only a certain number of possible values (e.g. true/false, running/stopped/terminating).</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">OffNormalAlarm</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm" class="topiclink">OffNormalAlarm</a> is used to compare the value of an input variable to a the value of a variable containing the normal state value.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">TripAlarm</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_trip_alarm.htm" class="topiclink">TripAlarm</a> is a specialization of the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_off_normal_alarm.htm" class="topiclink">OffNormalAlarm</a>. The implementation is identical, just the semantic is different.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note: </span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">All alarms are disabled by default and needs to be enabled when they are fully constructed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_programmersguide_ac_predefined.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

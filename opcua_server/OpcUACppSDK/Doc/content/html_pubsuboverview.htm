@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Overview</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_pubsuboverview.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Overview</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uapubsub.htm">Previous</a>&nbsp;
+     <a href="html_pubsubconcepts.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><a id="hdr"></a><span class="f_Paragraph">PubSub allows distributing data and events from an OPC UA information source to interested observers inside a device network as well as in IT and analytics cloud systems.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">OPC UA PubSub is designed to be flexible and is not bound to a particular messaging system. </span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Decoupling by use of middleware</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">In PubSub the participating OPC UA Applications can assume the roles Publisher and Subscriber. Publishers are the sources of data, while Subscribers consume that data. Communication in PubSub is message-based. Publishers send messages to a Message Oriented Middleware, without knowledge of what, if any, Subscribers there may be. Similarly, Subscribers express interest in specific types of data, and process messages that contain this data, without knowledge of what Publishers there are.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Message Oriented Middleware is software or hardware infrastructure that supports sending and receiving messages between distributed systems. The implementation of this distribution depends on the Message Oriented Middleware.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The image bellow illustrates that Publishers and Subscribers only interact with the Message Oriented Middleware which provides the means to forward the data to one or more receivers:</span></p>
+<p><img src="pubsuboverview.png" width="824" height="462" alt="PubSubOverview" style="width:824px;height:462px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To cover a large number of use cases, OPC UA PubSub supports two largely different Message Oriented Middleware variants. These are:</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">• A </span><span class="f_Paragraph" style="font-weight: bold;">broker-less</span><span class="f_Paragraph"> form, where the Message Oriented Middleware is the network infrastructure that is able to route datagram-based messages. Subscribers and Publishers use datagram protocols like UDP.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">• A </span><span class="f_Paragraph" style="font-weight: bold;">broker-based</span><span class="f_Paragraph"> form, where the core component of the Message Oriented Middleware is a message Broker. Subscribers and Publishers use standard messaging protocols like AMQP or MQTT to communicate with the Broker. All messages are published to specific queues (e.g. topics, nodes) that the Broker exposes and Subscribers can listen to these queues. The Broker may translate messages from the formal messaging protocol of the Publisher to the formal messaging protocol of the Subscriber.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_pubsuboverview.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

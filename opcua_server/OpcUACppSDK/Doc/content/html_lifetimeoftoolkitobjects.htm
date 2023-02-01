@@ -1,0 +1,96 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Lifetime of Toolkit Objects</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_lifetimeoftoolkitobjects.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Lifetime of Toolkit Objects</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_overviewoftheapi.htm">Previous</a>&nbsp;
+     <a href="html_errorhandling.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">The lifetime of an object is the time between its creation and its destruction. Developers that wish to use the OPC UA C++ Server &amp; Client SDK need to understand how to control the lifetime of objects created from API classes. The C++ API has two types of classes that differ in how their instances are created and destroyed:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Classes that wrap objects in the SDK Core. The actual object state is stored in the SDK Core. These classes are always passed by reference and have a reference counter (</span><span class="f_Paragraph" style="font-weight: bold;">reference-type objects</span><span class="f_Paragraph">).</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Classes that use class members to store their object state. Those are always copied when being assigned or passed to functions (</span><span class="f_Paragraph" style="font-weight: bold;">value-type objects</span><span class="f_Paragraph">).</span></td></tr></table></div><h2 class="p_Heading2"><span class="f_Heading2">Reference-type Objects</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">Garbage Collection by Reference Counting</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Reference-type objects are usually long-living objects that are always allocated on the heap. They have a counter associated with them that counts the number of references that are held for the object. When this counter becomes zero, the object is no longer accessible and is destroyed. In the SDK, all reference-type objects finally derive from <a href="class_softing_o_p_c_toolbox5_1_1_base.htm" class="topiclink">Base</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Since reference-type objects are destroyed when their reference counter becomes zero, a SDK application must always ensure to increase the reference counter by one for every reference it holds for the object. It must also decrement the reference counter by one whenever it releases an object reference. Although <a href="class_softing_o_p_c_toolbox5_1_1_base.htm#class_softing_o_p_c_toolbox5_1_1_base_1a581a10172e66057516e0e40362c95338" class="topiclink">Base::addRef()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_base.htm#class_softing_o_p_c_toolbox5_1_1_base_1ab1c7a8085a1ff78cae0de1b05c6e266b" class="topiclink">Base::release()</a> allow you to manage references manually, the SDK provides a smart pointer class that simplifies these tasks.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Applications should use the <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm" class="topiclink">ObjectPointer&lt;T&gt;</a> class template whenever they want to hold a reference to a reference-type object. Whenever an ObjectPointer is assigned a reference-type object, the reference count of the object is automatically incremented by one. Whenever the ObjectPointer leaves its scope or when it is reset explicitly (see <a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer_1a2db074ae081e08762866ce555156ae78" class="topiclink">ObjectPointer&lt;T&gt;::reset())</a>, it decrements the reference counter of the referenced object.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Hint:</span><span class="f_Paragraph"> Each reference-type class </span><span class="f_FixedSize">T</span><span class="f_Paragraph"> defines a </span><span class="f_FixedSize">TPtr</span><span class="f_Paragraph"> type that is an alias for </span><span class="f_FixedSize">ObjectPointer&lt;T&gt;</span><span class="f_Paragraph"> (e.g. instead of </span><span class="f_FixedSize">ObjectPointer&lt;Client::Session&gt;</span><span class="f_Paragraph"> you may write </span><span class="f_FixedSize">Client::SessionPtr</span><span class="f_Paragraph">).</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Instantiation of Reference-Type Objects on Behalf of the Application</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Reference-type objects are typically instantiated by the application. For example, when a client application wants to create a connection to a server, it creates an instance of the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Client::Session</a> class:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ObjectPointer&lt;Client::Session&gt;&nbsp;session&nbsp;=&nbsp;Client::Session::create();</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Each reference-type class that can be instantiated by an application has a factory method </span><span class="f_FixedSize">create()</span><span class="f_Paragraph">. This method returns a new instance of the class wrapped in a smart pointer. Using the static </span><span class="f_FixedSize">create()</span><span class="f_Paragraph"> method is the only recommended way to create instances of reference-type classes. More specifically, these classes hide their constructors so that safe access to the instance via smart pointers is guaranteed. </span><span class="f_Paragraph" style="font-weight: bold;">It is strongly recommended to apply the factory method pattern for all classes in your application that derive from reference-type classes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Classes that can only have one instance (singleton classes) provide a different method for accessing their instance. These instances can be accessed by an </span><span class="f_FixedSize">instance()</span><span class="f_Paragraph"> method. The <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> class, for example, can be accessed as follows:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ObjectPointer&lt;Application&gt;&nbsp;application&nbsp;=&nbsp;Application::instance();</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Developers that pay attention to const-correctness may want to use the </span><span class="f_CodeExample">constInstance()</span><span class="f_Paragraph"> factory method to retrieve a </span><span class="f_CodeExample">const</span><span class="f_Paragraph"> instance of a singleton.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Instantiation of Reference-Type Objects on Behalf of the SDK Core</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Each reference-type object has a representation in the SDK core. Whenever a reference-type object is constructed on behalf of the application by means of the </span><span class="f_FixedSize">create()</span><span class="f_Paragraph"> factory method, a corresponding object is created in the SDK Core that holds the actual object state. Both objects are associated with each other by means of a handle. Both objects, the API and the SDK Core object, have separate reference counters and thus may have different lifetime. As illustrated in the figure below, it is guaranteed that an API object does always have a valid counterpart in the SDK Core. However, a SDK Core object may not always have an API representation.</span></p>
+<h2 class="p_Heading2"><img src="referencetypeobject_coreapirelationship.png" width="461" height="187" alt="ReferenceTypeObject_CoreApiRelationship" style="width:461px;height:187px;border:none" /></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">For example, a server application is notified by means of <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a278e45207dd9a7cec0fea26c630ebef3" class="topiclink">Endpoint::onCreateSession(Session*)</a> whenever a client creates a session. Since the server application cannot know about the created session, the SDK needs to construct an API wrapper object for the Session object that has been created in the SDK Core. For this purpose, the SDK uses an object factory called the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm" class="topiclink">Creator</a>. The following diagram illustrates the process of creating a Session object on behalf of the SDK Core:</span></p>
+<p class="p_Paragraph"><img src="createreferencetypeobject.png" width="491" height="234" alt="CreateReferenceTypeObject" style="width:491px;height:234px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Therefore, if you derive from reference-type objects that are constructed by the SDK Core and not by the application itself, please derive from the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm" class="topiclink">Creator</a> and override the appropriate factory method to return your derived instance.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Value-type Objects</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Value-type objects are objects that are allocated on the stack and usually have only a short lifetime. Value-type objects are always copied when they are assigned to another object or passed to a function.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In the SDK, a value-type class can be easily recognized: Each value-type class implements an interface with the same class name prefixed with an &quot;I&quot;. For example, the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeId</a> class that holds a unique identifier for a node implements the <a href="class_softing_o_p_c_toolbox5_1_1_i_node_id.htm" class="topiclink">INodeId</a> interface.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">Please note that value-type objects are always copied, even when they are passed as pointer. The following example illustrates that behavior for the method </span><span class="f_FixedSize">BaseNode::setNodeId(const INodeId*)</span><span class="f_Paragraph">:</span></h3>
+<p class="p_CodeExample"><span class="f_CodeExample">ObjectPointer&lt;BaseNode&gt;&nbsp;node;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;NodeId&nbsp;nodeId;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;This&nbsp;is&nbsp;safe&nbsp;since&nbsp;nodeId&nbsp;is&nbsp;copied&nbsp;by&nbsp;setNodeId()</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;node.setNodeId(&amp;nodeId);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_lifetimeoftoolkitobjects.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,531 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>DataTransaction Class Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">DataTransaction Class Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request.htm">Previous</a>&nbsp;
+     <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_type.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction"></a></p>
+<p><span class="f_CodeExample">#include &quot;ServerDataTransaction.h&quot;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p><map name="map76" id="map76"><area shape="rect" coords="1455,123,1585,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_transaction.htm" alt="" /><area shape="rect" coords="1332,123,1449,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm" alt="" /><area shape="rect" coords="1207,123,1326,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_write_transaction.htm" alt="" /><area shape="rect" coords="927,123,1201,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_translate_browse_paths_to_node_ids_transaction.htm" alt="" /><area shape="rect" coords="706,123,921,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm" alt="" /><area shape="rect" coords="519,123,700,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_transaction.htm" alt="" /><area shape="rect" coords="362,123,513,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm" alt="" /><area shape="rect" coords="201,123,357,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_next_transaction.htm" alt="" /><area shape="rect" coords="770,6,857,29" href="class_softing_o_p_c_toolbox5_1_1_base.htm" alt="" /><area shape="rect" coords="756,59,871,93" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm" alt="" /><area shape="rect" coords="5,123,195,157" href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_transaction.htm" alt="" /></map><img src="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.gif" width="1591" height="163" alt="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction" style="width:1591px;height:163px;border:none" usemap="#map76" /></p>
+<p class="p_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_base.htm#class_softing_o_p_c_toolbox5_1_1_base" class="topiclink">Base</a> class for all transactions.</p>
+<p class="p_Paragraph">An OPC UA service invocation that is used by clients to request data from a server application is represented as a data transaction in the SDK. Each transaction holds one or more data requests. While each data request contains information that is specific to a certain node, the transaction contains information that applies to all data requests.</p>
+<p class="p_Paragraph">For example if a client invokes the Read service to request a list of attribute values from certain nodes, the SDK creates a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction" class="topiclink">ReadTransaction</a> that contains a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_request" class="topiclink">ReadRequest</a> for each node provided with the service call.</p>
+<p class="p_Paragraph">The reply to a service call is only sent when all data requests in a transaction have been completed. The server application must ensure to always complete all requests in a transaction (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request_1a5696acd53a042e30ff7d3be86ab46814" class="topiclink">DataRequest::complete()</a>). A transaction can be completed forcefully using <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a0cb9e6c2b962eab9b1579229fcb49ece" class="topiclink">DataTransaction::complete()</a>.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_request" class="topiclink">Server::DataRequest</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="ListOfMembers" style="width:100%; border:none; border-spacing:3px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Public Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">virtual </p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a386d8d303b72c838a99a3ab7ad2d5d54" class="topiclink">~DataTransaction</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session" class="topiclink">Server::Session</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a93e89e95a9c7698f1d0f6021bd247492" class="topiclink">getSession</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session" class="topiclink">Server::Session</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a97d6e29fa3fda32e38b19bb06d6f3f62" class="topiclink">getSession</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a0cb9e6c2b962eab9b1579229fcb49ece" class="topiclink">complete</a></span>(EnumStatusCode requestStatus)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTBoolean</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a8a39e3e8878133720b1fa3e4fbeeffd5" class="topiclink">isCancelled</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1abb42460a3654e479b9277eeb0964fd65" class="topiclink">getUserGroupIndex</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">tstring</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a55d87f02ed2223a323d67553b16e5477" class="topiclink">getAuditEntryId</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a4fd8f4fe78dfb83c6084949661bf88fb" class="topiclink">getClientRequestHandle</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">OTUInt32</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1aed11e00d685b8f44778add26e0c61ce9" class="topiclink">getDiagnosticsToReturn</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> *</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a03b9ed2ff084940389bbcc230a225dae" class="topiclink">getServiceDiagnostics</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1aa1433da4f0a7e6eb6e3e2601f716d3f6" class="topiclink">setServiceDiagnostics</a></span>(const IDiagnosticInfo *diagnosticInfo)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a5138df0c9585b810653ef71345781b4e" class="topiclink">setServiceDiagnostics</a></span>(const IDiagnosticInfo &amp;diagnosticInfo)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1aaa30a106acc8c915472842fab71f8a75" class="topiclink">getStringTable</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a98f0f08aa2ba4b7cf6816ed7bab94967" class="topiclink">getStringTable</a></span>() const </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a></p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a5ae16748e6090f3524e71729fff77fb0" class="topiclink">setStringTable</a></span>(ObjectPointer&lt; StringTable &gt; stringTable)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="2" style="vertical-align:top; padding:0px;"><h2 class="p_Heading2"><span class="f_Heading2">Protected Member Functions</span></h2>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a116dd07d9c6ed82ba64073d61dbc6fc1" class="topiclink">DataTransaction</a></span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1acd4977cb074a6e93ca10125b41d14020" class="topiclink">DataTransaction</a></span>(TBHandle otbHandle)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a24c969d6d119b03767ae1e81242c1e5b" class="topiclink">DataTransaction</a></span>(bool suppressCoreInstanceCreate)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><p style="text-align: right;">void</p>
+</td>
+<td style="vertical-align:top; padding:0px;"><p><span style="font-weight: bold;"><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a296fa36986f21445918d16ba8751ff90" class="topiclink">initMembers</a></span>()</p>
+</td>
+</tr>
+</table>
+</div>
+<hr style="height:2px; color:#000000; border-width:0px; background-color:#000000;" /><p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a116dd07d9c6ed82ba64073d61dbc6fc1"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::DataTransaction</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Default constructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1acd4977cb074a6e93ca10125b41d14020"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::DataTransaction</span>(TBHandle <span class="f_Parameter">otbHandle</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Constructor that shall be used by derived classes whose instances are created by the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm#class_softing_o_p_c_toolbox5_1_1_creator" class="topiclink">Creator</a> object factory. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a24c969d6d119b03767ae1e81242c1e5b"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::DataTransaction</span>(bool <span class="f_Parameter">suppressCoreInstanceCreate</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a296fa36986f21445918d16ba8751ff90"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>void<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::initMembers</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">For internal use only </p>
+<p>Reimplemented in <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_translate_browse_paths_to_node_ids_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_translate_browse_paths_to_node_ids_transaction_1abb59573c06adb340da1226c88bc55fd1" class="topiclink">SoftingOPCToolbox5::Server::TranslateBrowsePathsToNodeIdsTransaction</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_next_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_next_transaction_1a1d09a01cadb84a00fd383033c46f64a6" class="topiclink">SoftingOPCToolbox5::Server::BrowseNextTransaction</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_write_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_write_transaction_1ab10fe510b7ee5f2cbe212f55e51de188" class="topiclink">SoftingOPCToolbox5::Server::WriteTransaction</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_method_call_transaction_1aaa9a47bbfe853563432d95dc609f2f71" class="topiclink">SoftingOPCToolbox5::Server::MethodCallTransaction</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_raw_transaction_1ab1fa2446041dc510c0bc4a47b9e2742f" class="topiclink">SoftingOPCToolbox5::Server::HistoryReadRawTransaction</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_processed_transaction_1a793a351d106d5e0f37f36d9bb3a36db5" class="topiclink">SoftingOPCToolbox5::Server::HistoryReadProcessedTransaction</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_browse_transaction_1a6b35853c9d0ef4329f2efff29c2a1bd9" class="topiclink">SoftingOPCToolbox5::Server::BrowseTransaction</a>, <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_history_read_event_transaction_1af98130be28eaf18aa8b63dc090d95f11" class="topiclink">SoftingOPCToolbox5::Server::HistoryReadEventTransaction</a>, and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_read_transaction_1a3abdd0e68049c6ce3d9bc04c4caa06cf" class="topiclink">SoftingOPCToolbox5::Server::ReadTransaction</a>.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a386d8d303b72c838a99a3ab7ad2d5d54"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>virtual <span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::~DataTransaction</span>()<span class="f_CodeExample"> [virtual]</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Destructor </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a93e89e95a9c7698f1d0f6021bd247492"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session" class="topiclink">Server::Session</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::getSession</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the session related to the transaction. Every transaction is bound to a single session. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a97d6e29fa3fda32e38b19bb06d6f3f62"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session" class="topiclink">Server::Session</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::getSession</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a0cb9e6c2b962eab9b1579229fcb49ece"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::complete</span>(<a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a> <span class="f_Parameter">requestStatus</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Forces the completion of the transaction with the given status code. All contained requests will be set to 'completed' with the given status code as result and a response will be sent to the client.</p>
+<p class="p_Paragraph">The call to this method is only required if the request processing fails and the transaction shall be completed with a single call.</p>
+<p class="p_Paragraph">The method returns an error if the response could not be sent to the client. The method does not return an error if the transaction is already completed.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">requestStatus</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The status code that is assigned to all outstanding requests </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a8a39e3e8878133720b1fa3e4fbeeffd5"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTBoolean<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::isCancelled</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Indicates whether this service call was canceled by a client. Clients may cancel a service call at any time while the server is processing the transaction.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session_1a25a4adca86e04ba241901181e1023a05" class="topiclink">Session::onTransactionCancelled()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1abb42460a3654e479b9277eeb0964fd65"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::getUserGroupIndex</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the 0-based index of the user group to which the user that invoked the OPC UA service belongs to. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a55d87f02ed2223a323d67553b16e5477"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>tstring<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::getAuditEntryId</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the identifier that identifies the client's security audit log entry associated with the transaction. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a4fd8f4fe78dfb83c6084949661bf88fb"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::getClientRequestHandle</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the client request handle for this transaction.</p>
+<p class="p_Paragraph">This handle is used by <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_session_1a25a4adca86e04ba241901181e1023a05" class="topiclink">Session::onTransactionCancelled()</a> to identity transactions that have been canceled by clients.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Note:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Please note that two or more transactions may share the same client request handle. </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1aed11e00d685b8f44778add26e0c61ce9"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>OTUInt32<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::getDiagnosticsToReturn</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns a bit field provided by the client that indicates which kind of diagnostic information the server shall return.</p>
+<p class="p_Paragraph">The following constants can be used to test for set bits: </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:0px;"><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_ServiceLevel_SymbolicId </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_ServiceLevel_LocalizedText </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_ServiceLevel_AdditionalInfo </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_ServiceLevel_InnerStatusCode </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_ServiceLevel_InnerDiagnostics </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_Operationlevel_SymbolicId </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_OperationLevel_LocalizedText </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_OperationLevel_AdditionalInfo </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_OperationLevel_InnerStatusCode </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">EnumDiagnosticsToReturn_OperationLevel_InnerDiagnostics</td></tr></table></div></td>
+</tr>
+</table>
+</div>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1a566d46158aa907d9cead554067fe110e" class="topiclink">DiagnosticInfo::returnServiceLevelDiagnostics()</a> <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info_1ab22d919cb4a89ec68deb4f58cd4c724d" class="topiclink">DiagnosticInfo::returnOperationLevelDiagnostics()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a03b9ed2ff084940389bbcc230a225dae"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p>const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> *<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::getServiceDiagnostics</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns diagnostic information for the service invocation / transaction.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1aa1433da4f0a7e6eb6e3e2601f716d3f6" class="topiclink">setServiceDiagnostics()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1aa1433da4f0a7e6eb6e3e2601f716d3f6"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::setServiceDiagnostics</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> * <span class="f_Parameter">diagnosticInfo</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Sets diagnostic information for the service invocation / transaction.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">diagnosticInfo</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The transaction-related diagnostic information</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p>Server applications should only return that kind of diagnostic information that has been requested by the client (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1aed11e00d685b8f44778add26e0c61ce9" class="topiclink">getDiagnosticsToReturn()</a>). </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a5138df0c9585b810653ef71345781b4e"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::setServiceDiagnostics</span>(const <a href="class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_i_diagnostic_info" class="topiclink">IDiagnosticInfo</a> &amp; <span class="f_Parameter">diagnosticInfo</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1aaa30a106acc8c915472842fab71f8a75"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::getStringTable</span>()</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Returns the string table that contains strings which are used by <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> objects conveyed to client.</p>
+<p class="p_Paragraph">Every transaction initially contains an empty string table. The server does not have to provide a string table (see <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a5ae16748e6090f3524e71729fff77fb0" class="topiclink">setStringTable()</a>) explicitly.</p>
+<p class="p_Paragraph"><span class="f_Heading3">See also:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a98f0f08aa2ba4b7cf6816ed7bab94967"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; const <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt;<span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::getStringTable</span>() const</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Table"><a id="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1a5ae16748e6090f3524e71729fff77fb0"></a></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="Member" style="width:100%; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm#_enums_8h_1a5df927645df244fef256862f16e3b790" class="topiclink">EnumStatusCode</a><span style="font-size: 10pt; font-family: Arial; color: #000000;"> </span><span style="font-weight: bold;">SoftingOPCToolbox5::Server::DataTransaction::setStringTable</span>(<a href="class_softing_o_p_c_toolbox5_1_1_object_pointer.htm#class_softing_o_p_c_toolbox5_1_1_object_pointer" class="topiclink">ObjectPointer</a>&lt; <a href="class_softing_o_p_c_toolbox5_1_1_string_table.htm#class_softing_o_p_c_toolbox5_1_1_string_table" class="topiclink">StringTable</a> &gt; <span class="f_Parameter">stringTable</span>)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">Replaces the string table with the given <span class="f_Parameter">stringTable</span>. The string table is referenced by <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> objects which are conveyed to the client.</p>
+<p class="p_Paragraph"><span class="f_Heading3">Parameters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p style="margin: 5px 5px 0px 0px;"><span class="f_Parameter">stringTable</span></p>
+</td>
+<td style="vertical-align:top; padding:2px;"><p class="p_Paragraph">The string table referenced by <a href="class_softing_o_p_c_toolbox5_1_1_diagnostic_info.htm#class_softing_o_p_c_toolbox5_1_1_diagnostic_info" class="topiclink">DiagnosticInfo</a> objects.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">See also:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 20px;"><table class="ParameterList" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px;"><p><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction_1aaa30a106acc8c915472842fab71f8a75" class="topiclink">getStringTable()</a> </p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=class_softing_o_p_c_toolbox5_1_1_server_1_1_data_transaction.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

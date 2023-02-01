@@ -1,0 +1,142 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Message Integrity and Confidentiality</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_clientmessageintegrity.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Message Integrity and Confidentiality</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_clientsecuritysetup.htm">Previous</a>&nbsp;
+     <a href="html_clientuserauthentication.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">In order to encrypt and/or sign the messages that your client exchanges with a server, you need to create a key pair consisting of a public key and a private key. The public key needs to be wrapped in a digital certificate, the application instance certificate, which is conveyed to a server whenever you open a new connection to a server.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The following steps illustrate the actions required to use message security with a client application.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Creating and Loading an Application Instance Certificate</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The topic <a href="html_setupcertificates.htm" class="topiclink">Setting up a Certificate Store</a> gives instructions on how to create an exemplary application instance certificate (and associated private key) for your client using the OpenSSL command line tool. Please consult the </span><span class="f_Paragraph"><a href="http://www.openssl.org/docs/manmaster/man1/openssl.html" target="_blank" class="weblink">OpenSSL documentation</a></span><span class="f_Paragraph"> for further reference.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In order to use the instance certificate with your application, you have to provide the SDK with the location of the DER-encoded certificate and the associated private key. Please note that the instance certificate have to be set before you call <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9e2bc77fe2b30db133ef660ee4ffbb2b" class="topiclink">Application::start()</a>.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ObjectPointer&lt;Application&gt;&nbsp;application&nbsp;=&nbsp;Application::instance();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">application-&gt;setInstanceCertificate(</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">_T(&quot;&lt;Path&nbsp;to&nbsp;the&nbsp;DER-encoded&nbsp;certificate&gt;&quot;),</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">_T(&quot;&lt;Path&nbsp;to&nbsp;the&nbsp;PEM-encoded&nbsp;private&nbsp;key&nbsp;file&gt;&quot;),</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">_T(&quot;Private&nbsp;Key&nbsp;Passphrase&quot;)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">application-&gt;start();</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> It is recommended to verify the result of the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9ba7b51ae0902492e747df3032b23e56" class="topiclink">setInstanceCertificate()</a> method call.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Setting-up a Secure Connection</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">In order to create a secure connection to a server, you have to configure the following parameters of a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a>:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a5aab58e8c8eb7d76c97e689fffc77516" class="topiclink">MessageSecurityMode</a>: The message security mode indicates whether exchanged messages are to be signed (</span><span class="f_FixedSize">EnumMessageSecurityMode_Sign</span><span class="f_Paragraph">) or if they are additionally encrypted (</span><span class="f_FixedSize">EnumMessageSecurityMode_SignAndEncrypt</span><span class="f_Paragraph">). If you do not want to apply any message security, choose </span><span class="f_FixedSize">EnumMessageSecurityMode_None</span><span class="f_Paragraph">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a58baef81786d19f9e4f7d618d398842c" class="topiclink">SecurityPolicy</a>: The security policy identifies a set of encryption and hash algorithms that are used when signing and encrypting messages. The security policy is defined by means of a URI. Currently, the following policies are defined:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 24px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">SDK constant</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Policy URI</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Consolas;">SecurityPolicyUri_None</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">http://opcfoundation.org/UA/SecurityPolicy#None</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">No security</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">SecurityPolicyUri_Basic128Rsa15</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">http://opcfoundation.org/UA/SecurityPolicy#Basic128Rsa15</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">Deprecated. Encryption algorithm is known to be broken. This policy shall not be used any more.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">SecurityPolicyUri_Basic256</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">http://opcfoundation.org/UA/SecurityPolicy#Basic256</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">Deprecated. Encryption algorithm is known to be broken. This policy shall not be used any more.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">SecurityPolicyUri_Basic256Sha256</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">http://opcfoundation.org/UA/SecurityPolicy#Basic256Sha256</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">Average security.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">SecurityPolicyUri_Aes128Sha256RsaOaep</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">http://opcfoundation.org/UA/SecurityPolicy#Aes128_Sha256_RsaOaep</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">High security.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">SecurityPolicyUri_Aes256Sha256RsaPss</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">http://opcfoundation.org/UA/SecurityPolicy#Aes256_Sha256_RsaPss</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="background-color: #ffffff;">Ultra high security.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_pki_store_configuration.htm" class="topiclink">PkiStoreConfiguration</a>: The client has to define a PKI store configuration, where at least the trust list location is set.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a321908036bda3b132a18cddf86f2e857" class="topiclink">ServerCertificate</a>: The certificate trust list location of the client must contain the public key of the server. Otherwise the client is unable to decrypt messages received from the server.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">Please note that a server may not support all possible combinations of </span><span class="f_Reference">MessageSecurityMode</span><span class="f_Paragraph"> and </span><span class="f_Reference">SecurityPolicy</span><span class="f_Paragraph">. The available message security configurations can be obtained from the server using the method</span> <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a><span class="f_Paragraph">.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Sample Application</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Please refer to the article <a href="html_samplemessagesecurity.htm" class="topiclink">Secure Communication</a> that describes a sample application that uses the message security features provided by the SDK.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_clientmessageintegrity.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

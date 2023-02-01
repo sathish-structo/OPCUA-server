@@ -1,0 +1,104 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>User Authentication</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_serveruserauthentication.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">User Authentication</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_servermessageintegrity.htm">Previous</a>&nbsp;
+     <a href="html_serveruserauthorization.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">A client authenticates a user to a server by passing a so-called </span><span class="f_Reference">user identity token</span><span class="f_Paragraph"> to the server. The SDK supports the following authentication schemes:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_i_anonymous_identity_token.htm" class="topiclink">AnonymousIdentityToken</a>: Indicates to the server that the client does not provide any user credentials</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_identity_token.htm" class="topiclink">UserNameIdentityToken</a>: Authenticates a user with a username and a password</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_i_x509_identity_token.htm" class="topiclink">X509IdentityToken</a>: Uses an X.509 certificate to authenticate a user</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_i_issued_identity_token.htm" class="topiclink">IssuedIdentityToken</a>: Uses a WS-Security token to authenticate a user</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Configuring Accepted Authentication Schemes</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">An OPC UA server uses </span><span class="f_Reference">user token policies</span><span class="f_Paragraph"> to define the available user authentication schemes. A <a href="class_softing_o_p_c_toolbox5_1_1_i_user_token_policy.htm" class="topiclink">user token policy</a> is identified by a policy ID and defines (among other things)</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">the token type to which the policy applies and</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">a set of cryptographic algorithms (defined by a security policy URI) that a client shall apply to the identity token when passing the token to the server.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">A list of available user token policies needs to be defined for each endpoint. The following code illustrates how to configure an endpoint to accept both anonymous and username/password tokens:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">UserTokenPolicy&nbsp;anonymousTokenPolicy;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">anonymousTokenPolicy.setPolicyId(_T(&quot;Anonymous_Policy&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">anonymousTokenPolicy.setTokenType(EnumUserTokenType_Anonymous);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">endpoint-&gt;addUserTokenPolicy(anonymousTokenPolicy);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">UserTokenPolicy&nbsp;userNameTokenPolicy;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">userNameTokenPolicy.setPolicyId(_T(&quot;Username_Policy&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">userNameTokenPolicy.setTokenType(EnumUserTokenType_UserName);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;Always&nbsp;encrypt&nbsp;the&nbsp;password&nbsp;contained&nbsp;in&nbsp;the&nbsp;token</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">userNameTokenPolicy.setSecurityPolicyUri(SecurityPolicyUri_Basic128Rsa15);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">endpoint-&gt;addUserTokenPolicy(userNameTokenPolicy);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_Reference">PolicyId</span><span class="f_Paragraph"> is an arbitrary string and must be unique within an endpoint.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">If messages exchanged between a client and a server are already encrypted, the secret contained in the token does not need to be encrypted separately.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Verifying User Credentials</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK relies on the server application to verify the identity of users specified in user identity tokens. Whenever a client activates a session and passes user credentials, the SDK triggers the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a0629090cbc9ca8f67f2d651eab87e358" class="topiclink">Endpoint::onAuthenticateUser()</a> callback method. A server application needs to implement this verification by overriding the callback method.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The verification of user credentials is illustrated in the following example:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">class&nbsp;MyEndpoint&nbsp;:</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">public&nbsp;SoftingOPCToolbox5::Server::Endpoint</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">public:</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">virtual&nbsp;EnumStatusCode&nbsp;onAuthenticateUser(</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">const&nbsp;IUserIdentityToken*&nbsp;userIdentityToken,</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">const&nbsp;ISignatureData*&nbsp;tokenSignature,</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">Server::Session*&nbsp;session,</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">const&nbsp;IApplicationDescription*&nbsp;applicationDescription,</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">OTUInt32*&nbsp;userGroupIndex);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">EnumStatusCode&nbsp;result&nbsp;=&nbsp;EnumStatusCode_BadNotImplemented;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;TODO:&nbsp;Verify&nbsp;user&nbsp;credentials&nbsp;passed&nbsp;with&nbsp;user&nbsp;identity&nbsp;token</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">return&nbsp;result;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">};</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The implementation of the callback method validates the user identity and reports the status code of the validation. If the returned status code is bad, the client's activation request will be rejected and the status code is reported back to the client.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Sample Application</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Please refer to the article <a href="html_sampleuseraccesscontrol.htm" class="topiclink">User Access Control</a> that describes a sample application that performs user authentication.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_serveruserauthentication.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

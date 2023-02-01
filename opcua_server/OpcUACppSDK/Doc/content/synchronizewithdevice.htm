@@ -1,0 +1,89 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Synchronize with Underlying Device</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "synchronizewithdevice.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Synchronize with Underlying Device</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_requestandtransactionmechanism.htm">Previous</a>&nbsp;
+     <a href="html_programmersguide_how_to_server_monitored_items_queuing.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">It is the typical scenario, that a server needs to get the current values from an underlying device or change values on the device.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The services Read and Write can be typically directly forwarded to the device and can be completed when the device sent the response (see <a href="html_servertutorial.htm" class="topiclink">Server Tutorial</a>).</span><br />
+<span class="f_Paragraph">Please be aware, that in case of communication with the device it is strongly recommended to execute the communication (and completion of the services) asynchronously.</span><br />
+<span class="f_Paragraph">Otherwise the OPC UA C++ Server &amp; Client SDK V6.00 may be blocked until the communication is completed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_monitored_item.htm" class="topiclink">MonitoredItems</a> which monitor data changes, it requires to have a cyclic update mechanism to keep the values up to date in the SDKs cache.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Normally only the MonitoredItems for the Value attribute require the cyclic update as the other attribute values usually exist only in the OPC UA server and don't require any update. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In case monitoring of events from the device is supported, the forwarding of the notifications depends on the possibilities of the device and can be either cyclic or event-driven.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">HandleMonitoringChange</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> class provides the server specific callback <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a23c5ab44dfc6d497679b71301cdd0ebd" class="topiclink">Application::handleMonitoringChange()</a>.</span><br />
+<span class="f_Paragraph">This method notifies about which attribute of which node is monitored or is no longer monitored and which is the minimal used sampling interval on it.</span><br />
+<span class="f_Paragraph">This callback can be used to configure a list of variables, which needs a cyclic update from the underlying device.</span><br />
+<span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">OnProvideInitialValues</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">When a client creates a <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_monitored_item.htm" class="topiclink">MonitoredItem</a> on the server, the client expects a fast initial (current) value notified by the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_monitored_item.htm" class="topiclink">MonitoredItem</a>.</span><br />
+<span class="f_Paragraph">The notification uses the cached value in the SDK.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">There can be mainly 3 different cases:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The cache of the node to monitor is always up-to-date.</span><br />
+<span class="f_Paragraph">E.g. nodes which typically do not change their value (just via configuration) or nodes which change their value only by write services (and the application updates the value during write).</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The attribute of the node to monitor needs to be updated cyclically and the current value is up to date.</span><br />
+<span class="f_Paragraph">E.g. another monitored item is already monitoring the node and the cyclic update of the cache is already running.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The attribute of the node to monitor needs to be updated cyclically, but the cache is not up-to-date</span><br />
+<span class="f_Paragraph">E.g. it is the first monitored item monitoring the node.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">In the first two cases, the initial notification can be directly taken from the current cached value of the node.</span><br />
+<span class="f_Paragraph">In the third case, the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_monitored_item.htm" class="topiclink">MonitoredItem</a> has to wait for the initial notification from the device, which means to wait until the next data change.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The callback <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_subscription_1a169d390c61ce1575dba93f6c96ad95de" class="topiclink">Subscription::onProvideInitialValues()</a> configures in which way to provide the initial values.</span><br />
+<span class="f_Paragraph">The default implementation configures to uses the current cache value for all <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_monitored_item.htm" class="topiclink">MonitoredItems</a>, you can override this method to handle the nodes, which need to wait for next cache update.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=synchronizewithdevice.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

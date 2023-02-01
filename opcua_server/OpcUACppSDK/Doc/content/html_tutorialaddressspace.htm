@@ -1,0 +1,151 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Design of the Information Model</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_tutorialaddressspace.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Design of the Information Model</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_tutorialproblemdomain.htm">Previous</a>&nbsp;
+     <a href="html_clienttutorial.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">One of the most important aspects in the development of OPC UA server applications is the design of the <a href="html_uainformationmodel.htm" class="topiclink">information model</a>. The information model defines the way information is exposed to OPC UA clients. An information model is always represented by nodes in the address space of a server.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Knowledge of information models is also helpful for clients that want to interact with a server. For a client, an information model is a contract that defines the semantics of nodes. When a client knows about the information models that a server uses, it is able to interpret the meaning of nodes exposed in the address space.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">An Information Model for Refrigerators</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The picture below depicts a simple information model that is used to represent refrigerators in an OPC UA address space. Blue boxes indicate nodes that belong to the refrigerator model, grayed out nodes belong to OPC UA's <a href="html_uainformationmodel.htm" class="topiclink">base information model</a>. Please refer to the article <a href="html_uaaddressspacenotation.htm" class="topiclink">Notation of Nodes and References</a> for reference on the notation of this diagram.</span></p>
+<p class="p_Paragraph"><img src="refrigerator_type.png" width="672" height="428" alt="Refrigerator_Type" style="width:672px;height:428px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The refrigerator model introduces the </span><span class="f_Paragraph" style="font-style: italic;">RefrigeratorType</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The object type </span><span class="f_Reference">RefrigeratorType</span><span class="f_Paragraph"> represents a refrigerator. It is merely a blue print for a specific refrigerator model. For each refrigerator the server wants to expose in the address space it creates a refrigerator object, i.e. an instance of the type </span><span class="f_Reference">RefrigeratorType</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="html_tutorialproblemdomain.htm" class="topiclink">data points</a> that are exposed by the refrigerator's proprietary interface are mapped to variables in the address space. Most of the variables in the refrigerator type are simple </span><span class="f_Reference">BaseDataVariables</span><span class="f_Paragraph"> containing only a single value of a certain data type. Temperature variables are </span><span class="f_Reference">AnalogItems. AnalogItems </span><span class="f_Paragraph">expose three additional properties. The </span><span class="f_Reference">EURange</span><span class="f_Paragraph"> describes the &quot;normal&quot; range of the variable's value. The </span><span class="f_Paragraph" style="font-style: italic;">InstrumentRange</span><span class="f_Paragraph"> describes the allowed range of the variable's value.</span><span class="f_Paragraph"> The </span><span class="f_Reference">EngineeringUnits</span><span class="f_Paragraph"> property describes the engineering unit of the variable, in this case &quot;</span><span class="f_Reference">degree Celsius</span><span class="f_Paragraph">&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The OPC UA Method &quot;Open/Close door&quot; provides a more convenient way to open or close the door of the refrigerator.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Here is an overview of the components that are defined for the </span><span class="f_Reference">RefrigeratorType</span><span class="f_Paragraph">:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:1050px; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:206px; padding:3px;"><p><span style="font-weight: bold;">Browse Name</span></p>
+</td>
+<td style="vertical-align:top; width:135px; padding:3px;"><p><span style="font-weight: bold;">Variable Type</span></p>
+</td>
+<td style="vertical-align:top; width:691px; padding:3px;"><p><span style="font-weight: bold;">Data Type</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:206px; padding:3px;"><p>SetpointTemperature</p>
+</td>
+<td style="vertical-align:top; width:135px; padding:3px;"><p>AnalogItem</p>
+</td>
+<td style="vertical-align:top; width:691px; padding:3px;"><p>Double (degree Celsius)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:206px; padding:3px;"><p>ActualTemperature</p>
+</td>
+<td style="vertical-align:top; width:135px; padding:3px;"><p>AnalogItem</p>
+</td>
+<td style="vertical-align:top; width:691px; padding:3px;"><p>Double (degree Celsius)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:206px; padding:3px;"><p>MotorTemperature</p>
+</td>
+<td style="vertical-align:top; width:135px; padding:3px;"><p>AnalogItem</p>
+</td>
+<td style="vertical-align:top; width:691px; padding:3px;"><p>Double (degree Celsius)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:206px; padding:3px;"><p>DoorClosed</p>
+</td>
+<td style="vertical-align:top; width:135px; padding:3px;"><p>BaseDataVariable</p>
+</td>
+<td style="vertical-align:top; width:691px; padding:3px;"><p>Boolean</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:206px; padding:3px;"><p>Light</p>
+</td>
+<td style="vertical-align:top; width:135px; padding:3px;"><p>BaseDataVariable</p>
+</td>
+<td style="vertical-align:top; width:691px; padding:3px;"><p>Boolean</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="width:1050px; border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:188px; padding:3px;"><p><span style="font-weight: bold;">Browse Name</span></p>
+</td>
+<td style="vertical-align:top; width:131px; padding:3px;"><p><span style="font-weight: bold;">Input Arguments</span></p>
+</td>
+<td style="vertical-align:top; width:182px; padding:3px;"><p><span style="font-weight: bold;">Output Arguments</span></p>
+</td>
+<td style="vertical-align:top; width:522px; padding:3px;"><p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:188px; padding:3px;"><p>Open/Close door</p>
+</td>
+<td style="vertical-align:top; width:131px; padding:3px;"><p>{Boolean}</p>
+</td>
+<td style="vertical-align:top; width:182px; padding:3px;"><p>-</p>
+</td>
+<td style="vertical-align:top; width:522px; padding:3px;"><p>The door is closed when 'false' is passed as input argument. It is opened when the client passes 'true'.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">The Address Space of the Server</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The figure below illustrates the use of the </span><span class="f_Reference">RefrigeratorType</span><span class="f_Paragraph"> in the address space of the server. A </span><span class="f_Reference">Refrigerators</span><span class="f_Paragraph"> folder is used to organize the refrigerators.</span></p>
+<p class="p_Paragraph"><img src="refrigerator_instances.png" width="736" height="523" alt="Refrigerator_Instances" style="width:736px;height:523px;border:none" /></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_tutorialaddressspace.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

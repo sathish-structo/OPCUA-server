@@ -1,0 +1,191 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Troubleshooting and FAQ</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_faq.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Troubleshooting and FAQ</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_supportinfo.htm">Previous</a>&nbsp;
+     <a href="html_copyrights.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><a id="hdr"></a><span class="f_Paragraph">This article presents a list of troubleshootings and frequently asked questions related to OPC UA C++ Server &amp; Client SDK V6.00.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Troubleshooting:</span></h2>
+<p class="p_Paragraph"><span class="f_Heading3">P:</span><span class="f_Paragraph"> A <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1af1860f5a09e099b0304fb0283abfdfce" class="topiclink">Client::Session::connect()</a> fails with EnumStatusCode_BadSecurityConfig.</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">S:</span><span class="f_Paragraph"> You are connecting to a server with security (either message security or user identity token security).</span><br />
+<span class="f_Paragraph">If security in involved you have to establish a trust relationship between server and client.</span><br />
+<span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">P:</span><span class="f_Paragraph"> A <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1af1860f5a09e099b0304fb0283abfdfce" class="topiclink">Client::Session::connect()</a> fails with EnumStatusCode_BadSecurityChecksFailed.</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">S:</span><span class="f_Paragraph"> There are various resons.</span><br />
+<span class="f_Paragraph">First you should enable the traces to get more information what check exactly failed (in the SDK).</span><br />
+<span class="f_Paragraph">If there are no related traces the server may have rejected your application.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Some security checks can be disabled (</span><span class="f_Paragraph">see </span><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ad63112180a510d9bc99121f6c819aa4a" class="topiclink">Client::Session::disableSecurityChecks</a><span class="f_Paragraph">).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Few third party servers caused failing EnumSecurityCheck_IdenticalEndpointDescription by returning different endpoint descriptions.</span><br />
+<span class="f_Paragraph">The issue was solved by using </span><a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a7ab450091d876976df0266fbf97e3daa" class="topiclink">Client::Session::setHostnameResolution()</a> with EnumHostnameResolution_DoNotConvert.<br />
+The reason why the server returned differen endpoint descriptions is unknown.</p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">P:</span><span class="f_Paragraph"> My application compiled with Visual Studio 2013, 64 bit, shows strange behaviour.</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">S:</span><span class="f_Paragraph"> We recognized that the 64-bit compiler of Visual Studio 2013 has a bug in optimization. At least one place in SDK code was detected, where the optimizer produced wrong code.</span><br />
+<span class="f_Paragraph">We recommend to use compiler option &quot;/Od&quot; (disabled optimization&quot;) to avoid wrong code.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> Write operations to some third party servers get rejected with the status &quot;</span><span class="f_Paragraph"><a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm" class="topiclink">EnumStatusCode_BadWriteNotSupported</a></span><span class="f_Paragraph">&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> Not all OPC UA servers support writing timestamps. This is not a bug of the OPC UA C++ Server &amp; Client SDK V6.00 or the third party server, it is the official way of a server to say, that it does not support writing timestamps. Don't </span><span class="f_Paragraph">call <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a11809caaabf3caae36cb33954eaf3037" class="topiclink">DataValue::setServerTimestamp()</a> and maybe not even <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm#class_softing_o_p_c_toolbox5_1_1_data_value_1a203300798b700f52f124e579be5b7862" class="topiclink">DataValue::setSourceTimestamp()</a> on the <a href="class_softing_o_p_c_toolbox5_1_1_data_value.htm" class="topiclink">DataValue</a> that shall be written, respectively call these methods with an empty <a href="class_softing_o_p_c_toolbox5_1_1_date_time.htm" class="topiclink">DateTime</a> variable to clear existing timestamps.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a4f57e643dd87b67dedb59ac5ff60742a" class="topiclink">Client::Subscription::onError()</a> reports the error <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm" class="topiclink">EnumStatusCode_BadSequenceNumberInvalid</a>. What is the reason for this error and how to solve it?</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> This error occurs when a publish notification is missing or one publish notification overtook a previous notification. This can happen on networks, for example when packages are sent over different network routes or when a packet is completely lost. For such situations the SDK provides an automatic republishing feature, which can be enabled by <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1abb7376952237920845d21df48af9d479" class="topiclink">Client::Subscription::setRePublishingEnabled()</a>. The republishing service which requests the server to resend the missing publish responses and the SDK then ensures to report the publish responses to the API in the correct order. If an application is only interested in the newest notifications, then the error <a href="_enums_8h_1a5df927645df244fef256862f16e3b790.htm" class="topiclink">EnumStatusCode_BadSequenceNumberInvalid</a> can simply be ignored.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> The Browse service can specify additional information to return. How to return all available attributes of a node?</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> The Browse service can return reference specific information and node specific information for the mandatory base attributes (NodeId, NodeClass, BrowseName and DisplayName). All optional or type specific attributes must be retrieved by an extra Read service call.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> Building applications on Linux using a new gcc version (7 and above) may result in linker errors like</span><br />
+<span class="f_Paragraph"> &nbsp; &nbsp;&quot;undefined reference to `non-virtual thunk to &nbsp;...[abi:cxx11]...&quot;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> The reason for this behaviour is not fully evaluated. Most likely a breaking ABI change between gcc versions 6 and above is the reason.</span><br />
+<span class="f_Paragraph"> &nbsp; &nbsp;Actually no work-around using libraries of gcc5 or gcc6 are known.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The only known work-around is using libraries of gcc4, by</span><br />
+<span class="f_Paragraph"> &nbsp; &nbsp;- rename the .../lib/&lt;machine_type&gt;/ggc5 and gcc6 folder to e.g. &quot;_gcc5&quot; and &quot;_gcc6&quot;</span><br />
+<span class="f_Paragraph"> &nbsp; &nbsp;- recompile the projects using</span><br />
+<span class="f_Paragraph"> &nbsp; &nbsp; &nbsp;MACHINE_OPT=&quot;-static -D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++03&quot;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> Building applications on Linux using a new gcc version may result in linker errors</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> The reason is a ABI break between compiler version gcc6. Please compile the test and sample applications with </span><br />
+<span class="f_Paragraph"> &nbsp; make -f linux.mak MACHINE_OPT=&quot;-D_GLIBCXX_USE_CXX11_ABI=0 -std=gnu++03&quot;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> Loading and unloading the SDK DLLs dynamically hangs while executing </span><span class="f_List"><a href="globalfunctions.htm#namespace_softing_o_p_c_toolbox5_1a00344501e9d2800277909261c399cd3d" class="topiclink">loadToolbox()</a></span><span class="f_Paragraph"> or <a href="globalfunctions.htm#namespace_softing_o_p_c_toolbox5_1ac6ff128daf670e7e1aad20842bc4991d" class="topiclink">unloadToolbox()</a> within DllMain.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> Some operations are risky to be called within a DllMain, like synchronization with other threads, this can cause deadlocks (see <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dn633971%28v=vs.85%29.aspx#general_best_practices" target="_blank" class="weblink">https://msdn.microsoft.com/en-us/library/windows/desktop/dn633971%28v=vs.85%29.aspx#general_best_practices</a>). The SDK does this kind of synchronization which causes such a deadlock.</span><br />
+<span class="f_Paragraph">To fix the problem, set up and tear down the SDK after loading and before unloading the DLLs via functions or static methods.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> Loading and unloading SDK DLLs can cause a crash on unload.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> The sequence of unloading DLLs is not totally ensured. The dependency of DLLs are TB5CPP -&gt; TB5OT -&gt; TB5STACK -&gt; </span><span class="f_Paragraph">libssl-1_1.dll</span><br />
+<span class="f_Paragraph">In some situations unloading of libssl causes a crash - to avoid this, please load / unload &quot;</span><span class="f_Paragraph">libssl-1_1.dll&quot; explicitly before / after loading any other SDK DLL.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> Transferring big amount of data in a single request results in a session connection loss, reporting the status BadEncodingLimitsExceeded, BadDisconnect or BadInvalidState.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> The OPC UA Ansi C Stack has an encoding limit for single messages of 16 MB. As for any critical error, the stack automat closes the connection and produces the session connection loss. Unfortunately it is nearly impossible to predict the exact size for messages before they are encoded in the stack, thus it is not possible to handle this in the SDK. When you encounter this issue at a client application, try split requests or reduce the requested content. When you encounter this issue at a server application, then there are several setters at <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> which can be used to reduce the size of a response.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> Linker errors with gcc 6.x like &quot;relocation R_X86_64_32 against applications on Linux using a new gcc version may result in linker errors... &nbsp;recompile with -fPIC&quot;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> The reason is that some Linux distributions have changed the default behavior regarding position independent executables. The SDK binaries are compiled for position dependent code (except shared objects). Add the compiler flag &quot;-static&quot; to compile position dependent code; for compiling test and sample applications simply invoke </span><br />
+<span class="f_Paragraph"> &nbsp; &nbsp;make -f linux_gcc.mak MACHINE_OPT=&quot;-static&quot;</span><br />
+<span class="f_Paragraph">For some customers this did not work. As an alternative you can try</span><br />
+<span class="f_Paragraph"> &nbsp; &nbsp;make -f linux_gcc.mak MACHINE_OPT=&quot;-no-pie&quot;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_monitored_item.htm" class="topiclink">Server::MonitoredItems</a> may report invalid initial values when the related nodes are updated cyclically.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> A cyclic update usually means that providing the initial value to the node can have a small delay, thus the initial NULL value may be reported.</span><br />
+<span class="f_Paragraph">You can override the method <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_subscription_1a169d390c61ce1575dba93f6c96ad95de" class="topiclink">Server::Subscription::onProvideInitialValues()</a> to configure the related <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_monitored_item.htm" class="topiclink">Server::MonitoredItems</a> to take the initial value from the next data change instead of using the current cache value.</span><br />
+<span class="f_Paragraph">See <a href="synchronizewithdevice.htm" class="topiclink">Synchronize with Underlying Device</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Client::Session</a> fails to connect when the server endpoint does not support GetEndpoints service on the desired endpoint.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Client::Session</a> requires a Discovery URL, where it can invoke the GetEndpoints service for some security checks. By default, the normal Endpoint URL is used also as Discovery URL.</span><br />
+<span class="f_Paragraph">Invoke <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1acd13254a94272512ee37c8f28f775e5d" class="topiclink">Client::Session::setDiscoveryUrl()</a> to configure the Discovery URL explicitly.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> On few third party servers, it can happen that <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a> or <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1af1860f5a09e099b0304fb0283abfdfce" class="topiclink">Client::Session::connect()</a> fails due to a resolved URL with a hostname.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> By default, the SDK resolves endpoint URLs automatically and replaces the part with the hostname to a matching IP address to ensure to use the correct IP format (IPv4 or IPv6).</span><br />
+<span class="f_Paragraph">A few servers may reject the connection when the sent URL string does not match exactly the own configured URL, even though the sent IP address matches the machine's IP.</span><br />
+<span class="f_Paragraph">You can configure the SDK to not resolve the URL string automatically to keep the URL with the hostname, either as a parameter of <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a> or via <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a7ab450091d876976df0266fbf97e3daa" class="topiclink">Client::Session::setHostnameResolution()</a>.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> This problem may be difficult to identify, as the client usually gets the common error status BadDisconnect, but this status can also be caused by several other reasons.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> If the network is configured to provide both, IPv4 and IPv6, it is random which IP type will be used. If the server listens on only one IP format, the client may not find the endpoint.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> This problem can also be solved by changing the server configuration to configure its endpoint URL with an IP address instead of a hostname.</span><br />
+<span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">P:</span><span class="f_Paragraph"> The server accepts only 100 sessions from clients.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">S:</span><span class="f_Paragraph"> This is a configured limitation of the OPC UA stack which cannot be changed during runtime.</span><br />
+<span class="f_Paragraph">The purpose of this limitation is to prevent unexpected out of memory problems which could be caused by rogue clients.</span><br />
+<span class="f_Paragraph">If you have the source code delivery of the SDK, then you are able to modify the related limitations and recompile the OPC UA stack.</span><br />
+<span class="f_Paragraph">The related defines in the OPC UA Stack are </span><span class="f_FixedSize">OPCUA_P_TIMER_NO_OF_TIMERS</span><span class="f_Paragraph">, </span><span class="f_FixedSize">OPCUA_TCPLISTENER_MAXCONNECTIONS</span><span class="f_Paragraph">, </span><span class="f_FixedSize">OPCUA_P_SOCKETMANAGER_NUMBEROFSOCKETS</span><span class="f_Paragraph"> and </span><span class="f_FixedSize">OPCUA_SOCKET_MAXMANAGERS</span><span class="f_Paragraph">.</span><br />
+<span class="f_Paragraph">They are stored in the files </span><span class="f_Reference">&lt;InstallDir&gt;Source/Core/Stack/platforms/&lt;platform&gt;/opcua_p_timer.h</span><span class="f_Paragraph"> and </span><span class="f_Reference">&lt;InstallDir&gt;/Source/Core/Stack/core/opcua_config.h</span><span class="f_Paragraph">.</span><br />
+<span class="f_Paragraph">You can either update the defined values in the header files or provide the desired values as preprocessor defines to the stack project.</span></p>
+<p class="p_Paragraph"><span style="font-size: 11pt; font-family: Calibri;">The rough formulas to set these defines are:</span><br />
+<span class="f_FixedSize">OPCUA_P_TIMER_NO_OF_TIMERS=2*MaxSessions</span><br />
+<span class="f_FixedSize">OPCUA_TCPLISTENER_MAXCONNECTIONS=MaxSessions</span><br />
+<span class="f_FixedSize">OPCUA_P_SOCKETMANAGER_NUMBEROFSOCKETS=(2*MaxSessions)+10</span><br />
+<span class="f_FixedSize">OPCUA_SOCKET_MAXMANAGERS=(2*MaxSessions)+10</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See <a href="source_code_license.htm" class="topiclink">Source Code License</a>.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">denial of service attacks when &nbsp;By default, the SDK resolves endpoint URLs automatically and replaces the part with the hostname to a matching IP address to ensure to use the correct IP format (IPv4 or IPv6).</span><br />
+<span class="f_Paragraph">A few servers may reject the connection when the sent URL string does not match exactly the own configured URL, even though the sent IP address matches the machine's IP.</span><br />
+<span class="f_Paragraph">You can configure the SDK to not resolve the URL string automatically to keep the URL with the hostname, either as a parameter of <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a> or via <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a7ab450091d876976df0266fbf97e3daa" class="topiclink">Client::Session::setHostnameResolution()</a>.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> This problem may be difficult to identify, as the client usually gets the common error status BadDisconnect, but this status can also be caused by several other reasons.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> If the network is configured to provide both, IPv4 and IPv6, it is random which IP type will be used. If the server listens on only one IP format, the client may not find the endpoint.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> This problem can also be solved by changing the server configuration to configure its endpoint URL with an IP address instead of a hostname.</span><br />
+<span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">FAQ:</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Q:</span><span class="f_Paragraph"> Can a Client connect to a Server behind a proxy?</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">A:</span><span class="f_Paragraph"> The current stack does not support connection through a proxy.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Q:</span><span class="f_Paragraph"> How can I use a different OpenSSL version in my application than what is used by the SDK?</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">A:</span><span class="f_Paragraph"> If you have the source code of the SDK, you can download the desired OpenSSL &quot;.tar.gz&quot; file to </span><span class="f_Reference">&lt;InstallDir&gt;/Source/Core/OpenSSL</span><span class="f_Paragraph">, move/remove the prior &quot;.tar.gz&quot; file from that folder and try to build the SDK with the different OpenSSL (see <a href="openssl_functionality_howto.htm" class="topiclink">OpenSSL Functionality</a>). The SDK should be compatible with most OpenSSL versions, otherwise it will report compilation errors.</span><br />
+<span class="f_Paragraph">If you have the binary version of the Windows SDK, then the only problem is, that the two different OpenSSL DLLs typically want to have the same names.</span><br />
+<span class="f_Paragraph">To solve that, you can rename the libraries </span><span class="f_Reference">libcrypto-1_1.dll</span><span class="f_Paragraph"> and </span><span class="f_Reference">libssl-1_1.dll</span><span class="f_Paragraph"> to names with an equal length, e.g. </span><span class="f_Reference">libcrypto-1ua.dll</span><span class="f_Paragraph"> and </span><span class="f_Reference">libssl-1ua.dll</span><span class="f_Paragraph">. Then you can open the DLLs </span><span class="f_Reference">TB5STACK.dll</span><span class="f_Paragraph"> (or</span><span class="f_Reference"> TB5STACKx64.dll</span><span class="f_Paragraph">) and the renamed </span><span class="f_Reference">libssl-1_1.dll</span><span class="f_Paragraph"> in an editor and search and rename the original DLL names by the new names.</span><br />
+<span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> This will work only if the old and new DLL names have the same size, changing the size of the DLL content will cause problems.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Q:</span><span class="f_Paragraph"> Is it possible to have several applications (servers or clients) in one process?</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">A:</span><span class="f_Paragraph"> By default it is not possible to have several applications in the same process, the limitation is caused by several singletons which are accessible from the entire process.</span><br />
+<span class="f_Paragraph">The closest approach is to </span><span class="f_Paragraph">use several <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Client::Sessions</a> or <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm" class="topiclink">Server::Endpoints</a> and configure</span> them with individual application instance <span class="f_Paragraph">certificates (see <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a3e2bb41c4ecbcd9ff5087617507c8f72" class="topiclink">Client::Session::setInstanceCertificate()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_endpoint_1a0b8f668de5b183efc2a1d1fd551b6954" class="topiclink">Server::Endpoint::setInstanceCertificate()</a>), but</span> all will share the <span class="f_Paragraph">same <a href="class_softing_o_p_c_toolbox5_1_1_application_description.htm" class="topiclink">ApplicationDescription</a> and all servers will share the same address space.</span><br />
+<span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> The application instance certificates shall have the same ApplicationUri as the <a href="class_softing_o_p_c_toolbox5_1_1_application_description.htm" class="topiclink">ApplicationDescription</a>, thus all certificates must use the same ApplicationUri.</span><br />
+<span class="f_Paragraph">There is another possible approach to produce several applications in one process by separating the different applications into several DLLs (Windows) or shared objects (Linux).</span><br />
+<span class="f_Paragraph">Different DLLs or shared objects have separate code and don't conflict if they know symbols of the same name, but it is important to load the SDK as static library into the DLLs or shared objects to have duplicate instances.</span><br />
+<span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> For Windows the binaries are only available as DLLs. A source code license is needed to produce static libraries for Windows. Please contact the <a href="html_supportinfo.htm" class="topiclink">support</a> for additional help how to configure projects for static libraries.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Q:</span><span class="f_Paragraph"> What are the minimal hardware requirements for a Server?</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">A:</span><span class="f_Paragraph"> It highly depends on the provided number of nodes, the number of expected clients and what the clients want to do.</span><br />
+<span class="f_Paragraph">For an average server with a few hundred individual nodes and a few clients, 64 MB RAM and a CPU with 200 MHz is sufficient.</span><br />
+<span class="f_Paragraph">The CPU speed almost doesn't matter unless huge amount of data shall be transferred.</span><br />
+<span class="f_Paragraph">A hardware with a CPU of 200 MHz can handle a few thousand read or write service operations per second, a modern desktop PC can handle several hundred thousand reads or writes per second.</span><br />
+<span class="f_Paragraph">Of course, the speed also depends on how the server is bound to the data source.</span><br />
+<span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Q:</span><span class="f_Paragraph"> What are the minimal hardware requirements for a Client?</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">A:</span><span class="f_Paragraph"> Clients have a smaller footprint than servers as most of the information is stored and handled at the server.</span><br />
+<span class="f_Paragraph">For an average client with a few sessions and an a few subscriptions, 20 MB RAM and a CPU with 200 MHz is sufficient.</span><br />
+<span class="f_Paragraph">For an average server with a few hundred individual nodes and a few clients, 64 MB RAM and a CPU with 200 MHz is sufficient.</span><br />
+<span class="f_Paragraph">The CPU speed almost doesn't matter unless huge amount of data shall be transferred.</span><br />
+<span class="f_Paragraph">&nbsp;</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_faq.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

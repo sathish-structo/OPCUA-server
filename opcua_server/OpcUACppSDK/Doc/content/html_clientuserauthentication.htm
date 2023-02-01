@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>User Authentication</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_clientuserauthentication.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">User Authentication</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_clientmessageintegrity.htm">Previous</a>&nbsp;
+     <a href="html_serverendpointsecuritysetup.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">A client authenticates a user to a server by passing a so-called </span><span class="f_Reference">user identity token</span><span class="f_Paragraph"> to the server. The SDK supports various authentication schemes by providing different identity token types:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_i_anonymous_identity_token.htm" class="topiclink">AnonymousIdentityToken</a>: Indicates to the server that the client does not provide any user credentials</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_i_user_identity_token.htm" class="topiclink">UserNameIdentityToken</a>: Authenticates a user with a username and a password</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_i_x509_identity_token.htm" class="topiclink">X509IdentityToken</a>: Uses an X.509 certificate to authenticate a user</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="class_softing_o_p_c_toolbox5_1_1_i_issued_identity_token.htm" class="topiclink">IssuedIdentityToken</a>: Uses a WS-Security token to authenticate a user</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">An OPC UA server uses </span><span class="f_Reference">user token policies</span><span class="f_Paragraph"> to define the available user authentication schemes. A <a href="class_softing_o_p_c_toolbox5_1_1_i_user_token_policy.htm" class="topiclink">user token policy</a> is identified by a policy ID and defines (among other things)</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">the token type to which the policy applies and</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">a set of cryptographic algorithms (defined by a security policy URI) that the client shall apply to the identity token when passing the token to the server.</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Querying Available Authentication Schemes</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A server defines the available user token policies for each endpoint. Clients may use the method </span> <a href="class_softing_o_p_c_toolbox5_1_1_application.htm#class_softing_o_p_c_toolbox5_1_1_application_1a9027456301c1ec668d59bd44d8fac918" class="topiclink">Application::getEndpointsFromServer()</a><span class="f_Paragraph"> to query a list of available endpoints along with their supported authentication schemes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The following code snippet illustrates how to query all supported authentication schemes from a server:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ObjectPointer&lt;Application&gt;&nbsp;application&nbsp;=&nbsp;Application::instance();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EndpointDescription&gt;&nbsp;endpointDescriptions;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;tstring&gt;&nbsp;transportProfiles;&nbsp;//&nbsp;Do&nbsp;not&nbsp;filter&nbsp;any&nbsp;transport&nbsp;profiles</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">application-&gt;getEndpointsFromServer(</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">_T(&quot;&lt;Server&nbsp;URL&gt;&quot;),</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">transportProfiles,</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">endpointDescriptions);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">for(size_t&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;endpointDescriptions.size();&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">std::vector&lt;UserTokenPolicy&gt;&nbsp;userTokenPolicies&nbsp;=&nbsp;endpointDescriptions[i].getUserIdentityTokens();</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;Select&nbsp;an&nbsp;appropriate&nbsp;token&nbsp;policy</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Authenticating with a Server</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">To authenticate with a server the client has to create a user identity token and pass it to <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a97236b9936ca09f822c09296cf91cbf9" class="topiclink">Session::setUserIdentityToken()</a>. The identity token contains a policy ID that refers to a token policy defined by the server. The cryptographic algorithms that are used to encrypt a token are not contained in the identity token itself. Therefore, a client application must always provide the algorithms explicitly by <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1ae609f9d2435fb67cc9d727683724ca71" class="topiclink">Session::setUserSecurityPolicy()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The following code illustrates how to authenticate with a server by username/password authentication:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;Information&nbsp;that&nbsp;can&nbsp;be&nbsp;obtained&nbsp;by&nbsp;Application::getEndpointsFromServer():</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tstring&nbsp;policyId;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tstring&nbsp;userSecurityPolicyUri;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ByteString&nbsp;password(_T(&quot;password&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">UserIdentityToken&nbsp;userIdentityToken;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">userIdentityToken.setUserNameIdentityToken(</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">policyId,</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">_T(&quot;username&quot;),</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&amp;password);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ObjectPointer&lt;Client::Session&gt;&nbsp;session;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setUserIdentityToken(&amp;userIdentityToken);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;setUserSecurityPolicy(userSecurityPolicyUri);</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Sample Application</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Please refer to the article <a href="html_sampleuseraccesscontrol.htm" class="topiclink">User Access Control</a> that describes a sample application that performs user authentication.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_clientuserauthentication.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

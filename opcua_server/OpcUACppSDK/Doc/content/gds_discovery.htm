@@ -1,0 +1,130 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Discovery</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "gds_discovery.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Discovery</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="opc_foundation_gds2.htm">Previous</a>&nbsp;
+     <a href="gds_certificate_management.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">OPC UA applications can connect to the GDS and query the list of registered applications to find a desired application.</span><br />
+<span class="f_Paragraph">This is typically used only by client applications which search for a certain server or for servers with certain criteria to get the required endpoint URL(s) of the server(s).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The OPC UA C++ Server &amp; Client SDK V6.00 does not provide convenience support for the GDS discovery as an application can easily perform the steps manually.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Establish a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Client::Session</a> to the endpoint URL of the GDS using user credentials which are accepted for the query operations.</span><br />
+<span class="f_Paragraph">This depends on the used GDS and where it is running.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Use the session to invoke a UA method call to the </span><span class="f_Reference">QueryApplications</span><span class="f_Paragraph"> method (numeric ID 992) of the </span><span class="f_Reference">Directory</span><span class="f_Paragraph"> object (numeric ID 141) which are located in the namespace </span><span class="f_Reference">http://opcfoundation.org/UA/GDS/</span><span class="f_Paragraph">.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> The following code sample skips several mandatory checks for status codes and vector ranges to keep the code simple. The example code will crash if any OPC UA service reports an error, a real application must perform those missing checks to prevent crashes!</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;provide&nbsp;the&nbsp;matching&nbsp;settings&nbsp;to&nbsp;connect&nbsp;to&nbsp;the&nbsp;GDS</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;Note:&nbsp;Any&nbsp;client&nbsp;is&nbsp;able&nbsp;to&nbsp;call&nbsp;the&nbsp;QueryApplications&nbsp;method,&nbsp;however,&nbsp;the&nbsp;set&nbsp;of&nbsp;results</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returned&nbsp;may&nbsp;be&nbsp;restricted&nbsp;based&nbsp;on&nbsp;the&nbsp;client’s&nbsp;user&nbsp;credentials.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tstring&nbsp;gdsUrl&nbsp;=&nbsp;_T(&quot;opc.tcp://127.0.0.1:58810/GlobalDiscoveryServer&quot;);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumUserTokenType&nbsp;desiredTokenType&nbsp;=&nbsp;EnumUserTokenType_UserName;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumMessageSecurityMode&nbsp;desiredSecurityMode&nbsp;=&nbsp;EnumMessageSecurityMode_None;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tstring&nbsp;desiredSecurityPolicy&nbsp;=&nbsp;SecurityPolicyUri_None;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Client::SessionPtr&nbsp;session&nbsp;=&nbsp;Client::Session::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">UserIdentityToken&nbsp;userIdentityToken;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;this&nbsp;example&nbsp;uses&nbsp;an&nbsp;anonymous&nbsp;user,&nbsp;which&nbsp;is&nbsp;the&nbsp;default&nbsp;value&nbsp;of&nbsp;UserIdentityToken</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;the&nbsp;policyId&nbsp;will&nbsp;be&nbsp;filled&nbsp;during&nbsp;Client::Session::configure()</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;configure&nbsp;the&nbsp;session&nbsp;with&nbsp;the&nbsp;desired&nbsp;settings&nbsp;and&nbsp;let&nbsp;the&nbsp;SDK&nbsp;pick&nbsp;the</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;remaining&nbsp;config&nbsp;settings&nbsp;from&nbsp;the&nbsp;GetEndpoints&nbsp;response&nbsp;(endpoint&nbsp;to&nbsp;connect,&nbsp;PolicyId&nbsp;and&nbsp;UserTokenSecurity)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;configure(gdsUrl,&nbsp;userIdentityToken,&nbsp;desiredSecurityMode,&nbsp;desiredSecurityPolicy);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;connect(true);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;find&nbsp;the&nbsp;namespace&nbsp;index&nbsp;of&nbsp;the&nbsp;gds&nbsp;namespace</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tstring&nbsp;gdsNamespaceUri&nbsp;=&nbsp;_T(&quot;http://opcfoundation.org/UA/GDS/&quot;);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">StringTableConstPtr&nbsp;gdsNamespaceTable;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;getNamespaceTable(&amp;gdsNamespaceTable);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">OTUInt16&nbsp;gdsNamespaceIndex&nbsp;=&nbsp;0;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">gdsNamespaceTable-&gt;getIndex(gdsNamespaceUri,&nbsp;gdsNamespaceIndex);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;perform&nbsp;the&nbsp;method&nbsp;call(s)&nbsp;to&nbsp;find&nbsp;the&nbsp;desired&nbsp;application</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;objectId(gdsNamespaceIndex,&nbsp;141);&nbsp;//&nbsp;the&nbsp;Directory&nbsp;object</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;methodId(gdsNamespaceIndex,&nbsp;992);&nbsp;//&nbsp;the&nbsp;Directory_QueryApplications&nbsp;method</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;inputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;outputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EnumStatusCode&gt;&nbsp;inputArgumentResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;callResult&nbsp;=&nbsp;EnumStatusCode_Good;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value((OTUInt32)0));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;startingRecordId</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;provide&nbsp;the&nbsp;desired&nbsp;query&nbsp;filters</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value((OTUInt32)1));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;maxRecordsToReturn</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(_T(&quot;MyServer&quot;)));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;applicationName</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(_T(&quot;&quot;)));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;applicationUri</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value((OTUInt32)EnumApplicationType_Server));&nbsp;//&nbsp;applicationType</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(_T(&quot;&quot;)));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;productUri</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(std::vector&lt;tstring&gt;()));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;capabilities</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;callMethod(&amp;objectId,&nbsp;&amp;methodId,&nbsp;inputArguments,&nbsp;outputArguments,&nbsp;inputArgumentResults,&nbsp;&amp;callResult);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;this&nbsp;example&nbsp;expects&nbsp;to&nbsp;find&nbsp;one&nbsp;application&nbsp;and&nbsp;thus&nbsp;neither&nbsp;needs&nbsp;to&nbsp;loop</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;through&nbsp;the&nbsp;returned&nbsp;applications&nbsp;nor&nbsp;needs&nbsp;to&nbsp;repeat&nbsp;the&nbsp;method&nbsp;call&nbsp;with&nbsp;nextRecordId</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;unused&nbsp;outputArguments[0]:&nbsp;DateTime&nbsp;lastCounterResetTime</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;unused&nbsp;outputArguments[1]:&nbsp;OTUInt32&nbsp;nextRecordId</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;ApplicationDescription&gt;&nbsp;foundApplications;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">outputArguments[2].getApplicationDescriptionArray(foundApplications);&nbsp;&nbsp;//&nbsp;applications</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">if(!foundApplications.empty())</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;the&nbsp;desired&nbsp;application&nbsp;is&nbsp;registered&nbsp;at&nbsp;the&nbsp;gds</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;tstring&nbsp;discoveryUrl&nbsp;=&nbsp;foundApplications[0].getDiscoveryUrls()[0];</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;we&nbsp;can&nbsp;create&nbsp;and&nbsp;configure&nbsp;another&nbsp;session&nbsp;to&nbsp;the&nbsp;found&nbsp;discovery&nbsp;URL&nbsp;of&nbsp;the&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">else</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;the&nbsp;desired&nbsp;application&nbsp;is&nbsp;not&nbsp;registered&nbsp;at&nbsp;the&nbsp;gds</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=gds_discovery.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

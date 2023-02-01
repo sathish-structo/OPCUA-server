@@ -1,0 +1,224 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>How to use ModelDesigner</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_modeldesigner_howtousemodeldesigner.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">How to use ModelDesigner</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_modeldesigner_methods_resetaddressspace.htm">Previous</a>&nbsp;
+     <a href="html_gettingstarted.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h1 class="p_Heading1"><span class="f_Heading1">Performable Actions by Combining Methods</span></h1>
+<p class="p_Paragraph"><span class="f_Paragraph">For the following actions there are no own methods available, but they can be performed by executing several existing methods.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Add or remove translations for localizedText</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The methods which create a new node in the AddressSpace can handle only one language for the localizedTexts for DisplayName or Description. To add additional translations the <a href="html_modeldesigner_methods_modifyattributes.htm" class="topiclink">ModifyAttributes</a> shall be used. In this case the necessary input arguments for the ModifyAttributes are the NodeId of the node which should get the new translation and the 5th (DisplayName) and/or 6th (Description) argument. Provide for the DisplayName and Description LocalizedTexts with the new translation and the corresponding locale have to be provided. If there is already a text for the given locale it is overwritten. If the locale is not existing it is added. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If the translation is left empty and just the locale is provided, the existing translation is removed. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If both, translation and locale, are empty, all translations are removed, even the default. This is also the only way to remove the a default locale, if it is added by mistake. First remove all translations and than add each translation step by step.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Create methods with in/output arguments</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="html_modeldesigner_methods_createmethod.htm" class="topiclink">CreateMethod</a> provides the flags to automatically create Nodes for input and output arguments. These Nodes have an automatically generated GUID NodeId. Another possibility is to create the argument nodes after the method is created. To do this, the <a href="html_modeldesigner_methods_createinstance.htm" class="topiclink">CreateInstance</a> method is used to create the nodes. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Sample code:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;modelDesignerNode(4,&nbsp;_T(&quot;ModelDesignerRoot&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;createMethodNodeId(4,&nbsp;_T(&quot;CreateMethod&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;methodNodeId;&nbsp;//from&nbsp;output&nbsp;parameter&nbsp;of&nbsp;CreateMethod</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;hasPropertyId(EnumNumericNodeId_HasProperty);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;inputNode(5,&nbsp;_T(&quot;InputArgumentNode&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;inputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(methodNodeId));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(NodeId(EnumNumericNodeId_HasProperty)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(inputNode));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(QualifiedName(_T(&quot;InputArguments&quot;),0)));&nbsp;//or&nbsp;OutputArguments</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(LocalizedText(_T(&quot;&quot;),_T(&quot;&quot;))));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(LocalizedText(_T(&quot;&quot;),_T(&quot;&quot;))));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(NodeId(EnumNumericNodeId_Argument)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;outputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EnumStatusCode&gt;&nbsp;inputArgumentResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;callResult;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;call&nbsp;the&nbsp;method&nbsp;on&nbsp;the&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;m_session-&gt;callMethod(&amp;modelDesignerNode,&nbsp;&amp;createMethodNodeId,&nbsp;inputArguments,&nbsp;outputArguments,&nbsp;inputArgumentResults,&nbsp;&amp;callResult);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">After the Nodes for the In/OutputArguments are created the Attributes can be modified with the <a href="html_modeldesigner_methods_modifyattributes.htm" class="topiclink">ModifyAttributes</a> method:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;modifyAttributesNodeId(4,&nbsp;_T(&quot;ModifyAttributes&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Argument&gt;&nbsp;arguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Argument&nbsp;currentArgument;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">currentArgument.setName(_T(&quot;ArgumentName&quot;));&nbsp;//the&nbsp;name&nbsp;of&nbsp;the&nbsp;argument</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">currentArgument.setDataType(NodeId(EnumNumericNodeId_Boolean));&nbsp;//NodeId&nbsp;of&nbsp;the&nbsp;Datatype&nbsp;e.g.&nbsp;Boolean</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">currentArgument.setDescription(LocalizedText(_T(&quot;Description&nbsp;of&nbsp;argument&quot;),&nbsp;_T(&quot;&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">currentArgument.setValueRank(ValueRank_Scalar);&nbsp;//</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">arguments.push_back(currentArgument);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;more&nbsp;arguments&nbsp;can&nbsp;be&nbsp;added.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;inputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(inputNode));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(arguments);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(NULL);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;outputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EnumStatusCode&gt;&nbsp;inputArgumentResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;callResult;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;call&nbsp;the&nbsp;method&nbsp;on&nbsp;the&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;m_session-&gt;callMethod(&amp;m_modelDesignerNode,&nbsp;modifyAttributesNodeId,&nbsp;inputArguments,&nbsp;outputArguments,&nbsp;inputArgumentResults,&nbsp;&amp;callResult);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Automatically inserted properties</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The CreateInstance method inserts the properties of the type from which it is instantiated. That means if an instance of an AnalogItemType is created, all properties EURange, InstrumentRange and EnguneeringUnits are automatically inserted. If an optional property is not wanted, it can be removed afterwards using <a href="html_modeldesigner_methods_removenode.htm" class="topiclink">RemoveNode</a> method.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Remove Namespace</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">In some cases it could be necessary to remove a namespace. The problem is, that the namespaces are stored in an array. The position in this array indicates the <a href="namespaces.htm" class="topiclink">namespace</a> ID used for NodeIds and BrowseNames.</span><br />
+<span class="f_Paragraph">When a namespace is removed all namespace IDs of later added namespaces will decrease. This causes huge effort to update all depending nodes in the address space.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The solution we propose to remove a namespace from the address space is:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_modeldesigner_methods_export.htm" class="topiclink">Export</a> all namespaces, except the namespace to be removed, to an XML file</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_modeldesigner_methods_resetaddressspace.htm" class="topiclink">Reset</a> the address space</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_modeldesigner_methods_import.htm" class="topiclink">Import</a> the previously created XML file</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Reorder Namespaces</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Reordering namespaces can be performed by the following steps:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_modeldesigner_methods_export.htm" class="topiclink">Export</a> the namespaces. Here it is necessary to provide the namespace URIs in the desired order.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_modeldesigner_methods_resetaddressspace.htm" class="topiclink">Reset</a> the address space</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_modeldesigner_methods_import.htm" class="topiclink">Import</a> the previously exported XML file, which contains the namespaces with the desired order</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Usage of extensions</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Extensions can contain necessary information for the server. e.g. the physical addresses of the underlying hardware. They can be set with <a href="html_modeldesigner_methods_setextensions.htm" class="topiclink">SetExtensions</a> and read back with <a href="html_modeldesigner_methods_getextensions.htm" class="topiclink">GetExtensions</a> methods. </span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Common Example</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">A typical use case is, that some companywide standards exists, where the devices are described. For OPC UA it means that there are xml files with the ObjectTypes, VariableTypes etc. With the ModelDesigner it is now easily possible to create instances of the types. The first step is to <a href="html_modeldesigner_methods_import.htm" class="topiclink">import</a> the nodeset xml with the types.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;modelDesignerNode(4,&nbsp;_T(&quot;ModelDesignerRoot&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;importNodeId(4,&nbsp;_T(&quot;Import&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tstring&nbsp;filePathAndName;&nbsp;//the&nbsp;name&nbsp;and&nbsp;the&nbsp;path&nbsp;to&nbsp;the&nbsp;xml&nbsp;file&nbsp;on&nbsp;the&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">UInt16&nbsp;dublicatNodeHandling&nbsp;=&nbsp;0;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;0&nbsp;report&nbsp;an&nbsp;error&nbsp;and&nbsp;stop&nbsp;import</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;1&nbsp;means&nbsp;use&nbsp;the&nbsp;existing&nbsp;Node</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;2&nbsp;means&nbsp;use&nbsp;the&nbsp;new&nbsp;Node</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;inputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(filePathAndName));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(dublicatNodeHandling));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;outputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EnumStatusCode&gt;&nbsp;inputArgumentResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;callResult;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;call&nbsp;the&nbsp;method&nbsp;on&nbsp;the&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;m_session-&gt;callMethod(&amp;m_modelDesignerNode,&nbsp;importNodeId,&nbsp;inputArguments,&nbsp;outputArguments,&nbsp;inputArgumentResults,&nbsp;&amp;callResult);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">After the import a new namespace can be <a href="html_modeldesigner_methods_addnamespace.htm" class="topiclink">added</a> for the instances of the imported types:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;modelDesignerNode(4,&nbsp;_T(&quot;ModelDesignerRoot&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;addNamespaceNodeId(4,&nbsp;_T(&quot;AddNamespace&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tstring&nbsp;namespaceURI;&nbsp;//the&nbsp;namespaceURI</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;inputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(namespaceURI);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;outputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EnumStatusCode&gt;&nbsp;inputArgumentResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;callResult;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;call&nbsp;the&nbsp;method&nbsp;on&nbsp;the&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;m_session-&gt;callMethod(&amp;m_modelDesignerNode,&nbsp;addNamespaceNodeId,&nbsp;inputArguments,&nbsp;outputArguments,&nbsp;inputArgumentResults,&nbsp;&amp;callResult);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">the third output Argument contains the namespace index of the new created namespace on the server. In this new namespace the instances can be created with the <a href="html_modeldesigner_methods_createinstance.htm" class="topiclink">CreateInstance</a> method using the namespace index of the output:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;modelDesignerNode(4,&nbsp;_T(&quot;ModelDesignerRoot&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;createInstanceNodeId(4,&nbsp;_T(&quot;CreateInstance&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;inputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(NodeId(...)));&nbsp;//NodeId&nbsp;of&nbsp;the&nbsp;imported&nbsp;type</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(NodeId(...)));&nbsp;//NodeId&nbsp;of&nbsp;the&nbsp;parent&nbsp;of&nbsp;the&nbsp;instance</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(NodeId(...)));&nbsp;//NodeId&nbsp;of&nbsp;the&nbsp;Reference&nbsp;type&nbsp;(maybe&nbsp;imported)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(NodeId(...)));&nbsp;//NodeId&nbsp;of&nbsp;the&nbsp;new&nbsp;instance.&nbsp;namespace&nbsp;index&nbsp;should&nbsp;be&nbsp;the&nbsp;new&nbsp;created&nbsp;namespace</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(QualifiedName(&lt;new&nbsp;namespace&nbsp;index&gt;,&nbsp;_T(&quot;NewInstance&quot;))));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(LocalizedText(_T(&quot;New&nbsp;Instance&quot;),&nbsp;_T(&quot;en&quot;))));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(Null));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(Null));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(Null));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(Null));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(Null));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(Null));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(Null));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;outputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EnumStatusCode&gt;&nbsp;inputArgumentResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;callResult;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;call&nbsp;the&nbsp;method&nbsp;on&nbsp;the&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;m_session-&gt;callMethod(&amp;m_modelDesignerNode,&nbsp;createInstanceNodeId,&nbsp;inputArguments,&nbsp;outputArguments,&nbsp;inputArgumentResults,&nbsp;&amp;callResult);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The last step can be the export of the newly created instances to an xml nodeset file. To get an xml file containing only the instances, just the new added namespace URI shall be provided for the export.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;modelDesignerNode(4,&nbsp;_T(&quot;ModelDesignerRoot&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;exportNodeId(4,&nbsp;_T(&quot;Export&quot;));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">tstring&nbsp;filePathAndName;&nbsp;//the&nbsp;name&nbsp;and&nbsp;the&nbsp;path&nbsp;to&nbsp;the&nbsp;xml&nbsp;file&nbsp;on&nbsp;the&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;tstring&gt;&nbsp;namespaceURIs</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">namespaceURIs.push_back(_T(&quot;&quot;));&nbsp;//the&nbsp;namesapce&nbsp;URI&nbsp;where&nbsp;the&nbsp;instances&nbsp;are&nbsp;created</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;inputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(filePathAndName));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">inputArguments.push_back(Value(namespaceURIs));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;Value&gt;&nbsp;outputArguments;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">std::vector&lt;EnumStatusCode&gt;&nbsp;inputArgumentResults;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">EnumStatusCode&nbsp;callResult;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;call&nbsp;the&nbsp;method&nbsp;on&nbsp;the&nbsp;server</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;m_session-&gt;callMethod(&amp;m_modelDesignerNode,&nbsp;exportNodeId,&nbsp;inputArguments,&nbsp;outputArguments,&nbsp;inputArgumentResults,&nbsp;&amp;callResult);</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_modeldesigner_howtousemodeldesigner.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Linux</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "source_code_license_linux.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Linux</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="source_code_license_windows.htm">Previous</a>&nbsp;
+     <a href="source_code_license_vxworks.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">Compile the SDK from Source Code on Linux</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The source code package of the SDK includes 4 additional makefiles, that can be used to build the SDK for different configurations.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">linux_gcc_core.mak</span><span class="f_Paragraph">: This makefile builds the SDK as static libraries. The (on the Linux system) installed shared libraries and their development packages of OpenSSL and libxml2 are used.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">linux_gcc_core2.mak</span><span class="f_Paragraph">: This makefile builds the OpenSSL and libxml2 from the delivered sources as static libraries and builds the SDK with these static libraries.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">linux_gcc_core3.mak</span><span class="f_Paragraph">: This makefile builds the SDK for cross compilation with the static libraries of OpenSSL and libxml2.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">linux_gcc_core_shared.mak</span><span class="f_Paragraph">: This makefile builds the SDK as shared library. The (on the Linux system) installed shared libraries and their development packages of OpenSSL and libxml2 are used.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In case you want to use the makefiles that require the shared libraries of OpenSSL and libxml2, you need to install the shared libraries of OpenSSL and libxml2 and their development packages.</span><br />
+<span class="f_Paragraph">If your distribution does not deploy them, you can download and build them by your own (see <a href="https://www.openssl.org/source/" target="_blank" class="weblink" title="http://www.openssl.org/source">http://www.openssl.org/source</a> and <a href="http://www.xmlsoft.org/" target="_blank" class="weblink">http://www.xmlsoft.org/</a>).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The delivered SDK libraries are built using OpenSSL V1.1.1o and libxml2 V2.9.11). The sources of these versions are delivered as well.</span><br />
+<span class="f_Paragraph">If you want to build the SDK using different installed versions, you should use the linux_gcc_core.mak or linux_gcc_core_shared.mak.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Open a terminal, navigate to the directory </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source</span><span class="f_Paragraph"> and run the desired makefile script in the following way:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;&lt;Selected&nbsp;Makefile&gt;&nbsp;[Build&nbsp;Options]&nbsp;[Build&nbsp;Variable=Setting]</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Available Build Options:</span></p>
+<p class="p_FixedSize"><span class="f_FixedSize">all</span><span class="f_Paragraph">: This option performs an incremental build of the SDK. This is the default option when no build option is set.</span></p>
+<p class="p_FixedSize"><span class="f_FixedSize">strip</span><span class="f_Paragraph">: This option removes all debug symbols from the built object files.</span></p>
+<p class="p_FixedSize"><span class="f_FixedSize">clean</span><span class="f_Paragraph">: This option removes all previously built files.</span></p>
+<p class="p_FixedSize"><span class="f_FixedSize">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Available Build Variables:</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">BUILD_TARGET</span><span class="f_Paragraph">: Possible values are </span><span class="f_FixedSize">debug </span><span class="f_Paragraph">and </span><span class="f_FixedSize">release</span><span class="f_Paragraph"> (default) for the static libraries and </span><span class="f_FixedSize">release-shared</span><span class="f_Paragraph"> and </span><span class="f_FixedSize">debug-shared</span><span class="f_Paragraph"> for the shared libraries. You customize these values to influence the names of the built folder structure, every name containing the word &quot;debug&quot; is configured as a debug configuration, everything else is configured as a release configuration.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Even while debug libraries are not delivered, building the SDK with a &quot;debug&quot; configuration will omit any optimization.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> The </span><span class="f_FixedSize">BUILD_TARGET</span><span class="f_Paragraph"> variable is mandatory for building shared libraries.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">MACHINE_TYPE</span><span class="f_Paragraph">: If this variable is not set the settings </span><span class="f_FixedSize">i386</span><span class="f_Paragraph"> or </span><span class="f_FixedSize">x86_64</span><span class="f_Paragraph"> are detected automatically, otherwise it defaults to </span><span class="f_FixedSize">unknown</span><span class="f_Paragraph">. You can specify custom names to influence the names of the built folder structure.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> Some linux distributions report the machine type </span><span class="f_FixedSize">i686</span><span class="f_Paragraph"> instead of </span><span class="f_FixedSize">i386. </span><span class="f_Paragraph">The makefiles will detect this automatically as </span><span class="f_FixedSize">MACHINE_TYPE</span><span class="f_Paragraph"> </span><span class="f_FixedSize">i386</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">CROSS_COMPILE</span><span class="f_Paragraph">: This variable is used to set a cross compiler prefix in case cross compilation shall be used.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> The prefix must include everything including the last &quot;-&quot;, e.g. for a cross compiler &quot;</span><span class="f_FixedSize">arm-arago-linux-gnueabi-gcc</span><span class="f_Paragraph">&quot;, the prefix has to be &quot;</span><span class="f_FixedSize">arm-arago-linux-gnueabi-</span><span class="f_Paragraph">&quot;.</span></p>
+<p class="p_Paragraph"><span class="f_FixedSize">MACHINE_OPT</span><span class="f_Paragraph">: This variable shall be used to specify all machine specific settings. If this variable is not set </span><span class="f_FixedSize">CROSS_COMPILE</span><span class="f_Paragraph"> is not set and </span><span class="f_FixedSize">MACHINE_TYPE</span><span class="f_Paragraph"> has the value </span><span class="f_FixedSize">i386</span><span class="f_Paragraph"> or </span><span class="f_FixedSize">x86_64</span><span class="f_Paragraph">. </span><span class="f_FixedSize">MACHINE_OPT</span><span class="f_Paragraph"> will then default to either </span><span class="f_FixedSize">-m32</span><span class="f_Paragraph"> or </span><span class="f_FixedSize">-m64</span><span class="f_Paragraph">, which defines the 32 bit or 64 bit compile settings for an Intel processor.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Some valid examples:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;linux_gcc_core.mak</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;linux_gcc_core.mak&nbsp;MACHINE_TYPE=i386</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;linux_gcc_core2.mak</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;linux_gcc_core2.mak&nbsp;BUILD_TARGET=debug</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;linux_gcc_core2.mak&nbsp;MACHINE_OPT=&quot;-membedded&nbsp;-m32&quot;&nbsp;BUILD_TARGET=custom_debug</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;linux_gcc_core3.mak&nbsp;CROSS_COMPILE=arm-arago-linux-gnueabi-&nbsp;MACHINE_TYPE=my_arm&nbsp;MACHINE_OPT=-membedded</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;linux_gcc_core3.mak&nbsp;MACHINE_TYPE=i386</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;linux_gcc_core_shared.mak&nbsp;BUILD_TARGET=release-shared</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">make&nbsp;-f&nbsp;linux_gcc_core_shared.mak&nbsp;clean&nbsp;all&nbsp;BUILD_TARGET=release-shared</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note</span><span class="f_Paragraph">: </span><span class="f_FixedSize">linux_gcc_core2.mak</span><span class="f_Paragraph"> cannot be used with the </span><span class="f_FixedSize">MACHINE_TYPE</span><span class="f_Paragraph"> </span><span class="f_FixedSize">i386</span><span class="f_Paragraph"> on a 64 bit machine as the OpenSSL needs to be configured differently in this scenario. For this purpose use the makefile linux_gcc_core3.mak using the same parameters. See the valid examples.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Cross-compilation toolchain:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The toolchain for the cross compilation makefile </span><span class="f_FixedSize">linux_gcc_core3.mak</span><span class="f_Paragraph"> should contain all standard programs from the GNU C++ development suite which have a prefix in their filename (e.g. </span><span class="f_FixedSize">arm-linux-gnueabihf-</span><span class="f_Paragraph">). This prefix must be provided as the value of the global environment variable </span><span class="f_FixedSize">$CROSS_COMPILE</span><span class="f_Paragraph">. The path to the compilation tools of the toolchain must be added to the environment variable </span><span class="f_FixedSize">$PATH</span><span class="f_Paragraph">. In case the toolchain does not already provide it this can be achieved by writing a small shell script like the following example (which assumes that the toolchain is installed in directory </span><span class="f_Reference">/opt/arm-linux-gnueabihf</span><span class="f_Paragraph">):</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;PATH=/opt/arm-linux-gnueabihf/bin:$PATH</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;CROSS_COMPILE=arm-linux-gnueabihf-</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In case your toolchain already provides a shell script to modify the environment you may call it and set the environment variable </span><span class="f_Reference">$MACHINE_OPT</span><span class="f_Paragraph"> to a concatenation of the compiler and linker flags as specified in the toolchain's environment settings script and undefine the variables for the GNU tools and the compiler and linker options:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;MACHINE_OPT=&quot;&lt;compiler&nbsp;and&nbsp;linker&nbsp;flags&gt;&quot;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;-n&nbsp;CC</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;-n&nbsp;CXX</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;-n&nbsp;CPP</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;-n&nbsp;AS</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;-n&nbsp;LD</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;-n&nbsp;CFLAGS</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;-n&nbsp;CXXFLAGS</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;-n&nbsp;LDFLAGS</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Using a cross-compilation toolchain the &quot;machine-type&quot; in the path to the binary directory is set to </span><span class="f_FixedSize">unknown</span><span class="f_Paragraph"> or can be specified by setting a value for the environment variable </span><span class="f_FixedSize">$MACHINE_TYPE</span><span class="f_Paragraph">, e.g.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">export&nbsp;MACHINE_TYPE=armv7</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> In case you invoke the build process for different toolchains on the same source file folder it is strongly recommended to use the combination &quot;</span><span class="f_FixedSize">clean all</span><span class="f_Paragraph">&quot; as targets to avoid possible build errors.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Executing the Self-Test</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">If you like to verify the new build, you can run the </span><span class="f_Reference">Test Server</span><span class="f_Paragraph"> executable and verify the server and client behavior with the </span><span class="f_Reference">Test Client</span><span class="f_Paragraph">.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph"><a href="html_setupcertificates.htm#createdemopkistores" class="topiclink">Create Demo PKI Stores</a> for the StructoAutomoldServer and TestClient if the demo stores don't exist yet.</span><br />
+<span class="f_Paragraph">In case you test between two systems, create the demo PKI stores on both systems and update the </span><span class="f_FixedSize">trusted</span><span class="f_Paragraph"> folders with the certificates of the remote machine.</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">If StructoAutomoldServer and TestClient run on the same system and your system supports hostnames:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Start the CPPTestServer without additional parameters</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">&gt;&nbsp;./CPPTestServer</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Start the CPPTestClient with the file </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Apps/Test/Cpp/TestClient/TestFiles/System.xml</span><span class="f_Paragraph">.</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">&gt;&nbsp;./CPPTestClient&nbsp;&lt;InstallDir&gt;/Source/Apps/Test/Cpp/TestClient/TestFiles/System.xml</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">If StructoAutomoldServer and TestClient run on different systems or your system does NOT support hostnames:</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Start the CPPTestServer with the additional parameter </span><span class="f_FixedSize">/endpointurl</span><span class="f_Paragraph"> to specify the network interface to use</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">&gt;&nbsp;./CPPTestServer&nbsp;/endpointurl&nbsp;opc.tcp://</span><span class="f_CodeExample" style="font-weight: bold;">&lt;IP&nbsp;address&nbsp;or&nbsp;hostname&gt;</span><span class="f_CodeExample">:4880/Softing/OpcUa/StructoAutomoldServer</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Start the CPPTestClient with the file </span><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Apps/Test/Cpp/TestClient/TestFiles/System.xml</span><span class="f_Paragraph"> and provide additional parameters for the different host and server application URI (without the intermediate line break).</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">&gt;&nbsp;./CPPTestClient&nbsp;&lt;InstallDir&gt;/Source/Apps/Test/Cpp/TestClient/TestFiles/System.xml</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;/envVar&nbsp;TARGET_HOST=&lt;</span><span class="f_CodeExample" style="font-weight: bold;">IP&nbsp;address&nbsp;or&nbsp;hostname</span><span class="f_CodeExample">&gt;&nbsp;/envVar&nbsp;SERVER_URI=urn:&lt;</span><span class="f_CodeExample" style="font-weight: bold;">IP&nbsp;address&nbsp;or&nbsp;hostname</span><span class="f_CodeExample">&gt;/Softing/OpcUa/StructoAutomoldServer</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> The path containing the </span><span class="f_Reference">System.xml</span><span class="f_Paragraph"> script provided to the </span><span class="f_Reference">Test Client</span><span class="f_Paragraph"> executable must contain only ASCII characters in the path name - the parser within the client is not able to process other file names.</span><br />
+<span class="f_Paragraph">If this is the case, then either provide relative paths or copy the </span><span class="f_FixedSize">TestFiles</span><span class="f_Paragraph"> folder to a different location.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> In case of the </span><span class="f_Paragraph" style="font-style: italic;">Client Source Code License</span><span class="f_Paragraph"> the delivered server source code is not complete. Although you can rebuild the StructoAutomoldServer without compilation errors, the server will not start. In this situation it is still safe to use the originally installed StructoAutomoldServer binaries for running the server in demo mode.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Verifying the Test Results</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">When the </span><span class="f_Reference">Test Client</span><span class="f_Paragraph"> has completed the self-test, you should see a test result that indicates a total number of zero failed tests.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">-------------------------------------------</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Run&nbsp;time:&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Test&nbsp;result&nbsp;summary:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">-------------------------------------------</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Registered&nbsp;(different)&nbsp;tests:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Executed&nbsp;(different)&nbsp;tests:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Succeeded&nbsp;tests:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Failed&nbsp;tests:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">-------------------------------------------</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Total&nbsp;executed&nbsp;tests&nbsp;&nbsp;(incl.&nbsp;repeats):&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Total&nbsp;succeeded&nbsp;tests&nbsp;(incl.&nbsp;repeats):&nbsp;&nbsp;...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Total&nbsp;failed&nbsp;&nbsp;tests&nbsp;&nbsp;&nbsp;(incl.&nbsp;repeats):&nbsp;&nbsp;&nbsp;&nbsp;0</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">-------------------------------------------</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=source_code_license_linux.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

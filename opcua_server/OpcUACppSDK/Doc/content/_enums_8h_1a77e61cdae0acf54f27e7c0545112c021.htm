@@ -1,0 +1,194 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>EnumPermissionType Reference</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "_enums_8h_1a77e61cdae0acf54f27e7c0545112c021.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">EnumPermissionType Reference</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="_enums_8h_1afc005b438cc82f026406edb67feaedab.htm">Previous</a>&nbsp;
+     <a href="_enums_8h_1a1a9bdaa265f4d19b157df45b4352679b.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p style="margin: 0px 0px 0px 0px;"><a id="_enums_8h_1a77e61cdae0acf54f27e7c0545112c021"></a></p>
+<p class="p_Paragraph">Bit coded enumeration (value can be a combination) defining the allowed permissions on a node. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 5px 0px;"><table class="EnumValues" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_None = 0x0000000u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">This Permission does not allow anythings for a client. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_Browse = 0x00000001u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to see the references to and from the Node. </p>
+<p class="p_Paragraph">This implies that the Client is able to Read to Attributes other than the Value or the RolePermissions Attribute. This Permission is valid for all NodeClasses. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_ReadRolePermissions = 0x00000002u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to read the RolePermissions Attribute. </p>
+<p class="p_Paragraph">This Permission is valid for all NodeClasses. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_WriteAttribute = 0x00000004u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to write to Attributes other than the Value, Historizing or RolePermissions Attribute if the WriteMask indicates that the Attribute is writeable. </p>
+<p class="p_Paragraph">This bit affects the value of a UserWriteMask Attribute. This Permission is valid for all NodeClasses. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_WriteRolePermissions = 0x00000008u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to write to the RolePermissions Attribute if the WriteMask indicates that the Attribute is writeable. </p>
+<p class="p_Paragraph">This bit affects the value of the UserWriteMask Attribute. This Permission is valid for all NodeClasses. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_WriteHistorizing = 0x00000010u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to write to the Historizing Attributes if the WriteMask indicates that the Attribute is writeable. </p>
+<p class="p_Paragraph">This bit affects the value of the UserWriteMask Attribute. This Permission is only valid for Variables. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_Read = 0x00000020u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to read the Value Attribute. </p>
+<p class="p_Paragraph">This bit affects the CurrentRead bit of the UserAccessLevel Attribute. This Permission is only valid for Variables. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_Write = 0x00000040u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to write the Value Attribute. </p>
+<p class="p_Paragraph">This bit affects the CurrentWrite bit of the UserAccessLevel Attribute. This Permission is only valid for Variables. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_ReadHistory = 0x00000080u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to read the history associated with a Node. </p>
+<p class="p_Paragraph">This bit affects the HistoryRead bit of the UserAccessLevel Attribute. This Permission is only valid for Variables, Objects or Views. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_InsertHistory = 0x00000100u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to insert the history associated with a Node. </p>
+<p class="p_Paragraph">This bit affects the HistoryWrite bit of the UserAccessLevel Attribute. This Permission is only valid for Variables, Objects or Views. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_ModifyHistory = 0x00000200u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to modify the history associated with a Node. </p>
+<p class="p_Paragraph">This bit affects the HistoryWrite bit of the UserAccessLevel Attribute. This Permission is only valid for Variables, Objects or Views. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_DeleteHistory = 0x00000400u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to delete the history associated with a Node. </p>
+<p class="p_Paragraph">This bit affects the HistoryWrite bit of the UserAccessLevel Attribute. This Permission is only valid for Variables, Objects or Views. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_ReceiveEvents = 0x00000800u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">A Client only receives an Event if this bit is set on the Node identified by the EventTypeId field and on the Node identified by the SourceNode field. </p>
+<p class="p_Paragraph">This Permission is only valid for EventType Nodes or SourceNodes. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_Call = 0x00001000u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to call the Method if this bit is set on the Object or ObjectType Node passed in the Call request and the Method Instance associated with that Object or ObjectType. </p>
+<p class="p_Paragraph">This bit affects the UserExecutable Attribute when set on Method Node. This Permission is only valid for Objects, ObjectType or Methods. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_AddReference = 0x00002000u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to add references to the Node. </p>
+<p class="p_Paragraph">This Permission is valid for all NodeClasses. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_RemoveReference = 0x00004000u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to remove references from the Node. </p>
+<p class="p_Paragraph">This Permission is valid for all NodeClasses. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_DeleteNode = 0x00008000u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to delete the Node. </p>
+<p class="p_Paragraph">This Permission is valid for all NodeClasses. </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:3px;"><p><span style="font-weight: bold;">EnumPermissionType_AddNode = 0x00010000u</span></p>
+</td>
+<td style="vertical-align:top; padding:3px;"><p class="p_Paragraph">The Client is allowed to add Nodes to the Namespace. </p>
+<p class="p_Paragraph">This Permission is only used in the DefaultRolePermissions and DefaultUserRolePermissions Properties of a NamespaceMetadata Object </p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=_enums_8h_1a77e61cdae0acf54f27e7c0545112c021.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

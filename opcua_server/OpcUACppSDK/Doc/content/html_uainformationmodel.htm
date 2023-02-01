@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Base Information Model</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uainformationmodel.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Base Information Model</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uaservicesmonitoreditemandsubscription.htm">Previous</a>&nbsp;
+     <a href="html_uainformationmodelobjecttypes.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">The primary objective of the OPC UA server is to expose information that can be used by clients to manage an underlying real-time process and the entire enterprise as a large whole with the main challenge of integrating systems and management resources into one homogenous environment. Information describes the state and behavior of the process and the server must be able to transfer it in both directions. The main challenge of the OPC UA information model is to support this transfer in a unique and transparent means in spite of the process complexity and roles of clients in the enterprise management hierarchy.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Information is an abstract knowledge; therefore it cannot be directly processed by physical machines. To make information capable of being processed, it must be represented as a set of words (terminals) first. To be transferable on the wire, the terminals must be a stream of bits and since the representation should be human readable, the terminals are usually strings. All allowed terminals make up a vocabulary. To define the relationship between information and representation on the one-to-one basis, we need syntax and semantics. Syntax defines rules of the vocabulary usage, and semantics maps valid terminals concatenations (sentences) to the associated piece of information.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An information model for OPC Unified Architecture is such a collection of vocabulary, syntax and semantics. This collection plays a role similar to high level programming languages that describe data structures and an algorithm to be executed by the processor. One of the fundamental differences is that a program has a static nature, i.e. it does not change after having been compiled. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The information model is abstract, which could be surprising, because we know from the above that it is to be used to replace something abstract (information) by a representation that can be processed (terminals concatenation). To strictly follow this requirement, the vocabulary should be binary, but it would make the representation unreadable to a human. To overcome this issue, the information model is based on the alphanumeric alphabet and is associated with mapping rules defining the relationship between the representations. It must be stressed here that the human and computer centric representations are governed by the same semantics. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Information exposed by the OPC UA server may be complex. Therefore clients may want to obtain the definition of the information. Generally speaking, to select a particular target piece of information we have two options: random access or browsing. Random access requires that the target entity must have been assigned a globally unique address and the clients must know it in advance. We call them well-known addresses. It is applicable mostly to entities defined by standardization bodies. The browsing approach means that the clients walk down available paths that build up the structure of information. This process is costly, because instead of jumping to a target, we need to discover the structure of the information step by step using relative identifiers. The main advantage of this approach is that the clients do not need any prior knowledge of the structure – the clients of this type are called generic clients. To minimize the cost, after having found the target, every access to it can use random access. Random access is possible since the browsing path is convertible to a globally unique address (NodeId).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">It seems that, in spite of the access method, we have to assign an address to all of the accessible items in the representation of the information structure. Therefore we call the collection of these items the address space.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">From the chapter Address Space we know that this atomic addressable item is called a node. Each node is a collection of attributes that have values accessible locally in context of the node. To represent information about the internal structure, nodes are interconnected by references. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Accessing information by clients is the first aspect of controlling the information stream between the clients and process environment. Another one is creating and maintaining the address space in real-time.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To create the address space, we need to instantiate nodes and interconnect them by references. Instantiating nodes requires assigning appropriate values to attributes and adding references. To make information internally consistent as a large whole, we need rules governing the creation and modification processes. The information model implies these rules using the following two concepts:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">NodeClass – as a formal description of the node defining the allowed attributes and references.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Type – as a formal description of the node defining the allowed attributes and references values.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">For client to understand the information model, it must be predefined or exposed. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Available node classes are predefined, i.e. the specification provides a strictly defined and non extensible set of node classes (see chapter: Address Space). Each one is assigned a dedicated function, e.g. variable node class defines nodes that provide a value.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Like the node classes concept, OPC UA specification provides a set of predefined types which are extensible. According to the above rule, all not predefined types must be exposed in the address space. To expose predefined and proprietary type definitions in the address space, there are defined dedicated node classes, namely object type, variable type and reference type (see chapter: Address Space). For example, nodes of the variable type node class provide clients with definitions of types derived from the BaseVariableType (see section VariableTypes) that is a base type for all variables. The main role of the types represented by the above node classes is to provide a description of the address space structure and to allow clients to use this knowledge to navigate to desired information in the address space exposed by the OPC UA server.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">DataType node class is also dedicated to describe types. In this case, the represented types have a special mission, because they describe data provided by the OPC UA server to clients. For example, a node of the data type can provide information to clients that the data has a numeric value and the clients reading it can use this knowledge to interpret and process the obtained value. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Types are called metadata since they describe the data structure not the actual data values. Simplifying, we can say that a node class plays a role similar to the shape of a puzzle piece and the represented information is similar to the picture on the piece. Both are needed to be able to see the final picture. In the above simplification we have lost that the OPC UA address space is capable of displaying movies, and not just static pictures.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Even though the OPC UA specification contains a rich set of predefined types, the type concept allows designers to freely defining types according to the application needs. New types are derived from the existing ones. The derived types inherit all features of the base types but can include modifications to make the new types more appropriate for information the designers are representing.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The address space concept based on types can be a foundation for exposing any information that is required. Clients understand the address space concept and have a browse service to navigate the address space. Since browsing is based on the incremental and relative passage among nodes it is apparent that each path must have a defined entry point, so we must address the question as to “where to start&quot;. To meet this requirement, the specification includes a predefined structure (see chapter Address Space) containing well defined nodes that can be used as anchors from which a client can discover the address space. Thus to design an address space and define new types, we must derive them from the existing ones. At the very beginning the only existing types are the standard ones defined by the OPC Foundation. The available standard types are briefly described in the next sections.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uainformationmodel.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

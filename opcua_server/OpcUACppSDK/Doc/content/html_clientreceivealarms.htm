@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Subscribe for Alarms</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_clientreceivealarms.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Subscribe for Alarms</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_ancclient.htm">Previous</a>&nbsp;
+     <a href="html_clientconditionrefresh.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><a id="hdr"></a><span class="f_Paragraph">The procedure of subscribing for <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm" class="topiclink">Conditions</a> is the same as for subscribing to events. See <a href="html_uaclientsubscriptionae.htm" class="topiclink">Event Subscription</a>. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">However, the extension that the condition brings to the events adds new features, behavior (also on the server side) and capabilities:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">conditions are not transient objects. They can store states (they can even have complex state machines as components), the states might be controlled by the client.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">a client may synchronize itself with conditions that still need attention, which where issued when he was not yet connected (or when he was disconnected for a short amount of time)</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An <a href="class_softing_o_p_c_toolbox5_1_1_event_filter.htm" class="topiclink">EventFilter</a> is used both for defining the properties which shall be reported to the client and filtering the reported events. A sample how such a filter can be defined is available at <a href="html_clienteventfilter.htm" class="topiclink">Defining an Event Filter</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For monitoring conditions and alarms the select clause in the filter always shall contain the EventId property. The value of this property is needed for possible actions on this condition state. Additional properties like Retain, EventType, SourceName, Message, Time, ... are usually added in additional select clauses to the event filter.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Here is a sample how select clauses can be added:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">SimpleAttributeOperand&nbsp;selectClause;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">QualifiedName&nbsp;browseName;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;add&nbsp;select&nbsp;clause&nbsp;for&nbsp;the&nbsp;EventType</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.clear();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">browseName&nbsp;=&nbsp;QualifiedName(BrowseName_EventType,&nbsp;0);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.addBrowsePath(&amp;browseName);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setAttributeId(EnumAttributeId_NodeId);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setTypeDefinitionId(Statics::ObjectTypeId_BaseEventType);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">eventFilter.addSelectClause(&amp;selectClause);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;add&nbsp;select&nbsp;clause&nbsp;for&nbsp;the&nbsp;NodeId&nbsp;of&nbsp;the&nbsp;alarm&nbsp;itself</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.clear();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">browseName.clear();&nbsp;//&nbsp;the&nbsp;node&nbsp;itself&nbsp;-&nbsp;use&nbsp;the&nbsp;empty&nbsp;browse&nbsp;name</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.addBrowsePath(&amp;browseName);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setAttributeId(EnumAttributeId_NodeId);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setTypeDefinitionId(Statics::ObjectTypeId_BaseEventType);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">eventFilter.addSelectClause(&amp;selectClause);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;add&nbsp;the&nbsp;EventId&nbsp;to&nbsp;the&nbsp;filter</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.clear();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">browseName&nbsp;=&nbsp;QualifiedName(BrowseName_EventId,&nbsp;0);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.addBrowsePath(&amp;browseName);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setAttributeId(EnumAttributeId_Value);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setTypeDefinitionId(Statics::ObjectTypeId_BaseEventType);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">eventFilter.addSelectClause(&amp;selectClause);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;add&nbsp;the&nbsp;Retain&nbsp;to&nbsp;the&nbsp;filter</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.clear();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">browseName&nbsp;=&nbsp;QualifiedName(BrowseName_Retain,&nbsp;0);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.addBrowsePath(&amp;browseName);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setAttributeId(EnumAttributeId_Value);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">selectClause.setTypeDefinitionId(Statics::ObjectTypeId_ConditionType);&nbsp;//&nbsp;the&nbsp;Retain&nbsp;property&nbsp;is&nbsp;defined&nbsp;on&nbsp;the&nbsp;Condition&nbsp;type</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">eventFilter.addSelectClause(&amp;selectClause);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...&nbsp;&nbsp;//&nbsp;add&nbsp;more&nbsp;select&nbsp;clauses</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">When an event is reported the selected properties are available in the <a href="class_softing_o_p_c_toolbox5_1_1_event_field_list.htm#class_softing_o_p_c_toolbox5_1_1_event_field_list" class="topiclink">EventFieldList</a> for this monitored item, where the index in this list matches the order of adding select clauses. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If a property cannot be delivered by the server, the matching value in the event field list is NULL. This typically happens if the client select for properties of specialized event types and base event types are reported. It can also happen if the server does not support the requested property. So the application always needs to validate the value against NULL before accessing it.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The example below modifies the event filter to receive only notification from objects instantiated from the AlarmConditionType and derived types.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ContentFilter&nbsp;whereClause;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ContentFilterElement&nbsp;filterElement;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">filterElement.setFilterOperator(EnumFilterOperator_OfType);&nbsp;//&nbsp;specify&nbsp;an&nbsp;operator&nbsp;-&nbsp;in&nbsp;this&nbsp;case&nbsp;the&nbsp;&quot;OfType&quot;&nbsp;operator&nbsp;expecting&nbsp;one&nbsp;operand</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">FilterOperand&nbsp;filterOperand; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;define&nbsp;a&nbsp;literal&nbsp;operand&nbsp;with&nbsp;the&nbsp;desired&nbsp;event&nbsp;type</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">LiteralOperand&nbsp;literalOperand;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;desiredEventTypeNode&nbsp;=&nbsp;Statics::ObjectTypeId_AlarmConditionType;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">literalOperand.setValue(Value(&amp;desiredEventTypeNode));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">filterOperand.setLiteralOperand(&amp;literalOperand); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;use&nbsp;the&nbsp;literal&nbsp;operand&nbsp;as&nbsp;operand&nbsp;for&nbsp;the&nbsp;&quot;OfType&quot;&nbsp;operator</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">filterElement.addFilterOperand(&amp;filterOperand);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">whereClause.addElement(&amp;filterElement); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;add&nbsp;this&nbsp;filter&nbsp;element&nbsp;to&nbsp;the&nbsp;where&nbsp;clause</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">eventFilter.setWhereClause(whereClause); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;use&nbsp;the&nbsp;where&nbsp;clause&nbsp;in&nbsp;the&nbsp;event&nbsp;filter</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">monitoredItem-&gt;setEventFilter(whereClause); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//&nbsp;use&nbsp;the&nbsp;complete&nbsp;event&nbsp;filter&nbsp;for&nbsp;the&nbsp;monitored&nbsp;item</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Once events (from conditions or alarms) are received, the client can store the delivered EventId for further actions. In case of implementing an alarm display the EventId should be stored with every displayed alarm. If a user decides to acknowledge this specific alarm, the EventId is available for this action. See <a href="html_uaclientackalarm.htm" class="topiclink">Acknowledge and Confirm an Alarm</a> for detailed information how alarms can be acknowledged.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<p class="p_Paragraph">The where clause is evaluated by the server and usually events which do not match the filter are not notified.</p>
+<p class="p_Paragraph">There are some exceptions to that rule defined in the specification. Events of the types</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">RefreshStartEvent</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">RefreshEndEvent</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">RefreshRequiredEvent</td></tr></table></div><p class="p_Paragraph">are always notified. These event types shall ignore any filter.</p>
+<p class="p_Paragraph">So the application cannot assume that all notifications are always originated by the requested objects.</p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_clientreceivealarms.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Retrieve Existing Custom Data Type Definitions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "retrieve_existing_custom_datatypes.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Retrieve Existing Custom Data Type Definitions</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="define_new_structured_data_typ.htm">Previous</a>&nbsp;
+     <a href="use_custom_structured_data_typ.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">In many cases it is necessary to use custom data types, that are already defined, typically from a different server or a companion specification.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">For server applications</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">When servers use custom data types, then it is usually to comply to companion specification.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Companion specifications are typically available as NodeSet XML files and can be imported into a server using the <a href="html_nodeset_import_and_validation.htm" class="topiclink">NodeSet import</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This creates the data type description in the server application and exposes the description and encoding rules as nodes to the client applications.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">A server application can retrieve data type descriptions created via XML import </span><span class="f_Paragraph">with </span><a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_address_space_root_1afddf44d4f6f699efe0ce2d93d2480486" class="topiclink">AddressSpaceRoot::getDataTypeDescription</a><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">For client applications</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">Custom data types are always defined by a server, either created on their own or by using companion specifications.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Client applications can retrieve the description to access data type information for the custom data types from the connected server.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK maintains the description and encoding information of data types as instances of the class <a href="class_softing_o_p_c_toolbox5_1_1_data_type_description.htm" class="topiclink">DataTypeDescription</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK retrieves the information about all custom data types during the first call of <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a79a937cc1b1ac9c29e0912628843c1e8" class="topiclink">Session::getDataTypeDescription()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Once read from the server, the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Client::Session</a> caches the data type descriptions for a fast access on following calls.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> The data type descriptions cache exists for every <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> and is kept until the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> instance is destroyed, thus the data type descriptions can even be used after the session gets disconnected.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> Different servers can have the same data type node on different namespace indexes or even have different data types on the same NodeId. When dealing with several servers in parallel, make sure to use the correct <a href="class_softing_o_p_c_toolbox5_1_1_data_type_description.htm" class="topiclink">DataTypeDescriptions</a> of the correct server when <a href="use_custom_structured_data_typ.htm" class="topiclink">accessing custom data type values</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The synchronous method <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a6bac36c2976d7b1771ef8b7f997c4bbc" class="topiclink">Session::updateDataTypes()</a> or the asynchronous method <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1af79a0afc8e5da06b7d3defdb33c62e1a" class="topiclink">Session::updateDataTypesAsync()</a> and <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a63ded82651f3900b9e79e10948cbdd08" class="topiclink">Session::onUpdateDataTypesComplete()</a> can be used to trigger the initialization manually or to update the data type descriptions if a client detects a change of data type descriptions on the server. The SDK does not monitor changes; changes have to be detected by client application if a server may change its data types.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">As the initialization or update of the data type descriptions requires to invoke several service calls, it can take some time until it is completed.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">With the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a6bac36c2976d7b1771ef8b7f997c4bbc" class="topiclink">updateDataTypes()</a> methods, the application can define the point in time when the update shall be executed or started, to prevent an unexpected delay when <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a79a937cc1b1ac9c29e0912628843c1e8" class="topiclink">getDataTypeDescription</a> is invoked first.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> In typical situations such an update should complete quite fast, but the timing is dependant on the servers response time.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Note:</span><span class="f_Paragraph"> It is safe to call <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a79a937cc1b1ac9c29e0912628843c1e8" class="topiclink">Session::getDataTypeDescription()</a> even while an update is in progress, the execution of <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a79a937cc1b1ac9c29e0912628843c1e8" class="topiclink">Session::getDataTypeDescription()</a> will be delayed until the update in progress is complete.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">For all applications</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">If something unsupported or an error is detected during creation of <a href="class_softing_o_p_c_toolbox5_1_1_data_type_description.htm" class="topiclink">DataTypeDescription</a> (on import NodeSet2 XML or <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_session_1a6bac36c2976d7b1771ef8b7f997c4bbc" class="topiclink">Session::updateDataTypes()</a>), the errors are reported via <a href="class_softing_o_p_c_toolbox5_1_1_trace.htm" class="topiclink">Trace</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Warnings may look like:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Dictionary &lt;dictionary name&gt; (line) Opaque type is not supported &lt;type name&gt;</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Type &lt;type name&gt; (line): Field &lt;field name&gt; uses unsupported data type &lt;data type name&gt;</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">What is not (yet) supported by SDK:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">&quot;LengthInBits&quot; != 32</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">&quot;SwitchField&quot;, &quot;SwitchOperand&quot; or &quot;SwitchValue&quot; which is used for Unions and optional fields of structures</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">&quot;DefaultByteOrder&quot; != LittleEndian</span></td></tr></table></div>
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=retrieve_existing_custom_datatypes.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Alarms &amp; Conditions in Client Applications</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_ancclient.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Alarms &amp; Conditions in Client Applications</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_serverancserversuppression.htm">Previous</a>&nbsp;
+     <a href="html_clientreceivealarms.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">A client can get events from a server using a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm" class="topiclink">Subscription</a>. It can add &quot;event monitored items&quot; to the subscription and will be notified via the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707" class="topiclink">onEventsReceived</a> callback of this subscription. An &quot;event monitored item&quot; is a <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm" class="topiclink">MonitoredItem</a> monitoring the attribute </span><span class="f_FixedSize">EnumAttributeId_EventNotifier.</span><span class="f_Paragraph"> Only nodes in the address space having the EventNotifier attribute set are enabled to be monitored for events.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The way to subscribe for events is described in detail in <a href="html_clientreceivealarms.htm" class="topiclink">Subscribe for Alarms</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The events received by a monitored item can be filtered using the <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_monitored_item_1ab504a377251f6866ff53e024d72b5112" class="topiclink">setEventFilter</a> method. The definition of such an event filter is described in <a href="html_clienteventfilter.htm" class="topiclink">Defining an Event Filter</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In many cases the client establishes a separate subscription which contains &quot;event monitored items&quot; only. However this is not mandatory, &quot;event monitored times&quot; and &quot;data monitored items&quot; can coexist in the same subscription. Especially for small servers (e.g. running in embedded systems) it might be a benefit to use one subscription only to reduce load on the server. Most of embedded UA servers will restrict the number of sessions and subscriptions.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Contrary to events <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_condition.htm" class="topiclink">Conditions</a> are non-transient, stateful objects in a server and the client can act on specific states on the conditions and alarms.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">To act on a specific state of a condition this state needs to be identified to avoid actions on old states. The identification is done via the EventId property which is unique for each reported notification. Therefore any client which shall act on conditions at least has to add the EventId to the selected properties which shall be reported. Of course additional properties like EventType, Message, SourceName, Severity, ... are of interest in most cases.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The received EventId needs to be passed in OPC UA method calls like &quot;Acknowledge&quot;, &quot;Confirm&quot;, &quot;AddComment&quot;, ...</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">After connecting a subscription only changed events are notified. However a client might be interested in the current state of all conditions and alarms after connecting. The <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1aa26cd98f617f0521b7e828ead59ef6fa" class="topiclink">Subscription::conditionRefresh</a> fulfils exactly this requirement. A detailed description is available at <a href="html_clientconditionrefresh.htm" class="topiclink">Receive All Current Alarms</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In chapter <a href="html_uaclientackalarm.htm" class="topiclink">Acknowledge and Confirm an Alarm</a> the interaction with alarms is explained.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_ancclient.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

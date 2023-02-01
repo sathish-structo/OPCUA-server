@@ -1,0 +1,153 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Acknowledge and Confirm an Alarm</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uaclientackalarm.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Acknowledge and Confirm an Alarm</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_clientconditionrefresh.htm">Previous</a>&nbsp;
+     <a href="model_import.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_acknowledgeable_condition.htm" class="topiclink">AcknowledgeableCondition</a> is a condition that requires acknowledgement and optional confirmation from a client. In order to do that a client has to call the Acknowledge and Confirm methods on the condition object on the server. In order to make these calls the client needs to know:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_Paragraph">the NodeId of the condition object, on which to call the acknowledge or confirm method</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">the NodeId of the method to call (this is usually the ID of the method in the type definition)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph">the EventId of the condition (condition state) that should be acknowledged or confirmed</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">Both NodeId of the condition object and EventId of the condition state can be obtained by browsing / reading the address space.</span><br />
+<span class="f_Paragraph">However most likely this information is added as select clauses in the event filter of the monitored item and is received in the event field list in the notification.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An example how alarms can be stored, displayed and handled is not yet available.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Assuming that a subscription is filtering for events of AlarmConditionType and derived alarms, the main steps are described briefly:</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Receiving and Storing Alarms</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">In the implementation of an overwritten <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription.htm#class_softing_o_p_c_toolbox5_1_1_client_1_1_subscription_1a879e74880acce9fba2d42d60beb09707" class="topiclink">onEventsReceived</a> callback the current active alarms are stored.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Every received notification updates a map of active alarms. Notifications with the Retain property set to false shall be removed from that map.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Note that in case of condition branches (i.e. old states of a condition still needing attention) multiple states can be reported for the same alarm. The different states needs to be distinguished with the BranchId property.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Assuming that the monitored item has added the properties EventType, EventId, NodeId, BranchId, Severity, SourceName, Retain, Acknowledged, ...</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The sample below shows how these information can be retrieved in the callback.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The sample below is a pseudo code and might even contain syntax errors. </span><br />
+<span class="f_Paragraph">The code does not contain any result validation, however this validation is highly recommended.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">void&nbsp;MySubscription::onEventsReceived(const&nbsp;std::vector&lt;Client::MonitoredItem*&gt;&amp;&nbsp;items,&nbsp;const&nbsp;std::vector&lt;EventFieldList&gt;&amp;&nbsp;events)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">EnumStatusCode&nbsp;result;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">for&nbsp;(OTUint32&nbsp;i&nbsp;=&nbsp;0&nbsp;;i&nbsp;&lt;&nbsp;events.size();&nbsp;i++)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;-&nbsp;first&nbsp;get&nbsp;the&nbsp;event&nbsp;type</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">MyAlarmStruct&nbsp;alarm;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">fields[i].getEventField(0).getNodeId(alarm.typeNode);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">if&nbsp;(alarm.typeNode.compare(NodeId(EnumNumericNodeId_RefreshStartEventType))&nbsp;==&nbsp;0)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;handle&nbsp;refresh&nbsp;start</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">continue;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">if&nbsp;(alarm.typeNode.compare(NodeId(EnumNumericNodeId_RefreshEndEventType))&nbsp;==&nbsp;0)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;handle&nbsp;refresh&nbsp;end</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">continue;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">result&nbsp;=&nbsp;fields[i].getEventField(1).getByteString(alarm.eventId);&nbsp;//&nbsp;unique&nbsp;EventId</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">result&nbsp;=&nbsp;fields[i].getEventField(2).getNodeId(alarm.nodeId);&nbsp;//&nbsp;NodeId&nbsp;of&nbsp;the&nbsp;condition&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">result&nbsp;=&nbsp;fields[i].getEventField(3).getNodeId(alarm.branchId);&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">result&nbsp;=&nbsp;fields[i].getEventField(4).getUInt16(alarm.severity);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">if&nbsp;(alarm.retained)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">addOrUpdateAlarmMap(alarm);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">else</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">removeFromAlarmMap(alarm);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 10pt; font-family: Arial; color: #000000;">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Displaying Alarms</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">A cyclic tasks enumerates the map of active alarms and displays them to the user. Each displayed alarm shall have a key (e.g. EventId) stored for further access.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Every reaction of the user on a displayed alarm can get this key from the displayed alarm.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">User Actions</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The user can act on displayed alarms. Therefore the alarm and the action needs to be selected by the user.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">After selecting both the client application can retrieve the key of the selected alarm and invoke the specific action (UA method).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In the example below it is assumed that a alarm display is implemented (e.g. using some kind of GUI) and the user selected the action to acknowledge the selected alarm(s).</span><br />
+<span class="f_Paragraph">Implementation of other UA methods (Confirm, AddComment, ...) is very similar.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The sample below is a pseudo code and might even contain syntax errors. </span><br />
+<span class="f_Paragraph">The code does not contain any result validation, however this validation is highly recommended.</span><br />
+<span class="f_Paragraph">For simplicity of sample also the synchronous method call was used. To avoid a blocking client application asynchronous calls might be preferable...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">AlarmDisplay::onAcknowledgePressed()</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;get&nbsp;the&nbsp;selected&nbsp;alarms&nbsp;in&nbsp;display</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">//&nbsp;vector&nbsp;for&nbsp;all&nbsp;alarms&nbsp;to&nbsp;be&nbsp;acknowledged &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">std::vector&lt;CallMethodRequest&gt;&nbsp;ackMethods;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">MyAlarmStruct&nbsp;alarm;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">for&nbsp;(selectResult&nbsp;=&nbsp;getFirstSelectedAlarm(&amp;alarm);&nbsp;selectResult&nbsp;==&nbsp;ALARM_SELECTED;&nbsp;selectResult&nbsp;=&nbsp;getNextSelectedAlarm(&amp;alarm))</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">CallMethodRequest&nbsp;methodRequest;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">methodRequest.setMethodId(NodeId(EnumNumericNodeId_AcknowledgeableConditionType_Acknowledge));</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">methodRequest.setObjectId(alarm.nodeId);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">methodRequest.addInputArgument(alarm.eventId);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">methodRequest.addInputArgument(LocalizedText(_T(&quot;Now&nbsp;acknowledged&quot;),&nbsp;_T(&quot;en&quot;));&nbsp;//&nbsp;comment</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">ackMethods.push_back(methodRequest);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">if&nbsp;(ackMethods.size()&nbsp;&gt;&nbsp;0)</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">std::vector&lt;CallMethodResult&gt;&nbsp;callResults;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">m_session-&gt;callMethods(ackMethods,&nbsp;callResults);</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">}</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uaclientackalarm.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

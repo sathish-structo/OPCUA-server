@@ -1,0 +1,318 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Installation Directory Structure</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_vxworksinstallpackage.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Installation Directory Structure</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_vxworks.htm">Previous</a>&nbsp;
+     <a href="html_vxworksverifyingtheinstallation.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">The installation directory of the SDK, hereafter referred to as </span><span class="f_FixedSize">&lt;InstallDir&gt;</span><span class="f_Paragraph">, contains the following directories:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Directory location</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">&lt;InstallDir&gt;/Doc</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the SDK's documentation</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">&lt;InstallDir&gt;/Source</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of SDK libraries, test applications and programming samples.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Workspace6.9</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Workspace containing projects for delivered sources (StructoAutomoldServer and TestClient)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Workspace6.9-Kernel</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Workspace containing projects for delivered sources (StructoAutomoldServer and TestClient) using DKM (Downloadable Kernel Module) configurations</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Workspace7</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Workspace containing various batches and shell scripts to use SDK projects</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p><span class="f_FixedSize">&lt;InstallDir&gt;/Tools</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of additional utilities (<a href="html_traceviewer.htm" class="topiclink">trace viewer</a>)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="toolkit_components_binary"></a><span class="f_Heading2">SDK Components (Binary)</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">For VxWorks, the SDK's <a href="html_commonoverview.htm" class="topiclink">components</a> are shipped as static libraries (archives):</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;">libtb5cpp.a:</span><span class="f_Paragraph"> The TB5CPP component (C++ API)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;">libtb5ot.a:</span><span class="f_Paragraph"> The TB5OT component (SDK core)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;">libtb5stack.a:</span><span class="f_Paragraph"> The TB5Stack component (OPC UA communication stack)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;">libtb5util.a:</span><span class="f_Paragraph"> The TB5Util component (Utilities library)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;">libcrypto.a: </span><span class="f_Paragraph">The OpenSSL component</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;">libxml2.a</span><span class="f_Paragraph">: The libxml2 XML parser component</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">Libraries that can be used by real-time process (RTP) applications are available for the following CPU architectures and compilers (hereafter referred to as </span><span class="f_FixedSize">&lt;Arch&gt;</span><span class="f_Paragraph">):</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">ARMv7 / Wind River Diab (</span><span class="f_FixedSize">ARMARCH7diab_RTP</span><span class="f_Paragraph">)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Intel Nehalem / GNU GCC (</span><span class="f_FixedSize">NEHALEMgnu_RTP</span><span class="f_Paragraph">)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">PPC32 / Wind River Diab (</span><span class="f_FixedSize">PPC32diab_RTP</span><span class="f_Paragraph">)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">PPC32 (soft-float) / Wind River Diab (</span><span class="f_FixedSize">PPC32sfdiab_RTP</span><span class="f_Paragraph">)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Wind River Target Simulator (x86) / GNU GCC (</span><span class="f_FixedSize">SIMPENTIUMgnu_RTP</span><span class="f_Paragraph">)</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">The delivered binaries are built using VxWorks 6.9.4.12 and VxWorks 7 SR0650.</span><br />
+<span class="f_Paragraph">Usually the binaries are compatible with newer VxWorks version, in may times also with older version.</span><br />
+<span class="f_Paragraph">The binaries are built for RTP; if you need DKM binaries (or different build architectures, CPUs or compilers), please use the source code version to build it by yourself.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">VxWorks 7 builds are always based on a VSB; we deliver binaries for VSB build on CPU &quot;SIMNT&quot; only.</span><br />
+<span class="f_Paragraph">All other VSBs need source code version.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The libraries can be found at the following locations:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Directory location</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/lib/VxWorks&lt;version&gt;/&lt;Arch&gt;/NonDebug</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the static libraries compiled for the architecture </span><span class="f_FixedSize">&lt;Arch&gt;</span><span class="f_Paragraph">.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/lib/VxWorks&lt;version&gt;/&lt;Arch&gt;/Debug</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the static libraries compiled for the architecture </span><span class="f_FixedSize">&lt;Arch&gt;</span><span class="f_Paragraph">. Applications linked with this set of libraries support additional trace options for extended diagnosis information but are larger and slower than libraries built without this option.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="toolkit_components_source_code"></a><span class="f_Heading2">SDK Components</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The <a href="html_commonoverview.htm" class="topiclink">TB5CPP component</a> of the SDK that provides the C++ API is delivered as binary. The needed header files can be found at the following locations:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Directory location</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/api/include</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the class header files for the C++ API..</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/api/include/ModelCompiler</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the header files that define the public API of the Model Designer components.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Core/include</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the class header files for the TB5OT component.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="programming_samples"></a><span class="f_Heading2">Programming Samples</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The following table describes the directories that contain programming samples and tutorials.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Directory location</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Apps/Samples/Cpp</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the programming samples.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Apps/Samples/Cpp/Tutorial</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the <a href="html_gettingstarted.htm" class="topiclink">introductory tutorials</a>.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="test_applications"></a><span class="f_Heading2">Test Applications</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The SDK comes with source code for applications that are used to <a href="html_vxworksverifyingtheinstallation.htm" class="topiclink">verify the installation</a> of the SDK:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;">CPPTestClient</span><span class="f_Paragraph">: C++ test client application.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph" style="font-weight: bold;">CPPTestServer</span><span class="f_Paragraph">: C++ test server application.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">The following table depicts locations associated with these applications.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Directory location</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Apps/Test/Cpp/StructoAutomoldServer</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the class header and implementation files for the test server application</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Apps/Test/Cpp/StructoAutomoldServer/TestFiles</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of test files and test folders to test file and file directory access functionality of the server</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Apps/Test/Cpp/TestClient</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of the class header and implementation files for the test client application.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Apps/Test/Cpp/TestClient/TestFiles</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of test scripts that drives the test client application.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="certificate_management"></a><span class="f_Heading2">Certificate Management</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The following table describes the directories that contain scripts for managing application instance certificates.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Directory location</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of batch files / scripts that are used to create a demo certificate store.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI/batches</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of batch files / scripts that are required by the batch files described above.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI/all_certificates</span></p>
+<p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI/sample_client</span></p>
+<p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI/sample_server</span></p>
+<p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI/test_client</span></p>
+<p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/PKI/test_server</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of certificate stores. Please note that these locations are only available after creating the certificate stores using the batch files / scripts described above.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For further details see <a href="html_setupcertificates.htm" class="topiclink">Setting up a Certificate Store</a></span></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><span class="f_Heading3">Note: </span><span class="f_Paragraph">A simulator target has to be build; the pre-installed simulator target cannot be used since &quot;POSIX thread scheduled in RTPs&quot; has to be enabled within the image project.</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Note: </span><span class="f_Paragraph">For VxWorks 7 only libraries for Windows simulator are available.</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Heading2">SDK Components (Source Code)</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">With source code license the following directories are delivered additionally to the binary delivery:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Directory location</span></p>
+</td>
+<td style="vertical-align:top; background-color:#99ccff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph" style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/api</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of sources for C++ API </span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/api/ModelCompiler</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of sources for C++ API for NodeSet2 XML import and model designer methods</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Core/libxml2</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of sources for libxml2 component.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Core/OpenSSL</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of OpenSSL tar file used for static cryptographic and SSL/TLS library.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Core/OT</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of sources for SDK core component.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Core/Stack</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of sources for OPC UA communication stack component.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_FixedSize"><span class="f_FixedSize">&lt;InstallDir&gt;/Source/Core/TBUtil</span></p>
+</td>
+<td style="vertical-align:top; background-color:#ffffff; padding:3px;"><p class="p_Paragraph"><span class="f_Paragraph">Location of sources for SDK utilities library.</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_vxworksinstallpackage.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

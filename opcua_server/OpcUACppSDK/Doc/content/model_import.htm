@@ -1,0 +1,104 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Model Import / Companion Specifications</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "model_import.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Model Import / Companion Specifications</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uaclientackalarm.htm">Previous</a>&nbsp;
+     <a href="html_nodeset_import_and_validation.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <h2 class="p_Heading2"><span class="f_Heading2">Companion Specifications</span></h2>
+<p>For a wide range of application domains OPC UA Companion Specifications are defined to ensure interoperability.</p>
+<p>Each NodeSet2 XML may have pre-requisites, which are described in the XML file itself in the &quot;Models&quot; tag.</p>
+<p>Here Required Models, inclusive their versions are named.</p>
+<p>&nbsp;</p>
+<p>Whenever a specific Companion Standard (or other XML file) shall be used, the required models need to be available first.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Example:</span></p>
+<p>Here is an excerpt of the NodeSet2 file for the Companion Specification &quot;FDI7&quot;</p>
+<p>&nbsp;</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;Models&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;Model&nbsp;ModelUri=&quot;http://fdi-cooperation.com/OPCUA/FDI7/&quot;&nbsp;PublicationDate=&quot;2017-07-14T00:00:00Z&quot;&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;RequiredModel&nbsp;ModelUri=&quot;http://opcfoundation.org/UA/&quot;&nbsp;Version=&quot;1.04.3&quot;&nbsp;PublicationDate=&quot;2019-09-09T00:00:00Z&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;RequiredModel&nbsp;ModelUri=&quot;http://opcfoundation.org/UA/DI/&quot;&nbsp;Version=&quot;1.02&quot;&nbsp;PublicationDate=&quot;2019-05-01T00:00:00Z&quot;&nbsp;/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Model&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/Models&gt;</span></p>
+<p class="p_FixedSize"><span class="f_FixedSize">&nbsp;</span></p>
+<p>If an OPC UA server application wants to use FDI7 specific things, then the application has to import the required models (in the correct order) before importing the FDI7 NodeSet2 XML file.</p>
+<p>Please ensure that you have (at least) the required versions of the models.</p>
+<p>OPC UA C++ Server &amp; Client SDK V6.00 automatically implements the standard node set &quot;http://opcfoundation.org/UA/&quot; in a quite new version.</p>
+<p>Please validate whether the actual version matches the required model version.</p>
+<p>The actual used version can be found in Address Space with a generic client at &quot;Objects / Server / Namespaces / http://opcfoundation.org/UA/ / NamespaceVersion&quot;.</p>
+<p>&nbsp;</p>
+<p>In this case you may simply invoke</p>
+<p class="p_CodeExample"><span class="f_CodeExample">AddressSpaceRoot::instance()-&gt;importNodes(_T(&quot;Opc.Ua.Di.NodeSet2.xml&quot;,&nbsp;EnumApiObjectCreation_None);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">AddressSpaceRoot::instance()-&gt;importNodes(_T(&quot;Opc.Ua.Fdi7.NodeSet2.xml&quot;,&nbsp;EnumApiObjectCreation_None);</span></p>
+<p>&nbsp;</p>
+<p>If the delivered version of the standard address space is NOT sufficient, you shall import your own version of standard NodSet2 XML file.</p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;suppressAddresspaceCreation(true);&nbsp;//&nbsp;You&nbsp;need&nbsp;to&nbsp;invoke&nbsp;this&nbsp;before&nbsp;initializing&nbsp;the&nbsp;application</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Application::instance()-&gt;initialize(...);&nbsp;//&nbsp;Initializing&nbsp;the&nbsp;application&nbsp;will&nbsp;NOT&nbsp;create&nbsp;servers&nbsp;standard&nbsp;address&nbsp;space</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">AddressSpaceRoot::instance()-&gt;importNodes(_T(&quot;Opc.Ua.NodeSet2.xml&quot;,&nbsp;EnumApiObjectCreation_None);&nbsp;//&nbsp;Use&nbsp;the&nbsp;required&nbsp;version&nbsp;of&nbsp;the&nbsp;standard&nbsp;NodeSet2&nbsp;file</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">AddressSpaceRoot::instance()-&gt;importNodes(_T(&quot;Opc.Ua.Di.NodeSet2.xml&quot;,&nbsp;EnumApiObjectCreation_None);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">AddressSpaceRoot::instance()-&gt;importNodes(_T(&quot;Opc.Ua.Fdi7.NodeSet2.xml&quot;,&nbsp;EnumApiObjectCreation_None);</span></p>
+<p>&nbsp;</p>
+<p>For Companion Specifications typically a permanent instantiation of the imported nodes is not necessary (to reduce RAM usage), so EnumApiObjectCreation_None is used in this example.</p>
+<p>&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">NodeSet imort and validation</span></h2>
+<p>A NodeSet2 XML file can be used to instantiate nodes in a servers address space.</p>
+<p>Additionally to types (e.g. defined by Companion Specifications) also instance nodes can be created via import (see also sample <a href="html_xmlimport.htm" class="topiclink">NodeSetModelImport)</a>.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="html_nodeset_import_and_validation.htm" class="topiclink">NodeSet import and validation</a>: This topic describes how to import and validate an address space from a NodeSet2 XML file.</td></tr></table></div>
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=model_import.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

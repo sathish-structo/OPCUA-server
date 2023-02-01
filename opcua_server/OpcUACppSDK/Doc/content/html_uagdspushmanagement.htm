@@ -1,0 +1,98 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Push Management</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_uagdspushmanagement.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Push Management</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_uagdspullmanagement.htm">Previous</a>&nbsp;
+     <a href="html_furtherreference.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><span class="f_Paragraph">This model is targeted for UA server applications where a Certificate Manager (typically the GDS) takes the active role to distribute certificates and trust lists.</span><br />
+<span class="f_Paragraph">The server exposes its manageable certificate store(s) in the address space, visible and accessible only for a security admin user.</span><br />
+<span class="f_Paragraph">The Certificate Manager acts as an OPC UA client, connects to the server endpoint and invokes UA methods to push the certificate store settings to the server.</span></p>
+<p><img src="gds_pushmanagement.png" width="600" height="392" alt="GDS_PushManagement" style="width:600px;height:392px;border:none" /></p>
+<p class="p_Paragraph"><span class="f_NoteHeader">Note:</span><span class="f_Paragraph"> The Certificate Manager must be trusted by the OPC UA application and must use an encrypted connection. The OPC UA methods related to the GDS push model should be usable only for sessions which have the SecurityAdmin role, so the Certificate Manager typically has to provide special user credentials.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The GDS can use the following UA methods on the server for the push management model:</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">UpdateCertificate</span></h2>
+<p class="p_Paragraph"><span class="f_Reference">UpdateCertificate</span><span class="f_Paragraph"> is used to update a Certificate for a Server, typically to update the application instance certificate.</span><br />
+<span class="f_Paragraph">The method can be used to either update the public and private key of the server or just the public key alone.</span><br />
+<span class="f_Paragraph">This allows to apply different use cases from providing initial certificates to updating the public key before it expires.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This method may report </span><span class="f_Reference">applyChangesRequired</span><span class="f_Paragraph"> which means that the GDS shall invoke the </span><span class="f_Reference">ApplyChanges</span><span class="f_Paragraph"> method to complete the update.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">ApplyChanges</span></h2>
+<p class="p_Paragraph"><span class="f_Reference">ApplyChanges</span><span class="f_Paragraph"> is used to tell the Server to apply any security changes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">This method should only be called if a previous call to a method that changed the configuration returns </span><span class="f_Reference">applyChangesRequired</span><span class="f_Paragraph">.</span><br />
+<span class="f_Paragraph">This </span><span class="f_Reference">applyChangesRequired</span><span class="f_Paragraph"> may be reported from the </span><span class="f_Reference">UpdateCertificate</span><span class="f_Paragraph"> method or from the </span><span class="f_Reference">CloseAndUpdate</span><span class="f_Paragraph"> method on a </span><span class="f_Reference">TrustList</span><span class="f_Paragraph"> instance.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If the server security configuration was changed, the server will eventually need to interrupt all open secure connections or in worst case may even have to perform an entire restart.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">CreateSigningRequest</span></h2>
+<p class="p_Paragraph"><span class="f_Reference">CreateSigningRequest</span><span class="f_Paragraph"> method asks the Server to create a certificate sign request that is signed with the server’s private key.</span><br />
+<span class="f_Paragraph">This request can be used by the GDS to issue a new server certificate which is signed by the GDS' Certificate Authority (CA).</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">The signed certificate can then be pushed to the server via </span><span class="f_Reference">UpdateCertificate</span><span class="f_Paragraph">.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">GetRejectedList</span></h2>
+<p class="p_Paragraph"><span class="f_Reference">GetRejectedList</span><span class="f_Paragraph"> method returns the list of certificates that have been rejected by the server.</span><br />
+<span class="f_Paragraph">The GDS may use this information to distribute new trust lists which may trust the new certificates.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">TrustList Type</span></h2>
+<p class="p_Paragraph"><span class="f_Paragraph">The </span><span class="f_Reference">TrustListType</span><span class="f_Paragraph"> is a specialized subtype of the ObjectType </span><span class="f_Reference">FileType</span><span class="f_Paragraph"> and instances can be read and written via UA method calls like </span><span class="f_Reference">Open</span><span class="f_Paragraph">, </span><span class="f_Reference">Read</span><span class="f_Paragraph">, </span><span class="f_Reference">Write</span><span class="f_Paragraph">, </span><span class="f_Reference">Close</span><span class="f_Paragraph"> or </span><span class="f_Reference">CloseAndUpdate</span><span class="f_Paragraph">.</span><br />
+<span class="f_Paragraph">A </span><span class="f_Reference">TrustList</span><span class="f_Paragraph"> instance represents all folder contents of a PKI store as one binary encoded value.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">A server can expose any number of </span><span class="f_Reference">TrustList</span><span class="f_Paragraph"> instances for different purposes, e.g. one for application instance certificates, one for user certificates and probably more for custom purposes.</span><br />
+<span class="f_Paragraph">The Certificate Manager can map the different </span><span class="f_Reference">TrustList</span><span class="f_Paragraph"> NodeIds to different certificate group IDs which match to the different purposes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Like the </span><span class="f_Reference">UpdateCertificate</span><span class="f_Paragraph"> method, the </span><span class="f_Reference">CloseAndUpdate</span><span class="f_Paragraph"> method of the </span><span class="f_Reference">TrustList</span><span class="f_Paragraph"> may also report </span><span class="f_Reference">applyChangesRequired</span><span class="f_Paragraph"> to indicate that the Certificate Manager must invoke the </span><span class="f_Reference">ApplyChanges</span><span class="f_Paragraph"> method.</span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_uagdspushmanagement.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

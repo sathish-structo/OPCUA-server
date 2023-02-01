@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Creating Custom Types</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_creatingcustomtypes.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Creating Custom Types</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_serverstep3.htm">Previous</a>&nbsp;
+     <a href="html_serverstep3sample.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p class="p_Paragraph"><a id="hdr"></a><span class="f_Paragraph">How to create a custom OPC UA type has a close dependency to <a href="html_creatingandinsertingnodes.htm" class="topiclink">Creating and Inserting Nodes</a> and vice versa. Inserted Nodes need a reference to a </span><span class="f_Reference">type definition</span><span class="f_Paragraph"> and creating a </span><span class="f_Reference">type definition</span><span class="f_Paragraph"> is done by inserting Nodes of known types to the type tree. (The type tree is just a part of the address space with a special meaning.)</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">A custom type can either be</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">a </span><span class="f_Reference">Data Type,</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">an </span><span class="f_Reference">Event Type,</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">an </span><span class="f_Reference">Object Type,</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">a </span><span class="f_Reference">Reference Type</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">or a </span><span class="f_Reference">Variable Type</span><span class="f_Paragraph">.</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">In this tutorial we will demonstrate how to create an object type.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Creating a Custom Type</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The procedure of creating those types is very similar:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List">Explore the existing types to find an appropriate super type, each new type must derive from an existing one.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Paragraph">Create, configure and insert Node instances of existing types to represent the new sub type (see <a href="html_creatingandinsertingnodes.htm" class="topiclink">Creating and Inserting Nodes</a>) -- the connecting reference to the new type is a </span><span class="f_Reference">HasSubtype</span><span class="f_Paragraph"> reference from the super type. Only new components must be created, the components of the super type are automatically inherited. All type classes and its subclasses have an additional property, which can be configured, the </span><span class="f_Reference">isAbstract</span><span class="f_Paragraph"> property. It can also make sense to create a new subtype without defining new components, either only for distinguish purposes or by modifying the existing components (e.g. tightening a </span><span class="f_Reference">Modelling Rule</span><span class="f_Paragraph">).</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;shows&nbsp;an&nbsp;example&nbsp;for&nbsp;creating&nbsp;an&nbsp;ObjectType,&nbsp;but&nbsp;other&nbsp;types&nbsp;would&nbsp;be&nbsp;similar</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;first&nbsp;add&nbsp;a&nbsp;namespace&nbsp;for&nbsp;the&nbsp;object&nbsp;type,&nbsp;the&nbsp;namespace&nbsp;URI&nbsp;shall&nbsp;be&nbsp;unique&nbsp;and&nbsp;known&nbsp;to&nbsp;clients&nbsp;using&nbsp;the&nbsp;type</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">OTUInt16&nbsp;typeNamespaceIndex;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">result&nbsp;=&nbsp;Server::AddressSpaceRoot::instance()-&gt;addNamespace(_T(&quot;urn:MyObjectType:TypeDeclaration),&nbsp;&amp;typeNamespaceIndex);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Server::ObjectTypePtr&nbsp;myObjectType&nbsp;=&nbsp;Server::ObjectType::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myObjectType-&gt;setNodeId(NodeId(typeNamespaceIndex,&nbsp;_T(&quot;MyObjectTypeId&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myObjectType-&gt;setBrowseName(QualifiedName(_T(&quot;MyObjectType&quot;),&nbsp;typeNamespaceIndex));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myObjectType-&gt;setDescription(LocalizedText(_T(&quot;Type&nbsp;for&nbsp;my&nbsp;objects&quot;),&nbsp;_T(&quot;en&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myObjectType-&gt;setDisplayName(LocalizedText(_T(&quot;MyObjectType&quot;),&nbsp;_T(&quot;en&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myObjectType-&gt;setIsAbstract(false);&nbsp;//false&nbsp;is&nbsp;the&nbsp;default;&nbsp;if&nbsp;true,&nbsp;the&nbsp;type&nbsp;may&nbsp;not&nbsp;be&nbsp;exposed&nbsp;to&nbsp;the&nbsp;address&nbsp;space</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//add&nbsp;a&nbsp;reference&nbsp;from&nbsp;the&nbsp;super&nbsp;type&nbsp;(this&nbsp;will&nbsp;also&nbsp;insert&nbsp;the&nbsp;type&nbsp;node&nbsp;into&nbsp;the&nbsp;address&nbsp;space)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Server::AddressSpaceRoot::instance()-&gt;getObjectType(Statics::ObjectTypeId_BaseObjectType)-&gt;addReference(Statics::ReferenceTypeId_HasSubtype,&nbsp;myObjectType);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;ObjectTypes&nbsp;and&nbsp;VariableTypes&nbsp;can&nbsp;have&nbsp;additional&nbsp;property&nbsp;or&nbsp;component&nbsp;nodes&nbsp;to&nbsp;information</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;The&nbsp;configuration&nbsp;of&nbsp;the&nbsp;components&nbsp;follows&nbsp;the&nbsp;same&nbsp;procedure&nbsp;as&nbsp;the&nbsp;configuration&nbsp;of&nbsp;a&nbsp;simple&nbsp;variable</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;except&nbsp;that&nbsp;a&nbsp;HasComponent&nbsp;reference&nbsp;is&nbsp;set&nbsp;from&nbsp;the&nbsp;object&nbsp;type&nbsp;and&nbsp;a&nbsp;modelling&nbsp;rule&nbsp;needs&nbsp;to&nbsp;be&nbsp;added</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Server::VariablePtr&nbsp;myComponent&nbsp;=&nbsp;Server::Variable::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myComponent-&gt;setNodeId(NodeId(typeNamespaceIndex,&nbsp;_T(&quot;MyPropertyId&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myComponent-&gt;init(Statics::VariableTypeId_BaseDataVariableType);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myComponent-&gt;setDataType(Statics::DataTypeId_Double);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myComponent-&gt;setDisplayName(LocalizedText(_T(&quot;MyProperty&quot;),&nbsp;_T(&quot;en&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myComponent-&gt;setBrowseName(QualifiedName(_T(&quot;MyProperty&quot;),&nbsp;typeNamespaceIndex));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myComponent-&gt;setDescription(LocalizedText(_T(&quot;A&nbsp;custom&nbsp;property.&quot;),&nbsp;_T(&quot;en&quot;)));</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myComponent-&gt;setAccessLevel(EnumAccessLevel_CurrentRead&nbsp;|&nbsp;EnumAccessLevel_CurrentWrite);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myObjectType-&gt;addReference(Statics::ReferenceTypeId_HasComponent,&nbsp;myComponent);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:18px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Paragraph">Also set a </span><span class="f_Reference">Modelling Rule</span><span class="f_Paragraph"> (exactly one) to all components of the type which shall be instantiated. </span><span class="f_Reference">Modelling Rules</span><span class="f_Paragraph"> define additional information on how to create instances of a type. The usual </span><span class="f_Reference">Modelling Rules</span><span class="f_Paragraph"> are </span><span class="f_Reference">mandatory</span><span class="f_Paragraph"> or </span><span class="f_Reference">optional</span><span class="f_Paragraph"> defining if the component has to be created on instances or if it is just optional. Instead of these rules it is also possible to use or even define other </span><span class="f_Reference">Modelling Rules </span><span class="f_Paragraph">(</span><span class="f_Reference">Modelling Rules</span><span class="f_Paragraph"> are just </span><span class="f_Reference">Object Types</span><span class="f_Paragraph">). Type definitions with components without a </span><span class="f_Reference">Modelling Rule</span><span class="f_Paragraph"> shall not be instantiated and apply only to the type (e.g. for a </span><span class="f_Reference">method</span><span class="f_Paragraph"> in the type tree to create instances during runtime by clients).</span></td></tr></table></div><p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;mandatoryRule(EnumNumericNodeId_ModellingRule_Mandatory);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myComponent-&gt;addReference(Statics::ReferenceTypeId_HasModellingRule,&nbsp;Server::AddressSpaceRoot::instance()-&gt;getNode(&amp;mandatoryRule));</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">Creating Instances of a Custom Type</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">Creating instances of a custom type can be a bit different to creating instances of a default type.</span><br />
+<span class="f_Paragraph">The <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">init()</a> method is able to create instances of default types or instances of types which are composed of default types, but it has some limitations:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The generated nodes get some generated <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeIds</a>. If you use specific <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeIds</a>, then you need to re assign the <a href="class_softing_o_p_c_toolbox5_1_1_node_id.htm" class="topiclink">NodeIds</a> afterwards for all nodes.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">It calls the <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm" class="topiclink">Creator</a> to create the related API object. If you need specific derived API objects to perform a custom implementation, you need to select the correct types within a derived <a href="class_softing_o_p_c_toolbox5_1_1_creator.htm" class="topiclink">Creator</a>, which can be difficult.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">It creates nodes only for the well known </span><span class="f_Reference">Modelling Rules</span><span class="f_Paragraph"> </span><span class="f_Reference">Optional</span><span class="f_Paragraph"> and </span><span class="f_Reference">Mandatory</span><span class="f_Paragraph">, other </span><span class="f_Reference">Modelling Rules</span><span class="f_Paragraph"> require to add these nodes manually.</span></td></tr></table></div><h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<h3 class="p_Heading3"><span class="f_Paragraph">There is no problem for custom types without components or with only unhandled default components.</span></h3>
+<h3 class="p_Heading3"><span class="f_Heading3">&nbsp;</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">For instances with custom handling (e.g. read/write request) it is recommended to implement a custom C++ method which instantiates the components with the desired Node types and configuration. Since it is almost the same procedure as creating the components for the type tree, it is a good way to design this method for both purposes. </span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Creating the components for instances differs only in three points from creating them for the type tree:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Some components may have a different initial value / status, e.g. </span><span class="f_FixedSize">EnumStatusCode_BadWaitingForInitialData</span><span class="f_Paragraph"> while the type displays a good status code.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">Setting the reference to the </span><span class="f_Reference">Modelling Rule</span><span class="f_Paragraph"> usually only makes sense for the type definition. Simply skip this call when creating an instance.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 5px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><span class="f_Paragraph">The init() should NOT be invoked on the component, because the init() for initializing an instance of the cusom type will create all not yet explicitly created components and their properties (e.g. EURange of an AnalogItem).</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">This C++ method could look like this:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//&nbsp;configure&nbsp;myObject&nbsp;with&nbsp;NodeId,&nbsp;BrowseName&nbsp;and&nbsp;DisplayName</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//For&nbsp;components&nbsp;with&nbsp;custom&nbsp;read/write&nbsp;handling:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//MyDerivedVariableClass&nbsp;is&nbsp;a&nbsp;derived&nbsp;variable&nbsp;class&nbsp;with&nbsp;overridden&nbsp;handleReadRequest()&nbsp;and&nbsp;handleWriteRequest()</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ObjectPointer&lt;MyDerivedVariableCLass&gt;&nbsp;myComponent&nbsp;=&nbsp;MyDerivedVariableClass::create();</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//set&nbsp;unique&nbsp;NodeId&nbsp;and&nbsp;set&nbsp;the&nbsp;same&nbsp;BrowseName&nbsp;as&nbsp;in&nbsp;the&nbsp;type&nbsp;definition&nbsp;(DisplayName&nbsp;can&nbsp;also&nbsp;be&nbsp;copied)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myComponent-&gt;setAccessLevel(EnumAccessLevel_CurrentRead&nbsp;|&nbsp;EnumAccessLevel_CurrentWrite);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//now&nbsp;don't&nbsp;invoke&nbsp;init(),&nbsp;simply&nbsp;add&nbsp;a&nbsp;reference&nbsp;from&nbsp;the&nbsp;type&nbsp;instance</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myObject-&gt;addReference(Statics::ReferenceTypeId_HasComponent,&nbsp;myComponent);</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//more&nbsp;components</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">//invoke&nbsp;init&nbsp;on&nbsp;the&nbsp;instance&nbsp;to&nbsp;create&nbsp;all&nbsp;not&nbsp;yet&nbsp;explicitly&nbsp;created&nbsp;components&nbsp;and&nbsp;their&nbsp;properties</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">myObject-&gt;init(nodeId);//NodeId&nbsp;of&nbsp;the&nbsp;custom&nbsp;object&nbsp;type</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">If it is desired to override a component which was defined by the super type, simply add a Node of the same type (or sub type) with the same </span><span class="f_Reference">Attributes</span><span class="f_Paragraph"> and </span><span class="f_Reference">References</span><span class="f_Paragraph"> before the components of the super type is created. The default implementation is designed to create only not existing Nodes thus the super type will not instantiate that component anymore and the new one will be used.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Note:</span></h3>
+<p class="p_Paragraph"><span class="f_Paragraph">The Node for the type has no type definition (it is the type definition). Use the <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a29029be7213e42062606bbe8834b3a8f" class="topiclink">insert()</a> method to insert the Node to the address space without setting a </span><span class="f_Reference">HasTypeDefinition</span><span class="f_Paragraph"> reference. Components of a type are normal Nodes with a type definition, so they can be inserted via <a href="class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node.htm#class_softing_o_p_c_toolbox5_1_1_server_1_1_base_node_1a1dff5e2bd626dd28db82ced27a3f7302" class="topiclink">init()</a>.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">An existing </span><span class="f_Reference">Modelling Rule</span><span class="f_Paragraph"> on an instance has no effect, it has only informational purposes.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="html_creatingandinsertingnodes.htm" class="topiclink">Creating and Inserting Nodes</a>, <a href="html_serverstep2sample.htm" class="topiclink">Sample Application</a>, <a href="html_servertutorial.htm" class="topiclink">Server Tutorial</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_creatingcustomtypes.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

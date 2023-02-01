@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Get NodeIds Using the Namespace Table</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "html_getnodeidswithnamespacetable.htm");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="middle" bgcolor="#99CCFF">
+    <td>
+      <p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="vertical-align:middle;">
+              <p style="font-family:Verdana; font-size:9pt; font-style:italic;">OPC UA C++ Server &amp; Client SDK V6.00</p>
+              <p style="font-family:Verdana; font-size:9pt; font-weight:bold;">Get NodeIds Using the Namespace Table</p>
+            </td>
+          </tr>
+        </table>
+      </p>
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="html_welcome.htm">Top</a>&nbsp;
+     <a href="html_clientstep5.htm">Previous</a>&nbsp;
+     <a href="html_getnodeidsbybrowsenames.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+  <tr bgcolor="white">
+      <td colspan="2">
+          <p><span class="f_Paragraph">The </span><span class="f_Reference">TranslateBrowsePathToNodeIds</span><span class="f_Paragraph"> service is useful when a client has the NodeId of an object or variable and it knows the type definition of the node. In this case, the client can ask the server to translate browse paths found on the type to NodeIds found in the instance. A browse path consists of a starting node and a list of browse names that are linked by references.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">For example, by knowing the RefrigeratorType the client can ask the server for the NodeId of the Temperature variable found in Refrigerator1.</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">In order to obtain the NodeId of the RefrigeratorType, we need the namespace index and the identifier of the type. The identifier is usually known and to get the namespace index we can use the namespace table.</span></p>
+<p class="p_Paragraph"><span class="f_Heading3">Preconditions</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">Before the </span><span class="f_Reference">TranslateBrowsePathToNodeIds</span><span class="f_Paragraph"> service can be invoked, the <a href="class_softing_o_p_c_toolbox5_1_1_application.htm" class="topiclink">Application</a> must be initialized and a connected <a href="class_softing_o_p_c_toolbox5_1_1_client_1_1_session.htm" class="topiclink">Session</a> must be available (see <a href="html_clientstep1.htm" class="topiclink">Client Tutorial Step 1</a>).</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Obtaining a NodeId using the Namespace table</span></h3>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">1.</span></td><td style="border:none"><span class="f_List"> Get the Namespace Table</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">First we need to feth the namespace table from the session.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">StringTableConstPtr&nbsp;namespaces;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">session-&gt;getNamespaceTable(&amp;namespaces);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">2.</span></td><td style="border:none"><span class="f_Heading3"> </span><span class="f_List">Get the Namespace Index of the Object or Type</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">Now get the namespace index of the desired type using the URI identifying the namespace (the URI is copied from the server of companion standard).</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">OTUInt16&nbsp;typeNamespaceIndex;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">namespace-&gt;getIndex(_T(&quot;urn:MyObject:TypeDeclaration&quot;),&nbsp;typeNamespaceIndex);</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 5px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:9pt; font-family: 'Verdana';color:#000000;">3.</span></td><td style="border:none"><span class="f_Heading3"> </span><span class="f_List">Obtain the NodeId</span></td></tr></table></div><p class="p_Paragraph"><span class="f_Paragraph">The NodeId consists of the namespace index and the identifier (The identifier of the type definition is known).</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">NodeId&nbsp;typeNodeId;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">typeNodeId.setString(typeNamespaceIndex,&nbsp;identifier);</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">&nbsp;</span></p>
+<p class="p_Paragraph"><span class="f_Paragraph">See also: <a href="html_getnodeidsbybrowsenames.htm" class="topiclink">Get NodeIds by Browse Paths</a>, <a href="html_browse.htm" class="topiclink">Browsing the Address Space</a>, <a href="html_clientstep5sample.htm" class="topiclink">Sample Application</a>, <a href="html_clienttutorial.htm" class="topiclink">Client Tutorial</a></span></p>
+
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top: 0px;">
+         <p>
+            <hr />
+            <a href="mailto:support.automation@softing.com?subject=OPC UA C++ Server &amp; Client SDK V6.00 Documentation Feedback:Page=html_getnodeidswithnamespacetable.htm">Send comments on this topic.</a>
+         </p>
+         <p>
+            Copyright © Softing Industrial Automation GmbH&nbsp;2022
+         </p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
