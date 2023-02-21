@@ -1,7 +1,7 @@
 Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.o: \
- /home/user/WS/IPC/opcua_server/Server/src/StopWatch.cpp \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/src/StopWatch.cpp \
  /usr/include/stdc-predef.h \
- /home/user/WS/IPC/opcua_server/Server/include/stdafx.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/include/stdafx.h \
  /usr/include/c++/11/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -52,9 +52,9 @@ Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/11/bits/std_abs.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/Toolbox.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ToolkitConfig.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OSCompat.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/Toolbox.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ToolkitConfig.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OSCompat.h \
  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
@@ -112,7 +112,7 @@ Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTPlatforms.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTPlatforms.h \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
@@ -189,24 +189,24 @@ Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTExports.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OSCompat.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTTypes.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ModelCompiler/ErrorEnums.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ModelCompiler/ErrorReportExports.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/Enums.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTExports.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ByteString.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IByteString.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ByteStringStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTExports.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OSCompat.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTTypes.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ModelCompiler/ErrorEnums.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ModelCompiler/ErrorReportExports.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/Enums.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTExports.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ByteString.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IByteString.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ByteStringStruct.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTMemory.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/Creator.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/Base.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ApiMacros.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTMemory.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/Creator.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/Base.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ApiMacros.h \
  /usr/include/c++/11/stack /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_stack.h \
@@ -232,5 +232,5 @@ Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ByteString.h \
- /home/user/WS/IPC/opcua_server/Server/include/StopWatch.h
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ByteString.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/include/StopWatch.h

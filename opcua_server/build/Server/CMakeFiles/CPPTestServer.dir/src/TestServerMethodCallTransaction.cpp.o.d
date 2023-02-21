@@ -1,7 +1,7 @@
 Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.o: \
- /home/user/WS/IPC/opcua_server/Server/src/TestServerMethodCallTransaction.cpp \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/src/TestServerMethodCallTransaction.cpp \
  /usr/include/stdc-predef.h \
- /home/user/WS/IPC/opcua_server/Server/include/stdafx.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/include/stdafx.h \
  /usr/include/c++/11/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -52,9 +52,9 @@ Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/11/bits/std_abs.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/Toolbox.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ToolkitConfig.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OSCompat.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/Toolbox.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ToolkitConfig.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OSCompat.h \
  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
@@ -112,7 +112,7 @@ Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTPlatforms.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTPlatforms.h \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
@@ -189,24 +189,24 @@ Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTExports.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OSCompat.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTTypes.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ModelCompiler/ErrorEnums.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ModelCompiler/ErrorReportExports.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/Enums.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTExports.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ByteString.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IByteString.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ByteStringStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTExports.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OSCompat.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTTypes.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ModelCompiler/ErrorEnums.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ModelCompiler/ErrorReportExports.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/Enums.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTExports.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ByteString.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IByteString.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ByteStringStruct.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTMemory.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/Creator.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/Base.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ApiMacros.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTMemory.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/Creator.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/Base.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ApiMacros.h \
  /usr/include/c++/11/stack /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_stack.h \
@@ -232,105 +232,105 @@ Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ByteString.h \
- /home/user/WS/IPC/opcua_server/Server/include/TestServerMethodCallTransaction.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerMethodCallTransaction.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerDataTransaction.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/NodeId.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/INodeId.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/NodeIdStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/InnerValue.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IValue.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/Value.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ValueStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ByteString.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/include/TestServerMethodCallTransaction.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerMethodCallTransaction.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerDataTransaction.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/NodeId.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/INodeId.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/NodeIdStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/InnerValue.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IValue.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/Value.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ValueStruct.h \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ByteStringStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ValueUnion.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/OTTypes.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/Enums.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/GuidStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/NodeIdStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ExpandedNodeIdStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/QualifiedNameStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/LocalizedTextStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/EUInformationStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/TimeZoneStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/NumericRangeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/SignedSoftwareCertificateStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ReferenceDescriptionStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ApplicationDescriptionStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ServerDiagnosticsSummaryDataTypeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/SubscriptionDiagnosticsDataTypeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/SessionDiagnosticsDataTypeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/DateTimeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ServiceCounterDataTypeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/SessionSecurityDiagnosticsDataTypeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/SemanticChangeStructureDataTypeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ModelChangeStructureDataTypeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/UserIdentityTokenStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/AnonymousIdentityTokenStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/UserNameIdentityTokenStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/X509IdentityTokenStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/IssuedIdentityTokenStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/BuildInfoStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ServerStatusDataTypeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/EnumValueTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ByteStringStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ValueUnion.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/OTTypes.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/Enums.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/GuidStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/NodeIdStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ExpandedNodeIdStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/QualifiedNameStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/LocalizedTextStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/EUInformationStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/TimeZoneStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/NumericRangeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/SignedSoftwareCertificateStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ReferenceDescriptionStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ApplicationDescriptionStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ServerDiagnosticsSummaryDataTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/SubscriptionDiagnosticsDataTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/SessionDiagnosticsDataTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/DateTimeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ServiceCounterDataTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/SessionSecurityDiagnosticsDataTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/SemanticChangeStructureDataTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ModelChangeStructureDataTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/UserIdentityTokenStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/AnonymousIdentityTokenStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/UserNameIdentityTokenStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/X509IdentityTokenStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/IssuedIdentityTokenStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/BuildInfoStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ServerStatusDataTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/EnumValueTypeStruct.h \
  /usr/include/c++/11/limits \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/Guid.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IGuid.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/GuidStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/DiagnosticInfo.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IDiagnosticInfo.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/DiagnosticInfoStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/InnerDiagnosticInfo.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/StringTable.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerMethodCallRequest.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/InnerNodeId.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerDataRequest.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerBaseNode.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/InnerQualifiedName.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IQualifiedName.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/QualifiedNameStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/QualifiedName.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/InnerLocalizedText.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ILocalizedText.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/LocalizedTextStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/LocalizedText.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/InnerDataValue.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IDataValue.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/DataValueStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ValueStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/InnerDateTime.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IDateTime.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/DateTimeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/DateTime.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/DataValue.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/RelativePath.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IRelativePath.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/RelativePathStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/RelativePathElementStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/InnerRelativePathElement.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IRelativePathElement.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/RelativePathElementStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/RelativePathElement.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/RolePermissionType.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IRolePermissionType.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/RolePermissionTypeStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerAddressSpaceRoot.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ImportNodeDescription.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/InnerExpandedNodeId.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IExpandedNodeId.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ExpandedNodeIdStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerExportCustomNodesTransaction.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ReferenceDescription.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/IReferenceDescription.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include/ReferenceDescriptionStruct.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ExpandedNodeId.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerMethod.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerBaseNode.h \
- /home/user/WS/IPC/opcua_server/Server/include/DiagnosticMessages.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/DiagnosticInfo.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/StringTable.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/ServerDataTransaction.h \
- /home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include/LocalizedText.h
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/Guid.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IGuid.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/GuidStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/DiagnosticInfo.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IDiagnosticInfo.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/DiagnosticInfoStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/InnerDiagnosticInfo.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/StringTable.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerMethodCallRequest.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/InnerNodeId.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerDataRequest.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerBaseNode.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/InnerQualifiedName.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IQualifiedName.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/QualifiedNameStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/QualifiedName.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/InnerLocalizedText.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ILocalizedText.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/LocalizedTextStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/LocalizedText.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/InnerDataValue.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IDataValue.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/DataValueStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ValueStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/InnerDateTime.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IDateTime.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/DateTimeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/DateTime.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/DataValue.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/RelativePath.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IRelativePath.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/RelativePathStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/RelativePathElementStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/InnerRelativePathElement.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IRelativePathElement.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/RelativePathElementStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/RelativePathElement.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/RolePermissionType.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IRolePermissionType.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/RolePermissionTypeStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerAddressSpaceRoot.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ImportNodeDescription.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/InnerExpandedNodeId.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IExpandedNodeId.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ExpandedNodeIdStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerExportCustomNodesTransaction.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ReferenceDescription.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/IReferenceDescription.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include/ReferenceDescriptionStruct.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ExpandedNodeId.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerMethod.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerBaseNode.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/include/DiagnosticMessages.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/DiagnosticInfo.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/StringTable.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/ServerDataTransaction.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include/LocalizedText.h

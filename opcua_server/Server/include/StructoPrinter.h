@@ -26,6 +26,7 @@
 #include "ServerObject.h"
 //#include "MeasureConditionBranchPerformanceMethod.h"
 #include "ModuleFolder.h"
+#include "pthread.h"
 
 #include "Util_Mutex.h"
 #include "Util_TimerThread.h"
@@ -48,7 +49,8 @@ public:
 	virtual EnumStatusCode initModule(const tstring& name, OTUInt16 namespaceIndex, SoftingOPCToolbox5::Server::ObjectPtr parentFolder);
 
 	virtual void endModule();
-	virtual void Update(void *pData);
+	virtual void Update();	
+	pthread_t serverAutoUpdate;
 
 private:
 	EventSourceObjectPtr p_monitoredNotificationArea;	
@@ -59,6 +61,10 @@ private:
 	CustomVariablePtr p_distance;
 	CustomVariablePtr p_accleration;
 	CustomVariablePtr p_velocity;
+	void* UpdateData();
+	static void *serverUpdateVariables(void *pCtx){
+		return reinterpret_cast<PrinterModule*>(pCtx)->UpdateData();
+	}
 };
 
 #endif

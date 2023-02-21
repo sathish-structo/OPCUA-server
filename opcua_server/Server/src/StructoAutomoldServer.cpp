@@ -30,6 +30,7 @@
 #include "ServerSession.h"
 #include "tb5version.h"
 #include "UserIdentityToken.h"
+#include "StructoPrinter.h"
 
 #include "ApplicationModule.h"
 #include "TestServerCreator.h"
@@ -64,6 +65,7 @@
 #include <ifaddrs.h>
 #endif
 
+using namespace std;
 using namespace SoftingOPCToolbox5;
 
 static NodeId* g_pPendingGdsRequest;
@@ -1369,8 +1371,9 @@ std::vector<tstring> fillEndpointURLs(const CommandLineOptions& commandLineOptio
 void assignCommonPreInitApplicationSettings(const CommandLineOptions& commandLineOptions, const tstring& pathToPKIFolder)
 {
 	ApplicationPtr pApp = Application::instance();
+	_tprintf(_T("\nAssign License for server\n"));
 	// License
-	// pApp->activateLicense(EnumFeature_Server, _T("XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"));
+	pApp->activateLicense(EnumFeature_Server, _T("WM23C-CLPH2-04KHG-DLRV8-B4MG1"));
 	commandLineOptions.loadLicense(pApp);
 
 	// DHParam File

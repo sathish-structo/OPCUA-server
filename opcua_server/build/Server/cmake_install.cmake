@@ -1,8 +1,8 @@
-# Install script for directory: /home/user/WS/IPC/opcua_server/Server
+# Install script for directory: /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/user/WS/IPC/opcua_server")
+  set(CMAKE_INSTALL_PREFIX "/home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/CPPTestServer"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/user/WS/IPC/opcua_server/build/Server/CPPTestServer")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build/Server/CPPTestServer")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/CPPTestServer" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/CPPTestServer")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/CPPTestServer"
-         OLD_RPATH "/home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/lib/linux/x86_64/gcc9/release:"
+         OLD_RPATH "/home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/lib/linux/x86_64/gcc9/release:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/CPPTestServer")

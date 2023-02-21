@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/WS/IPC/opcua_server
+CMAKE_SOURCE_DIR = /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/WS/IPC/opcua_server/build
+CMAKE_BINARY_DIR = /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/user/WS/IPC/opcua_server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/user/WS/IPC/opcua_server/build/CMakeFiles /home/user/WS/IPC/opcua_server/build/Server//CMakeFiles/progress.marks
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/WS/IPC/opcua_server/build/CMakeFiles 0
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build/CMakeFiles /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build/Server//CMakeFiles/progress.marks
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/clean
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/preinstall
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/preinstall
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/user/WS/IPC/opcua_server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Server/CMakeFiles/CPPTestServer.dir/rule:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/CMakeFiles/CPPTestServer.dir/rule
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server/CMakeFiles/CPPTestServer.dir/rule
 .PHONY : Server/CMakeFiles/CPPTestServer.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ CPPTestServer: Server/CMakeFiles/CPPTestServer.dir/rule
 
 # fast build rule for target.
 CPPTestServer/fast:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/build
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/build
 .PHONY : CPPTestServer/fast
 
 src/AlarmsAndConditionsStressTestModule.o: src/AlarmsAndConditionsStressTestModule.cpp.o
@@ -180,7 +180,7 @@ src/AlarmsAndConditionsStressTestModule.o: src/AlarmsAndConditionsStressTestModu
 
 # target to build an object file
 src/AlarmsAndConditionsStressTestModule.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/AlarmsAndConditionsStressTestModule.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/AlarmsAndConditionsStressTestModule.cpp.o
 .PHONY : src/AlarmsAndConditionsStressTestModule.cpp.o
 
 src/AlarmsAndConditionsStressTestModule.i: src/AlarmsAndConditionsStressTestModule.cpp.i
@@ -188,7 +188,7 @@ src/AlarmsAndConditionsStressTestModule.i: src/AlarmsAndConditionsStressTestModu
 
 # target to preprocess a source file
 src/AlarmsAndConditionsStressTestModule.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/AlarmsAndConditionsStressTestModule.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/AlarmsAndConditionsStressTestModule.cpp.i
 .PHONY : src/AlarmsAndConditionsStressTestModule.cpp.i
 
 src/AlarmsAndConditionsStressTestModule.s: src/AlarmsAndConditionsStressTestModule.cpp.s
@@ -196,7 +196,7 @@ src/AlarmsAndConditionsStressTestModule.s: src/AlarmsAndConditionsStressTestModu
 
 # target to generate assembly for a file
 src/AlarmsAndConditionsStressTestModule.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/AlarmsAndConditionsStressTestModule.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/AlarmsAndConditionsStressTestModule.cpp.s
 .PHONY : src/AlarmsAndConditionsStressTestModule.cpp.s
 
 src/ApplicationModule.o: src/ApplicationModule.cpp.o
@@ -204,7 +204,7 @@ src/ApplicationModule.o: src/ApplicationModule.cpp.o
 
 # target to build an object file
 src/ApplicationModule.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ApplicationModule.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ApplicationModule.cpp.o
 .PHONY : src/ApplicationModule.cpp.o
 
 src/ApplicationModule.i: src/ApplicationModule.cpp.i
@@ -212,7 +212,7 @@ src/ApplicationModule.i: src/ApplicationModule.cpp.i
 
 # target to preprocess a source file
 src/ApplicationModule.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ApplicationModule.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ApplicationModule.cpp.i
 .PHONY : src/ApplicationModule.cpp.i
 
 src/ApplicationModule.s: src/ApplicationModule.cpp.s
@@ -220,7 +220,7 @@ src/ApplicationModule.s: src/ApplicationModule.cpp.s
 
 # target to generate assembly for a file
 src/ApplicationModule.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ApplicationModule.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ApplicationModule.cpp.s
 .PHONY : src/ApplicationModule.cpp.s
 
 src/ChangeTwoStateItemSemanticsMethod.o: src/ChangeTwoStateItemSemanticsMethod.cpp.o
@@ -228,7 +228,7 @@ src/ChangeTwoStateItemSemanticsMethod.o: src/ChangeTwoStateItemSemanticsMethod.c
 
 # target to build an object file
 src/ChangeTwoStateItemSemanticsMethod.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ChangeTwoStateItemSemanticsMethod.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ChangeTwoStateItemSemanticsMethod.cpp.o
 .PHONY : src/ChangeTwoStateItemSemanticsMethod.cpp.o
 
 src/ChangeTwoStateItemSemanticsMethod.i: src/ChangeTwoStateItemSemanticsMethod.cpp.i
@@ -236,7 +236,7 @@ src/ChangeTwoStateItemSemanticsMethod.i: src/ChangeTwoStateItemSemanticsMethod.c
 
 # target to preprocess a source file
 src/ChangeTwoStateItemSemanticsMethod.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ChangeTwoStateItemSemanticsMethod.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ChangeTwoStateItemSemanticsMethod.cpp.i
 .PHONY : src/ChangeTwoStateItemSemanticsMethod.cpp.i
 
 src/ChangeTwoStateItemSemanticsMethod.s: src/ChangeTwoStateItemSemanticsMethod.cpp.s
@@ -244,7 +244,7 @@ src/ChangeTwoStateItemSemanticsMethod.s: src/ChangeTwoStateItemSemanticsMethod.c
 
 # target to generate assembly for a file
 src/ChangeTwoStateItemSemanticsMethod.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ChangeTwoStateItemSemanticsMethod.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ChangeTwoStateItemSemanticsMethod.cpp.s
 .PHONY : src/ChangeTwoStateItemSemanticsMethod.cpp.s
 
 src/CommandLineOptions.o: src/CommandLineOptions.cpp.o
@@ -252,7 +252,7 @@ src/CommandLineOptions.o: src/CommandLineOptions.cpp.o
 
 # target to build an object file
 src/CommandLineOptions.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CommandLineOptions.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CommandLineOptions.cpp.o
 .PHONY : src/CommandLineOptions.cpp.o
 
 src/CommandLineOptions.i: src/CommandLineOptions.cpp.i
@@ -260,7 +260,7 @@ src/CommandLineOptions.i: src/CommandLineOptions.cpp.i
 
 # target to preprocess a source file
 src/CommandLineOptions.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CommandLineOptions.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CommandLineOptions.cpp.i
 .PHONY : src/CommandLineOptions.cpp.i
 
 src/CommandLineOptions.s: src/CommandLineOptions.cpp.s
@@ -268,7 +268,7 @@ src/CommandLineOptions.s: src/CommandLineOptions.cpp.s
 
 # target to generate assembly for a file
 src/CommandLineOptions.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CommandLineOptions.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CommandLineOptions.cpp.s
 .PHONY : src/CommandLineOptions.cpp.s
 
 src/CustomCallbackEvent.o: src/CustomCallbackEvent.cpp.o
@@ -276,7 +276,7 @@ src/CustomCallbackEvent.o: src/CustomCallbackEvent.cpp.o
 
 # target to build an object file
 src/CustomCallbackEvent.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomCallbackEvent.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomCallbackEvent.cpp.o
 .PHONY : src/CustomCallbackEvent.cpp.o
 
 src/CustomCallbackEvent.i: src/CustomCallbackEvent.cpp.i
@@ -284,7 +284,7 @@ src/CustomCallbackEvent.i: src/CustomCallbackEvent.cpp.i
 
 # target to preprocess a source file
 src/CustomCallbackEvent.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomCallbackEvent.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomCallbackEvent.cpp.i
 .PHONY : src/CustomCallbackEvent.cpp.i
 
 src/CustomCallbackEvent.s: src/CustomCallbackEvent.cpp.s
@@ -292,7 +292,7 @@ src/CustomCallbackEvent.s: src/CustomCallbackEvent.cpp.s
 
 # target to generate assembly for a file
 src/CustomCallbackEvent.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomCallbackEvent.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomCallbackEvent.cpp.s
 .PHONY : src/CustomCallbackEvent.cpp.s
 
 src/CustomVariable.o: src/CustomVariable.cpp.o
@@ -300,7 +300,7 @@ src/CustomVariable.o: src/CustomVariable.cpp.o
 
 # target to build an object file
 src/CustomVariable.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomVariable.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomVariable.cpp.o
 .PHONY : src/CustomVariable.cpp.o
 
 src/CustomVariable.i: src/CustomVariable.cpp.i
@@ -308,7 +308,7 @@ src/CustomVariable.i: src/CustomVariable.cpp.i
 
 # target to preprocess a source file
 src/CustomVariable.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomVariable.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomVariable.cpp.i
 .PHONY : src/CustomVariable.cpp.i
 
 src/CustomVariable.s: src/CustomVariable.cpp.s
@@ -316,7 +316,7 @@ src/CustomVariable.s: src/CustomVariable.cpp.s
 
 # target to generate assembly for a file
 src/CustomVariable.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomVariable.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/CustomVariable.cpp.s
 .PHONY : src/CustomVariable.cpp.s
 
 src/DiagnosticMessages.o: src/DiagnosticMessages.cpp.o
@@ -324,7 +324,7 @@ src/DiagnosticMessages.o: src/DiagnosticMessages.cpp.o
 
 # target to build an object file
 src/DiagnosticMessages.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DiagnosticMessages.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DiagnosticMessages.cpp.o
 .PHONY : src/DiagnosticMessages.cpp.o
 
 src/DiagnosticMessages.i: src/DiagnosticMessages.cpp.i
@@ -332,7 +332,7 @@ src/DiagnosticMessages.i: src/DiagnosticMessages.cpp.i
 
 # target to preprocess a source file
 src/DiagnosticMessages.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DiagnosticMessages.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DiagnosticMessages.cpp.i
 .PHONY : src/DiagnosticMessages.cpp.i
 
 src/DiagnosticMessages.s: src/DiagnosticMessages.cpp.s
@@ -340,7 +340,7 @@ src/DiagnosticMessages.s: src/DiagnosticMessages.cpp.s
 
 # target to generate assembly for a file
 src/DiagnosticMessages.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DiagnosticMessages.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DiagnosticMessages.cpp.s
 .PHONY : src/DiagnosticMessages.cpp.s
 
 src/DynamicNodeCache.o: src/DynamicNodeCache.cpp.o
@@ -348,7 +348,7 @@ src/DynamicNodeCache.o: src/DynamicNodeCache.cpp.o
 
 # target to build an object file
 src/DynamicNodeCache.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicNodeCache.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicNodeCache.cpp.o
 .PHONY : src/DynamicNodeCache.cpp.o
 
 src/DynamicNodeCache.i: src/DynamicNodeCache.cpp.i
@@ -356,7 +356,7 @@ src/DynamicNodeCache.i: src/DynamicNodeCache.cpp.i
 
 # target to preprocess a source file
 src/DynamicNodeCache.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicNodeCache.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicNodeCache.cpp.i
 .PHONY : src/DynamicNodeCache.cpp.i
 
 src/DynamicNodeCache.s: src/DynamicNodeCache.cpp.s
@@ -364,7 +364,7 @@ src/DynamicNodeCache.s: src/DynamicNodeCache.cpp.s
 
 # target to generate assembly for a file
 src/DynamicNodeCache.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicNodeCache.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicNodeCache.cpp.s
 .PHONY : src/DynamicNodeCache.cpp.s
 
 src/DynamicTestVariable.o: src/DynamicTestVariable.cpp.o
@@ -372,7 +372,7 @@ src/DynamicTestVariable.o: src/DynamicTestVariable.cpp.o
 
 # target to build an object file
 src/DynamicTestVariable.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicTestVariable.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicTestVariable.cpp.o
 .PHONY : src/DynamicTestVariable.cpp.o
 
 src/DynamicTestVariable.i: src/DynamicTestVariable.cpp.i
@@ -380,7 +380,7 @@ src/DynamicTestVariable.i: src/DynamicTestVariable.cpp.i
 
 # target to preprocess a source file
 src/DynamicTestVariable.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicTestVariable.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicTestVariable.cpp.i
 .PHONY : src/DynamicTestVariable.cpp.i
 
 src/DynamicTestVariable.s: src/DynamicTestVariable.cpp.s
@@ -388,7 +388,7 @@ src/DynamicTestVariable.s: src/DynamicTestVariable.cpp.s
 
 # target to generate assembly for a file
 src/DynamicTestVariable.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicTestVariable.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/DynamicTestVariable.cpp.s
 .PHONY : src/DynamicTestVariable.cpp.s
 
 src/EndpointManipulationMethods.o: src/EndpointManipulationMethods.cpp.o
@@ -396,7 +396,7 @@ src/EndpointManipulationMethods.o: src/EndpointManipulationMethods.cpp.o
 
 # target to build an object file
 src/EndpointManipulationMethods.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EndpointManipulationMethods.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EndpointManipulationMethods.cpp.o
 .PHONY : src/EndpointManipulationMethods.cpp.o
 
 src/EndpointManipulationMethods.i: src/EndpointManipulationMethods.cpp.i
@@ -404,7 +404,7 @@ src/EndpointManipulationMethods.i: src/EndpointManipulationMethods.cpp.i
 
 # target to preprocess a source file
 src/EndpointManipulationMethods.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EndpointManipulationMethods.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EndpointManipulationMethods.cpp.i
 .PHONY : src/EndpointManipulationMethods.cpp.i
 
 src/EndpointManipulationMethods.s: src/EndpointManipulationMethods.cpp.s
@@ -412,7 +412,7 @@ src/EndpointManipulationMethods.s: src/EndpointManipulationMethods.cpp.s
 
 # target to generate assembly for a file
 src/EndpointManipulationMethods.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EndpointManipulationMethods.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EndpointManipulationMethods.cpp.s
 .PHONY : src/EndpointManipulationMethods.cpp.s
 
 src/EventSourceObject.o: src/EventSourceObject.cpp.o
@@ -420,7 +420,7 @@ src/EventSourceObject.o: src/EventSourceObject.cpp.o
 
 # target to build an object file
 src/EventSourceObject.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventSourceObject.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventSourceObject.cpp.o
 .PHONY : src/EventSourceObject.cpp.o
 
 src/EventSourceObject.i: src/EventSourceObject.cpp.i
@@ -428,7 +428,7 @@ src/EventSourceObject.i: src/EventSourceObject.cpp.i
 
 # target to preprocess a source file
 src/EventSourceObject.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventSourceObject.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventSourceObject.cpp.i
 .PHONY : src/EventSourceObject.cpp.i
 
 src/EventSourceObject.s: src/EventSourceObject.cpp.s
@@ -436,7 +436,7 @@ src/EventSourceObject.s: src/EventSourceObject.cpp.s
 
 # target to generate assembly for a file
 src/EventSourceObject.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventSourceObject.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventSourceObject.cpp.s
 .PHONY : src/EventSourceObject.cpp.s
 
 src/EventingModule.o: src/EventingModule.cpp.o
@@ -444,7 +444,7 @@ src/EventingModule.o: src/EventingModule.cpp.o
 
 # target to build an object file
 src/EventingModule.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventingModule.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventingModule.cpp.o
 .PHONY : src/EventingModule.cpp.o
 
 src/EventingModule.i: src/EventingModule.cpp.i
@@ -452,7 +452,7 @@ src/EventingModule.i: src/EventingModule.cpp.i
 
 # target to preprocess a source file
 src/EventingModule.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventingModule.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventingModule.cpp.i
 .PHONY : src/EventingModule.cpp.i
 
 src/EventingModule.s: src/EventingModule.cpp.s
@@ -460,7 +460,7 @@ src/EventingModule.s: src/EventingModule.cpp.s
 
 # target to generate assembly for a file
 src/EventingModule.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventingModule.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/EventingModule.cpp.s
 .PHONY : src/EventingModule.cpp.s
 
 src/HistoricalEvent.o: src/HistoricalEvent.cpp.o
@@ -468,7 +468,7 @@ src/HistoricalEvent.o: src/HistoricalEvent.cpp.o
 
 # target to build an object file
 src/HistoricalEvent.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistoricalEvent.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistoricalEvent.cpp.o
 .PHONY : src/HistoricalEvent.cpp.o
 
 src/HistoricalEvent.i: src/HistoricalEvent.cpp.i
@@ -476,7 +476,7 @@ src/HistoricalEvent.i: src/HistoricalEvent.cpp.i
 
 # target to preprocess a source file
 src/HistoricalEvent.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistoricalEvent.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistoricalEvent.cpp.i
 .PHONY : src/HistoricalEvent.cpp.i
 
 src/HistoricalEvent.s: src/HistoricalEvent.cpp.s
@@ -484,7 +484,7 @@ src/HistoricalEvent.s: src/HistoricalEvent.cpp.s
 
 # target to generate assembly for a file
 src/HistoricalEvent.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistoricalEvent.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistoricalEvent.cpp.s
 .PHONY : src/HistoricalEvent.cpp.s
 
 src/HistorizingExclusiveLimitAlarm.o: src/HistorizingExclusiveLimitAlarm.cpp.o
@@ -492,7 +492,7 @@ src/HistorizingExclusiveLimitAlarm.o: src/HistorizingExclusiveLimitAlarm.cpp.o
 
 # target to build an object file
 src/HistorizingExclusiveLimitAlarm.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingExclusiveLimitAlarm.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingExclusiveLimitAlarm.cpp.o
 .PHONY : src/HistorizingExclusiveLimitAlarm.cpp.o
 
 src/HistorizingExclusiveLimitAlarm.i: src/HistorizingExclusiveLimitAlarm.cpp.i
@@ -500,7 +500,7 @@ src/HistorizingExclusiveLimitAlarm.i: src/HistorizingExclusiveLimitAlarm.cpp.i
 
 # target to preprocess a source file
 src/HistorizingExclusiveLimitAlarm.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingExclusiveLimitAlarm.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingExclusiveLimitAlarm.cpp.i
 .PHONY : src/HistorizingExclusiveLimitAlarm.cpp.i
 
 src/HistorizingExclusiveLimitAlarm.s: src/HistorizingExclusiveLimitAlarm.cpp.s
@@ -508,7 +508,7 @@ src/HistorizingExclusiveLimitAlarm.s: src/HistorizingExclusiveLimitAlarm.cpp.s
 
 # target to generate assembly for a file
 src/HistorizingExclusiveLimitAlarm.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingExclusiveLimitAlarm.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingExclusiveLimitAlarm.cpp.s
 .PHONY : src/HistorizingExclusiveLimitAlarm.cpp.s
 
 src/HistorizingVariable.o: src/HistorizingVariable.cpp.o
@@ -516,7 +516,7 @@ src/HistorizingVariable.o: src/HistorizingVariable.cpp.o
 
 # target to build an object file
 src/HistorizingVariable.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingVariable.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingVariable.cpp.o
 .PHONY : src/HistorizingVariable.cpp.o
 
 src/HistorizingVariable.i: src/HistorizingVariable.cpp.i
@@ -524,7 +524,7 @@ src/HistorizingVariable.i: src/HistorizingVariable.cpp.i
 
 # target to preprocess a source file
 src/HistorizingVariable.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingVariable.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingVariable.cpp.i
 .PHONY : src/HistorizingVariable.cpp.i
 
 src/HistorizingVariable.s: src/HistorizingVariable.cpp.s
@@ -532,7 +532,7 @@ src/HistorizingVariable.s: src/HistorizingVariable.cpp.s
 
 # target to generate assembly for a file
 src/HistorizingVariable.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingVariable.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/HistorizingVariable.cpp.s
 .PHONY : src/HistorizingVariable.cpp.s
 
 src/MeasureConditionBranchPerformanceMethod.o: src/MeasureConditionBranchPerformanceMethod.cpp.o
@@ -540,7 +540,7 @@ src/MeasureConditionBranchPerformanceMethod.o: src/MeasureConditionBranchPerform
 
 # target to build an object file
 src/MeasureConditionBranchPerformanceMethod.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MeasureConditionBranchPerformanceMethod.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MeasureConditionBranchPerformanceMethod.cpp.o
 .PHONY : src/MeasureConditionBranchPerformanceMethod.cpp.o
 
 src/MeasureConditionBranchPerformanceMethod.i: src/MeasureConditionBranchPerformanceMethod.cpp.i
@@ -548,7 +548,7 @@ src/MeasureConditionBranchPerformanceMethod.i: src/MeasureConditionBranchPerform
 
 # target to preprocess a source file
 src/MeasureConditionBranchPerformanceMethod.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MeasureConditionBranchPerformanceMethod.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MeasureConditionBranchPerformanceMethod.cpp.i
 .PHONY : src/MeasureConditionBranchPerformanceMethod.cpp.i
 
 src/MeasureConditionBranchPerformanceMethod.s: src/MeasureConditionBranchPerformanceMethod.cpp.s
@@ -556,7 +556,7 @@ src/MeasureConditionBranchPerformanceMethod.s: src/MeasureConditionBranchPerform
 
 # target to generate assembly for a file
 src/MeasureConditionBranchPerformanceMethod.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MeasureConditionBranchPerformanceMethod.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MeasureConditionBranchPerformanceMethod.cpp.s
 .PHONY : src/MeasureConditionBranchPerformanceMethod.cpp.s
 
 src/ModelerEnableDisable.o: src/ModelerEnableDisable.cpp.o
@@ -564,7 +564,7 @@ src/ModelerEnableDisable.o: src/ModelerEnableDisable.cpp.o
 
 # target to build an object file
 src/ModelerEnableDisable.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerEnableDisable.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerEnableDisable.cpp.o
 .PHONY : src/ModelerEnableDisable.cpp.o
 
 src/ModelerEnableDisable.i: src/ModelerEnableDisable.cpp.i
@@ -572,7 +572,7 @@ src/ModelerEnableDisable.i: src/ModelerEnableDisable.cpp.i
 
 # target to preprocess a source file
 src/ModelerEnableDisable.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerEnableDisable.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerEnableDisable.cpp.i
 .PHONY : src/ModelerEnableDisable.cpp.i
 
 src/ModelerEnableDisable.s: src/ModelerEnableDisable.cpp.s
@@ -580,7 +580,7 @@ src/ModelerEnableDisable.s: src/ModelerEnableDisable.cpp.s
 
 # target to generate assembly for a file
 src/ModelerEnableDisable.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerEnableDisable.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerEnableDisable.cpp.s
 .PHONY : src/ModelerEnableDisable.cpp.s
 
 src/ModelerModule.o: src/ModelerModule.cpp.o
@@ -588,7 +588,7 @@ src/ModelerModule.o: src/ModelerModule.cpp.o
 
 # target to build an object file
 src/ModelerModule.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerModule.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerModule.cpp.o
 .PHONY : src/ModelerModule.cpp.o
 
 src/ModelerModule.i: src/ModelerModule.cpp.i
@@ -596,7 +596,7 @@ src/ModelerModule.i: src/ModelerModule.cpp.i
 
 # target to preprocess a source file
 src/ModelerModule.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerModule.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerModule.cpp.i
 .PHONY : src/ModelerModule.cpp.i
 
 src/ModelerModule.s: src/ModelerModule.cpp.s
@@ -604,7 +604,7 @@ src/ModelerModule.s: src/ModelerModule.cpp.s
 
 # target to generate assembly for a file
 src/ModelerModule.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerModule.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModelerModule.cpp.s
 .PHONY : src/ModelerModule.cpp.s
 
 src/ModuleFolder.o: src/ModuleFolder.cpp.o
@@ -612,7 +612,7 @@ src/ModuleFolder.o: src/ModuleFolder.cpp.o
 
 # target to build an object file
 src/ModuleFolder.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModuleFolder.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModuleFolder.cpp.o
 .PHONY : src/ModuleFolder.cpp.o
 
 src/ModuleFolder.i: src/ModuleFolder.cpp.i
@@ -620,7 +620,7 @@ src/ModuleFolder.i: src/ModuleFolder.cpp.i
 
 # target to preprocess a source file
 src/ModuleFolder.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModuleFolder.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModuleFolder.cpp.i
 .PHONY : src/ModuleFolder.cpp.i
 
 src/ModuleFolder.s: src/ModuleFolder.cpp.s
@@ -628,7 +628,7 @@ src/ModuleFolder.s: src/ModuleFolder.cpp.s
 
 # target to generate assembly for a file
 src/ModuleFolder.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModuleFolder.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ModuleFolder.cpp.s
 .PHONY : src/ModuleFolder.cpp.s
 
 src/MonitoredItemsAsyncManipulation.o: src/MonitoredItemsAsyncManipulation.cpp.o
@@ -636,7 +636,7 @@ src/MonitoredItemsAsyncManipulation.o: src/MonitoredItemsAsyncManipulation.cpp.o
 
 # target to build an object file
 src/MonitoredItemsAsyncManipulation.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MonitoredItemsAsyncManipulation.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MonitoredItemsAsyncManipulation.cpp.o
 .PHONY : src/MonitoredItemsAsyncManipulation.cpp.o
 
 src/MonitoredItemsAsyncManipulation.i: src/MonitoredItemsAsyncManipulation.cpp.i
@@ -644,7 +644,7 @@ src/MonitoredItemsAsyncManipulation.i: src/MonitoredItemsAsyncManipulation.cpp.i
 
 # target to preprocess a source file
 src/MonitoredItemsAsyncManipulation.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MonitoredItemsAsyncManipulation.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MonitoredItemsAsyncManipulation.cpp.i
 .PHONY : src/MonitoredItemsAsyncManipulation.cpp.i
 
 src/MonitoredItemsAsyncManipulation.s: src/MonitoredItemsAsyncManipulation.cpp.s
@@ -652,7 +652,7 @@ src/MonitoredItemsAsyncManipulation.s: src/MonitoredItemsAsyncManipulation.cpp.s
 
 # target to generate assembly for a file
 src/MonitoredItemsAsyncManipulation.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MonitoredItemsAsyncManipulation.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MonitoredItemsAsyncManipulation.cpp.s
 .PHONY : src/MonitoredItemsAsyncManipulation.cpp.s
 
 src/MyExclusiveLimitAlarm.o: src/MyExclusiveLimitAlarm.cpp.o
@@ -660,7 +660,7 @@ src/MyExclusiveLimitAlarm.o: src/MyExclusiveLimitAlarm.cpp.o
 
 # target to build an object file
 src/MyExclusiveLimitAlarm.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyExclusiveLimitAlarm.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyExclusiveLimitAlarm.cpp.o
 .PHONY : src/MyExclusiveLimitAlarm.cpp.o
 
 src/MyExclusiveLimitAlarm.i: src/MyExclusiveLimitAlarm.cpp.i
@@ -668,7 +668,7 @@ src/MyExclusiveLimitAlarm.i: src/MyExclusiveLimitAlarm.cpp.i
 
 # target to preprocess a source file
 src/MyExclusiveLimitAlarm.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyExclusiveLimitAlarm.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyExclusiveLimitAlarm.cpp.i
 .PHONY : src/MyExclusiveLimitAlarm.cpp.i
 
 src/MyExclusiveLimitAlarm.s: src/MyExclusiveLimitAlarm.cpp.s
@@ -676,7 +676,7 @@ src/MyExclusiveLimitAlarm.s: src/MyExclusiveLimitAlarm.cpp.s
 
 # target to generate assembly for a file
 src/MyExclusiveLimitAlarm.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyExclusiveLimitAlarm.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyExclusiveLimitAlarm.cpp.s
 .PHONY : src/MyExclusiveLimitAlarm.cpp.s
 
 src/MyLimitAlarm.o: src/MyLimitAlarm.cpp.o
@@ -684,7 +684,7 @@ src/MyLimitAlarm.o: src/MyLimitAlarm.cpp.o
 
 # target to build an object file
 src/MyLimitAlarm.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyLimitAlarm.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyLimitAlarm.cpp.o
 .PHONY : src/MyLimitAlarm.cpp.o
 
 src/MyLimitAlarm.i: src/MyLimitAlarm.cpp.i
@@ -692,7 +692,7 @@ src/MyLimitAlarm.i: src/MyLimitAlarm.cpp.i
 
 # target to preprocess a source file
 src/MyLimitAlarm.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyLimitAlarm.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyLimitAlarm.cpp.i
 .PHONY : src/MyLimitAlarm.cpp.i
 
 src/MyLimitAlarm.s: src/MyLimitAlarm.cpp.s
@@ -700,7 +700,7 @@ src/MyLimitAlarm.s: src/MyLimitAlarm.cpp.s
 
 # target to generate assembly for a file
 src/MyLimitAlarm.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyLimitAlarm.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyLimitAlarm.cpp.s
 .PHONY : src/MyLimitAlarm.cpp.s
 
 src/MyNonExclusiveLimitAlarm.o: src/MyNonExclusiveLimitAlarm.cpp.o
@@ -708,7 +708,7 @@ src/MyNonExclusiveLimitAlarm.o: src/MyNonExclusiveLimitAlarm.cpp.o
 
 # target to build an object file
 src/MyNonExclusiveLimitAlarm.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyNonExclusiveLimitAlarm.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyNonExclusiveLimitAlarm.cpp.o
 .PHONY : src/MyNonExclusiveLimitAlarm.cpp.o
 
 src/MyNonExclusiveLimitAlarm.i: src/MyNonExclusiveLimitAlarm.cpp.i
@@ -716,7 +716,7 @@ src/MyNonExclusiveLimitAlarm.i: src/MyNonExclusiveLimitAlarm.cpp.i
 
 # target to preprocess a source file
 src/MyNonExclusiveLimitAlarm.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyNonExclusiveLimitAlarm.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyNonExclusiveLimitAlarm.cpp.i
 .PHONY : src/MyNonExclusiveLimitAlarm.cpp.i
 
 src/MyNonExclusiveLimitAlarm.s: src/MyNonExclusiveLimitAlarm.cpp.s
@@ -724,7 +724,7 @@ src/MyNonExclusiveLimitAlarm.s: src/MyNonExclusiveLimitAlarm.cpp.s
 
 # target to generate assembly for a file
 src/MyNonExclusiveLimitAlarm.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyNonExclusiveLimitAlarm.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyNonExclusiveLimitAlarm.cpp.s
 .PHONY : src/MyNonExclusiveLimitAlarm.cpp.s
 
 src/MyRefrigeratorStateVariable.o: src/MyRefrigeratorStateVariable.cpp.o
@@ -732,7 +732,7 @@ src/MyRefrigeratorStateVariable.o: src/MyRefrigeratorStateVariable.cpp.o
 
 # target to build an object file
 src/MyRefrigeratorStateVariable.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyRefrigeratorStateVariable.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyRefrigeratorStateVariable.cpp.o
 .PHONY : src/MyRefrigeratorStateVariable.cpp.o
 
 src/MyRefrigeratorStateVariable.i: src/MyRefrigeratorStateVariable.cpp.i
@@ -740,7 +740,7 @@ src/MyRefrigeratorStateVariable.i: src/MyRefrigeratorStateVariable.cpp.i
 
 # target to preprocess a source file
 src/MyRefrigeratorStateVariable.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyRefrigeratorStateVariable.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyRefrigeratorStateVariable.cpp.i
 .PHONY : src/MyRefrigeratorStateVariable.cpp.i
 
 src/MyRefrigeratorStateVariable.s: src/MyRefrigeratorStateVariable.cpp.s
@@ -748,7 +748,7 @@ src/MyRefrigeratorStateVariable.s: src/MyRefrigeratorStateVariable.cpp.s
 
 # target to generate assembly for a file
 src/MyRefrigeratorStateVariable.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyRefrigeratorStateVariable.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyRefrigeratorStateVariable.cpp.s
 .PHONY : src/MyRefrigeratorStateVariable.cpp.s
 
 src/MyTrace.o: src/MyTrace.cpp.o
@@ -756,7 +756,7 @@ src/MyTrace.o: src/MyTrace.cpp.o
 
 # target to build an object file
 src/MyTrace.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyTrace.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyTrace.cpp.o
 .PHONY : src/MyTrace.cpp.o
 
 src/MyTrace.i: src/MyTrace.cpp.i
@@ -764,7 +764,7 @@ src/MyTrace.i: src/MyTrace.cpp.i
 
 # target to preprocess a source file
 src/MyTrace.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyTrace.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyTrace.cpp.i
 .PHONY : src/MyTrace.cpp.i
 
 src/MyTrace.s: src/MyTrace.cpp.s
@@ -772,7 +772,7 @@ src/MyTrace.s: src/MyTrace.cpp.s
 
 # target to generate assembly for a file
 src/MyTrace.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyTrace.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/MyTrace.cpp.s
 .PHONY : src/MyTrace.cpp.s
 
 src/Nodeset2ExportImport.o: src/Nodeset2ExportImport.cpp.o
@@ -780,7 +780,7 @@ src/Nodeset2ExportImport.o: src/Nodeset2ExportImport.cpp.o
 
 # target to build an object file
 src/Nodeset2ExportImport.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Nodeset2ExportImport.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Nodeset2ExportImport.cpp.o
 .PHONY : src/Nodeset2ExportImport.cpp.o
 
 src/Nodeset2ExportImport.i: src/Nodeset2ExportImport.cpp.i
@@ -788,7 +788,7 @@ src/Nodeset2ExportImport.i: src/Nodeset2ExportImport.cpp.i
 
 # target to preprocess a source file
 src/Nodeset2ExportImport.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Nodeset2ExportImport.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Nodeset2ExportImport.cpp.i
 .PHONY : src/Nodeset2ExportImport.cpp.i
 
 src/Nodeset2ExportImport.s: src/Nodeset2ExportImport.cpp.s
@@ -796,7 +796,7 @@ src/Nodeset2ExportImport.s: src/Nodeset2ExportImport.cpp.s
 
 # target to generate assembly for a file
 src/Nodeset2ExportImport.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Nodeset2ExportImport.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Nodeset2ExportImport.cpp.s
 .PHONY : src/Nodeset2ExportImport.cpp.s
 
 src/OffTheShelfAlarmsModule.o: src/OffTheShelfAlarmsModule.cpp.o
@@ -804,7 +804,7 @@ src/OffTheShelfAlarmsModule.o: src/OffTheShelfAlarmsModule.cpp.o
 
 # target to build an object file
 src/OffTheShelfAlarmsModule.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OffTheShelfAlarmsModule.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OffTheShelfAlarmsModule.cpp.o
 .PHONY : src/OffTheShelfAlarmsModule.cpp.o
 
 src/OffTheShelfAlarmsModule.i: src/OffTheShelfAlarmsModule.cpp.i
@@ -812,7 +812,7 @@ src/OffTheShelfAlarmsModule.i: src/OffTheShelfAlarmsModule.cpp.i
 
 # target to preprocess a source file
 src/OffTheShelfAlarmsModule.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OffTheShelfAlarmsModule.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OffTheShelfAlarmsModule.cpp.i
 .PHONY : src/OffTheShelfAlarmsModule.cpp.i
 
 src/OffTheShelfAlarmsModule.s: src/OffTheShelfAlarmsModule.cpp.s
@@ -820,7 +820,7 @@ src/OffTheShelfAlarmsModule.s: src/OffTheShelfAlarmsModule.cpp.s
 
 # target to generate assembly for a file
 src/OffTheShelfAlarmsModule.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OffTheShelfAlarmsModule.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OffTheShelfAlarmsModule.cpp.s
 .PHONY : src/OffTheShelfAlarmsModule.cpp.s
 
 src/OperationLimitMethods.o: src/OperationLimitMethods.cpp.o
@@ -828,7 +828,7 @@ src/OperationLimitMethods.o: src/OperationLimitMethods.cpp.o
 
 # target to build an object file
 src/OperationLimitMethods.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OperationLimitMethods.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OperationLimitMethods.cpp.o
 .PHONY : src/OperationLimitMethods.cpp.o
 
 src/OperationLimitMethods.i: src/OperationLimitMethods.cpp.i
@@ -836,7 +836,7 @@ src/OperationLimitMethods.i: src/OperationLimitMethods.cpp.i
 
 # target to preprocess a source file
 src/OperationLimitMethods.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OperationLimitMethods.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OperationLimitMethods.cpp.i
 .PHONY : src/OperationLimitMethods.cpp.i
 
 src/OperationLimitMethods.s: src/OperationLimitMethods.cpp.s
@@ -844,7 +844,7 @@ src/OperationLimitMethods.s: src/OperationLimitMethods.cpp.s
 
 # target to generate assembly for a file
 src/OperationLimitMethods.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OperationLimitMethods.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/OperationLimitMethods.cpp.s
 .PHONY : src/OperationLimitMethods.cpp.s
 
 src/PrintApi.o: src/PrintApi.cpp.o
@@ -852,7 +852,7 @@ src/PrintApi.o: src/PrintApi.cpp.o
 
 # target to build an object file
 src/PrintApi.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PrintApi.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PrintApi.cpp.o
 .PHONY : src/PrintApi.cpp.o
 
 src/PrintApi.i: src/PrintApi.cpp.i
@@ -860,7 +860,7 @@ src/PrintApi.i: src/PrintApi.cpp.i
 
 # target to preprocess a source file
 src/PrintApi.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PrintApi.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PrintApi.cpp.i
 .PHONY : src/PrintApi.cpp.i
 
 src/PrintApi.s: src/PrintApi.cpp.s
@@ -868,7 +868,7 @@ src/PrintApi.s: src/PrintApi.cpp.s
 
 # target to generate assembly for a file
 src/PrintApi.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PrintApi.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PrintApi.cpp.s
 .PHONY : src/PrintApi.cpp.s
 
 src/PubSubModule.o: src/PubSubModule.cpp.o
@@ -876,7 +876,7 @@ src/PubSubModule.o: src/PubSubModule.cpp.o
 
 # target to build an object file
 src/PubSubModule.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PubSubModule.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PubSubModule.cpp.o
 .PHONY : src/PubSubModule.cpp.o
 
 src/PubSubModule.i: src/PubSubModule.cpp.i
@@ -884,7 +884,7 @@ src/PubSubModule.i: src/PubSubModule.cpp.i
 
 # target to preprocess a source file
 src/PubSubModule.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PubSubModule.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PubSubModule.cpp.i
 .PHONY : src/PubSubModule.cpp.i
 
 src/PubSubModule.s: src/PubSubModule.cpp.s
@@ -892,7 +892,7 @@ src/PubSubModule.s: src/PubSubModule.cpp.s
 
 # target to generate assembly for a file
 src/PubSubModule.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PubSubModule.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/PubSubModule.cpp.s
 .PHONY : src/PubSubModule.cpp.s
 
 src/RedModule.o: src/RedModule.cpp.o
@@ -900,7 +900,7 @@ src/RedModule.o: src/RedModule.cpp.o
 
 # target to build an object file
 src/RedModule.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/RedModule.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/RedModule.cpp.o
 .PHONY : src/RedModule.cpp.o
 
 src/RedModule.i: src/RedModule.cpp.i
@@ -908,7 +908,7 @@ src/RedModule.i: src/RedModule.cpp.i
 
 # target to preprocess a source file
 src/RedModule.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/RedModule.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/RedModule.cpp.i
 .PHONY : src/RedModule.cpp.i
 
 src/RedModule.s: src/RedModule.cpp.s
@@ -916,7 +916,7 @@ src/RedModule.s: src/RedModule.cpp.s
 
 # target to generate assembly for a file
 src/RedModule.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/RedModule.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/RedModule.cpp.s
 .PHONY : src/RedModule.cpp.s
 
 src/ServerDummyValueGenerator.o: src/ServerDummyValueGenerator.cpp.o
@@ -924,7 +924,7 @@ src/ServerDummyValueGenerator.o: src/ServerDummyValueGenerator.cpp.o
 
 # target to build an object file
 src/ServerDummyValueGenerator.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ServerDummyValueGenerator.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ServerDummyValueGenerator.cpp.o
 .PHONY : src/ServerDummyValueGenerator.cpp.o
 
 src/ServerDummyValueGenerator.i: src/ServerDummyValueGenerator.cpp.i
@@ -932,7 +932,7 @@ src/ServerDummyValueGenerator.i: src/ServerDummyValueGenerator.cpp.i
 
 # target to preprocess a source file
 src/ServerDummyValueGenerator.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ServerDummyValueGenerator.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ServerDummyValueGenerator.cpp.i
 .PHONY : src/ServerDummyValueGenerator.cpp.i
 
 src/ServerDummyValueGenerator.s: src/ServerDummyValueGenerator.cpp.s
@@ -940,7 +940,7 @@ src/ServerDummyValueGenerator.s: src/ServerDummyValueGenerator.cpp.s
 
 # target to generate assembly for a file
 src/ServerDummyValueGenerator.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ServerDummyValueGenerator.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ServerDummyValueGenerator.cpp.s
 .PHONY : src/ServerDummyValueGenerator.cpp.s
 
 src/ShutdownMethod.o: src/ShutdownMethod.cpp.o
@@ -948,7 +948,7 @@ src/ShutdownMethod.o: src/ShutdownMethod.cpp.o
 
 # target to build an object file
 src/ShutdownMethod.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ShutdownMethod.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ShutdownMethod.cpp.o
 .PHONY : src/ShutdownMethod.cpp.o
 
 src/ShutdownMethod.i: src/ShutdownMethod.cpp.i
@@ -956,7 +956,7 @@ src/ShutdownMethod.i: src/ShutdownMethod.cpp.i
 
 # target to preprocess a source file
 src/ShutdownMethod.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ShutdownMethod.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ShutdownMethod.cpp.i
 .PHONY : src/ShutdownMethod.cpp.i
 
 src/ShutdownMethod.s: src/ShutdownMethod.cpp.s
@@ -964,7 +964,7 @@ src/ShutdownMethod.s: src/ShutdownMethod.cpp.s
 
 # target to generate assembly for a file
 src/ShutdownMethod.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ShutdownMethod.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/ShutdownMethod.cpp.s
 .PHONY : src/ShutdownMethod.cpp.s
 
 src/SimVarManager.o: src/SimVarManager.cpp.o
@@ -972,7 +972,7 @@ src/SimVarManager.o: src/SimVarManager.cpp.o
 
 # target to build an object file
 src/SimVarManager.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimVarManager.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimVarManager.cpp.o
 .PHONY : src/SimVarManager.cpp.o
 
 src/SimVarManager.i: src/SimVarManager.cpp.i
@@ -980,7 +980,7 @@ src/SimVarManager.i: src/SimVarManager.cpp.i
 
 # target to preprocess a source file
 src/SimVarManager.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimVarManager.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimVarManager.cpp.i
 .PHONY : src/SimVarManager.cpp.i
 
 src/SimVarManager.s: src/SimVarManager.cpp.s
@@ -988,7 +988,7 @@ src/SimVarManager.s: src/SimVarManager.cpp.s
 
 # target to generate assembly for a file
 src/SimVarManager.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimVarManager.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimVarManager.cpp.s
 .PHONY : src/SimVarManager.cpp.s
 
 src/SimulationVariable.o: src/SimulationVariable.cpp.o
@@ -996,7 +996,7 @@ src/SimulationVariable.o: src/SimulationVariable.cpp.o
 
 # target to build an object file
 src/SimulationVariable.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimulationVariable.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimulationVariable.cpp.o
 .PHONY : src/SimulationVariable.cpp.o
 
 src/SimulationVariable.i: src/SimulationVariable.cpp.i
@@ -1004,7 +1004,7 @@ src/SimulationVariable.i: src/SimulationVariable.cpp.i
 
 # target to preprocess a source file
 src/SimulationVariable.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimulationVariable.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimulationVariable.cpp.i
 .PHONY : src/SimulationVariable.cpp.i
 
 src/SimulationVariable.s: src/SimulationVariable.cpp.s
@@ -1012,7 +1012,7 @@ src/SimulationVariable.s: src/SimulationVariable.cpp.s
 
 # target to generate assembly for a file
 src/SimulationVariable.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimulationVariable.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SimulationVariable.cpp.s
 .PHONY : src/SimulationVariable.cpp.s
 
 src/StopWatch.o: src/StopWatch.cpp.o
@@ -1020,7 +1020,7 @@ src/StopWatch.o: src/StopWatch.cpp.o
 
 # target to build an object file
 src/StopWatch.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.o
 .PHONY : src/StopWatch.cpp.o
 
 src/StopWatch.i: src/StopWatch.cpp.i
@@ -1028,7 +1028,7 @@ src/StopWatch.i: src/StopWatch.cpp.i
 
 # target to preprocess a source file
 src/StopWatch.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.i
 .PHONY : src/StopWatch.cpp.i
 
 src/StopWatch.s: src/StopWatch.cpp.s
@@ -1036,7 +1036,7 @@ src/StopWatch.s: src/StopWatch.cpp.s
 
 # target to generate assembly for a file
 src/StopWatch.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StopWatch.cpp.s
 .PHONY : src/StopWatch.cpp.s
 
 src/StructoAutomoldApplication.o: src/StructoAutomoldApplication.cpp.o
@@ -1044,7 +1044,7 @@ src/StructoAutomoldApplication.o: src/StructoAutomoldApplication.cpp.o
 
 # target to build an object file
 src/StructoAutomoldApplication.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldApplication.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldApplication.cpp.o
 .PHONY : src/StructoAutomoldApplication.cpp.o
 
 src/StructoAutomoldApplication.i: src/StructoAutomoldApplication.cpp.i
@@ -1052,7 +1052,7 @@ src/StructoAutomoldApplication.i: src/StructoAutomoldApplication.cpp.i
 
 # target to preprocess a source file
 src/StructoAutomoldApplication.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldApplication.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldApplication.cpp.i
 .PHONY : src/StructoAutomoldApplication.cpp.i
 
 src/StructoAutomoldApplication.s: src/StructoAutomoldApplication.cpp.s
@@ -1060,7 +1060,7 @@ src/StructoAutomoldApplication.s: src/StructoAutomoldApplication.cpp.s
 
 # target to generate assembly for a file
 src/StructoAutomoldApplication.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldApplication.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldApplication.cpp.s
 .PHONY : src/StructoAutomoldApplication.cpp.s
 
 src/StructoAutomoldServer.o: src/StructoAutomoldServer.cpp.o
@@ -1068,7 +1068,7 @@ src/StructoAutomoldServer.o: src/StructoAutomoldServer.cpp.o
 
 # target to build an object file
 src/StructoAutomoldServer.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldServer.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldServer.cpp.o
 .PHONY : src/StructoAutomoldServer.cpp.o
 
 src/StructoAutomoldServer.i: src/StructoAutomoldServer.cpp.i
@@ -1076,7 +1076,7 @@ src/StructoAutomoldServer.i: src/StructoAutomoldServer.cpp.i
 
 # target to preprocess a source file
 src/StructoAutomoldServer.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldServer.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldServer.cpp.i
 .PHONY : src/StructoAutomoldServer.cpp.i
 
 src/StructoAutomoldServer.s: src/StructoAutomoldServer.cpp.s
@@ -1084,7 +1084,7 @@ src/StructoAutomoldServer.s: src/StructoAutomoldServer.cpp.s
 
 # target to generate assembly for a file
 src/StructoAutomoldServer.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldServer.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoAutomoldServer.cpp.s
 .PHONY : src/StructoAutomoldServer.cpp.s
 
 src/StructoPrinter.o: src/StructoPrinter.cpp.o
@@ -1092,7 +1092,7 @@ src/StructoPrinter.o: src/StructoPrinter.cpp.o
 
 # target to build an object file
 src/StructoPrinter.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoPrinter.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoPrinter.cpp.o
 .PHONY : src/StructoPrinter.cpp.o
 
 src/StructoPrinter.i: src/StructoPrinter.cpp.i
@@ -1100,7 +1100,7 @@ src/StructoPrinter.i: src/StructoPrinter.cpp.i
 
 # target to preprocess a source file
 src/StructoPrinter.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoPrinter.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoPrinter.cpp.i
 .PHONY : src/StructoPrinter.cpp.i
 
 src/StructoPrinter.s: src/StructoPrinter.cpp.s
@@ -1108,7 +1108,7 @@ src/StructoPrinter.s: src/StructoPrinter.cpp.s
 
 # target to generate assembly for a file
 src/StructoPrinter.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoPrinter.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructoPrinter.cpp.s
 .PHONY : src/StructoPrinter.cpp.s
 
 src/StructuredDataTypeModule.o: src/StructuredDataTypeModule.cpp.o
@@ -1116,7 +1116,7 @@ src/StructuredDataTypeModule.o: src/StructuredDataTypeModule.cpp.o
 
 # target to build an object file
 src/StructuredDataTypeModule.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructuredDataTypeModule.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructuredDataTypeModule.cpp.o
 .PHONY : src/StructuredDataTypeModule.cpp.o
 
 src/StructuredDataTypeModule.i: src/StructuredDataTypeModule.cpp.i
@@ -1124,7 +1124,7 @@ src/StructuredDataTypeModule.i: src/StructuredDataTypeModule.cpp.i
 
 # target to preprocess a source file
 src/StructuredDataTypeModule.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructuredDataTypeModule.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructuredDataTypeModule.cpp.i
 .PHONY : src/StructuredDataTypeModule.cpp.i
 
 src/StructuredDataTypeModule.s: src/StructuredDataTypeModule.cpp.s
@@ -1132,7 +1132,7 @@ src/StructuredDataTypeModule.s: src/StructuredDataTypeModule.cpp.s
 
 # target to generate assembly for a file
 src/StructuredDataTypeModule.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructuredDataTypeModule.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/StructuredDataTypeModule.cpp.s
 .PHONY : src/StructuredDataTypeModule.cpp.s
 
 src/SubscriptionAsyncManipulation.o: src/SubscriptionAsyncManipulation.cpp.o
@@ -1140,7 +1140,7 @@ src/SubscriptionAsyncManipulation.o: src/SubscriptionAsyncManipulation.cpp.o
 
 # target to build an object file
 src/SubscriptionAsyncManipulation.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SubscriptionAsyncManipulation.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SubscriptionAsyncManipulation.cpp.o
 .PHONY : src/SubscriptionAsyncManipulation.cpp.o
 
 src/SubscriptionAsyncManipulation.i: src/SubscriptionAsyncManipulation.cpp.i
@@ -1148,7 +1148,7 @@ src/SubscriptionAsyncManipulation.i: src/SubscriptionAsyncManipulation.cpp.i
 
 # target to preprocess a source file
 src/SubscriptionAsyncManipulation.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SubscriptionAsyncManipulation.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SubscriptionAsyncManipulation.cpp.i
 .PHONY : src/SubscriptionAsyncManipulation.cpp.i
 
 src/SubscriptionAsyncManipulation.s: src/SubscriptionAsyncManipulation.cpp.s
@@ -1156,7 +1156,7 @@ src/SubscriptionAsyncManipulation.s: src/SubscriptionAsyncManipulation.cpp.s
 
 # target to generate assembly for a file
 src/SubscriptionAsyncManipulation.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SubscriptionAsyncManipulation.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/SubscriptionAsyncManipulation.cpp.s
 .PHONY : src/SubscriptionAsyncManipulation.cpp.s
 
 src/TestEndpoint.o: src/TestEndpoint.cpp.o
@@ -1164,7 +1164,7 @@ src/TestEndpoint.o: src/TestEndpoint.cpp.o
 
 # target to build an object file
 src/TestEndpoint.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEndpoint.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEndpoint.cpp.o
 .PHONY : src/TestEndpoint.cpp.o
 
 src/TestEndpoint.i: src/TestEndpoint.cpp.i
@@ -1172,7 +1172,7 @@ src/TestEndpoint.i: src/TestEndpoint.cpp.i
 
 # target to preprocess a source file
 src/TestEndpoint.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEndpoint.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEndpoint.cpp.i
 .PHONY : src/TestEndpoint.cpp.i
 
 src/TestEndpoint.s: src/TestEndpoint.cpp.s
@@ -1180,7 +1180,7 @@ src/TestEndpoint.s: src/TestEndpoint.cpp.s
 
 # target to generate assembly for a file
 src/TestEndpoint.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEndpoint.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEndpoint.cpp.s
 .PHONY : src/TestEndpoint.cpp.s
 
 src/TestEvent.o: src/TestEvent.cpp.o
@@ -1188,7 +1188,7 @@ src/TestEvent.o: src/TestEvent.cpp.o
 
 # target to build an object file
 src/TestEvent.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEvent.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEvent.cpp.o
 .PHONY : src/TestEvent.cpp.o
 
 src/TestEvent.i: src/TestEvent.cpp.i
@@ -1196,7 +1196,7 @@ src/TestEvent.i: src/TestEvent.cpp.i
 
 # target to preprocess a source file
 src/TestEvent.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEvent.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEvent.cpp.i
 .PHONY : src/TestEvent.cpp.i
 
 src/TestEvent.s: src/TestEvent.cpp.s
@@ -1204,7 +1204,7 @@ src/TestEvent.s: src/TestEvent.cpp.s
 
 # target to generate assembly for a file
 src/TestEvent.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEvent.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEvent.cpp.s
 .PHONY : src/TestEvent.cpp.s
 
 src/TestEventType.o: src/TestEventType.cpp.o
@@ -1212,7 +1212,7 @@ src/TestEventType.o: src/TestEventType.cpp.o
 
 # target to build an object file
 src/TestEventType.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEventType.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEventType.cpp.o
 .PHONY : src/TestEventType.cpp.o
 
 src/TestEventType.i: src/TestEventType.cpp.i
@@ -1220,7 +1220,7 @@ src/TestEventType.i: src/TestEventType.cpp.i
 
 # target to preprocess a source file
 src/TestEventType.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEventType.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEventType.cpp.i
 .PHONY : src/TestEventType.cpp.i
 
 src/TestEventType.s: src/TestEventType.cpp.s
@@ -1228,7 +1228,7 @@ src/TestEventType.s: src/TestEventType.cpp.s
 
 # target to generate assembly for a file
 src/TestEventType.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEventType.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestEventType.cpp.s
 .PHONY : src/TestEventType.cpp.s
 
 src/TestMethod.o: src/TestMethod.cpp.o
@@ -1236,7 +1236,7 @@ src/TestMethod.o: src/TestMethod.cpp.o
 
 # target to build an object file
 src/TestMethod.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestMethod.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestMethod.cpp.o
 .PHONY : src/TestMethod.cpp.o
 
 src/TestMethod.i: src/TestMethod.cpp.i
@@ -1244,7 +1244,7 @@ src/TestMethod.i: src/TestMethod.cpp.i
 
 # target to preprocess a source file
 src/TestMethod.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestMethod.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestMethod.cpp.i
 .PHONY : src/TestMethod.cpp.i
 
 src/TestMethod.s: src/TestMethod.cpp.s
@@ -1252,7 +1252,7 @@ src/TestMethod.s: src/TestMethod.cpp.s
 
 # target to generate assembly for a file
 src/TestMethod.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestMethod.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestMethod.cpp.s
 .PHONY : src/TestMethod.cpp.s
 
 src/TestModelChangeEventMethod.o: src/TestModelChangeEventMethod.cpp.o
@@ -1260,7 +1260,7 @@ src/TestModelChangeEventMethod.o: src/TestModelChangeEventMethod.cpp.o
 
 # target to build an object file
 src/TestModelChangeEventMethod.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModelChangeEventMethod.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModelChangeEventMethod.cpp.o
 .PHONY : src/TestModelChangeEventMethod.cpp.o
 
 src/TestModelChangeEventMethod.i: src/TestModelChangeEventMethod.cpp.i
@@ -1268,7 +1268,7 @@ src/TestModelChangeEventMethod.i: src/TestModelChangeEventMethod.cpp.i
 
 # target to preprocess a source file
 src/TestModelChangeEventMethod.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModelChangeEventMethod.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModelChangeEventMethod.cpp.i
 .PHONY : src/TestModelChangeEventMethod.cpp.i
 
 src/TestModelChangeEventMethod.s: src/TestModelChangeEventMethod.cpp.s
@@ -1276,7 +1276,7 @@ src/TestModelChangeEventMethod.s: src/TestModelChangeEventMethod.cpp.s
 
 # target to generate assembly for a file
 src/TestModelChangeEventMethod.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModelChangeEventMethod.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModelChangeEventMethod.cpp.s
 .PHONY : src/TestModelChangeEventMethod.cpp.s
 
 src/TestModule.o: src/TestModule.cpp.o
@@ -1284,7 +1284,7 @@ src/TestModule.o: src/TestModule.cpp.o
 
 # target to build an object file
 src/TestModule.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModule.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModule.cpp.o
 .PHONY : src/TestModule.cpp.o
 
 src/TestModule.i: src/TestModule.cpp.i
@@ -1292,7 +1292,7 @@ src/TestModule.i: src/TestModule.cpp.i
 
 # target to preprocess a source file
 src/TestModule.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModule.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModule.cpp.i
 .PHONY : src/TestModule.cpp.i
 
 src/TestModule.s: src/TestModule.cpp.s
@@ -1300,7 +1300,7 @@ src/TestModule.s: src/TestModule.cpp.s
 
 # target to generate assembly for a file
 src/TestModule.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModule.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModule.cpp.s
 .PHONY : src/TestModule.cpp.s
 
 src/TestModuleAccessPattern.o: src/TestModuleAccessPattern.cpp.o
@@ -1308,7 +1308,7 @@ src/TestModuleAccessPattern.o: src/TestModuleAccessPattern.cpp.o
 
 # target to build an object file
 src/TestModuleAccessPattern.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleAccessPattern.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleAccessPattern.cpp.o
 .PHONY : src/TestModuleAccessPattern.cpp.o
 
 src/TestModuleAccessPattern.i: src/TestModuleAccessPattern.cpp.i
@@ -1316,7 +1316,7 @@ src/TestModuleAccessPattern.i: src/TestModuleAccessPattern.cpp.i
 
 # target to preprocess a source file
 src/TestModuleAccessPattern.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleAccessPattern.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleAccessPattern.cpp.i
 .PHONY : src/TestModuleAccessPattern.cpp.i
 
 src/TestModuleAccessPattern.s: src/TestModuleAccessPattern.cpp.s
@@ -1324,7 +1324,7 @@ src/TestModuleAccessPattern.s: src/TestModuleAccessPattern.cpp.s
 
 # target to generate assembly for a file
 src/TestModuleAccessPattern.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleAccessPattern.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleAccessPattern.cpp.s
 .PHONY : src/TestModuleAccessPattern.cpp.s
 
 src/TestModuleArray.o: src/TestModuleArray.cpp.o
@@ -1332,7 +1332,7 @@ src/TestModuleArray.o: src/TestModuleArray.cpp.o
 
 # target to build an object file
 src/TestModuleArray.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleArray.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleArray.cpp.o
 .PHONY : src/TestModuleArray.cpp.o
 
 src/TestModuleArray.i: src/TestModuleArray.cpp.i
@@ -1340,7 +1340,7 @@ src/TestModuleArray.i: src/TestModuleArray.cpp.i
 
 # target to preprocess a source file
 src/TestModuleArray.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleArray.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleArray.cpp.i
 .PHONY : src/TestModuleArray.cpp.i
 
 src/TestModuleArray.s: src/TestModuleArray.cpp.s
@@ -1348,7 +1348,7 @@ src/TestModuleArray.s: src/TestModuleArray.cpp.s
 
 # target to generate assembly for a file
 src/TestModuleArray.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleArray.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleArray.cpp.s
 .PHONY : src/TestModuleArray.cpp.s
 
 src/TestModuleDyn.o: src/TestModuleDyn.cpp.o
@@ -1356,7 +1356,7 @@ src/TestModuleDyn.o: src/TestModuleDyn.cpp.o
 
 # target to build an object file
 src/TestModuleDyn.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleDyn.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleDyn.cpp.o
 .PHONY : src/TestModuleDyn.cpp.o
 
 src/TestModuleDyn.i: src/TestModuleDyn.cpp.i
@@ -1364,7 +1364,7 @@ src/TestModuleDyn.i: src/TestModuleDyn.cpp.i
 
 # target to preprocess a source file
 src/TestModuleDyn.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleDyn.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleDyn.cpp.i
 .PHONY : src/TestModuleDyn.cpp.i
 
 src/TestModuleDyn.s: src/TestModuleDyn.cpp.s
@@ -1372,7 +1372,7 @@ src/TestModuleDyn.s: src/TestModuleDyn.cpp.s
 
 # target to generate assembly for a file
 src/TestModuleDyn.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleDyn.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleDyn.cpp.s
 .PHONY : src/TestModuleDyn.cpp.s
 
 src/TestModuleFile.o: src/TestModuleFile.cpp.o
@@ -1380,7 +1380,7 @@ src/TestModuleFile.o: src/TestModuleFile.cpp.o
 
 # target to build an object file
 src/TestModuleFile.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleFile.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleFile.cpp.o
 .PHONY : src/TestModuleFile.cpp.o
 
 src/TestModuleFile.i: src/TestModuleFile.cpp.i
@@ -1388,7 +1388,7 @@ src/TestModuleFile.i: src/TestModuleFile.cpp.i
 
 # target to preprocess a source file
 src/TestModuleFile.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleFile.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleFile.cpp.i
 .PHONY : src/TestModuleFile.cpp.i
 
 src/TestModuleFile.s: src/TestModuleFile.cpp.s
@@ -1396,7 +1396,7 @@ src/TestModuleFile.s: src/TestModuleFile.cpp.s
 
 # target to generate assembly for a file
 src/TestModuleFile.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleFile.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleFile.cpp.s
 .PHONY : src/TestModuleFile.cpp.s
 
 src/TestModuleItems.o: src/TestModuleItems.cpp.o
@@ -1404,7 +1404,7 @@ src/TestModuleItems.o: src/TestModuleItems.cpp.o
 
 # target to build an object file
 src/TestModuleItems.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleItems.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleItems.cpp.o
 .PHONY : src/TestModuleItems.cpp.o
 
 src/TestModuleItems.i: src/TestModuleItems.cpp.i
@@ -1412,7 +1412,7 @@ src/TestModuleItems.i: src/TestModuleItems.cpp.i
 
 # target to preprocess a source file
 src/TestModuleItems.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleItems.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleItems.cpp.i
 .PHONY : src/TestModuleItems.cpp.i
 
 src/TestModuleItems.s: src/TestModuleItems.cpp.s
@@ -1420,7 +1420,7 @@ src/TestModuleItems.s: src/TestModuleItems.cpp.s
 
 # target to generate assembly for a file
 src/TestModuleItems.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleItems.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleItems.cpp.s
 .PHONY : src/TestModuleItems.cpp.s
 
 src/TestModuleRolePermission.o: src/TestModuleRolePermission.cpp.o
@@ -1428,7 +1428,7 @@ src/TestModuleRolePermission.o: src/TestModuleRolePermission.cpp.o
 
 # target to build an object file
 src/TestModuleRolePermission.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleRolePermission.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleRolePermission.cpp.o
 .PHONY : src/TestModuleRolePermission.cpp.o
 
 src/TestModuleRolePermission.i: src/TestModuleRolePermission.cpp.i
@@ -1436,7 +1436,7 @@ src/TestModuleRolePermission.i: src/TestModuleRolePermission.cpp.i
 
 # target to preprocess a source file
 src/TestModuleRolePermission.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleRolePermission.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleRolePermission.cpp.i
 .PHONY : src/TestModuleRolePermission.cpp.i
 
 src/TestModuleRolePermission.s: src/TestModuleRolePermission.cpp.s
@@ -1444,7 +1444,7 @@ src/TestModuleRolePermission.s: src/TestModuleRolePermission.cpp.s
 
 # target to generate assembly for a file
 src/TestModuleRolePermission.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleRolePermission.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleRolePermission.cpp.s
 .PHONY : src/TestModuleRolePermission.cpp.s
 
 src/TestModuleSim.o: src/TestModuleSim.cpp.o
@@ -1452,7 +1452,7 @@ src/TestModuleSim.o: src/TestModuleSim.cpp.o
 
 # target to build an object file
 src/TestModuleSim.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleSim.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleSim.cpp.o
 .PHONY : src/TestModuleSim.cpp.o
 
 src/TestModuleSim.i: src/TestModuleSim.cpp.i
@@ -1460,7 +1460,7 @@ src/TestModuleSim.i: src/TestModuleSim.cpp.i
 
 # target to preprocess a source file
 src/TestModuleSim.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleSim.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleSim.cpp.i
 .PHONY : src/TestModuleSim.cpp.i
 
 src/TestModuleSim.s: src/TestModuleSim.cpp.s
@@ -1468,7 +1468,7 @@ src/TestModuleSim.s: src/TestModuleSim.cpp.s
 
 # target to generate assembly for a file
 src/TestModuleSim.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleSim.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleSim.cpp.s
 .PHONY : src/TestModuleSim.cpp.s
 
 src/TestModuleUserAccess.o: src/TestModuleUserAccess.cpp.o
@@ -1476,7 +1476,7 @@ src/TestModuleUserAccess.o: src/TestModuleUserAccess.cpp.o
 
 # target to build an object file
 src/TestModuleUserAccess.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleUserAccess.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleUserAccess.cpp.o
 .PHONY : src/TestModuleUserAccess.cpp.o
 
 src/TestModuleUserAccess.i: src/TestModuleUserAccess.cpp.i
@@ -1484,7 +1484,7 @@ src/TestModuleUserAccess.i: src/TestModuleUserAccess.cpp.i
 
 # target to preprocess a source file
 src/TestModuleUserAccess.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleUserAccess.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleUserAccess.cpp.i
 .PHONY : src/TestModuleUserAccess.cpp.i
 
 src/TestModuleUserAccess.s: src/TestModuleUserAccess.cpp.s
@@ -1492,7 +1492,7 @@ src/TestModuleUserAccess.s: src/TestModuleUserAccess.cpp.s
 
 # target to generate assembly for a file
 src/TestModuleUserAccess.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleUserAccess.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleUserAccess.cpp.s
 .PHONY : src/TestModuleUserAccess.cpp.s
 
 src/TestModuleVar.o: src/TestModuleVar.cpp.o
@@ -1500,7 +1500,7 @@ src/TestModuleVar.o: src/TestModuleVar.cpp.o
 
 # target to build an object file
 src/TestModuleVar.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleVar.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleVar.cpp.o
 .PHONY : src/TestModuleVar.cpp.o
 
 src/TestModuleVar.i: src/TestModuleVar.cpp.i
@@ -1508,7 +1508,7 @@ src/TestModuleVar.i: src/TestModuleVar.cpp.i
 
 # target to preprocess a source file
 src/TestModuleVar.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleVar.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleVar.cpp.i
 .PHONY : src/TestModuleVar.cpp.i
 
 src/TestModuleVar.s: src/TestModuleVar.cpp.s
@@ -1516,7 +1516,7 @@ src/TestModuleVar.s: src/TestModuleVar.cpp.s
 
 # target to generate assembly for a file
 src/TestModuleVar.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleVar.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestModuleVar.cpp.s
 .PHONY : src/TestModuleVar.cpp.s
 
 src/TestSemanticChangeEventMethod.o: src/TestSemanticChangeEventMethod.cpp.o
@@ -1524,7 +1524,7 @@ src/TestSemanticChangeEventMethod.o: src/TestSemanticChangeEventMethod.cpp.o
 
 # target to build an object file
 src/TestSemanticChangeEventMethod.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestSemanticChangeEventMethod.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestSemanticChangeEventMethod.cpp.o
 .PHONY : src/TestSemanticChangeEventMethod.cpp.o
 
 src/TestSemanticChangeEventMethod.i: src/TestSemanticChangeEventMethod.cpp.i
@@ -1532,7 +1532,7 @@ src/TestSemanticChangeEventMethod.i: src/TestSemanticChangeEventMethod.cpp.i
 
 # target to preprocess a source file
 src/TestSemanticChangeEventMethod.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestSemanticChangeEventMethod.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestSemanticChangeEventMethod.cpp.i
 .PHONY : src/TestSemanticChangeEventMethod.cpp.i
 
 src/TestSemanticChangeEventMethod.s: src/TestSemanticChangeEventMethod.cpp.s
@@ -1540,7 +1540,7 @@ src/TestSemanticChangeEventMethod.s: src/TestSemanticChangeEventMethod.cpp.s
 
 # target to generate assembly for a file
 src/TestSemanticChangeEventMethod.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestSemanticChangeEventMethod.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestSemanticChangeEventMethod.cpp.s
 .PHONY : src/TestSemanticChangeEventMethod.cpp.s
 
 src/TestServerAddressSpaceRoot.o: src/TestServerAddressSpaceRoot.cpp.o
@@ -1548,7 +1548,7 @@ src/TestServerAddressSpaceRoot.o: src/TestServerAddressSpaceRoot.cpp.o
 
 # target to build an object file
 src/TestServerAddressSpaceRoot.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerAddressSpaceRoot.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerAddressSpaceRoot.cpp.o
 .PHONY : src/TestServerAddressSpaceRoot.cpp.o
 
 src/TestServerAddressSpaceRoot.i: src/TestServerAddressSpaceRoot.cpp.i
@@ -1556,7 +1556,7 @@ src/TestServerAddressSpaceRoot.i: src/TestServerAddressSpaceRoot.cpp.i
 
 # target to preprocess a source file
 src/TestServerAddressSpaceRoot.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerAddressSpaceRoot.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerAddressSpaceRoot.cpp.i
 .PHONY : src/TestServerAddressSpaceRoot.cpp.i
 
 src/TestServerAddressSpaceRoot.s: src/TestServerAddressSpaceRoot.cpp.s
@@ -1564,7 +1564,7 @@ src/TestServerAddressSpaceRoot.s: src/TestServerAddressSpaceRoot.cpp.s
 
 # target to generate assembly for a file
 src/TestServerAddressSpaceRoot.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerAddressSpaceRoot.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerAddressSpaceRoot.cpp.s
 .PHONY : src/TestServerAddressSpaceRoot.cpp.s
 
 src/TestServerBrowseNextTransaction.o: src/TestServerBrowseNextTransaction.cpp.o
@@ -1572,7 +1572,7 @@ src/TestServerBrowseNextTransaction.o: src/TestServerBrowseNextTransaction.cpp.o
 
 # target to build an object file
 src/TestServerBrowseNextTransaction.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseNextTransaction.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseNextTransaction.cpp.o
 .PHONY : src/TestServerBrowseNextTransaction.cpp.o
 
 src/TestServerBrowseNextTransaction.i: src/TestServerBrowseNextTransaction.cpp.i
@@ -1580,7 +1580,7 @@ src/TestServerBrowseNextTransaction.i: src/TestServerBrowseNextTransaction.cpp.i
 
 # target to preprocess a source file
 src/TestServerBrowseNextTransaction.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseNextTransaction.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseNextTransaction.cpp.i
 .PHONY : src/TestServerBrowseNextTransaction.cpp.i
 
 src/TestServerBrowseNextTransaction.s: src/TestServerBrowseNextTransaction.cpp.s
@@ -1588,7 +1588,7 @@ src/TestServerBrowseNextTransaction.s: src/TestServerBrowseNextTransaction.cpp.s
 
 # target to generate assembly for a file
 src/TestServerBrowseNextTransaction.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseNextTransaction.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseNextTransaction.cpp.s
 .PHONY : src/TestServerBrowseNextTransaction.cpp.s
 
 src/TestServerBrowseTransaction.o: src/TestServerBrowseTransaction.cpp.o
@@ -1596,7 +1596,7 @@ src/TestServerBrowseTransaction.o: src/TestServerBrowseTransaction.cpp.o
 
 # target to build an object file
 src/TestServerBrowseTransaction.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseTransaction.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseTransaction.cpp.o
 .PHONY : src/TestServerBrowseTransaction.cpp.o
 
 src/TestServerBrowseTransaction.i: src/TestServerBrowseTransaction.cpp.i
@@ -1604,7 +1604,7 @@ src/TestServerBrowseTransaction.i: src/TestServerBrowseTransaction.cpp.i
 
 # target to preprocess a source file
 src/TestServerBrowseTransaction.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseTransaction.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseTransaction.cpp.i
 .PHONY : src/TestServerBrowseTransaction.cpp.i
 
 src/TestServerBrowseTransaction.s: src/TestServerBrowseTransaction.cpp.s
@@ -1612,7 +1612,7 @@ src/TestServerBrowseTransaction.s: src/TestServerBrowseTransaction.cpp.s
 
 # target to generate assembly for a file
 src/TestServerBrowseTransaction.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseTransaction.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerBrowseTransaction.cpp.s
 .PHONY : src/TestServerBrowseTransaction.cpp.s
 
 src/TestServerCreator.o: src/TestServerCreator.cpp.o
@@ -1620,7 +1620,7 @@ src/TestServerCreator.o: src/TestServerCreator.cpp.o
 
 # target to build an object file
 src/TestServerCreator.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerCreator.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerCreator.cpp.o
 .PHONY : src/TestServerCreator.cpp.o
 
 src/TestServerCreator.i: src/TestServerCreator.cpp.i
@@ -1628,7 +1628,7 @@ src/TestServerCreator.i: src/TestServerCreator.cpp.i
 
 # target to preprocess a source file
 src/TestServerCreator.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerCreator.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerCreator.cpp.i
 .PHONY : src/TestServerCreator.cpp.i
 
 src/TestServerCreator.s: src/TestServerCreator.cpp.s
@@ -1636,7 +1636,7 @@ src/TestServerCreator.s: src/TestServerCreator.cpp.s
 
 # target to generate assembly for a file
 src/TestServerCreator.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerCreator.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerCreator.cpp.s
 .PHONY : src/TestServerCreator.cpp.s
 
 src/TestServerHistoryReadEventTransaction.o: src/TestServerHistoryReadEventTransaction.cpp.o
@@ -1644,7 +1644,7 @@ src/TestServerHistoryReadEventTransaction.o: src/TestServerHistoryReadEventTrans
 
 # target to build an object file
 src/TestServerHistoryReadEventTransaction.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadEventTransaction.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadEventTransaction.cpp.o
 .PHONY : src/TestServerHistoryReadEventTransaction.cpp.o
 
 src/TestServerHistoryReadEventTransaction.i: src/TestServerHistoryReadEventTransaction.cpp.i
@@ -1652,7 +1652,7 @@ src/TestServerHistoryReadEventTransaction.i: src/TestServerHistoryReadEventTrans
 
 # target to preprocess a source file
 src/TestServerHistoryReadEventTransaction.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadEventTransaction.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadEventTransaction.cpp.i
 .PHONY : src/TestServerHistoryReadEventTransaction.cpp.i
 
 src/TestServerHistoryReadEventTransaction.s: src/TestServerHistoryReadEventTransaction.cpp.s
@@ -1660,7 +1660,7 @@ src/TestServerHistoryReadEventTransaction.s: src/TestServerHistoryReadEventTrans
 
 # target to generate assembly for a file
 src/TestServerHistoryReadEventTransaction.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadEventTransaction.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadEventTransaction.cpp.s
 .PHONY : src/TestServerHistoryReadEventTransaction.cpp.s
 
 src/TestServerHistoryReadProcessedTransaction.o: src/TestServerHistoryReadProcessedTransaction.cpp.o
@@ -1668,7 +1668,7 @@ src/TestServerHistoryReadProcessedTransaction.o: src/TestServerHistoryReadProces
 
 # target to build an object file
 src/TestServerHistoryReadProcessedTransaction.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadProcessedTransaction.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadProcessedTransaction.cpp.o
 .PHONY : src/TestServerHistoryReadProcessedTransaction.cpp.o
 
 src/TestServerHistoryReadProcessedTransaction.i: src/TestServerHistoryReadProcessedTransaction.cpp.i
@@ -1676,7 +1676,7 @@ src/TestServerHistoryReadProcessedTransaction.i: src/TestServerHistoryReadProces
 
 # target to preprocess a source file
 src/TestServerHistoryReadProcessedTransaction.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadProcessedTransaction.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadProcessedTransaction.cpp.i
 .PHONY : src/TestServerHistoryReadProcessedTransaction.cpp.i
 
 src/TestServerHistoryReadProcessedTransaction.s: src/TestServerHistoryReadProcessedTransaction.cpp.s
@@ -1684,7 +1684,7 @@ src/TestServerHistoryReadProcessedTransaction.s: src/TestServerHistoryReadProces
 
 # target to generate assembly for a file
 src/TestServerHistoryReadProcessedTransaction.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadProcessedTransaction.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadProcessedTransaction.cpp.s
 .PHONY : src/TestServerHistoryReadProcessedTransaction.cpp.s
 
 src/TestServerHistoryReadRawTransaction.o: src/TestServerHistoryReadRawTransaction.cpp.o
@@ -1692,7 +1692,7 @@ src/TestServerHistoryReadRawTransaction.o: src/TestServerHistoryReadRawTransacti
 
 # target to build an object file
 src/TestServerHistoryReadRawTransaction.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadRawTransaction.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadRawTransaction.cpp.o
 .PHONY : src/TestServerHistoryReadRawTransaction.cpp.o
 
 src/TestServerHistoryReadRawTransaction.i: src/TestServerHistoryReadRawTransaction.cpp.i
@@ -1700,7 +1700,7 @@ src/TestServerHistoryReadRawTransaction.i: src/TestServerHistoryReadRawTransacti
 
 # target to preprocess a source file
 src/TestServerHistoryReadRawTransaction.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadRawTransaction.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadRawTransaction.cpp.i
 .PHONY : src/TestServerHistoryReadRawTransaction.cpp.i
 
 src/TestServerHistoryReadRawTransaction.s: src/TestServerHistoryReadRawTransaction.cpp.s
@@ -1708,7 +1708,7 @@ src/TestServerHistoryReadRawTransaction.s: src/TestServerHistoryReadRawTransacti
 
 # target to generate assembly for a file
 src/TestServerHistoryReadRawTransaction.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadRawTransaction.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerHistoryReadRawTransaction.cpp.s
 .PHONY : src/TestServerHistoryReadRawTransaction.cpp.s
 
 src/TestServerMethodCallTransaction.o: src/TestServerMethodCallTransaction.cpp.o
@@ -1716,7 +1716,7 @@ src/TestServerMethodCallTransaction.o: src/TestServerMethodCallTransaction.cpp.o
 
 # target to build an object file
 src/TestServerMethodCallTransaction.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.o
 .PHONY : src/TestServerMethodCallTransaction.cpp.o
 
 src/TestServerMethodCallTransaction.i: src/TestServerMethodCallTransaction.cpp.i
@@ -1724,7 +1724,7 @@ src/TestServerMethodCallTransaction.i: src/TestServerMethodCallTransaction.cpp.i
 
 # target to preprocess a source file
 src/TestServerMethodCallTransaction.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.i
 .PHONY : src/TestServerMethodCallTransaction.cpp.i
 
 src/TestServerMethodCallTransaction.s: src/TestServerMethodCallTransaction.cpp.s
@@ -1732,7 +1732,7 @@ src/TestServerMethodCallTransaction.s: src/TestServerMethodCallTransaction.cpp.s
 
 # target to generate assembly for a file
 src/TestServerMethodCallTransaction.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMethodCallTransaction.cpp.s
 .PHONY : src/TestServerMethodCallTransaction.cpp.s
 
 src/TestServerMonitoredItem.o: src/TestServerMonitoredItem.cpp.o
@@ -1740,7 +1740,7 @@ src/TestServerMonitoredItem.o: src/TestServerMonitoredItem.cpp.o
 
 # target to build an object file
 src/TestServerMonitoredItem.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMonitoredItem.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMonitoredItem.cpp.o
 .PHONY : src/TestServerMonitoredItem.cpp.o
 
 src/TestServerMonitoredItem.i: src/TestServerMonitoredItem.cpp.i
@@ -1748,7 +1748,7 @@ src/TestServerMonitoredItem.i: src/TestServerMonitoredItem.cpp.i
 
 # target to preprocess a source file
 src/TestServerMonitoredItem.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMonitoredItem.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMonitoredItem.cpp.i
 .PHONY : src/TestServerMonitoredItem.cpp.i
 
 src/TestServerMonitoredItem.s: src/TestServerMonitoredItem.cpp.s
@@ -1756,7 +1756,7 @@ src/TestServerMonitoredItem.s: src/TestServerMonitoredItem.cpp.s
 
 # target to generate assembly for a file
 src/TestServerMonitoredItem.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMonitoredItem.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerMonitoredItem.cpp.s
 .PHONY : src/TestServerMonitoredItem.cpp.s
 
 src/TestServerReadTransaction.o: src/TestServerReadTransaction.cpp.o
@@ -1764,7 +1764,7 @@ src/TestServerReadTransaction.o: src/TestServerReadTransaction.cpp.o
 
 # target to build an object file
 src/TestServerReadTransaction.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerReadTransaction.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerReadTransaction.cpp.o
 .PHONY : src/TestServerReadTransaction.cpp.o
 
 src/TestServerReadTransaction.i: src/TestServerReadTransaction.cpp.i
@@ -1772,7 +1772,7 @@ src/TestServerReadTransaction.i: src/TestServerReadTransaction.cpp.i
 
 # target to preprocess a source file
 src/TestServerReadTransaction.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerReadTransaction.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerReadTransaction.cpp.i
 .PHONY : src/TestServerReadTransaction.cpp.i
 
 src/TestServerReadTransaction.s: src/TestServerReadTransaction.cpp.s
@@ -1780,7 +1780,7 @@ src/TestServerReadTransaction.s: src/TestServerReadTransaction.cpp.s
 
 # target to generate assembly for a file
 src/TestServerReadTransaction.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerReadTransaction.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerReadTransaction.cpp.s
 .PHONY : src/TestServerReadTransaction.cpp.s
 
 src/TestServerSession.o: src/TestServerSession.cpp.o
@@ -1788,7 +1788,7 @@ src/TestServerSession.o: src/TestServerSession.cpp.o
 
 # target to build an object file
 src/TestServerSession.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSession.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSession.cpp.o
 .PHONY : src/TestServerSession.cpp.o
 
 src/TestServerSession.i: src/TestServerSession.cpp.i
@@ -1796,7 +1796,7 @@ src/TestServerSession.i: src/TestServerSession.cpp.i
 
 # target to preprocess a source file
 src/TestServerSession.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSession.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSession.cpp.i
 .PHONY : src/TestServerSession.cpp.i
 
 src/TestServerSession.s: src/TestServerSession.cpp.s
@@ -1804,7 +1804,7 @@ src/TestServerSession.s: src/TestServerSession.cpp.s
 
 # target to generate assembly for a file
 src/TestServerSession.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSession.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSession.cpp.s
 .PHONY : src/TestServerSession.cpp.s
 
 src/TestServerSubscription.o: src/TestServerSubscription.cpp.o
@@ -1812,7 +1812,7 @@ src/TestServerSubscription.o: src/TestServerSubscription.cpp.o
 
 # target to build an object file
 src/TestServerSubscription.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSubscription.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSubscription.cpp.o
 .PHONY : src/TestServerSubscription.cpp.o
 
 src/TestServerSubscription.i: src/TestServerSubscription.cpp.i
@@ -1820,7 +1820,7 @@ src/TestServerSubscription.i: src/TestServerSubscription.cpp.i
 
 # target to preprocess a source file
 src/TestServerSubscription.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSubscription.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSubscription.cpp.i
 .PHONY : src/TestServerSubscription.cpp.i
 
 src/TestServerSubscription.s: src/TestServerSubscription.cpp.s
@@ -1828,7 +1828,7 @@ src/TestServerSubscription.s: src/TestServerSubscription.cpp.s
 
 # target to generate assembly for a file
 src/TestServerSubscription.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSubscription.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerSubscription.cpp.s
 .PHONY : src/TestServerSubscription.cpp.s
 
 src/TestServerTranslateBrowsePathsToNodeIdsTransaction.o: src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.o
@@ -1836,7 +1836,7 @@ src/TestServerTranslateBrowsePathsToNodeIdsTransaction.o: src/TestServerTranslat
 
 # target to build an object file
 src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.o
 .PHONY : src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.o
 
 src/TestServerTranslateBrowsePathsToNodeIdsTransaction.i: src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.i
@@ -1844,7 +1844,7 @@ src/TestServerTranslateBrowsePathsToNodeIdsTransaction.i: src/TestServerTranslat
 
 # target to preprocess a source file
 src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.i
 .PHONY : src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.i
 
 src/TestServerTranslateBrowsePathsToNodeIdsTransaction.s: src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.s
@@ -1852,7 +1852,7 @@ src/TestServerTranslateBrowsePathsToNodeIdsTransaction.s: src/TestServerTranslat
 
 # target to generate assembly for a file
 src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.s
 .PHONY : src/TestServerTranslateBrowsePathsToNodeIdsTransaction.cpp.s
 
 src/TestServerWriteTransaction.o: src/TestServerWriteTransaction.cpp.o
@@ -1860,7 +1860,7 @@ src/TestServerWriteTransaction.o: src/TestServerWriteTransaction.cpp.o
 
 # target to build an object file
 src/TestServerWriteTransaction.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerWriteTransaction.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerWriteTransaction.cpp.o
 .PHONY : src/TestServerWriteTransaction.cpp.o
 
 src/TestServerWriteTransaction.i: src/TestServerWriteTransaction.cpp.i
@@ -1868,7 +1868,7 @@ src/TestServerWriteTransaction.i: src/TestServerWriteTransaction.cpp.i
 
 # target to preprocess a source file
 src/TestServerWriteTransaction.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerWriteTransaction.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerWriteTransaction.cpp.i
 .PHONY : src/TestServerWriteTransaction.cpp.i
 
 src/TestServerWriteTransaction.s: src/TestServerWriteTransaction.cpp.s
@@ -1876,7 +1876,7 @@ src/TestServerWriteTransaction.s: src/TestServerWriteTransaction.cpp.s
 
 # target to generate assembly for a file
 src/TestServerWriteTransaction.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerWriteTransaction.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestServerWriteTransaction.cpp.s
 .PHONY : src/TestServerWriteTransaction.cpp.s
 
 src/TestVariable.o: src/TestVariable.cpp.o
@@ -1884,7 +1884,7 @@ src/TestVariable.o: src/TestVariable.cpp.o
 
 # target to build an object file
 src/TestVariable.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestVariable.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestVariable.cpp.o
 .PHONY : src/TestVariable.cpp.o
 
 src/TestVariable.i: src/TestVariable.cpp.i
@@ -1892,7 +1892,7 @@ src/TestVariable.i: src/TestVariable.cpp.i
 
 # target to preprocess a source file
 src/TestVariable.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestVariable.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestVariable.cpp.i
 .PHONY : src/TestVariable.cpp.i
 
 src/TestVariable.s: src/TestVariable.cpp.s
@@ -1900,7 +1900,7 @@ src/TestVariable.s: src/TestVariable.cpp.s
 
 # target to generate assembly for a file
 src/TestVariable.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestVariable.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/TestVariable.cpp.s
 .PHONY : src/TestVariable.cpp.s
 
 src/UserInterface.o: src/UserInterface.cpp.o
@@ -1908,7 +1908,7 @@ src/UserInterface.o: src/UserInterface.cpp.o
 
 # target to build an object file
 src/UserInterface.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/UserInterface.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/UserInterface.cpp.o
 .PHONY : src/UserInterface.cpp.o
 
 src/UserInterface.i: src/UserInterface.cpp.i
@@ -1916,7 +1916,7 @@ src/UserInterface.i: src/UserInterface.cpp.i
 
 # target to preprocess a source file
 src/UserInterface.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/UserInterface.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/UserInterface.cpp.i
 .PHONY : src/UserInterface.cpp.i
 
 src/UserInterface.s: src/UserInterface.cpp.s
@@ -1924,7 +1924,7 @@ src/UserInterface.s: src/UserInterface.cpp.s
 
 # target to generate assembly for a file
 src/UserInterface.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/UserInterface.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/UserInterface.cpp.s
 .PHONY : src/UserInterface.cpp.s
 
 src/Util_Event.o: src/Util_Event.cpp.o
@@ -1932,7 +1932,7 @@ src/Util_Event.o: src/Util_Event.cpp.o
 
 # target to build an object file
 src/Util_Event.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Event.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Event.cpp.o
 .PHONY : src/Util_Event.cpp.o
 
 src/Util_Event.i: src/Util_Event.cpp.i
@@ -1940,7 +1940,7 @@ src/Util_Event.i: src/Util_Event.cpp.i
 
 # target to preprocess a source file
 src/Util_Event.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Event.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Event.cpp.i
 .PHONY : src/Util_Event.cpp.i
 
 src/Util_Event.s: src/Util_Event.cpp.s
@@ -1948,7 +1948,7 @@ src/Util_Event.s: src/Util_Event.cpp.s
 
 # target to generate assembly for a file
 src/Util_Event.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Event.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Event.cpp.s
 .PHONY : src/Util_Event.cpp.s
 
 src/Util_Mutex.o: src/Util_Mutex.cpp.o
@@ -1956,7 +1956,7 @@ src/Util_Mutex.o: src/Util_Mutex.cpp.o
 
 # target to build an object file
 src/Util_Mutex.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Mutex.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Mutex.cpp.o
 .PHONY : src/Util_Mutex.cpp.o
 
 src/Util_Mutex.i: src/Util_Mutex.cpp.i
@@ -1964,7 +1964,7 @@ src/Util_Mutex.i: src/Util_Mutex.cpp.i
 
 # target to preprocess a source file
 src/Util_Mutex.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Mutex.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Mutex.cpp.i
 .PHONY : src/Util_Mutex.cpp.i
 
 src/Util_Mutex.s: src/Util_Mutex.cpp.s
@@ -1972,7 +1972,7 @@ src/Util_Mutex.s: src/Util_Mutex.cpp.s
 
 # target to generate assembly for a file
 src/Util_Mutex.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Mutex.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Mutex.cpp.s
 .PHONY : src/Util_Mutex.cpp.s
 
 src/Util_Processor.o: src/Util_Processor.cpp.o
@@ -1980,7 +1980,7 @@ src/Util_Processor.o: src/Util_Processor.cpp.o
 
 # target to build an object file
 src/Util_Processor.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Processor.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Processor.cpp.o
 .PHONY : src/Util_Processor.cpp.o
 
 src/Util_Processor.i: src/Util_Processor.cpp.i
@@ -1988,7 +1988,7 @@ src/Util_Processor.i: src/Util_Processor.cpp.i
 
 # target to preprocess a source file
 src/Util_Processor.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Processor.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Processor.cpp.i
 .PHONY : src/Util_Processor.cpp.i
 
 src/Util_Processor.s: src/Util_Processor.cpp.s
@@ -1996,7 +1996,7 @@ src/Util_Processor.s: src/Util_Processor.cpp.s
 
 # target to generate assembly for a file
 src/Util_Processor.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Processor.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Processor.cpp.s
 .PHONY : src/Util_Processor.cpp.s
 
 src/Util_Sync.o: src/Util_Sync.cpp.o
@@ -2004,7 +2004,7 @@ src/Util_Sync.o: src/Util_Sync.cpp.o
 
 # target to build an object file
 src/Util_Sync.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Sync.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Sync.cpp.o
 .PHONY : src/Util_Sync.cpp.o
 
 src/Util_Sync.i: src/Util_Sync.cpp.i
@@ -2012,7 +2012,7 @@ src/Util_Sync.i: src/Util_Sync.cpp.i
 
 # target to preprocess a source file
 src/Util_Sync.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Sync.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Sync.cpp.i
 .PHONY : src/Util_Sync.cpp.i
 
 src/Util_Sync.s: src/Util_Sync.cpp.s
@@ -2020,7 +2020,7 @@ src/Util_Sync.s: src/Util_Sync.cpp.s
 
 # target to generate assembly for a file
 src/Util_Sync.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Sync.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Sync.cpp.s
 .PHONY : src/Util_Sync.cpp.s
 
 src/Util_Thread.o: src/Util_Thread.cpp.o
@@ -2028,7 +2028,7 @@ src/Util_Thread.o: src/Util_Thread.cpp.o
 
 # target to build an object file
 src/Util_Thread.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Thread.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Thread.cpp.o
 .PHONY : src/Util_Thread.cpp.o
 
 src/Util_Thread.i: src/Util_Thread.cpp.i
@@ -2036,7 +2036,7 @@ src/Util_Thread.i: src/Util_Thread.cpp.i
 
 # target to preprocess a source file
 src/Util_Thread.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Thread.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Thread.cpp.i
 .PHONY : src/Util_Thread.cpp.i
 
 src/Util_Thread.s: src/Util_Thread.cpp.s
@@ -2044,7 +2044,7 @@ src/Util_Thread.s: src/Util_Thread.cpp.s
 
 # target to generate assembly for a file
 src/Util_Thread.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Thread.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Thread.cpp.s
 .PHONY : src/Util_Thread.cpp.s
 
 src/Util_Timer.o: src/Util_Timer.cpp.o
@@ -2052,7 +2052,7 @@ src/Util_Timer.o: src/Util_Timer.cpp.o
 
 # target to build an object file
 src/Util_Timer.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Timer.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Timer.cpp.o
 .PHONY : src/Util_Timer.cpp.o
 
 src/Util_Timer.i: src/Util_Timer.cpp.i
@@ -2060,7 +2060,7 @@ src/Util_Timer.i: src/Util_Timer.cpp.i
 
 # target to preprocess a source file
 src/Util_Timer.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Timer.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Timer.cpp.i
 .PHONY : src/Util_Timer.cpp.i
 
 src/Util_Timer.s: src/Util_Timer.cpp.s
@@ -2068,7 +2068,7 @@ src/Util_Timer.s: src/Util_Timer.cpp.s
 
 # target to generate assembly for a file
 src/Util_Timer.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Timer.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_Timer.cpp.s
 .PHONY : src/Util_Timer.cpp.s
 
 src/Util_TimerThread.o: src/Util_TimerThread.cpp.o
@@ -2076,7 +2076,7 @@ src/Util_TimerThread.o: src/Util_TimerThread.cpp.o
 
 # target to build an object file
 src/Util_TimerThread.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_TimerThread.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_TimerThread.cpp.o
 .PHONY : src/Util_TimerThread.cpp.o
 
 src/Util_TimerThread.i: src/Util_TimerThread.cpp.i
@@ -2084,7 +2084,7 @@ src/Util_TimerThread.i: src/Util_TimerThread.cpp.i
 
 # target to preprocess a source file
 src/Util_TimerThread.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_TimerThread.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_TimerThread.cpp.i
 .PHONY : src/Util_TimerThread.cpp.i
 
 src/Util_TimerThread.s: src/Util_TimerThread.cpp.s
@@ -2092,7 +2092,7 @@ src/Util_TimerThread.s: src/Util_TimerThread.cpp.s
 
 # target to generate assembly for a file
 src/Util_TimerThread.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_TimerThread.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_TimerThread.cpp.s
 .PHONY : src/Util_TimerThread.cpp.s
 
 src/Util_WorkItemProcessor.o: src/Util_WorkItemProcessor.cpp.o
@@ -2100,7 +2100,7 @@ src/Util_WorkItemProcessor.o: src/Util_WorkItemProcessor.cpp.o
 
 # target to build an object file
 src/Util_WorkItemProcessor.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemProcessor.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemProcessor.cpp.o
 .PHONY : src/Util_WorkItemProcessor.cpp.o
 
 src/Util_WorkItemProcessor.i: src/Util_WorkItemProcessor.cpp.i
@@ -2108,7 +2108,7 @@ src/Util_WorkItemProcessor.i: src/Util_WorkItemProcessor.cpp.i
 
 # target to preprocess a source file
 src/Util_WorkItemProcessor.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemProcessor.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemProcessor.cpp.i
 .PHONY : src/Util_WorkItemProcessor.cpp.i
 
 src/Util_WorkItemProcessor.s: src/Util_WorkItemProcessor.cpp.s
@@ -2116,7 +2116,7 @@ src/Util_WorkItemProcessor.s: src/Util_WorkItemProcessor.cpp.s
 
 # target to generate assembly for a file
 src/Util_WorkItemProcessor.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemProcessor.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemProcessor.cpp.s
 .PHONY : src/Util_WorkItemProcessor.cpp.s
 
 src/Util_WorkItemStore.o: src/Util_WorkItemStore.cpp.o
@@ -2124,7 +2124,7 @@ src/Util_WorkItemStore.o: src/Util_WorkItemStore.cpp.o
 
 # target to build an object file
 src/Util_WorkItemStore.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemStore.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemStore.cpp.o
 .PHONY : src/Util_WorkItemStore.cpp.o
 
 src/Util_WorkItemStore.i: src/Util_WorkItemStore.cpp.i
@@ -2132,7 +2132,7 @@ src/Util_WorkItemStore.i: src/Util_WorkItemStore.cpp.i
 
 # target to preprocess a source file
 src/Util_WorkItemStore.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemStore.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemStore.cpp.i
 .PHONY : src/Util_WorkItemStore.cpp.i
 
 src/Util_WorkItemStore.s: src/Util_WorkItemStore.cpp.s
@@ -2140,7 +2140,7 @@ src/Util_WorkItemStore.s: src/Util_WorkItemStore.cpp.s
 
 # target to generate assembly for a file
 src/Util_WorkItemStore.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemStore.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkItemStore.cpp.s
 .PHONY : src/Util_WorkItemStore.cpp.s
 
 src/Util_WorkerThread.o: src/Util_WorkerThread.cpp.o
@@ -2148,7 +2148,7 @@ src/Util_WorkerThread.o: src/Util_WorkerThread.cpp.o
 
 # target to build an object file
 src/Util_WorkerThread.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkerThread.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkerThread.cpp.o
 .PHONY : src/Util_WorkerThread.cpp.o
 
 src/Util_WorkerThread.i: src/Util_WorkerThread.cpp.i
@@ -2156,7 +2156,7 @@ src/Util_WorkerThread.i: src/Util_WorkerThread.cpp.i
 
 # target to preprocess a source file
 src/Util_WorkerThread.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkerThread.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkerThread.cpp.i
 .PHONY : src/Util_WorkerThread.cpp.i
 
 src/Util_WorkerThread.s: src/Util_WorkerThread.cpp.s
@@ -2164,7 +2164,7 @@ src/Util_WorkerThread.s: src/Util_WorkerThread.cpp.s
 
 # target to generate assembly for a file
 src/Util_WorkerThread.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkerThread.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/Util_WorkerThread.cpp.s
 .PHONY : src/Util_WorkerThread.cpp.s
 
 src/stdafx.o: src/stdafx.cpp.o
@@ -2172,7 +2172,7 @@ src/stdafx.o: src/stdafx.cpp.o
 
 # target to build an object file
 src/stdafx.cpp.o:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/stdafx.cpp.o
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/stdafx.cpp.o
 .PHONY : src/stdafx.cpp.o
 
 src/stdafx.i: src/stdafx.cpp.i
@@ -2180,7 +2180,7 @@ src/stdafx.i: src/stdafx.cpp.i
 
 # target to preprocess a source file
 src/stdafx.cpp.i:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/stdafx.cpp.i
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/stdafx.cpp.i
 .PHONY : src/stdafx.cpp.i
 
 src/stdafx.s: src/stdafx.cpp.s
@@ -2188,7 +2188,7 @@ src/stdafx.s: src/stdafx.cpp.s
 
 # target to generate assembly for a file
 src/stdafx.cpp.s:
-	cd /home/user/WS/IPC/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/stdafx.cpp.s
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(MAKE) $(MAKESILENT) -f Server/CMakeFiles/CPPTestServer.dir/build.make Server/CMakeFiles/CPPTestServer.dir/src/stdafx.cpp.s
 .PHONY : src/stdafx.cpp.s
 
 # Help Target
@@ -2467,6 +2467,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/user/WS/IPC/opcua_server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

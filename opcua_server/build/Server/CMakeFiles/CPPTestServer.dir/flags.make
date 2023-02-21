@@ -4,7 +4,7 @@
 # compile CXX with g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/user/WS/IPC/opcua_server/Server/include -I/home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/Core/include -I/home/user/WS/IPC/opcua_server/OpcUACppSDK/Source/api/include
+CXX_INCLUDES = -I/home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/include -I/home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/Core/include -I/home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/OpcUACppSDK/Source/api/include
 
 CXX_FLAGS =  -D_GNU_SOURCE -O3 -DLOGGING_ENABLED=1 -O3 -fomit-frame-pointer -m64
 

@@ -1,7 +1,7 @@
 Server/CMakeFiles/CPPTestServer.dir/src/PrintApi.cpp.o: \
- /home/user/WS/IPC/opcua_server/Server/src/PrintApi.cpp \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/src/PrintApi.cpp \
  /usr/include/stdc-predef.h \
- /home/user/WS/IPC/opcua_server/Server/include/PrintApi.h \
+ /home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/Server/include/PrintApi.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

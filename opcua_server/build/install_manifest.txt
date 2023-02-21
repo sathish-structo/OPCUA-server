@@ -1,1 +1,1 @@
-/home/user/WS/IPC/opcua_server/bin/CPPTestServer
+/home/user/WS/GIT/OPCUA/OPCUA-server/opcua_server/bin/CPPTestServer

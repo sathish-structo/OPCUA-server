@@ -35,7 +35,7 @@
 #include "ServerState.h"
 #include "ServerTransition.h"
 #include "Constants.h"
-
+using namespace SoftingOPCToolbox5;
 PrinterModule::PrinterModule()
 {
 }
@@ -162,6 +162,9 @@ EnumStatusCode PrinterModule::initModule(const tstring& name, OTUInt16 namespace
 	value.setValue(Value(14)); // initially active in high limit
 	p_velocity->setDataValue(value);
 
+	pthread_create(&serverAutoUpdate,NULL,&PrinterModule::serverUpdateVariables,this);
+	_tprintf(_T("Server Data Thread Join\n"));
+
 	return EnumStatusCode_Good;
 }
 
@@ -172,12 +175,36 @@ void PrinterModule::endModule()
 	ModuleFolder::endModule();
 }
 
-void PrinterModule::Update(void *pData)
+void PrinterModule::Update()
 {
     DateTime datetime;
     datetime.utcNow();
     DataValue value;
 }
 
+void* PrinterModule::UpdateData()
+{
+	double data_val = 0;
+	while(1)
+	{	
+		if (data_val < 90)
+		{
+			data_val = 95;
+		}
+		if (data_val >= 115)
+		{
+			data_val = 95;
+		}
+		else {
+			data_val = data_val+0.5;
+		}
 
+#if 1
+		DataValue value;
+		value.setValue(Value((double)data_val)); // initially active in high limit
+		p_distance->setDataValue(value);
+#endif
+		sleep(1);
+	}
+}
 #endif
